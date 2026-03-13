@@ -10,7 +10,6 @@ from pathlib import Path
 import json
 import fitz
 from src.PIPELINE._2_parse.parse_utils import get_batches
-from src.PIPELINE._1_ingest.ingest import file_path
 
 from src.common_utils.filename_handle import normalize_filename
 
@@ -76,7 +75,7 @@ def parse_pdf_document(batches: List[List[int]], file_path, storage_dir: str):
             f.write(json.dumps(result.document.export_to_dict(), indent=2))
 
         
-def run_parser():
+def run_parser(file_path):
     doc = fitz.open(file_path)
     total_page = doc.page_count
     batches = get_batches(total_page)
