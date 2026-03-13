@@ -1,0 +1,6 @@
+./venv
+./env
+./docs
+./newvenv
+./data
+draft/*.json
