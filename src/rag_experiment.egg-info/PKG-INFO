@@ -1,0 +1,5 @@
+Metadata-Version: 2.4
+Name: rag_experiment
+Version: 0.1.0
+Summary: RAG experimentation pipeline
+Requires-Python: >=3.10

@@ -1,0 +1,47 @@
+## SIDEBAR 5.2 COMPONENT-BASED SOFTWARE ENGINEERING
+
+C omponent-based software engineering (CBSE) is  a  method  of  software  development whereby systems are created by assembling together preexisting components. In this setting, a component is 'a self-contained piece of software with a well-defined set of interfaces' (Herzum and Sims 2000) that can be developed, bought, and sold as a distinct entity.The goal of CBSE is to support the rapid development of new systems, by reducing development to component integration , and to ease the maintenance of such systems by reducing maintenance to component replacement .
+
+At this point, CBSE is still more of a goal than a reality.There are software components for sale, and part of software design is deciding which aspects of a system we should buy off the shelf and which we should build ourselves. But there is still considerable research being done on figuring out how to
+
+- specify components, so that buyers can determine whether a particular component fits their needs
+- certify that a component performs as claimed
+- reason  about  the  properties  of  a  system  (e.g., reliability)  from  the  properties  of  its components
+
+We say that a design is modular when each activity of the system is performed by exactly one software unit, and when the inputs and outputs of each software unit are well-defined. A software unit is well-defined if  its  interface  accurately  and  precisely specifies the unit's externally visible behavior: each specified input is essential to the unit's function, and each specified output is a possible result of the unit's actions. In addition, 'well-defined' means that the interface says nothing about any property or design detail that cannot be discerned outside the software unit. Chapter 6 includes a section on design principles that describes in more detail how to make design decisions that result in modular designs.
+
+## Architectural Views
+
+We want to decompose the system's design into its constituent programmable units, such as modules, objects, or procedures. However, this set of elements may not be the only decomposition we consider. If the proposed system is to be distributed over several computers, we may want a view of the design that shows the distribution of the system's  components as well as how those components communicate with each other. Alternatively, we may want a view of the design that shows the various services that the system is to offer and how the services operate together, regardless of how the services are mapped to code modules.
+
+Common types of architectural views include the following:
+
+- Decomposition view: This traditional view of a system's decomposition portrays the system as programmable units.As depicted in Figure 5.5, this view is likely to be
+
+- hierarchical and may be represented by multiple models. For example, a software unit in one model may be expanded in another model to show its constituent units.
+- Dependencies view: This view shows dependencies among software units, such as when one unit calls another unit's procedures or when one unit relies on data produced by one or more other units.This view is useful in project planning, to identify which software units are dependency free and thus can be implemented and tested in isolation. It is also useful for assessing the impact of making a design change to some software unit.
+- Generalization view: This view shows software units that are generalizations or specializations of one another. An obvious example is an inheritance hierarchy among  object-oriented  classes. In  general, this  view  is  useful  when  designing abstract or extendible software units: the general unit encapsulates common data and functionality, and  we  derive  various  specialized  units  by  instantiating  and extending the general unit.
+- Execution view: This view is the traditional box-and-arrow diagram that software architects draw, showing the runtime structure of a system in terms of its components and connectors. Each component is a distinct executing entity, possibly with its  own  program  stack. A connector is  some  intercomponent  communication mechanism, such as a communication channel, shared data repository, or remote procedure call.
+- Implementation view: This view maps code units, such as modules, objects, and procedures, to the source file that contains their implementation. This view helps programmers find the implementation of a software unit within a maze of sourcecode files.
+- Deployment view: This view maps runtime entities, such as components and connectors, onto computer resources, such as processors, data stores, and communication networks. It helps the architect analyze the quality attributes of a design, such as performance, reliability, and security.
+- Work-assignment  view: This  view  decomposes  the  system's  design  into  work tasks that can be assigned to project teams. It helps project managers plan and allocate project resources, as well as track each team's progress.
+
+Each view is a model of some aspect of the system's structure, such as code structure, runtime structure, file structure, or project team structure. A system's architecture represents  the  system's  overall  design  structure; thus, it  is  the  full  collection  of  these views. Normally, we do not attempt to combine views into a single integrated design, because such a description-comprising multiple overlays of different decompositionswould be too difficult to read and keep up-to-date. Later in this chapter, we discuss how to document a system's architecture as a collection of views.The documentation includes mappings among views so that we can understand the big picture.
+
+## 5.4 ARCHITECTURAL STYLES AND STRATEGIES
+
+Creating  a  software  architectural  design  is  not  a  straightforward  task. The  design progresses in bursts of activity, with the design team often alternating between top-down
+
+and bottom-up analysis. In top-down design, the team tries to partition the system's key functions into distinct modules that can be assigned to separate components. However, if the team recognizes that a known, previously implemented design solution might be useful, the team may switch to a bottom-up design approach, adapting a prepackaged solution.
+
+Often, our approaches to solving some problems have common features, and we can  take  advantage  of  the  commonality  by  applying  generalized  patterns. Software architectural styles are established, large-scale patterns of system structure.Analogous to architectural styles for buildings, software architectural styles have defining rules, elements, and techniques that result in designs with recognizable structures and wellunderstood properties. However, styles are not complete detailed solutions. Rather, they are loose templates that offer distinct solutions for coordinating a system's components.To be specific, architectural styles focus on the different ways that components might communicate, synchronize, or share data with one another. As such, their structures codify constrained interactions among components and offer mechanisms,such as protocols, for realizing those interactions. In the early stages of software development, architectural styles can be useful for exploring and exploiting known approaches to organizing and coordinating access to data and functionality. In general, by constraining intercomponent interactions, architectural styles can be used to help the resulting system  achieve  specific  system  properties, such  as  data  security  (by  restricting  data flow) and maintainability (by simplifying communication interfaces).
+
+Researchers are continuously analyzing good software designs, looking for useful architectural styles that can be applied more generally. These styles are then collected in style catalogues that an architect can reference when considering the best architecture for a given set of requirements. A few of these catalogues are listed at the end of this chapter.
+
+In  the  rest  of  this  section, we  examine  six  architectural  styles  commonly  used in software development: pipe-and-filter, client-server, peer-to-peer, publish-subscribe, repositories , and layering . For each style, we describe the software elements comprising the style, the constraints on interactions among elements, and some properties (good and bad) of the resulting system.
+
+## Pipe-and-Filter
+
+In a pipe-and-filter style, illustrated in Figure 5.6, system functionality is achieved by passing input data through a sequence of data-transforming components, called filters , to produce output data. Pipes are connectors that simply transmit data from one filter to  the  next  without  modifying  the  data. Each  filter  is  an  independent  function  that makes no assumptions about other filters that may be applied to the data.Thus, we can build our system by connecting together different filters to form a variety of configurations. If the format of the data is fixed-that is, if all of the filters and pipes assume a common  representation  of  the  data  being  transmitted-then  we  can  join  filters together in any configuration. Such systems have several important properties (Shaw and Garlan 1996):
+
+- We can understand the system's transformation of input data to output data as the functional composition of the filters' data transformations.
