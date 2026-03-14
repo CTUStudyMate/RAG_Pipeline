@@ -74,3 +74,7 @@ def insert_atomic_into_db(element, cursor):
             metadata.get("heading"),
             None
         ))
+
+def connect_db(db_path: str):
+    conn = sqlite3.connect(db_path)
+    return conn

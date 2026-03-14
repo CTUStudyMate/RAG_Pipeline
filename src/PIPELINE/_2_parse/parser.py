@@ -68,7 +68,7 @@ def parse_pdf_document(batches: List[List[int]], file_path, storage_dir: str):
             page_range=(batch[0], batch[1])
         )
         
-        batch_name = f"pages_{batch[0]}_{batch[1]}.json"
+        batch_name = f"pages_{batch[0]:04d}_{batch[1]:04d}.json"
         batch_path = doc_cache_dir / batch_name
         
         with open(batch_path, "w", encoding="utf-8") as f:
