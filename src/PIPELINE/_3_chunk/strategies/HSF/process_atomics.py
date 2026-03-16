@@ -7,31 +7,41 @@ from PIPELINE._3_chunk.strategies.HSF.process_helpers.handle_batch import handle
 from common_utils.filename_handle import normalize_filename
 from src.PIPELINE._3_chunk.strategies.HSF.hierarchy_helpers.build_hierarchy import build_hierarchy
 from src.PIPELINE._3_chunk.strategies.HSF.hierarchy_helpers.DFSCursor import DFSCursor
-from docling_core.types.doc.document import DoclingDocument
+from docling_core.types.doc.document import DoclingDocument, RefItem
 
 
 from src.PIPELINE._1_ingest.ingest import file_path
 
-def flatten_node(node):
+def flatten_node(node: RefItem, document: DoclingDocument):
     """
     Flatten recursively a Docling node.
     """
-    # Nếu node có children → flatten từng child
-    if hasattr(node, "children") and node.children:
-        result = []
-        for child in node.children:
-            result.extend(flatten_node(child))
-        return result
+    
+    # nếu nó là group thì mới resolve để lấy child
+    if node.cref.startswith("#/groups/"):
+        ori_node = node.resolve(document)
+        # Nếu node có children → flatten từng child
+        if hasattr(ori_node, "children") and ori_node.children:
+            result = []
+            for child in ori_node.children:
+                result.extend(flatten_node(child, document))
+            return result
 
+    # nếu là picture, thì theo quan sát docling element là child đầu tiên chính là caption
+    elif node.cref.startswith("#/pictures/"):
+        ori_node = node.resolve(document)
+        if hasattr(ori_node, "children") and ori_node.children:
+            result = [node]
+            result.extend(flatten_node(ori_node.children[0], document))
+            return result
+        
     # Nếu là leaf node (text, table, picture...)
     return [node]
 
 def flatten_body(document):
     flat_list = []
-
     for child in document.body.children:
-        flat_list.extend(flatten_node(child))
-
+        flat_list.extend(flatten_node(child, document))
     return flat_list
 
 
@@ -50,7 +60,14 @@ def parse_pdf_into_atomic_units(folder, hierarchy_tree, conn, passed_cursor, ope
     
     doc_db_cursor = conn.cursor()
     
-    for json_file in sorted(folder.glob("*.json")):
+    current_level_path_description = []
+    current_open_level = 0
+    
+    json_files = sorted(folder.glob("*.json"))
+    total_batches = len(json_files)
+    
+    for i, json_file in enumerate(json_files, start=1):
+        print(f"Processing batch {i}/{total_batches}: {json_file.name}")
         with open(json_file, "r", encoding="utf-8") as f:
             doc_dict = json.load(f)
             batch_document = DoclingDocument.model_validate(doc_dict)
@@ -59,8 +76,23 @@ def parse_pdf_into_atomic_units(folder, hierarchy_tree, conn, passed_cursor, ope
 
         # ===== với mỗi doc tương ứng từng batch thì gọi hàm xử lý batch để làm các task trên =====
         # bắt đầu xem và sửa lại hàm handle batch result
-            current_atomic_order, incomplete_atomic, passed_cursor, open_node, node = handle_batch_result(flat_list=flat_list, my_built_dfs=hierarchy_tree, batch_result=batch_document, stream_elements=stream_elements, current_atomic_order=current_atomic_order, incomplete_atomic=incomplete_atomic, doc_db_cursor=doc_db_cursor, conn2=conn, passed_cursor=passed_cursor, open_node=open_node, node=node)
+            current_atomic_order, incomplete_atomic, passed_cursor, open_node, node, current_open_level, current_level_path_description = handle_batch_result(flat_list=flat_list, my_built_dfs=hierarchy_tree, batch_result=batch_document, stream_elements=stream_elements, current_atomic_order=current_atomic_order, incomplete_atomic=incomplete_atomic, doc_db_cursor=doc_db_cursor, 
+                                                                                                                                                              conn2=conn, passed_cursor=passed_cursor, open_node=open_node, node=node, current_open_level=current_open_level, current_level_path_description=current_level_path_description)
 
+
+# #test-------------
+#     with open("data/parsed_cache/se_theory_practice/pages_0030_0044.json", "r", encoding="utf-8") as f:
+#         doc_dict = json.load(f)
+#         batch_document = DoclingDocument.model_validate(doc_dict)
+#         # print(json_file)
+#         flat_list = flat_batch_result(batch_document) # đã lấy ra được doc của mỗi batch ròi nè
+#         current_atomic_order, incomplete_atomic, passed_cursor, open_node, node, current_open_level, current_level_path_description = handle_batch_result(flat_list=flat_list, 
+#                                                                                                       my_built_dfs=hierarchy_tree, batch_result=batch_document, 
+#                                                                                                       stream_elements=stream_elements, current_atomic_order=current_atomic_order, incomplete_atomic=incomplete_atomic, 
+#                                                                                                       doc_db_cursor=doc_db_cursor, conn2=conn, passed_cursor=passed_cursor, open_node=open_node, node=node,
+#                                                                                                       current_open_level=current_open_level, current_level_path_description=current_level_path_description)
+# #--------------
+    
     # loop xong hết qua các batch, add các element cuối cùng trong stream vào db 
     while len(stream_elements) > 0:
         element = stream_elements.popleft()   # O(1)
@@ -103,10 +135,12 @@ def process_atomics (file_path: str):
     
     doc_name = normalize_filename(file_path)
     doc_cache_dir = f"./data/parsed_cache/{doc_name}"
+        
+    parse_pdf_into_atomic_units(folder=doc_cache_dir,hierarchy_tree=hierarchy_tree, node=node,
+                                conn=conn, passed_cursor=passed_cursor, open_node=open_node)   
     
-    parse_pdf_into_atomic_units(folder=doc_cache_dir,hierarchy_tree=hierarchy_tree, conn=conn, passed_cursor=passed_cursor, open_node=open_node, node=node)   
+    return hierarchy_tree, conn
     
-    
-process_atomics(file_path)    
+# process_atomics(file_path)    
     
     
