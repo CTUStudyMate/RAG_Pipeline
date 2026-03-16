@@ -32,10 +32,7 @@ def is_heading_match(expected, actual):
         return True
     if fuzz.token_sort_ratio(norm_exp, norm_act) >= 90:
         return True
-    
-    print("Heading processed but not match:")
-    print("Norm expected:", norm_exp)
-    print("Norm actual:", norm_act)
+
     return False
 
 def is_title_match(ori_element, node):
@@ -43,9 +40,9 @@ def is_title_match(ori_element, node):
     # next, the page must also match
     if not is_heading_match(ori_element.text, node["title"]):
         return False
-    print("Matched title's text. Now check page....")
-    print("Element is at page ", ori_element.prov[0].page_no)
-    print("Title is at page ", node["page"])
+    # print("Matched title's text. Now check page....")
+    # print("Element is at page ", ori_element.prov[0].page_no)
+    # print("Title is at page ", node["page"])
     if (ori_element.prov[0].page_no == node["page"]):
         return True
     return False

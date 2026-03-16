@@ -74,15 +74,14 @@ def is_text_incomplete(text: str) -> bool:
     return False
 
 
-def handle_batch_result(flat_list, my_built_dfs, batch_result, stream_elements, current_atomic_order, incomplete_atomic, doc_db_cursor, conn2, passed_cursor, open_node, node):
+def handle_batch_result(flat_list, my_built_dfs, batch_result, stream_elements, current_atomic_order, 
+                        incomplete_atomic, doc_db_cursor, conn2, passed_cursor, open_node, node,
+                        current_open_level, current_level_path_description):
     docname = normalize_docname(batch_result.name)
     
     cursor = passed_cursor
     
     # current_level_path = [0]
-    current_level_path_description = []
-    current_open_level = 0
-    
     
     if "metadata" not in open_node:
         open_node["metadata"] = {
@@ -90,7 +89,6 @@ def handle_batch_result(flat_list, my_built_dfs, batch_result, stream_elements, 
         }
     
     header_marks = ["section_header"]
-    
     # region Looping through each parsed element
     for ref in flat_list:
         ori_element = ref.resolve(batch_result)
@@ -98,17 +96,17 @@ def handle_batch_result(flat_list, my_built_dfs, batch_result, stream_elements, 
         
         # region The element is a heading
         if ori_type in header_marks:
-            print("FOUND TITLE:",ori_element.text)
+            # print("FOUND TITLE:",ori_element.text)
             
             # case 1: the end of toc or it is a heading not present in toc
                # just simply append it to the current open node and mark it as a not-in-toc heading
             if not node or not is_title_match(ori_element, node):
-                print(f"Not match. Expected:  {node["title"]} - {node["page"]}, got {ori_element.text} - {ori_element.prov[0].page_no}")
+                # print(f"Not match. Expected:  {node["title"]} - {node["page"]}, got {ori_element.text} - {ori_element.prov[0].page_no}")
                 context_string = ori_element.text
                 if "gold_unit" not in open_node:
                     open_node["gold_unit"] = []
                 
-                description_str = " > ".join(current_level_path_description)
+                description_str = " > ".join(current_level_path_description).strip()
                 
                 gold_unit = {
                     "id": "",
@@ -135,27 +133,30 @@ def handle_batch_result(flat_list, my_built_dfs, batch_result, stream_elements, 
                 continue
             
             # case 2: It is the title in the toc
-            print("\n----find match:")
-            print(ori_element.text),
-            print(node["title"])
+            # print("\n----find match:")
+            # print(ori_element.text),
+            # print(node["title"])
             
             current_level = int(node["level"])
             store_title = normalize_heading_display(ori_element.text)
             
             if current_level > current_open_level:
                 # current_level_path.append(1)
+                
                 current_level_path_description.append(store_title)
             elif current_level == current_open_level:
                 # current_level_path[-1] += 1
+                
                 current_level_path_description[-1] = store_title
             else:
                 # current_level_path = current_level_path[:current_level+1]
-                # current_level_path[-1] += 1
+                # current_level_path[-1] += 1               
+                
                 current_level_path_description = current_level_path_description[:current_level]
                 current_level_path_description[-1] = store_title
 
             current_open_level = current_level
-            description_str = " > ".join(current_level_path_description)
+            description_str = " > ".join(current_level_path_description).strip()
             
             if "gold_unit" not in node:
                 node["gold_unit"] = []
@@ -214,16 +215,16 @@ def handle_batch_result(flat_list, my_built_dfs, batch_result, stream_elements, 
             # special! picture can be a heading
             if ori_element.label.value == "picture":
                 if ori_element.prov[0].page_no == node["page"]:
-                    print("FIND SUSPICIOUS PICTURREEEE")
+                    # print("FIND SUSPICIOUS PICTURREEEE")
                     extracted_text = ""
                     for child in ori_element.children:
                         child_cref = child.cref
                         # text_extract_el = child_cref.resolve(batch_result.document)
                         text_extract_el = resolve_cref(batch_result, child_cref)
-                        extracted_text += text_extract_el.text
-                        print(extracted_text)
+                        extracted_text += text_extract_el.text + " "
+                        # print(extracted_text)
                     if is_heading_match(extracted_text, node["title"]):
-                        print("\n----Match !!!:")
+                        # print("\n----Match !!!:")
                         
                         current_level = int(node["level"])
                         if current_level > current_open_level:
@@ -242,7 +243,7 @@ def handle_batch_result(flat_list, my_built_dfs, batch_result, stream_elements, 
                             current_level_path_description[-1] = extracted_text
 
                         current_open_level = current_level
-                        description_str = " > ".join(current_level_path_description)
+                        description_str = " > ".join(current_level_path_description).strip()
                         
                         if "gold_unit" not in node:
                             node["gold_unit"] = []
@@ -284,14 +285,24 @@ def handle_batch_result(flat_list, my_built_dfs, batch_result, stream_elements, 
                         open_node = cursor.next()
                         node = cursor.peek()
                         
+                    else:
+                        image = ori_element.image   
+                        gold_unit["content"] = str(image.uri)
+                        id_md5 = f"fig.{current_atomic_order}"
+                        token_count = 300
+                        gold_unit["token_count"] = token_count
+                    
                 else:
                     image = ori_element.image   
                     gold_unit["content"] = str(image.uri)
                     id_md5 = f"fig.{current_atomic_order}"
                     token_count = 300
-                    gold_unit["token_count"] = token_count
+                    gold_unit["token_count"] = token_count    
             
-            elif ori_element.label == "text":
+            elif ori_element.label.value in ["page_footer", "page_header"]:
+                continue
+            
+            elif ori_element.label.value == "text":
                 if incomplete_atomic:
                     stream_elements[-1]["content"] += ori_element.text
                 else:
@@ -300,26 +311,36 @@ def handle_batch_result(flat_list, my_built_dfs, batch_result, stream_elements, 
                     temp_id = make_id(unit)
                     id_md5 = f"p.{temp_id}.{current_atomic_order}"
             
-            elif ori_element.label == "table":
+            elif ori_element.label.value == "table":
                 table_df: pd.DataFrame = ori_element.export_to_dataframe(doc=batch_result)
                 gold_unit["content"] = table_df.to_markdown()
                 id_md5 = f"tbl.{current_atomic_order}"
 
-            elif ori_element.label == "formula":
+            elif ori_element.label.value == "formula":
                 formula_content = ori_element.orig.strip()
                 if formula_content:
-                    formatted = f"\n[FORMULA]\n{formula_content}\n"
+                    formatted = f"[FORMULA]\n{formula_content}"
                 gold_unit["content"] =formatted if formatted else formula_content
                 id_md5 = f"{ori_element.label.value}.{current_atomic_order}"
             
-            elif ori_element.label.value in ["footnote", "page_footer", "page_header"]:
+            elif ori_element.label.value in ["footnote"]:
                 mark_content = ori_element.label.value
                 if hasattr(ori_element, "text") and ori_element.text:
-                    content = f"<{mark_content}: {ori_element.text.strip()}>"
+                    content = f"({mark_content}: {ori_element.text.strip()})"
                 else:
-                    content = f"<{mark_content}>"
+                    content = ""
                 id_md5 = f"{ori_element.label.value}.{current_atomic_order}"
                 gold_unit["content"] = content
+                
+            elif ori_element.label.value == "list_item":
+                gold_unit["content"] =  f" - {ori_element.text}"
+                id_md5 = f"{ori_element.label.value}.{current_atomic_order}"
+                
+            elif ori_element.label.value == "caption":
+                # print("\n\nCAPPTIONNN")
+                # print(ori_element)
+                gold_unit["content"] =  f"[{ori_element.text}] "
+                id_md5 = f"{ori_element.label.value}.{current_atomic_order}"    
                 
             else:
                 content = ""
@@ -330,11 +351,11 @@ def handle_batch_result(flat_list, my_built_dfs, batch_result, stream_elements, 
             # description_str = " > ".join(current_level_path_description)
             # gold_unit["metadata"]["description"] = description_str
             
-            if ori_element.label != "picture":
+            if ori_element.label.value != "picture":
                 tokens = encoding.encode(gold_unit["content"])
                 token_count = len(tokens)  
                 gold_unit["token_count"] = token_count
-                      
+            
             el_id = f"{docname}__{id_md5}"
             gold_unit["id"] = el_id
             open_node["gold_unit"].append(el_id)
@@ -345,7 +366,7 @@ def handle_batch_result(flat_list, my_built_dfs, batch_result, stream_elements, 
     
         if len(stream_elements) > conf.WRITE_FILE_AFTER_N_STREAM_ELEMENTS:
             element = stream_elements.popleft()
-            
+            element["metadata"]["source_document"] = batch_result.name
             #======= TEST STREAM ELEMENT =========
             target_file = f"{docname}_streams.json"
             with open(target_file, "a", encoding="utf-8") as f:
@@ -368,4 +389,4 @@ def handle_batch_result(flat_list, my_built_dfs, batch_result, stream_elements, 
         json.dump(my_built_dfs, f, ensure_ascii=False, indent=4)          
     #=====================================    
           
-    return current_atomic_order, incomplete_atomic, cursor, open_node, node
+    return current_atomic_order, incomplete_atomic, cursor, open_node, node, current_open_level, current_level_path_description
