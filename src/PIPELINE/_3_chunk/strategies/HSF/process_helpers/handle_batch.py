@@ -373,10 +373,10 @@ def handle_batch_result(flat_list, my_built_dfs, batch_result, stream_elements, 
             element = stream_elements.popleft()
             element["metadata"]["source_document"] = batch_result.name
             #======= TEST STREAM ELEMENT =========
-            # target_file = conf.STREAM_ELEMENTS_FILEPATH
-            # with open(target_file, "a", encoding="utf-8") as f:
-            #     json.dump(element, f, default=str, ensure_ascii=False, indent=4)
-            #     f.write("\n")
+            target_file = conf.STREAM_ELEMENTS_FILEPATH
+            with open(target_file, "a", encoding="utf-8") as f:
+                json.dump(element, f, default=str, ensure_ascii=False, indent=4)
+                f.write("\n")
             #=====================================    
             
             insert_atomic_into_db(cursor=doc_db_cursor, element=element)

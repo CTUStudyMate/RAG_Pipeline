@@ -1,8 +1,11 @@
 import copy
+import os
+import re
 import sqlite3
 
 from PIPELINE._3_chunk.strategies.HSF.atomic_db_helpers.db_helpers import connect_db
 from PIPELINE._3_chunk.strategies.HSF.hierarchy_helpers.DFSCursor import DFSCursor
+from PIPELINE._3_chunk.strategies.HSF.index_chunks import index_chunks
 from PIPELINE._3_chunk.strategies.HSF.process_chunks import build_chunks, create_chunk
 from pipeline_config import FINAL_CHUNKS_TEST_FILEPATH
 from src.PIPELINE._3_chunk.strategies.HSF.process_token import compute_tree_token
@@ -31,8 +34,11 @@ def HSF_chunk(file_path):
     
     chunks = build_chunks(node=cs, file_path=file_path, cursor=cursor)
     
-    # with open(FINAL_CHUNKS_TEST_FILEPATH, "w", encoding="utf-8") as f:
-    #     json.dump(chunks, f, ensure_ascii=False, indent=2)
-    # conn.close()
+    with open(FINAL_CHUNKS_TEST_FILEPATH, "w", encoding="utf-8") as f:
+        json.dump(chunks, f, ensure_ascii=False, indent=2)
+    conn.close()
+    filename = os.path.basename(file_path)
+    filename = re.sub(r'[^a-zA-Z0-9._-]', '_', filename)
+    index_chunks(chunks=chunks, collection_name=filename)
 
 HSF_chunk(file_path)

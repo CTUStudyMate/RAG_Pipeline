@@ -1,4 +1,5 @@
 OPENAI_EMBEDDING_MODEL="text-embedding-3-small"
+EMBEDDING_PROVIDER="openai"
 
 MAX_PAGES_PER_BATCH=15
 WRITE_FILE_AFTER_N_STREAM_ELEMENTS=10
@@ -10,6 +11,6 @@ IMAGE_TOKEN_ESTIMATE=300
 
 CHUNK_FROM_ATOMIC_TEST_FILEPATH="exp/se/atomic_chunk.json"
 TOKEN_TREE_TEST_FILEPATH="exp/se/token_tree.json"
-FINAL_CHUNKS_TEST_FILEPATH="exp/se/final_chunks.json"
+FINAL_CHUNKS_TEST_FILEPATH="exp/se/final_chunksss.json"
 STREAM_ELEMENTS_FILEPATH="exp/se/streams.json"
 TREE_FILEPATH="exp/se/tree.json"
