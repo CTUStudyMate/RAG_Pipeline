@@ -6,6 +6,7 @@ import hashlib
 from collections import deque
 import tiktoken
 
+from PIPELINE._3_chunk.common_utils import mannual_token_count
 from PIPELINE._3_chunk.strategies.HSF.atomic_db_helpers.db_helpers import insert_atomic_into_db
 from common_utils import filename_handle
 import re
@@ -16,7 +17,7 @@ import pipeline_config as conf
 from src.PIPELINE._3_chunk.strategies.HSF.process_helpers.extract import extract_id_unit
 from src.PIPELINE._3_chunk.strategies.HSF.process_helpers.normalize import is_heading_match, is_title_match, normalize_docname
 
-encoding = tiktoken.encoding_for_model("gpt-4o-mini")
+# encoding = tiktoken.encoding_for_model("gpt-4o-mini")
 
 def normalize_heading_display(text):
     if text.isupper():
@@ -93,6 +94,7 @@ def handle_batch_result(flat_list, my_built_dfs, batch_result, stream_elements, 
     for ref in flat_list:
         ori_element = ref.resolve(batch_result)
         ori_type = ori_element.label.value
+        # print(ori_element.self_ref)
         
         # region The element is a heading
         if ori_type in header_marks:
@@ -125,8 +127,8 @@ def handle_batch_result(flat_list, my_built_dfs, batch_result, stream_elements, 
                 
                 open_node["gold_unit"].append(id_md5)
                 
-                tokens = encoding.encode(gold_unit["content"])
-                token_count = len(tokens)
+                token_count = mannual_token_count(gold_unit["content"])
+                # token_count = len(tokens)
                 gold_unit["token_count"] = token_count
                 stream_elements.append(gold_unit)
                 current_atomic_order +=1
@@ -175,8 +177,9 @@ def handle_batch_result(flat_list, my_built_dfs, batch_result, stream_elements, 
             heading_id = f"{docname}__heading.{id_md5}"
             gold_unit["id"] = heading_id
             
-            tokens = encoding.encode(gold_unit["content"])
-            token_count = len(tokens)
+            # tokens = encoding.encode(gold_unit["content"])
+            # token_count = len(tokens)
+            token_count = mannual_token_count(gold_unit["content"])
             gold_unit["token_count"] = token_count
             
             stream_elements.append(gold_unit) ###
@@ -214,7 +217,7 @@ def handle_batch_result(flat_list, my_built_dfs, batch_result, stream_elements, 
             
             # special! picture can be a heading
             if ori_element.label.value == "picture":
-                if ori_element.prov[0].page_no == node["page"]:
+                if (node is not None) and ori_element.prov[0].page_no == node["page"]:
                     # print("FIND SUSPICIOUS PICTURREEEE")
                     extracted_text = ""
                     for child in ori_element.children:
@@ -263,8 +266,9 @@ def handle_batch_result(flat_list, my_built_dfs, batch_result, stream_elements, 
                         heading_id = f"{docname}__heading.{id_md5}"
                         gold_unit["id"] = heading_id
                         
-                        tokens = encoding.encode(gold_unit["content"])
-                        token_count = len(tokens)
+                        # tokens = encoding.encode(gold_unit["content"])
+                        # token_count = len(tokens)
+                        token_count = mannual_token_count(gold_unit["content"])
                         gold_unit["token_count"] = token_count
                         
                         stream_elements.append(gold_unit) ###
@@ -352,8 +356,9 @@ def handle_batch_result(flat_list, my_built_dfs, batch_result, stream_elements, 
             # gold_unit["metadata"]["description"] = description_str
             
             if ori_element.label.value != "picture":
-                tokens = encoding.encode(gold_unit["content"])
-                token_count = len(tokens)  
+                # tokens = encoding.encode(gold_unit["content"])
+                # token_count = len(tokens) 
+                token_count = mannual_token_count(gold_unit["content"]) 
                 gold_unit["token_count"] = token_count
             
             el_id = f"{docname}__{id_md5}"
@@ -368,10 +373,10 @@ def handle_batch_result(flat_list, my_built_dfs, batch_result, stream_elements, 
             element = stream_elements.popleft()
             element["metadata"]["source_document"] = batch_result.name
             #======= TEST STREAM ELEMENT =========
-            target_file = f"{docname}_streams.json"
-            with open(target_file, "a", encoding="utf-8") as f:
-                json.dump(element, f, default=str, ensure_ascii=False, indent=4)
-                f.write("\n")
+            # target_file = conf.STREAM_ELEMENTS_FILEPATH
+            # with open(target_file, "a", encoding="utf-8") as f:
+            #     json.dump(element, f, default=str, ensure_ascii=False, indent=4)
+            #     f.write("\n")
             #=====================================    
             
             insert_atomic_into_db(cursor=doc_db_cursor, element=element)

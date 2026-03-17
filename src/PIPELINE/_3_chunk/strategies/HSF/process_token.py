@@ -2,6 +2,7 @@ import copy
 import json
 from PIPELINE._3_chunk.strategies.HSF.atomic_db_helpers.db_helpers import connect_db, create_db_for_document
 from PIPELINE._3_chunk.strategies.HSF.hierarchy_helpers.DFSCursor import DFSCursor
+from pipeline_config import TOKEN_TREE_TEST_FILEPATH
 
 
 def sum_node_gold_units(node, token_map):
@@ -36,9 +37,11 @@ def compute_tree_token(hierarchy_tree, cursor):
     all_token = compute_node_token(hierarchy_tree, token_map)
     
     # ======== TEST TOKEN TREE =======================
-    with open("new_test_token_tree.json", "w", encoding="utf-8") as f:
+    with open(TOKEN_TREE_TEST_FILEPATH, "w", encoding="utf-8") as f:
         json.dump(hierarchy_tree, f, ensure_ascii=False, default=str, indent=2)
-    # ===============================================    
+    # ===============================================  
+      
+    return all_token
    
     
 

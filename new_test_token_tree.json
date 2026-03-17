@@ -47,7 +47,7 @@
         "se_theory_practice__p.d95e03b7c8387a22a747daa0f421208b.33",
         "se_theory_practice__p.8a797055ff54fe10d4ad7d373a7d980e.34"
       ],
-      "token_count": 1295
+      "token_count": 1464
     },
     {
       "level": 1,
@@ -71,7 +71,7 @@
         },
         "description": "Contents"
       },
-      "token_count": 8
+      "token_count": 15
     },
     {
       "level": 1,
@@ -163,7 +163,7 @@
         },
         "description": "Preface"
       },
-      "token_count": 5440
+      "token_count": 7641
     },
     {
       "level": 1,
@@ -187,7 +187,7 @@
         },
         "description": "About the Authors"
       },
-      "token_count": 636
+      "token_count": 1000
     },
     {
       "level": 1,
@@ -225,7 +225,7 @@
             },
             "description": "Why Software Engineering?  > 1.1 What Is Software Engineering?"
           },
-          "token_count": 1843
+          "token_count": 2341
         },
         {
           "level": 2,
@@ -264,7 +264,7 @@
             },
             "description": "Why Software Engineering?  > 1.2 How Successful Have We Been?"
           },
-          "token_count": 2836
+          "token_count": 3745
         },
         {
           "level": 2,
@@ -336,7 +336,7 @@
             },
             "description": "Why Software Engineering?  > 1.3 What Is Good Software?"
           },
-          "token_count": 3507
+          "token_count": 4756
         },
         {
           "level": 2,
@@ -363,7 +363,7 @@
             },
             "description": "Why Software Engineering?  > 1.4 Who Does Software Engineering?"
           },
-          "token_count": 1101
+          "token_count": 1441
         },
         {
           "level": 2,
@@ -410,7 +410,7 @@
             },
             "description": "Why Software Engineering?  > 1.5 A Systems Approach"
           },
-          "token_count": 3647
+          "token_count": 4707
         },
         {
           "level": 2,
@@ -471,7 +471,7 @@
             },
             "description": "Why Software Engineering?  > 1.6 An Engineering Approach"
           },
-          "token_count": 2573
+          "token_count": 3658
         },
         {
           "level": 2,
@@ -501,7 +501,7 @@
             },
             "description": "Why Software Engineering?  > 1.7 Members Of The Development Team"
           },
-          "token_count": 1353
+          "token_count": 1842
         },
         {
           "level": 2,
@@ -596,7 +596,7 @@
             },
             "description": "Why Software Engineering?  > 1.8 How Has Software Engineering Changed?"
           },
-          "token_count": 5631
+          "token_count": 7572
         },
         {
           "level": 2,
@@ -625,7 +625,7 @@
             },
             "description": "Why Software Engineering?  > 1.9 Information Systems Example"
           },
-          "token_count": 1351
+          "token_count": 1639
         },
         {
           "level": 2,
@@ -656,7 +656,7 @@
             },
             "description": "Why Software Engineering?  > 1.10 Real-Time Example"
           },
-          "token_count": 1349
+          "token_count": 1808
         },
         {
           "level": 2,
@@ -678,7 +678,7 @@
             },
             "description": "Why Software Engineering?  > 1.11 What This Chapter Means For You"
           },
-          "token_count": 239
+          "token_count": 346
         },
         {
           "level": 2,
@@ -698,7 +698,7 @@
             },
             "description": "Why Software Engineering?  > 1.12 What This Chapter Means For Your Development Team"
           },
-          "token_count": 165
+          "token_count": 239
         },
         {
           "level": 2,
@@ -720,7 +720,7 @@
             },
             "description": "Why Software Engineering?  > 1.13 What This Chapter Means For Researchers"
           },
-          "token_count": 181
+          "token_count": 277
         },
         {
           "level": 2,
@@ -747,7 +747,7 @@
             },
             "description": "Why Software Engineering?  > 1.14 Term Project"
           },
-          "token_count": 1376
+          "token_count": 1790
         },
         {
           "level": 2,
@@ -768,7 +768,7 @@
             },
             "description": "Why Software Engineering?  > 1.15 Key References"
           },
-          "token_count": 428
+          "token_count": 465
         },
         {
           "level": 2,
@@ -810,7 +810,7 @@
             },
             "description": "Why Software Engineering?  > 1.16 Exercises"
           },
-          "token_count": 1141
+          "token_count": 1584
         }
       ],
       "gold_unit": [
@@ -836,7 +836,7 @@
         },
         "description": "Why Software Engineering?"
       },
-      "token_count": 29267
+      "token_count": 39018
     },
     {
       "level": 1,
@@ -886,7 +886,7 @@
             },
             "description": "Modeling the Process and Life Cycle > 2.1 The Meaning Of Process"
           },
-          "token_count": 1566
+          "token_count": 2247
         },
         {
           "level": 2,
@@ -1020,7 +1020,7 @@
             },
             "description": "Modeling the Process and Life Cycle > 2.2 Software Process Models"
           },
-          "token_count": 10301
+          "token_count": 13567
         },
         {
           "level": 2,
@@ -1079,7 +1079,7 @@
             },
             "description": "Modeling the Process and Life Cycle > 2.3 Tools And Techniques For Process Modeling"
           },
-          "token_count": 4389
+          "token_count": 7172
         },
         {
           "level": 2,
@@ -1125,7 +1125,7 @@
             },
             "description": "Modeling the Process and Life Cycle > 2.4 Practical Process Modeling"
           },
-          "token_count": 1708
+          "token_count": 2425
         },
         {
           "level": 2,
@@ -1150,7 +1150,7 @@
             },
             "description": "Modeling the Process and Life Cycle > 2.5 Information Systems Example"
           },
-          "token_count": 1380
+          "token_count": 2734
         },
         {
           "level": 2,
@@ -1173,7 +1173,7 @@
             },
             "description": "Modeling the Process and Life Cycle > 2.6 Real-Time Example"
           },
-          "token_count": 813
+          "token_count": 1001
         },
         {
           "level": 2,
@@ -1190,7 +1190,7 @@
             },
             "description": "Modeling the Process and Life Cycle > 2.7 What This Chapter Means For You"
           },
-          "token_count": 103
+          "token_count": 163
         },
         {
           "level": 2,
@@ -1208,7 +1208,7 @@
             },
             "description": "Modeling the Process and Life Cycle > 2.8 What This Chapter Means For Your Development Team"
           },
-          "token_count": 148
+          "token_count": 224
         },
         {
           "level": 2,
@@ -1230,7 +1230,7 @@
             },
             "description": "Modeling the Process and Life Cycle > 2.9 What This Chapter Means For Researchers"
           },
-          "token_count": 199
+          "token_count": 281
         },
         {
           "level": 2,
@@ -1248,7 +1248,7 @@
             },
             "description": "Modeling the Process and Life Cycle > 2.10 Term Project"
           },
-          "token_count": 210
+          "token_count": 260
         },
         {
           "level": 2,
@@ -1316,7 +1316,7 @@
             },
             "description": "Modeling the Process and Life Cycle > 2.11 Key References"
           },
-          "token_count": 2128
+          "token_count": 2833
         },
         {
           "level": 2,
@@ -1345,7 +1345,7 @@
             },
             "description": "Modeling the Process and Life Cycle > 2.12 Exercises"
           },
-          "token_count": 468
+          "token_count": 683
         }
       ],
       "gold_unit": [
@@ -1363,7 +1363,7 @@
         },
         "description": "Modeling the Process and Life Cycle"
       },
-      "token_count": 23608
+      "token_count": 33864
     },
     {
       "level": 1,
@@ -1479,7 +1479,7 @@
             },
             "description": "Planning and Managing the Project > 3.1 Tracking Progress"
           },
-          "token_count": 9766
+          "token_count": 13391
         },
         {
           "level": 2,
@@ -1579,7 +1579,7 @@
             },
             "description": "Planning and Managing the Project > 3.2 Project Personnel"
           },
-          "token_count": 5955
+          "token_count": 8216
         },
         {
           "level": 2,
@@ -1714,7 +1714,7 @@
             },
             "description": "Planning and Managing the Project > 3.3 Effort Estimation"
           },
-          "token_count": 10208
+          "token_count": 14621
         },
         {
           "level": 2,
@@ -1774,7 +1774,7 @@
             },
             "description": "Planning and Managing the Project > 3.4 Risk Management"
           },
-          "token_count": 2861
+          "token_count": 3646
         },
         {
           "level": 2,
@@ -1824,7 +1824,7 @@
             },
             "description": "Planning and Managing the Project > 3.5 The Project Plan"
           },
-          "token_count": 1093
+          "token_count": 1597
         },
         {
           "level": 2,
@@ -1907,7 +1907,7 @@
             },
             "description": "Planning and Managing the Project > 3.6 Process Models And Project Management"
           },
-          "token_count": 5235
+          "token_count": 6646
         },
         {
           "level": 2,
@@ -1937,7 +1937,7 @@
             },
             "description": "Planning and Managing the Project > 3.7 Information Systems Example"
           },
-          "token_count": 1473
+          "token_count": 1940
         },
         {
           "level": 2,
@@ -1960,7 +1960,7 @@
             },
             "description": "Planning and Managing the Project > 3.8 Real-Time Example"
           },
-          "token_count": 814
+          "token_count": 1077
         },
         {
           "level": 2,
@@ -1978,7 +1978,7 @@
             },
             "description": "Planning and Managing the Project > 3.9 What This Chapter Means For You"
           },
-          "token_count": 225
+          "token_count": 327
         },
         {
           "level": 2,
@@ -1997,7 +1997,7 @@
             },
             "description": "Planning and Managing the Project > 3.10 What This Chapter Means For Your Development Team"
           },
-          "token_count": 217
+          "token_count": 297
         },
         {
           "level": 2,
@@ -2015,7 +2015,7 @@
             },
             "description": "Planning and Managing the Project > 3.11 What This Chapter Means For Researchers"
           },
-          "token_count": 175
+          "token_count": 274
         },
         {
           "level": 2,
@@ -2034,7 +2034,7 @@
             },
             "description": "Planning and Managing the Project > 3.12 Term Project"
           },
-          "token_count": 207
+          "token_count": 303
         },
         {
           "level": 2,
@@ -2059,7 +2059,7 @@
             },
             "description": "Planning and Managing the Project > 3.13 Key References"
           },
-          "token_count": 617
+          "token_count": 813
         },
         {
           "level": 2,
@@ -2096,7 +2096,7 @@
             },
             "description": "Planning and Managing the Project > 3.14 Exercises"
           },
-          "token_count": 1383
+          "token_count": 1650
         }
       ],
       "gold_unit": [
@@ -2115,7 +2115,7 @@
         },
         "description": "Planning and Managing the Project"
       },
-      "token_count": 40349
+      "token_count": 54992
     },
     {
       "level": 1,
@@ -2145,7 +2145,7 @@
             },
             "description": "Capturing the Requirements  > 4.1 The Requirements Process"
           },
-          "token_count": 1337
+          "token_count": 1847
         },
         {
           "level": 2,
@@ -2192,7 +2192,7 @@
             },
             "description": "Capturing the Requirements  > 4.2 Requirements Elicitation"
           },
-          "token_count": 2666
+          "token_count": 4156
         },
         {
           "level": 2,
@@ -2258,7 +2258,7 @@
             },
             "description": "Capturing the Requirements  > 4.3 Types Of Requirements"
           },
-          "token_count": 4868
+          "token_count": 8023
         },
         {
           "level": 2,
@@ -2285,7 +2285,7 @@
             },
             "description": "Capturing the Requirements  > 4.4 Characteristics Of Requirements"
           },
-          "token_count": 928
+          "token_count": 1372
         },
         {
           "level": 2,
@@ -2513,7 +2513,7 @@
             },
             "description": "Capturing the Requirements  > 4.5 Modeling Notations"
           },
-          "token_count": 21285
+          "token_count": 27591
         },
         {
           "level": 2,
@@ -2556,7 +2556,7 @@
             },
             "description": "Capturing the Requirements  > 4.6 Requirements And Specification Languages"
           },
-          "token_count": 2601
+          "token_count": 3497
         },
         {
           "level": 2,
@@ -2581,7 +2581,7 @@
             },
             "description": "Capturing the Requirements  > 4.7 Prototyping Requirements"
           },
-          "token_count": 1460
+          "token_count": 1928
         },
         {
           "level": 2,
@@ -2642,7 +2642,7 @@
             },
             "description": "Capturing the Requirements  > 4.8 Requirements Documentation"
           },
-          "token_count": 2666
+          "token_count": 3775
         },
         {
           "level": 2,
@@ -2704,7 +2704,7 @@
             },
             "description": "Capturing the Requirements  > 4.9 Validation And Verification"
           },
-          "token_count": 3241
+          "token_count": 4659
         },
         {
           "level": 2,
@@ -2733,7 +2733,7 @@
             },
             "description": "Capturing the Requirements  > 4.10 Measuring Requirements"
           },
-          "token_count": 1133
+          "token_count": 1450
         },
         {
           "level": 2,
@@ -2774,7 +2774,7 @@
             },
             "description": "Capturing the Requirements  > 4.11 Choosing A Specification Technique"
           },
-          "token_count": 2002
+          "token_count": 2832
         },
         {
           "level": 2,
@@ -2806,7 +2806,7 @@
             },
             "description": "Capturing the Requirements  > 4.12 Information Systems Example"
           },
-          "token_count": 1582
+          "token_count": 1845
         },
         {
           "level": 2,
@@ -2857,7 +2857,7 @@
             },
             "description": "Capturing the Requirements  > 4.13 Real-Time Example"
           },
-          "token_count": 1925
+          "token_count": 2654
         },
         {
           "level": 2,
@@ -2932,7 +2932,7 @@
             },
             "description": "Capturing the Requirements  > 4.17 Term Project"
           },
-          "token_count": 2027
+          "token_count": 2681
         },
         {
           "level": 2,
@@ -2957,7 +2957,7 @@
             },
             "description": "Capturing the Requirements  > 4.18 Key References"
           },
-          "token_count": 829
+          "token_count": 1124
         },
         {
           "level": 2,
@@ -3015,7 +3015,7 @@
             },
             "description": "Capturing the Requirements  > 4.19 Exercises"
           },
-          "token_count": 2261
+          "token_count": 2867
         }
       ],
       "gold_unit": [
@@ -3051,7 +3051,7 @@
         },
         "description": "Capturing the Requirements"
       },
-      "token_count": 53635
+      "token_count": 73438
     },
     {
       "level": 1,
@@ -3123,7 +3123,7 @@
             },
             "description": "Designing the Architecture  > 5.1 The Design Process"
           },
-          "token_count": 5030
+          "token_count": 6748
         },
         {
           "level": 2,
@@ -3147,7 +3147,7 @@
             },
             "description": "Designing the Architecture  > 5.2 Modeling Architectures"
           },
-          "token_count": 409
+          "token_count": 582
         },
         {
           "level": 2,
@@ -3197,7 +3197,7 @@
             },
             "description": "Designing the Architecture  > 5.3 Decomposition And Views"
           },
-          "token_count": 2646
+          "token_count": 3722
         },
         {
           "level": 2,
@@ -3281,7 +3281,7 @@
             },
             "description": "Designing the Architecture  > 5.4 Architectural Styles And Strategies"
           },
-          "token_count": 6310
+          "token_count": 8439
         },
         {
           "level": 2,
@@ -3406,7 +3406,7 @@
             },
             "description": "Designing the Architecture  > 5.5 Achieving Quality Attributes"
           },
-          "token_count": 7183
+          "token_count": 10270
         },
         {
           "level": 2,
@@ -3446,7 +3446,7 @@
             },
             "description": "Designing the Architecture  > 5.6 Collaborative Design"
           },
-          "token_count": 1355
+          "token_count": 1931
         },
         {
           "level": 2,
@@ -3586,7 +3586,7 @@
             },
             "description": "Designing the Architecture  > 5.7 Architecture Evaluation And Refinement"
           },
-          "token_count": 10972
+          "token_count": 15031
         },
         {
           "level": 2,
@@ -3629,7 +3629,7 @@
             },
             "description": "Designing the Architecture  > 5.8 Documenting Software Architectures"
           },
-          "token_count": 1773
+          "token_count": 2570
         },
         {
           "level": 2,
@@ -3677,7 +3677,7 @@
             },
             "description": "Designing the Architecture  > 5.9 Architecture Design Review"
           },
-          "token_count": 1535
+          "token_count": 2169
         },
         {
           "level": 2,
@@ -3733,7 +3733,7 @@
             },
             "description": "Designing the Architecture  > 5.10 Software Product Lines"
           },
-          "token_count": 3024
+          "token_count": 4390
         },
         {
           "level": 2,
@@ -3764,7 +3764,7 @@
             },
             "description": "Designing the Architecture  > 5.11 Information Systems Example"
           },
-          "token_count": 1630
+          "token_count": 1973
         },
         {
           "level": 2,
@@ -3785,7 +3785,7 @@
             },
             "description": "Designing the Architecture  > 5.12 Real-Time Example"
           },
-          "token_count": 824
+          "token_count": 1393
         },
         {
           "level": 2,
@@ -3804,7 +3804,7 @@
             },
             "description": "Designing the Architecture  > 5.13 What This Chapter Means For You"
           },
-          "token_count": 181
+          "token_count": 289
         },
         {
           "level": 2,
@@ -3824,7 +3824,7 @@
             },
             "description": "Designing the Architecture  > 5.14 What This Chapter Means For Your Development Team"
           },
-          "token_count": 272
+          "token_count": 407
         },
         {
           "level": 2,
@@ -3850,7 +3850,7 @@
             },
             "description": "Designing the Architecture  > 5.15 What This Chapter Means For Researchers"
           },
-          "token_count": 934
+          "token_count": 1307
         },
         {
           "level": 2,
@@ -3869,7 +3869,7 @@
             },
             "description": "Designing the Architecture  > 5.16 Term Project"
           },
-          "token_count": 202
+          "token_count": 294
         },
         {
           "level": 2,
@@ -3889,7 +3889,7 @@
             },
             "description": "Designing the Architecture  > 5.17 Key References"
           },
-          "token_count": 331
+          "token_count": 372
         },
         {
           "level": 2,
@@ -3936,7 +3936,7 @@
             },
             "description": "Designing the Architecture  > 5.18 Exercises"
           },
-          "token_count": 1363
+          "token_count": 1757
         }
       ],
       "gold_unit": [
@@ -3957,7 +3957,7 @@
         },
         "description": "Designing the Architecture"
       },
-      "token_count": 46304
+      "token_count": 64150
     },
     {
       "level": 1,
@@ -3983,7 +3983,7 @@
             },
             "description": "Designing the Modules  > 6.1 Design Methodology"
           },
-          "token_count": 1050
+          "token_count": 1544
         },
         {
           "level": 2,
@@ -4115,7 +4115,7 @@
             },
             "description": "Designing the Modules  > 6.2 Design Principles"
           },
-          "token_count": 10847
+          "token_count": 13925
         },
         {
           "level": 2,
@@ -4211,7 +4211,7 @@
             },
             "description": "Designing the Modules  > 6.3 Oo Design"
           },
-          "token_count": 7802
+          "token_count": 10128
         },
         {
           "level": 2,
@@ -4360,7 +4360,7 @@
             },
             "description": "Designing the Modules  > 6.4 Representing Oo Designs In The Uml"
           },
-          "token_count": 8910
+          "token_count": 11601
         },
         {
           "level": 2,
@@ -4435,7 +4435,7 @@
             },
             "description": "Designing the Modules  > 6.5 Oo Design Patterns"
           },
-          "token_count": 6368
+          "token_count": 8710
         },
         {
           "level": 2,
@@ -4490,7 +4490,7 @@
             },
             "description": "Designing the Modules  > 6.6 Other Design Considerations"
           },
-          "token_count": 2695
+          "token_count": 3452
         },
         {
           "level": 2,
@@ -4570,7 +4570,7 @@
             },
             "description": "Designing the Modules  > 6.7 Oo Measurement"
           },
-          "token_count": 5902
+          "token_count": 7971
         },
         {
           "level": 2,
@@ -4613,7 +4613,7 @@
             },
             "description": "Designing the Modules  > 6.8 Design Documentation"
           },
-          "token_count": 1349
+          "token_count": 1756
         },
         {
           "level": 2,
@@ -4635,7 +4635,7 @@
             },
             "description": "Designing the Modules  > 6.9 Information Systems Example"
           },
-          "token_count": 805
+          "token_count": 1019
         },
         {
           "level": 2,
@@ -4652,7 +4652,7 @@
             },
             "description": "Designing the Modules  > 6.10 Real-Time Example"
           },
-          "token_count": 236
+          "token_count": 316
         },
         {
           "level": 2,
@@ -4674,7 +4674,7 @@
             },
             "description": "Designing the Modules  > 6.11 What This Chapter Means For You"
           },
-          "token_count": 526
+          "token_count": 654
         },
         {
           "level": 2,
@@ -4692,7 +4692,7 @@
             },
             "description": "Designing the Modules  > 6.12 What This Chapter Means For Your Development Team"
           },
-          "token_count": 230
+          "token_count": 333
         },
         {
           "level": 2,
@@ -4710,7 +4710,7 @@
             },
             "description": "Designing the Modules  > 6.13 What This Chapter Means For Researchers"
           },
-          "token_count": 233
+          "token_count": 369
         },
         {
           "level": 2,
@@ -4727,7 +4727,7 @@
             },
             "description": "Designing the Modules  > 6.14 Term Project"
           },
-          "token_count": 113
+          "token_count": 131
         },
         {
           "level": 2,
@@ -4745,7 +4745,7 @@
             },
             "description": "Designing the Modules  > 6.15 Key References"
           },
-          "token_count": 279
+          "token_count": 298
         },
         {
           "level": 2,
@@ -4802,7 +4802,7 @@
             },
             "description": "Designing the Modules  > 6.16 Exercises"
           },
-          "token_count": 1567
+          "token_count": 2040
         }
       ],
       "gold_unit": [
@@ -4827,7 +4827,7 @@
         },
         "description": "Designing the Modules"
       },
-      "token_count": 49479
+      "token_count": 65079
     },
     {
       "level": 1,
@@ -4868,7 +4868,7 @@
             },
             "description": "Writing the Programs  > 7.1 Programming Standards And Procedures"
           },
-          "token_count": 1380
+          "token_count": 2025
         },
         {
           "level": 2,
@@ -4992,7 +4992,7 @@
             },
             "description": "Writing the Programs  > 7.2 Programming Guidelines"
           },
-          "token_count": 4350
+          "token_count": 5757
         },
         {
           "level": 2,
@@ -5063,7 +5063,7 @@
             },
             "description": "Writing the Programs  > 7.3 Documentation"
           },
-          "token_count": 2199
+          "token_count": 3166
         },
         {
           "level": 2,
@@ -5113,7 +5113,7 @@
             },
             "description": "Writing the Programs  > 7.4 The Programming Process"
           },
-          "token_count": 2266
+          "token_count": 3227
         },
         {
           "level": 2,
@@ -5137,7 +5137,7 @@
             },
             "description": "Writing the Programs  > 7.5 Information Systems Example"
           },
-          "token_count": 494
+          "token_count": 682
         },
         {
           "level": 2,
@@ -5160,7 +5160,7 @@
             },
             "description": "Writing the Programs  > 7.6 Real-Time Example"
           },
-          "token_count": 508
+          "token_count": 684
         },
         {
           "level": 2,
@@ -5186,7 +5186,7 @@
             },
             "description": "Writing the Programs  > 7.7 What This Chapter Means For You"
           },
-          "token_count": 154
+          "token_count": 243
         },
         {
           "level": 2,
@@ -5203,7 +5203,7 @@
             },
             "description": "Writing the Programs  > 7.8 What This Chapter Means For Your Development Team"
           },
-          "token_count": 90
+          "token_count": 135
         },
         {
           "level": 2,
@@ -5224,7 +5224,7 @@
             },
             "description": "Writing the Programs  > 7.9 What This Chapter Means For Researchers"
           },
-          "token_count": 220
+          "token_count": 332
         },
         {
           "level": 2,
@@ -5243,7 +5243,7 @@
             },
             "description": "Writing the Programs  > 7.10 Term Project"
           },
-          "token_count": 220
+          "token_count": 307
         },
         {
           "level": 2,
@@ -5267,7 +5267,7 @@
             },
             "description": "Writing the Programs  > 7.11 Key References"
           },
-          "token_count": 157
+          "token_count": 186
         },
         {
           "level": 2,
@@ -5296,7 +5296,7 @@
             },
             "description": "Writing the Programs  > 7.12 Exercises"
           },
-          "token_count": 489
+          "token_count": 698
         }
       ],
       "gold_unit": [
@@ -5317,7 +5317,7 @@
         },
         "description": "Writing the Programs"
       },
-      "token_count": 12840
+      "token_count": 17879
     },
     {
       "level": 1,
@@ -5386,7 +5386,7 @@
             },
             "description": "Testing the Programs  > 8.1 Software Faults And Failures"
           },
-          "token_count": 3874
+          "token_count": 5469
         },
         {
           "level": 2,
@@ -5446,7 +5446,7 @@
             },
             "description": "Testing the Programs  > 8.2 Testing Issues"
           },
-          "token_count": 3154
+          "token_count": 4125
         },
         {
           "level": 2,
@@ -5606,7 +5606,7 @@
             },
             "description": "Testing the Programs  > 8.3 Unit Testing"
           },
-          "token_count": 9026
+          "token_count": 12868
         },
         {
           "level": 2,
@@ -5671,7 +5671,7 @@
             },
             "description": "Testing the Programs  > 8.4 Integration Testing"
           },
-          "token_count": 5143
+          "token_count": 6861
         },
         {
           "level": 2,
@@ -5721,7 +5721,7 @@
             },
             "description": "Testing the Programs  > 8.5 Testing Object-Oriented Systems"
           },
-          "token_count": 1882
+          "token_count": 2456
         },
         {
           "level": 2,
@@ -5759,7 +5759,7 @@
             },
             "description": "Testing the Programs  > 8.6 Test Planning"
           },
-          "token_count": 1118
+          "token_count": 1610
         },
         {
           "level": 2,
@@ -5807,7 +5807,7 @@
             },
             "description": "Testing the Programs  > 8.7 Automated Testing Tools"
           },
-          "token_count": 1979
+          "token_count": 2762
         },
         {
           "level": 2,
@@ -5864,7 +5864,7 @@
             },
             "description": "Testing the Programs  > 8.8 When To Stop Testing"
           },
-          "token_count": 3577
+          "token_count": 4353
         },
         {
           "level": 2,
@@ -5885,7 +5885,7 @@
             },
             "description": "Testing the Programs  > 8.9 Information Systems Example"
           },
-          "token_count": 391
+          "token_count": 533
         },
         {
           "level": 2,
@@ -5913,7 +5913,7 @@
             },
             "description": "Testing the Programs  > 8.10 Real-Time Example"
           },
-          "token_count": 607
+          "token_count": 826
         },
         {
           "level": 2,
@@ -5931,7 +5931,7 @@
             },
             "description": "Testing the Programs  > 8.11 What This Chapter Means For You"
           },
-          "token_count": 201
+          "token_count": 285
         },
         {
           "level": 2,
@@ -5950,7 +5950,7 @@
             },
             "description": "Testing the Programs  > 8.12 What This Chapter Means For Your Development Team"
           },
-          "token_count": 213
+          "token_count": 283
         },
         {
           "level": 2,
@@ -5971,7 +5971,7 @@
             },
             "description": "Testing the Programs  > 8.13 What This Chapter Means For Researchers"
           },
-          "token_count": 270
+          "token_count": 387
         },
         {
           "level": 2,
@@ -5988,7 +5988,7 @@
             },
             "description": "Testing the Programs  > 8.14 Term Project"
           },
-          "token_count": 83
+          "token_count": 111
         },
         {
           "level": 2,
@@ -6010,7 +6010,7 @@
             },
             "description": "Testing the Programs  > 8.15 Key References"
           },
-          "token_count": 565
+          "token_count": 720
         },
         {
           "level": 2,
@@ -6045,7 +6045,7 @@
             },
             "description": "Testing the Programs  > 8.16 Exercises"
           },
-          "token_count": 1274
+          "token_count": 1583
         }
       ],
       "gold_unit": [
@@ -6067,7 +6067,7 @@
         },
         "description": "Testing the Programs"
       },
-      "token_count": 33560
+      "token_count": 45501
     },
     {
       "level": 1,
@@ -6202,7 +6202,7 @@
             },
             "description": "Testing the System  > 9.1 Principles Of System Testing"
           },
-          "token_count": 8646
+          "token_count": 11780
         },
         {
           "level": 2,
@@ -6302,7 +6302,7 @@
             },
             "description": "Testing the System  > 9.2 Function Testing"
           },
-          "token_count": 3209
+          "token_count": 4324
         },
         {
           "level": 2,
@@ -6338,7 +6338,7 @@
             },
             "description": "Testing the System  > 9.3 Performance Testing"
           },
-          "token_count": 1262
+          "token_count": 1802
         },
         {
           "level": 2,
@@ -6441,7 +6441,7 @@
             },
             "description": "Testing the System  > 9.4 Reliability, Availability, And Maintainability"
           },
-          "token_count": 7056
+          "token_count": 10436
         },
         {
           "level": 2,
@@ -6479,7 +6479,7 @@
             },
             "description": "Testing the System  > 9.5 Acceptance Testing"
           },
-          "token_count": 1688
+          "token_count": 2432
         },
         {
           "level": 2,
@@ -6498,7 +6498,7 @@
             },
             "description": "Testing the System  > 9.6 Installation Testing"
           },
-          "token_count": 256
+          "token_count": 388
         },
         {
           "level": 2,
@@ -6521,7 +6521,7 @@
             },
             "description": "Testing the System  > 9.7 Automated System Testing"
           },
-          "token_count": 727
+          "token_count": 1032
         },
         {
           "level": 2,
@@ -6711,7 +6711,7 @@
             },
             "description": "Testing the System  > 9.8 Test Documentation"
           },
-          "token_count": 6516
+          "token_count": 9279
         },
         {
           "level": 2,
@@ -6827,7 +6827,7 @@
             },
             "description": "Testing the System  > 9.9 Testing Safety-Critical Systems"
           },
-          "token_count": 6839
+          "token_count": 10124
         },
         {
           "level": 2,
@@ -6864,7 +6864,7 @@
             },
             "description": "Testing the System  > 9.10 Information Systems Example"
           },
-          "token_count": 1267
+          "token_count": 1694
         },
         {
           "level": 2,
@@ -6893,7 +6893,7 @@
             },
             "description": "Testing the System  > 9.11 Real-Time Example"
           },
-          "token_count": 733
+          "token_count": 1057
         },
         {
           "level": 2,
@@ -6910,7 +6910,7 @@
             },
             "description": "Testing the System  > 9.12 What This Chapter Means For You"
           },
-          "token_count": 181
+          "token_count": 267
         },
         {
           "level": 2,
@@ -6928,7 +6928,7 @@
             },
             "description": "Testing the System  > 9.13 What This Chapter Means For Your Development Team"
           },
-          "token_count": 208
+          "token_count": 324
         },
         {
           "level": 2,
@@ -6951,7 +6951,7 @@
             },
             "description": "Testing the System  > 9.14 What This Chapter Means For Researchers"
           },
-          "token_count": 324
+          "token_count": 449
         },
         {
           "level": 2,
@@ -6968,7 +6968,7 @@
             },
             "description": "Testing the System  > 9.15 Term Project"
           },
-          "token_count": 72
+          "token_count": 96
         },
         {
           "level": 2,
@@ -6989,7 +6989,7 @@
             },
             "description": "Testing the System  > 9.16 Key References"
           },
-          "token_count": 395
+          "token_count": 549
         },
         {
           "level": 2,
@@ -7080,7 +7080,7 @@
             },
             "description": "Testing the System  > 9.17 Exercises"
           },
-          "token_count": 2296
+          "token_count": 3496
         }
       ],
       "gold_unit": [
@@ -7103,7 +7103,7 @@
         },
         "description": "Testing the System"
       },
-      "token_count": 41844
+      "token_count": 59777
     },
     {
       "level": 1,
@@ -7162,7 +7162,7 @@
             },
             "description": "Delivering the System  > 10.1 Training"
           },
-          "token_count": 2918
+          "token_count": 4432
         },
         {
           "level": 2,
@@ -7278,7 +7278,7 @@
             },
             "description": "Delivering the System  > 10.2 Documentation"
           },
-          "token_count": 3951
+          "token_count": 5887
         },
         {
           "level": 2,
@@ -7299,7 +7299,7 @@
             },
             "description": "Delivering the System  > 10.3 Information Systems Example"
           },
-          "token_count": 426
+          "token_count": 612
         },
         {
           "level": 2,
@@ -7318,7 +7318,7 @@
             },
             "description": "Delivering the System  > 10.4 Real-Time Example"
           },
-          "token_count": 289
+          "token_count": 356
         },
         {
           "level": 2,
@@ -7338,7 +7338,7 @@
             },
             "description": "Delivering the System  > 10.5 What This Chapter Means For You"
           },
-          "token_count": 97
+          "token_count": 159
         },
         {
           "level": 2,
@@ -7357,7 +7357,7 @@
             },
             "description": "Delivering the System  > 10.6 What This Chapter Means For Your Development Team"
           },
-          "token_count": 241
+          "token_count": 347
         },
         {
           "level": 2,
@@ -7379,7 +7379,7 @@
             },
             "description": "Delivering the System  > 10.7 What This Chapter Means For Researchers"
           },
-          "token_count": 148
+          "token_count": 238
         },
         {
           "level": 2,
@@ -7396,7 +7396,7 @@
             },
             "description": "Delivering the System  > 10.8 Term Project"
           },
-          "token_count": 44
+          "token_count": 59
         },
         {
           "level": 2,
@@ -7414,7 +7414,7 @@
             },
             "description": "Delivering the System  > 10.9 Key References"
           },
-          "token_count": 64
+          "token_count": 89
         },
         {
           "level": 2,
@@ -7439,7 +7439,7 @@
             },
             "description": "Delivering the System  > 10.10 Exercises"
           },
-          "token_count": 587
+          "token_count": 817
         }
       ],
       "gold_unit": [
@@ -7459,7 +7459,7 @@
         },
         "description": "Delivering the System"
       },
-      "token_count": 9065
+      "token_count": 13411
     },
     {
       "level": 1,
@@ -7544,7 +7544,7 @@
             },
             "description": "Maintaining the System  > 11.1 The Changing System"
           },
-          "token_count": 4870
+          "token_count": 6733
         },
         {
           "level": 2,
@@ -7598,7 +7598,7 @@
             },
             "description": "Maintaining the System  > 11.2 The Nature Of Maintenance"
           },
-          "token_count": 2032
+          "token_count": 2814
         },
         {
           "level": 2,
@@ -7690,7 +7690,7 @@
             },
             "description": "Maintaining the System  > 11.3 Maintenance Problems"
           },
-          "token_count": 4981
+          "token_count": 7588
         },
         {
           "level": 2,
@@ -7763,7 +7763,7 @@
             },
             "description": "Maintaining the System  > 11.4 Measuring Maintenance Characteristics"
           },
-          "token_count": 3224
+          "token_count": 4108
         },
         {
           "level": 2,
@@ -7854,7 +7854,7 @@
             },
             "description": "Maintaining the System  > 11.5 Maintenance Techniques And Tools"
           },
-          "token_count": 4655
+          "token_count": 6293
         },
         {
           "level": 2,
@@ -7933,7 +7933,7 @@
             },
             "description": "Maintaining the System  > 11.6 Software Rejuvenation"
           },
-          "token_count": 3860
+          "token_count": 4935
         },
         {
           "level": 2,
@@ -7953,7 +7953,7 @@
             },
             "description": "Maintaining the System  > 11.7 Information Systems Example"
           },
-          "token_count": 558
+          "token_count": 779
         },
         {
           "level": 2,
@@ -7976,7 +7976,7 @@
             },
             "description": "Maintaining the System  > 11.8 Real-Time Example"
           },
-          "token_count": 561
+          "token_count": 790
         },
         {
           "level": 2,
@@ -7998,7 +7998,7 @@
             },
             "description": "Maintaining the System  > 11.9 What This Chapter Means For You"
           },
-          "token_count": 364
+          "token_count": 518
         },
         {
           "level": 2,
@@ -8017,7 +8017,7 @@
             },
             "description": "Maintaining the System  > 11.10 What This Chapter Means For Your Development Team"
           },
-          "token_count": 178
+          "token_count": 246
         },
         {
           "level": 2,
@@ -8036,7 +8036,7 @@
             },
             "description": "Maintaining the System  > 11.11 What This Chapter Means For Researchers"
           },
-          "token_count": 205
+          "token_count": 330
         },
         {
           "level": 2,
@@ -8053,7 +8053,7 @@
             },
             "description": "Maintaining the System  > 11.12 Term Project"
           },
-          "token_count": 61
+          "token_count": 80
         },
         {
           "level": 2,
@@ -8073,7 +8073,7 @@
             },
             "description": "Maintaining the System  > 11.13 Key References"
           },
-          "token_count": 249
+          "token_count": 356
         },
         {
           "level": 2,
@@ -8123,7 +8123,7 @@
             },
             "description": "Maintaining the System  > 11.14 Exercises"
           },
-          "token_count": 859
+          "token_count": 1166
         }
       ],
       "gold_unit": [
@@ -8143,7 +8143,7 @@
         },
         "description": "Maintaining the System"
       },
-      "token_count": 26819
+      "token_count": 36963
     },
     {
       "level": 1,
@@ -8209,7 +8209,7 @@
             },
             "description": "Evaluating Products, Processes, and Resources > 12.1 Approaches To Evaluation"
           },
-          "token_count": 2966
+          "token_count": 4380
         },
         {
           "level": 2,
@@ -8253,7 +8253,7 @@
             },
             "description": "Evaluating Products, Processes, and Resources > 12.2 Selecting An Evaluation Technique"
           },
-          "token_count": 3537
+          "token_count": 4766
         },
         {
           "level": 2,
@@ -8307,7 +8307,7 @@
             },
             "description": "Evaluating Products, Processes, and Resources > 12.3 Assessment Vs. Prediction"
           },
-          "token_count": 3643
+          "token_count": 6274
         },
         {
           "level": 2,
@@ -8467,7 +8467,7 @@
             },
             "description": "Evaluating Products, Processes, and Resources > 12.4 Evaluating Products"
           },
-          "token_count": 10097
+          "token_count": 14266
         },
         {
           "level": 2,
@@ -8644,7 +8644,7 @@
             },
             "description": "Evaluating Products, Processes, and Resources > 12.5 Evaluating Processes"
           },
-          "token_count": 10850
+          "token_count": 14934
         },
         {
           "level": 2,
@@ -8705,7 +8705,7 @@
             },
             "description": "Evaluating Products, Processes, and Resources > 12.6 Evaluating Resources"
           },
-          "token_count": 2945
+          "token_count": 4651
         },
         {
           "level": 2,
@@ -8723,7 +8723,7 @@
             },
             "description": "Evaluating Products, Processes, and Resources > 12.7 Information Systems Example"
           },
-          "token_count": 319
+          "token_count": 461
         },
         {
           "level": 2,
@@ -8741,7 +8741,7 @@
             },
             "description": "Evaluating Products, Processes, and Resources > 12.8 Real-Time Example"
           },
-          "token_count": 256
+          "token_count": 314
         },
         {
           "level": 2,
@@ -8762,7 +8762,7 @@
             },
             "description": "Evaluating Products, Processes, and Resources > 12.9 What This Chapter Means For You"
           },
-          "token_count": 332
+          "token_count": 464
         },
         {
           "level": 2,
@@ -8781,7 +8781,7 @@
             },
             "description": "Evaluating Products, Processes, and Resources > 12.10 What This Chapter Means For Your Development Team"
           },
-          "token_count": 206
+          "token_count": 325
         },
         {
           "level": 2,
@@ -8799,7 +8799,7 @@
             },
             "description": "Evaluating Products, Processes, and Resources > 12.11 What This Chapter Means For Researchers"
           },
-          "token_count": 137
+          "token_count": 216
         },
         {
           "level": 2,
@@ -8817,7 +8817,7 @@
             },
             "description": "Evaluating Products, Processes, and Resources > 12.12 Term Project"
           },
-          "token_count": 123
+          "token_count": 161
         },
         {
           "level": 2,
@@ -8840,7 +8840,7 @@
             },
             "description": "Evaluating Products, Processes, and Resources > 12.13 Key References"
           },
-          "token_count": 517
+          "token_count": 675
         },
         {
           "level": 2,
@@ -8870,7 +8870,7 @@
             },
             "description": "Evaluating Products, Processes, and Resources > 12.14 Exercises"
           },
-          "token_count": 603
+          "token_count": 829
         }
       ],
       "gold_unit": [
@@ -8890,7 +8890,7 @@
         },
         "description": "Evaluating Products, Processes, and Resources"
       },
-      "token_count": 36762
+      "token_count": 53061
     },
     {
       "level": 1,
@@ -8976,7 +8976,7 @@
             },
             "description": "Improving Predictions, Products, Processes, and Resources > 13.1 Improving Predictions"
           },
-          "token_count": 7741
+          "token_count": 14113
         },
         {
           "level": 2,
@@ -9022,7 +9022,7 @@
             },
             "description": "Improving Predictions, Products, Processes, and Resources > 13.2 Improving Products"
           },
-          "token_count": 2872
+          "token_count": 4133
         },
         {
           "level": 2,
@@ -9116,7 +9116,7 @@
             },
             "description": "Improving Predictions, Products, Processes, and Resources > 13.3 Improving Processes"
           },
-          "token_count": 5064
+          "token_count": 7419
         },
         {
           "level": 2,
@@ -9155,7 +9155,7 @@
             },
             "description": "Improving Predictions, Products, Processes, and Resources > 13.4 Improving Resources"
           },
-          "token_count": 2172
+          "token_count": 2718
         },
         {
           "level": 2,
@@ -9181,7 +9181,7 @@
             },
             "description": "Improving Predictions, Products, Processes, and Resources > 13.5 General Improvement Guidelines"
           },
-          "token_count": 802
+          "token_count": 1184
         },
         {
           "level": 2,
@@ -9200,7 +9200,7 @@
             },
             "description": "Improving Predictions, Products, Processes, and Resources > 13.6 Information Systems Example"
           },
-          "token_count": 266
+          "token_count": 399
         },
         {
           "level": 2,
@@ -9222,7 +9222,7 @@
             },
             "description": "Improving Predictions, Products, Processes, and Resources > 13.7 Real-Time Example"
           },
-          "token_count": 216
+          "token_count": 302
         },
         {
           "level": 2,
@@ -9240,7 +9240,7 @@
             },
             "description": "Improving Predictions, Products, Processes, and Resources > 13.8 What This Chapter Means For You"
           },
-          "token_count": 307
+          "token_count": 452
         },
         {
           "level": 2,
@@ -9260,7 +9260,7 @@
             },
             "description": "Improving Predictions, Products, Processes, and Resources > 13.9 What This Chapter Means For Your Development Team"
           },
-          "token_count": 277
+          "token_count": 410
         },
         {
           "level": 2,
@@ -9279,7 +9279,7 @@
             },
             "description": "Improving Predictions, Products, Processes, and Resources > 13.10 What This Chapter Means For Researchers"
           },
-          "token_count": 258
+          "token_count": 384
         },
         {
           "level": 2,
@@ -9296,7 +9296,7 @@
             },
             "description": "Improving Predictions, Products, Processes, and Resources > 13.11 Term Project"
           },
-          "token_count": 81
+          "token_count": 101
         },
         {
           "level": 2,
@@ -9316,7 +9316,7 @@
             },
             "description": "Improving Predictions, Products, Processes, and Resources > 13.12 Key References"
           },
-          "token_count": 340
+          "token_count": 425
         },
         {
           "level": 2,
@@ -9340,7 +9340,7 @@
             },
             "description": "Improving Predictions, Products, Processes, and Resources > 13.13 Exercises"
           },
-          "token_count": 364
+          "token_count": 519
         }
       ],
       "gold_unit": [
@@ -9359,7 +9359,7 @@
         },
         "description": "Improving Predictions, Products, Processes, and Resources"
       },
-      "token_count": 21108
+      "token_count": 33051
     },
     {
       "level": 1,
@@ -9404,7 +9404,7 @@
             },
             "description": "The Future of Software Engineering  > 14.1 How Have We Done?"
           },
-          "token_count": 1733
+          "token_count": 2534
         },
         {
           "level": 2,
@@ -9480,7 +9480,7 @@
             },
             "description": "The Future of Software Engineering  > 14.2 Technology Transfer"
           },
-          "token_count": 5808
+          "token_count": 8239
         },
         {
           "level": 2,
@@ -9593,7 +9593,7 @@
             },
             "description": "The Future of Software Engineering  > 14.3 Decision-Making In Software Engineering"
           },
-          "token_count": 8849
+          "token_count": 12971
         },
         {
           "level": 2,
@@ -9766,7 +9766,7 @@
             },
             "description": "The Future of Software Engineering  > 14.4 The Professionalization Of Software Engineering: Licensing, Certification, And Ethics"
           },
-          "token_count": 10838
+          "token_count": 17585
         },
         {
           "level": 2,
@@ -9783,7 +9783,7 @@
             },
             "description": "The Future of Software Engineering  > 14.5 Term Project"
           },
-          "token_count": 77
+          "token_count": 116
         },
         {
           "level": 2,
@@ -9807,7 +9807,7 @@
             },
             "description": "The Future of Software Engineering  > 14.6 Key References"
           },
-          "token_count": 817
+          "token_count": 2390
         },
         {
           "level": 2,
@@ -9837,7 +9837,7 @@
             },
             "description": "The Future of Software Engineering  > 14.7 Exercises"
           },
-          "token_count": 190
+          "token_count": 274
         }
       ],
       "gold_unit": [
@@ -9858,7 +9858,7 @@
         },
         "description": "The Future of Software Engineering"
       },
-      "token_count": 28436
+      "token_count": 44298
     },
     {
       "level": 1,
@@ -10623,7 +10623,7 @@
         },
         "description": "Annotated Bibliography"
       },
-      "token_count": 26632
+      "token_count": 29348
     },
     {
       "level": 1,
@@ -10936,8 +10936,8 @@
         },
         "description": "Index"
       },
-      "token_count": 5323
+      "token_count": 8119
     }
   ],
-  "token_count": 492410
+  "token_count": 682069
 }

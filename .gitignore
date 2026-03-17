@@ -1,6 +1,16 @@
-./venv
-./env
-./docs
-./newvenv
-./data
+# virtual env
+venv/
+env/
+newvenv/
+
+# data / experiments
+data/
+att/
+archie/
+exp/
+
+# docs (nếu không cần track)
+docs/
+
+# json draft
 draft/*.json

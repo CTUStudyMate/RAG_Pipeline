@@ -1,0 +1,497 @@
+{
+    "level": 0,
+    "title": "ROOT",
+    "children": [
+        {
+            "level": 1,
+            "title": "introduction",
+            "page": 2,
+            "children": [],
+            "gold_unit": [
+                "attentionisallyouneed__heading.8d2142fab6a831f4b2392206488d94a9",
+                "attentionisallyouneed__p.8c0f274d3481e3b7134c2446b67aa87c.17",
+                "attentionisallyouneed__p.3fdd766aecdefb6ab0ee46f04d54ae62.18",
+                "attentionisallyouneed__p.76b0f171ad4d6f43a782dccc45061ea9.19",
+                "attentionisallyouneed__p.a6c2d337b62469b0f09167da19f81b0d.20"
+            ],
+            "metadata": {
+                "docling_data": {
+                    "text": "1 Introduction"
+                },
+                "description": "1 Introduction"
+            }
+        },
+        {
+            "level": 1,
+            "title": "background",
+            "page": 2,
+            "children": [],
+            "gold_unit": [
+                "attentionisallyouneed__heading.eb8764e7aa0af9bae573d9ba5244e205",
+                "attentionisallyouneed__p.9d71810bd849283bd6615761caf766fa.22",
+                "attentionisallyouneed__p.d2930bbbb76dc8830477301c79b335cb.23",
+                "attentionisallyouneed__p.0933a25bed480c14ea641c7b81ffbe48.24",
+                "attentionisallyouneed__p.750b94a5f45f6019c1991bebd93e1d36.25"
+            ],
+            "metadata": {
+                "docling_data": {
+                    "text": "2 Background"
+                },
+                "description": "2 Background"
+            }
+        },
+        {
+            "level": 1,
+            "title": "modelarchitecture",
+            "page": 2,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "encoderanddecoderstacks",
+                    "page": 3,
+                    "children": [],
+                    "gold_unit": [
+                        "attentionisallyouneed__heading.86c40786ef104ae4d19e6eb8d50bd9b3",
+                        "attentionisallyouneed__p.bd244b1d95b1adacfe4e06ba88c74ab2.32",
+                        "attentionisallyouneed__p.77b1004bee7de708f365f49260965818.33"
+                    ],
+                    "metadata": {
+                        "docling_data": {
+                            "text": "3.1 Encoder and Decoder Stacks"
+                        },
+                        "description": "3 Model Architecture > 3.1 Encoder and Decoder Stacks"
+                    }
+                },
+                {
+                    "level": 2,
+                    "title": "attention",
+                    "page": 3,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "scaleddot-productattention",
+                            "page": 4,
+                            "children": [],
+                            "gold_unit": [
+                                "attentionisallyouneed__heading.41a4eab168b2e0bb29947999d3a626aa",
+                                "attentionisallyouneed__fig.37",
+                                "attentionisallyouneed__p.5debeabaece967a6732b4182ba0269ae.38",
+                                "attentionisallyouneed__fig.39",
+                                "attentionisallyouneed__caption.40",
+                                "attentionisallyouneed__p.5a8598d6b68512a041203b47d34931e6.41",
+                                "attentionisallyouneed__nottoc_heading.b82e8f0486d534a6d743847e7e98962f.42",
+                                "attentionisallyouneed__p.02921855038466c95ead9cfef5cd8dbc.43",
+                                "attentionisallyouneed__p.dd42f2a545f9697604b042e8d1e713ea.44",
+                                "attentionisallyouneed__formula.45",
+                                "attentionisallyouneed__p.08ef38048456e14e74f041ac3428718e.46",
+                                "attentionisallyouneed__p.5d0b68d1b6d4350127134eb0ce9f1c90.47"
+                            ],
+                            "metadata": {
+                                "docling_data": {
+                                    "text": "Scaled Dot-Product Attention"
+                                },
+                                "description": "3 Model Architecture > 3.2 Attention > Scaled Dot-Product Attention"
+                            }
+                        },
+                        {
+                            "level": 3,
+                            "title": "multi-headattention",
+                            "page": 4,
+                            "children": [],
+                            "gold_unit": [
+                                "attentionisallyouneed__heading.42ea02e87a8b759ce84d0e86f602a5ee",
+                                "attentionisallyouneed__p.7357c88c0820c3d7326bf1edfaf0486e.49",
+                                "attentionisallyouneed__footnote.50",
+                                "attentionisallyouneed__p.cd90add9e7da1490b4028b53b76c15b7.51",
+                                "attentionisallyouneed__p.839e32612fe016909c4963edf60af750.52",
+                                "attentionisallyouneed__formula.53",
+                                "attentionisallyouneed__p.805eafe0a36f4c6e0a7dda5a43800e9d.54",
+                                "attentionisallyouneed__p.569e417ae95e68eaa835aa3aac738a2e.55"
+                            ],
+                            "metadata": {
+                                "docling_data": {
+                                    "text": "3.2.2 Multi-Head Attention"
+                                },
+                                "description": "3 Model Architecture > 3.2 Attention > 3.2.2 Multi-Head Attention"
+                            }
+                        },
+                        {
+                            "level": 3,
+                            "title": "applicationsofattentioninourmodel",
+                            "page": 5,
+                            "children": [],
+                            "gold_unit": [
+                                "attentionisallyouneed__heading.98590f752d51563aa8453490aa44f8fd",
+                                "attentionisallyouneed__p.04be12ed6eb0002bb4b45bebad3a44e9.57",
+                                "attentionisallyouneed__list_item.58",
+                                "attentionisallyouneed__list_item.59",
+                                "attentionisallyouneed__list_item.60"
+                            ],
+                            "metadata": {
+                                "docling_data": {
+                                    "text": "3.2.3 Applications of Attention in our Model"
+                                },
+                                "description": "3 Model Architecture > 3.2 Attention > 3.2.3 Applications of Attention in our Model"
+                            }
+                        }
+                    ],
+                    "gold_unit": [
+                        "attentionisallyouneed__heading.93f3bbbb1eb18e07eee52545d6dcd162",
+                        "attentionisallyouneed__p.d17ae76eccd20b07ac07a865e1ea16ef.35"
+                    ],
+                    "metadata": {
+                        "docling_data": {
+                            "text": "3.2 Attention"
+                        },
+                        "description": "3 Model Architecture > 3.2 Attention"
+                    }
+                },
+                {
+                    "level": 2,
+                    "title": "position-wisefeed-forwardnetworks",
+                    "page": 5,
+                    "children": [],
+                    "gold_unit": [
+                        "attentionisallyouneed__heading.a25ee7e1eef0ba573a38e0bd6d8f8269",
+                        "attentionisallyouneed__p.6245d2f24241456d99269c40811ff0a7.62",
+                        "attentionisallyouneed__formula.63",
+                        "attentionisallyouneed__p.334ee327b9aab3994bf8fb6565251d1c.64"
+                    ],
+                    "metadata": {
+                        "docling_data": {
+                            "text": "3.3 Position-wise Feed-Forward Networks"
+                        },
+                        "description": "3 Model Architecture > 3.3 Position-wise Feed-Forward Networks"
+                    }
+                },
+                {
+                    "level": 2,
+                    "title": "embeddingsandsoftmax",
+                    "page": 5,
+                    "children": [],
+                    "gold_unit": [
+                        "attentionisallyouneed__heading.ffe1452ea60b4710da3fc549b6ae0b08",
+                        "attentionisallyouneed__p.c916fe5979a352e33c652fe33d61411e.66",
+                        "attentionisallyouneed__tbl.67"
+                    ],
+                    "metadata": {
+                        "docling_data": {
+                            "text": "3.4 Embeddings and Softmax"
+                        },
+                        "description": "3 Model Architecture > 3.4 Embeddings and Softmax"
+                    }
+                },
+                {
+                    "level": 2,
+                    "title": "positionalencoding",
+                    "page": 6,
+                    "children": [],
+                    "gold_unit": [
+                        "attentionisallyouneed__heading.04dc35bbb8af9cfcaf05b2ff46dbec1f",
+                        "attentionisallyouneed__p.ad8b6c069573065a9aef077f5eb98ba8.69",
+                        "attentionisallyouneed__p.2ebf78ceda4cce623aa8af5050619be4.70",
+                        "attentionisallyouneed__formula.71",
+                        "attentionisallyouneed__p.f879eaf2922dc480e0bc258ec020b6c9.72",
+                        "attentionisallyouneed__p.f84a0603556719998a0e5d6e0b858458.73"
+                    ],
+                    "metadata": {
+                        "docling_data": {
+                            "text": "3.5 Positional Encoding"
+                        },
+                        "description": "3 Model Architecture > 3.5 Positional Encoding"
+                    }
+                }
+            ],
+            "gold_unit": [
+                "attentionisallyouneed__heading.32598ebf3763490a0470d471ea77f3fe",
+                "attentionisallyouneed__p.8730485b2216c8402c60f4ec1bf9f9e1.27",
+                "attentionisallyouneed__fig.28",
+                "attentionisallyouneed__caption.29",
+                "attentionisallyouneed__p.5c4b8f2bc5bf5efdde13937f25dee7ae.30"
+            ],
+            "metadata": {
+                "docling_data": {
+                    "text": "3 Model Architecture"
+                },
+                "description": "3 Model Architecture"
+            }
+        },
+        {
+            "level": 1,
+            "title": "whyself-attention",
+            "page": 6,
+            "children": [],
+            "gold_unit": [
+                "attentionisallyouneed__heading.9332d1dc79a25473de0a64a943de1bec",
+                "attentionisallyouneed__p.01f66f5542744a702cd603f93b46c497.75",
+                "attentionisallyouneed__p.cc492150e5dee3237a88079401e5ed56.76",
+                "attentionisallyouneed__p.04af0959d360a85cda42d6b434c08058.77",
+                "attentionisallyouneed__p.2c2a8e27e4024481de55e84dea28a2d9.78",
+                "attentionisallyouneed__p.5ae62567c524ebb2e8f3ad5ab9def46b.79",
+                "attentionisallyouneed__p.b1f0940591dd0ffce968c937e6a472a1.80",
+                "attentionisallyouneed__p.ddebc1107e03f4ee312c8cd8127b59b5.81"
+            ],
+            "metadata": {
+                "docling_data": {
+                    "text": "4 Why Self-Attention"
+                },
+                "description": "4 Why Self-Attention"
+            }
+        },
+        {
+            "level": 1,
+            "title": "training",
+            "page": 7,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "trainingdataandbatching",
+                    "page": 7,
+                    "children": [],
+                    "gold_unit": [
+                        "attentionisallyouneed__heading.c4ffbd0634948cf8b7bd78ef546df94b",
+                        "attentionisallyouneed__p.4c7aa10a70fabd91586f48082403317c.85"
+                    ],
+                    "metadata": {
+                        "docling_data": {
+                            "text": "5.1 Training Data and Batching"
+                        },
+                        "description": "5 Training > 5.1 Training Data and Batching"
+                    }
+                },
+                {
+                    "level": 2,
+                    "title": "hardwareandschedule",
+                    "page": 7,
+                    "children": [],
+                    "gold_unit": [
+                        "attentionisallyouneed__heading.59567d9443b1e48d1a20f43ec3416879",
+                        "attentionisallyouneed__p.e7422d132300510a4fabac58b93ed448.87"
+                    ],
+                    "metadata": {
+                        "docling_data": {
+                            "text": "5.2 Hardware and Schedule"
+                        },
+                        "description": "5 Training > 5.2 Hardware and Schedule"
+                    }
+                },
+                {
+                    "level": 2,
+                    "title": "optimizer",
+                    "page": 7,
+                    "children": [],
+                    "gold_unit": [
+                        "attentionisallyouneed__heading.a012749c8629983403f65a11331f3d6a",
+                        "attentionisallyouneed__p.4255c54e5bb1ef02857fdcb1fce15984.89",
+                        "attentionisallyouneed__formula.90",
+                        "attentionisallyouneed__p.77bc1618a3553bdf0b1465373e3c3387.91"
+                    ],
+                    "metadata": {
+                        "docling_data": {
+                            "text": "5.3 Optimizer"
+                        },
+                        "description": "5 Training > 5.3 Optimizer"
+                    }
+                },
+                {
+                    "level": 2,
+                    "title": "regularization",
+                    "page": 7,
+                    "children": [],
+                    "gold_unit": [
+                        "attentionisallyouneed__heading.fbd382527da3dcb479a948062f0484a2",
+                        "attentionisallyouneed__p.ad5aa191bc18675239b999eb751f58ce.93",
+                        "attentionisallyouneed__tbl.94",
+                        "attentionisallyouneed__p.16ebd3473b25274d143bc202f57ecbcd.95",
+                        "attentionisallyouneed__p.62a36f895e0783e5c210cba7a4b9dff7.96"
+                    ],
+                    "metadata": {
+                        "docling_data": {
+                            "text": "5.4 Regularization"
+                        },
+                        "description": "5 Training > 5.4 Regularization"
+                    }
+                }
+            ],
+            "gold_unit": [
+                "attentionisallyouneed__heading.71c8be1f05af3f6bec373bc6d06bef43",
+                "attentionisallyouneed__p.f59b0dc6379984af8d33f3f6b13c384e.83"
+            ],
+            "metadata": {
+                "docling_data": {
+                    "text": "5 Training"
+                },
+                "description": "5 Training"
+            }
+        },
+        {
+            "level": 1,
+            "title": "results",
+            "page": 8,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "machinetranslation",
+                    "page": 8,
+                    "children": [],
+                    "gold_unit": [
+                        "attentionisallyouneed__heading.e7ac71b6cb4b66833bc9f53de4c9b92f",
+                        "attentionisallyouneed__p.fd267bdc72772d8edacc22f0e78bda8a.99",
+                        "attentionisallyouneed__p.3c7b274299d452ee19511a12e4cdca4c.100",
+                        "attentionisallyouneed__p.5950b810cc4bfcdf4f19b8ad7c504a00.101",
+                        "attentionisallyouneed__p.2cce3fa7dadaecf3c432b5155e4a21d9.102"
+                    ],
+                    "metadata": {
+                        "docling_data": {
+                            "text": "6.1 Machine Translation"
+                        },
+                        "description": "6 Results > 6.1 Machine Translation"
+                    }
+                },
+                {
+                    "level": 2,
+                    "title": "modelvariations",
+                    "page": 8,
+                    "children": [],
+                    "gold_unit": [
+                        "attentionisallyouneed__heading.90821fe36ab090409c4676161d368e15",
+                        "attentionisallyouneed__p.0ed767b942d6591983a1b1bd74e78dd1.104",
+                        "attentionisallyouneed__footnote.105",
+                        "attentionisallyouneed__tbl.106",
+                        "attentionisallyouneed__p.fd8e442d1a1b5b3f604a3c95247348b2.107",
+                        "attentionisallyouneed__p.3dcbe0d5c9c9661611e461d34e2f9e54.108",
+                        "attentionisallyouneed__p.a961866e34d3b23939e15441efdcfc01.109"
+                    ],
+                    "metadata": {
+                        "docling_data": {
+                            "text": "6.2 Model Variations"
+                        },
+                        "description": "6 Results > 6.2 Model Variations"
+                    }
+                },
+                {
+                    "level": 2,
+                    "title": "englishconstituencyparsing",
+                    "page": 9,
+                    "children": [],
+                    "gold_unit": [
+                        "attentionisallyouneed__heading.4eb76e4b8da7b2df7059658d669a6738",
+                        "attentionisallyouneed__p.9eeabbc243d9f874316106dd681fb08a.111",
+                        "attentionisallyouneed__p.1f8f80725ebb5047ad40d49371656aa1.112",
+                        "attentionisallyouneed__p.bf73f770599251717c764b51b85c0cf3.113",
+                        "attentionisallyouneed__tbl.114",
+                        "attentionisallyouneed__p.acdc6fba940e34bcf3c4625ac17f881d.115",
+                        "attentionisallyouneed__p.1dd5769b5867a3f539099b54e3402bf0.116",
+                        "attentionisallyouneed__p.372c029b2929925cc5946f6983bffe21.117"
+                    ],
+                    "metadata": {
+                        "docling_data": {
+                            "text": "6.3 English Constituency Parsing"
+                        },
+                        "description": "6 Results > 6.3 English Constituency Parsing"
+                    }
+                }
+            ],
+            "gold_unit": [
+                "attentionisallyouneed__heading.116578ae891cae5344f25d86a0cd3e2d"
+            ],
+            "metadata": {
+                "docling_data": {
+                    "text": "6 Results"
+                },
+                "description": "6 Results"
+            }
+        },
+        {
+            "level": 1,
+            "title": "conclusion",
+            "page": 10,
+            "children": [],
+            "gold_unit": [
+                "attentionisallyouneed__heading.836ccb3c0d64514ab18b4c318c754121",
+                "attentionisallyouneed__p.4ff5e70ce6460853a1f5b59f01fbbed9.119",
+                "attentionisallyouneed__p.289e95e7f473a5cf99049b40f64d8118.120",
+                "attentionisallyouneed__p.62efcdf2c04d4c25f2b924531577f538.121",
+                "attentionisallyouneed__p.1a5f93dff4581a1062af4cbcfff2a9e6.122",
+                "attentionisallyouneed__p.9a3a8bf3e83bad9fbf1e656668ae8c3c.123",
+                "attentionisallyouneed__nottoc_heading.d95867deadfe690e40f42068d6b59df8.124",
+                "attentionisallyouneed__list_item.125",
+                "attentionisallyouneed__list_item.126",
+                "attentionisallyouneed__list_item.127",
+                "attentionisallyouneed__list_item.128",
+                "attentionisallyouneed__list_item.129",
+                "attentionisallyouneed__list_item.130",
+                "attentionisallyouneed__list_item.131",
+                "attentionisallyouneed__list_item.132",
+                "attentionisallyouneed__list_item.133",
+                "attentionisallyouneed__list_item.134",
+                "attentionisallyouneed__list_item.135",
+                "attentionisallyouneed__list_item.136",
+                "attentionisallyouneed__list_item.137",
+                "attentionisallyouneed__list_item.138",
+                "attentionisallyouneed__list_item.139",
+                "attentionisallyouneed__list_item.140",
+                "attentionisallyouneed__list_item.141",
+                "attentionisallyouneed__list_item.142",
+                "attentionisallyouneed__list_item.143",
+                "attentionisallyouneed__list_item.144",
+                "attentionisallyouneed__list_item.145",
+                "attentionisallyouneed__list_item.146",
+                "attentionisallyouneed__list_item.147",
+                "attentionisallyouneed__list_item.148",
+                "attentionisallyouneed__list_item.149",
+                "attentionisallyouneed__list_item.150",
+                "attentionisallyouneed__list_item.151",
+                "attentionisallyouneed__list_item.152",
+                "attentionisallyouneed__list_item.153",
+                "attentionisallyouneed__list_item.154",
+                "attentionisallyouneed__list_item.155",
+                "attentionisallyouneed__list_item.156",
+                "attentionisallyouneed__list_item.157",
+                "attentionisallyouneed__list_item.158",
+                "attentionisallyouneed__list_item.159",
+                "attentionisallyouneed__list_item.160",
+                "attentionisallyouneed__list_item.161",
+                "attentionisallyouneed__list_item.162",
+                "attentionisallyouneed__list_item.163",
+                "attentionisallyouneed__list_item.164",
+                "attentionisallyouneed__nottoc_heading.16adeb87a07392907566fb3c524506c5.165",
+                "attentionisallyouneed__fig.166",
+                "attentionisallyouneed__caption.167",
+                "attentionisallyouneed__p.29f280f04f5a70ca14445a8edb56a10c.168",
+                "attentionisallyouneed__fig.169",
+                "attentionisallyouneed__caption.170",
+                "attentionisallyouneed__p.29f280f04f5a70ca14445a8edb56a10c.171",
+                "attentionisallyouneed__fig.172",
+                "attentionisallyouneed__caption.173"
+            ],
+            "metadata": {
+                "docling_data": {
+                    "text": "7 Conclusion"
+                },
+                "description": "7 Conclusion"
+            }
+        }
+    ],
+    "metadata": {
+        "description": ""
+    },
+    "gold_unit": [
+        "attentionisallyouneed__p.7200912d1008d06a09347f3f0cd44578.0",
+        "attentionisallyouneed__nottoc_heading.70765ea7c94cbbd286b14c7efca96519.1",
+        "attentionisallyouneed__p.23fa61fb60d9d0559690fc8cd46007b6.2",
+        "attentionisallyouneed__p.aa9d9c7fa3dedc73c81211ccf1f456f5.3",
+        "attentionisallyouneed__p.87c9cd8194a7bbd2f9bcb7b19f2f9f06.4",
+        "attentionisallyouneed__p.ff9c492d0dada49fb2bbbf9aeeec46d2.5",
+        "attentionisallyouneed__p.08f225d90427c2aa7971410e6749cc17.6",
+        "attentionisallyouneed__p.24160a43562045c229af09956f4346f9.7",
+        "attentionisallyouneed__p.b41eca85f772b10ddf4a0532c5631a54.8",
+        "attentionisallyouneed__p.9df1911bcf4db04b98ecb87fda873f35.9",
+        "attentionisallyouneed__p.1c91b8c956123e6aab57e9eab8f287b1.10",
+        "attentionisallyouneed__nottoc_heading.e353dbe42c8654f33588d4da0b517469.11",
+        "attentionisallyouneed__p.de0f2b8f9beccbd2a34eb3884760e097.12",
+        "attentionisallyouneed__footnote.13",
+        "attentionisallyouneed__footnote.14",
+        "attentionisallyouneed__footnote.15"
+    ]
+}
