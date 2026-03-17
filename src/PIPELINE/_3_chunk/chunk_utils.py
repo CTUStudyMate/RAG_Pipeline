@@ -2,6 +2,7 @@ from pathlib import Path
 import json
 from docling_core.types.doc.document import DoclingDocument
 
+
 def run_strategy_on_folder(folder, strategy):
     folder = Path(folder)
 

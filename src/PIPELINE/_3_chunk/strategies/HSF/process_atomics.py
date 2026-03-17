@@ -5,6 +5,7 @@ from pathlib import Path
 from PIPELINE._3_chunk.strategies.HSF.atomic_db_helpers.db_helpers import create_db_for_document, insert_atomic_into_db
 from PIPELINE._3_chunk.strategies.HSF.process_helpers.handle_batch import handle_batch_result
 from common_utils.filename_handle import normalize_filename
+from pipeline_config import STREAM_ELEMENTS_FILEPATH, TREE_FILEPATH
 from src.PIPELINE._3_chunk.strategies.HSF.hierarchy_helpers.build_hierarchy import build_hierarchy
 from src.PIPELINE._3_chunk.strategies.HSF.hierarchy_helpers.DFSCursor import DFSCursor
 from docling_core.types.doc.document import DoclingDocument, RefItem
@@ -98,11 +99,9 @@ def parse_pdf_into_atomic_units(folder, hierarchy_tree, conn, passed_cursor, ope
         element = stream_elements.popleft()   # O(1)
         
         #====Test streams element =======
-        docname = "the_last_se"
-        target_file = f"{docname}_streams.json"
-        with open(target_file, "a", encoding="utf-8") as f:
-            json.dump(element, f, ensure_ascii=False, default=str)
-            f.write("\n")
+        # with open(STREAM_ELEMENTS_FILEPATH, "a", encoding="utf-8") as f:
+        #     json.dump(element, f, ensure_ascii=False, default=str, indent=2)
+        #     f.write("\n")
         #===================================
         
         insert_atomic_into_db(element, doc_db_cursor)
@@ -122,8 +121,8 @@ def process_atomics (file_path: str):
     
     hierarchy_tree = build_hierarchy(file_path)
     # print(hierarchy_tree)
-    # with open("test_tree.json", "w", encoding="utf-8") as f:
-    #     json.dump(hierarchy_tree, f, ensure_ascii=False, indent=4)
+    with open(TREE_FILEPATH, "w", encoding="utf-8") as f:
+        json.dump(hierarchy_tree, f, ensure_ascii=False, indent=4)
     
     passed_cursor = DFSCursor(hierarchy_tree)
     open_node = passed_cursor.next() # point to ROOT
