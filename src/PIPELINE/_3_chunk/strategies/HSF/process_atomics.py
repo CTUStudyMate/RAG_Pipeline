@@ -99,9 +99,9 @@ def parse_pdf_into_atomic_units(folder, hierarchy_tree, conn, passed_cursor, ope
         element = stream_elements.popleft()   # O(1)
         
         #====Test streams element =======
-        # with open(STREAM_ELEMENTS_FILEPATH, "a", encoding="utf-8") as f:
-        #     json.dump(element, f, ensure_ascii=False, default=str, indent=2)
-        #     f.write("\n")
+        with open(STREAM_ELEMENTS_FILEPATH, "a", encoding="utf-8") as f:
+            json.dump(element, f, ensure_ascii=False, default=str, indent=2)
+            f.write("\n")
         #===================================
         
         insert_atomic_into_db(element, doc_db_cursor)

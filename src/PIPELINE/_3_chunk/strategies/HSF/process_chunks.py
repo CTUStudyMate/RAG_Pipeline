@@ -453,6 +453,8 @@ def create_chunk(node, cursor, file_path):
         
         # nếu token thỏa thì tạo 1 chunk từ toàn bộ atomics của block này (chunk = sub heading)
         nottoc = block[0]["content"].lstrip("#").strip()  # assume element đầu tiên là tiêu đề subheadding 
+        if isinstance(nottoc, str) and len(nottoc)>300:
+            nottoc = ""
         if not base_path.endswith(nottoc):
             block_path = base_path + " > " + nottoc
         else:
