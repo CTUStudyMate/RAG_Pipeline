@@ -6,8 +6,7 @@ from pipeline_config import CHUNK_MAX_TOKEN, CHUNK_MIN_TOKEN, OVERLAP_TOKENS
 def mannual_token_count(text):
     return max(1, int(len(text) / 3.56))
 
-def token_count(text):
-    return max(1, int(len(text) / 3.56))
+
 
 def split_sentences(text):
     return re.split(r'(?<=[.!?])\s+', text)

@@ -23,95 +23,8 @@ def load_atomic_content(cursor, ids):
     """, ids)
     return cursor.fetchall()
 
-
-# def chunk_from_whole_node(node, cursor, file_path):
-#     node_gold_units = get_all_gold_unit(node)
-#     atomics = load_atomic_content(cursor, node_gold_units)
-    
-#     chunk_obj = {}
-#     chunk_obj["metadata"] = {}
-#     chunk_obj["content"] = {}
-
-#     reconstructed_text = ""
-    
-#     is_incomplete_text = False
-    
-#     if "img" not in chunk_obj["content"]:
-#         chunk_obj["content"]["img"] = []
-        
-#     for i in range(len(atomics)):
-#         # print(atomic)
-#         # return
-#         atomic = atomics[i]
-        
-#         next_atomic = atomics[i+1]
-#         next_is_main_heading = False
-#         if next_atomic:
-#             next_type = next_atomic["type"]
-#             if next_type == "section_header":
-#                 if atomic["heading_type"] == "main":
-#                     next_is_main_heading = True
-                    
-                    
-#         if atomic["type"] == "text":
-#             text_content = atomic["content"]
             
-#             if is_incomplete_text:
-#                 reconstructed_text += f" {text_content}"
-#             else:
-#                 reconstructed_text += f"\n{text_content}"    
-            
-#             if is_text_incomplete(text_content):
-#                 is_incomplete_text = True
-#             else:
-#                 is_incomplete_text = False  
-                        
-#         elif atomic["type"] == "section_header":
-            
-#             if atomic["heading_type"]== "nottoc" or atomic["heading_type"]== "nottoc":
-#                 text_content = atomic["content"]
-#                 reconstructed_text += f"\n\n### {text_content}"
-#             elif atomic["heading_type"]== "main":
-#                 text_content = atomic["content"]
-
-#                 # nếu tiếp theo ko còn main heading, lấy path của nó để đánh dấu section
-#                 if not next_is_main_heading:
-#                     if reconstructed_text == "":
-#                         reconstructed_text += f"# {atomic["description"]}"
-#                     else:
-#                         reconstructed_text += f"\n\n# {atomic["description"]}"
-#                 # nếu vẫn còn main heading liền kề sau nó, đơn giản là skip nó        
-            
-#             is_incomplete_text = False  
-        
-#         elif atomic["type"] == "picture":
-#             chunk_obj["content"]["img"].append(atomic["content"])
-#             is_incomplete_text = False 
-#         else:
-#             content = atomic["content"]
-#             if content:
-#                 reconstructed_text += f"\n{content}"    
-#             is_incomplete_text = False     
-             
-#     first_atomic = atomics[0]["atomic_order"]
-#     # print(first_atomic)
-#     # return
-#     last_atomic = atomics[-1]["atomic_order"]
-    
-#     filename = os.path.basename(file_path)
-#     filename = re.sub(r'[^a-zA-Z0-9._-]', '_', filename)
-#     chunk_id = f"{filename}__chunk_{first_atomic}_{last_atomic}"
-#     chunk_obj["content"]["text"] = reconstructed_text
-#     chunk_obj["id"] = chunk_id
-#     chunk_obj["metadata"]["document"] = filename
-#     chunk_obj["metadata"]["token_count"] = node["token_count"]
-#     chunk_obj["metadata"]["section"] = node["metadata"]["description"]
-    
-#     with open("chunk_test.json", "w", encoding="utf-8") as f:
-#         json.dump(chunk_obj, f, ensure_ascii=False, default=str, indent=2)
-#     return chunk_obj
-            
-def chunk_from_atomics(atomics, file_path, sum_token, base_path):
+def chunk_from_atomics(atomics, file_path, sum_token, base_path, document_path):
     # node_gold_units = get_all_gold_unit(node)
     # atomics = load_atomic_content(cursor, node_gold_units)
     
@@ -134,8 +47,8 @@ def chunk_from_atomics(atomics, file_path, sum_token, base_path):
         next_atomic = dict(atomics[i + 1]) if i + 1 < len(atomics) else None
         next_is_main_heading = False
         if next_atomic:
-            next_type = next_atomic.get("type") 
-            next_heading_type = next_atomic.get("heading_type")
+            next_type = next_atomic["type"]
+            next_heading_type = next_atomic["heading_type"]
             
             if next_type == "section_header" and next_heading_type == "main":
                 next_is_main_heading = True                    
@@ -192,6 +105,7 @@ def chunk_from_atomics(atomics, file_path, sum_token, base_path):
     chunk_obj["metadata"]["document"] = filename
     chunk_obj["metadata"]["token_count"] = sum_token
     chunk_obj["metadata"]["section"] = base_path
+    chunk_obj["metadata"]["document_path"] = document_path
     
     # TEST CHUNK RESULT -------------------------------------------------
     # with open(CHUNK_FROM_ATOMIC_TEST_FILEPATH, "a", encoding="utf-8") as f:
@@ -201,8 +115,8 @@ def chunk_from_atomics(atomics, file_path, sum_token, base_path):
         
     return chunk_obj
                 
-def fixed_size_split(atomic, file_path, sum_token, base_path):
-    ori_chunk = chunk_from_atomics([atomic], file_path, sum_token, base_path)
+def fixed_size_split(atomic, file_path, sum_token, base_path, document_path):
+    ori_chunk = chunk_from_atomics([atomic], file_path, sum_token, base_path, document_path)
 
     if atomic["type"] == "text":
         chunks = []
@@ -250,7 +164,7 @@ def split_by_nottoc(atomics):
     
     return blocks            
 
-def new_chunk(chunk_section_path, filename):
+def new_chunk(chunk_section_path, filename, document_path):
     chunk = {}
     chunk["metadata"] = {}
     chunk["content"] = {}
@@ -258,49 +172,99 @@ def new_chunk(chunk_section_path, filename):
     chunk["metadata"]["document"] = filename
     chunk["metadata"]["token_count"] = 0
     chunk["metadata"]["section"] = chunk_section_path
+    chunk["metadata"]["document_path"] = document_path
     chunk["content"]["img"] = []
     chunk["content"]["text"] = ""
     chunk["id"] = "new_chunk_id"
     return chunk
     
 
-def merge_atomic_to_chunk(current_chunk, atomic):
-    is_incomplete_text = False
-    chunk_text = current_chunk["content"]["text"] or ""
-    if atomic["type"] == "text":
-            text_content = atomic["content"]
-            if is_incomplete_text:
-                chunk_text += f" {text_content}"
-            else:
-                chunk_text += f"\n{text_content}" 
+# def merge_atomic_to_chunk(current_chunk, atomic):
+#     is_incomplete_text = False
+#     chunk_text = current_chunk["content"]["text"] or ""
+#     if atomic["type"] == "text":
+#             text_content = atomic["content"]
+#             if is_incomplete_text:
+#                 chunk_text += f" {text_content}"
+#             else:
+#                 chunk_text += f"\n{text_content}" 
                    
-            if is_text_incomplete(text_content):
-                is_incomplete_text = True
-            else:
-                is_incomplete_text = False  
+#             if is_text_incomplete(text_content):
+#                 is_incomplete_text = True
+#             else:
+#                 is_incomplete_text = False  
                         
+#     elif atomic["type"] == "section_header":
+#         if atomic["heading_type"]== "nottoc" or atomic["heading_type"]== "nottoc":
+#             text_content = atomic["content"]
+#             chunk_text += f"\n\n{text_content}"
+#         elif atomic["heading_type"]== "main":
+#             chunk_text += f"\n\n# {atomic["description"]}"
+        
+#         is_incomplete_text = False  
+    
+#     elif atomic["type"] == "picture":
+#         current_chunk["content"]["img"].append(atomic["content"])
+#         is_incomplete_text = False 
+#     else:
+#         content = atomic["content"]
+#         if content:
+#             chunk_text += f"\n{content}"    
+#         is_incomplete_text = False  
+    
+#     chunk_token = mannual_token_count(text=chunk_text)
+#     chunk_token += len(current_chunk["content"]["img"])* IMAGE_TOKEN_ESTIMATE
+#     current_chunk["metadata"]["token_count"] = chunk_token
+    
+    
+#     return current_chunk
+
+def merge_atomic_to_chunk(current_chunk, atomic):
+    # Lấy trạng thái từ metadata hoặc mặc định là False
+    is_incomplete_text = current_chunk["metadata"].get("is_incomplete_text", False)
+    chunk_text = current_chunk["content"]["text"] or ""
+    
+    if atomic["type"] == "text":
+        text_content = atomic["content"]
+        if is_incomplete_text:
+            chunk_text += f" {text_content}"
+        else:
+            # Check để tránh tạo khoảng trắng/dòng trống thừa ở ngay đầu text
+            chunk_text += f"\n{text_content}" if chunk_text else f"{text_content}"
+               
+        # Cập nhật lại cờ đánh dấu
+        is_incomplete_text = is_text_incomplete(text_content)
+                
     elif atomic["type"] == "section_header":
-        if atomic["heading_type"]== "nottoc" or atomic["heading_type"]== "nottoc":
+        if atomic["heading_type"] in ["nottoc", "main"]:
             text_content = atomic["content"]
-            chunk_text += f"\n\n{text_content}"
-        elif atomic["heading_type"]== "main":
-            chunk_text += f"\n\n# {atomic["description"]}"
+            if atomic["heading_type"] == "main":
+                # Tip nhỏ: Nên dùng nháy đơn cho key bên trong f-string để tránh SyntaxError ở các bản Python cũ
+                text_content = f"# {atomic["description"]}"
+            
+            chunk_text += f"\n\n{text_content}" if chunk_text else f"{text_content}"
         
         is_incomplete_text = False  
     
     elif atomic["type"] == "picture":
         current_chunk["content"]["img"].append(atomic["content"])
         is_incomplete_text = False 
+        
     else:
         content = atomic["content"]
         if content:
-            chunk_text += f"\n{content}"    
+            chunk_text += f"\n{content}" if chunk_text else f"{content}"
         is_incomplete_text = False  
     
-    chunk_token = mannual_token_count(text=chunk_text)
-    chunk_token += len(current_chunk["content"]["img"])* IMAGE_TOKEN_ESTIMATE
-    current_chunk["metadata"]["token_count"] = chunk_token
+    # QUAN TRỌNG NHẤT: Lưu lại text đã merge vào chunk!
+    current_chunk["content"]["text"] = chunk_text
+    # Lưu lại trạng thái text
+    current_chunk["metadata"]["is_incomplete_text"] = is_incomplete_text
     
+    # Cập nhật token
+    chunk_token = mannual_token_count(text=chunk_text)
+    chunk_token += len(current_chunk["content"]["img"]) * IMAGE_TOKEN_ESTIMATE
+    current_chunk["metadata"]["token_count"] = chunk_token
     
     return current_chunk
     
@@ -351,13 +315,13 @@ def merge_chunk_to_chunk(chunk1, chunk2):
     }
     return merged_chunk   
     
-def chunk_by_semantic_units(atomics, chunk_section_path, file_path):
+def chunk_by_semantic_units(atomics, chunk_section_path, file_path, document_path):
     chunks = []
 
     filename = os.path.basename(file_path)
     filename = re.sub(r'[^a-zA-Z0-9._-]', '_', filename)
 
-    current_chunk = new_chunk(chunk_section_path, filename)
+    current_chunk = new_chunk(chunk_section_path, filename, document_path)
 
     first_atomic = atomics[0]["atomic_order"]
     last_atomic = atomics[0]["atomic_order"]
@@ -369,7 +333,7 @@ def chunk_by_semantic_units(atomics, chunk_section_path, file_path):
         current_chunk["id"] = chunk_id
         chunks.append(current_chunk)
 
-        current_chunk = new_chunk(chunk_section_path, filename)
+        current_chunk = new_chunk(chunk_section_path, filename, document_path)
         first_atomic = None
         last_atomic = None
 
@@ -399,7 +363,7 @@ def chunk_by_semantic_units(atomics, chunk_section_path, file_path):
                 # nếu atomic lớn hơn bằng max_token
                     # split atomic hiện tại với token < max_token - min_token (tại vì phải gộp với current chunk)
                     # rồi gộp chunk vào chunk đầu tiên của splitted list
-                fixed_size_chunks = fixed_size_split(atomic, file_path, atomic["token_count"], chunk_section_path)
+                fixed_size_chunks = fixed_size_split(atomic, file_path, atomic["token_count"], chunk_section_path, document_path)
 
                 current_chunk = merge_chunk_to_chunk(current_chunk, fixed_size_chunks[0])
                 last_atomic = atomic["atomic_order"]
@@ -407,7 +371,7 @@ def chunk_by_semantic_units(atomics, chunk_section_path, file_path):
                 flush_chunk()
 
                 chunks.extend(fixed_size_chunks[1:])
-                current_chunk = new_chunk(chunk_section_path, filename)
+                current_chunk = new_chunk(chunk_section_path, filename, document_path)
                 continue
 
         current_chunk = merge_atomic_to_chunk(current_chunk, atomic)
@@ -420,7 +384,7 @@ def chunk_by_semantic_units(atomics, chunk_section_path, file_path):
     return chunks
         
 
-def create_chunk(node, cursor, file_path):
+def create_chunk(node, cursor, file_path, prefix_path):
 # hàm này tạo các chunk từ một node trên cây hierarchy
 # trả về một mảng chunks
 
@@ -432,7 +396,11 @@ def create_chunk(node, cursor, file_path):
     
     print("\nCREATE CHUNK")
     print(node)
-    base_path = node["metadata"]["description"]
+    
+    base = node["metadata"]["description"]
+    base_path = base
+    
+    document_path = prefix_path
     
     chunks = []
     
@@ -440,12 +408,14 @@ def create_chunk(node, cursor, file_path):
     # case 1: nếu cả node < max token => node thành 1 chunk
     if node["token_count"] <= CHUNK_MAX_TOKEN:
         sum_token = node["token_count"]
-        chunk = chunk_from_atomics(atomics=atomics, sum_token=sum_token, base_path=base_path, file_path=file_path)
+        chunk = chunk_from_atomics(atomics=atomics, sum_token=sum_token, base_path=base_path, file_path=file_path, document_path=document_path)
         chunks.append(chunk)
         return chunks
     
     
     # case 2: nếu node lá vẫn lớn hơn max_token, thì split bởi subheadding nhận diện bên trong (nottoc)
+    print("NOTTOC SPLIT")
+    
     blocks = split_by_nottoc(atomics)
     for block in blocks:
         # tính token
@@ -454,33 +424,41 @@ def create_chunk(node, cursor, file_path):
         # nếu token thỏa thì tạo 1 chunk từ toàn bộ atomics của block này (chunk = sub heading)
         nottoc = block[0]["content"].lstrip("#").strip()  # assume element đầu tiên là tiêu đề subheadding 
         if isinstance(nottoc, str) and len(nottoc)>300:
-            nottoc = ""
+            print("SUSPICIOUS NOTTOC:")
+            print(nottoc[:200])
+            nottoc_path = ""
+        else:
+            nottoc_path = nottoc
+                
         if not base_path.endswith(nottoc):
-            block_path = base_path + " > " + nottoc
+            block_path = base_path + " > " + nottoc_path
         else:
             block_path = base_path
             
         if block_token <= CHUNK_MAX_TOKEN:
-            chunk = chunk_from_atomics(block, file_path, block_token, block_path)
+            print("start chunk block with block:")
+            for row in block:
+                print(dict(row))
+            chunk = chunk_from_atomics(block, file_path, block_token, block_path, document_path)
             chunks.append(chunk)
             continue
         
         # nếu không thì gọi hàm chunk nhỏ hơn
-        c_chunks = chunk_by_semantic_units(atomics=block, file_path=file_path, chunk_section_path=block_path)
+        c_chunks = chunk_by_semantic_units(atomics=block, file_path=file_path, chunk_section_path=block_path, document_path=document_path)
         chunks.extend(c_chunks)
     return chunks    
     
     
-def build_chunks(node, file_path, cursor): 
+def build_chunks(node, file_path, cursor, prefix_path): #prefix path là logical nơi tổ chức lưu chunk, vd "built_in_corpus/se/Software Engineering Theory & Practice"
 # bắt đầu từ root node, chia dần xuống các level con cho tới khi thỏa max token
     
     if (node["token_count"]<=CHUNK_MAX_TOKEN):
-        print("chunk is less than max token")
+        # print("chunk is less than max token")
         if node is not None:
             print(node["title"])
         else:
             print("node is none")    
-        chunks = create_chunk(node=node, cursor=cursor, file_path=file_path) # tạo luôn chunk từ node
+        chunks = create_chunk(node=node, cursor=cursor, file_path=file_path, prefix_path=prefix_path) # tạo luôn chunk từ node
         return chunks
     else:
         print("chunk is biggerr than max token")
@@ -492,12 +470,12 @@ def build_chunks(node, file_path, cursor):
         chunks = []
         if "children" in node and node["children"]:  
             for child in node["children"]:
-                chunks.extend(build_chunks(child, file_path, cursor))  
+                chunks.extend(build_chunks(child, file_path, cursor, prefix_path))  
             return chunks    
         
         # nếu đã là node lá mà còn lớn hơn max token
             # tạo các chunk từ node này
-        node_chunks = create_chunk(node=node, file_path=file_path, cursor=cursor)
+        node_chunks = create_chunk(node=node, file_path=file_path, cursor=cursor, prefix_path=prefix_path)
         chunks.extend(node_chunks)
         return chunks    
         
