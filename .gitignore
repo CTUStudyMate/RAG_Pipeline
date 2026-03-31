@@ -14,3 +14,9 @@ docs/
 
 # json draft
 draft/*.json
+
+data_test/
+
+chroma_DB_fixed_size_chunk/
+chroma01_DB/
+chroma_DB/
