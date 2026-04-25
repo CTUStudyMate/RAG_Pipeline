@@ -1,11 +1,7 @@
 
-import os
-from openai import OpenAI
 import chromadb
-from pipeline_config import EMBEDDING_PROVIDER, FINAL_CHUNKS_TEST_FILEPATH
+from pipeline_config import EMBEDDING_PROVIDER, FINAL_CHUNKS_TEST_FILEPATH, VECTOR_DB_HSF_PATH
 from used_models.embeddings.embed_factory import EmbeddingService 
-import bm25s
-from underthesea import word_tokenize # cái này cho tiếng Việt, kiểu như không bị tách "học máy" thành "học" & "máy"
 import psycopg
 import json
 
@@ -62,17 +58,19 @@ def build_index_data(chunks):
     for i, chunk in enumerate(chunks):
         chunk_text = chunk["content"]["text"]
         chunk_section = chunk["metadata"]["section"]
-        chunk_document = chunk["metadata"]["document_path"]
         
         #xử lý chunk_document
+        chunk_document = chunk["metadata"]["document_path"]
         chunk_document = chunk_document.split(" > ")[-1]
             
-        store_text = f"""
-        [DOCUMENT]: {chunk_document}
-        [SECTION]: {chunk_section}
-        [CONTENT]: {chunk_text}
-        """
+        if chunk_section == " > " or chunk_section == "":
+            chunk_section = "General"
+        while chunk_section.startswith(" > "):
+            chunk_section = chunk_section[3:]
+        chunk_section = chunk_section.strip()
         
+        store_text = f"[SECTION]: {chunk_section}\n[CONTENT]: {chunk_text}"
+                 
         documents.append(store_text)
         
         metadata = {
@@ -95,12 +93,7 @@ def build_index_data(chunks):
     
     return ids, embeddings, documents, metadatas
 
-def get_chroma_collection(collection_name, collection_path="./chroma01_DB"):
-    # client = chromadb.Client(
-    #     settings=chromadb.config.Settings(
-    #         persist_directory="./chroma_db"
-    #     )
-    # )
+def get_chroma_collection(collection_name, collection_path=VECTOR_DB_HSF_PATH):
     client = chromadb.PersistentClient(path=collection_path)
     collection = client.get_or_create_collection(name=collection_name, metadata={"hnsw:space": "cosine"})
     return collection, client
@@ -112,7 +105,6 @@ def index_to_chroma(collection, ids, embeddings, documents, metadatas, client):
         documents=documents,
         metadatas=metadatas
     )
-    # client.persist()
     
     
 def index_chunks(collection_name, chunks, pgdb_connect_info):
@@ -123,13 +115,13 @@ def index_chunks(collection_name, chunks, pgdb_connect_info):
     
     index_to_pgdb(pgdb_connect_info=pgdb_connect_info, chunk_ids=ids, chunk_text_contents=documents, chunk_metadatas=metadatas)
     
-    # data = []
+    data = []
 
-    # for _id, doc, meta in zip(ids, documents, metadatas):
-    #     data.append({
-    #         "id": _id,
-    #         "document": doc,
-    #         "metadata": meta
-    #     })
-    # with open(FINAL_CHUNKS_TEST_FILEPATH, "w", encoding="utf-8") as f:
-    #     json.dump(data, f, ensure_ascii=False, indent=2)
+    for _id, doc, meta in zip(ids, documents, metadatas):
+        data.append({
+            "id": _id,
+            "document": doc,
+            "metadata": meta
+        })
+    with open(FINAL_CHUNKS_TEST_FILEPATH, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)

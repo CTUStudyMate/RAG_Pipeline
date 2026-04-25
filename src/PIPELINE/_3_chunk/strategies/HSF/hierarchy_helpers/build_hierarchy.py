@@ -18,6 +18,26 @@ def make_node(level, title, page):
         "page": page,
         "children": []
     }
+def generate_smart_toc(doc):
+    toc = []
+    
+    for i, page in enumerate(doc):
+        blocks = page.get_text("dict")["blocks"]
+        
+        for b in blocks:
+            if "lines" not in b:
+                continue
+                
+            for line in b["lines"]:
+                for span in line["spans"]:
+                    text = span["text"].strip()
+                    size = span["size"]
+                    
+                    # heuristic: font lớn → heading
+                    if size > 14 and len(text) < 100:
+                        toc.append([1, text, i+1])
+    
+    return toc if toc else generate_fake_toc(doc)
     
 def dfs (toc):
     if not toc:

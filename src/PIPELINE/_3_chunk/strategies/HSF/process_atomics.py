@@ -2,7 +2,7 @@ import os
 import json
 from collections import deque
 from pathlib import Path
-from PIPELINE._3_chunk.strategies.HSF.atomic_db_helpers.db_helpers import create_db_for_document, insert_atomic_into_db
+from PIPELINE._3_chunk.strategies.HSF.atomic_db_helpers.db_helpers import create_db_for_document, insert_atomic_batch, insert_atomic_into_db
 from PIPELINE._3_chunk.strategies.HSF.process_helpers.handle_batch import handle_batch_result
 from common_utils.filename_handle import normalize_filename
 from pipeline_config import STREAM_ELEMENTS_FILEPATH, TREE_FILEPATH
@@ -51,6 +51,65 @@ def flat_batch_result(batch_document):
     return batch_elements
 
 
+# def parse_pdf_into_atomic_units(folder, hierarchy_tree, conn, passed_cursor, open_node, node):
+#     stream_elements = deque()
+    
+#     current_atomic_order = 0
+#     incomplete_atomic = False
+
+#     folder = Path(folder)
+    
+#     doc_db_cursor = conn.cursor()
+    
+#     current_level_path_description = []
+#     current_open_level = 0
+    
+#     json_files = sorted(folder.glob("*.json"))
+#     total_batches = len(json_files)
+    
+#     for i, json_file in enumerate(json_files, start=1):
+#         print(f"Processing batch {i}/{total_batches}: {json_file.name}")
+#         with open(json_file, "r", encoding="utf-8") as f:
+#             doc_dict = json.load(f)
+#             batch_document = DoclingDocument.model_validate(doc_dict)
+#             # print(json_file)
+#             flat_list = flat_batch_result(batch_document) # đã lấy ra được doc của mỗi batch ròi nè
+
+#         # ===== với mỗi doc tương ứng từng batch thì gọi hàm xử lý batch để làm các task trên =====
+#         # bắt đầu xem và sửa lại hàm handle batch result
+#             current_atomic_order, incomplete_atomic, passed_cursor, open_node, node, current_open_level, current_level_path_description = handle_batch_result(flat_list=flat_list, my_built_dfs=hierarchy_tree, batch_result=batch_document, stream_elements=stream_elements, current_atomic_order=current_atomic_order, incomplete_atomic=incomplete_atomic, doc_db_cursor=doc_db_cursor, 
+#                                                                                                                                                               conn2=conn, passed_cursor=passed_cursor, open_node=open_node, node=node, current_open_level=current_open_level, current_level_path_description=current_level_path_description)
+
+
+# # #test-------------
+# #     with open("data/parsed_cache/se_theory_practice/pages_0030_0044.json", "r", encoding="utf-8") as f:
+# #         doc_dict = json.load(f)
+# #         batch_document = DoclingDocument.model_validate(doc_dict)
+# #         # print(json_file)
+# #         flat_list = flat_batch_result(batch_document) # đã lấy ra được doc của mỗi batch ròi nè
+# #         current_atomic_order, incomplete_atomic, passed_cursor, open_node, node, current_open_level, current_level_path_description = handle_batch_result(flat_list=flat_list, 
+# #                                                                                                       my_built_dfs=hierarchy_tree, batch_result=batch_document, 
+# #                                                                                                       stream_elements=stream_elements, current_atomic_order=current_atomic_order, incomplete_atomic=incomplete_atomic, 
+# #                                                                                                       doc_db_cursor=doc_db_cursor, conn2=conn, passed_cursor=passed_cursor, open_node=open_node, node=node,
+# #                                                                                                       current_open_level=current_open_level, current_level_path_description=current_level_path_description)
+# # #--------------
+    
+#     # loop xong hết qua các batch, add các element cuối cùng trong stream vào db 
+#     while len(stream_elements) > 0:
+#         element = stream_elements.popleft()   # O(1)
+        
+#         #====Test streams element =======
+#         # with open(STREAM_ELEMENTS_FILEPATH, "a", encoding="utf-8") as f:
+#         #     json.dump(element, f, ensure_ascii=False, default=str, indent=2)
+#         #     f.write("\n")
+#         #===================================
+        
+#         insert_atomic_into_db(element, doc_db_cursor)
+#         conn.commit()
+
+
+
+# hàm ver2: insert các elements ở cuối streams theo batch
 def parse_pdf_into_atomic_units(folder, hierarchy_tree, conn, passed_cursor, open_node, node):
     stream_elements = deque()
     
@@ -95,17 +154,19 @@ def parse_pdf_into_atomic_units(folder, hierarchy_tree, conn, passed_cursor, ope
 # #--------------
     
     # loop xong hết qua các batch, add các element cuối cùng trong stream vào db 
+    elements_in_streams = []
     while len(stream_elements) > 0:
-        element = stream_elements.popleft()   # O(1)
+        elements_in_streams.append(stream_elements.popleft())
         
-        #====Test streams element =======
-        # with open(STREAM_ELEMENTS_FILEPATH, "a", encoding="utf-8") as f:
-        #     json.dump(element, f, ensure_ascii=False, default=str, indent=2)
-        #     f.write("\n")
-        #===================================
+    #====Test streams element =======
+    with open(STREAM_ELEMENTS_FILEPATH, "w", encoding="utf-8") as f:
+        json.dump(elements_in_streams, f, ensure_ascii=False, default=str, indent=2)
+        f.write("\n")
+    #===================================
         
-        insert_atomic_into_db(element, doc_db_cursor)
-        conn.commit()
+    insert_atomic_batch(elements_in_streams, doc_db_cursor)
+    conn.commit()
+
 
 def process_atomics (file_path: str):
     # phải đi qua hết các batch để giữ được link giữa các batch
@@ -116,13 +177,18 @@ def process_atomics (file_path: str):
     # cuối cùng cần dùng các atomic để hình thành chunk => cần return đường dẫn db lưu atomic 
     # cần return cây hierarchy
     
+    
+    # tạo một sqlite db cho mỗi lần chạy chunking, sau đó thì các atomics insert vào vào db này
+    # rồi atomics lại được lấy từ db ra 
+    # cuối cùng thì chỉ dùng tới chunks trong vector db và postgres thôi
     conn = create_db_for_document(file_path)
+    
     conn.commit()
     
     hierarchy_tree = build_hierarchy(file_path)
     # print(hierarchy_tree)
-    # with open(TREE_FILEPATH, "w", encoding="utf-8") as f:
-    #     json.dump(hierarchy_tree, f, ensure_ascii=False, indent=4)
+    with open(TREE_FILEPATH, "w", encoding="utf-8") as f:
+        json.dump(hierarchy_tree, f, ensure_ascii=False, indent=4)
     
     passed_cursor = DFSCursor(hierarchy_tree)
     open_node = passed_cursor.next() # point to ROOT

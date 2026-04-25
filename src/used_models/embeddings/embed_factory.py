@@ -4,12 +4,12 @@ from used_models.embeddings.open_ai_embedding import OpenAIEmbedding
 
 class EmbeddingService:
     def __init__(self, provider="openai", **kwargs):
-        if provider == "openai":
-            self.engine = OpenAIEmbedding(**kwargs)
-        
-        elif provider == "bge":
+        if provider == "bge":
             self.engine = BGEEmbedding(**kwargs)
-        
+            
+        elif provider == "openai":
+            self.engine = OpenAIEmbedding(**kwargs)
+
         else:
             raise ValueError(f"Unsupported provider: {provider}")
 

@@ -23,7 +23,7 @@ def hard_split_sentence(sentence):
     current = ""
 
     for w in words:
-        if token_count(current + " " + w) <= CHUNK_MAX_TOKEN:
+        if mannual_token_count(current + " " + w) <= CHUNK_MAX_TOKEN:
             current += " " + w
         else:
             if current:
@@ -47,13 +47,13 @@ def split_text(chunk_text):
             continue
 
         #  Case 1: thêm sentence vẫn OK
-        if token_count(current_text + " " + sentence) <= CHUNK_MAX_TOKEN:
+        if mannual_token_count(current_text + " " + sentence) <= CHUNK_MAX_TOKEN:
             current_text += " " + sentence
             continue
 
         #  Case 2: vượt max → cần flush
-        if token_count(current_text) >= CHUNK_MIN_TOKEN:
-            texts.append([current_text.strip(), token_count(current_text)])
+        if mannual_token_count(current_text) >= CHUNK_MIN_TOKEN:
+            texts.append([current_text.strip(), mannual_token_count(current_text)])
 
             # tạo overlap
             current_text = get_overlap_tail(current_text, OVERLAP_TOKENS)
@@ -61,29 +61,29 @@ def split_text(chunk_text):
         #  Case 3: current_text quá nhỏ (< MIN)
         else:
             # thử gộp luôn (nếu sentence không quá lớn)
-            if token_count(sentence) <= CHUNK_MAX_TOKEN:
+            if mannual_token_count(sentence) <= CHUNK_MAX_TOKEN:
                 current_text += " " + sentence
-                texts.append([current_text.strip(), token_count(current_text)])
+                texts.append([current_text.strip(), mannual_token_count(current_text)])
                 current_text = get_overlap_tail(current_text, OVERLAP_TOKENS)
                 continue
 
         # Case 4: sentence quá dài => hard split
-        if token_count(sentence) > CHUNK_MAX_TOKEN:
+        if mannual_token_count(sentence) > CHUNK_MAX_TOKEN:
             segments = hard_split_sentence(sentence)
 
             for seg in segments:
-                if token_count(current_text + " " + seg) <= CHUNK_MAX_TOKEN:
+                if mannual_token_count(current_text + " " + seg) <= CHUNK_MAX_TOKEN:
                     current_text += " " + seg
                 else:
                     if current_text:
-                        texts.append([current_text.strip(), token_count(current_text)])
+                        texts.append([current_text.strip(), mannual_token_count(current_text)])
                         current_text = get_overlap_tail(current_text, OVERLAP_TOKENS)
 
                     current_text += " " + seg
 
     # push cuối
     if current_text:
-        texts.append([current_text.strip(), token_count(current_text)])
+        texts.append([current_text.strip(), mannual_token_count(current_text)])
 
     return texts
 
