@@ -74,6 +74,39 @@ def insert_atomic_into_db(element, cursor):
             metadata.get("heading"),
             None
         ))
+    
+def insert_atomic_batch(elements, cursor):
+    data = []
+
+    for element in elements:
+        metadata = element.get("metadata", {})
+
+        data.append((
+            element["id"],
+            element["type"],
+            element.get("content"),
+            element.get("token_count"),
+            metadata.get("atomic_order"),
+            metadata.get("description"),
+            metadata.get("level"),
+            metadata.get("heading"),
+            None
+        ))
+
+    cursor.executemany("""
+        INSERT OR REPLACE INTO atomic_elements (
+            id,
+            type,
+            content,
+            token_count,
+            atomic_order,
+            description,
+            level,
+            heading_type,
+            path
+        )
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+    """, data)
 
 def connect_db(db_path: str):
     conn = sqlite3.connect(db_path)

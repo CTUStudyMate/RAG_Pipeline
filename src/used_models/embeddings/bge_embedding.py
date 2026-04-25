@@ -1,8 +1,9 @@
 import requests
+from pipeline_config import BGE_EMBEDDING_MODEL
 from used_models.embeddings.base_embedding import BaseEmbedding
 
 class BGEEmbedding(BaseEmbedding):
-    def __init__(self, model="bge-m3:latest", base_url="http://localhost:11434"):
+    def __init__(self, model=BGE_EMBEDDING_MODEL, base_url="http://localhost:11434"):
         self.model = model
         self.base_url = base_url
 

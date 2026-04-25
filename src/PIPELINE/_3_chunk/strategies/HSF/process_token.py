@@ -37,8 +37,8 @@ def compute_tree_token(hierarchy_tree, cursor):
     all_token = compute_node_token(hierarchy_tree, token_map)
     
     # ======== TEST TOKEN TREE =======================
-    # with open(TOKEN_TREE_TEST_FILEPATH, "w", encoding="utf-8") as f:
-    #     json.dump(hierarchy_tree, f, ensure_ascii=False, default=str, indent=2)
+    with open(TOKEN_TREE_TEST_FILEPATH, "w", encoding="utf-8") as f:
+        json.dump(hierarchy_tree, f, ensure_ascii=False, default=str, indent=2)
     # ===============================================  
       
     return all_token
