@@ -2,6 +2,7 @@
 venv/
 env/
 newvenv/
+venv_for_langchain_based/
 
 # data / experiments
 data/

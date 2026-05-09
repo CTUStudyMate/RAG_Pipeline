@@ -1,0 +1,420 @@
+Software engineering is the discipline that uses knowledge of computers and computing to help solve problems, often by designing and implementing solutions using computer systems as tools [3]. Unlike computer science, which may focus on investigating hardware design or proving theorems about algorithms, software engineering views computers primarily as problem-solving tools rather than objects of study themselves [1]. It applies computing techniques to address general problems, not necessarily limited to computing issues [1]. Thus, software engineering fits into the broader field of computer science as a practical approach that emphasizes designing, developing, and maintaining high-quality software to solve real-world problems effectively and efficiently [1],[2].
+------[1]
+[SECTION]: Why Software Engineering? > 1.1 What Is Software Engineering? > Where Does the Software Engineer Fit In?
+[CONTENT]: To understand how a software engineer fits into the computer science world, let us look to another discipline for an example. Consider the study of chemistry and its use to solve problems. The chemist investigates chemicals: their structure, their interactions, and  the  theory  behind  their  behavior. Chemical  engineers  apply  the  results  of  the chemist's studies to a variety of problems. Chemistry as viewed by chemists is the object of study. On the other hand, for a chemical engineer, chemistry is a tool to be used to address a general problem (which may not even be 'chemical' in nature).
+We can view computing in a similar light. We can concentrate on the computers and programming languages, or we can view them as tools to be used in designing and implementing a solution to a problem. Software engineering takes the latter view, as shown in  Figure  1.3. Instead  of  investigating  hardware  design  or  proving  theorems about how algorithms work,a software engineer focuses on the computer as a problemsolving tool. We will see later in this chapter that a software engineer works with the functions of a computer as part of a general solution, rather than with the structure or theory of the computer itself.
+
+[2]
+[SECTION]: Why Software Engineering? > 1.2 How Successful Have We Been?
+[CONTENT]: Writing software is an art as well as a science, and it is important for you as a student of computer science to understand why. Computer scientists and software engineering researchers study computer mechanisms and theorize about how to make them more productive or efficient. However, they also design computer systems and write programs to perform tasks on those systems, a practice that involves a great deal of art, ingenuity, and skill. There may be many ways to perform a particular task on a particular system, but some are better than others. One way may be more efficient, more precise, easier to modify, easier to use, or easier to understand. Any hacker can write code to make something work, but it takes the skill and understanding of a professional software engineer to produce code that is robust, easy to understand and maintain, and does its job in the most efficient and effective way possible. Consequently, software engineering is about designing and developing high-quality software.
+Before we examine what is needed to produce quality software systems,let us look back to see how successful we have been. Are users happy with their existing software systems? Yes and no. Software has enabled us to perform tasks more quickly and effectively than ever before. Consider life before word processing, spreadsheets, electronic mail, or sophisticated telephony, for example.And software has supported life-sustaining or life-saving advances in medicine, agriculture, transportation, and most other industries. In addition, software has enabled us to do things that were never imagined in the past: microsurgery, multimedia education, robotics, and more.
+However, software is not without its problems. Often systems function, but not exactly as expected.We all have heard stories of systems that just barely work.And we all have written faulty programs: code that contains mistakes, but is good enough for a passing grade or for demonstrating the feasibility of an approach. Clearly, such behavior is not acceptable when developing a system for delivery to a customer.
+
+[3]
+[SECTION]: Why Software Engineering? > 1.1 What Is Software Engineering?
+[CONTENT]: As software engineers, we use our knowledge of computers and computing to help solve problems. Often the problem with which we are dealing is related to a computer or an existing computer system, but sometimes the difficulties underlying the problem have nothing to do with computers.Therefore, it is essential that we first understand the nature of the problem. In particular, we must be very careful not to impose computing machinery or techniques on every problem that comes our way. We must solve the problem first. Then, if need be, we can use technology as a tool to implement our solution. For the remainder of this book, we assume that our analysis has shown that some kind of computer system is necessary or desirable to solve a particular problem at hand.
+
+[4]
+[SECTION]: The Future of Software Engineering > 14.4 The Professionalization Of Software Engineering: Licensing, Certification, And Ethics > Software Engineering Education
+[CONTENT]: Historically, software engineering has been considered a relatively small aspect of computer science. At best, a university computer science curriculum included a course on software  engineering, usually  offered  in  the  junior  or  senior  year. At  the  least, it included several lectures on the meaning and intent of software engineering. With the increasing emphasis on software quality and security, and with the recent push to professionalize software developers, universities have increasingly viewed software engineering as a distinct academic discipline. There are now many ways in which a student can navigate through a university curriculum and end up with a software engineering education:
+ - Specializing in software engineering as part of a computer science major
+ - Specializing in software engineering as part of a computer engineering major
+ - Specializing in software engineering as part of an engineering major
+ - Majoring in software engineering as a separate degree from computer science or computer engineering As Table 14.6 shows, a software engineering program borrows from both computer science and engineering curricula. Computer science courses provide the technical  knowledge  and  expertise  needed  to  create  and  manipulate  software  artifacts: programming  principles; data  structures; algorithm  paradigms; programming  languages; grammars, parsing, and translation; concurrency and control structures; and the theoretical limits of computing. In addition, computer science and computer engineering courses cover key system components (e.g., computer architecture, operating system, middleware, networks)  and  key  software  components  (e.g., databases, user interfaces), and how the design and implementation of these components can affect the performance, usability, and quality of our software.
+
+[5]
+[SECTION]: The Future of Software Engineering > 14.5 Term Project
+[CONTENT]: Your term project is completed. Consider the finished product from the point of view of technology transfer. How would you introduce the Loan Arranger to the loan analysts at FCO? Where do the loan analysts and their managers fit on the continuum of adoption described by Rogers? How does their classification suggest strategies for improving the user interface? training? support? product evolution?
+
+
+
+*****************
+
+
+The difference between technical and business quality lies in their focus and perspective. Technical quality is concerned with the products and processes, typically measured by mathematical expressions involving faults, failures, and timing. It focuses on the technical value of software products—how well they perform, their reliability, and maintainability. Business quality, on the other hand, views quality in terms of the products and services being provided by the business in which the software is embedded. It is about the broader business value that the software delivers beyond technical metrics [1].
+
+Technical quality is important because it directly influences the product's functionality, reliability, and maintainability, which are critical for developers, testers, and maintainers to ensure the software works correctly and efficiently. Business quality is important because the ultimate goal of software is to solve business or societal problems and provide value to the organization, such as customer satisfaction, competitive advantage, and return on investment. Focusing only on technical quality assumes it will translate into business value automatically, but this is not always the case. Evaluating business quality helps align software development with business goals and decision-making [1], [4].
+
+Thus, both technical and business quality are important, with technical quality ensuring the software works well from a development and user perspective, and business quality ensuring the software delivers tangible value within its business environment.
+------[1]
+[SECTION]: Why Software Engineering? > 1.3 What Is Good Software? > Quality in the Context of the Business Environment
+[CONTENT]: When the focus of quality assessment is on products and processes, we usually measure quality with mathematical expressions involving faults, failures, and timing. Rarely is the scope broadened to include a business perspective, where quality is viewed in terms of the products and services being provided by the business in which the software is embedded. That is, we look at the technical value of our products, rather than more broadly at their business value, and we make decisions based only on the resulting products' technical quality. In other words, we assume that improving technical quality will automatically translate into business value.
+Several researchers have taken a close look at the relationships between business value and technical value. For example, Simmons interviewed many Australian businesses  to  determine  how  they  make  their  information  technology-related  business decisions. She  proposes  a  framework  for  understanding  what  companies  mean  by 'business value' (Simmons 1996). In a report by Favaro and Pfleeger (1997), Steve Andriole, chief information officer for Cigna Corporation, a large U.S. insurance company, described how his company distinguishes technical value from business value:
+
+[2]
+[SECTION]: Evaluating Products, Processes, and Resources > 12.6 Evaluating Resources
+[CONTENT]: Many researchers believe that the quality of our resources is a far more important factor  in  product  quality  than  any  technological  breakthroughs  we  may  make. For example, DeMarco and Lister (1987) discuss evidence that creativity, uninterrupted time, and good communication are necessary; they argue that cohesive teams build good products.
+Similarly, Boehm's  COCOMO  models  (1981, 1995)  include  parameters  that adjust effort and schedule estimates based on staff attributes such as experience. His original research revealed that differences between high- and low-performance teams had  the  largest  influence  on  project  productivity. Thus, researchers  argue  that  we should focus more on people and less on technology.
+At the same time, software is usually built in a business environment. We are given resources such as time and money and asked to solve a business or societal problem.We must be able to evaluate whether we are using the appropriate levels of each. In this section, we examine two frameworks for evaluating these kinds of resources: a people maturity model for staff and a return-on-investment model for time and money.
+
+[3]
+[SECTION]: Why Software Engineering? > 1.3 What Is Good Software? > The Quality of the Product
+[CONTENT]: We can ask people to name the characteristics of software that contribute to its overall quality, but we are likely to get different answers from each person we ask. This difference occurs because the importance of the characteristics depends on who is analyzing the software. Users judge software to be of high quality if it does what they want in a way that is easy to learn and easy to use. However, sometimes quality and functionality are intertwined; if something is hard to learn or use but its functionality is worth the trouble, then it is still considered to have high quality.
+We try  to  measure  software  quality  so  that  we  can  compare  one  product  with another. To do so, we identify those aspects of the system that contribute to its overall quality. Thus, when measuring software quality, users assess such external characteristics as the number of failures and type of failures. For example, they may define failures as minor,major,and catastrophic,and hope that any failures that occur are only minor ones.
+The software must also be judged by those who are designing and writing the code and by those who must maintain the programs after they are written.These practitioners tend to look at internal characteristics of the products, sometimes even before the product is delivered to the user. In particular, practitioners often look at numbers and types of faults for evidence of a product's quality (or lack of it). For example, developers track the number of faults found in requirements, design, and code inspections and use them as indicators of the likely quality of the final product.
+For this reason, we often build models to relate the user's external view to the developer's internal view of the software. Figure 1.5 is an example of an early quality model built by McCall and his colleagues to show how external quality factors (on the left-hand side) relate to product quality criteria (on the right-hand side). McCall associated each right-hand criterion with a measurement to indicate the degree to which an element of quality was addressed (McCall, Richards, and Walters 1977).We will examine several product quality models in Chapter 12.
+
+[4]
+[SECTION]: Why Software Engineering? > 1.3 What Is Good Software? > Quality in the Context of the Business Environment
+[CONTENT]: The difference in views is disturbing, because it means that calculations of ROI cannot be compared across organizations. But there are good reasons for these differing views. Dollar savings from reduced schedule, higher quality, and increased productivity are returned to the government rather than the contractor. On the other hand, contractors are usually looking for a competitive edge and increased work capacity as well as greater profit; thus, the contractor's ROI is more effort- than cost-based. In particular, more accurate cost and schedule estimation can mean customer satisfaction and repeat business.And decreased time to market as well as improved product quality are perceived as offering business value, too.
+[FIGURE 1.6 Terms included in industry definition of return on investment.] 
+
+
+
+*****************
+
+
+A design review being “egoless” means that the criticism and discussion during the review are directed at the process and the product, not at the participants themselves. The focus is on investigating the integrity of the design, not the designers, which helps emphasize that everyone is working toward the same goal [1]. 
+
+Egoless reviews are necessary because they encourage open communication among team members without personal bias or defensiveness, which helps in detecting faults early when they are easier and less costly to fix. This approach reduces the difficulty and expense of fixing faults later in development and fosters a collaborative environment where the design can be improved constructively [1].
+
+Steps that may help achieve egoless reviews include:
+- Ensuring that comments are directed at the design and process, not at individuals [1].
+- Including a moderator who leads the discussion impartially, encourages open dialogue, acts as an intermediary between opposing viewpoints, and maintains objectivity and balance [3].
+- Using a recorder to document discussions without participating in the critique, maintaining an accurate and neutral record [3].
+- Inviting developers not involved in the project to provide an outsider’s perspective, helping ensure objectivity and fresh ideas [3]. 
+
+These measures help maintain a focus on the product rather than personal issues, fostering a respectful and effective review process.
+------[1]
+[SECTION]: Designing the Architecture > 5.9 Architecture Design Review > Verification
+[CONTENT]: In general, the point of the design review is to detect faults rather than correct them. It is important to remember that those who participate in the review are investigating the integrity of the design, not of the designers. Thus, the review is valuable in emphasizing to all concerned that we are working toward the same goal. The criticism and discussion during the design review are egoless, because comments are directed at the process and the product, not at the participants.The review process encourages and enhances communication among the diverse members of the team.
+Moreover, the process benefits everyone by finding faults and problems when they are easy and inexpensive to correct. It is far easier to change something in its abstract, conceptual stage than when it is already implemented. Much of the difficulty and expense of fixing faults  late  in  development  derive  from  tracking  a  fault  to  its source. If a fault is spotted in the design review, there is a good chance that the problem is located somewhere in the design. However, if a fault is not detected until the system is operational, the root of the problem may be in several places: the hardware, the software, the design, the implementation, or the documentation. The sooner we identify a problem, the fewer places in which we have to look to find its cause.
+
+[2]
+[SECTION]: Designing the Architecture > 5.9 Architecture Design Review
+[CONTENT]: Design review is an essential part of engineering practice, and we evaluate the quality of a SAD in two different ways. First, we make sure that the design satisfies all of the requirements  specified  by  the  customer. This  procedure  is  known  as validating the design. Then we address the quality of the design. Verification involves ensuring that the design adheres to good design principles, and that the design documentation fits the needs of its users. Thus, we validate the design to make sure that we are building what the customer wants (i.e., is this the right system?), and we verify our documentation to help ensure that the developers will be productive in their development tasks (i.e., are we building the system right?).
+
+[3]
+[SECTION]: Designing the Architecture > 5.9 Architecture Design Review > Validation
+[CONTENT]: During validation, we make sure that all aspects of the requirements are addressed by our design.To do that, we invite several key people to the review:
+ - the analyst(s) who helped to define the system requirements
+ - the system architect(s)
+ - the program designer(s) for this project
+ - a system tester
+ - a system maintainer
+ - a moderator
+ - a recorder
+ - other interested system developers who are not otherwise involved in this project The number of people actually at the review depends on the size and complexity of the system under development. Every member of the review team should have the authority to act as a representative of his or her organization and to make decisions and commitments. The  total  number  should  be  kept  small, so  that  discussion  and  decision making are not hampered.
+The moderator leads the discussion but has no vested interest in the project itself. He or she encourages discussion, acts as an intermediary between opposing viewpoints, keeps the discussion moving, and maintains objectivity and balance in the process.
+Because it is difficult to take part in the discussion and also record the main points and  outcomes, another  impartial  participant  is  recruited  to  serve  as  recorder. The recorder does not get involved in the issues that arise; his or her sole job is to document what  transpires. However, more  than  stenographic  skills  are  required; the  recorder must have enough technical knowledge to understand the proceedings and record relevant technical information.
+Developers who are not involved with the project provide an outsider's perspective. They can be objective when commenting on the proposed design, because they have no personal stake in it. In fact, they may have fresh ideas and can offer a new slant on things.They also act as ad hoc verifiers, checking that the design is correct, is consistent, and conforms to good design practice. By participating in the review, they assume equal responsibility for the design with the designers themselves. This shared responsibility forces all in the review process to scrutinize every design detail.
+
+[4]
+[SECTION]: Designing the Architecture > 5.9 Architecture Design Review > Verification
+[CONTENT]: Once we have convinced ourselves that the design will lead to a product with which the customer will be happy, we evaluate the quality of the design and the documentation. In particular, we examine the design to judge whether it adheres to good design principles:
+ - Is the architecture modular, well structured, and easy to understand?
+ - Can we improve the structure and understandability of the architecture?
+ - Is the architecture portable to other platforms?
+ - Are aspects of the architecture reusable?
+ - Does the architecture support ease of testing?
+ - Does the architecture maximize performance, where appropriate?
+ - Does the architecture incorporate appropriate techniques for handling faults and preventing failures?
+ - Can the architecture accommodate all of the expected design changes and extensions that have been documented?
+The review team also assures that the documentation is complete by checking that there is  an  interface  specification  for  every  referenced  software  unit  and  that  these specifications  are  complete. The  team  also  makes  sure  that  the  documentation describes alternative design strategies, with explanations of how and why major design decisions were made.
+An active  design  review (Parnas  and  Weiss  1985)  is  a  particularly  effective method for evaluating the quality of the SAD and determining whether it contains the right information. In an active review, reviewers exercise the design document by using it in ways that developers will use the final document in practice. That is, rather than reading  the  documentation  and  looking  for  problems, which  is  characterized  as  a passive  review  process , the  reviewers  are  given  or  devise  questions  that  they  must answer by looking up information in the SAD. Each reviewer represents a different class of reader and is asked questions suitable to his or her use of a SAD.Thus, a maintainer  may  be  asked  to  determine  which  software  units  would  be  affected  by  an expected change to the system, whereas a program designer may be asked to explain why an interface's preconditions are necessary.
+
+
+
+*****************
+
+
+A class that is deeper in the inheritance hierarchy is likely harder to understand and maintain because attributes and methods are inherited from a larger collection of ancestor classes, which increases complexity. This makes it more difficult to comprehend the full behavior and structure of the class, as it relies on characteristics defined in multiple ancestor classes [2].
+------[1]
+[SECTION]: Designing the Modules > 6.7 Oo Measurement > OO Design Quality Measures
+[CONTENT]: Chidamber and Kemerer (1994) have also devised a suite of metrics for OO development.Their work is more focused on design quality than on size, so it complements the work of Lorenz and Kidd. In addition to size measures such as weighted methods per class, depth of inheritance, and number of children, Chidamber and Kemerer measure the  coupling  between  objects, the  response  for  a  class, and  the  lack  of  cohesion  in methods (LCOM). Table 6.6 shows where each of these metrics can be collected and used during development. Because they are widely used and have become a standard to  which  other  OO  metrics  are  compared, let  us  look  more  closely  at  some  of  the Chidamber-Kemerer metrics.
+We noted in Chapter 5 that we can measure aspects of design quality, such as complexity.As we will see in Chapter 11, there are also several ways to measure the complexity of a piece of code. Chidamber and Kemerer leave the definition of complexity open,so that the developers can choose a complexity measure appropriate for the project. Then, Chidamber and Kemerer use the number of methods, n , with the complexity of each method, c , as a weight in defining a weighted complexity measure for classes:
+
+[2]
+[SECTION]: Designing the Modules > 6.7 Oo Measurement > OO Design Quality Measures
+[CONTENT]: We define the LCOM for C to be | P | - | Q | if | P | is greater than | Q |. Otherwise, LCOM is zero. In plainer language, the LCOM is the degree to which there are more pairs of methods that do not share variables than there are pairs of methods that do share variables. The metric is based on the notion that two methods are related if they share an instance variable. The larger the number of related methods, the more cohesive the class. Thus, the LCOM metric is a measure of the relatively disparate nature of the methods in the class.
+Another metric, the response for a class, is the set of methods that might be executed in response to a message received by an object in that class.If many methods can be invoked when a message is received,then testing and repair become far more difficult. So designers should attempt to keep response for a class low and to view high values as an indication that additional scrutiny of the class and its implementation is warranted.
+We can also use the Chidamber-Kemerer metrics to evaluate design changes. Consider the part of the module design for the Royal Service Station, shown in Figure 6.42, that is extended with user-interface modules.We can see from the table in the figure that the coupling between objects for the Bill class has increased from one to two, but the other metrics for bill, account, and payments have stayed the same.
+The metrics help to identify problematic areas of the design. For each metric listed below, a higher value indicates greater likelihood of faults in the corresponding code:
+ - the larger the weighted complexity of a class (i.e., the system is more complex and therefore harder to understand)
+ - the  more  children  a  class  has  (i.e., there  is  greater  variability  in  the  class' hierarchy and therefore more code to implement and test)
+ - the larger the depth of the class's inheritance (i.e., attributes and methods are inherited from a larger collection of ancestor classes, thus the class is harder to understand)
+ - the larger the response for a class (thus, there are more methods to implement and test)
+
+[3]
+[SECTION]: Designing the Architecture > 5.7 Architecture Evaluation And Refinement > Measuring Design Quality
+[CONTENT]: Some researchers are developing metrics to assess certain key aspects of design quality. For example, Chidamber and Kemerer (1994) have proposed a general set of metrics to apply to object-oriented systems. Briand, Morasca, and Basili (1994) have proposed metrics for evaluating high-level design, including cohesion and coupling, and Briand, Devanbu,and Melo (1997) build on those ideas to propose ways to measure coupling.
+To see how these measurements reveal information about the design, consider the latter group's coupling metrics. Briand et al. note that coupling in C++-like design can  be  based  on  three  different  characteristics: relationships  between  classes  (e.g., friendship, inheritance), types  of  interactions  between  classes  (e.g., class-attribute interaction, class-method interaction, method-method interaction), and the loci of ripple effects due to design changes (i.e., whether a change flows toward or away from a class). For  each  class  in  a  design, they  defined  metrics  that  count  the  interactions between  the  class  and  other  classes  or  methods. Then, using  empirical  information about the design for a real system and the resulting system's faults and failures, they analyzed the relationship between the type of coupling and the kinds of faults that were found. For  example, they  report  that  when  a  class  depended  on  a  large  number  of attributes  that  belonged  to  other  classes  that  were  not  ancestors, descendants, or friends of that class, then the resulting code was more fault prone than usual. Similarly, when many methods belonging to friend classes depended on the methods of a particular class, then that class was more fault prone. In this way, design information can be used to predict which parts of the software are most likely to be problematic. We can take steps during the design stage to build in fault prevention or fault tolerance, and we can focus more of our initial testing efforts on the most fault-prone parts of the design.
+
+[4]
+[SECTION]: Designing the Modules > 6.3 Oo Design > Inheritance vs. Object Composition
+[CONTENT]: By  contrast, using  the  inheritance  approach, the  subclass's  implementation  is determined  at  design  time  and  is  static. The  resulting  objects  are  less  flexible  than objects instantiated from composite classes because the methods they inherit from their parent class cannot be changed at runtime. Moreover, because the inherited properties of the parent class are usually visible to the subclass, if not directly accessible, it can be easier to understand and predict the behavior of classes constructed using inheritance. Of course, the greatest advantage of inheritance is the ability to change and specialize the behaviors of inherited methods, by selectively overriding inherited definitions. This characteristic helps us to quickly create new types of objects that exhibit new behaviors.
+
+[5]
+[SECTION]: Designing the Modules > 6.3 Oo Design > Terminology
+[CONTENT]: Inheritance, object composition, and polymorphism are important features of an OO design that make the resulting system more useful in many ways.The next section discusses strategies for using these concepts effectively.
+
+
+
+*****************
+
+
+The context provided does not contain a direct implementation of a stack using an array or specific programming code for the stack data structure described in your question. However, the context does provide some relevant points that should be kept in mind when implementing the stack:
+
+- The stack operations include empty, full, push, pop, and top, which align with the descriptions you provided about how these operations should behave.
+- When designing the stack module, interfaces should be defined to encapsulate and hide implementation details (such as using an array) from the user of the stack. This means you define methods rather than directly manipulate the stack data structure [3].
+- When programming, careful consideration of the data structures can affect the ease of programming and understandability. Recursive procedures can be useful for recursive data structures, though a stack implemented with an array is typically iterative [2].
+- When designing subclasses like a BoundedStack (a stack with limited capacity), ensure substitutability principles so that subclasses behave correctly relative to the parent class's interface and specifications [1].
+
+Accordingly, to implement the integer stack with a maximum of 100 elements using an array, you would:
+
+1. Define an array of size 100 to hold the elements.
+2. Maintain a variable (e.g., top index) to track the current top of the stack.
+3. Implement:
+   - `empty()` to check if top index indicates no elements.
+   - `full()` to check if the array is at max capacity.
+   - `push(element)` to add element if not full, returning error otherwise.
+   - `pop()` to remove and return the top element if not empty, returning error otherwise.
+   - `top()` to return the top element without removing it, error if empty.
+
+Also ensure to encapsulate these operations within a module/interface so users interact via the defined methods, not directly with the array [3].
+
+The guidelines for programming style in the chapter recommend carefully considering data structures and interfaces to produce understandable and maintainable code [2][3].
+
+Since the raw code implementation is not present in the given context, this explanation follows the principles and guidelines referenced in the texts.
+------[1]
+[SECTION]: Designing the Modules > 6.3 Oo Design > Substitutability
+[CONTENT]: The use of inheritance does not necessarily result in subclasses that can be used in place of their parent class. Most OO programming languages allow subclasses to override the behaviors of their inherited methods, without regard to whether the result complies with the parent class's interface. As a result, client code that relies on the parent class might not work correctly when passed an instance of a subclass.
+Consider a BoundedStack that is a specialized type of Stack that can store only a limited number of elements. The BoundedStack subclass not only introduces an attribute  to  record  the  bound  on  its  size, but  also  overrides  the  behavior  of  the push() method to handle the case where an element is pushed onto a full stack (e.g., the BoundedStack might ignore the request, or it might push the bottom element off the stack to make room for the new element). A BoundedStack object is not substitutable for a normal Stack object, because the two objects behave differently when their respective stacks are full.
+Ideally, a subclass must preserve the behavior of its parent class, so that client code  can  treat  instances  of  it  as  instances  of  the  parent  class. This  notion  is  best described by the Liskov Substitutability Principle , named after its inventor, Barbara Liskov, a pioneer in OO programming and data abstraction.According to the principle, a subclass is substitutable for its parent class if all of the following properties are satisfied (Liskov and Guttag 2001):
+ - The subclass supports all of the methods of the parent class, and their signatures are compatible . That is, the parameters and return types of the subclass's methods must be substitutable for the corresponding parameters and return types of the parent class's methods, so that any call to a method of the parent class would be accepted by the subclass.
+ - The  subclass's  methods  must  satisfy  the  specifications  of  the  parent  class's methods. The behaviors of the two classes' methods do not have to be the same, but the subclass must not violate the pre- and postconditions of the parent class's methods:
+
+[2]
+[SECTION]: Writing the Programs > 7.2 Programming Guidelines > Data Structures
+[CONTENT]: Root Programming languages such as Pascal allow recursive procedures to deal with recursive data structures. You may prefer to use recursive procedures for this type of data, since their use forces the burden of managing the data structure to be borne by the compiler rather than your program.The use of recursion may make the actual programming easier or may make your program more understandable. Thus, in general, you should consider the data structures carefully when deciding which language to use in implementing the design.
+
+[3]
+[SECTION]: Designing the Modules > 6.2 Design Principles > Interfaces
+[CONTENT]: [FIGURE 6.7 Example of interfaces.] 
+Interfaces are the design construct that allows us to encapsulate and hide a software unit's  design  and  implementation  details  from  other  developers. For  example, rather than manipulate a stack variable directly, we define an object called stack and methods to perform stack operations push and pop . We use the object and its methods, not the stack itself, to modify the contents of the stack. We can also define probes to give us information about the stack-whether it is full or empty and what element is on top-without changing the stack's state.
+
+
+
+*****************
+
+
+Here is a set of coding standards for the Java programming language, based on the guidelines from the chapter:
+
+1. **Follow Organizational Standards and Procedures:** Ensure that all code conforms to your organization's style, format, and content standards. This helps all team members clearly understand the code and related documentation [1].
+
+2. **Use Clear and Consistent Naming Conventions:** Use meaningful, descriptive names for variables, methods, classes, and constants to clarify their purpose, aiding others in understanding what the code does [6].
+
+3. **Document Your Code Thoroughly:** Include comments to explain the code's organization, data structures, control flow, and design decisions. This documentation allows team members to understand what, why, and how the code works, supports easier maintenance, and enables you to resume work without losing context [1][6].
+
+4. **Practice Information Hiding:** Reveal only essential information about components so that teammates can invoke and reuse them without needing to understand their internal details. This supports effective teamwork and modular design [4].
+
+5. **Reuse Code Where Possible:** Incorporate code from previous projects or libraries when applicable, promoting consistency and reducing duplication [5].
+
+6. **Use Common Design Techniques and Strategies:** Follow agreed-upon design patterns and strategies to make your code easier to test, maintain, and reuse [4].
+
+7. **Implement a Systemwide Error-Handling Strategy:** Handle errors and exceptions consistently across the codebase to maintain robustness [5].
+
+8. **Iterative Development from Design to Code:** Begin with a low-level design framework and iteratively develop code through several passes, improving quality and clarity [5].
+
+These standards are included to ensure that multiple people can work collaboratively on code without confusion or redundancy, to facilitate communication about the code, and to maintain high quality in a team setting. Clear standards help others understand not only what you have written but also why and how it fits with the broader project, which is critical given the cooperative nature of software development [1][4]. Documentation and adherence to standards reduce errors and simplify maintenance, which is a team activity requiring good communication [2][3].
+------[1]
+[SECTION]: Writing the Programs > 7.1 Programming Standards And Procedures
+[CONTENT]: During your career, you are likely to work on many different software projects, writing code in many application domains using a variety of tools and techniques. Some of your work will also involve evaluating existing code, because you want to replace or modify it, or to reuse it in another application. You will also participate in formal and informal reviews to examine your code and others'. Much of this work will be different from the programming you have done for your classes. In class, your work is done independently, so that your instructor can judge its quality and suggest improvements. However, in the wider world, most software is developed by teams, and a variety of jobs are required to generate a quality product. Even when writing the code itself, many people are usually involved, and a great deal of cooperation and coordination is required. Thus, it is very important for others to be able to understand not only what you have written, but also why you have written it and how it fits in with their work.
+For these reasons, you must know your organization's standards and procedures before you begin to write code. Many companies insist that their code conform to style, format, and content standards, so that the code and associated documentation are clear to everyone who reads them. For example, Sidebar 7.1 describes Microsoft's approach to programming standards.
+
+[2]
+[SECTION]: Maintaining the System > 11.10 What This Chapter Means For Your Development Team
+[CONTENT]: Maintenance is definitely a team activity. A great deal of coordination must be used when checking out a component, changing and testing the component, and putting the revised  component  back  into  the  working  system. Moreover, many  failures  are the result  of  complex  interactions  among  components, so  you  must  communicate with your team members to get a big picture of how the software interoperates with its environment.
+Your people skills are especially important during maintenance. As you seek the cause of a problem, you must talk with your colleagues, users, and customers, and each will have a different work style (as we saw in Chapter 2). So you must learn how to extract the information you need from documents and from people in the most effective ways possible, using your understanding of work styles.
+
+[3]
+[SECTION]: Planning and Managing the Project > 3.2 Project Personnel > Staff Roles and Characteristics
+[CONTENT]: On every software development or maintenance project, members of the development team communicate with one another, with users, and with the customer. The project's progress is affected not only by the degree of communication, but also by the ability  of  individuals  to  communicate  their  ideas. Software  failures  can  result  from  a breakdown in communication and understanding, so the number of people who need to communicate with one another can affect the quality of the resulting product. Figure 3.9 shows us how quickly the lines of communication can grow. Increasing a work team from two to three people triples the number of possible lines of communication. In general, if a project has n workers, then there are pairs of people who might need  to  communicate, and possible  teams  that  can  be  created  to  work  on smaller pieces of the project.Thus, a project involving only 10 people can use 45 lines of communication,and there are 1023 possible committees or teams that can be formed to handle subsystem development! 2 n -1 n 1 n -1 2> 2 Many projects involve several people who must share responsibility for completing one or more activities. Those working on one aspect of project development must trust other team members to do their parts. In classes, you are usually in total control of the  projects  you  do. You  begin  with  the  requirements  (usually  prescribed  by  your instructor), design a solution to the problem, outline the code, write the actual lines of code, and  test  the  resulting  programs. However, when  working  in  a  team, either  in school or for an employer or customer, you must be able to share the workload. Not only does this require verbal communication of ideas and results, but it also requires written  documentation of what you plan to do and what you have done. You must Two people accept the results of others without redoing their work. Many people have difficulty in sharing control in this way.
+
+[4]
+[SECTION]: Writing the Programs > 7.8 What This Chapter Means For Your Development Team
+[CONTENT]: Although much of coding is an individual endeavor, all of coding must be done with your team in mind.Your use of information hiding allows you to reveal only the essential information about your components so that your colleagues can invoke them or reuse them. Your use of standards enhances communication among team members. And your use of common design techniques and strategies makes your code easier to test, maintain, and reuse.
+
+[5]
+[SECTION]: Writing the Programs > 7.7 What This Chapter Means For You
+[CONTENT]: In this chapter, we have looked at several guidelines for implementing programs. We have seen that you should consider the following when you write your code:
+ - organizational standards and guidelines
+ - reusing code from other projects
+ - writing your code to make it reusable on future projects
+ - using the low-level design as an initial framework, and moving in several iterations from design to code
+ - incorporating a systemwide error-handling strategy
+ - using documentation within your programs and in external documents to explain your code's organization,data,control,and function,as well as your design decisions
+ - preserving the quality design attributes in your code
+ - using design aspects to suggest an implementation language
+There are many good books that provide specialized advice based on the particular implementation language you select.
+
+[6]
+[SECTION]: Writing the Programs > 7.1 Programming Standards And Procedures > Standards for You
+[CONTENT]: Standards and procedures can help you to organize your thoughts and avoid mistakes. Some of the procedures involve methods of documenting your code so that it is clear and easy to follow. Such documentation allows you to leave and return to your work without losing track of what you had been doing. Standardized documentation also helps in locating faults and making changes, because it clarifies which sections of your program perform which functions.
+
+[7]
+[SECTION]: Preface > Chapter 7:Writing the Programs
+[CONTENT]: In this chapter, we address code-level design decisions and the issues involved in implementing a design to produce high-quality code. We discuss standards and procedures, and suggest some simple programming guidelines. Examples are provided in a variety of languages, including both object-oriented and procedural. We discuss the need for
+
+
+
+*****************
+
+
+For users with little or no computer experience, useful training aids and resources include well-defined icons, online help, and formal documentation designed for ease of use and understanding. Icons help make system functions clear and easy to understand, allowing users to select functions by scanning and clicking icons rather than recalling complex commands [1]. Online help enables users to quickly access additional information about a function's purpose or use without searching through paper documents, making training easier and more accessible [2].
+
+Regarding documentation specifically meant for novice users, an example is the S-PLUS package documentation, which includes a "Gentle Introduction to S-PLUS" for novice computer users [3]. This type of documentation provides a simplified introduction and is specifically designed for users who are new to the software, allowing them to learn step-by-step.
+
+Overall, training for novice users often begins with basics, such as explaining keyboard configuration and menu selections, which are introduced slowly and thoroughly [4]. The combination of easy-to-understand icons, accessible online help, and tailored beginner manuals supports users with little or no computer experience effectively [1][2][3][4].
+------[1]
+[SECTION]: Delivering the System > 10.1 Training > Training Aids
+[CONTENT]: Training can be done in many ways. No matter how training is provided, it must offer information to users and operators at all times, not just when the system is first delivered. If at some time users forget how to access a file or use a new function, training includes methods to find and learn this information.
+Documents. Formal  documentation  accompanies  every  system  and  supports training.The documents contain all the information needed to use the system properly and efficiently. Existing  in  separate  manuals  or  online, documents  are  accessible  to users and operators as the system is functioning. The system manuals are often similar to an automobile owner's manual; they are references to be used when a problem or question arises.You may not read your car owner's manual from cover to cover before you put the key in the ignition and go for a drive; likewise, users and operators do not always  read  training  documents  before  trying  to  use  the  system. In  fact, one  study showed that only 10% to 15% of the users in an intensive training program read the manual at all (Scharer 1983). Six months later, no one else had read the user manual, and replacement pages with revised information had not been filed in the manual. In this and many other cases, users may prefer well-defined icons, online help, demonstrations, and classes to learn how the system works.
+Icons and Online Help. A system can be designed so that its interface with the user makes system functions clear and easy to understand. Most computer-based systems follow the example of Apple and Xerox in using icons to depict a user's choice of system functions. A click of the mouse selects an icon, and a second click invokes the function.Training for such systems is relatively simple, since the functions are more easily remembered by scanning the icons than by recalling commands and syntax.
+
+[2]
+[SECTION]: Delivering the System > 10.1 Training > Training Aids
+[CONTENT]: Similarly, online help makes training easier. The user can scan additional information about a function's purpose or use without having to take the time to search through paper documents. Sophisticated online help that makes use of hypermedia technology allows the user to delve into collections of related online documents for as much detail as needed for understanding. However, as described in Sidebar 10.1, automated training requires the same kind of maintenance as any other software system.
+
+[3]
+[SECTION]: Delivering the System > 10.2 Documentation > Types of Documentation
+[CONTENT]: There are several considerations involved in producing training and reference documents. Each can be important in determining whether the documentation will be used successfully.
+Considering the Audience. A computer-based system is used by a variety of people. In addition to users and operators, other members of the development team and the customer staff read documentation when questions arise or changes are proposed and made. For example, suppose an analyst is working with a customer to determine whether to build a new system or modify an old one. The analyst reads a system overview to understand what the current system does and how it does it.This overview for the analyst is different from one written for a user; the analyst must know about computing details that are of no interest to a user. Similarly, descriptions needed by operators are of no importance to a user.
+For example,the S-PLUS package (version 3.0,from MathSoft,Seattle,Washington) came with several books, including Read Me First . Each book is designed for a different audience  and  has  a  different  purpose. Read  Me  First begins  with  a  Documentation Roadmap, describing in four brief pages each of the other books included in the documentation:
+ - A Gentle Introduction to S-PLUS for the novice computer user
+ - A Crash Course in S-PLUS for the experienced computer user
+ - S-PLUS User's Manual , explaining how to get started, manipulate data, and use advanced graphics
+ - S-PLUS  Guide  to  Statistical  and  Mathematical  Analysis , describing  statistical modeling
+ - S-PLUS  Programmer's  Manual , explaining  the  S  and  S-PLUS  programming languages
+ - S-PLUS Programmer's Manual Supplement with information specific to a given version of the software
+ - S-PLUS Trellis Graphics User's Manual , describing a particular graphical feature to supplement the statistical analysis
+ - S-PLUS Global Index , providing a cross-reference among the volumes of documentation
+
+[4]
+[SECTION]: Delivering the System > 10.1 Training > Types of Training
+[CONTENT]: Special Training Needs. Users and operators are usually trained in a concentrated and complete course in system use. Often, training begins with the basics: how the keyboard is configured, how menu selections are made, and so on; these and other functions are introduced slowly and investigated thoroughly. This complete training is offered during system delivery to those who will be using the system.
+However, new users may later replace trained users, often because of changing job assignments.Training must be available at these times to show them how the system works.
+Sometimes users want to brush up on things missed in the original training. Even when initial  training  is  comprehensive, it  may  be  difficult  for  users  or  operators  to absorb everything taught. Users often like to review some of the functions originally presented in the initial training sessions.
+You can appreciate the need for brushing up by remembering what it was like to learn your first programming language. You learned all the legal commands, but you remembered the syntax and meaning of some better than others. To master the language, you returned to your notes or textbook to review infrequently used commands.
+A similar  problem is  encountered  by  infrequent  system  users. The  knowledge gained in training can be easily forgotten for those system functions that are not exercised regularly. For example, consider a large corporation's word processing system. The system's primary users may be typists who type documents daily and route them from one location to another. Using the system often helps the typists remain familiar with most functions. However, the corporate president may use the system only once or twice a week to create a document or memorandum;the document is then put into final form by a typist.Training for an infrequent user is different from standard user training. The president has no need to know all the special features of the system; training for infrequent users can address only basic document creation and modification functions.
+
+[5]
+[SECTION]: Preface > Chapter 10: Delivering the System
+[CONTENT]: This chapter discusses the need for training and documentation, and presents several examples of training and documents that could accompany the information system and real-time examples.
+
+
+
+*****************
+
+
+The provided context documents discuss the Y2K problem as an example of a maintenance issue resulting from simple but narrow design decisions, specifically the representation of the year as only two characters which caused problems when the year rolled over from "99" to "00" [1]. This illustrates how a flawed or inflexible design can require extra maintenance effort.
+
+Regarding the maintenance problems in section 11.3, several issues are relevant to the Y2K problem:
+- Technical problems with design that do not anticipate changes, such as fixed field sizes including date representations [1].
+- The difficulty in understanding and modifying complex or inflexible designs [1].
+- The need for careful testing of changes to avoid unintended effects on other system parts [2].
+- Management priorities potentially pushing for quick patches rather than carefully engineered solutions, which can worsen maintenance difficulties [3].
+
+However, the specific question about how many of these maintenance problems are accurately presented in a nonscientist article such as in newspapers or popular magazines is not answered in the provided documents. Also, there is no information in the context about any analysis or comparison of popular media presentations with section 11.3 issues.
+
+In summary, the Y2K problem exemplifies several maintenance problems listed in section 11.3, particularly those related to poor design decisions and the resulting maintenance complexity [1]. There is no information on how these issues are portrayed in popular media or whether all relevant maintenance problems are covered in such articles. Thus, there is insufficient information to fully answer the question regarding the accuracy or completeness of articles about the Y2K problem relative to section 11.3.
+------[1]
+[SECTION]: Maintaining the System > 11.3 Maintenance Problems > Technical Problems
+[CONTENT]: Technical problems also affect maintenance productivity. Sometimes, they are a legacy of what developers and maintainers have done before.At other times, they result from particular paradigms or processes that have been adopted for the implementation.
+Artifacts and Paradigms. If the design's logic is not obvious, the team may not easily determine whether the design can handle proposed changes.A flawed or inflexible design can require extra time for understanding, changing, and testing. For instance, developers may have included a component for input and output that handles only tape; major modifications must be made for disk access, because the disk is not constrained by the tape's sequential access. Similarly, the developers may not have anticipated changes; field and table sizes may be fixed, making them difficult to modify.The 'year 2000 problem,' where many developers represented the year as only two characters, is a good example of how simple but narrow design decisions can have a major effect on maintenance.
+Maintaining  object-oriented  programs  can  be  problematic, too, because  the design often involves components that are highly interconnected by complex inheritance schemes. Incremental changes must be made with great care, since modifications can result in long chains of classes that hide others or that redefine objects in conflicting ways. Sidebar 11.2 describes more of the particular design trade-offs involved when maintaining object-oriented systems.
+In general, inadequate design specifications and low-quality programs and documentation account for almost 10% of maintenance effort.A similar amount of effort is dedicated to hardware requirements: getting adequate storage and processing time.As a student, you understand the frustration of having a problem to solve but having no access to a workstation, or having to dial repeatedly to obtain remote access. Problems also arise when hardware, software, or data are unreliable.
+
+[2]
+[SECTION]: Maintaining the System > 11.3 Maintenance Problems > Staff Problems
+[CONTENT]: There are many staff and organizational reasons that make maintenance difficult. The staff must act as an intermediary between the problem and its solution, tinkering and tailoring the software to ensure that the solution follows the course of the problem as it changes.
+Limited Understanding. In addition to balancing user needs with software and hardware needs, the  maintenance  team  deals  with  the  limitations  of  human  understanding. There is a limit to the rate at which a person can study documentation and extract material relevant to the problem being solved. Furthermore, we usually look for more clues than are really necessary for solving a problem.Adding the daily office distractions, we have a prescription for limited productivity.
+Parikh and Zvegintzov (1983) report that 47% of software maintenance effort is devoted to understanding the software to be modified. This high figure is understandable when we consider the number of interfaces that need to be checked whenever a component is changed. For example, if a system has m components and we need to change k of them, there are interfaces to be evaluated for impact and correctness (Gerlich and Denskat 1994). So, even a one-line change to a system component may require hundreds of tests to be sure that the change has no direct or indirect effect on another part of the system.
+[FORMULA]
+k * 1 m -k 2 + k * 1 k -1 2> 2 User understanding also presents problems. Lientz and Swanson (1981) found that more than half of maintenance programmers' problems derived from users' lack of skill or understanding. For example, if users do not understand how the system functions, they may provide maintainers with incomplete or misleading data when reporting a problem's effects.
+These results illustrate the importance of clear and complete documentation and training. The maintenance team also needs good 'people skills.' As we saw in Chapter 2, there are a variety of work styles.The maintenance team must understand how people with different styles think and work, and team members must be flexible when communicating.
+
+[3]
+[SECTION]: Maintaining the System > 11.3 Maintenance Problems > Staff Problems
+[CONTENT]: Management Priorities. The maintenance team weighs the desires of the customer's management against the system's needs. Management priorities often override technical ones;managers sometimes view maintaining and enhancing as more important than building new applications. In other words, companies must sometimes focus on business as usual, instead of investigating new alternatives. But as management encourages maintainers to repair an old system, users are clamoring for new functions or a new system. Similarly, the rush to get a product to market may encourage us, as either developers or maintainers, to implement a quick, inelegant, poorly tested change, rather than take the time to follow good software engineering practice.The result is a patched product that is difficult to understand and repair later.
+Morale. The  Lientz  and  Swanson  studies  (1981)  indicate  that  11.9%  of  the problems during maintenance result from low morale and productivity.A major reason for low morale is the second-class status often accorded the maintenance team. Programmers sometimes think that it takes more skill to design and develop a system than to keep it running. However, as we have seen, maintenance programmers handle problems that developers never see. Maintainers are skilled not only in writing code but also in working with users, in anticipating change, and in sleuthing. Great skill and perseverance are required to track a problem to its source, to understand the inner workings of a large system, and to modify that system's structure, code, and documentation.
+
+[4]
+[SECTION]: Maintaining the System > 11.3 Maintenance Problems
+[CONTENT]: Maintaining a system is difficult. Because the system is already operational, the maintenance team balances the need for change with the need for keeping a system accessible to users. For example, upgrading a system may require it to be unavailable to users for several hours. However, if the system is critical to the users' business or operation, there may not be a window of several hours when users can give up the system. For instance, a life-support system cannot be disconnected from a patient so that maintenance can be performed on the software. The maintenance team must find a way to implement changes without inconveniencing users.
+
+
+
+*****************
+
+
+The context documents do not provide specific information about how the Software Engineering Laboratory (SEL) at NASA's Goddard Space Flight Center uses user-reported defect severity data (such as categorizing defects as major with no workaround, major with workaround, or cosmetic) to understand its maintenance process better. Therefore, I do not have enough information to answer the question based on the provided context.
+------[1]
+[SECTION]: Testing the System > 9.9 Testing Safety-Critical Systems > Cleanroom
+[CONTENT]: The Software Engineering Laboratory at NASA's Goddard Space Flight Center put cleanroom to a rigorous test. It performed a series of controlled experiments and case studies to determine if some of the key elements of the cleanroom approach work as advertised. As you can see from the results in Table 9.9, cleanroom seems to work well on small projects but not on larger ones. Consequently, the SEL cleanroom process model  evolved; in  particular, the  SEL  process  model  was  applied  only  to  projects involving fewer than 50,000 lines of code and was changed for larger projects. In addition, SEL developers stopped using reliability modeling and prediction, because they had little data on which to base their projections. Basili and Green (1994) note that these studies, performed in a flight dynamics environment, have convinced them that key features of cleanroom led to lower fault rates, higher productivity, a more complete and consistent set of code comments, and a redistribution of developer effort. However, they caution that the SEL environment is different from IBM's, and that cleanroom must be tailored to the environment in which it is used.
+Cautions about Cleanroom. Although much in the literature suggests that cleanroom improves software quality, Beizer (1997) suggests that we read the results with caution. He claims that cleanroom's lack of unit testing promotes dangerous malpractice, contradicting 'known testing theory and common sense.'According to Beizer,'you cannot find a bug unless you execute the code that has the bug,' and orthodox cleanroom relies only on statistical testing to verify reliability, shunning unit testing of any kind. Morever, statistical usage testing itself can be misleading, as explained in Sidebar 9.12.
+
+[2]
+[SECTION]: Improving Predictions, Products, Processes, and Resources > 13.3 Improving Processes > SIDEBAR 13.4 COMPARING SEVERAL MAINTENANCE ESTIMATION TECHNIQUES
+[CONTENT]: D e Almeida, Lounis, and Melo (1997) used machine learning algorithms to predict costly, fault-prone software components. Using fault data collected at NASA's Goddard Space Flight Center and product measures extracted from the Ada code, they classified components as being costly or not costly to correct. They found that inductive logic programming models were more accurate than top-down induction trees, top-down induction attribute value rules, and covering algorithms.
+reliable and valid the measurements and models are, know what entities and attributes are being measured, and test the relationships between the maturity scores and the behaviors that 'maturity' is supposed to produce or enhance.
+
+[3]
+[SECTION]: Improving Predictions, Products, Processes, and Resources > 13.3 Improving Processes > Cleanroom
+[CONTENT]: NASA's Software Engineering Laboratory evaluated and improved processes for several decades. Basili and Green (1994) described how the SEL introduced new technology, assessed its effects, and took advantage of those tools and techniques that offered significant improvement. The SEL took into account the risks involved in using a new technology; where appropriate, the technique or tool was applied outside of the normal project environment, where its use would not threaten project goals.
+These offline studies were usually performed as formal, controlled experiments or case studies.The SEL usually began with a small experiment, where the size permitted the variables to be controlled easily.Then, when experimental results looked promising, an industrial-strength case study verified that the small-scale results worked in real-world environments. Once the SEL was satisfied that a new technique would be good for NASA's developers and maintainers, it packaged the lessons learned so that others could understand and use the technology.
+Basili and Green (1994) investigated the key processes involved in cleanroom,to see whether they would be beneficial at NASA.They organized their studies into five parts:
+ - a controlled experiment comparing reading with testing
+ - a controlled experiment comparing cleanroom with cleanroom-plus-testing
+ - a case study examining cleanroom on a three-person development team and a two-person test team
+ - a case study examining cleanroom on a four-person development team and a twoperson test team
+ - a case study examining cleanroom on a fourteen-person development team and a four-person test team
+
+[4]
+[SECTION]: Improving Predictions, Products, Processes, and Resources > 13.4 Improving Resources > SIDEBAR 13.5 VIEWING USERS AS A RESOURCE
+[CONTENT]: I n Chapter 11, we saw how Bell Atlantic built its SaleService Negotiation System (SSNS) to replace three legacy systems. By using on-screen prompts, SSNS guides sales representatives through an order cycle.The application created a more profitable relationship with Bell Atlantic's customers, making Bell Atlantic much more competitive in the marketplace (Field 1997a).
+One of the reasons for SSNS's success was its developers' use of users as a resource. By forming a collaborative relationship between the information systems developers and Bell Atlantic's business managers, the SSNS team worked to define the problem carefully. Users pointed out problems and forced the information systems developers to address key issues. Information systems personnel encouraged users' input and listened carefully to their advice.
+Performance issues were addressed by having the users work side by side with the software engineers.When the system was completed, some of the users were trained to be system advocates who explained the technology and trained others to use it.This mutual trust helped in the technology transfer, and users were eager to master the skills needed to use SSNS.
+Abdel-Hamid (1990) uses systems dynamics models to investigate the effects of schedule compression. He notes that project scheduling is a continuous process; the project manager revises the schedule as more is known about a project. Thus, the final cost and completion time depend on an initial estimate and how realistic it is, and also on how resources are adjusted to address the initial estimate.
+Abdel-Hamid (1990) applied his models to data from NASA Goddard Space Flight Center, looking at the effects of management's policies on project cost and on completion time.For example,Figure 13.11 shows the effect of two different hypothetical policies on the number of person-days to finish the project.The first policy, represented by circles, assumes that management will always adjust the workforce to the level necessary to keep the project on schedule.The second policy, represented by squares, eliminates  the  pressure  of  a  maximum  tolerable  completion  date. That  is, schedule difficulties are addressed by extending the schedule, not by adjusting the workforce level. The trade-off behaviors are significantly different, and Abdel-Hamid's models help managers decide which policies to implement.
+
+
+
+*****************
+
+
+Maintenance research in software engineering addresses a variety of problems focused on improving the effectiveness and ease of maintenance activities. Key areas include predicting likely sources of faults, measuring maintainability based on product information, and developing models to understand the interconnections among products, processes, and resources. These models help estimate the effort needed to maintain systems and determine when to retire or rejuvenate legacy systems. Researchers also work on building and enhancing tools to assist in maintenance processes, such as reengineering tools, change control, configuration management repositories, and project history databases, often based on empirical data. Additionally, research continues into general laws of software maintenance, investigating whether the evolution behavior of software systems is consistent and predictable in practice [3].
+------[1]
+[SECTION]: Maintaining the System > 11.13 Key References
+[CONTENT]: There are few up-to-date textbooks on software maintenance; most information is best sought in journals and conference proceedings. IEEE Software 's  January 1990 issue had maintenance, reverse engineering, and design recovery as its theme; the January 1995 issue focused on legacy systems, and the January 1993 issue has a good article by Wilde, Matthews, and Huitt on the special maintenance problems of object-oriented systems. The  May  1994  issue  of Communications  of  the ACM is  a  special  issue  on reverse engineering. Software Maintenance: Research and Practice is a journal devoted entirely to maintenance issues.
+The IEEE Computer Society Press offers some good tutorials on maintenancerelated topics, including one on software reengineering by Arnold (1993), and another on impact analysis by Arnold and Bohner (1996).
+Samuelson (1990) explores the legal implications of reverse engineering, asking whether such a practice is equivalent to stealing someone's ideas.
+The International Conference on Software Maintenance is held every year, sponsored by the IEEE and ACM. You can order past proceedings from the IEEE Computer Society Press and look at information about the next maintenance conference by viewing the Computer Society Web site.
+
+[2]
+[SECTION]: Evaluating Products, Processes, and Resources > 12.13 Key References
+[CONTENT]: There are also several conferences and organizations related to evaluation. The International  Symposium  on  Software  Metrics, sponsored  by  the  IEEE  Computer Society, addresses  issues  of  measurement  and  empirical  investigation. Information about  the  latest  conference  is  also  on  the  Computer  Society Web  page. The  International  Software  Engineering  Research  Network  publishes  studies  of  replicated investigations, and many of them are available from its Web site. Finally, the journal Empirical Software Engineering publishes not only studies, but also data and guidelines for empirical research.
+
+[3]
+[SECTION]: Maintaining the System > 11.11 What This Chapter Means For Researchers
+[CONTENT]: Maintenance is a ripe area of research. Many of our maintenance activities could be made easier or more effective if we were better at predicting the likely sources of faults. Researchers are looking for better ways to measure maintainability based on product information; they are developing new models to show us the interconnections among products, processes, and resources. Similarly, the models will help us know how much effort is needed to maintain a system and when it is appropriate to retire a legacy system or rejuvenate it.
+Work continues on building tools to assist us in the maintenance process. Reengineering tools, change control and configuration management repositories, and project history databases are likely to become more sophisticated as researchers build prototypes based on empirical data.
+Finally, researchers will continue to look at general laws of software maintenance, as suggested by Lehman (1980).They are eager to learn whether software engineering theory can confirm what empirical observation indicates in practice: namely, that the behavior of software systems evolution is consistent and predictable.
+
+[4]
+[SECTION]: Improving Predictions, Products, Processes, and Resources > 13.12 Key References
+[CONTENT]: ISO  9000  certification  is  required  in  many  countries. Seddon's  book, The  Case Against ISO  9000, plus  other  analyses  of  the  standard, are  available  at  http:// www.systemsthinking.co.uk. By  contrast, Micaela  Martínez-Costa  and  Angel  R.
+Martínez-Lorente (2007) study data from 713 companies, finding that ISO 9000 can have very positive effects for some companies.
+DeMarco and Lister  continue  to  give  updated  seminars  about  the  issues  first raised in their Peopleware book, which they have recently updated and reissued. Information about the seminars and related materials can be found at the Web site of the Atlantic Systems Guild, http://www.systemsguild.com.
+Evaluation and improvement are the subjects for many conferences and symposia. The Empirical Assessment of Software Engineering conference is organized by Keele University and attracts researchers interested in conducting case studies and experiments. More information is available at http://ease.cs.keele.ac.uk. The U.S. Software  Engineering  Institute  and  the  various  local  Software  Process  Improvement Networks organize workshops related to maturity models. The journal Software Process-Improvement and Practice includes many articles about the effects of maturity models. Researchers  continue  to  use  empirical  software  engineering  techniques  to assess  the  effects  of  various  maturity  models, as  well  as  the  problems  of  interrater agreement and validity of the measurement instruments.
+
+[5]
+[SECTION]: About the Authors
+[CONTENT]: Shari  Lawrence  Pfleeger (Ph.D., Information Technology  and  Engineering, George Mason University; M.S., Planning, Pennsylvania State University; M.A., Mathematics, Pennsylvania State University; B.A., Mathematics, Harpur College) is a senior information scientist at the RAND Corporation. Her current research focuses on policy and decision-making issues that help organizations and government agencies understand whether and how information technology supports their missions and goals. Her work at RAND has involved assisting clients in creating software measurement programs, supporting government agencies in defining information assurance policies, and supporting decisions about cyber security and homeland security.
+Prior to joining RAND, she was the president of Systems/Software, Inc., a consultancy specializing in software engineering and technology. She has been a visiting professor  at  City  University  (London)  and  the  University  of  Maryland  and  was  the founder and director of Howard University's Center for Research in Evaluating Software Technology.The author of many textbooks on software engineering and computer security, Pfleeger is well known for her work in empirical studies of software engineering and for her multidisciplinary approach to solving information technology problems. She  has  been  associate  editor-in-chief  of IEEE Software , associate  editor  of IEEE Transactions on Software Engineering , associate editor of IEEE Security and Privacy , and a member of the IEEE Computer Society Technical Council on Software Engineering. A frequent speaker at conferences and workshops, Pfleeger has been named repeatedly by the Journal of Systems and Software as one of the world's top software engineering researchers.
+
+
+
+*****************
+
+
