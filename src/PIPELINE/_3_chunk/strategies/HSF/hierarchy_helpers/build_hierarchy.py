@@ -37,7 +37,7 @@ def generate_smart_toc(doc):
                     if size > 14 and len(text) < 100:
                         toc.append([1, text, i+1])
     
-    return toc if toc else generate_fake_toc(doc)
+    return toc if toc else generate_smart_toc(doc)
     
 def dfs (toc):
     if not toc:
