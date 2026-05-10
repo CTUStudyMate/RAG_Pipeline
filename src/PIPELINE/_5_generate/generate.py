@@ -10,6 +10,7 @@ from src.used_models.llm.LLM_Factory import get_llm
 def build_context(docs):
     context_parts = []
     images = []
+    image_refs = []
     for i, doc in enumerate(docs, start=1):
         content = doc.get("text", "")
         metadata = doc.get("metadata", {})
@@ -21,8 +22,13 @@ def build_context(docs):
         )
 
         if "image" in metadata and metadata["image"]:
-            for img in metadata["image"]:
-                images.append(img)
+            for j, img in enumerate(metadata["image"]):
+                img_id = f"img_{i}_{j}"
+                images.append({
+                    "id": img_id,
+                    "data": img
+                })
+                image_refs.append(f"[{i}] -> {img_id}")
 
     context_text = "\n".join(context_parts)
     return context_text, images
@@ -62,23 +68,90 @@ def build_context(docs):
 #             }}
 # """
 
+# system_prompt = f"""
+# You are a helpful assistant that answers user questions using the provided context documents.
+
+# Instructions:
+# - DATA FIDELITY: Your answer must be strictly faithful to the provided context documents.
+# - Use ONLY information explicitly stated in the source text.
+# - Do NOT use external knowledge, assumptions, implications, or hallucinated facts.
+# - If the context does not contain enough information to answer the question, return an empty array.
+# - Be concise and precise.
+
+# Output format:
+# Return a JSON array.
+
+# Each item in the array must represent EXACTLY ONE atomic factual claim. When all items are concatenated in order, they should form a coherent answer.
+
+# Format:
+# [
+#     {{
+#         "segment": "one atomic factual claim",
+#         "citations": [
+#             "exact verbatim supporting text from the context"
+#         ]
+#     }}
+# ]
+
+# Citation rules:
+# - Every citation must be copied EXACTLY from the context documents.
+# - Citations must directly support the segment semantically, not just be topically related.
+# - Do NOT provide unrelated or weakly related citations.
+# - Do NOT combine multiple independent claims into one segment.
+# - A segment may contain multiple citations if needed.
+# - Do NOT include any claim unless you can provide supporting citations.
+# - Keep the wording of the segment close to the cited evidence.
+# """
+
 system_prompt = f"""
 You are a helpful assistant that answers user questions using the provided context documents.
 
 Instructions:
-- DATA FIDELITY: Your answer must be strictly faithful to the provided context documents. Use ONLY information explicitly stated in the source text.
-- Do NOT use any external knowledge or assumptions. Do NOT hallucinate.
-- If the context does not contain enough information to answer the question, clearly say you don't have enough information to answer the question.
-- Be concise but clear.
+- DATA FIDELITY: Your answer must be strictly faithful to the provided context documents, which are the text stated in the <CONTEXT DOCUMENTS></CONTEXT DOCUMENTS> tag and the attached images or files if exist.
+- Do NOT use external knowledge, assumptions, implications, or hallucinated facts.
+- If the context does not contain enough information to answer the question, return an empty array.
+- Be concise and precise.
 
-Citation rules:
-- INLINE CITATIONS REQUIRED: Place citation markers IMMEDIATELY after the specific fact, entity, or claim they support. Do NOT wait until the end of the paragraph to cite.
-- GRANULARITY: If a single sentence contains multiple distinct claims from different sources, you MUST insert citations mid-sentence directly after each claim (e.g., "Software engineering focuses on practical solutions [1], whereas computer science investigates theoretical algorithms [2].").
-- STRICT PLACEMENT: Never group all citations at the end of a paragraph. A paragraph without internal/inline citations is considered a failure.
-- Format the citation as [1], [2], etc. Place the citation just before commas or periods.
-- Only cite when a fact is presented; do not cite common knowledge or transitional phrases.
+Output format:
+Return a JSON array. Each item represents one segment of the final answer.
+
+Each segment has three fields:
+- "role": how this segment should be rendered when concatenated. Must be one of:
+    - "sentence"      → append directly after previous segment (separated by a space)
+    - "paragraph"     → start a new paragraph (insert blank line before this segment)
+    - "bullet"        → render as a bullet point (prefix with "- ")
+    - "bullet_intro"  → the sentence that introduces a bullet list (followed by ":")
+- "segment": the text content of this segment (one factual claim)
+- "citations": list of verbatim supporting strings from the <CONTEXT DOCUMENTS></CONTEXT DOCUMENTS> tag. If the answer is derived from an image, you MUST return its image_id in citations.
+
+Format:
+[
+    {{
+        "role": "sentence" | "paragraph" | "bullet" | "bullet_intro",
+        "segment": "one factual claim",
+        "citations": [
+            {{ 
+                "type": "source_text",
+                "content":"exact verbatim supporting text from the context" 
+            }},
+            {{ 
+                "type": "img",
+                "img_id": id of the image
+            }}
+            
+        ]
+    }}
+]
+
+CITATION RULES:
+- Every citation must be a VERBATIM substring of the provided context documents provided (the text inside <CONTEXT DOCUMENTS></CONTEXT DOCUMENTS> or the attached images).
+  Before including a citation, verify that you can locate it word-for-word in the
+  provided context. If you cannot find the exact text, do NOT include it.
+- Citations must NOT be paraphrased, modified, truncated, or shortened (e.g., using "...")
+- Each citation must be a complete sentence or phrase from the original text.
+- If a segment cannot be supported by a verifiable verbatim citation, omit the segment
+  entirely rather than fabricating a citation.
 """
-
 
 # def build_prompt(query, context):
 #     return f"""
@@ -96,8 +169,9 @@ Citation rules:
 
 def build_prompt(query, context):
     return f"""
-        ### CONTEXT DOCUMENTS ###
+        <CONTEXT DOCUMENTS>
         {context}
+        </CONTEXT DOCUMENTS>
 
         ### USER QUESTION ###
         {query}
