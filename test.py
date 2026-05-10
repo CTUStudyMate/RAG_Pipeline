@@ -14,6 +14,10 @@ for question in questions:
     q = question["question"]
     docs = multi_stages_retrieve(q)
     answer, context = generate_answer(q, docs)
+    log_to_file("<QUESTION>")
+    log_to_file(q)
+    log_to_file("<ANSWER>")
     log_to_file(answer)
-    log_to_file(f"------{context}")
-    log_to_file("\n\n*****************\n\n")
+    log_to_file("<CONTEXTS>")
+    log_to_file(f"{context}")
+    log_to_file("\n*****************\n\n")

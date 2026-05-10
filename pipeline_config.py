@@ -122,4 +122,4 @@ FINAL_CHUNKS_NUM=7
 
 MAX_IMAGES_PER_LLMCALL=3
 
-LOG_FILE="./mylog2.txt"
+LOG_FILE="./mylog6.txt"
