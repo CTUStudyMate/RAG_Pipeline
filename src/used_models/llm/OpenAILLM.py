@@ -9,16 +9,30 @@ class OpenAIWrapper(BaseLLM):
         self.client = OpenAI()
         self.model = model
 
-    def generate(self, system_prompt, prompt, images=None):
-        content = [{"type": "input_text", "text": prompt}]
+    # def generate(self, system_prompt, prompt, images=None):
+    #     content = [{"type": "input_text", "text": prompt}]
 
-        if images:
-            for img in images:
-                content.append({
-                    "type": "input_image",
-                    "image_url": img
-                })
+    #     if images:
+    #         for img in images:
+    #             content.append({
+    #                 "type": "input_image",
+    #                 "image_url": img["data"]
+    #             })
 
+    #     response = self.client.responses.create(
+    #         model=self.model,
+    #         input=[
+    #             {"role": "system", "content":system_prompt},
+    #             {"role": "user",
+    #             "content":content}
+    #         ],
+    #         temperature=0,
+    #         top_p=1
+    #     )
+
+    #     return response.output_text
+    
+    def generate(self, system_prompt, content):
         response = self.client.responses.create(
             model=self.model,
             input=[
@@ -26,6 +40,8 @@ class OpenAIWrapper(BaseLLM):
                 {"role": "user",
                 "content":content}
             ],
+            temperature=0,
+            top_p=1
         )
 
         return response.output_text
