@@ -10,7 +10,7 @@ BGE_EMBEDDING_MODEL="bge-m3:latest"
 EMBEDDING_PROVIDER="openai"
 OPENAI_EMBEDDING_MODEL="text-embedding-3-small"
 
-# LLM_PROVIDER="ollama"
+# LLM_PROVIDER="ollama"t
 # LLM_MODEL="qwen3.5:cloud"
 LLM_PROVIDER="openai"
 LLM_MODEL="gpt-4.1-mini"
@@ -122,4 +122,4 @@ FINAL_CHUNKS_NUM=7
 
 MAX_IMAGES_PER_LLMCALL=3
 
-LOG_FILE="./mylog6.txt"
+LOG_FILE="./mylog8_hsf_normal_firstcite.txt"
