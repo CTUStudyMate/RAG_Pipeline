@@ -1,10 +1,11 @@
-from pipeline_config import OPENAI_EMBEDDING_MODEL
+from pipeline_config import settings
 from openai import OpenAI
 from used_models.embeddings.base_embedding import BaseEmbedding
 import os
 from dotenv import load_dotenv
 load_dotenv() 
 
+OPENAI_EMBEDDING_MODEL = settings.config["openai_embedding_model"]
 class OpenAIEmbedding(BaseEmbedding):
     def __init__(self, model=OPENAI_EMBEDDING_MODEL):
         self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))

@@ -1,12 +1,14 @@
 # import tiktoken
 # encoding = tiktoken.encoding_for_model("gpt-4o-mini")
 import re
-from pipeline_config import CHUNK_MAX_TOKEN, CHUNK_MIN_TOKEN, OVERLAP_TOKENS
+from pipeline_config import settings
+
+CHUNK_MAX_TOKEN = settings.config["chunk_max_token"]
+CHUNK_MIN_TOKEN = settings.config["chunk_min_token"]
+OVERLAP_TOKENS = settings.config["overlap_tokens"]
 
 def mannual_token_count(text):
     return max(1, int(len(text) / 3.56))
-
-
 
 def split_sentences(text):
     return re.split(r'(?<=[.!?])\s+', text)

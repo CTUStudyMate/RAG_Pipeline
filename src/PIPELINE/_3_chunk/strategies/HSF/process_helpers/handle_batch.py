@@ -1,24 +1,20 @@
-import copy
-import base64
-import json
 import pandas as pd
 import hashlib
-from collections import deque
-import tiktoken
+import json
 
 from PIPELINE._3_chunk.common_utils import mannual_token_count
-from PIPELINE._3_chunk.strategies.HSF.atomic_db_helpers.db_helpers import insert_atomic_batch, insert_atomic_into_db
-from common_utils import filename_handle
+from PIPELINE._3_chunk.strategies.HSF.atomic_db_helpers.db_helpers import insert_atomic_batch
 import re
-import math
 
-import pipeline_config as conf
+from pipeline_config import settings
 
 from src.PIPELINE._3_chunk.strategies.HSF.process_helpers.extract import extract_id_unit
 from src.PIPELINE._3_chunk.strategies.HSF.process_helpers.normalize import is_heading_match, is_title_match, normalize_docname
 
 # encoding = tiktoken.encoding_for_model("gpt-4o-mini")
-
+WRITE_FILE_AFTER_MAX_STREAM_ELEMENTS = settings.config["write_file_after_max_stream_elements"]
+WRITE_FILE_AFTER_N_STREAM_ELEMENTS = settings.config["write_file_after_n_stream_elements"]
+STREAM_ELEMENTS_FILEPATH = settings.config["stream_elements_filepath"]
 def clean_text(s):
     if not s:
         return ""
@@ -610,18 +606,11 @@ def handle_batch_result(flat_list, my_built_dfs, batch_result, stream_elements, 
                         
                         current_level = int(node["level"])
                         if current_level > current_open_level:
-                            # current_level_path.append(1)
-                            # current_level_path_description.append(node["title"])
                             current_level_path_description.append(extracted_text)
                         elif current_level == current_open_level:
-                            # current_level_path[-1] += 1
-                            # current_level_path_description[-1] = node["title"]
                             current_level_path_description[-1] = extracted_text
                         else:
-                            # current_level_path = current_level_path[:current_level+1]
-                            # current_level_path[-1] += 1
                             current_level_path_description = current_level_path_description[:current_level]
-                            # current_level_path_description[-1] = node["title"]
                             current_level_path_description[-1] = extracted_text
 
                         current_open_level = current_level
@@ -629,7 +618,6 @@ def handle_batch_result(flat_list, my_built_dfs, batch_result, stream_elements, 
                         parts = [p for p in parts if p]
 
                         description_str = " > ".join(parts)
-                        # description_str = " > ".join(current_level_path_description).strip()
                         
                         if "gold_unit" not in node:
                             node["gold_unit"] = []
@@ -766,8 +754,8 @@ def handle_batch_result(flat_list, my_built_dfs, batch_result, stream_elements, 
             current_atomic_order +=1
             
     
-        BATCH_SIZE = conf.WRITE_FILE_AFTER_MAX_STREAM_ELEMENTS
-        if len(stream_elements) > conf.WRITE_FILE_AFTER_N_STREAM_ELEMENTS:
+        BATCH_SIZE = WRITE_FILE_AFTER_MAX_STREAM_ELEMENTS
+        if len(stream_elements) > WRITE_FILE_AFTER_N_STREAM_ELEMENTS:
             # số element lớn hơn là điều kiện đầu tiên
             # điều kiện tiếp theo là batch này không có text đang dang dở
             # ok hết thì insert nguyên batch
@@ -780,7 +768,7 @@ def handle_batch_result(flat_list, my_built_dfs, batch_result, stream_elements, 
                 insert_atomic_batch(batch, doc_db_cursor)    
 
                 #======= TEST STREAM ELEMENT =========
-                # target_file = conf.STREAM_ELEMENTS_FILEPATH
+                # target_file = STREAM_ELEMENTS_FILEPATH
                 # with open(target_file, "a", encoding="utf-8") as f:
                 #     json.dump(element, f, default=str, ensure_ascii=False, indent=4)
                 #     f.write("\n")

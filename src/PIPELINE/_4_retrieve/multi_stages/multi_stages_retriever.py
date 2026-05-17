@@ -3,7 +3,6 @@ from PIPELINE._4_retrieve.multi_stages.hybrid_retriever import hybrid_retrieve
 from PIPELINE._4_retrieve.utils.common_helpers import print_retrieved_docs
 from PIPELINE._4_retrieve.utils.get_final_chunk import greedy_add_chunks
 from common_utils.debug import log_to_file
-from pipeline_config import FINAL_CHUNKS_NUM
 
 
 reranker = CrossEncoderService()

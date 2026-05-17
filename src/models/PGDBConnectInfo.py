@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from typing import Optional
 
 @dataclass
 class PGDBConnectInfo:
@@ -8,3 +9,4 @@ class PGDBConnectInfo:
     user: str
     password: str
     table_name: str
+    img_table: Optional[str] = None

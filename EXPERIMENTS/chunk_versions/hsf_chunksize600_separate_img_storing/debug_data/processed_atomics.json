@@ -1,0 +1,1164 @@
+{
+    "id": "se_theory_practice__p.398619193a124a0080c6894a8132c196.100",
+    "type": "text",
+    "content": "Many thanks to the publishers of several of the figures and examples for granting permission  to  reproduce  them  here. The  material  from Complete  Systems Analysis (Robertson and Robertson 1994) and Mastering the Requirements Process (Robertson and Robertson 1999) is drawn from and used with permission from Dorset House Publishing, at www.dorsethouse.com; all rights reserved.The article in Exercise 1.1 is reproduced from the Washington Post with permission from the Associated Press. Figures 2.15 and 2.16 are reproduced from Barghouti et al. (1995) by permission of John Wiley and Sons Limited. Figures 12.14 and 12.15 are reproduced from Rout (1995) by permission of John Wiley and Sons Limited.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 100,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 198
+}
+{
+    "id": "se_theory_practice__p.0def09517288ca1ddd65500f045388f1.201",
+    "type": "text",
+    "content": "We measure the quality [of our software] by the obvious metrics: up versus down time, maintenance costs, costs connected with modifications, and the like. In other words, we manage development based on operational performance within cost parameters. HOW the vendor provides cost-effective performance is less of a concern than the results of the effort. . . . The issue of business versus technical value is near and dear to our heart . . . and one [on] which we focus a great deal of attention. I guess I am surprised to learn that companies would contract with companies for their technical value, at the relative expense of business value. If anything, we err on the other side! If there is not clear (expected) business  value  (expressed  quantitatively: number  of  claims  processed, etc.)  then  we  can't launch a systems project. We take very seriously the 'purposeful' requirement phase of the project, when we ask:'why do we want this system?' and 'why do we care?'",
+    "metadata": {
+        "description": "",
+        "atomic_order": 201,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 274
+}
+{
+    "id": "se_theory_practice__heading.cb2efef694069b7ccbe6a10be7861cae",
+    "type": "section_header",
+    "content": "1.7 Members Of The Development Team",
+    "metadata": {
+        "description": "Why Software Engineering? > 1.7 Members Of The Development Team",
+        "level": 2,
+        "atomic_order": 302,
+        "heading": "main"
+    },
+    "token_count": 9
+}
+{
+    "id": "se_theory_practice__heading.959be63d87c711ce6f50c7e2a0d84077",
+    "type": "section_header",
+    "content": "1.10 Real-Time Example",
+    "metadata": {
+        "description": "Why Software Engineering? > 1.10 Real-Time Example",
+        "level": 2,
+        "atomic_order": 403,
+        "heading": "main"
+    },
+    "token_count": 6
+}
+{
+    "id": "se_theory_practice__list_item.504",
+    "type": "list_item",
+    "content": " - writing the programs (program implementation)",
+    "metadata": {
+        "description": "",
+        "atomic_order": 504,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 13
+}
+{
+    "id": "se_theory_practice__list_item.605",
+    "type": "list_item",
+    "content": " - Writing tests first: To ensure that the customer's needs are the driving force behind development, test cases are written first, as a way of forcing customers to specify requirements that can be tested and verified once the software is built.Two kinds of tests are used in XP: functional tests that are specified by the customer and executed by both developers and users, and unit tests that are written and run by developers. In XP , functional tests are automated and, ideally, run daily.The functional tests are considered to be part of the system specification. Unit tests are written both before and after coding, to verify that each modular portion of the implementation works as designed.Both functional and unit testing are described in more detail in Chapter 8.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 605,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 217
+}
+{
+    "id": "se_theory_practice__heading.8c9ae4077fdba4ad8ba0d61b1d3aef2c",
+    "type": "section_header",
+    "content": "2.7 What This Chapter Means For You",
+    "metadata": {
+        "description": "Modeling the Process and Life Cycle > 2.7 What This Chapter Means For You",
+        "level": 2,
+        "atomic_order": 706,
+        "heading": "main"
+    },
+    "token_count": 9
+}
+{
+    "id": "se_theory_practice__p.6aaf1071221576ed5843b8dce3d9a294.807",
+    "type": "text",
+    "content": "By examining the project carefully in this way, we can separate development into a succession of phases. Each phase is composed of steps, and each step can be subdivided further if necessary, as shown in Figure 3.1.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 807,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 60
+}
+{
+    "id": "se_theory_practice__p.8defc1c42c8d7cd2299e9ee3f1b87a33.909",
+    "type": "text",
+    "content": "Control is an issue in managing the project, too. Some people are good at directing the work of others. This aspect of personnel interaction is also related to the comfort people feel with the jobs they have.Those who feel uncomfortable with the idea of pushing their colleagues to stay on schedule, to document their code, or to meet with the customer are not good candidates for development jobs involving the management of other workers.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 909,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 123
+}
+{
+    "id": "se_theory_practice__p.9301d22992316933c7f0970f2ef71f18.1010",
+    "type": "text",
+    "content": "Boehm (1981) developed the original COCOMO model in the 1970s, using an extensive database of information from projects at TRW, an American company that built software for many different clients. Considering software development from both an engineering and an economics viewpoint, Boehm used size as the primary determinant of cost and then adjusted the initial estimate using over a dozen cost drivers, including attributes of the staff, the project, the product, and the development environment. In the  1990s, Boehm updated the original COCOMO model, creating COCOMO II to reflect the ways in which software development had matured.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 1010,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 178
+}
+{
+    "id": "se_theory_practice__list_item.1111",
+    "type": "list_item",
+    "content": " - configuration management plan",
+    "metadata": {
+        "description": "",
+        "atomic_order": 1111,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 8
+}
+{
+    "id": "se_theory_practice__p.baa12168c8f39f74bd9439a694e57210.1213",
+    "type": "text",
+    "content": "Once the risks were identified, the analysis phase might have included simulations, which probably would have highlighted the problem that eventually caused the rocket's destruction. And prioritization would have identified the risk exposure if the SRI did not work as planned; the high exposure might have prompted the project team to examine the SRI and its workings more carefully before implementation.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 1213,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 114
+}
+{
+    "id": "se_theory_practice__heading.92e14bdea1fe019075e1c0244812b117",
+    "type": "section_header",
+    "content": "4.3 Types Of Requirements",
+    "metadata": {
+        "description": "Capturing the Requirements > 4.3 Types Of Requirements",
+        "level": 2,
+        "atomic_order": 1322,
+        "heading": "main"
+    },
+    "token_count": 7
+}
+{
+    "id": "se_theory_practice__p.6b7c6575c0f2e68bee381d20d2b42152.1428",
+    "type": "text",
+    "content": "You  may  have  encountered  state  machines  in  some  of  your  other  computing courses. In  theory-of-computing courses, finite-state machines are used as automata that recognize strings in regular languages. In some sense, state-machine specifications serve a similar purpose; they specify the sequences of input and output events that the proposed system is expected to realize.Thus, we view a state-machine specification as a compact representation of a set of desired, externally observable, event traces, just as a finite-state automaton is a compact representation of the set of strings that the automaton recognizes.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 1428,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 176
+}
+{
+    "id": "se_theory_practice__p.b136b221432389ac896de1bf31fce1fd.1532",
+    "type": "text",
+    "content": "J ackson's advice (Jackson 1995) to ground the requirements in the real world goes beyond the message about expressing the requirements and the specification in terms of the proposed system's environment. Jackson argues that any model of the requirements will include primitive terms that have no formal meaning (e.g., Patron , Publication , and Article in our library example), and that the only way to establish the meaning of a primitive term is to relate it to some phenomenon in the real world. He calls these descriptions designations , and he distinguishes designations from definitions and assertions . Definitions are formal meanings of terms based on the meanings of other terms used in the model (e.g., the definition of a book out on loan ), whereas assertions describe constraints on terms (e.g., patrons can borrow only those items not currently out on loan). If a model is to have any meaning with respect to real-world behavior, its primitive terms must be clearly and precisely tied to the real world, and its designations 'must be maintained as an essential part of the requirements documentation' (Zave and Jackson 1997).",
+    "metadata": {
+        "description": "",
+        "atomic_order": 1532,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 320
+}
+{
+    "id": "se_theory_practice__p.f59f80eec3cfab14456c570f4f76bed7.1642",
+    "type": "text",
+    "content": "To facilitate this correspondence, we establish a numbering scheme or data file for convenient tracking of requirements from one document to another. Often, the process management team sets up or extends this numbering scheme to tie requirements to other components and artifacts of the system. Numbering the requirements allows us to cross-reference them with the data dictionary and other supporting documents. If any changes are made to the requirements during the remaining phases of development, the changes can be tracked from the requirements document through the design process and all the way to the test procedures. Ideally, then, it should be possible to trace any feature or function of the system to its causal requirement, and vice versa.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 1642,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 211
+}
+{
+    "id": "se_theory_practice__fig.1743",
+    "type": "picture",
+    "content": "data:image/png;base64,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",
+    "metadata": {
+        "description": "",
+        "atomic_order": 1743,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 300
+}
+{
+    "id": "se_theory_practice__list_item.1844",
+    "type": "list_item",
+    "content": " - (a) The client daemon must be invisible to the user",
+    "metadata": {
+        "description": "",
+        "atomic_order": 1844,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 15
+}
+{
+    "id": "se_theory_practice__p.f5781f6065f1399b20b3a840ab8dea5d.1945",
+    "type": "text",
+    "content": "In Chapter 4, we described many techniques for modeling requirements. However, software  architecture  modeling  is  not  so  mature. Of  the  many  ways  to  model architectures, your choice depends partly on the model's goal and partly on personal preference. Each has pros and cons, and there is no universal technique that works best in every situation. Some developers use the Unified Modeling Language (UML) class diagrams to depict an architecture, emphasizing subsystems rather than classes. More typically, software  architectures  are  modeled  using  simple  box-and-arrow  diagrams, perhaps accompanied by a legend that explains the meaning of different types of boxes and arrows. We use this approach in our examples. As you build and evaluate real systems, you may use another modeling technique. But the principles expressed in boxes and arrows can easily be translated to other models.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 1945,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 253
+}
+{
+    "id": "se_theory_practice__p.6d61b1bb81fb49b888fd40ac5070f9e0.2046",
+    "type": "text",
+    "content": "In Chapter 4, we saw that software requirements are about more than the proposed system's functionality. Other attributes, such as performance, reliability, and usability, are carefully specified, reflecting the characteristics that users want to see in the products  we  build. As  we  design  our  system, we  want  to  select  architectural  styles  that promote  the  required  quality  attributes. However, architectural  style  offers  only  a coarse-grained solution with generally beneficial properties; there is no assurance that a specific quality attribute is optimized. To assure the support of particular attributes, we use tactics (Bass, Clements, and Kazman 2003): more fine-grained design decisions that can improve how well our design achieves specific quality goals.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 2046,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 220
+}
+{
+    "id": "se_theory_practice__list_item.2147",
+    "type": "list_item",
+    "content": " - software supplier.Thus, for each system that we build, we must evaluate the tradeoff between early delivery and easier maintenance.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 2147,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 37
+}
+{
+    "id": "se_theory_practice__p.a226cd7df5d66dc490ba29e73424b05e.2248",
+    "type": "text",
+    "content": "Trade-off analysis gives us a means for evaluating design alternatives, but it focuses only on the technical merits of designs, in terms of how well the designs achieve desired quality attributes.At least as important are the business merits of a design:Will the benefits of a system based on a particular design outweigh the costs of its implementation? If there are competing designs, which one will give us the highest return on investment?",
+    "metadata": {
+        "description": "",
+        "atomic_order": 2248,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 124
+}
+{
+    "id": "se_theory_practice__list_item.2349",
+    "type": "list_item",
+    "content": " - Models and analysis results: Models and analyses (e.g., performance analysis) of an individual product's architecture are likely to build on analyses of the productline  architecture. So  it  is  important  to  get  the  product-line  architecture  right, because it affects the performance of so many associated products.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 2349,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 91
+}
+{
+    "id": "se_theory_practice__89341dd8d4f7593863483878c69c2de2",
+    "type": "picture",
+    "content": "designingthemodules",
+    "metadata": {
+        "description": "Designing the Modules",
+        "level": 1,
+        "atomic_order": 2458,
+        "heading": "main",
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 5
+}
+{
+    "id": "se_theory_practice__p.1e9b23ac20283039f6ad92c0899463fd.2560",
+    "type": "text",
+    "content": "The best uses graph has a tree structure or is a forest of tree structures. In such a structure, every subtree is a subset of our system, so we can incrementally develop our system one software unit at a time. Each completed unit is a correct implementation of part of our system. Each increment is easier to test and correct because faults are more likely to be found in the new code, not in the called units that have already been tested and deemed correct. In addition, we always have a working version of a system subset to demonstrate to our customer. Moreover, morale among developers is high, because they  frequently  make  visible  progress  on  the  system  (Brooks  1995). Contrast  these advantages of incremental development to its alternative, in which nothing works until everything works.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 2560,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 225
+}
+{
+    "id": "se_theory_practice__p.185b91ca791d79b5c2e2114f516ab4eb.2661",
+    "type": "text",
+    "content": "The UML can be used to visualize, specify, or document a software design. It is especially useful for describing different design alternatives, and eventually for documenting design artifacts. UML diagrams include the dynamic view of the system, the static view, restrictions, and formalization.The dynamic view is depicted with use cases, lists  of  activities, interaction  diagrams  showing  sequences  and  communication, and state machines to illustrate states and their changes. The static view is depicted with class  diagrams, showing  relationships  (association, generalization, dependency, and realization) and extensibility (constraints, tagged values, and stereotypes). In addition, the  static  view  shows  packages  and  deployment. Restrictions  and  formalization  are expressed with the Object Constraint Language (OCL).",
+    "metadata": {
+        "description": "",
+        "atomic_order": 2661,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 235
+}
+{
+    "id": "se_theory_practice__p.5f74211abbb8f342fa97b416f9bb72d7.2762",
+    "type": "text",
+    "content": "UML package diagrams allow us to view the system as a small collection of packages, each of which can be expanded to a larger set of classes. The package diagrams show the dependencies among classes that belong to different packages. We say that two items are dependent if changes to the definition of one may cause changes to the other. For example, two classes may be dependent if one class sends a message to the other, one class has data needed by another class, or one class uses another as a parameter in performing an operation. In particular, two packages are dependent if there is a dependency between a class in each of the packages.As with any good design, we want to minimize unnecessary coupling; thus, we want to keep dependencies to a minimum.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 2762,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 212
+}
+{
+    "id": "se_theory_practice__list_item.2863",
+    "type": "list_item",
+    "content": " - identifying the humans who will interact with the system",
+    "metadata": {
+        "description": "",
+        "atomic_order": 2863,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 16
+}
+{
+    "id": "se_theory_practice__p.f120cb9682ab343f4f6728b6ea8a8469.2964",
+    "type": "text",
+    "content": "We saw in Chapter 5 how to structure the architecture of the Piccadilly system as a client-server system. But that design considered only the initial decomposition of the system into its major components. Now we need more detail about the individual components, so that programmers can implement the elements of the architecture as code. For example, the design needs more information about how to handle situations in which programs are on at similar but not identical times. For instance, a Piccadilly program that is televised from 9 PM to 10:30 PM may overlap with programs that air from 8 PM to 10 PM and from 10 PM to 11 PM. We must also decide how to handle faults; in this case, the Opposition schedule may contain an invalid date, such as February 31, or an invalid time, such as 2900 hours. Our lowest level of detail should include module interface specifications, so that programmers can be assigned to code and test individual modules. Nevertheless, this example shows that we must consider and combine a variety of complementary design techniques to formulate a solution that meets all of the customer's needs.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 2964,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 315
+}
+{
+    "id": "se_theory_practice__p.7581f1dcc36a2499275e89221eaa6bb1.3065",
+    "type": "text",
+    "content": "Of course, it is not always possible or practical to have exactly a top-down flow. For example, reaching the end of a loop may disrupt the flow. However, it is helpful whenever possible to have the required action follow soon after the decision that generates it.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 3065,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 73
+}
+{
+    "id": "se_theory_practice__list_item.3166",
+    "type": "list_item",
+    "content": " - why the component exists",
+    "metadata": {
+        "description": "",
+        "atomic_order": 3166,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 7
+}
+{
+    "id": "se_theory_practice__list_item.3267",
+    "type": "list_item",
+    "content": " - We need more information on the attributes of good programmers. Productivity can vary by a factor of 10, and quality is also highly variable. Understanding more about which characteristics lead to good code developed quickly will help us train developers to be more effective and efficient.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 3267,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 82
+}
+{
+    "id": "se_theory_practice__p.3538f9a070fa5493474ce8c7fa0a14aa.3368",
+    "type": "text",
+    "content": "However,developing a system for customers is different. Customers are not interested in knowing that the system works properly under certain conditions. Rather, they are interested in being sure that the system works properly under all conditions. So our goal as a developer should be to eliminate as many faults as possible, no matter where in the system they occur and no matter who created them. Hurt feelings and bruised egos have no place in the development process as faults are discovered. Hence, many software engineers adopt an attitude known as egoless programming , where programs are viewed as components of a larger system, not as the property of those who wrote them. When a fault is discovered or a failure occurs, the egoless development team is concerned with correcting the fault, not with placing blame on a particular developer.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 3368,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 238
+}
+{
+    "id": "se_theory_practice__list_item.3469",
+    "type": "list_item",
+    "content": " - Every possible input belongs to one of the classes. That is, the classes cover the entire set of input data.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 3469,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 31
+}
+{
+    "id": "se_theory_practice__p.9bd0efd7708a9a89df2bc64a97671681.3573",
+    "type": "text",
+    "content": "Smith and Robson (1992) suggest that your testing should address many different levels: functions, classes, clusters (interacting groups of collaborating objects), and the system as a whole.The traditional testing approaches apply well to functions, but many approaches do not take into account the object states needed to test classes.At a minimum, you should develop tests that track an object's state and changes to that state. During your testing, beware of concurrency and synchronization problems, and make sure that corresponding events are complete and consistent.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 3573,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 160
+}
+{
+    "id": "se_theory_practice__unknown_type.3675",
+    "type": "code",
+    "content": "",
+    "metadata": {
+        "description": "",
+        "atomic_order": 3675,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 1
+}
+{
+    "id": "se_theory_practice__list_item.3776",
+    "type": "list_item",
+    "content": " - Routing international calls",
+    "metadata": {
+        "description": "",
+        "atomic_order": 3776,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 8
+}
+{
+    "id": "se_theory_practice__p.1529d40234af4c7c2546c0bc6e7c2af0.3879",
+    "type": "text",
+    "content": "Testing would be easier if we could automatically generate test cases from the requirements. Work has been done at IBM (Elmendorf 1973, 1974) to convert the natural language of requirements definitions to a formal specification that can be used to enumerate test cases for functional testing. The test cases that result are not redundant; that is, one test case does not test functions that have already been tested by another case. In addition, the process finds incomplete and ambiguous aspects of requirements, if any exist.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 3879,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 148
+}
+{
+    "id": "se_theory_practice__p.00628f3fa5993c209799dee67dbcb4a4.3981",
+    "type": "text",
+    "content": "M ellor (1992) explains why hardware failures are inherently different from software failures. Complex hardware fails when a component breaks and no longer functions as specified. For example, a logic gate can be stuck on 1 or 0, or a resistor short-circuits. The cause is physical (e.g., corrosion or oxidation), and the fault occurs at a particular point in time.To fix the problem, a part is either repaired or replaced, and the system can be restored to its previous state.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 3981,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 133
+}
+{
+    "id": "se_theory_practice__p.ce11fc7008135755a12b0923ac316c20.4082",
+    "type": "text",
+    "content": "The  test  plan  describes  an  overall  breakdown  of  testing  into  individual  tests  that address specific items. For example, if the system being tested has its processing distributed over several computers, the function and performance tests can be further divided into tests for each subsystem.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 4082,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 84
+}
+{
+    "id": "se_theory_practice__list_item.4183",
+    "type": "list_item",
+    "content": " - Severity: refers to severity of resulting or potential failure",
+    "metadata": {
+        "description": "",
+        "atomic_order": 4183,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 18
+}
+{
+    "id": "se_theory_practice__p.12e5f801a250c3c94968ae7e120b66aa.4289",
+    "type": "text",
+    "content": "Beizer describes the results of 24 empirical studies that have evaluated cleanroom, including Basili and Green's (1994), pointing out that they have several fatal flaws.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 4289,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 47
+}
+{
+    "id": "se_theory_practice__p.2b338ea3e8955b4dbfc5c33e9faf6e66.4390",
+    "type": "text",
+    "content": "_______________________________________________________________________________________",
+    "metadata": {
+        "description": "",
+        "atomic_order": 4390,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 24
+}
+{
+    "id": "se_theory_practice__list_item.4491",
+    "type": "list_item",
+    "content": " - creating S-PLUS functions",
+    "metadata": {
+        "description": "",
+        "atomic_order": 4491,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 7
+}
+{
+    "id": "se_theory_practice__p.7bc978cbc968d79c1a77bed64790de6b.4592",
+    "type": "text",
+    "content": "an  automated  system  be  unaware  of  the  underlying  computer  system?  Is  this  lack  of awareness a sign of good system design? Give examples to support your answer.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 4592,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 48
+}
+{
+    "id": "se_theory_practice__list_item.4693",
+    "type": "list_item",
+    "content": " - restructuring design and code components",
+    "metadata": {
+        "description": "",
+        "atomic_order": 4693,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 12
+}
+{
+    "id": "se_theory_practice__list_item.4794",
+    "type": "list_item",
+    "content": " - the percentage of changes that introduce new faults",
+    "metadata": {
+        "description": "",
+        "atomic_order": 4794,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 15
+}
+{
+    "id": "se_theory_practice__p.0d99bc05d24eabf6fbeca4f8e4075478.4895",
+    "type": "text",
+    "content": "Configuration Management Repositories. Configuration management would be impossible without libraries of information that control the change process.These repositories can store trouble reports, including information about each problem, the organization reporting it, and the organization fixing it. Some repositories allow users to keep tabs on the status of reported problems in the systems they are using. Others, such as the tool described in Sidebar 11.7, perform version control and cross-referencing.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 4895,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 142
+}
+{
+    "id": "se_theory_practice__list_item.4996",
+    "type": "list_item",
+    "content": " - (a) an air traffic control system",
+    "metadata": {
+        "description": "",
+        "atomic_order": 4996,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 10
+}
+{
+    "id": "se_theory_practice__p.0381009ea44d89ac4021e975afacfde2.5097",
+    "type": "text",
+    "content": "On the other hand, we may find that factor X led to high-quality code. If we are sure that confounding factors, chance, or bias has not influenced the study, then we may want to wait for more studies to confirm our findings.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 5097,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 62
+}
+{
+    "id": "se_theory_practice__p.fe58d72151c7a64e5b3ef7d19f3ebd5a.5198",
+    "type": "text",
+    "content": "Types of Reuse. By software reuse , we mean the repeated use of any part of a software  system: documentation, code, design, requirements, test  cases, test  data, and more. Basili (1990) encourages us to think of maintenance as reuse; we take an existing system and reuse parts of it to build the next version. Likewise, he suggests that processes and experience can be reused, as can any tangible or intangible product of development.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 5198,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 122
+}
+{
+    "id": "se_theory_practice__list_item.5299",
+    "type": "list_item",
+    "content": " - Conduct a debriefing meeting to collect information the survey missed.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 5299,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 20
+}
+{
+    "id": "se_theory_practice__p.be4d5aad18076e82b4460896002de84d.5402",
+    "type": "text",
+    "content": "Among the ISO 9000 standards, standard 9001 is most applicable to the way we develop  and  maintain  software  (International  Standards  Organization  1987). It explains what a buyer must do to ensure that the supplier conforms to design, development, production, installation, and  maintenance  requirements. Table  12.12 lists  the clauses of ISO 9001. Since ISO 9001 is quite general, there is a separate document, ISO 9000-3, that provides guidelines for interpreting ISO 9001 in a software context (International Standards Organization 1990).",
+    "metadata": {
+        "description": "",
+        "atomic_order": 5402,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 153
+}
+{
+    "id": "se_theory_practice__list_item.5504",
+    "type": "list_item",
+    "content": " - improving predictions",
+    "metadata": {
+        "description": "",
+        "atomic_order": 5504,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 6
+}
+{
+    "id": "se_theory_practice__p.999827730414fd419c4ca1d04b219c74.5605",
+    "type": "text",
+    "content": "P fleeger and McGowan (1990) have described how process maturity can affect an organization's or project's visibility into the process, and thereby its understanding of process issues. Although not strictly derived from the Software Engineering Institute's Capability Maturity Model, their notion of increasing visibility allows us to decide what makes sense based on what we can see in a picture of the process.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 5605,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 115
+}
+{
+    "id": "se_theory_practice__p.b713d0018fe0ee04948dcc4622e3e8d9.5706",
+    "type": "text",
+    "content": "Throughout this book, we have learned about Piccadilly's system for selling advertising time. Suppose the system is running well, and most maintenance changes reflect the needs of Piccadilly as its advertising campaigns change to meet business goals. What improvement strategies should the Piccadilly maintainers follow, so that they can make their changes quickly and without inserting faults in the software?",
+    "metadata": {
+        "description": "",
+        "atomic_order": 5706,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 115
+}
+{
+    "id": "se_theory_practice__p.65ba44590ebb11055e5c019363a3d041.5807",
+    "type": "text",
+    "content": "Evidential credibility is assessed by looking at both its authenticity and accuracy. For example, testimonial evidence's credibility is directly related to the credibility of the provider. In turn, the provider's credibility depends on truthfulness (do we believe what the provider is telling  us?), objectivity  (is  his  or  her  perception  influenced  by expectations or other effects?), and observational sensitivity (how good is the measure or measuring device?).",
+    "metadata": {
+        "description": "",
+        "atomic_order": 5807,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 131
+}
+{
+    "id": "se_theory_practice__p.e5a9b3ff1422b429360f416e8f023b3c.5911",
+    "type": "text",
+    "content": "Second, there  was  a  general  growth  in  confidence  as  the  students  progressed through the Delphi discussions. That is, all students reported an increase in confidence with their estimate after the group discussions, regardless of their experience level. However, there was no evidence of any relationship between experience and confidence.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 5911,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 97
+}
+{
+    "id": "se_theory_practice__fig.6012",
+    "type": "picture",
+    "content": "data:image/png;base64,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",
+    "metadata": {
+        "description": "",
+        "atomic_order": 6012,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 300
+}
+{
+    "id": "se_theory_practice__p.35c20914ec7b61d5ac6ce201d8a77c1d.6113",
+    "type": "text",
+    "content": "--- (1979b). Notes on the Synthesis of Form . Cambridge, MA: Harvard University Press.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 6113,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 24
+}
+{
+    "id": "se_theory_practice__list_item.6214",
+    "type": "list_item",
+    "content": " - Boehm, B.W.,T.E. Gray, and T. Seewaldt (1984). 'Prototyping versus specifying: A multi-project experiment.' IEEE Transactions on Software Engineering , SE 10(3) (March): 290-302.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 6214,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 50
+}
+{
+    "id": "se_theory_practice__list_item.6315",
+    "type": "list_item",
+    "content": " - Dutertre, Bruno, and Victoria Stavridou (1997). 'Formal requirements analysis of an avionics control system.' IEEE Transactions on Software Engineering , 23(5) (May): 267-277.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 6315,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 50
+}
+{
+    "id": "se_theory_practice__list_item.6416",
+    "type": "list_item",
+    "content": " - Hershey, John  C., Howard  C. Kunreuther, and  Paul  Schoemaker  (1982). 'Sources  of  bias  in assessment procedures for utility functions.' Management Science , 28: 936-954.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 6416,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 50
+}
+{
+    "id": "se_theory_practice__list_item.6517",
+    "type": "list_item",
+    "content": " - Lehman, M.M. (1980).'Programs, life cycles and the laws of software evolution.' In Proceedings of the IEEE , 68(9)( September): 1060-1076.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 6517,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 39
+}
+{
+    "id": "se_theory_practice__p.fdc8adf7e92ea608265c55fe18bdc3d8.6618",
+    "type": "text",
+    "content": "Describes a hierarchical model of maintainability, separated into three dimensions.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 6618,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 23
+}
+{
+    "id": "se_theory_practice__list_item.6719",
+    "type": "list_item",
+    "content": " - Russo, P., and S. Boor (1993). 'How fluent is your interface? Designing for international users.' In Proceedings of the Conference on Human Factors in Computing Systems (INTERCHI'93), pp. 342-347.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 6719,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 55
+}
+{
+    "id": "se_theory_practice__list_item.6820",
+    "type": "list_item",
+    "content": " - Williams, L., R. Kessler, W. Cunningham, and R. Jeffries (2000). 'Strengthening the case for pair programming.' IEEE Software 17(4) (July/August): 19-25.",
+    "metadata": {
+        "description": "",
+        "atomic_order": 6820,
+        "source_document": "se_theory_practice"
+    },
+    "token_count": 43
+}
+[
+  {
+    "id": "se_theory_practice__list_item.6821",
+    "type": "list_item",
+    "content": " - Wilson,Peter B. (1995).'Testable requirements:An alternative software sizing measure.' Journal of the Quality Assurance Institute (October): 3-11.",
+    "metadata": {
+      "description": "",
+      "atomic_order": 6821,
+      "source_document": "se_theory_practice"
+    },
+    "token_count": 41
+  },
+  {
+    "id": "se_theory_practice__list_item.6822",
+    "type": "list_item",
+    "content": " - Wing, Jeannette  M. (1990). 'A  specifier's  introduction  to  formal  methods.' IEEE Computer , 23(9) (September): 8-24.",
+    "metadata": {
+      "description": "",
+      "atomic_order": 6822,
+      "source_document": "se_theory_practice"
+    },
+    "token_count": 34
+  },
+  {
+    "id": "se_theory_practice__p.4a85c0e4027a383d3a7840d3b2572848.6823",
+    "type": "text",
+    "content": "A good, clear introduction to formal methods, with pointers to many other resources.",
+    "metadata": {
+      "description": "",
+      "atomic_order": 6823,
+      "source_document": "se_theory_practice"
+    },
+    "token_count": 23
+  },
+  {
+    "id": "se_theory_practice__list_item.6824",
+    "type": "list_item",
+    "content": " - Winograd,T.,and F.Flores (1986). Understanding Computers and Cognition . Norwood,NJ:Ablex.",
+    "metadata": {
+      "description": "",
+      "atomic_order": 6824,
+      "source_document": "se_theory_practice"
+    },
+    "token_count": 26
+  },
+  {
+    "id": "se_theory_practice__list_item.6825",
+    "type": "list_item",
+    "content": " - Withrow, Carol (1990).'Error density and size in Ada software.' IEEE Software , 7(1) (January): 26-30.",
+    "metadata": {
+      "description": "",
+      "atomic_order": 6825,
+      "source_document": "se_theory_practice"
+    },
+    "token_count": 29
+  },
+  {
+    "id": "se_theory_practice__p.1b71a59fda1de847abdcf45aa48dd6bf.6826",
+    "type": "text",
+    "content": "Finds a U-shaped fault density curve comparing size and faults in Unisys Ada software.",
+    "metadata": {
+      "description": "",
+      "atomic_order": 6826,
+      "source_document": "se_theory_practice"
+    },
+    "token_count": 24
+  },
+  {
+    "id": "se_theory_practice__list_item.6827",
+    "type": "list_item",
+    "content": " - Wittig, G.E., and G.R. Finnie (1994). 'Using artificial neural networks and function points to estimate 4GL software development effort.' Australian Journal of Information Systems 1(2): 87-94.",
+    "metadata": {
+      "description": "",
+      "atomic_order": 6827,
+      "source_document": "se_theory_practice"
+    },
+    "token_count": 54
+  },
+  {
+    "id": "se_theory_practice__list_item.6828",
+    "type": "list_item",
+    "content": " - Wolverton, R.W. (1974). 'The cost of developing large-scale software.' IEEE Transactions on Computers , C23(6): 615-636.",
+    "metadata": {
+      "description": "",
+      "atomic_order": 6828,
+      "source_document": "se_theory_practice"
+    },
+    "token_count": 34
+  },
+  {
+    "id": "se_theory_practice__p.a87c79017644311dadb379f732e4dc01.6829",
+    "type": "text",
+    "content": "Describes one of the early cost models, using a matrix of costs combined with project difficulty.",
+    "metadata": {
+      "description": "",
+      "atomic_order": 6829,
+      "source_document": "se_theory_practice"
+    },
+    "token_count": 27
+  },
+  {
+    "id": "se_theory_practice__list_item.6830",
+    "type": "list_item",
+    "content": " - Wood,Jane,and Denise Silver (1995). Joint Application Development , 2nd ed.New York:John Wiley.",
+    "metadata": {
+      "description": "",
+      "atomic_order": 6830,
+      "source_document": "se_theory_practice"
+    },
+    "token_count": 27
+  },
+  {
+    "id": "se_theory_practice__list_item.6831",
+    "type": "list_item",
+    "content": " - Yourdon, Edward (1982). Managing the System Life Cycle . New York:Yourdon Press.",
+    "metadata": {
+      "description": "",
+      "atomic_order": 6831,
+      "source_document": "se_theory_practice"
+    },
+    "token_count": 23
+  },
+  {
+    "id": "se_theory_practice__list_item.6832",
+    "type": "list_item",
+    "content": " - --- (1990). Modern Structured Analysis . Englewood Cliffs, NJ: Prentice Hall.",
+    "metadata": {
+      "description": "",
+      "atomic_order": 6832,
+      "source_document": "se_theory_practice"
+    },
+    "token_count": 22
+  },
+  {
+    "id": "se_theory_practice__list_item.6833",
+    "type": "list_item",
+    "content": " - --- (1994).'Developing software overseas.' Byte , 19(6) (June): 113-120.",
+    "metadata": {
+      "description": "",
+      "atomic_order": 6833,
+      "source_document": "se_theory_practice"
+    },
+    "token_count": 21
+  },
+  {
+    "id": "se_theory_practice__list_item.6834",
+    "type": "list_item",
+    "content": " - --- (2005). Outsource . Boston: Prentice-Hall.",
+    "metadata": {
+      "description": "",
+      "atomic_order": 6834,
+      "source_document": "se_theory_practice"
+    },
+    "token_count": 13
+  },
+  {
+    "id": "se_theory_practice__list_item.6835",
+    "type": "list_item",
+    "content": " - Yourdon, Edward, and Larry Constantine (1978). Structured Design . Englewood Cliff, NJ: Prentice Hall.",
+    "metadata": {
+      "description": "",
+      "atomic_order": 6835,
+      "source_document": "se_theory_practice"
+    },
+    "token_count": 29
+  },
+  {
+    "id": "se_theory_practice__p.1df938b79160b64efb58ce63f20544d5.6836",
+    "type": "text",
+    "content": "Introduced the notions of coupling and cohesion for assessing design quality.",
+    "metadata": {
+      "description": "",
+      "atomic_order": 6836,
+      "source_document": "se_theory_practice"
+    },
+    "token_count": 21
+  },
+  {
+    "id": "se_theory_practice__list_item.6837",
+    "type": "list_item",
+    "content": " - Zave, Pamela (1984). 'The operational versus the conventional approach to software development.' Communications of the ACM , 27(2) (February): 104-118.",
+    "metadata": {
+      "description": "",
+      "atomic_order": 6837,
+      "source_document": "se_theory_practice"
+    },
+    "token_count": 43
+  },
+  {
+    "id": "se_theory_practice__list_item.6838",
+    "type": "list_item",
+    "content": " - Zave, Pamela, and Michael Jackson (1997). 'Four dark corners of requirements engineering.' ACM Transactions on Software Engineering and Methodology , 6(1) (January): 1-30.",
+    "metadata": {
+      "description": "",
+      "atomic_order": 6838,
+      "source_document": "se_theory_practice"
+    },
+    "token_count": 48
+  },
+  {
+    "id": "se_theory_practice__p.339dd8025248bda9054b5399c59e6137.6839",
+    "type": "text",
+    "content": "Description of the operational specification approach to development.",
+    "metadata": {
+      "description": "",
+      "atomic_order": 6839,
+      "source_document": "se_theory_practice"
+    },
+    "token_count": 19
+  },
+  {
+    "id": "se_theory_practice__list_item.6840",
+    "type": "list_item",
+    "content": " - Zelkowitz, Marvin V., Dolores R.Wallace and David Binkley (1998).'Understanding the culture clash in software engineering technology transfer,' University of Maryland technical report (2 June).",
+    "metadata": {
+      "description": "",
+      "atomic_order": 6840,
+      "source_document": "se_theory_practice"
+    },
+    "token_count": 55
+  },
+  {
+    "id": "se_theory_practice__heading.88fa71f0a6e0dfedbb46d91cc0b37a50",
+    "type": "section_header",
+    "content": "Index",
+    "metadata": {
+      "description": "Index",
+      "level": 1,
+      "atomic_order": 6841,
+      "heading": "main"
+    },
+    "token_count": 1
+  },
+  {
+    "id": "se_theory_practice__p.59ec076149484c745ac67474201215d1.6842",
+    "type": "text",
+    "content": "abstract class, 161, 312, 340 abstraction, 30, 40, 64, 157, 307-308, 666 level of, 172, 207 using, 309 acceptance range, 591-592 acceptance testing, 52, 455, 483, 486 access functions, 304 accountability modeling, 128 active design review, 278 active fault detection, 251 activity, 16, 64, 83 activity diagram, 321, 322, 336 activity graph, 84, 86, 139 actor, 173, 323 actual time (in estimation), 88 adaptive maintenance, 544 adaptive software development (ASD), 60 aggregate, 161 agile methods, 59, 80, 145, 230, 394 agility, four characteristics of, 60 algebraic specifications, 183-187 algorithms, 410, 418 all-computational-uses/some-predicate-uses testing, 423 all-predicate/some-computational-uses testing, 423 all-uses testing, 423, 424 alpha tests, 484 ambiguous, 155 amortization, 308 analysis, 2, 39, 44 analysis and design methods and notations, 31-32, 666 analyst capability, 114 analysts, 466 anchoring and adjustment, 683, 688 application points, 111, 112, 113 architectural styles, 227, 236, 243 architecture, 32, 224, 666-667 agile, 230 documenting, see Software Architecture Document (SAD) modeling, 231 Ariane-5, 37, 39, 42, 75, 135, 211-212, 286-287, 367, 396, 511, 532, 632, 662 business impact of, 38 requirements problems with, 447-448 responsibility of the press, 44 risk management, 135, 575-576 simulation of, 576 assertion, 364 assessment vs. prediction, 589 association, 161 association class, 162 assumptions, 196, 202 attributes, 311 automated testing environments, 440-441, 450,",
+    "metadata": {
+      "description": "",
+      "atomic_order": 6842,
+      "source_document": "se_theory_practice"
+    },
+    "token_count": 336
+  },
+  {
+    "id": "se_theory_practice__p.50bed2a0110d424c03170842b87d2f95.6843",
+    "type": "text",
+    "content": "488, 509, 510 automated theorem proving, 420 availability, 474-475, 477 available time, 88 back propagation algorithms, 115 Bailey and Basili model for effort estimation, 110, 118 balanced scorecard, 629 baseline, 566, 582, 599 behavior factors, 63 Belady-Lehman maintenance model, 553 benchmark tests, 484 beta tests, 484, 485 bias, 638-640, 681, 682 big-bang integration testing, 429 black box, 410, 412, 505, 601-602 blackboard architecture, 241 Boehm quality model, 595-597 bottom-up integration testing, 426-428 boundary ( seealso system boundary), 16 box structures, 412, 505 branch testing, 423, 424, 444-445 bug, 6 build plan, 457, 460, 515 business value, 12, 129, 651 callback, 238 Capability Maturity Model, see CMM capture-and-replay, 440 capture-and-playback, 440 case studies for cleanroom, 655-656 case study as evaluation technique, 582, 674 CASE tools ( see also tools), 34, 104, 113-114,",
+    "metadata": {
+      "description": "",
+      "atomic_order": 6843,
+      "source_document": "se_theory_practice"
+    },
+    "token_count": 3
+  },
+  {
+    "id": "se_theory_practice__p.0cd9146c7d66807b622521a6378e8725.6844",
+    "type": "text",
+    "content": "201, 207 case-based reasoning, 116 cause-and-effect graphs, 468-472 causes, 468 change control, 464, 561-562 checklists, 199 Chidamber-Kemerer metrics, 355-359 chief programmer team, 101 choosing a specification technique, 206 class, 159, 311 class description template, 330 class diagram, 159-162, 188, 321, 324-330 class hierarchy, 314 classification trees, 446 class-scope attribute, 160 class-scope operation, 161 cleanroom, 505-509, 654 definition of, 505 evaluations of, 506-507, 654-657 clear box, 410, 412, 505, 602 client, 146, 237 client-server architecture, 237 cloning, 226 closed box testing, 411, 422 CMM,12,617-623,627,649,652,689 COCOMO estimation model,111,116,118, 627, 658 COCOMO II estimation model, 111-115, 133-134, 138, 553-554 code inspection, 413, 414 code of ethics, 702-704 code review, 412-413, 425 code walkthrough, 413 cohesion, 300 coincidental cohesion, 300 coincidental correctness, 447 collaborative design, 256 Commercial Off-The-Shelf, see COTS common coupling, 299 communication diagram, 188, 322, 334 communication paths, 97, 101, 136, 657-658 communications, interpersonal, 63, 657 comparison tables, 267 compatibility tests, 473 compilers and linkers, 227, 397, 566 complexity, 541, 556, 565-566 component based software engineering, 234 component classification, 603 component independence, 382, 391, 427 component testing, 407 components, 233, 234 composition, 161 composition (in OO systems), see object composition compositional reuse, 602 computer science, compared with software engineering, 4-5 computer-aided software engineering tools, see CASE tools conceptual closeness, 604 conceptual model, 157-158 concerns, 297 conditional compilation for configuration control, 461-463 confidence in testing, 443-444, 655 configuration control board, 560-561 configuration management, 123, 459-465, 466, 560-562, 566, 567 configuration management team, 27, 460, 464, 561 configuration tests, 472 consistency, 596 constraints, 149-150, 153, 178-182, 195 constructor, 312 consumer reuse, 385, 601 content coupling, 298 context bias, 682 context diagram, 37 contract, see design by contract control, 64, 299, 505 control coupling, 299 control flow, 260, 440, 569 control structures, 377-378 coordination fault, 404 core asset base, elements of, 279-280 corrective maintenance, 543-544 cost, 28 cost and schedule trade-offs, 658-660 cost-benefit analysis, 270 cost of maintenance, 541, 550-552 COTS,15,44 coupling, 297 critical path, 90 critical path method (CPM), 87, 91, 92 cross-reference generators, 567 cross-referencing ( see also impact analysis), 567 Crystal, 59 customer, 14, 26, 146",
+    "metadata": {
+      "description": "",
+      "atomic_order": 6844,
+      "source_document": "se_theory_practice"
+    },
+    "token_count": 321
+  },
+  {
+    "id": "se_theory_practice__unknown_type.6845",
+    "type": "document_index",
+    "content": "",
+    "metadata": {
+      "description": "",
+      "atomic_order": 6845,
+      "source_document": "se_theory_practice"
+    },
+    "token_count": 1
+  },
+  {
+    "id": "se_theory_practice__nottoc_heading.efe916ddc1c86835e2d5a43db286ad75.6846",
+    "type": "section_header",
+    "content": "### 748 Index",
+    "metadata": {
+      "description": "Index",
+      "heading": "nottoc",
+      "atomic_order": 6846
+    },
+    "token_count": 3
+  },
+  {
+    "id": "se_theory_practice__unknown_type.6847",
+    "type": "document_index",
+    "content": "",
+    "metadata": {
+      "description": "",
+      "atomic_order": 6847,
+      "source_document": "se_theory_practice"
+    },
+    "token_count": 1
+  },
+  {
+    "id": "se_theory_practice__tbl.6848",
+    "type": "table",
+    "content": "|    | 0                                                    | 1                                                    |\n|---:|:-----------------------------------------------------|:-----------------------------------------------------|\n|  0 | fault seeding, 442-443, 655                          | human factors ( see also user interfaces),           |\n|  1 | fault tolerance, 251, 259                            | 657-658                                              |\n|  2 | fault-prone code, identification of,                 | human factors tests, 473                             |\n|  3 | 445-446                                              | hypothesis, 582, 584                                 |\n|  4 | fault-tree analysis, 259, 262, 502                   |                                                      |\n|  5 | feature analysis, 581, 633, 675                      | idiom, see design convention                         |\n|  6 | feature-oriented design, 232                         | IEEE standard, 196-197                               |\n|  7 | feed-forward techniques (in neural nets), 116        | immunity, 248                                        |\n|  8 | file comparators, 566                                | impact analysis, 562-566                             |\n|  9 | fit criteria, 151, 153                               | implementation view, 235                             |\n| 10 | fit data, 591                                        | implicit invocation, 240, 264, 266                   |\n| 11 | float, 88                                            | incremental development, 20-21, 56-57, 77, 296,      |\n| 12 | fog index, 559-560                                   | 306-307                                              |\n| 13 | formal experiments, 582, 583, 585-586                | independent verification and validation, 518         |\n| 14 | formal inspection, 200                               | information hiding, 304-306                          |\n| 15 | formal methods, 175, 219, 656, 670                   | in OOdesign,305                                      |\n| 16 | formal specification languages, 175,                 | informational cohesion, 302                          |\n| 17 | 181, 184                                             | inheritance, 159, 314                                |\n| 18 | framework, 352                                       | vs. object composition, 315                          |\n| 19 | function points, 111, 138                            | innovators, 670, 673                                 |\n| 20 | function testing, 455, 466-472                       | inspections, 8, 124, 413, 645-648                    |\n| 21 | functional cohesion, 301                             | faults found during, 413-414, 425, 426, 645,         |\n| 22 | functional decomposition, 232                        | 647-648                                              |\n| 23 | functional notations, 175                            | meeting and preparation times,                       |\n| 24 | functional requirement, 148-149, 216-217             | 413, 645                                             |\n| 25 | functionality, 111                                   | team size for, 415                                   |\n| 26 | Gantt chart, 93, 124                                 | instance, 290                                        |\n| 27 | Garvin, perspectives on quality, 9-10                | instance variables, 312                              |\n| 28 | general system guide, 528                            | integrated environments, 667                         |\n| 29 | generality, 308                                      | integrated product development, 128                  |\n| 30 | generalization, 161, 235                             | integration, 35                                      |\n| 31 | generalization view, 235                             | integration plan, 437, 457-459                       |\n| 32 | generative reuse, 602                                | integration testing, 407, 426-433,                   |\n| 33 | generative software development, 282                 | 448, 509                                             |\n| 34 | Goel-Okumoto model of software reliability, 637, 643 | comparison of strategies for, 430-432 integrity, 596 |\n| 35 | group decision-making, 679-680                       | interaction diagram, 322, 334                        |\n| 36 | guide words, 259, 503-504                            | interfaces ( see also user interfaces), 302          |\n| 37 | Gunning's fog index, 559-560                         | hierarchy, 311                                       |\n| 38 |                                                      | internal documentation, 387-390                      |\n| 39 | hacker, 5                                            | private and public, 333                              |\n| 40 | hardware fault, 404, 535                             | specification, 303                                   |\n| 41 | hazard, 502                                          | internal validity, 593                               |\n| 42 | hazard and operability studies (HAZOP),              | introvert work style, 99                             |\n| 43 | HAZOPguide words, 504                                | invariants, 364                                      |\n| 44 | header comment block, 387-388, 390                   | ISO 9000, 12, 625-626, 652                           |\n| 45 | horizontal reuse, 603                                | ISO 9126 quality model, 597-598                      |\n| 46 | horizontal traceability, 562, 564,                   | iterative development, 56, 57, 60                    |\n| 47 | 565-566                                              |                                                      |",
+    "metadata": {
+      "description": "",
+      "atomic_order": 6848,
+      "source_document": "se_theory_practice"
+    },
+    "token_count": 1642
+  },
+  {
+    "id": "se_theory_practice__p.1f880f5b43025730dafc681da59e0a32.6849",
+    "type": "text",
+    "content": "Jelinski-Moranda model of software reliability,",
+    "metadata": {
+      "description": "",
+      "atomic_order": 6849,
+      "source_document": "se_theory_practice"
+    },
+    "token_count": 13
+  },
+  {
+    "id": "se_theory_practice__p.871d6aa6c7e8ac2fa9a12c0f217e2e32.6850",
+    "type": "text",
+    "content": "481-482, 637, 638-641 key practices of the CMM, 622 key process areas of the CMM, 619 Kolmogorov distance, 639, 644 laggards, 670-671 Lai notation, 64, 74, 80 languages, effects on quality, 380-382, 398 late majority, 671 Law of Demeter, 318, 319 layer bridging, 242 layering, 20, 236, 242-243 legacy systems, 540 Lehman's laws of software evolution, 541-543 level of specification, 194 levels of abstraction, 40, 64, 233 librarian, 26, 101 life cycle, 46, 541 changes during the, 539 lifeline, 334 Li-Henry metrics, 359 Liskov Substitutability Principle, 317, 318 Littlewood models of software reliability, 482, 637, 638-641, 643 Loan Arranger, 41, 42, 77-79, 137, 215-217, 290, 369, 398, 449, 533, 577, 633-634, 663, 706 localizing input and output, 382 logic, 178-180 logical cohesion, 300 loosely coupled, 297 Lorenz-Kidd metrics, 353, 354 machine learning, 116-117 mainstream market, 671 maintainability, 150, 151, 207, 474-475, 477, 552-556 maintenance, 376, 535 adaptive, 544 corrective, 543-544 measuring characteristics of, 554-560, 577, 653-654 object-oriented systems and, 548, 549 perfective, 544 maintenance effort, 546, 551, 552-554 maintenance plan, 123 maintenance problems, causes of, 546-554 maintenance roles, 543-546 maintenance team, 25, 545-546, 550 maintenance tests, 473, 547 maintenance tools, 560-567 market researcher, 147 Marvel, 70 matrix organization, 128 maturity models ( see also CMM),617-626 McCall quality model, 10-11, 595 mean magnitude of relative error (MMRE), 117-118 mean time between failures, 150, 477 to failure, 477 to repair, 477 measure definition of, 589 validation of, 590, 593 measurement, 34, 40, 590, 667 Chidamber-Kemerer,355-359 Li-Henry, 359 Lorenz-Kidd, 353-354 for maintenance, 541, 554-560, 577, 653-654 OO design quality measures, 355 OO size measures, 353 of process improvement, 617-626 reliability, availability and maintainability, 477 of requirements, 204-205 for reuse, 605 test effectiveness and efficiency, 493 meetings ( see also Delphi technique), 98, 413, 414 Sequence Charts (MSC), 163-164 UML-style, 210 message passing coupling, 359 method, 159, 311 milestones, 83, 84, 88, 131 MMRE,117-118 model checking, 203 models, ( see also estimation, maintenance, quality, reliability, simulation) of fault behavior, 510, 558, 591-592 of maintenance effort, 552-554 modifiability, 245 modular, definition of, 234 modular decomposition, 32 modularity, 157, 207, 297, 376 module testing, 407 monitor, 439 multiplicity, 313 Musa data, 479, 638, 642 parallel testing, 484 Musa model of software reliability, 479, 482 Musa-Okumoto model of software reliability, 643 mutual suspicion, 254 negotiation, 153 net present value, 630-631 neural networks, 115, 116 noise, 638, 640-642, 657 nonfunctional requirement, 149, 150 n-version programming, 252 object, 17, 311 object composition, 313 vs. inheritance, 315 Object Constraint Language (OCL),180-181,188 object lifeline, 334 object points, 112 object-oriented design, 233 object-oriented systems coding and testing, 433 design, 32, 377, 396 maintenance of, 549 measurement of, 353-363 requirements notations, 158 size measures, 353 specification, 70 testing of, 433-436 ways to pass arguments in, 396 object-oriented technology, 29 omission, fault of, 405 online help, 522, 530 open box testing, 411 operation signature, 302 operational notation, 178 operational profile for reliability modeling, 483 operational specification, 54 operational system, 56 operator training, 521 operator's manual, 527-528 opportunity cost, 629 organization, 64 orthogonal defect classification, 405 outside-in design, 32 outsourcing, 257 overload faults, 404 packages (in OO)",
+    "metadata": {
+      "description": "",
+      "atomic_order": 6850,
+      "source_document": "se_theory_practice"
+    },
+    "token_count": 5
+  },
+  {
+    "id": "se_theory_practice__p.cc762cbb07ce4e5350c890b9f4d25b39.6851",
+    "type": "text",
+    "content": "dependencies, 333 diagrams, 322, 333 paradigm, definition of, 4 Parnas tables, 177 passing arguments, 396 passive fault detection, 251 passive review process, 278 path testing, 423, 444, 445, 447 patterns, see design patterns payback period, 272 peer-to-peer architecture, 238 people maturity model, 627-629 perfective maintenance, 544 performance attributes, 247 performance fault, 404 performance testing, 408, 455, 472-474 person-month, 133 personnel, 95 Petri nets, 169-172 phased development, 55-58 Piccadilly television system example, 36, 43, 73-75, 133-135, 209, 284-286, 366-367, 395, 447, 510, 531, 574, 631, 661 pilot tests, 484 pipe and filter designs, 236 planning, see project management, test plan policy, 64 polymorphism, 311, 315 portability, 595-599 postconditions, 303 postmortem analysis, 611-616, 632-633 precision fault, 403 precondition, 303 precursor activity, 84 PRED (x/100), 117-118 prediction bias, 638-640 improvement of, 615, 636-645 models and procedures, 479-482, 636-645 noise, 601, 602, 640-642 recalibration, 642-645 reliability ( see also reliability prediction), 479-482 validation of, 590-592 prequential likelihood, 640 present value, 630 preventive maintenance, 544 prioritizing quality requirements, 153 prioritizing requirements, 152 private interface, 333 probability density function, 478-479 probability of problem, 74, 120",
+    "metadata": {
+      "description": "",
+      "atomic_order": 6851,
+      "source_document": "se_theory_practice"
+    },
+    "token_count": 4
+  },
+  {
+    "id": "se_theory_practice__unknown_type.6852",
+    "type": "document_index",
+    "content": "",
+    "metadata": {
+      "description": "",
+      "atomic_order": 6852,
+      "source_document": "se_theory_practice"
+    },
+    "token_count": 1
+  },
+  {
+    "id": "se_theory_practice__unknown_type.6853",
+    "type": "document_index",
+    "content": "",
+    "metadata": {
+      "description": "",
+      "atomic_order": 6853,
+      "source_document": "se_theory_practice"
+    },
+    "token_count": 1
+  },
+  {
+    "id": "se_theory_practice__nottoc_heading.88fa71f0a6e0dfedbb46d91cc0b37a50.6854",
+    "type": "section_header",
+    "content": "### Index",
+    "metadata": {
+      "description": "Index",
+      "heading": "nottoc",
+      "atomic_order": 6854
+    },
+    "token_count": 2
+  },
+  {
+    "id": "se_theory_practice__unknown_type.6855",
+    "type": "document_index",
+    "content": "",
+    "metadata": {
+      "description": "",
+      "atomic_order": 6855,
+      "source_document": "se_theory_practice"
+    },
+    "token_count": 1
+  },
+  {
+    "id": "se_theory_practice__tbl.6856",
+    "type": "table",
+    "content": "|    | 0                                                                       | 1                                                                                                                                                                                    |\n|---:|:------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|\n|  0 | state box, 412, 505                                                     | technique                                                                                                                                                                            |\n|  1 | state diagram, 322, 336                                                 | definition of, 4                                                                                                                                                                     |\n|  2 | state machine, 164                                                      | process modeling, 63-70, 77                                                                                                                                                          |\n|  3 | state, 164                                                              | technology transfer, 668-676                                                                                                                                                         |\n|  4 | transition, 164                                                         | adoption styles, 670                                                                                                                                                                 |\n|  5 | statechart diagrams, 165-169, 188                                       | evidence to support, 670                                                                                                                                                             |\n|  6 | actions vs. activities, 168                                             | models of, 674-676                                                                                                                                                                   |\n|  7 | state, 169                                                              | speed of adoption, 669, 673                                                                                                                                                          |\n|  8 | statement testing, 423, 444                                             | temporal cohesion, 301                                                                                                                                                               |\n|  9 | static code analyzers, 438, 567, 569                                    | temporal logic, 179                                                                                                                                                                  |\n| 10 | static model, 64                                                        | test, definition of, 421                                                                                                                                                             |\n| 11 | statistical testing, 506, 508, 511, 656                                 | test analysis report, 488, 495-496                                                                                                                                                   |\n| 12 | status quo bias, 682                                                    | test case generators, 441                                                                                                                                                            |\n| 13 | stepwise refinement, 412                                                | test cases, 421, 436                                                                                                                                                                 |\n| 14 | stereotype, 174                                                         | test coverage, 448                                                                                                                                                                   |\n| 15 | stereotype threat, 682                                                  | test data (for reliability models), 591                                                                                                                                              |\n| 16 | stochastic prediction system, 590                                       | test description, 488, 492-495                                                                                                                                                       |\n| 17 | stress faults, 404                                                      | test effectiveness, 425, 492                                                                                                                                                         |\n| 18 | stress tests, 472                                                       | test efficiency, 492                                                                                                                                                                 |\n| 19 | structure checker, 438                                                  | test object, 410                                                                                                                                                                     |\n| 20 | stubs, 428, 440                                                         | test oracle, 518                                                                                                                                                                     |\n| 21 | subcontractors, 16                                                      | test philosophy, 411                                                                                                                                                                 |\n| 22 | substitutability, see Liskov Substitutability                           | test plan, 124, 125, 436-438, 488-490                                                                                                                                                |\n| 23 | Principle                                                               | test point, 421                                                                                                                                                                      |\n| 24 | subtype and supertype, 311                                              | test script, 446, 494                                                                                                                                                                |\n| 25 | surveys, 582, 613                                                       | test specification and evaluation, 488, 491-492                                                                                                                                      |\n| 26 | symbolic execution, 419                                                 | test strategies, 411, 426, 444                                                                                                                                                       |\n| 27 | synchronization, 432, 561                                               | test team, 410, 465-466                                                                                                                                                              |\n| 28 | syntax fault, 403                                                       | test thoroughness, 423                                                                                                                                                               |\n| 29 | synthesis, 2, 39                                                        | testable requirements, 151, 156                                                                                                                                                      |\n| 30 | system                                                                  | testers, 25                                                                                                                                                                          |\n| 31 | definition of, 17 examples of, 17-18 importance of, 16                  | testing ( see also acceptance testing, function testing, installation testing, integration testing, regression testing, system testing, thread testing, unit testing), 124-125, 401, |\n| 32 | steps in building, 23-25                                                | 453-466                                                                                                                                                                              |\n| 33 | system boundary, 16, 17, 40, 44, 124, 154, 173 of Piccadilly system, 37 | black vs. white box, 410                                                                                                                                                             |\n| 34 | system configuration, 459                                               | closed vs.open box, 410,                                                                                                                                                             |\n| 35 |                                                                         | 421                                                                                                                                                                                  |\n| 36 | system designers, 466                                                   | confidence in, 443-444                                                                                                                                                               |\n| 37 | system dynamics models, 67, 659                                         | process, 408                                                                                                                                                                         |\n| 38 | system integration plan, 437                                            | relative strengths of, 423                                                                                                                                                           |\n| 39 | system software fault, 404                                              | stopping criteria for, 441-446                                                                                                                                                       |\n| 40 | system testing ( see also testing), 408, 426, 453-466, 486-487          | system ( see also system testing), 408, 426 testing object-oriented systems, 433                                                                                                     |\n| 41 | systems analysis, see analysis                                          | testing tools, 438-440, 486-488, 510                                                                                                                                                 |\n| 42 |                                                                         | testing vs. proving, 421, 425                                                                                                                                                        |\n| 43 | systems analyst, 143                                                    | text editors, 566                                                                                                                                                                    |\n| 44 | target, 600                                                             | theorem proving, 203                                                                                                                                                                 |\n| 45 | task-centered design, 290                                               | TheoryW,132-133                                                                                                                                                                      |\n| 46 | team size, 40, 415                                                      | Therac-25, 44, 503                                                                                                                                                                   |\n| 47 | team-building, 138, 657-658                                             | thread testing, 466                                                                                                                                                                  |",
+    "metadata": {
+      "description": "",
+      "atomic_order": 6856,
+      "source_document": "se_theory_practice"
+    },
+    "token_count": 3707
+  },
+  {
+    "id": "se_theory_practice__nottoc_heading.88fa71f0a6e0dfedbb46d91cc0b37a50.6857",
+    "type": "section_header",
+    "content": "### Index",
+    "metadata": {
+      "description": "Index",
+      "heading": "nottoc",
+      "atomic_order": 6857
+    },
+    "token_count": 2
+  },
+  {
+    "id": "se_theory_practice__unknown_type.6858",
+    "type": "document_index",
+    "content": "",
+    "metadata": {
+      "description": "",
+      "atomic_order": 6858,
+      "source_document": "se_theory_practice"
+    },
+    "token_count": 1
+  }
+]

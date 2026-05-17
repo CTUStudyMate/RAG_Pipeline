@@ -1,7 +1,9 @@
 from PIPELINE._3_chunk.common_utils import mannual_token_count
-from pipeline_config import IMAGE_TOKEN_ESTIMATE, TOKEN_BUDGET
+from pipeline_config import settings
 
-
+IMAGE_TOKEN_ESTIMATE = settings.config["image_token_estimate"]
+TOKEN_BUDGET = settings.config["token_budget"]
+    
 def greedy_add_chunks (ranked_chunks, token_budget=TOKEN_BUDGET):
     total_tokens = 0
     selected_chunks = []

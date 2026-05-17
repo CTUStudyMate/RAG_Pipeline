@@ -1,11 +1,13 @@
-import json
 import os
 import re
 
 from PIPELINE._3_chunk.common_utils import mannual_token_count, split_text
 from PIPELINE._3_chunk.strategies.HSF.process_helpers.handle_batch import is_text_incomplete
-from PIPELINE._3_chunk.strategies.HSF.process_helpers.normalize import is_heading_match
-from pipeline_config import CHUNK_FROM_ATOMIC_TEST_FILEPATH, CHUNK_MAX_TOKEN, CHUNK_MIN_TOKEN, IMAGE_TOKEN_ESTIMATE
+from pipeline_config import settings
+CHUNK_FROM_ATOMIC_TEST_FILEPATH = settings.config["chunk_from_atomic_test_filepath"]
+CHUNK_MAX_TOKEN = settings.config["chunk_max_token"]
+CHUNK_MIN_TOKEN = settings.config["chunk_min_token"]
+IMAGE_TOKEN_ESTIMATE = settings.config["image_token_estimate"]
 
 def get_all_gold_unit(node):
     gold_units = list(node.get("gold_unit", []))
@@ -414,8 +416,6 @@ def create_chunk(node, cursor, file_path, prefix_path):
             block_path = base_path
             
         if block_token <= CHUNK_MAX_TOKEN:
-            for row in block:
-                print(dict(row))
             chunk = chunk_from_atomics(block, file_path, block_token, block_path, document_path)
             chunks.append(chunk)
             continue

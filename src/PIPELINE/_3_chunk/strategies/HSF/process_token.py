@@ -2,7 +2,8 @@ import copy
 import json
 from PIPELINE._3_chunk.strategies.HSF.atomic_db_helpers.db_helpers import connect_db, create_db_for_document
 from PIPELINE._3_chunk.strategies.HSF.hierarchy_helpers.DFSCursor import DFSCursor
-from pipeline_config import TOKEN_TREE_TEST_FILEPATH
+from pipeline_config import settings
+TOKEN_TREE_TEST_FILEPATH = settings.config["token_tree_test_filepath"]
 
 
 def sum_node_gold_units(node, token_map):
