@@ -1,0 +1,106 @@
+bge_embedding_model: "bge-m3:latest"
+embedding_provider: "openai"
+openai_embedding_model: "text-embedding-3-small"
+
+llm_provider: "openai"
+llm_model: "gpt-4.1-mini"
+
+# common
+max_pages_per_batch: 15
+write_file_after_n_stream_elements: 100
+write_file_after_max_stream_elements: 200
+chunk_max_token: 600
+chunk_min_token: 200
+overlap_tokens: 80
+
+image_token_estimate: 300
+token_budget: 2000
+
+####### store and debug ##################
+chunk_from_atomic_test_filepath: "exp/se2004_fixed/atomic_chunk.json"
+token_tree_test_filepath: "exp/se2004_fixed/token_tree.json"
+final_chunks_test_filepath: "exp/se2004_fixed/final_chunksss.json"
+stream_elements_filepath: "exp/se2004_fixed/streams.json"
+tree_filepath: "exp/se2004_fixed/tree.json"
+chunking_time_log_file: "exp/se2004_fixed/hsf_chunk_time.txt"
+##########################################
+
+pgdb_host: ${pgdb_host}
+pgdb_port: ${pgdb_port}
+pgdb_name: ${pgdb_name}
+pgdb_user: ${pgdb_user}
+pgdb_password: ${pgdb_password}
+
+# fixed size chunk
+pgdb_fixedsize_normal_chunks_table: ${pgdb_fixedsize_normal_chunks_table}
+
+pgdb_fixed_size_connect_info:
+  host: ${pgdb_host}
+  port: ${pgdb_port}
+  db_name: ${pgdb_name}
+  user: ${pgdb_user}
+  password: ${pgdb_password}
+  table_name: ${pgdb_fixedsize_normal_chunks_table}
+
+# chunk storage
+chunk_storage_dir: "experiment_chunk_storage/v4_2004_fixed/"
+
+vector_db_fixedsize_path: "experiment_chunk_storage/v4_2004_fixed/fixed_size"
+vector_db_fixedsize_collection: "v2004_fixedsize_built_in_corpus"
+
+vectordb_fixedsize_connect_info:
+  db_path: "experiment_chunk_storage/v4_2004_fixed/fixed_size"
+  collection: "v2004_fixedsize_built_in_corpus"
+
+fixedsize_chunking_time_log_file: "exp/se2004_fixed/exp_result/fixed_chunk_time.txt"
+
+# hsf chunk
+vector_db_hsf_path: "experiment_chunk_storage/v4_2004_fixed/hsf"
+vector_db_hsf_collection: "v2004_hsf_built_in_corpus"
+
+vectordb_hsf_ms_connect_info:
+  db_path: "experiment_chunk_storage/v4_2004_fixed/hsf"
+  collection: "v2004_hsf_built_in_corpus"
+
+pgdb_hsf_ms_chunks_table: ${pgdb_hsf_ms_chunks_table}
+pgdb_hsf_img_table: ${pgdb_hsf_img_table}
+
+pgdb_hsf_ms_connect_info:
+  host: ${pgdb_host}
+  port: ${pgdb_port}
+  db_name: ${pgdb_name}
+  user: ${pgdb_user}
+  password: ${pgdb_password}
+  table_name: ${pgdb_hsf_ms_chunks_table}
+  img_table: ${pgdb_hsf_img_table}
+
+hsf_chunking_time_log_file: "exp/se2004_fixed/exp_result/fixed_chunk_time.txt"
+
+# langchain recursive splitter
+vector_db_lc_recur_path: "experiment_chunk_storage/v4_2004_fixed/lc_recur_char_split"
+vector_db_lc_recur_collection: "v2004_lc_recur_built_in_corpus"
+
+vectordb_lc_recur_connect_info:
+  db_path: "experiment_chunk_storage/v4_2004_fixed/lc_recur_char_split"
+  collection: "v2004_lc_recur_built_in_corpus"
+
+chunking_time_lc_based_log_file: "exp/langchain_based/recursivecharactertextsplitter.txt"
+
+pgdb_lc_recur_chunks_table: ${pgdb_lc_recur_chunks_table}
+
+pgdb_lc_recur_connect_info:
+  host: ${pgdb_host}
+  port: ${pgdb_port}
+  db_name: ${pgdb_name}
+  user: ${pgdb_user}
+  password: ${pgdb_password}
+  table_name: ${pgdb_lc_recur_chunks_table}
+
+rrf_ranking_constant: 60
+vector_retrieve_chunks_limit: 30
+text_retrieve_chunks_limit: 30
+rrf_top_k: 20
+final_chunks_num: 7
+max_images_per_llmcall: 3
+
+log_file: "./mylog8_hsf_normal_firstcite.txt"

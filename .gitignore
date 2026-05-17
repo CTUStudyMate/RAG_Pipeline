@@ -25,3 +25,8 @@ experiment_data/
 
 
 experiment_chunk_storage/
+
+__pycache__
+archie
+att
+build

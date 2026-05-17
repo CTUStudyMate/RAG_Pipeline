@@ -1,8 +1,8 @@
 import ollama
 from used_models.llm.BaseLLM import BaseLLM
 
-from pipeline_config import LLM_MODEL
-
+from pipeline_config import settings
+LLM_MODEL = settings.config["llm_model"]
 class OllamaWrapper(BaseLLM):
     def __init__(self, model=LLM_MODEL):
         self.model = model
@@ -28,3 +28,4 @@ class OllamaWrapper(BaseLLM):
         )
 
         return response["message"]["content"]
+    

@@ -1,9 +1,8 @@
 from openai import OpenAI
 from used_models.llm.BaseLLM import BaseLLM
-from used_models.schema.llm_answer_schema import AnswerSchema
-from pipeline_config import LLM_MODEL
+from pipeline_config import settings
 
-
+LLM_MODEL = settings.config["llm_model"]
 class OpenAIWrapper(BaseLLM):
     def __init__(self, model=LLM_MODEL):
         self.client = OpenAI()
@@ -45,5 +44,7 @@ class OpenAIWrapper(BaseLLM):
         )
 
         return response.output_text
+    
+    
     
     

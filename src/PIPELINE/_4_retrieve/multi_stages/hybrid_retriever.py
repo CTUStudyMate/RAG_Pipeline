@@ -4,11 +4,20 @@ import chromadb
 from common_utils.debug import log_to_file
 from models import VectorDBConnectIfo
 from models.PGDBConnectInfo import PGDBConnectInfo
-from pipeline_config import PGDB_HSF_MS_CONNECT_INFO, RRF_RANKING_CONSTANT, RRF_TOP_K, VECTORDB_HSF_MS_CONNECT_INFO
+from pipeline_config import settings
+
 import psycopg
 
-from pipeline_config import EMBEDDING_PROVIDER, VECTOR_RETRIEVE_CHUNKS_LIMIT, TEXT_RETRIEVE_CHUNKS_LIMIT
 from used_models.embeddings.embed_factory import EmbeddingService 
+
+PGDB_HSF_MS_CONNECT_INFO = settings.pgdb_connect_info
+RRF_RANKING_CONSTANT = settings.config["rrf_ranking_constant"]
+RRF_TOP_K = settings.config["rrf_top_k"]
+VECTORDB_HSF_MS_CONNECT_INFO = settings.config["vectordb_connect_info"]
+
+EMBEDDING_PROVIDER = settings.config["embedding_provider"]
+VECTOR_RETRIEVE_CHUNKS_LIMIT = settings.config["vector_retrieve_chunks_limit"]
+TEXT_RETRIEVE_CHUNKS_LIMIT = settings.config["text_retrieve_chunks_limit"]
 
 def vector_search(query: str, vectordb_connect_info: VectorDBConnectIfo):
     
