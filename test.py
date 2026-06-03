@@ -1,4 +1,9 @@
+import json
+
 from PIPELINE._3_chunk.strategies.HSF.index_chunks import index_to_pgdb, store_imgs
+from PIPELINE._4_retrieve.multi_stages.hybrid_retriever import normalize_text_results, text_search
+from PIPELINE._4_retrieve.utils.get_final_chunk import greedy_add_chunks
+from PIPELINE._6_citation_postprocessing.validate_citation import filter_segments, merge_segments_to_text
 import psycopg
 from pipeline_config import settings
 pgdb_connect_info = settings.pgdb_connect_info
@@ -38,12 +43,32 @@ cursor = conn.cursor()
 # conn.close()
 
 from PIPELINE._4_retrieve.multi_stages.normal_retriever import normal_retrieve
-from PIPELINE._5_generate.generate import build_content_inputs
+from PIPELINE._5_generate.generate import build_content_inputs, generate_answer
 
 
-q = "what is software engineering?"
+q = "A stack is a data structure used to store elements. A stack is a last - in, first - out data structure. That is, the last element placed on the stack is the first element that can be removed from the stack. Elements can be placed on or removed from the to p of the stack only. The allowable operations for a stack are empty, full, push, pop and top. The empty operation returns true if there are no elements in the stack, false otherwise. The full operation returns true if the stack is filled to capaci ty, false otherwise. The push operation takes an element as an argument and places the element on top of the stack, if the stack is not full. If the stack is full, the push operation returns an error. The pop operation removes an element from the top of the stack, if the stack is not empty. If the stack is empty, the pop operation returns an error, otherwise, the top element is returned. The top operation returns the element on the top of the stack without removing the element from the stack, if the stack is not empty. The top operation returns an error if the stack is empty. Use an array to implement a stack data structure whose elements are integers. The stack may contain a maximum of 100 elements. Keep in mind the guidelines for programming style that were presented in this chapter."
 docs = normal_retrieve(query=q)
-content, context_text, img_ids = build_content_inputs(docs=docs, q=q, cursor=cursor)
-print(content)
-print(context_text)
-print(img_ids)
+print("Vector retrieve")
+for doc in docs:
+    print(doc["doc_id"])
+    print(doc["text"])
+    print(doc["score"])
+ 
+docs = text_search(query=q, cursor=cursor) 
+docs = normalize_text_results(rows=docs)   
+docs = greedy_add_chunks(ranked_chunks=docs)
+print("Text retrieve") 
+for doc in docs:
+    print(doc["doc_id"])
+    print(doc["text"])
+    print(doc["score"])   
+# answer, context_text, docs, embeded_texts = generate_answer(cursor=cursor, docs=docs, query=q)
+# print(answer)
+
+# answer_segments = json.loads(answer)
+# processed_segments = filter_segments(answer_segments, docs)
+
+# print(json.dumps(processed_segments, indent=4, ensure_ascii=False))
+
+# final_answer = merge_segments_to_text(processed_segments)
+# print(final_answer)

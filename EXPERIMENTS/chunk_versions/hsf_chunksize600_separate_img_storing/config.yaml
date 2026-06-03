@@ -1,3 +1,4 @@
+chunk_config: "./EXPERIMENTS/chunk_versions/hsf_chunksize600_separate_img_storing/config.yaml"
 bge_embedding_model: "bge-m3:latest"
 embedding_provider: "openai"
 openai_embedding_model: "text-embedding-3-small"

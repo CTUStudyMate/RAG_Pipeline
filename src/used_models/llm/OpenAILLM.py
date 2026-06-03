@@ -39,8 +39,7 @@ class OpenAIWrapper(BaseLLM):
                 {"role": "user",
                 "content":content}
             ],
-            temperature=0,
-            top_p=1
+            temperature=0, #seed
         )
 
         return response.output_text

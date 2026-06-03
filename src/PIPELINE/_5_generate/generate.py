@@ -38,11 +38,11 @@ MAX_IMAGES_PER_LLMCALL = settings.config["max_images_per_llmcall"]
 #     return context_text, images, image_refs
 
 
-system_prompt = """
+absenceBasedAbstain_system_prompt = """
 You are a helpful assistant that answers user questions using the provided context documents.
 
 ## Instructions:
-- DATA FIDELITY: Your answer must be strictly faithful to the provided context documents, which are the text stated in the <CONTEXT DOCUMENTS></CONTEXT DOCUMENTS> tag and the attached images or files if exist.
+- DATA FIDELITY: Your answer must be strictly faithful to the provided context documents, which are stated ONLY in the "CONTEXT DOCUMENTS" section and the attached images or files if exist.
 - Do NOT use external knowledge, assumptions, implications, or hallucinated facts.
 - If the context does not contain enough information to answer the question, return an empty array.
 - Be concise and precise.
@@ -57,7 +57,7 @@ You are a helpful assistant that answers user questions using the provided conte
         - "bullet"        → render as a bullet point (prefix with "- ")
         - "bullet_intro"  → the sentence that introduces a bullet list (followed by ":")
     - "segment": the text content of this segment (one factual claim)
-    - "citations": list of verbatim supporting strings from the <CONTEXT DOCUMENTS></CONTEXT DOCUMENTS> tag. If image mappings are provided, and a claim is derived from an image, include the corresponding image reference in citations.
+    - "citations": list of verbatim supporting strings from the CONTEXT DOCUMENTS section. If images are provided, and a claim is derived from an image, include the corresponding image reference in citations.
 
     Expected JSON Structure:
     [
@@ -75,7 +75,8 @@ You are a helpful assistant that answers user questions using the provided conte
                     "content": null,
                     "img_id": "image_0_1"
                 }
-            ]
+            ],
+            "type": null
         }
     ]  
     
@@ -90,8 +91,9 @@ You are a helpful assistant that answers user questions using the provided conte
 
     2. IMAGE CITATION RULE:
     - Any claim derived from visual information MUST include at least one image citation.
-    - Each image is introduced immediately before the image input using the format: "Image: <img_id>".
-    - Any visual claim MUST cite the exact img_id associated with the image from which the information was derived.
+    - Any visual claim MUST cite the exact image ID associated with the image from which the information was derived:
+        - For images provided in "CONTEXT DOCUMENTS" section, each image ID is introduced immediately before the image input using the format: "Image: <img_id>". 
+        - For images come from the user's question or user upload, ALWAYS cite it as: "query_evidence".
     - If a claim is based on image content and no valid image citation is provided, the claim is INVALID and MUST NOT be output.
     - Image citations MUST use only img_id values explicitly provided in the prompt.
     - Do NOT infer, guess, or fabricate image IDs.
@@ -102,26 +104,82 @@ You are a helpful assistant that answers user questions using the provided conte
         (2) a valid provided image identifier, omit the segment entirely rather than fabricating support.
 """
 
-# def build_prompt(query, context, image_refs):
-#     image_mapping_section = (
-#     "\n".join(image_refs)
-#     if image_refs
-#     else "No images retrieved."
-# )
-#     return f"""
-# ## CONTEXT DOCUMENTS
-# <CONTEXT DOCUMENTS>
-# {context}
-# </CONTEXT DOCUMENTS>
+evidenceBasedSynthesis_system_prompt = """
+You are a helpful assistant that answers user questions using the provided context documents.
 
-# ## IMAGE MAPPING
-# <IMAGE MAPPING>
-# {image_mapping_section}
-# </IMAGE MAPPING>
+## Instructions:
+- DATA FIDELITY: Your answer must be strictly faithful to the provided context documents, which are stated ONLY in the "CONTEXT DOCUMENTS" section and the attached images or files if exist.
+- Do NOT use external knowledge, assumptions, implications, or hallucinated facts.
+- If the context does not contain explicit answer sentences, you MAY synthesize an answer ONLY by combining facts that are explicitly stated in the context.
+    - You are only allowed to combine facts when:
+    (1) each individual fact is explicitly present in the context, AND
+    (2) the relationship between those facts is directly stated in the context OR is a trivial logical combination (e.g., cause → effect explicitly stated, definition → example explicitly stated)
 
-# ## USER QUESTION
-# {query}
-#"""
+    - You MUST NOT:
+    - infer new relationships between entities, papers, or categories that are not explicitly stated
+    - introduce classification memberships, citations, authorship, or “example-of-category” relationships unless explicitly stated
+    - use general world knowledge to bridge missing links
+
+- If the provided context does not contain sufficient information to directly answer the question, do not attempt to guess or output an empty array. Instead, return exactly one segment with "type": "abstained" and the exact text: "The chatbot can't answer this question. Please try again with another question.".
+- Be concise and precise.
+
+## Output format:
+    Return a JSON array. Each item represents one segment of the final answer.
+
+    Each segment has three fields:
+    - "role": how this segment should be rendered when concatenated. Must be one of:
+        - "sentence"      → append directly after previous segment (separated by a space)
+        - "paragraph"     → start a new paragraph (insert blank line before this segment)
+        - "bullet"        → render as a bullet point (prefix with "- ")
+        - "bullet_intro"  → the sentence that introduces a bullet list (followed by ":")
+    - "segment": the text content of this segment (one factual claim)
+    - "citations": list of verbatim supporting strings from the CONTEXT DOCUMENTS section. If images are provided, and a claim is derived from an image, include the corresponding image reference in citations.
+
+    Expected JSON Structure:
+    [
+        {
+            "role": "paragraph" | "bullet_intro" | "bullet",
+            "segment": "one factual claim",
+            "citations": [
+                {
+                    "type": "source_text",
+                    "content": "exact verbatim supporting text from the context",
+                    "img_id": null
+                },
+                {
+                    "type": "img",
+                    "content": null,
+                    "img_id": "image_0_1"
+                }
+            ],
+            "type": null
+        }
+    ]  
+    
+
+## CITATION RULES:
+
+    1. TEXT CITATIONS:
+    - Every text citation must be a VERBATIM substring of the text inside "CONTEXT DOCUMENTS" section.
+    - Before including a text citation, verify that the cited content appears word-for-word in the provided context.
+    - Text citations must NOT be paraphrased, modified, truncated, or shortened (e.g., using "...").
+    - Each text citation must be a complete sentence or phrase from the original context text.
+
+    2. IMAGE CITATION RULE:
+    - Any claim derived from visual information MUST include at least one image citation.
+    - Any visual claim MUST cite the exact image ID associated with the image from which the information was derived:
+        - For images provided in "CONTEXT DOCUMENTS" section, each image ID is introduced immediately before the image input using the format: "Image: <img_id>". 
+        - For images come from the user's question or user upload, ALWAYS cite it as: "query_evidence".
+    - If a claim is based on image content and no valid image citation is provided, the claim is INVALID and MUST NOT be output.
+    - Image citations MUST use only img_id values explicitly provided in the prompt.
+    - Do NOT infer, guess, or fabricate image IDs.
+
+    3. GENERAL RULES:
+    - If a segment cannot be supported by either:
+        (1) a verifiable verbatim text citation, or
+        (2) a valid provided image identifier, omit the segment entirely rather than fabricating support.
+"""
+
 pgdb_connect_info = settings.pgdb_connect_info
 
 def get_base64(img_ids, cursor):
@@ -139,7 +197,8 @@ def get_base64(img_ids, cursor):
     
 def build_content_inputs(docs, q, cursor):
     content = []
-    context_parts = []
+    context_parts = [] # chỉ source text từ tài liệu 
+    embedded_parts = [] # nội dung được dùng để embed và retrieve, bao gồm cả mô tả ảnh
     img_ids = []
     current_img_num = 0
     
@@ -160,12 +219,14 @@ def build_content_inputs(docs, q, cursor):
     for i, doc in enumerate(docs):
         text_content = doc.get("text", "")
         metadata = doc.get("metadata", {})
+        embedded_content = metadata.get("embeded_content", "")
         
         content.append({
             "type": "input_text", 
              "text": f"\n[{i}]\n{text_content}\n"
         })
-        context_parts.append(f"\n[{i}]\n{text_content}\n")
+        context_parts.append(f"\n[{i}]\n{text_content}\n") # này mới là thứ đưa vào cho llm trả lời
+        embedded_parts.append(f"\n[{i}]\n{embedded_content}\n")
     
         if "images" in metadata and metadata["images"]:
             for j, img in enumerate(metadata["images"]):
@@ -192,7 +253,8 @@ def build_content_inputs(docs, q, cursor):
         "text": f"""### USER QUESTION\n{q}\n### ANSWER"""
     }) 
     context_text = "\n".join(context_parts)
-    return content, context_text, img_ids
+    embedded_text = "\n".join(embedded_parts)
+    return content, context_text, embedded_text
          
  
 
@@ -200,70 +262,104 @@ def build_content_inputs(docs, q, cursor):
 # llm = get_llm(LLM_PROVIDER) 
 
 
-def generate_answer(query, docs, max_retries=2):
-    # docs đưa vô hàm này là phải được chốt rồi
-    content, context_text, img_ids = build_content_inputs(docs=docs, q=query)
-    
-    # for attempt in range(max_retries + 1):
-    #     answer = llm.generate(system_prompt=system_prompt, content=content)
-    #     segments = json.loads(answer)
-        
-    #     violations = validate_citations(segments)
-    #     if not violations:
-    #         return segments, context_text
-        
-    #     if attempt < max_retries:
-    #         prompt = build_prompt_with_feedback(
-    #             query, context_text, image_refs, violations
-    #         )
-    answer = llm.generate(system_prompt=system_prompt, content=content)
-    return answer, context_text, docs, img_ids
+JSON_FIX_PROMPT = """
+You are a JSON repair tool.
 
-# def validate_citations(segments, image_refs):
-#     """Trả về list các vi phạm."""    
-#     violations = []
-#     valid_img_ids = [img_ref.split(": ")[0] for img_ref in image_refs]
-    
-#     for i, seg in enumerate(segments):
-#         citations = seg.get("citations", [])
-        
-#         # Vi phạm: citations rỗng hoàn toàn
-#         if not citations:
-#             violations.append(
-#                 f"Segment {i} ('{seg['segment'][:40]}...') "
-#                 f"has no citations."
-#             )
-#             continue
-        
-#         # Vi phạm: img_id không hợp lệ
-#         for c in citations:
-#             if c["type"] == "img" and c["img_id"] not in valid_img_ids:
-#                 violations.append(
-#                     f"Segment {i}: invalid img_id '{c['img_id']}'. "
-#                     f"Valid IDs: {valid_img_ids}"
-#                 )
-    
-#     return violations
+Your task:
+- Convert the given text into VALID JSON.
+- Preserve the original content as much as possible.
+- Output ONLY valid JSON.
+- Do not wrap with markdown code fences.
+"""
 
 
-# def build_prompt_with_feedback(query, context, image_refs, violations):
-#     feedback = "\n".join(f"- {v}" for v in violations)
-#     return f"""
-# ## CONTEXT DOCUMENTS
-# <CONTEXT DOCUMENTS>
-# {context}
-# </CONTEXT DOCUMENTS>
+def generate_answer(cursor, query, docs, max_retries=3):
+    content, source_context_text, embedded_text = build_content_inputs(
+        docs=docs,
+        q=query,
+        cursor=cursor
+    )
 
-# ## IMAGE MAPPING
-# <IMAGE MAPPING>
-# {chr(10).join(image_refs)}
-# </IMAGE MAPPING>
+    # -----------------------
+    # PASS 1: STRICT MODE
+    # -----------------------
+    answer = llm.generate(
+        system_prompt=absenceBasedAbstain_system_prompt,
+        content=content
+    )
 
-# ## PREVIOUS ATTEMPT VIOLATIONS
-# Your previous response had the following citation errors.
-# Fix ALL of them in your new response:
-# {feedback}
+    # -----------------------
+    # PASS 1 JSON REPAIR LOOP
+    # -----------------------
+    parsed = None
 
-# ## USER QUESTION
-# {query}
-# """
+    for _ in range(max_retries):
+        try:
+            parsed = json.loads(answer)
+            break
+        except json.JSONDecodeError:
+            repair_prompt = f"""
+The following text is invalid JSON.
+
+Fix it into valid JSON.
+
+TEXT:
+{answer}
+"""
+
+            answer = llm.generate(
+                system_prompt=JSON_FIX_PROMPT,
+                content=[{
+                    "type": "input_text",
+                    "text": repair_prompt
+                }]
+            )
+
+    # nếu vẫn fail sau retry
+    if parsed is None:
+        return "", source_context_text, docs, embedded_text
+
+    # -----------------------
+    # PASS 1 SUCCESS CASE
+    # -----------------------
+    if isinstance(parsed, list) and len(parsed) > 0:
+        return answer, source_context_text, docs, embedded_text
+
+    # -----------------------
+    # PASS 2: EVIDENCE SYNTHESIS
+    # -----------------------
+    print("! Strict-grounded returned empty answer. Turn to Evidence-based.")
+    answer = llm.generate(
+        system_prompt=evidenceBasedSynthesis_system_prompt,
+        content=content
+    )
+
+    # -----------------------
+    # PASS 2 JSON REPAIR LOOP
+    # -----------------------
+    parsed = None
+
+    for _ in range(max_retries):
+        try:
+            parsed = json.loads(answer)
+            return answer, source_context_text, docs, embedded_text
+
+        except json.JSONDecodeError:
+            repair_prompt = f"""
+The following text is invalid JSON.
+
+Fix it into valid JSON.
+
+TEXT:
+{answer}
+"""
+
+            answer = llm.generate(
+                system_prompt=JSON_FIX_PROMPT,
+                content=[{
+                    "type": "input_text",
+                    "text": repair_prompt
+                }]
+            )
+
+    return "", source_context_text, docs, embedded_text

@@ -1,0 +1,1 @@
+In citation validation: when checking whether an image id used as a citation for a segment is valid, the result is returned as a (chunk_id, img_id) pair. However, if the image is provided by the user or included in the query, it is returned as (None, "query_evidence").

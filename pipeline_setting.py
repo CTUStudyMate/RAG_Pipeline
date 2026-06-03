@@ -31,18 +31,38 @@ class Settings(BaseSettings):
     pgdb_user: str
     pgdb_password: str
     
-    #pgdb_chunks_table
-    #pgdb_imgs_table
-
-    # loaded yaml
     config: dict
+    
+    @staticmethod
+    def deep_merge(base: dict, override: dict):
+        result = dict(base)
+
+        for k, v in override.items():
+            if (
+                k in result
+                and isinstance(result[k], dict)
+                and isinstance(v, dict)
+            ):
+                result[k] = Settings.deep_merge(result[k], v)
+            else:
+                result[k] = v
+
+        return result  
 
     @classmethod
     def load(cls, config_path: str, env_file=".env"):
         data = yaml.safe_load(Path(config_path).read_text())
+        data = dict(data)
+        chunk_path_str = data.pop("chunk_config", None)
+        chunk_cfg = {}
+        if chunk_path_str:
+            chunk_cfg = yaml.safe_load(Path(chunk_path_str).read_text())
+
+        merged_config = Settings.deep_merge(chunk_cfg, data)
+
 
         return cls(
-            config=data,
+            config=merged_config,
         )
 
 
@@ -57,4 +77,6 @@ class Settings(BaseSettings):
             chunks_table=self.config["pgdb"]["chunks_table"],
             images_table=self.config["pgdb"]["images_table"],
         )
+        
+      
             

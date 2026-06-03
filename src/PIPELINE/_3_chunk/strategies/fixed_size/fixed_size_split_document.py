@@ -3,7 +3,9 @@ from pathlib import Path
 from docling_core.types.doc.document import DoclingDocument, RefItem
 from docling_core.transforms.chunker.hierarchical_chunker import ChunkingDocSerializer
 
-from pipeline_config import CHUNK_MAX_TOKEN, OVERLAP_TOKENS
+from pipeline_config import settings
+CHUNK_MAX_TOKEN = settings.config["chunk_max_token"]
+OVERLAP_TOKENS = settings.config["overlap_tokens"]
 
 def fixed_estimated_token_chunk(text, max_tokens=CHUNK_MAX_TOKEN, overlap_tokens=OVERLAP_TOKENS):
     # convert token to character
