@@ -1,0 +1,48 @@
+chunk_config: "./EXPERIMENTS/chunk_versions/fixed_chunksize600_separate_img_storing/config.yaml"
+bge_embedding_model: "bge-m3:latest"
+embedding_provider: "openai"
+openai_embedding_model: "text-embedding-3-small"
+
+llm_provider: "openai"
+llm_model: "gpt-4.1-mini"
+
+# common
+max_pages_per_batch: 15
+write_file_after_n_stream_elements: 100
+write_file_after_max_stream_elements: 200
+chunk_max_token: 600
+chunk_min_token: 200
+overlap_tokens: 80
+
+image_token_estimate: 300
+token_budget: 2000
+
+####### store and debug ##################
+chunk_from_atomic_test_filepath: "EXPERIMENTS/chunk_versions/hsf_chunksize600_separate_img_storing/debug_data/processed_atomics.json"
+token_tree_test_filepath: "EXPERIMENTS/chunk_versions/hsf_chunksize600_separate_img_storing/debug_data/token_tree.json"
+final_chunks_test_filepath: "EXPERIMENTS/chunk_versions/hsf_chunksize600_separate_img_storing/debug_data/final_chunks.json"
+stream_elements_filepath: "EXPERIMENTS/chunk_versions/hsf_chunksize600_separate_img_storing/debug_data/processed_atomics.json"
+tree_filepath: "EXPERIMENTS/chunk_versions/hsf_chunksize600_separate_img_storing/debug_data/tree.json"
+chunking_time_log_file: "EXPERIMENTS/chunk_versions/hsf_chunksize600_separate_img_storing/logs/chunk_time.txt"
+##########################################
+
+
+pgdb:
+  chunks_table: "hsf_600_seperate_img_160526_chunks"
+  images_table: "hsf_600_seperate_img_160526_imgs"
+
+vector_db_path: "EXPERIMENTS/chunk_versions/hsf_chunksize600_separate_img_storing/vectorchunks_storage"
+vector_db_collection: "hsf_chunksize600_separate_img_storing_170526"
+
+# nên sửa code thành dùng chung obj này, không dùng biến lẻ ở trên nữa
+vectordb_connect_info:
+  db_path: "EXPERIMENTS/chunk_versions/hsf_chunksize600_separate_img_storing/vectorchunks_storage"
+  collection: "hsf_chunksize600_separate_img_storing_170526"
+
+################################
+log_file: "hahaha.txt"
+rrf_ranking_constant: 60
+rrf_top_k: 20
+vector_retrieve_chunks_limit: 30
+text_retrieve_chunks_limit: 30
+max_images_per_llmcall: 3

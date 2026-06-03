@@ -147,9 +147,9 @@ def parse_pdf_into_atomic_units(folder, hierarchy_tree, conn, passed_cursor, ope
         elements_in_streams.append(stream_elements.popleft())
         
     #====Test streams element =======
-    # with open(STREAM_ELEMENTS_FILEPATH, "a", encoding="utf-8") as f:
-    #     json.dump(elements_in_streams, f, ensure_ascii=False, default=str, indent=2)
-    #     f.write("\n")
+    with open(STREAM_ELEMENTS_FILEPATH, "a", encoding="utf-8") as f:
+        json.dump(elements_in_streams, f, ensure_ascii=False, default=str, indent=4)
+        f.write("\n")
     #===================================
         
     insert_atomic_batch(elements_in_streams, doc_db_cursor)

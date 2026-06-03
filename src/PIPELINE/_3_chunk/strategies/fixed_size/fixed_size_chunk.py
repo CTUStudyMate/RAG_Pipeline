@@ -5,7 +5,9 @@ import time
 from PIPELINE._3_chunk.strategies.fixed_size.fixed_size_index import fixed_size_index_chunks
 from PIPELINE._3_chunk.strategies.fixed_size.fixed_size_split_document import fixed_size_document_split
 from common_utils.filename_handle import normalize_filename
-from pipeline_config import FIXEDSIZE_CHUNKING_TIME_LOG_FILE, VECTOR_DB_FIXEDSIZE_COLLECTION
+from pipeline_config import settings
+FIXEDSIZE_CHUNKING_TIME_LOG_FILE = settings.config["chunking_time_log_file"]
+VECTOR_DB_FIXEDSIZE_COLLECTION = settings.config["vectordb_connect_info"]["collection"]
 from src.PIPELINE._1_ingest.ingest import file_path
 
 
@@ -15,7 +17,7 @@ def fixed_size_chunk(file_path):
     texts = fixed_size_document_split(doc_cache_dir)
     # filename = os.path.basename(file_path)
     # filename = re.sub(r'[^a-zA-Z0-9._-]', '_', filename)
-    fixed_size_index_chunks(collection_name=VECTOR_DB_FIXEDSIZE_COLLECTION, chunks=texts)
+    fixed_size_index_chunks(file_path=file_path, chunks=texts)
    
 start = time.perf_counter()    
 fixed_size_chunk(file_path=file_path)

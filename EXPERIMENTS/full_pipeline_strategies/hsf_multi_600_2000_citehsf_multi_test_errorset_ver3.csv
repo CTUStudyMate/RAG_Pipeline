@@ -1,0 +1,1290 @@
+question,context,initial_answer,answer,retrieve_time_sec,generate_time_sec
+"Pamela Zave has proposed a classification scheme for organizing the different types of rese arch that go on in the area of software requirements (P. Zave (1997). “Classification of research efforts in requirements engineering.” ACM Computing Surveys, 29(4): 315 - 321). Choose one of the categories she presents and write a brief (one paragraph) des cription of how research in this area is of use to software developers. Track down one of the papers she cites as an example of research in this category, and summarize the problem it addresses and the results it presents.","
+[0]
+[SECTION]: Evaluating Products, Processes, and Resources > 12.4 Evaluating Products > Software Reusability
+[CONTENT]: It is possible to classify the components in a hierarchical scheme, much as books are organized in a library. A top-level category is divided into subcategories, which in turn  are  divided  into  subcategories, and  so  on, as  shown  in  Figure  12.6. However, this approach is inflexible and new topics can be added easily only at the lowest level.
+Business Moreover,extensive cross-referencing is necessary, since we must be able to find a texthandling routine under reporting as well as under editing, for example.
+A solution to this problem is Prieto-Díaz's faceted classification scheme (PrietoDíaz and Freeman 1987). Instead of using a hierarchy, each component is described by an ordered list of characteristics called facets. A facet is a kind of descriptor that helps to identify the component, and a collection of facets allows us to identify several characteristics at once. For example, the facets of reusable code may be Each code component is identified by an entry for each of the five facets. Thus, a particular routine might be labeled as <switching system, sort, telephone number, Ada, UNIX>
+[FIGURE_DESCRIPTIONS]
+[0] Hierarchical classification scheme diagram labeled as FIGURE 12.6. The top-level node is 'Business applications'. It branches into three second-level nodes: 'Edit', 'Update', and 'Report'. Each of these second-level nodes further branches into two third-level nodes. 'Edit' branches into 'Text' and 'Graphics'. 'Update' branches into 'Text' and 'Graphics'. 'Report' branches into 'Text' and 'Graphics'. The diagram uses rectangular boxes connected by lines to represent the hierarchy and classification relationships.
+
+
+
+[1]
+[SECTION]: Capturing the Requirements > 4.13 Real-Time Example > 4.14 WHAT THIS CHAPTER MEANS FOR YOU
+[CONTENT]: In  this  chapter, we  have  shown  the  best  practices  for  developing  quality  software requirements. We have seen that requirements activities should not be performed by the software developer in isolation: definition and specification efforts require working closely with users, customers, testers, designers, and other team members. Still, there are several skills that are important for you to master on your own:
+ - It  is  essential  that  the  requirements  definition  and  specification  documents describe the problem, leaving solution selection to the designers. The best way of ensuring that you do not stray into the solution space is to describe requirements and specifications in terms of environmental phenomena.
+ - There are a variety of sources and means for eliciting requirements. There are both functional and quality requirements to keep in mind.The functional requirements explain what the system will do, and the quality requirements constrain solutions in terms of safety, reliability, budget, schedule, and so on.
+ - There are many different types of definition and specification techniques. Some are descriptive, such as entity-relationship diagrams and logic, while others are behavioral, such as event traces, data-flow diagrams, and functions. Some have graphical notations, and some are based on mathematics. Each emphasizes a different  view  of  the  problem, and  suggests  different  criteria  for  decomposing  a problem into subproblems. It is often desirable  to  use  a  combination  of  techniques to specify the different aspects of a system.
+ - The specification techniques also differ in terms of their tool support, maturity, understandability, ease of use, and mathematical formality. Each one should be judged for the project at hand, as there is no best universal technique.
+
+
+[2]
+[SECTION]: Capturing the Requirements > 4.2 Requirements Elicitation > SIDEBAR 4.3 USING VIEWPOINTS TO MANAGE INCONSISTENCY
+[CONTENT]:  - Software  engineers  or  other  technology  experts: These  experts  ensure  that  the product is technically and economically feasible. They can educate the customer about innovative hardware and software technologies, and can recommend new functionality that takes advantage of these technologies. They can also estimate the cost and development time of the product.
+Each stakeholder has a particular view of the system and how it should work, and often these views conflict. One of the many skills of a requirements analyst is the ability to understand each view and capture the requirements in a way that reflects the concerns of each participant. For example, a customer may specify that a system perform a particular task, but the customer is not necessarily the user of the proposed system.The user may want the task to be performed in three modes: a learning mode, a novice mode, and an expert mode; this separation will allow the user to learn and master the system gradually. Some systems are implemented in this way, so that new users can adapt to the new system gradually. However, conflicts can arise when ease of use suggests a slower system than response-time requirements permit.
+Also,different participants may expect differing levels of detail in the requirements documentation, in which case the requirements will need to be packaged in different ways for different people. In addition, users and developers may have preconceptions (right or wrong) about what the other group values and how it acts. Table 4.1 summarizes some of the common stereotypes.This table emphasizes the role that human interaction plays in the development of software systems; good requirements analysis requires excellent interpersonal skills as well as solid technical skills.The book's Web site contains suggestions for addressing each of these differences in perception.
+In addition to interviewing stakeholders, other means of eliciting requirements include the old system continues to be used because it provides some critical function that the designers of the new system overlooked The Volere requirements process model (Robertson and Robertson 1999), as shown in Figure 4.2, suggests some additional sources for requirements, such as templates and libraries of requirements from related systems that we have developed.
+
+
+[3]
+[SECTION]: Capturing the Requirements > 4.3 Types Of Requirements > Two Kinds of Requirements Documents
+[CONTENT]: A requirements definition is a complete listing of everything the customer wants to achieve.The document expresses requirements by describing the entities in the environment in which the proposed system will be installed, and by describing the desired constraints on, monitoring of, or transformations of those entities. The purpose of the proposed system is to realize these requirements (Zave and Jackson 1997). Thus, the requirements are written entirely in terms of the environment, describing how the environment will be affected by the proposed system. Our turnstile example has two requirements: (1) no one should enter the zoo without paying an entrance fee, and (2) for every entrance fee paid, the system should not prevent a corresponding entry. 1 The requirements definition is typically written jointly by the client and the requirements analyst, and it represents a contract describing what functionality the developer promises to deliver to the client.
+","[
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""Pamela Zave's classification scheme for organizing research in software requirements includes various categories that help structure the field and guide research efforts. One such category is the study of requirements elicitation techniques, which focuses on methods to effectively gather and understand the needs and constraints of stakeholders."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Pamela Zave has proposed a classification scheme for organizing the different types of research that go on in the area of software requirements (P. Zave (1997). “Classification of research efforts in requirements engineering.” ACM Computing Surveys, 29(4): 315 - 321)."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""Research in requirements elicitation is of great use to software developers because it provides systematic approaches to capture the diverse and often conflicting views of stakeholders, ensuring that the final requirements accurately reflect the needs of users, customers, and other participants. This research helps developers avoid misunderstandings and incomplete requirements, which are common causes of project failure."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Each stakeholder has a particular view of the system and how it should work, and often these views conflict. One of the many skills of a requirements analyst is the ability to understand each view and capture the requirements in a way that reflects the concerns of each participant."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""One example of research cited by Zave in this category is the Volere requirements process model (Robertson and Robertson 1999), which provides a structured approach to eliciting requirements from multiple sources, including stakeholders, templates, and libraries of requirements from related systems. This model addresses the problem of incomplete or overlooked requirements by offering a comprehensive framework for gathering and organizing requirements."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""The Volere requirements process model (Robertson and Robertson 1999), as shown in Figure 4.2, suggests some additional sources for requirements, such as templates and libraries of requirements from related systems that we have developed."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""The results presented by the Volere model include improved completeness and clarity of requirements, better communication among stakeholders, and a more manageable requirements specification process. This ultimately leads to higher quality software that better meets user needs and reduces costly changes during development."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""In addition to interviewing stakeholders, other means of eliciting requirements include the old system continues to be used because it provides some critical function that the designers of the new system overlooked The Volere requirements process model (Robertson and Robertson 1999), as shown in Figure 4.2, suggests some additional sources for requirements, such as templates and libraries of requirements from related systems that we have developed."",
+                ""img_id"": null
+            }
+        ]
+    }
+]","Pamela Zave's classification scheme for organizing research in software requirements includes various categories that help structure the field and guide research efforts. One such category is the study of requirements elicitation techniques, which focuses on methods to effectively gather and understand the needs and constraints of stakeholders.
+
+Research in requirements elicitation is of great use to software developers because it provides systematic approaches to capture the diverse and often conflicting views of stakeholders, ensuring that the final requirements accurately reflect the needs of users, customers, and other participants. This research helps developers avoid misunderstandings and incomplete requirements, which are common causes of project failure.
+
+One example of research cited by Zave in this category is the Volere requirements process model (Robertson and Robertson 1999), which provides a structured approach to eliciting requirements from multiple sources, including stakeholders, templates, and libraries of requirements from related systems. This model addresses the problem of incomplete or overlooked requirements by offering a comprehensive framework for gathering and organizing requirements.
+
+The results presented by the Volere model include improved completeness and clarity of requirements, better communication among stakeholders, and a more manageable requirements specification process. This ultimately leads to higher quality software that better meets user needs and reduces costly changes during development.",2.296,9.117
+"In section 6.3, a set of questions was given for helping to find potential problems with a set of use cases. Why is it important if two different terms are being used to refer to the same entity?","
+[0]
+[SECTION]: Capturing the Requirements > 4.5 Modeling Notations > Example: Use Cases
+[CONTENT]: Each use case encompasses several possible scenarios, some successful and some not, but all related to some usage of the system. External to the use-case diagram, the use cases and their variants are detailed as textual event traces. Each use case identifies pre-conditions and alternative behavior if the pre-conditions are not met, such as looking for a lost book; post-conditions, which summarize the effects of the use case; and a normal, error-free scenario comprising a sequence of steps performed by actors or by the system.A completely detailed use case specifies all possible variations of each step in the normal scenario, including both valid behaviors and errors. It also describes the possible scenarios that stem from the valid variations and from recoverable failures. If there is a sequence of steps common to several use cases, the sequence can be extracted out to form a subcase that can be called by a base use case like a procedure call. In the use-case diagram, we draw a dashed arrow from a base case to each of its subcases and annotate  these  arrows  with  stereotype <<include>> . 4 A  use  case  can  also  be appended with an extension subcase that adds functionality to the end of the use case. In the use-case diagram, we draw a dashed arrow from the extension subcase to the base  use  case  and  annotate  the  arrow  with  stereotype <<extend>> . Examples  of stereotypes are included in Figure 4.15.
+(footnote: 4 In UML, a stereotype is a meta-language facility for extending a modeling notation, allowing the user to augment one of the notation's constructs with a new < <keyword> >.)
+
+
+[1]
+[SECTION]: Capturing the Requirements > 4.5 Modeling Notations > Example: Use Cases
+[CONTENT]: A UML use-case diagram (OMG 2003) is similar to a top-level data-flow diagram that depicts observable, user-initiated functionality in terms of interactions between the system and its environment.A large box represents the system boundary. Stick figures outside the box portray actors, both humans and systems, and each oval inside the box is a use  case  that  represents  some  major  required  functionality  and  its  variants. A  line between an actor and a use case indicates that the actor participates in the use case. Use cases are not meant to model all the tasks that the system should provide. Rather, they are used to specify user views of essential system behavior. As such, they model only system  functionality  that  can  be  initiated  by  some  actor  in  the  environment. For example, in Figure 4.15, key library uses include borrowing a book, returning a borrowed book, and paying a library fine.
+[FIGURE 4.15 Library use cases.] 
+[FIGURE_DESCRIPTIONS]
+[0] Use case diagram depicting interactions between actors and use cases in a library system. Actors include Patron, Librarian, and Library Inventory. Patron interacts with use cases: pay fines, find item, return item, and borrow item. Borrow item use case includes check fines and extends find item. Librarian interacts with reserve item and unreserve item use cases. Reserve item extends recall item. Library Inventory is associated with borrow item. Relationships include include and extend dependencies between use cases, indicated by dashed arrows labeled <<include>> and <<extend>>. The diagram is enclosed in a system boundary box.
+
+
+
+[2]
+[SECTION]: Modeling the Process and Life Cycle > 2.5 Information Systems Example
+[CONTENT]: Because we want to use the spiral model to help us manage risk, we must include a characterization of 'risk' in our process model.That is, risk is an artifact that we must describe, so we can measure and track risk in each iteration of our spiral. Each potential problem has an associated risk, and we can think of the risk in terms of two facets: probability and severity. Probability is the likelihood that a particular problem will occur, and severity is the impact it will have on the system. For example, suppose we are considering the problem of insufficient training in the development method being used to build the Piccadilly system. We may decide to use an object-oriented approach, but we may find that the developers assigned to the project have little or no experience in object orientation.This problem may have a low probability of occurring, since all new employees are sent to an intensive, four-week course on object-oriented development. On the other hand, should the problem actually occur, it would have a severe impact on the ability of the development team to finish the software within the assigned schedule. Thus, the probability of occurrence is low, but the severity is large.
+We can represent these risk situations in a Lai artifact table, shown in Table 2.2. Here, risk is the artifact, with subartifacts probability and severity. For simplicity, we have chosen only two states for each subartifact: low and high for probability, and small and large for severity. In fact, each of the subartifacts can have a large range of states (such as extremely small, very small, somewhat small, medium, somewhat high, very high, extremely high), leading to many different states for the artifact itself.
+
+
+[3]
+[SECTION]: Capturing the Requirements > 4.13 Real-Time Example > 4.14 WHAT THIS CHAPTER MEANS FOR YOU
+[CONTENT]:  - Requirements questions can be answered using models or prototypes.In either case, the goal is to focus on the subproblem that is at the heart of the question, rather than necessarily modeling or prototyping the entire problem. If prototyping, you need to decide ahead of time whether the resulting software will be kept or thrown away.
+ - Requirements must be validated to ensure that they accurately reflect the customer's expectations.The requirements should also be checked for completeness,
+correctness, consistency, feasibility, and  more, sometimes  using  techniques  or tools that are associated with the specification methods you have chosen. Finally, you should verify that the specification fulfills the requirements.
+
+
+[4]
+[SECTION]: Capturing the Requirements > 4.5 Modeling Notations > Entity-Relationship Diagrams
+[CONTENT]: The simplicity of ER notations is deceptive; in fact, it is quite difficult to use ER modeling notations well in practice. It is not always obvious at what level of detail to model a particular problem, even though there are only three major language constructs. For example, should the barrier and coin slot be modeled as entities, or should they  be  represented  by  a  more  abstract  turnstile  entity? Also, it  can  be  difficult  to decide what data are entities and what data are attributes. For example, should the lock be an entity? There are arguments for and against each of these choices. The primary criteria for making decisions are whether a choice results in a clearer description, and whether a choice unnecessarily constrains design decisions.
+
+
+[5]
+[SECTION]: Testing the System > 9.15 Term Project
+[CONTENT]: We have discussed how designs may not be as diverse as we would like to think they are. Compare your design with those of other students or teams in your class. How are they different? How are they the same? For each kind of testing, would the similarities or differences in design help or hinder the discovery of faults in code?
+",[],,1.505,2.586
+"Think about experiences you have had with training and documentation resources. Are there any cases where these aids have interfered with your usage of the software system? If so, how would you change the documentation or training aid?","
+[0]
+[SECTION]: Delivering the System > 10.1 Training > Training Aids
+[CONTENT]: Training can be done in many ways. No matter how training is provided, it must offer information to users and operators at all times, not just when the system is first delivered. If at some time users forget how to access a file or use a new function, training includes methods to find and learn this information.
+Documents. Formal  documentation  accompanies  every  system  and  supports training.The documents contain all the information needed to use the system properly and efficiently. Existing  in  separate  manuals  or  online, documents  are  accessible  to users and operators as the system is functioning. The system manuals are often similar to an automobile owner's manual; they are references to be used when a problem or question arises.You may not read your car owner's manual from cover to cover before you put the key in the ignition and go for a drive; likewise, users and operators do not always  read  training  documents  before  trying  to  use  the  system. In  fact, one  study showed that only 10% to 15% of the users in an intensive training program read the manual at all (Scharer 1983). Six months later, no one else had read the user manual, and replacement pages with revised information had not been filed in the manual. In this and many other cases, users may prefer well-defined icons, online help, demonstrations, and classes to learn how the system works.
+Icons and Online Help. A system can be designed so that its interface with the user makes system functions clear and easy to understand. Most computer-based systems follow the example of Apple and Xerox in using icons to depict a user's choice of system functions. A click of the mouse selects an icon, and a second click invokes the function.Training for such systems is relatively simple, since the functions are more easily remembered by scanning the icons than by recalling commands and syntax.
+
+
+[1]
+[SECTION]: Delivering the System > 10.5 What This Chapter Means For You
+[CONTENT]: In this chapter, we have looked at the training and documentation necessary to support system delivery.As a developer, you should remember that
+ - training and documentation should be planned and tracked from the project's beginning
+ - training and documentation software should be integrated with the regular system software
+ - all training and documentation modules and documents should take into account the varying needs of different audiences: users, operators, customers, programmers, and others who work with or interact with the system
+
+
+[2]
+[SECTION]: Delivering the System > 10.1 Training > Training Aids
+[CONTENT]: Similarly, online help makes training easier. The user can scan additional information about a function's purpose or use without having to take the time to search through paper documents. Sophisticated online help that makes use of hypermedia technology allows the user to delve into collections of related online documents for as much detail as needed for understanding. However, as described in Sidebar 10.1, automated training requires the same kind of maintenance as any other software system.
+
+
+[3]
+[SECTION]: Delivering the System > 10.6 What This Chapter Means For Your Development Team
+[CONTENT]: Your  development  team  must  not  leave  training  and  documentation  for  the  last minute.Training and documentation can be planned as soon as the requirements analysis is complete. In fact, user's manuals should be written from the requirements at the same time that testers are writing scripts for system and acceptance testing. Thus, the trainers and documenters should maintain constant contact with all developers, so that changes to system requirements and design can be reflected in the documentation and training materials.
+Moreover, updates  to  training  and  documentation  can  be  planned  early. The development team can put in place ways to access updates from a central location or to download them to users automatically from the Internet or Web sites. In particular, the documentation  can  be  kept  current, reporting  on  items  such  as  known  faults  (and work-arounds),new functionality,new fault corrections, and other failure-related information.The updates can also remind users and operators of upcoming training courses, refresher courses, frequently asked questions, user group meetings, and other information useful to users, operators, and programmers.
+
+
+[4]
+[SECTION]: Delivering the System > 10.2 Documentation > Types of Documentation
+[CONTENT]: There are several considerations involved in producing training and reference documents. Each can be important in determining whether the documentation will be used successfully.
+Considering the Audience. A computer-based system is used by a variety of people. In addition to users and operators, other members of the development team and the customer staff read documentation when questions arise or changes are proposed and made. For example, suppose an analyst is working with a customer to determine whether to build a new system or modify an old one. The analyst reads a system overview to understand what the current system does and how it does it.This overview for the analyst is different from one written for a user; the analyst must know about computing details that are of no interest to a user. Similarly, descriptions needed by operators are of no importance to a user.
+For example,the S-PLUS package (version 3.0,from MathSoft,Seattle,Washington) came with several books, including Read Me First . Each book is designed for a different audience  and  has  a  different  purpose. Read  Me  First begins  with  a  Documentation Roadmap, describing in four brief pages each of the other books included in the documentation:
+ - A Gentle Introduction to S-PLUS for the novice computer user
+ - A Crash Course in S-PLUS for the experienced computer user
+ - S-PLUS User's Manual , explaining how to get started, manipulate data, and use advanced graphics
+ - S-PLUS  Guide  to  Statistical  and  Mathematical  Analysis , describing  statistical modeling
+ - S-PLUS  Programmer's  Manual , explaining  the  S  and  S-PLUS  programming languages
+ - S-PLUS Programmer's Manual Supplement with information specific to a given version of the software
+ - S-PLUS Trellis Graphics User's Manual , describing a particular graphical feature to supplement the statistical analysis
+ - S-PLUS Global Index , providing a cross-reference among the volumes of documentation
+
+
+[5]
+[SECTION]: Delivering the System > 10.2 Documentation
+[CONTENT]: Documentation is part of a comprehensive approach to training. The quality and type of documentation can be critical, not only to training, but also to the success of the system.
+
+
+[6]
+[SECTION]: Preface > Chapter 10: Delivering the System
+[CONTENT]: This chapter discusses the need for training and documentation, and presents several examples of training and documents that could accompany the information system and real-time examples.
+","[
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""Training and documentation are essential for supporting system delivery, but they must be well-designed and maintained to be effective."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Training can be done in many ways. No matter how training is provided, it must offer information to users and operators at all times, not just when the system is first delivered."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""One common issue is that users often do not read manuals or documentation thoroughly, which can interfere with their effective use of the software system."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""In fact, one study showed that only 10% to 15% of the users in an intensive training program read the manual at all (Scharer 1983). Six months later, no one else had read the user manual, and replacement pages with revised information had not been filed in the manual."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""To improve training and documentation aids and prevent interference with software usage, the following changes could be made:"",
+        ""citations"": []
+    },
+    {
+        ""role"": ""bullet_intro"",
+        ""segment"": ""Training and documentation should be designed to be easily accessible and user-friendly"",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Documents. Formal documentation accompanies every system and supports training. The documents contain all the information needed to use the system properly and efficiently. Existing in separate manuals or online, documents are accessible to users and operators as the system is functioning."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""bullet"",
+        ""segment"": ""Use well-defined icons and online help to make system functions clear and easy to understand, reducing reliance on manuals."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Users may prefer well-defined icons, online help, demonstrations, and classes to learn how the system works. Icons and Online Help. A system can be designed so that its interface with the user makes system functions clear and easy to understand."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""bullet"",
+        ""segment"": ""Integrate training and documentation software with the regular system software to provide seamless access."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""training and documentation software should be integrated with the regular system software"",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""bullet"",
+        ""segment"": ""Plan and maintain updates to training and documentation early and continuously to keep information current and relevant."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Moreover, updates to training and documentation can be planned early. The development team can put in place ways to access updates from a central location or to download them to users automatically from the Internet or Web sites."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""bullet"",
+        ""segment"": ""Tailor documentation to the needs of different audiences, such as users, operators, programmers, and analysts, to ensure relevance and clarity."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""training and documentation modules and documents should take into account the varying needs of different audiences: users, operators, customers, programmers, and others who work with or interact with the system"",
+                ""img_id"": null
+            },
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Considering the Audience. A computer-based system is used by a variety of people. In addition to users and operators, other members of the development team and the customer staff read documentation when questions arise or changes are proposed and made."",
+                ""img_id"": null
+            }
+        ]
+    }
+]","Training and documentation are essential for supporting system delivery, but they must be well-designed and maintained to be effective.
+
+One common issue is that users often do not read manuals or documentation thoroughly, which can interfere with their effective use of the software system.
+
+To improve training and documentation aids and prevent interference with software usage, the following changes could be made:
+
+Training and documentation should be designed to be easily accessible and user-friendly
+- Use well-defined icons and online help to make system functions clear and easy to understand, reducing reliance on manuals.
+- Integrate training and documentation software with the regular system software to provide seamless access.
+- Plan and maintain updates to training and documentation early and continuously to keep information current and relevant.
+- Tailor documentation to the needs of different audiences, such as users, operators, programmers, and analysts, to ensure relevance and clarity.",1.452,19.468
+"Researchers with the Institute for Information Technology of the National Research Council, Canada, study maintenance by observing th e work practices of software engineers who are engaged in maintenance projects. A paper by Janice Singer and Timothy Lethbridge summarizes the methods they use to collect this type of data. (J. Singer, T. Lethbridge (1996). “Methods for Studying Maintenanc e Activities.” In Proceedings of the International Workshop on Empirical Studies of Software Maintenance, Monterey, CA. Also available at http://wwwsel.iit.nrc.ca/projects/easse/). Summarize this paper from the viewpoint of a software maintainer. How disru ptive are the data collection methods likely to be to the maintainer's work practices? What does the maintainer stand to gain by participating in such a study?","
+[0]
+[SECTION]: Maintaining the System > 11.11 What This Chapter Means For Researchers
+[CONTENT]: Maintenance is a ripe area of research. Many of our maintenance activities could be made easier or more effective if we were better at predicting the likely sources of faults. Researchers are looking for better ways to measure maintainability based on product information; they are developing new models to show us the interconnections among products, processes, and resources. Similarly, the models will help us know how much effort is needed to maintain a system and when it is appropriate to retire a legacy system or rejuvenate it.
+Work continues on building tools to assist us in the maintenance process. Reengineering tools, change control and configuration management repositories, and project history databases are likely to become more sophisticated as researchers build prototypes based on empirical data.
+Finally, researchers will continue to look at general laws of software maintenance, as suggested by Lehman (1980).They are eager to learn whether software engineering theory can confirm what empirical observation indicates in practice: namely, that the behavior of software systems evolution is consistent and predictable.
+
+
+[1]
+[SECTION]: Maintaining the System > 11.13 Key References
+[CONTENT]: There are few up-to-date textbooks on software maintenance; most information is best sought in journals and conference proceedings. IEEE Software 's  January 1990 issue had maintenance, reverse engineering, and design recovery as its theme; the January 1995 issue focused on legacy systems, and the January 1993 issue has a good article by Wilde, Matthews, and Huitt on the special maintenance problems of object-oriented systems. The  May  1994  issue  of Communications  of  the ACM is  a  special  issue  on reverse engineering. Software Maintenance: Research and Practice is a journal devoted entirely to maintenance issues.
+The IEEE Computer Society Press offers some good tutorials on maintenancerelated topics, including one on software reengineering by Arnold (1993), and another on impact analysis by Arnold and Bohner (1996).
+Samuelson (1990) explores the legal implications of reverse engineering, asking whether such a practice is equivalent to stealing someone's ideas.
+The International Conference on Software Maintenance is held every year, sponsored by the IEEE and ACM. You can order past proceedings from the IEEE Computer Society Press and look at information about the next maintenance conference by viewing the Computer Society Web site.
+
+
+[2]
+[SECTION]: Maintaining the System > 11.3 Maintenance Problems > SIDEBAR 11.3 BALANCING MANAGEMENT AND TECHNICAL NEEDS AT CHASE MANHATTAN
+[CONTENT]: At the same time, the system usually becomes more complex as a result of two things. First, as one fault is corrected, the fix may itself be introducing new system faults. Second, as corrections are made, the system structure changes. Because many repairs are made with the limited purpose of solving a particular problem, the coupling and cohesion of components, as well as the inheritance structure of an object-oriented system, are often degraded.
+Belady and Lehman capture these effects in an equation:
+[FORMULA]
+M = p + K c -d M is the total maintenance effort expended for a system, and p represents wholly productive efforts: analysis, evaluation, design, coding, and testing. c is complexity caused by the lack of structured design and documentation; it is reduced by d , the degree to which the maintenance team is familiar with the software. Finally, K is a constant determined by comparing this model with the effort relationships on actual projects; it is called an empirical constant because its value depends on the environment.
+The Belady-Lehman equation expresses a very important relationship among the factors determining maintenance effort. If a system is developed without software engineering principles, the value of c will be high. If, in addition, it is maintained without an understanding of the software itself, the value of d will be low. The result is that the costs for maintenance increase exponentially. Thus, to economize on maintenance, the best approach is to build the system using good software engineering practices and to give the maintainers time to become familiar with the software.
+Current effort and schedule models predict maintenance costs using many of the same factors suggested by Belady and Lehman. For example, COCOMO II computes maintenance effort using a size variable computed as follows (Boehm et al. 1995):
+
+
+[3]
+[SECTION]: Maintaining the System > 11.3 Maintenance Problems > Staff Problems
+[CONTENT]: Management Priorities. The maintenance team weighs the desires of the customer's management against the system's needs. Management priorities often override technical ones;managers sometimes view maintaining and enhancing as more important than building new applications. In other words, companies must sometimes focus on business as usual, instead of investigating new alternatives. But as management encourages maintainers to repair an old system, users are clamoring for new functions or a new system. Similarly, the rush to get a product to market may encourage us, as either developers or maintainers, to implement a quick, inelegant, poorly tested change, rather than take the time to follow good software engineering practice.The result is a patched product that is difficult to understand and repair later.
+Morale. The  Lientz  and  Swanson  studies  (1981)  indicate  that  11.9%  of  the problems during maintenance result from low morale and productivity.A major reason for low morale is the second-class status often accorded the maintenance team. Programmers sometimes think that it takes more skill to design and develop a system than to keep it running. However, as we have seen, maintenance programmers handle problems that developers never see. Maintainers are skilled not only in writing code but also in working with users, in anticipating change, and in sleuthing. Great skill and perseverance are required to track a problem to its source, to understand the inner workings of a large system, and to modify that system's structure, code, and documentation.
+","[
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""The paper by Janice Singer and Timothy Lethbridge on methods for studying maintenance activities involves observing the work practices of software engineers engaged in maintenance projects."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Researchers with the Institute for Information Technology of the National Research Council, Canada, study maintenance by observing the work practices of software engineers who are engaged in maintenance projects. A paper by Janice Singer and Timothy Lethbridge summarizes the methods they use to collect this type of data."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""From the viewpoint of a software maintainer, the data collection methods are likely to be somewhat disruptive because maintenance work often involves complex problem-solving, understanding legacy code, and balancing management and technical needs, which requires concentration and continuity."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""At the same time, the system usually becomes more complex as a result of two things. First, as one fault is corrected, the fix may itself be introducing new system faults. Second, as corrections are made, the system structure changes. Because many repairs are made with the limited purpose of solving a particular problem, the coupling and cohesion of components, as well as the inheritance structure of an object-oriented system, are often degraded."",
+                ""img_id"": null
+            },
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Management Priorities. The maintenance team weighs the desires of the customer's management against the system's needs. Management priorities often override technical ones;managers sometimes view maintaining and enhancing as more important than building new applications. In other words, companies must sometimes focus on business as usual, instead of investigating new alternatives. But as management encourages maintainers to repair an old system, users are clamoring for new functions or a new system. Similarly, the rush to get a product to market may encourage us, as either developers or maintainers, to implement a quick, inelegant, poorly tested change, rather than take the time to follow good software engineering practice.The result is a patched product that is difficult to understand and repair later."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""However, the maintainer stands to gain from participating in such a study because the research aims to develop better ways to measure maintainability, predict fault sources, and build tools to assist in the maintenance process, which could make their work easier and more effective in the future."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Maintenance is a ripe area of research. Many of our maintenance activities could be made easier or more effective if we were better at predicting the likely sources of faults. Researchers are looking for better ways to measure maintainability based on product information; they are developing new models to show us the interconnections among products, processes, and resources. Similarly, the models will help us know how much effort is needed to maintain a system and when it is appropriate to retire a legacy system or rejuvenate it."",
+                ""img_id"": null
+            },
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Work continues on building tools to assist us in the maintenance process. Reengineering tools, change control and configuration management repositories, and project history databases are likely to become more sophisticated as researchers build prototypes based on empirical data."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""Additionally, participating in such studies may help improve the recognition of the maintainer's skill and the importance of their role, potentially improving morale and productivity."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""A major reason for low morale is the second-class status often accorded the maintenance team. Programmers sometimes think that it takes more skill to design and develop a system than to keep it running. However, as we have seen, maintenance programmers handle problems that developers never see. Maintainers are skilled not only in writing code but also in working with users, in anticipating change, and in sleuthing. Great skill and perseverance are required to track a problem to its source, to understand the inner workings of a large system, and to modify that system's structure, code, and documentation."",
+                ""img_id"": null
+            }
+        ]
+    }
+]","The paper by Janice Singer and Timothy Lethbridge on methods for studying maintenance activities involves observing the work practices of software engineers engaged in maintenance projects.
+
+From the viewpoint of a software maintainer, the data collection methods are likely to be somewhat disruptive because maintenance work often involves complex problem-solving, understanding legacy code, and balancing management and technical needs, which requires concentration and continuity.
+
+However, the maintainer stands to gain from participating in such a study because the research aims to develop better ways to measure maintainability, predict fault sources, and build tools to assist in the maintenance process, which could make their work easier and more effective in the future.
+
+Additionally, participating in such studies may help improve the recognition of the maintainer's skill and the importance of their role, potentially improving morale and productivity.",1.54,21.587
+"Take a look at the latest issue of a journal that presents articles about software engineering. (IEEE Transactions on Software Engineering, the Journal of Systems and Software, and IEEE Computer are good examples.) Of the articles tha t present a new technique or tool for software development, how many actually present some kind of evidence that the proposed technique is an improvement over what is currently used? For those that do, classify the type of empirical study used, and identif y the variables.","
+[0]
+[SECTION]: Evaluating Products, Processes, and Resources > 12.13 Key References
+[CONTENT]: There are also several conferences and organizations related to evaluation. The International  Symposium  on  Software  Metrics, sponsored  by  the  IEEE  Computer Society, addresses  issues  of  measurement  and  empirical  investigation. Information about  the  latest  conference  is  also  on  the  Computer  Society Web  page. The  International  Software  Engineering  Research  Network  publishes  studies  of  replicated investigations, and many of them are available from its Web site. Finally, the journal Empirical Software Engineering publishes not only studies, but also data and guidelines for empirical research.
+
+
+[1]
+[SECTION]: Testing the System > 9.16 Key References
+[CONTENT]: There have been several special issues of IEEE Software focused on the topics covered in this chapter. The June 1992 and May 1995 issues looked at reliability, the March 1991 issue focused on testing, and the May 2007 issue addressed test-driven development.
+The proceedings of the annual International Conference on Software Engineering usually has good papers on the latest in testing theory. For example, Frankl et al. (1997) examine the difference between testing to improve reliability and testing to find faults. Good reference books on testing include Beizer (1990);Kaner,Falk,and Nguyen (1993); and Kit (1995). Each provides a realistic perspective based on industrial experience.
+There  are  several  companies  that  evaluate  software  testing  tools  and  publish summaries of their capabilities. For example, Grove Consultants in England, Software Quality Engineering in Florida, and both Cigital and Satisfice in Virginia do regular analyses of testing techniques and tools. You can find these and other resources on the Web to help with requirements analysis and validation, planning and management,simulation, test development, test execution, coverage analysis, source code analysis, and test case generation.
+Software dependability and safety-critical systems are receiving more and more attention, and there are many good articles and books about the key issues, including Leveson (1996, 1997). In addition, the Dependable Computing Systems Centre in the Department of Computer Science, University of York, UK, is developing techniques and tools for assessing software dependability. You can get more information from its director, John McDermid, at jam@minster.york.ac.uk.
+Usability testing is very important; a system that is correct and reliable but difficult to use may in fact be worse than an easy-to-use but unreliable system. Usability tests and more general usability issues are covered in depth in Hix and Hartson (1993).
+
+
+[2]
+[SECTION]: The Future of Software Engineering > 14.7 Exercises
+[CONTENT]: 
+ - Consider the activities of a software project manager. Where are decisions made? When are they group decisions? When are they individual decisions?
+ - What software technologies have been promoted in the last ten years? Which ones have resulted  in  widespread  adoption, and  which  have  not?  Can  you  use  the  Rogers  and Moore frameworks to explain why?
+ - The January/February 2000 issue of IEEE Software contains an editorial by McConnell about software engineering's best influences:
+ - reviews and inspections
+ - information hiding
+ - incremental development
+ - user involvement
+ - automated revision control
+ - development using the Internet
+ - programming languages: Fortran, COBOL,Turbo Pascal,Visual Basic
+ - Capability Maturity Model for software
+ - component-based development
+ - metrics and measurement
+For each practice listed, analyze its likely technology adoption. Is it a best practice? What evidence supports its adoption? And what audience is addressed by the evidence?
+
+
+[3]
+[SECTION]: Annotated Bibliography
+[CONTENT]: This paper examines the ways in which 33 organizations calculate return on investment from software. It shows great inconsistencies that make it impossible for us to amalgamate the results.
+ - Brooks,Frederick P., Jr. (1987).'No silver bullet: Essence and accidents of software engineering.' IEEE Computer , 20(4) (April): 10-19.
+ - Brooks, Frederick P., Jr. (1995). The Mythical Man-Month 20th Anniversary Edition . Reading, MA:Addison-Wesley.
+A classic book of essays, based on the author's experience building the OS-360 operating system. Many of his observations involve organizational dynamics, such as adding extra staff to a late project. Originally published in 1975.
+ - Brownsword, Lisa, and Paul Clements (1996). 'A case study in successful product line development.' CMU/SEI-96-TR-016. Pittsburgh, PA: Software Engineering Institute, Carnegie Mellon University.
+ - Busby, J.S., and S.C. Barton (1996) 'Predicting the cost of engineering: Does intuition help or hinder?' Engineering Management Journal , 6(4): 177-182.
+ - Buschmann,F.,R.Meunier,H.Rohner,P.Sommerlad and M.Stal (1996). Pattern-Oriented Software Architecture:A System of Patterns. Chichester, UK: John Wiley & Sons.
+ - Canadian Engineering Qualifications Board (CEQB) (2004).'Software Engineering Syllabus2004.' http://www.ccpe.ca/e/files/syllabus_4_20.pdf.
+ - Canadian Engineering Quality Board (2001). 'Core and Supplementary Bodies of Knowledge for Software Engineering: A report prepared for the CCPE as part of the CEQB Body of Knowledge Development Pilot Project.' Draft version 0.4 (September 5).
+ - Card, David  N. (1992). 'Capability  evaluations  rated  highly  variable.' IEEE  Software , 9(5) (September): 105-107.
+ - Card, David N., V.E. Church, and William W. Agresti (1986). 'An empirical study of software design practices.' IEEE Transactions on Software Engineering , 12(2) (February): 264-271.
+ - Card, David N., and Robert L. Glass (1990). Measuring Software Design Quality . Englewood Cliffs, NJ: Prentice Hall.
+ - Interesting discussion of how a measure evolved based on the measure's goals and behavior.
+
+
+[4]
+[SECTION]: Why Software Engineering? > 1.13 What This Chapter Means For Researchers
+[CONTENT]: Many of the issues discussed in this chapter are good subjects for further research. We have noted some of the open issues in software engineering, including the need to find In later chapters, we will describe many techniques. Some have been used and are well-proven software development practices, whereas others are proposed and have been demonstrated only on small,'toy,' or student projects.We hope to show you how to improve what you are doing now and at the same time to inspire you to be creative and thoughtful about trying new techniques and processes in the future.
+ - the right levels of abstraction to make the problem easy to solve
+ - the right measurements to make the essential nature of the problem and solution visible and helpful
+ - an appropriate problem decomposition, where each subproblem is solvable
+ - a common framework or notation to allow easy and effective tool integration, and to maximize communication among project participants
+",[],,1.584,1.879
+"Many studies in computer science compare different technologies and do not involve human factors. For example, a study of a new algorithm may seek to determine whether it runs faster than an older version on practical data se ts. However, many empirical studies in software engineering involve human subjects, because they need to assess the usefulness of development techniques for the people who will use them.  Find a recent journal article that describes an empirical software study using human subjects. Briefly summarize (2 paragraphs) the study and itsresults. What are the things that make studies using human subjects different from studies that do not? Use specific examples from the journal article to illustrate your points.","
+[0]
+[SECTION]: Improving Predictions, Products, Processes, and Resources > 13.10 What This Chapter Means For Researchers
+[CONTENT]: Research on improvement issues is growing, as developers clamor for empirical proof that proposed technologies really work. This chapter illustrates the need for more surveys, case studies, and experiments; the Basili and Green example shows how a collection of studies can be organized to build on each other.
+Research is also needed on frameworks for improvement, based on proven techniques and tailored for particular applications and domains. The general idea of maturity has spawned a series of related frameworks: a reuse maturity model, a CASE tool maturity model, and so on.These frameworks must be tied together so that practitioners have a better idea of which technologies to adopt and why.
+Finally, software engineering researchers should jump into human factors research with both feet.We can understand more about resources issues such as team size, collaboration  styles, and  what  makes  a  good  working  environment  by  learning  from  studies already performed in the social sciences. Then, we can assess which results apply to software engineers.Most researchers admit that human variability is a key factor in determining  whether  quality  and  schedule  goals  will  be  met; a  better  understanding  of  that variability will help us design techniques and tools to use that variability to our advantage.
+
+
+[1]
+[SECTION]: The Future of Software Engineering > 14.2 Technology Transfer > Evidence Supporting Technology Decisions
+[CONTENT]: Researchers often perform investigative studies to support decisions about technology. A survey performed by Zelkowitz, Wallace, and Binkley (1998) highlights the often vast difference between the intended use of these studies and the way they are perceived by practitioners. Questioning 90 researchers and software practitioners about the  value  of  various  experimental  methods  necessary  to  validate  a  new  technology, Zelkowitz et al. found that practitioners value most the methods that are relevant to their environment. That is, techniques such as case studies, field studies, and replicated controlled experiments were considered to be important to the decision-making process in choosing a new technology.
+On the other hand, researchers prefer to perform studies involving reproducible validation methods that can be used in isolation in the laboratory, such as theoretical proof, static analysis, and simulation. They discounted methods that required interacting  directly  with  practitioners. In  other  words, most  researchers  shunned  the  very methods that are most valued by practitioners: case studies, field studies, and experiments.Thus,researchers attempt to create a body of evidence for evaluating a technology, but practitioners seek a very different kind of substantiation of technical effectiveness. So the body of evidence provided by researchers is not likely to be taken seriously by the practitioners who are thinking about using the technology! The study shows us that successful technology transfer requires understanding the target audience and collecting a body of evidence that is relevant and credible to it.
+What does this mean for both empirical software engineering research and software technology transfer in the future? It certainly means wasted research effort if things continue as they are now. And worse, it means that many of us will make technology decisions based on no evidence, little evidence, or even inappropriate evidence.
+
+
+[2]
+[SECTION]: The Future of Software Engineering > 14.2 Technology Transfer > Next Steps in Improving Technology Transfer
+[CONTENT]: We can no longer afford to make investments in technology whose adoption is either undesirable or not likely to be successful. Practitioners can help researchers take steps to understand the nature of successful technology transfer, and use that new understanding to build models and support for effective evaluation and adoption. In particular, some of the current empirical studies of software engineering technologies are loosely related and poorly planned: not a very good collective generator of a coherent body of evidence. If empirical software engineering researchers would organize studies so that each piece contributes a clear and significant result to the whole, the resulting body of evidence would be more compelling.That is,practitioners and researchers together must plan what to address in each study and how that study's result will contribute to the overall body of evidence.
+At the same time, practitioners interested in using new technologies effectively can learn  from  the  many  studies  already  performed  and  apply  their  lessons  to  their  own projects. Technology transfer inhibitors and promoters fall into three categories: technological, organizational, and evidential. For example, technology transfer is inhibited by lack of packaging, by lack of relationship to a pressing technical or business problem, and by difficulty of use and understanding. By contrast, a new technology can be promoted with tools, a well-understood context, and an understanding of clear potential benefit to those on the project now or who will use the resulting product later. In other words, the technology is easier to transfer if it is easy to use and easy to see how it will help.
+
+
+[3]
+[SECTION]: Evaluating Products, Processes, and Resources > 12.1 Approaches To Evaluation > Surveys
+[CONTENT]: A survey is a retrospective study to try to document relationships and outcomes in a given situation. Surveys are often done in the social sciences, where attitudes are polled to determine how a population feels about a particular set of issues, or a demographer surveys a population to determine trends and relationships. Software engineering surveys are similar in that we record data to determine how project participants reacted to a particular method, tool, or technique, or to determine trends or relationships.We can also capture information related to products or projects, to document the size of components, number of faults, effort expended, and so on. For example, we may compare the data from a survey of object-oriented projects with data from procedural projects to see if there are significant differences.
+When performing a survey, we usually have no control over the situation at hand. Because a survey is a retrospective study, we record information about a situation and compare it with similar ones, but we cannot manipulate variables; for that, we need case studies and experiments.
+","[
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""Empirical studies in software engineering often involve human subjects because they need to assess the usefulness of development techniques for the people who will use them. Unlike studies that focus solely on technical aspects, such as algorithm performance, studies involving human subjects must consider human variability, team size, collaboration styles, and working environments. For example, research on improvement issues emphasizes the importance of understanding human factors to determine whether quality and schedule goals will be met, and to design techniques and tools that leverage this variability to advantage."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Finally, software engineering researchers should jump into human factors research with both feet. We can understand more about resources issues such as team size, collaboration styles, and what makes a good working environment by learning from studies already performed in the social sciences. Then, we can assess which results apply to software engineers. Most researchers admit that human variability is a key factor in determining whether quality and schedule goals will be met; a better understanding of that variability will help us design techniques and tools to use that variability to our advantage."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""A recent empirical software study using human subjects would likely involve methods such as case studies, field studies, or replicated controlled experiments, which practitioners value highly for their relevance to real environments. These studies differ from purely technical studies because they require direct interaction with practitioners and consideration of organizational and evidential factors that influence technology transfer. For instance, technology transfer is promoted when a new technology is easy to use, well-packaged, and clearly beneficial to the project team, which are aspects that can only be evaluated through studies involving human subjects."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""techniques such as case studies, field studies, and replicated controlled experiments were considered to be important to the decision-making process in choosing a new technology. On the other hand, researchers prefer to perform studies involving reproducible validation methods that can be used in isolation in the laboratory, such as theoretical proof, static analysis, and simulation. They discounted methods that required interacting directly with practitioners. In other words, most researchers shunned the very methods that are most valued by practitioners: case studies, field studies, and experiments."",
+                ""img_id"": null
+            },
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Technology transfer inhibitors and promoters fall into three categories: technological, organizational, and evidential. For example, technology transfer is inhibited by lack of packaging, by lack of relationship to a pressing technical or business problem, and by difficulty of use and understanding. By contrast, a new technology can be promoted with tools, a well-understood context, and an understanding of clear potential benefit to those on the project now or who will use the resulting product later. In other words, the technology is easier to transfer if it is easy to use and easy to see how it will help."",
+                ""img_id"": null
+            }
+        ]
+    }
+]","Empirical studies in software engineering often involve human subjects because they need to assess the usefulness of development techniques for the people who will use them. Unlike studies that focus solely on technical aspects, such as algorithm performance, studies involving human subjects must consider human variability, team size, collaboration styles, and working environments. For example, research on improvement issues emphasizes the importance of understanding human factors to determine whether quality and schedule goals will be met, and to design techniques and tools that leverage this variability to advantage.
+
+A recent empirical software study using human subjects would likely involve methods such as case studies, field studies, or replicated controlled experiments, which practitioners value highly for their relevance to real environments. These studies differ from purely technical studies because they require direct interaction with practitioners and consideration of organizational and evidential factors that influence technology transfer. For instance, technology transfer is promoted when a new technology is easy to use, well-packaged, and clearly beneficial to the project team, which are aspects that can only be evaluated through studies involving human subjects.",1.462,6.926
+"Find a paper from the research literature describing a new technology. Remember in this context that “technology” can have a broad meaning, including software processes, tools, or specific techniques. Describe the particular technology being proposed. Does the paper describe who the anticipated users of the technology will be? Can you categorize those users according to the types of adopters in Figure 14.1? What arguments are made as to the technology’s effectiveness? How could you classify those arguments according to the categories of evidence proposed by Schum (described in section 14.2)?","
+[0]
+[SECTION]: The Future of Software Engineering > 14.2 Technology Transfer > Next Steps in Improving Technology Transfer
+[CONTENT]: We can no longer afford to make investments in technology whose adoption is either undesirable or not likely to be successful. Practitioners can help researchers take steps to understand the nature of successful technology transfer, and use that new understanding to build models and support for effective evaluation and adoption. In particular, some of the current empirical studies of software engineering technologies are loosely related and poorly planned: not a very good collective generator of a coherent body of evidence. If empirical software engineering researchers would organize studies so that each piece contributes a clear and significant result to the whole, the resulting body of evidence would be more compelling.That is,practitioners and researchers together must plan what to address in each study and how that study's result will contribute to the overall body of evidence.
+At the same time, practitioners interested in using new technologies effectively can learn  from  the  many  studies  already  performed  and  apply  their  lessons  to  their  own projects. Technology transfer inhibitors and promoters fall into three categories: technological, organizational, and evidential. For example, technology transfer is inhibited by lack of packaging, by lack of relationship to a pressing technical or business problem, and by difficulty of use and understanding. By contrast, a new technology can be promoted with tools, a well-understood context, and an understanding of clear potential benefit to those on the project now or who will use the resulting product later. In other words, the technology is easier to transfer if it is easy to use and easy to see how it will help.
+
+
+[1]
+[SECTION]: The Future of Software Engineering > 14.2 Technology Transfer > A Closer Look at the Evidence
+[CONTENT]:  - ◊ Compatibility: To what degree is the new technology consistent with existing values, past experiences, and needs of potential adopters? Because early market adopters are interested in radical change, they are not as interested in the answer to this question as those in the mainstream market. That is, the early market doesn't mind restarting from the ground up, but mainstreamers are reluctant to give up that with which they are already familiar.
+ - ◊ Complexity: To what degree is the new technology easy to understand and use? Early market adopters are more likely to be willing to learn completely new ways of doing things, even if more complex, in order to immerse themselves in newer, more exciting technology. But mainstreamers view ease of use as a necessary characteristic of a new technology.
+ - ◊ Trialability: Can  the  new  technology  be  experimented  with  on  a  limited basis? Trying out the new technology is a must for early marketers. But many mainstreamers will try the technology only after others have built a solid case for the technology's advantages.
+ - ◊ Observability: Are the results of using the technology visible to others? The early market likes direct observation and tangible evidence. But mainstreamers prefer evidence only from organizations whose characteristics are like their own. For example, developers of banking software find evidence credible only when it comes from other banking organizations; case studies from telecommunications  or  defense  firms  leave  them  cold. Moreover, difficulties  arise when  the  directly  observed  technology  produces  evidence  of  commercial advantage;in these cases, only second-hand evidence will be reported in the literature, if reported at all.
+
+
+[2]
+[SECTION]: The Future of Software Engineering > 14.2 Technology Transfer > A Closer Look at the Evidence
+[CONTENT]:  - The nature of the communication channels used to increase awareness and knowledge of the technology. Some types of adopters find some communication channels more credible than others. Innovators tend to rely on technical journals and reports  from  researchers  and  technical  experts. Early  adopters  in  turn  ask  the innovators to confirm a technology's credibility. Early- and late-majority members ask others in their social system, often by word of mouth or benchmarking visits.
+ - The nature of the social system in which the potential user operates. Innovators turn to technologists, but the mainstream market usually looks to the business community to see what its competitors are doing.
+ - The extent of efforts to diffuse the technology throughout an organization. The early market requires the least effort. However, the mainstream market requires not only information about the technology itself, but also packaging, user support, and testimonials from current adopters and users. Moore tells us that the technology itself  is  the 'generic  product,' but the supporting materials help form the 'whole product.'
+ - The technology's attributes. Rogers suggests that the relevant attributes are
+ - ◊ Relative advantage: To what degree is the new technology better than what is already  available?  Innovators  answer  this  question  in  technical  terms: is  it faster, architecturally superior, or more maintainable? Early adopters look for tangible  evidence  about  the 'whole  product.' Early-majority  adopters  seek information about the impact on the company, while late-majority adopters look at how the technology will increase market share. Thus, relative advantage reflects the advantage in four distinct areas-technology, product, company, and market-as each type of potential adopter widens the universe in which the decision-making is viewed.
+
+
+[3]
+[SECTION]: The Future of Software Engineering > 14.2 Technology Transfer > New Models of Technology Transfer
+[CONTENT]: However, compelling evidence is not enough to ensure technology adoption.The marketing world tells us how to package and support the technology to make it 'friendlier' and easier to understand and use. For example, tools and supporting written material go a long way in assisting a user to adopt a new technique or process. When the supporting infrastructure is in place to offer this assistance, the technology is 'ready for prime time.' That is, this packaged technology is finally ready for broader diffusion, so that we as a community can assess its adoption rate and evidence of effectiveness as more organizations report the results of their experiences.
+In fact, we may need multiple models of diffusion, including iteration, based on the characteristics of the technology, the adopters, and the evidence.These models, plus the marketing and evidential concepts described in this chapter, offer us a vocabulary with which to discuss and understand key issues affecting the success of technology adoption and diffusion.
+","[
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""The context documents discuss the adoption and transfer of new software engineering technologies, which can include software processes, tools, or specific techniques."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""In fact, we may need multiple models of diffusion, including iteration, based on the characteristics of the technology, the adopters, and the evidence."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""The anticipated users of new technologies are categorized into adopter types such as innovators, early adopters, early majority, late majority, and laggards, as described in the documents."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Innovators tend to rely on technical journals and reports from researchers and technical experts. Early adopters in turn ask the innovators to confirm a technology's credibility. Early- and late-majority members ask others in their social system, often by word of mouth or benchmarking visits."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""The documents describe attributes of new technologies that affect adoption, including compatibility, complexity, trialability, observability, and relative advantage, which influence different adopter types differently."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""- ◊ Compatibility: To what degree is the new technology consistent with existing values, past experiences, and needs of potential adopters?... - ◊ Complexity: To what degree is the new technology easy to understand and use?... - ◊ Trialability: Can the new technology be experimented with on a limited basis?... - ◊ Observability: Are the results of using the technology visible to others?... - The technology's attributes. Rogers suggests that the relevant attributes are - ◊ Relative advantage: To what degree is the new technology better than what is already available?"",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""Arguments about a technology's effectiveness include technical superiority, tangible evidence of the whole product, impact on the company, and market advantages, which correspond to different adopter concerns."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Innovators answer this question in technical terms: is it faster, architecturally superior, or more maintainable? Early adopters look for tangible evidence about the 'whole product.' Early-majority adopters seek information about the impact on the company, while late-majority adopters look at how the technology will increase market share."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""The categories of evidence proposed by Schum, as described in section 14.2, include compatibility, complexity, trialability, observability, communication channels, social system, diffusion efforts, and relative advantage, which can be used to classify the arguments for technology effectiveness."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Technology transfer inhibitors and promoters fall into three categories: technological, organizational, and evidential... - ◊ Compatibility: To what degree is the new technology consistent with existing values, past experiences, and needs of potential adopters?... - ◊ Complexity: To what degree is the new technology easy to understand and use?... - ◊ Trialability: Can the new technology be experimented with on a limited basis?... - ◊ Observability: Are the results of using the technology visible to others?... - The nature of the communication channels used to increase awareness and knowledge of the technology... - The nature of the social system in which the potential user operates... - The extent of efforts to diffuse the technology throughout an organization... - The technology's attributes. Rogers suggests that the relevant attributes are - ◊ Relative advantage: To what degree is the new technology better than what is already available?"",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""The documents emphasize that compelling evidence alone is insufficient for adoption; packaging, user support, and marketing efforts are also critical to make the technology easier to understand and use, thus facilitating broader diffusion."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""However, compelling evidence is not enough to ensure technology adoption. The marketing world tells us how to package and support the technology to make it 'friendlier' and easier to understand and use. For example, tools and supporting written material go a long way in assisting a user to adopt a new technique or process."",
+                ""img_id"": null
+            }
+        ]
+    }
+]","The context documents discuss the adoption and transfer of new software engineering technologies, which can include software processes, tools, or specific techniques.
+
+The anticipated users of new technologies are categorized into adopter types such as innovators, early adopters, early majority, late majority, and laggards, as described in the documents.
+
+The documents describe attributes of new technologies that affect adoption, including compatibility, complexity, trialability, observability, and relative advantage, which influence different adopter types differently.
+
+Arguments about a technology's effectiveness include technical superiority, tangible evidence of the whole product, impact on the company, and market advantages, which correspond to different adopter concerns.
+
+The categories of evidence proposed by Schum, as described in section 14.2, include compatibility, complexity, trialability, observability, communication channels, social system, diffusion efforts, and relative advantage, which can be used to classify the arguments for technology effectiveness.
+
+The documents emphasize that compelling evidence alone is insufficient for adoption; packaging, user support, and marketing efforts are also critical to make the technology easier to understand and use, thus facilitating broader diffusion.",1.438,11.914
+"Find a paper describing an organization’s practical experience with a particular technology. If at all possible, find one describing experience with the same technology you chose in question 2. (Many conferences, including ICSE, now include tracks dedicated to industry reports, making these conference proceedings a good place to start your search.) How does the paper measure the success (or lack of success) with the technology? What kinds of evidence are presented to support the evaluation of effectiveness? How would you classify that evidence according to the categories of evidence proposed by Schum (described in section 14.2)?","
+[0]
+[SECTION]: The Future of Software Engineering > 14.2 Technology Transfer > New Models of Technology Transfer
+[CONTENT]: To this end, we can put together these building blocks for technology transfer success to gain a better understanding of how technology transfer works in our individual organizations. Usually, such models include preliminary evaluation of a new technology, performed by those who use the technology for the first time, to see if it indeed solves the problem it was intended to address.This step should be sensitive to the organizational culture, so that a proposed technological solution can be viewed in the context of how it will be received by the organization or project that will use it. We should also identify promoters and inhibitors, so that we know who or what is likely to help or hinder technology adoption and effectiveness. For example, the adopter roles play a big part in determining the reception given to a particular technology, based on who is promoting it, whether similar technologies have been tried in the past, and how different the technology is from what is being performed currently.
+This growing body of evidence should then be subjected to a more advanced evaluation, where we examine not only the technology but also the evidence itself. That is, to assess whether the body of evidence forms a compelling argument for using the technology, we look at the situations in which the technology has been used, compare the old ways to the new ways, and determine (using surveys, case studies, experiments, feature analysis, and other techniques) whether the evidence is conflicting, consistent, and objective.We want to know how 'solid' a case we have for believing that the new technology will solve the business problem it addresses.
+
+
+[1]
+[SECTION]: The Future of Software Engineering > 14.2 Technology Transfer
+[CONTENT]: No matter what we choose and why we choose it, we can find successful past examples of our own technology-selection strategy to support our thinking. Unfortunately, as we have seen in earlier chapters, we can also find past examples of failure.This success/failure puzzle wears at least two faces: technical and commercial. We may do a wonderful job in solving a problem, only to find that our project is not a commercial success. Or, to catch the window of opportunity, we may rush our product to release, so that it becomes a commercial success in the short term but fails in the long term due to lack of support and enhancement. Often we have a dual focus: we want to choose the right technology to solve the problem and do it in a way that appeals to customers who need to have that problem solved. In this section, we examine why and how we make technology-selection decisions.We also look at how the empirical software engineering described in Chapter 13 produces evidence to support those decisions. Does the evidence help or hinder the adoption of new technologies throughout organizations or market segments?
+This book has described many kinds of technologies that we have at our disposal. As we noted in Chapter 1, the 'technology' we choose to help us in our next project can be any method, technique, tool, procedure, or paradigm used in software development or maintenance. To know whether a technology is successful, we want to look at whether it solves a problem, whether it is commercially viable, and how long it takes for the technology to become accepted practice.We also want to know how to increase the odds that our technology choice is the right one.
+
+
+[2]
+[SECTION]: The Future of Software Engineering > 14.2 Technology Transfer > A Closer Look at the Evidence
+[CONTENT]:  - ◊ Compatibility: To what degree is the new technology consistent with existing values, past experiences, and needs of potential adopters? Because early market adopters are interested in radical change, they are not as interested in the answer to this question as those in the mainstream market. That is, the early market doesn't mind restarting from the ground up, but mainstreamers are reluctant to give up that with which they are already familiar.
+ - ◊ Complexity: To what degree is the new technology easy to understand and use? Early market adopters are more likely to be willing to learn completely new ways of doing things, even if more complex, in order to immerse themselves in newer, more exciting technology. But mainstreamers view ease of use as a necessary characteristic of a new technology.
+ - ◊ Trialability: Can  the  new  technology  be  experimented  with  on  a  limited basis? Trying out the new technology is a must for early marketers. But many mainstreamers will try the technology only after others have built a solid case for the technology's advantages.
+ - ◊ Observability: Are the results of using the technology visible to others? The early market likes direct observation and tangible evidence. But mainstreamers prefer evidence only from organizations whose characteristics are like their own. For example, developers of banking software find evidence credible only when it comes from other banking organizations; case studies from telecommunications  or  defense  firms  leave  them  cold. Moreover, difficulties  arise when  the  directly  observed  technology  produces  evidence  of  commercial advantage;in these cases, only second-hand evidence will be reported in the literature, if reported at all.
+
+
+[3]
+[SECTION]: The Future of Software Engineering > 14.2 Technology Transfer > A Closer Look at the Evidence
+[CONTENT]: Figure 14.2 summarizes the types of evidence appealing to different audiences. The lower-left quadrant reflects innovators' interests, where the focus is primarily on the technology itself. Early adopters turn their attention to the broader notion of product, while mainstream market members are more interested in the company and the market.This figure makes it clear that different audiences look for very different kinds of evidence. Business school findings such as these help us ask the right questions about a technology (i.e., questions whose answers are interesting to the audience) and design the right kinds of studies to provide evidence that answers those questions.
+
+
+[4]
+[SECTION]: The Future of Software Engineering > 14.2 Technology Transfer > New Models of Technology Transfer
+[CONTENT]: The overriding goal of technology adoption is to improve at least one new product, process, or resource in some way.The evidence should help us to determine if the new technology causes improvement. We want to investigate the cause-and-effect relationship between the new technology and one or more variables of interest. Even if the benefit is the same as existing or competing technologies, we may choose the new technology simply because it reduces the uncertainty in cause and effect. In other words, we want the results of our development and maintenance processes to be more predictable.
+[FIGURE 14.2 Evidence required for different audiences (adapted from Moore 1991).] 
+[FIGURE_DESCRIPTIONS]
+[0] A 2x2 matrix diagram categorizing stakeholders into four groups based on their focus and attitude: Specialists (bottom-left), Supporters (top-left), Skeptics (bottom-right), and Generalists (top-right). The vertical axis differentiates Product focus (left) from Company focus (right). The horizontal axis differentiates Technology focus (top) from Market focus (bottom). Each quadrant lists relevant attributes: Supporters include Benchmarks, Product reviews, Design wins, Initial sales volumes, Trade press coverage, Visionary endorsements, Revenues and profits, Strategic partners, Top-tier customers, Full product line, Business press coverage, Financial analyst endorsements. Specialists include Architecture, Schematics, Demonstrations, Trials, Technology press coverage, Guru endorsements. Skeptics include Market share, Third-party support, Standards certification, Application proliferation, Vertical press coverage, Financial analyst endorsements.
+
+","[
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""A paper describing an organization's practical experience with a particular technology typically measures success by evaluating whether the technology solves the intended problem, its commercial viability, and the time it takes for the technology to become accepted practice."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""To know whether a technology is successful, we want to look at whether it solves a problem, whether it is commercially viable, and how long it takes for the technology to become accepted practice."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""The kinds of evidence presented to support the evaluation of effectiveness include surveys, case studies, experiments, feature analysis, and other techniques that examine the technology itself and the body of evidence to determine if it is conflicting, consistent, and objective."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""We should also identify promoters and inhibitors, so that we know who or what is likely to help or hinder technology adoption and effectiveness. ... we look at the situations in which the technology has been used, compare the old ways to the new ways, and determine (using surveys, case studies, experiments, feature analysis, and other techniques) whether the evidence is conflicting, consistent, and objective."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""The evidence is classified according to categories such as compatibility, complexity, trialability, and observability, which reflect how different audiences perceive and evaluate the technology."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""- ◊ Compatibility: To what degree is the new technology consistent with existing values, past experiences, and needs of potential adopters? ... - ◊ Complexity: To what degree is the new technology easy to understand and use? ... - ◊ Trialability: Can the new technology be experimented with on a limited basis? ... - ◊ Observability: Are the results of using the technology visible to others?"",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""Different audiences such as innovators, early adopters, and mainstream market members look for different types of evidence, ranging from a focus on the technology itself to the company and market aspects, which helps in designing studies to provide relevant evidence."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Figure 14.2 summarizes the types of evidence appealing to different audiences. The lower-left quadrant reflects innovators' interests, where the focus is primarily on the technology itself. Early adopters turn their attention to the broader notion of product, while mainstream market members are more interested in the company and the market."",
+                ""img_id"": null
+            }
+        ]
+    }
+]","A paper describing an organization's practical experience with a particular technology typically measures success by evaluating whether the technology solves the intended problem, its commercial viability, and the time it takes for the technology to become accepted practice.
+
+The kinds of evidence presented to support the evaluation of effectiveness include surveys, case studies, experiments, feature analysis, and other techniques that examine the technology itself and the body of evidence to determine if it is conflicting, consistent, and objective.
+
+The evidence is classified according to categories such as compatibility, complexity, trialability, and observability, which reflect how different audiences perceive and evaluate the technology.
+
+Different audiences such as innovators, early adopters, and mainstream market members look for different types of evidence, ranging from a focus on the technology itself to the company and market aspects, which helps in designing studies to provide relevant evidence.",1.496,8.39
+"Suppose Madeline, Andrew and Jason are three managers asked to estimate effort required to build a 50,000 lines of code project. Each manager uses a different estimating technique. Jason uses expert judgment to arrive at a 400 person-month estimate for the project. Using the estimates of Madeline, Andrew and Jason, what is the Delphi estimate for this project? Round to the closest month. a. 220 person-months b. 400 person-months c. 720 person-months d. 755 person-months e. 10188 8 person-months","
+[0]
+[SECTION]: Planning and Managing the Project > 3.3 Effort Estimation > Expert Judgment
+[CONTENT]: Wolverton (1974) built one of the first models of software development effort. His software cost matrix captures his experience with project cost at TRW, a U.S. software development company.As shown in Table 3.6, the row name represents the type of software, and the column designates its difficulty. Difficulty depends on two factors: whether the problem is old (O) or new (N) and whether it is easy (E), moderate (M), or hard (H).The matrix elements are the cost per line of code, as calibrated from historical data at TRW.To use the matrix, you partition the proposed software system into modules. Then, you estimate the size of each module in terms of lines of code. Using the matrix, you  calculate  the  cost  per  module, and  then  sum  over  all  the  modules. For instance, suppose you have a system with three modules: one input/output module that is old and easy, one algorithm module that is new and hard, and one data management module that is old and moderate. If the modules are likely to have 100, 200, and 100 lines  of  code, respectively, then  the  Wolverton  model  estimates  the  cost  to  be 1 100 * 17 2 + 1 200 * 35 2 + 1 100 * 31 2 = $11,800.
+
+
+[1]
+[SECTION]: Planning and Managing the Project > 3.3 Effort Estimation
+[CONTENT]: There are sometimes hidden costs that are not apparent to the managers and developers. For example, studies indicate that a programmer needs a minimum amount of space and quiet to be able to work effectively. McCue (1978) reported to his colleagues at IBM that the minimum standard for programmer work space should be 100 square feet of dedicated floor space with 30 square feet of horizontal work surface.The space also needs a floor-to-ceiling enclosure for noise protection. DeMarco and Lister's (1987) work suggests that programmers free from telephone calls and uninvited visitors are more efficient and produce a better product than those who are subject to repeated interruption.
+Other project costs involve purchasing software and tools to support development efforts. In addition to tools for designing and coding the system, the project may buy  software  to  capture  requirements, organize  documentation, test  the  code, keep track of changes, generate test data, support group meetings, and more. These tools, sometimes called Computer-Aided Software Engineering (or CASE ) tools , are sometimes required by the customer or are part of a company's standard software development process.
+For  most  projects, the  biggest  component  of  cost  is  effort. We  must  determine how many staff-days of effort will be required to complete the project. Effort is certainly
+
+
+[2]
+[SECTION]: Planning and Managing the Project > 3.3 Effort Estimation > Algorithmic Methods
+[CONTENT]: Researchers have created models that express the relationship between effort and the factors that influence it.The models are usually described using equations, where effort is the dependent variable, and several factors (such as experience, size, and application type) are the independent variables. Most of these models acknowledge that project size is the most influential factor in the equation by expressing effort as where S is the estimated size of the system, and a, b, and c are constants. is a vector of cost factors, through and m is an adjustment multiplier based on these factors. In other words, the effort is determined mostly by the size of the proposed system, adjusted  by  the  effects  of  several  other  project, process, product, or  resource characteristics. xn , x 1 Walston and Felix (1977) developed one of the first models of this type, finding that IBM data from 60 projects yielded an equation of the form The projects that supplied data built systems with sizes ranging from 4000 to 467,000 lines of code, written in 28 different high-level languages on 66 computers, and representing from 12 to 11,758 person-months of effort. Size was measured as lines of code, including comments as long as they did not exceed 50 percent of the total lines in the program.
+[FORMULA]
+E = 1 a + bS c 2 m 1 X 2
+[FORMULA]
+E = 5.25 S 0.91 The basic equation was supplemented with a productivity index that reflected 29 factors that can affect productivity, shown in Table 3.7. Notice that the factors are tied to a very specific type of development, including two platforms: an operational computer and a development computer.The model reflects the particular development style of the IBM Federal Systems organizations that provided the data.
+
+
+[3]
+[SECTION]: Planning and Managing the Project > 3.14 Exercises
+[CONTENT]:  - A large government agency wants to contract with a software development firm for a project involving 20,000 lines of code.The Hardand Software Company uses Walston and Felix's estimating technique for determining the number of people required for the time needed to write that much code. How many person-months does Hardand estimate will be needed? If the government's estimate of size is 10% too low (i.e., 20,000 lines of code represent  only  90%  of  the  actual  size), how  many  additional  person-months  will  be needed? In general, if the government's size estimate is k % too low, by how much must the person-month estimate change?
+[FIGURE 3.24 Activity graph for Exercise 3.] 
+ - Explain why it takes longer to develop a utility program than an applications program and longer still to develop a system program.
+[FIGURE_DESCRIPTIONS]
+[0] Directed activity graph illustrating nodes labeled A through L connected by edges with numerical weights representing activity durations. The graph starts at node A and finishes at node L. Key edges include A to B (2), B to C (3), B to D (2), C to E (5), D to F (3), E to F (4), E to H (2), F to I (6), H to J (3), I to J (1), I to K (4), J to L (2), and K to L (2). The graph is used for project scheduling or critical path analysis, showing multiple paths from start to finish with varying durations.
+
+
+
+[4]
+[SECTION]: Planning and Managing the Project > 3.7 Information Systems Example
+[CONTENT]: 'Extra high' is equivalent to a rating of zero,'very high' to 1,'high' to 2,'nominal' to 3, 'low' to 4, and 'very low' to 5. Each of the scale factors is rated, and the sum of all ratings is used to weight the initial effort estimate. For example, suppose we know that the type of application we are building for Piccadilly is generally familiar to the development team; we can rate the first scale factor as 'high.' Similarly, we may rate flexibility as 'very high,' risk resolution as 'nominal,' team interaction as 'high,' and the maturity rating may turn out to be 'low.'We sum the ratings to get a scale factor of 12.Then, we compute the scale exponent to be 1 2 + 1 + 3 + 2 + 4 2 or  1.13. This  scale  exponent  tells  us  that  if  our  initial  effort  estimate  is  100  personmonths, then our new estimate, relative to the characteristics reflected in Table 3.16, is or  182  person-months. In a similar way, the cost drivers adjust this estimate based on characteristics such as tool usage, analyst expertise, and reliability requirements. Once we calculate the adjustment factor, we multiply by our 182 person-months estimate to yield an adjusted effort estimate. 100 1.13 ,
+","[
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""The Delphi estimate is calculated as the average of the estimates provided by the managers."",
+        ""citations"": []
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""Jason's estimate is given as 400 person-months."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Jason uses expert judgment to arrive at a 400 person-month estimate for the project."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""The problem does not provide the estimates from Madeline and Andrew, so the Delphi estimate cannot be calculated exactly from the given information."",
+        ""citations"": []
+    }
+]","The Delphi estimate is calculated as the average of the estimates provided by the managers.
+
+Jason's estimate is given as 400 person-months.
+
+The problem does not provide the estimates from Madeline and Andrew, so the Delphi estimate cannot be calculated exactly from the given information.",1.461,3.231
+Answer TRUE or FALSE: a. A development project is just beginning. An initial prototype of the user interface has been completed. It would be appropriate to use the COCOMO 2.0 Stage 1 at this point in the development. b. A design has been chosen and development has begun. Detailed information about the design is known. The COCOMO 2.0 stage 2 model would be appropriate at this point in the development.,"
+[0]
+[SECTION]: Designing the Architecture > 5.7 Architecture Evaluation And Refinement > Prototyping
+[CONTENT]: If a prototype is intended only to explore design issues, we may not give its development the same careful attention that we would give to a real system. For this reason, we frequently discard the prototype and build the actual system from scratch, rather than try to salvage parts from the prototype. In these cases, the throw-away prototype is meant to be discarded; its development is intended only to assess the feasibility or particular characteristics in a proposed design. In fact, Brooks (1995) recommends building a system, throwing it away, and building it again.The second version of the system benefits from the learning and the mistakes made in the process of building the first system.
+Alternatively, we may attempt to reuse parts of the prototype in the actual system. By taking care in the design and development of the prototype's components, we can produce a prototype that answers questions about the design and at the same time provides building blocks for the final system.The challenge is to ensure that this style of prototyping is still fast. If the prototype cannot be built more quickly than the actual system, then it loses its value. Moreover, if too much effort is invested in developing a quality prototype, we may become too attached to the design decisions and other assets embedded in the prototype,and we may be less open to considering design alternatives.
+An extreme version of this approach is called rapid prototyping , in which we progressively refine the prototype until it becomes the final system. We start with a prototype of the requirements, in the form of a preliminary user interface that simulates the system's responses to user input. In successive iterations of the prototype, we flesh out the system's design and implementation, providing the functionality promised by the initial user interface. In many ways, rapid prototyping resembles an agile development process, in that the system's development is iterative and there is continual feedback from the customer. The difference is that the initial prototype is a user-interface shell rather than the core of the operational system.
+
+
+[1]
+[SECTION]: Capturing the Requirements > 4.7 Prototyping Requirements
+[CONTENT]: Questions about the requirements can be explored via either modeling or prototyping. Whether one approach is better than the other depends on what our questions are, how well they can be expressed in models or in software, and how quickly the models or prototype software can be built.As we saw above, questions about user interfaces may be easier to answer using prototypes. A prototype that implements a number of proposed features would more effectively help users to prioritize these features, and possibly to identify some features that are unnecessary. On the other hand, questions about constraints on the order in which events should occur, or about the synchronization of activities, can be answered more quickly using models. In the end, we need to produce final requirements documentation for the testing and maintenance teams, and possibly for regulatory bodies, as well as final software to be delivered. So, whether it is better to model or to prototype depends on whether it is faster and easier to model, and to develop the software from the refined models, or faster and easier to prototype, and to develop documentation from the refined prototype.
+
+
+[2]
+[SECTION]: Modeling the Process and Life Cycle > 2.2 Software Process Models > SIDEBAR 2.1 DRAWBACKS OF THE WATERFALL MODEL
+[CONTENT]: The software development process can help to control the thrashing by including activities  and  subprocesses  that  enhance  understanding. Prototyping  is  such  a  subprocess; a prototype is a partially developed product that enables customers and developers to examine some aspect of the proposed system and decide if it is suitable or appropriate for the finished product. For example, developers may build a system to implement a small portion of some key requirements to ensure that the requirements are consistent, feasible, and practical; if not, revisions are made at the requirements stage rather than at the more costly testing stage. Similarly, parts of the design may be prototyped, as shown in Figure 2.3. Design prototyping helps developers assess alternative design strategies and decide which is best for a particular project.As we will see in Chapter 5, the designers may address the requirements with several radically different designs to see which has the best properties. For instance, a network may be built as a ring in one prototype and a star in another, and performance characteristics evaluated to see which structure is better at meeting performance goals or constraints.
+Often, the user interface is built and tested as a prototype, so that the users can understand what the new system will be like, and the designers get a better sense of how the  users  like  to  interact  with  the  system. Thus, major  kinks  in  the  requirements  are addressed and fixed well before the requirements are officially validated during system testing; validation ensures  that  the  system  has  implemented  all  of  the  requirements, so that  each  system  function  can  be  traced  back  to  a  particular  requirement  in  the specification. System testing also verifies the requirements; verification ensures that each function works correctly.That is, validation makes sure that the developer is building the right product (according to the specification), and verification checks the quality of the implementation. Prototyping is useful for verification and validation, but these activities can occur during other parts of the development process, as we will see in later chapters.
+
+
+[3]
+[SECTION]: Designing the Architecture > 5.7 Architecture Evaluation And Refinement > Prototyping
+[CONTENT]: Boehm, Gray, and Seewaldt (1984) studied projects that were developed using rapid prototyping, and they report that such projects performed about as well as those developed using traditional design techniques. In addition, 45 percent less effort was expended and 40 percent fewer lines of code were generated by the developers who used prototypes. Also, the speed and efficiency of the systems developed with prototypes were almost the same as those of the traditionally developed systems. However, there are some risks in using rapid prototyping.The biggest risk is that by showing customers an operational prototype, we may mislead them into believing that the system is close to being finished. A related risk is that customers may expect the final system to exhibit the same performance characteristics as the prototype, which could be unrealistically fast due to omitted functionality, smaller scale, and communication delays.Also, because of the lack of documentation, prototyping as a development process is best suited for smaller projects involving smaller development teams.
+","[
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""The provided context does not contain any information about COCOMO 2.0 or its stages, so it is not possible to determine the truth value of the statements regarding the appropriateness of using COCOMO 2.0 Stage 1 or Stage 2 at different points in development."",
+        ""citations"": []
+    }
+]","The provided context does not contain any information about COCOMO 2.0 or its stages, so it is not possible to determine the truth value of the statements regarding the appropriateness of using COCOMO 2.0 Stage 1 or Stage 2 at different points in development.",1.534,4.264
+"The following questions are in reference to a hypothetical ""Gas Station Control System"" (or GSCS) that will be used to help manage an American-style gasoline or service station. Our hypothetical gas station basically provides two services:
+• There is a small store that carries car parts. Inside the store is at least one cash register, operated by a cashier who is an employee of the
+gas station.
+• There are a number of gas pumps, at which customers can park their cars, interact with the system to pay via credit card, and then pump their own gas. Alternatively, the customer can pay for his or her gas via cash or credit card by going into the store and paying directly to the cashier.
+
+Thus the GSCS has two main classes of users. The first is the cashier, who uses the GSCS to record purchases of car parts by customers. The GSCS must allow the cashier to enter the type and number of parts purchased, then compute the total
+purchase price and handle the payment. Customers purchasing gasoline are the second type of user. These customers interface with the system at the gas pump, by specifying the amount and type of gas they will buy, paying either at the pump or to the cashier, and then pumping the gas themselves.
+The system also has to interact with other automated systems to perform its tasks. For example, in order to accept credit card payments, the GSCS must interface with a system maintained by the credit card company. The credit card
+system is responsible for checking that the customer's account is in good standing and can accommodate the amount of the purchase, and for debiting the customer's account and eventually reimbursing the gas station. The operation of
+these external systems is beyond the scope of the GSCS, although the GSCS needs to know how the external systems will communicate the success or failure of their tasks.
+The team has finished the design of the system and has begun coding.
+
+32. Using the data from both test groups, what is the estimate for the total number of faults?
+a. 100
+b. 87.5
+c. 70
+d. 50
+e. It is impossible to determine from the information given.","
+[0]
+[SECTION]: Designing the Modules > 6.4 Representing Oo Designs In The Uml > SIDEBAR 6.4 ROYAL SERVICE STATION REQUIREMENTS
+[CONTENT]:  - The system must handle the data requirements for interfacing with other systems.A credit card  system  is  used  to  process  credit  card  transactions  for  products  and  services. The credit card system uses the card number, name, expiration date, and amount of the purchase. After receiving this information, the credit card system confirms that the transaction is approved or denied.The parts ordering system receives the part code and number of parts needed. It returns the date of parts delivery. The fuel ordering system requires a fuel order description consisting of fuel type, number of gallons, station name, and station identification code. It returns the date when the fuel will be delivered.
+ - The system must record tax and related information, including tax paid by each customer, as well as tax per item.
+ - The station manager must be able to review tax records upon demand.
+ - The system will send periodic messages to customers, reminding them when their vehicles are due for maintenance. Normally, maintenance is needed every six months.
+ - Customers can rent parking spaces in the station parking lot on a day-to-day basis. Each customer must request from the system an available parking space. The station manager can  view  a  monthly  report  summarizing  how  many  parking  spaces  were  available  or occupied.
+ - The system maintains a repository of account information, accessible by account numbers and by customer name.
+ - The station manager must be able to review accounting information upon demand.
+ - The system can report an analysis of prices and discounts to the station manager upon request.
+ - The system will automatically notify the owners of dormant accounts. That is, customers who did not make service station purchases over a two-month period will be contacted.
+ - The system cannot be unavailable for more than 24 hours.
+ - The system must protect customer information from unauthorized access.
+
+
+[1]
+[SECTION]: Designing the Modules > 6.4 Representing Oo Designs In The Uml > SIDEBAR 6.4 ROYAL SERVICE STATION REQUIREMENTS
+[CONTENT]:  - The Royal Service Station provides three types of services to its customers: refueling, vehicle maintenance, and parking.That is, a customer can add fuel to the tank of his or her vehicle (car, motorcycle, or truck), can have the vehicle repaired, or can park the vehicle in the station parking lot.A customer has the option to be billed automatically at the time of purchase (of fuel, maintenance, or parking) or to be sent a monthly paper bill. In either case, customers can pay using cash,credit card,or personal check.Royal Service Station fuel is sold according to price per gallon, depending on whether the fuel is diesel, regular, or premium.Service is priced according to the cost of parts and labor. Parking is sold according to daily, weekly, and monthly rates.The prices for fuel, maintenance services,parts,and parking may vary; only Manny, the station manager, can enter or change prices. At his discretion, Manny may designate a discount on purchases for a particular customer; this discount may vary from one customer to another.A 5% local sales tax applies to all purchases.
+ - The system must track bills on a month-to-month basis and the products and services provided by the gas station on a day-to-day basis.The results of this tracking can be reported to the station manager upon request.
+ - The station manager uses the system to control inventory. The system will warn of low inventory and automatically order new parts and fuel.
+ - The system will track credit history and send warning letters to customers whose payments are overdue. Bills are sent to customers on the first day of the month after the purchases are made. Payment is due on the first day of the succeeding month. Any bill not paid within 90 days of the billing date will result in cancellation of the customer's credit.
+ - The system applies only to regular repeat customers. A regular repeat customer means a customer identified by name, address, and birthdate who uses the station's services at least once per month for at least six months.
+
+
+[2]
+[SECTION]: Maintaining the System > 11.4 Measuring Maintenance Characteristics > Internal Attributes Affecting Maintainability
+[CONTENT]: [FIGURE 11.6 Example for cyclomatic number calculation.] 
+The control flow graph is drawn on the left side of Figure 11.6.We can redraw this graph by assigning a node to each diamond or box and then connecting the nodes with edges, as is done in the original graph.The result is a graph with n nodes and e edges; in our example, n is 6 and e is 8. A result from graph theory tells us that the number of linearly independent paths through this graph is or 4 in our example. McCabe proved that the cyclomatic number is also equal to one more than the number of decision statements in the code. If we look at the preceding code fragment,we see two while statements and an if statement, so the cyclomatic number must be one more than 3, or 4. An easy way to calculate the cyclomatic number from the graph is to look at how the graph divides the plane into segments. In our example, the graph on the right divides the page into three pieces (the triangle, the semicircle, and the irregularly shaped piece to the right of the triangle) plus an extra piece for the rest of the page. Thus, the graph separates the plane into four pieces; that number of pieces is the cyclomatic number.
+[FIGURE_DESCRIPTIONS]
+[0] The image contains two diagrams side by side. On the left is a control flow graph with decision nodes and process blocks. The first decision node checks 'numdigit > 0?' with branches labeled YES and NO. The YES branch leads to a process block, followed by another process block labeled 'numdigit = 0'. Then another decision node checks 'n = 0?' with YES and NO branches. The YES branch leads to a final process block. The NO branches loop back to previous nodes. On the right is an equivalent graph with five nodes connected by directed edges forming loops and paths, representing the same control flow in a simplified graph form.
+
+
+
+[3]
+[SECTION]: Designing the Modules > 6.7 Oo Measurement > OO Size Measures
+[CONTENT]: [FIGURE 6.39 Use case diagram of the Royal Service Station.] 
+We can calculate some of the remaining measures by referring to the class hierarchy of the system design represented in Figure 6.40. The table at the left of the figure lists the maximum and minimum values for each of the five Lorenz and Kidd metrics derived from this design.We can use these measures as a baseline from which to evaluate growth as the system evolves.
+[FIGURE_DESCRIPTIONS]
+[0] Diagram illustrating the Royal Service Station system with various services and external systems. Inside the main box labeled 'Royal Service Station,' there are six oval nodes representing services: Fuel Services, Parking Services, Maintenance Services, Controlling Inventory, Accounting Services, and Billing Services. Arrows connect these services to external systems: Parts Ordering System linked to Controlling Inventory, Fuel Ordering System linked to Controlling Inventory, Printer System linked to Accounting Services, and Credit Card System linked to Billing Services. On the left, icons represent a Customer, a Manager, and a clock labeled 'Time,' indicating user roles and time factor. The diagram shows interactions between internal services and external systems for managing station operations.
+
+","[
+    {
+        ""role"": ""sentence"",
+        ""segment"": ""It is impossible to determine from the information given."",
+        ""citations"": []
+    }
+]",It is impossible to determine from the information given.,1.407,2.772
+"The following questions are in reference to a hypothetical ""Gas Station Control System"" (or GSCS) that will be used to help manage an American-style gasoline or service station. Our hypothetical gas station basically provides two services:
+• There is a small store that carries car parts. Inside the store is at least one cash register, operated by a cashier who is an employee of the
+gas station.
+• There are a number of gas pumps, at which customers can park their cars, interact with the system to pay via credit card, and then pump their own gas. Alternatively, the customer can pay for his or her gas via cash or credit card by going into the store and paying directly to the cashier.
+Thus the GSCS has two main classes of users. The first is the cashier, who uses the GSCS to record purchases of car parts by customers. The GSCS must allow the cashier to enter the type and number of parts purchased, then compute the total purchase price and handle the payment. Customers purchasing gasoline are the second type of user. These customers interface with the system at the gas pump, by specifying the amount and type of gas they will buy, paying either at the pump or to the cashier, and then pumping the gas themselves.
+The system also has to interact with other automated systems to perform its tasks. For example, in order to accept credit card payments, the GSCS must interface with a system maintained by the credit card company. The credit card
+system is responsible for checking that the customer's account is in good standing and can accommodate the amount of the purchase, and for debiting the customer's account and eventually reimbursing the gas station. T he operation of
+these external systems is beyond the scope of the GSCS, although the GSCS needs to know how the external systems will communicate the success or failure of their tasks.
+The GSCS is divided into three subsystems:
+• A gas purchase subsystem, that takes care of customer interaction with the gas pumps;
+• A cashier subsystem, that interacts with the cashier to accept payment for the purchase of car parts and gasoline;
+• A tracking subsystem, that logs all purchases and tracks the inventory remaining.
+
+The questions in this section have to do with maintenance issues in the implementation of the system, and with the operation of the system once it
+reaches the maintenance phase of the lifecycle.
+
+5. TRUE or FALSE: The prediction system described in question 5 is valid only if the acceptance range is greater than 40%.","
+[0]
+[SECTION]: Designing the Modules > 6.4 Representing Oo Designs In The Uml > From this requirements statement, we can extract several tentative classes:
+[CONTENT]: 
+ - personal check
+ - services
+ - paper bill
+ - discounts
+ - credit card
+ - tax
+ - customer
+ - parking
+ - station manager
+ - maintenance
+ - purchase
+ - cash
+ - fuel
+ - prices
+The following questions can act as guidelines for what can be included in a list of candidate classes:
+ - What data need to be 'processed' in some way?
+ - What items have multiple attributes?
+ - When do we have more than one object in a class?
+ - What information is based on the requirements themselves, and not derived from our understanding of the requirements?
+ - What attributes and operations are always applicable to a class or object?
+Answering these questions can help us to group the candidate classes and objects, as shown in Table 6.1.
+Next,we examine other requirements to see what they add to our existing table of attributes and classes. For example, the fifth requirement states that,
+The system applies only to regular repeat customers. A regular repeat customer means a customer identified by name, address, and birthdate who uses the station's services at least once per month for at least six months.
+
+
+[1]
+[SECTION]: Designing the Modules > 6.4 Representing Oo Designs In The Uml > SIDEBAR 6.4 ROYAL SERVICE STATION REQUIREMENTS
+[CONTENT]:  - The system must handle the data requirements for interfacing with other systems.A credit card  system  is  used  to  process  credit  card  transactions  for  products  and  services. The credit card system uses the card number, name, expiration date, and amount of the purchase. After receiving this information, the credit card system confirms that the transaction is approved or denied.The parts ordering system receives the part code and number of parts needed. It returns the date of parts delivery. The fuel ordering system requires a fuel order description consisting of fuel type, number of gallons, station name, and station identification code. It returns the date when the fuel will be delivered.
+ - The system must record tax and related information, including tax paid by each customer, as well as tax per item.
+ - The station manager must be able to review tax records upon demand.
+ - The system will send periodic messages to customers, reminding them when their vehicles are due for maintenance. Normally, maintenance is needed every six months.
+ - Customers can rent parking spaces in the station parking lot on a day-to-day basis. Each customer must request from the system an available parking space. The station manager can  view  a  monthly  report  summarizing  how  many  parking  spaces  were  available  or occupied.
+ - The system maintains a repository of account information, accessible by account numbers and by customer name.
+ - The station manager must be able to review accounting information upon demand.
+ - The system can report an analysis of prices and discounts to the station manager upon request.
+ - The system will automatically notify the owners of dormant accounts. That is, customers who did not make service station purchases over a two-month period will be contacted.
+ - The system cannot be unavailable for more than 24 hours.
+ - The system must protect customer information from unauthorized access.
+
+
+[2]
+[SECTION]: Designing the Modules > 6.4 Representing Oo Designs In The Uml > For example, consider this part of the first Royal Service Station requirement:
+[CONTENT]: A customer has the option to be billed automatically at the time of purchase (of fuel, maintenance, or parking) or to be sent a monthly paper bill. In either case, customers can pay using cash, credit card, or personal check. Royal Service Station fuel is sold according to price per gallon, depending on whether the fuel is diesel, regular, or premium. Service is priced according to the cost of parts and labor. Parking is sold according to daily, weekly, and monthly rates. The prices for fuel, maintenance services, parts, and parking may vary; only Manny, the station manager, can enter or change prices.At his discretion, Manny may designate a discount on purchases for a particular customer; this discount may vary from one customer to another.A 5% local sales tax applies to all purchases.
+
+
+[3]
+[SECTION]: Designing the Modules > 6.4 Representing Oo Designs In The Uml > SIDEBAR 6.4 ROYAL SERVICE STATION REQUIREMENTS
+[CONTENT]:  - The Royal Service Station provides three types of services to its customers: refueling, vehicle maintenance, and parking.That is, a customer can add fuel to the tank of his or her vehicle (car, motorcycle, or truck), can have the vehicle repaired, or can park the vehicle in the station parking lot.A customer has the option to be billed automatically at the time of purchase (of fuel, maintenance, or parking) or to be sent a monthly paper bill. In either case, customers can pay using cash,credit card,or personal check.Royal Service Station fuel is sold according to price per gallon, depending on whether the fuel is diesel, regular, or premium.Service is priced according to the cost of parts and labor. Parking is sold according to daily, weekly, and monthly rates.The prices for fuel, maintenance services,parts,and parking may vary; only Manny, the station manager, can enter or change prices. At his discretion, Manny may designate a discount on purchases for a particular customer; this discount may vary from one customer to another.A 5% local sales tax applies to all purchases.
+ - The system must track bills on a month-to-month basis and the products and services provided by the gas station on a day-to-day basis.The results of this tracking can be reported to the station manager upon request.
+ - The station manager uses the system to control inventory. The system will warn of low inventory and automatically order new parts and fuel.
+ - The system will track credit history and send warning letters to customers whose payments are overdue. Bills are sent to customers on the first day of the month after the purchases are made. Payment is due on the first day of the succeeding month. Any bill not paid within 90 days of the billing date will result in cancellation of the customer's credit.
+ - The system applies only to regular repeat customers. A regular repeat customer means a customer identified by name, address, and birthdate who uses the station's services at least once per month for at least six months.
+
+
+[4]
+[SECTION]: Designing the Modules > 6.7 Oo Measurement > OO Size Measures
+[CONTENT]: [FIGURE 6.39 Use case diagram of the Royal Service Station.] 
+We can calculate some of the remaining measures by referring to the class hierarchy of the system design represented in Figure 6.40. The table at the left of the figure lists the maximum and minimum values for each of the five Lorenz and Kidd metrics derived from this design.We can use these measures as a baseline from which to evaluate growth as the system evolves.
+[FIGURE_DESCRIPTIONS]
+[0] Diagram illustrating the Royal Service Station system with various services and external systems. Inside the main box labeled 'Royal Service Station,' there are six oval nodes representing services: Fuel Services, Parking Services, Maintenance Services, Controlling Inventory, Accounting Services, and Billing Services. Arrows connect these services to external systems: Parts Ordering System linked to Controlling Inventory, Fuel Ordering System linked to Controlling Inventory, Printer System linked to Accounting Services, and Credit Card System linked to Billing Services. On the left, icons represent a Customer, a Manager, and a clock labeled 'Time,' indicating user roles and time factor. The diagram shows interactions between internal services and external systems for managing station operations.
+
+","[
+    {
+        ""role"": ""sentence"",
+        ""segment"": ""There is no information in the provided context documents about a prediction system or an acceptance range related to the Gas Station Control System (GSCS)."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""The provided context documents describe the requirements, services, and interactions of the Royal Service Station system and its components, but do not mention any prediction system or acceptance range."",
+                ""img_id"": null
+            }
+        ]
+    }
+]",There is no information in the provided context documents about a prediction system or an acceptance range related to the Gas Station Control System (GSCS).,1.485,4.212
+"The following questions are in reference to a hypothetical “Loan Arranger” system. The Loan Arranger is meant to assist a “consolidating organization”, a specific type of business in the financial domain.
+Bank customers often borrow money from banks; they promise to repay the loan plus interest over a certain period of time. Each of these loans is an ultimately lucrative proposition for the bank, but usually a long period of time is required for the bank to collect its earnings. Also, there is always the chance that a borrower will be unable to repay the loan. Consolidating organizations make money by buying loans from banks and reselling them to investors. Loan analysts, employed by the consolidating organization, work with investors to select a set of loans that meet their requirements in terms of time, risk, and initial purchase price.
+The Loan Arranger application has two main types of functionality. First, it tracks all of the loans that are owned by the consolidating organization. (The entire set of loans owned by the organization is known as its “portfolio”.) In order to track loans correctly, the Loan Arranger must interface with the banks to find out about new loans that should be added to the portfolio, or updates to loans that are already in the portfolio. Secondly, the Loan Arranger allows a loan analyst to select a subset of loans from the portfolio that match an investor's desired investment characteristics (these subsets of loans are referred to as “bundles”). The loan analyst can either select the bundle manually, or ask the system to select an optimal bundle given the investor's constraints. The Loan Arranger then updates the portfolio when the bundle is purchased by the investor. There are numerous constraints on how this functionality is to be achieved; most mportantly, the Loan Arranger must be usable by more than one analyst at a time.
+As a first step in developing the Loan Arranger, the development team meets with a representative from the consolidating organization to formulate a set of requirements.
+
+22. TRUE or FALSE: When the Delphi method is used and participants are allowed to iterate through the process several times, group dynamics drives the group consensus to converge close to the median of the estimates.","
+[0]
+[SECTION]: Capturing the Requirements > 4.17 Term Project > Preconditions and Assumptions
+[CONTENT]: 
+ - The Loan Arranger system assumes that there already exist lenders, borrowers, and loans from which to choose, and that investors exist who are interested in buying bundles of loans.
+ - The Loan Arranger system contains a repository of information about loans from a variety of lenders.This repository may be empty.
+ - At  regular  intervals, each  lender  provides  reports  listing  the  loans  that  it  has made.Loans that have already been purchased by FCO will be indicated on these reports.
+ - Each loan in the Loan Arranger repository represents an investment to then be bundled and sold with other loans.
+ - The Loan Arranger system may be used by up to four loan analysts simultaneously.
+
+
+[1]
+[SECTION]: Modeling the Process and Life Cycle > 2.11 Key References > TABLE 2.3 ( continued )
+[CONTENT]: Lending institution: A synonym for lender. See lender .
+Loan: Aloan is a set of information that describes a home loan and the borrower-identifying information associated with the loan.The following information is associated with each loan: loan amount, interest rate, interest rate type (adjustable or f fixed), settlement date (the date the borrower originally borrowed the money from the lender), term (expressed as number of years), borrower, lender, loan type (jumbo or regular), and property (identif fied by the address of the property).A loan must have exactly one associated lender and exactly one associated borrower. In addition, each loan is identif fied with a loan risk and a loan status.
+Loan analyst: The loan analyst is a professional employee of FCO who is trained in using the Loan Arranger system to manage and bundle loans. Loan analysts are familiar with the terminology of loans and lending, but they may not have all the relevant information at hand with which to evaluate a single loan or collection of loans.
+Loan risk: Each loan is associated with a level of risk, indicated by an integer from 1 to 100. 1 represents the lowest-risk loan; that is, it is unlikely that the borrower will be late or default on this loan. 100 represents the highest risk; that is, it is almost certain that the borrower will default on this loan.
+Loan status: A loan can have one of three status designations: good, late, or default.A loan is in good status if the borrower has made all payments up to the current time.A loan is in late status if the borrower's last payment was made but not by the payment due date.A loan is in default status if the borrower's last payment was not received within 10 days of the due date.
+Loan type: A loan is either a jumbo mortgage, where the property is valued in excess of $275,000, or a regular mortgage, where the property value is $275,000 or less.
+Portfolio: The collection of loans purchased by FCO and available for inclusion in a bundle.The repository maintained by the Loan Arranger contains information about all of the loans in the portfolio.
+ - decision points
+
+
+[2]
+[SECTION]: Why Software Engineering? > 1.14 Term Project
+[CONTENT]: We can summarize this information by saying that the Loan Arranger system allows a loan analyst to access information about mortgages (home loans, described here simply as 'loans') purchased by FCO from multiple lending institutions with the intention of repackaging the loans to sell to other investors. The loans purchased by FCO for investment and resale are collectively known as the loan portfolio. The Loan Arranger system tracks these portfolio loans in its repository of loan information. The loan analyst may add, view, update, or delete loan information about lenders and the set of loans in the portfolio. Additionally, the system allows the loan analyst to create 'bundles' of loans for sale to investors. A user of Loan Arranger is a loan analyst who tracks the mortgages purchased by FCO.
+In later chapters, we will explore the system's requirements in more depth. For now, if you need to brush up on your understanding of principal and interest, you can review your old math books or look at http://www.interest.com/hugh/calc/formula.html.
+
+
+[3]
+[SECTION]: Capturing the Requirements > 4.17 Term Project > High-Level Description of Functionality
+[CONTENT]: 
+ - The Loan Arranger system will receive monthly reports from each lender of new loans issued by that lender.The loans in the report recently purchased by FCO for its investment portfolio will be marked in the report. The Loan Arranger system will use the report information to update its repository of available loans.
+ - The Loan Arranger system will receive monthly reports from each lender providing updates about the status of loans issued by that lender.The updated information will include: the current interest rate for an adjustable rate mortgage, and the status of the borrower with respect to the loan (good, late, or default). For loans in the  FCO  portfolio, the  Loan Arranger  will  update  the  data  in  the  repository. Loans not in the FCO portfolio will also be examined in order to determine if a borrower's standing should be updated. FCO will provide each lender with the format for the reports, so that all reports will share a common format.
+ - The loan analyst can change individual data records as described in Data Operations.
+ - All new data must be validated before they are added to the repository (according to the rules described in Data Constraints).
+ - The loan analyst can use the Loan Arranger to identify bundles of loans to sell to particular investors.
+
+
+[4]
+[SECTION]: Modeling the Process and Life Cycle > 2.10 Term Project
+[CONTENT]: It is early in the development process of the Loan Arranger system for FCO. You do not yet have a comprehensive set of requirements for the system. All you have is an overview of system functionality, and a sense of how the system will be used to support FCO's business. Many of the terms used in the overview are unfamiliar to you, so you have  asked  the  customer  representatives  to  prepare  a  glossary. They  give  you  the description in Table 2.3.
+This information clarifies some concepts for you, but you are still far from having a good set of requirements. Nevertheless, you can make some preliminary decisions about how the development should proceed. Review the processes presented in this chapter  and  determine  which  ones  might  be  appropriate  for  developing  the  Loan Arranger. For  each  process, make  a  list  of  its  advantages  and  disadvantages  with respect to the Loan Arranger.
+
+
+[5]
+[SECTION]: Designing the Modules > 6.14 Term Project
+[CONTENT]: Review your requirements for the Loan Arranger system. How would they change were they to be implemented as OO requirements? How would these changes make the  system  easier  to  fix  or  change?  Next, review  the  characteristics  of  OO  systems. Would  any  of  these  characteristics  be  beneficial  for  the  Loan  Arranger?  Finally, develop an OO design for the Loan Arranger.Will it be easy to test the resulting implementation? To change? Why?
+","[
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""TRUE: When the Delphi method is used and participants are allowed to iterate through the process several times, group dynamics drives the group consensus to converge close to the median of the estimates."",
+        ""citations"": []
+    }
+]","TRUE: When the Delphi method is used and participants are allowed to iterate through the process several times, group dynamics drives the group consensus to converge close to the median of the estimates.",1.479,2.591
+"The following questions are in reference to a hypothetical “Loan Arranger” system. The Loan Arranger is meant to assist a “consolidating organization”, a specific type of business in the financial domain.
+Bank customers often borrow money from banks; they promise to repay the loan plus interest over a certain period of time. Each of these loans is an ultimately lucrative proposition for the bank, but usually a long period of time is required for the bank to collect its earnings. Also, there is always the chance that a borrower will be unable to repay the loan. Consolidating organizations make money by buying loans from banks and reselling them to investors. Loan analysts, employed by the consolidating organization, work with investors to select a set of loans that meet their requirements in terms of time, risk, and initial purchase price.
+The Loan Arranger application has two main types of functionality. First, it tracks all of the loans that are owned by the consolidating organization. (The entire set of loans owned by the organization is known as its “portfolio”.) In order to track loans correctly, the Loan Arranger must interface with the banks to find out about new loans that should be added to the portfolio, or updates to loans that are already in the portfolio. Secondly, the Loan Arranger allows a loan analyst to select a subset of loans from the portfolio that match an investor's desired investment characteristics (these subsets of loans are referred to as “bundles”). The loan analyst can either select the bundle manually, or ask the system to select an optimal bundle given the investor's constraints. The Loan Arranger then updates the portfolio when the bundle is purchased by the investor. There are numerous constraints on how this functionality is to be achieved; most mportantly, the Loan Arranger must be usable by more than one analyst at a time.
+As a first step in developing the Loan Arranger, the development team meets with a representative from the consolidating organization to formulate a set of requirements.
+
+23. If the Delphi estimate for effort is used and there are 20 team members working on the project, how many months will the project take? Assume all team members can work concurrently. Round to the closest month.
+a. 26
+b. 30
+c. 32
+d. 34
+e. 35","
+[0]
+[SECTION]: Capturing the Requirements > 4.17 Term Project > Preconditions and Assumptions
+[CONTENT]: 
+ - The Loan Arranger system assumes that there already exist lenders, borrowers, and loans from which to choose, and that investors exist who are interested in buying bundles of loans.
+ - The Loan Arranger system contains a repository of information about loans from a variety of lenders.This repository may be empty.
+ - At  regular  intervals, each  lender  provides  reports  listing  the  loans  that  it  has made.Loans that have already been purchased by FCO will be indicated on these reports.
+ - Each loan in the Loan Arranger repository represents an investment to then be bundled and sold with other loans.
+ - The Loan Arranger system may be used by up to four loan analysts simultaneously.
+
+
+[1]
+[SECTION]: Modeling the Process and Life Cycle > 2.11 Key References > TABLE 2.3 ( continued )
+[CONTENT]: Lending institution: A synonym for lender. See lender .
+Loan: Aloan is a set of information that describes a home loan and the borrower-identifying information associated with the loan.The following information is associated with each loan: loan amount, interest rate, interest rate type (adjustable or f fixed), settlement date (the date the borrower originally borrowed the money from the lender), term (expressed as number of years), borrower, lender, loan type (jumbo or regular), and property (identif fied by the address of the property).A loan must have exactly one associated lender and exactly one associated borrower. In addition, each loan is identif fied with a loan risk and a loan status.
+Loan analyst: The loan analyst is a professional employee of FCO who is trained in using the Loan Arranger system to manage and bundle loans. Loan analysts are familiar with the terminology of loans and lending, but they may not have all the relevant information at hand with which to evaluate a single loan or collection of loans.
+Loan risk: Each loan is associated with a level of risk, indicated by an integer from 1 to 100. 1 represents the lowest-risk loan; that is, it is unlikely that the borrower will be late or default on this loan. 100 represents the highest risk; that is, it is almost certain that the borrower will default on this loan.
+Loan status: A loan can have one of three status designations: good, late, or default.A loan is in good status if the borrower has made all payments up to the current time.A loan is in late status if the borrower's last payment was made but not by the payment due date.A loan is in default status if the borrower's last payment was not received within 10 days of the due date.
+Loan type: A loan is either a jumbo mortgage, where the property is valued in excess of $275,000, or a regular mortgage, where the property value is $275,000 or less.
+Portfolio: The collection of loans purchased by FCO and available for inclusion in a bundle.The repository maintained by the Loan Arranger contains information about all of the loans in the portfolio.
+ - decision points
+
+
+[2]
+[SECTION]: Why Software Engineering? > 1.14 Term Project
+[CONTENT]: We can summarize this information by saying that the Loan Arranger system allows a loan analyst to access information about mortgages (home loans, described here simply as 'loans') purchased by FCO from multiple lending institutions with the intention of repackaging the loans to sell to other investors. The loans purchased by FCO for investment and resale are collectively known as the loan portfolio. The Loan Arranger system tracks these portfolio loans in its repository of loan information. The loan analyst may add, view, update, or delete loan information about lenders and the set of loans in the portfolio. Additionally, the system allows the loan analyst to create 'bundles' of loans for sale to investors. A user of Loan Arranger is a loan analyst who tracks the mortgages purchased by FCO.
+In later chapters, we will explore the system's requirements in more depth. For now, if you need to brush up on your understanding of principal and interest, you can review your old math books or look at http://www.interest.com/hugh/calc/formula.html.
+
+
+[3]
+[SECTION]: Capturing the Requirements > 4.17 Term Project > High-Level Description of Functionality
+[CONTENT]: 
+ - The Loan Arranger system will receive monthly reports from each lender of new loans issued by that lender.The loans in the report recently purchased by FCO for its investment portfolio will be marked in the report. The Loan Arranger system will use the report information to update its repository of available loans.
+ - The Loan Arranger system will receive monthly reports from each lender providing updates about the status of loans issued by that lender.The updated information will include: the current interest rate for an adjustable rate mortgage, and the status of the borrower with respect to the loan (good, late, or default). For loans in the  FCO  portfolio, the  Loan Arranger  will  update  the  data  in  the  repository. Loans not in the FCO portfolio will also be examined in order to determine if a borrower's standing should be updated. FCO will provide each lender with the format for the reports, so that all reports will share a common format.
+ - The loan analyst can change individual data records as described in Data Operations.
+ - All new data must be validated before they are added to the repository (according to the rules described in Data Constraints).
+ - The loan analyst can use the Loan Arranger to identify bundles of loans to sell to particular investors.
+
+
+[4]
+[SECTION]: Modeling the Process and Life Cycle > 2.10 Term Project
+[CONTENT]: It is early in the development process of the Loan Arranger system for FCO. You do not yet have a comprehensive set of requirements for the system. All you have is an overview of system functionality, and a sense of how the system will be used to support FCO's business. Many of the terms used in the overview are unfamiliar to you, so you have  asked  the  customer  representatives  to  prepare  a  glossary. They  give  you  the description in Table 2.3.
+This information clarifies some concepts for you, but you are still far from having a good set of requirements. Nevertheless, you can make some preliminary decisions about how the development should proceed. Review the processes presented in this chapter  and  determine  which  ones  might  be  appropriate  for  developing  the  Loan Arranger. For  each  process, make  a  list  of  its  advantages  and  disadvantages  with respect to the Loan Arranger.
+
+
+[5]
+[SECTION]: Maintaining the System > 11.12 Term Project
+[CONTENT]: Examine all your artifacts (requirements, design, code, test plans, documentation) for the Loan Arranger. How maintainable are they? If you had to design and implement the Loan Arranger again, what would you have done differently to make the product easier to maintain?
+",[],,1.49,2.902
+"The following questions are in reference to a hypothetical “Loan Arranger” system. The Loan Arranger is meant to assist a “consolidating organization”, a specific type of business in the financial domain.
+Bank customers often borrow money from banks; they promise to repay the loan plus interest over a certain period of time. Each of these loans is an ultimately lucrative proposition for the bank, but usually a long period of time is required for the bank to collect its earnings. Also, there is always the chance that a borrower will be unable to repay the loan. Consolidating organizations make money by buying loans from banks and reselling them to investors. Loan analysts, employed by the consolidating organization, work with investors to select a set of loans that meet their requirements in terms of time, risk, and initial purchase price.
+The Loan Arranger application has two main types of functionality. First, it tracks all of the loans that are owned by the consolidating organization. (The entire set of loans owned by the organization is known as its “portfolio”.) In order to track loans correctly, the Loan Arranger must interface with the banks to find out about new loans that should be added to the portfolio, or updates to loans that are already in the portfolio. Secondly, the Loan Arranger allows a loan analyst to select a subset of loans from the portfolio that match an investor's desired investment characteristics (these subsets of loans are referred to as “bundles”). The loan analyst can either select the bundle manually, or ask the system to select an optimal bundle given the investor's constraints. The Loan Arranger then updates the portfolio when the bundle is purchased by the investor. There are numerous constraints on how this functionality is to be achieved; most mportantly, the Loan Arranger must be usable by more than one analyst at a time.
+As a first step in developing the Loan Arranger, the development team meets with a representative from the consolidating organization to formulate a set of requirements.
+
+Image Description: An activity graph represented by nodes and directed edges with associated times in days. The paths are as follows: Node A connects to Node B (7 days) and Node C (5 days). Node B connects to Node D (2 days). Node C connects to Node E (3 days). Node D connects to Node F (6 days). Node E connects to Node G (10 days). Node F connects to Node H (2 days). Node G connects to Node H (4 days) and Node J (10 days). Node H connects to Node I (1 day). Node I connects to Node K (10 days). Node J connects to Node K (5 days).
+To build a schedule, the critical path method is used. The activity graph (shown below) is used to depict the dependencies among the activities and milestones of the Loan Arranger project. The nodes of the graph represent the milestones of the project. The edges linking the nodes represent the activities. The numbers adjacent to the edges represent the number of days required for the activity. For example, it will take 5 days to complete the activity starting at milestone A and ending in milestone C. Use this activity graph to answer the following questions:
+28. Which milestones are precursors to J?
+a. D
+b. E
+c. I
+d. D and E
+e. D and I
+f. All of the above","
+[0]
+[SECTION]: Capturing the Requirements > 4.17 Term Project > Preconditions and Assumptions
+[CONTENT]: 
+ - The Loan Arranger system assumes that there already exist lenders, borrowers, and loans from which to choose, and that investors exist who are interested in buying bundles of loans.
+ - The Loan Arranger system contains a repository of information about loans from a variety of lenders.This repository may be empty.
+ - At  regular  intervals, each  lender  provides  reports  listing  the  loans  that  it  has made.Loans that have already been purchased by FCO will be indicated on these reports.
+ - Each loan in the Loan Arranger repository represents an investment to then be bundled and sold with other loans.
+ - The Loan Arranger system may be used by up to four loan analysts simultaneously.
+
+
+[1]
+[SECTION]: Why Software Engineering? > 1.14 Term Project
+[CONTENT]: We can summarize this information by saying that the Loan Arranger system allows a loan analyst to access information about mortgages (home loans, described here simply as 'loans') purchased by FCO from multiple lending institutions with the intention of repackaging the loans to sell to other investors. The loans purchased by FCO for investment and resale are collectively known as the loan portfolio. The Loan Arranger system tracks these portfolio loans in its repository of loan information. The loan analyst may add, view, update, or delete loan information about lenders and the set of loans in the portfolio. Additionally, the system allows the loan analyst to create 'bundles' of loans for sale to investors. A user of Loan Arranger is a loan analyst who tracks the mortgages purchased by FCO.
+In later chapters, we will explore the system's requirements in more depth. For now, if you need to brush up on your understanding of principal and interest, you can review your old math books or look at http://www.interest.com/hugh/calc/formula.html.
+
+
+[2]
+[SECTION]: Modeling the Process and Life Cycle > 2.11 Key References > TABLE 2.3 ( continued )
+[CONTENT]: Lending institution: A synonym for lender. See lender .
+Loan: Aloan is a set of information that describes a home loan and the borrower-identifying information associated with the loan.The following information is associated with each loan: loan amount, interest rate, interest rate type (adjustable or f fixed), settlement date (the date the borrower originally borrowed the money from the lender), term (expressed as number of years), borrower, lender, loan type (jumbo or regular), and property (identif fied by the address of the property).A loan must have exactly one associated lender and exactly one associated borrower. In addition, each loan is identif fied with a loan risk and a loan status.
+Loan analyst: The loan analyst is a professional employee of FCO who is trained in using the Loan Arranger system to manage and bundle loans. Loan analysts are familiar with the terminology of loans and lending, but they may not have all the relevant information at hand with which to evaluate a single loan or collection of loans.
+Loan risk: Each loan is associated with a level of risk, indicated by an integer from 1 to 100. 1 represents the lowest-risk loan; that is, it is unlikely that the borrower will be late or default on this loan. 100 represents the highest risk; that is, it is almost certain that the borrower will default on this loan.
+Loan status: A loan can have one of three status designations: good, late, or default.A loan is in good status if the borrower has made all payments up to the current time.A loan is in late status if the borrower's last payment was made but not by the payment due date.A loan is in default status if the borrower's last payment was not received within 10 days of the due date.
+Loan type: A loan is either a jumbo mortgage, where the property is valued in excess of $275,000, or a regular mortgage, where the property value is $275,000 or less.
+Portfolio: The collection of loans purchased by FCO and available for inclusion in a bundle.The repository maintained by the Loan Arranger contains information about all of the loans in the portfolio.
+ - decision points
+
+
+[3]
+[SECTION]: Capturing the Requirements > 4.17 Term Project > High-Level Description of Functionality
+[CONTENT]: 
+ - The Loan Arranger system will receive monthly reports from each lender of new loans issued by that lender.The loans in the report recently purchased by FCO for its investment portfolio will be marked in the report. The Loan Arranger system will use the report information to update its repository of available loans.
+ - The Loan Arranger system will receive monthly reports from each lender providing updates about the status of loans issued by that lender.The updated information will include: the current interest rate for an adjustable rate mortgage, and the status of the borrower with respect to the loan (good, late, or default). For loans in the  FCO  portfolio, the  Loan Arranger  will  update  the  data  in  the  repository. Loans not in the FCO portfolio will also be examined in order to determine if a borrower's standing should be updated. FCO will provide each lender with the format for the reports, so that all reports will share a common format.
+ - The loan analyst can change individual data records as described in Data Operations.
+ - All new data must be validated before they are added to the repository (according to the rules described in Data Constraints).
+ - The loan analyst can use the Loan Arranger to identify bundles of loans to sell to particular investors.
+
+
+[4]
+[SECTION]: Modeling the Process and Life Cycle > 2.10 Term Project
+[CONTENT]: It is early in the development process of the Loan Arranger system for FCO. You do not yet have a comprehensive set of requirements for the system. All you have is an overview of system functionality, and a sense of how the system will be used to support FCO's business. Many of the terms used in the overview are unfamiliar to you, so you have  asked  the  customer  representatives  to  prepare  a  glossary. They  give  you  the description in Table 2.3.
+This information clarifies some concepts for you, but you are still far from having a good set of requirements. Nevertheless, you can make some preliminary decisions about how the development should proceed. Review the processes presented in this chapter  and  determine  which  ones  might  be  appropriate  for  developing  the  Loan Arranger. For  each  process, make  a  list  of  its  advantages  and  disadvantages  with respect to the Loan Arranger.
+
+
+[5]
+[SECTION]: Testing the Programs > 8.14 Term Project
+[CONTENT]: The Loan Arranger requires a great deal of testing. Because the system is important to the economic health of the FCO, the customer wants the software delivered as soon as possible. Devise a test strategy that tests the Loan Arranger but uses a minimum of resources. Justify your strategy, and explain how you will know when to stop testing and turn over the system to the customer.
+","[
+    {
+        ""role"": ""sentence"",
+        ""segment"": ""The milestones that are precursors to J are E and D"",
+        ""citations"": [
+            {
+                ""type"": ""img"",
+                ""content"": null,
+                ""img_id"": ""query_evidence""
+            }
+        ]
+    }
+]",The milestones that are precursors to J are E and D,1.446,1.576
+"The following questions are in reference to a hypothetical “Loan Arranger” system. The Loan Arranger is meant to assist a “consolidating organization”, a specific type of business in the financial domain.
+Bank customers often borrow money from banks; they promise to repay the loan plus interest over a certain period of time. Each of these loans is an ultimately lucrative proposition for the bank, but usually a long period of time is required for the bank to collect its earnings. Also, there is always the chance that a borrower will be unable to repay the loan. Consolidating organizations make money by buying loans from banks and reselling them to investors. Loan analysts, employed by the consolidating organization, work with investors to select a set of loans that meet their requirements in terms of time, risk, and initial purchase price.
+The Loan Arranger application has two main types of functionality. First, it tracks all of the loans that are owned by the consolidating organization. (The entire set of loans owned by the organization is known as its “portfolio”.) In order to track loans correctly, the Loan Arranger must interface with the banks to find out about new loans that should be added to the portfolio, or updates to loans that are already in the portfolio. Secondly, the Loan Arranger allows a loan analyst to select a subset of loans from the portfolio that match an investor's desired investment characteristics (these subsets of loans are referred to as “bundles”). The loan analyst can either select the bundle manually, or ask the system to select an optimal bundle given the investor's constraints. The Loan Arranger then updates the portfolio when the bundle is purchased by the investor. There are numerous constraints on how this functionality is to be achieved; most mportantly, the Loan Arranger must be usable by more than one analyst at a time.
+As a first step in developing the Loan Arranger, the development team meets with a representative from the consolidating organization to formulate a set of requirements.
+
+Image Description: A high-level class diagram of the Loan Arranger system containing four classes: Bank, Loan, Borrower, and Bundle, and another class Loan Arranger. Bank is connected to Loan. Loan is connected to Bank, Borrower, Bundle, and Loan Arranger. Borrower is connected to Loan. Bundle is connected to Loan and Loan Arranger. Loan Arranger is connected to Loan and Bundle.
+This is the class diagram for the initial high-level design of the Loan Arranger system.
+36. Based on what is known about the level of cohesion and coupling for class Loan, it is reasonable to assume that:
+a.  It will probably be easier to modify than class Borrower.
+b.  It will probably be harder to modify than class Borrower.
+c.  No conclusions can be drawn about the ease of modification.","
+[0]
+[SECTION]: Capturing the Requirements > 4.17 Term Project > Preconditions and Assumptions
+[CONTENT]: 
+ - The Loan Arranger system assumes that there already exist lenders, borrowers, and loans from which to choose, and that investors exist who are interested in buying bundles of loans.
+ - The Loan Arranger system contains a repository of information about loans from a variety of lenders.This repository may be empty.
+ - At  regular  intervals, each  lender  provides  reports  listing  the  loans  that  it  has made.Loans that have already been purchased by FCO will be indicated on these reports.
+ - Each loan in the Loan Arranger repository represents an investment to then be bundled and sold with other loans.
+ - The Loan Arranger system may be used by up to four loan analysts simultaneously.
+
+
+[1]
+[SECTION]: Why Software Engineering? > 1.14 Term Project
+[CONTENT]: We can summarize this information by saying that the Loan Arranger system allows a loan analyst to access information about mortgages (home loans, described here simply as 'loans') purchased by FCO from multiple lending institutions with the intention of repackaging the loans to sell to other investors. The loans purchased by FCO for investment and resale are collectively known as the loan portfolio. The Loan Arranger system tracks these portfolio loans in its repository of loan information. The loan analyst may add, view, update, or delete loan information about lenders and the set of loans in the portfolio. Additionally, the system allows the loan analyst to create 'bundles' of loans for sale to investors. A user of Loan Arranger is a loan analyst who tracks the mortgages purchased by FCO.
+In later chapters, we will explore the system's requirements in more depth. For now, if you need to brush up on your understanding of principal and interest, you can review your old math books or look at http://www.interest.com/hugh/calc/formula.html.
+
+
+[2]
+[SECTION]: Modeling the Process and Life Cycle > 2.11 Key References > TABLE 2.3 ( continued )
+[CONTENT]: Lending institution: A synonym for lender. See lender .
+Loan: Aloan is a set of information that describes a home loan and the borrower-identifying information associated with the loan.The following information is associated with each loan: loan amount, interest rate, interest rate type (adjustable or f fixed), settlement date (the date the borrower originally borrowed the money from the lender), term (expressed as number of years), borrower, lender, loan type (jumbo or regular), and property (identif fied by the address of the property).A loan must have exactly one associated lender and exactly one associated borrower. In addition, each loan is identif fied with a loan risk and a loan status.
+Loan analyst: The loan analyst is a professional employee of FCO who is trained in using the Loan Arranger system to manage and bundle loans. Loan analysts are familiar with the terminology of loans and lending, but they may not have all the relevant information at hand with which to evaluate a single loan or collection of loans.
+Loan risk: Each loan is associated with a level of risk, indicated by an integer from 1 to 100. 1 represents the lowest-risk loan; that is, it is unlikely that the borrower will be late or default on this loan. 100 represents the highest risk; that is, it is almost certain that the borrower will default on this loan.
+Loan status: A loan can have one of three status designations: good, late, or default.A loan is in good status if the borrower has made all payments up to the current time.A loan is in late status if the borrower's last payment was made but not by the payment due date.A loan is in default status if the borrower's last payment was not received within 10 days of the due date.
+Loan type: A loan is either a jumbo mortgage, where the property is valued in excess of $275,000, or a regular mortgage, where the property value is $275,000 or less.
+Portfolio: The collection of loans purchased by FCO and available for inclusion in a bundle.The repository maintained by the Loan Arranger contains information about all of the loans in the portfolio.
+ - decision points
+
+
+[3]
+[SECTION]: Capturing the Requirements > 4.17 Term Project > High-Level Description of Functionality
+[CONTENT]: 
+ - The Loan Arranger system will receive monthly reports from each lender of new loans issued by that lender.The loans in the report recently purchased by FCO for its investment portfolio will be marked in the report. The Loan Arranger system will use the report information to update its repository of available loans.
+ - The Loan Arranger system will receive monthly reports from each lender providing updates about the status of loans issued by that lender.The updated information will include: the current interest rate for an adjustable rate mortgage, and the status of the borrower with respect to the loan (good, late, or default). For loans in the  FCO  portfolio, the  Loan Arranger  will  update  the  data  in  the  repository. Loans not in the FCO portfolio will also be examined in order to determine if a borrower's standing should be updated. FCO will provide each lender with the format for the reports, so that all reports will share a common format.
+ - The loan analyst can change individual data records as described in Data Operations.
+ - All new data must be validated before they are added to the repository (according to the rules described in Data Constraints).
+ - The loan analyst can use the Loan Arranger to identify bundles of loans to sell to particular investors.
+
+
+[4]
+[SECTION]: Modeling the Process and Life Cycle > 2.10 Term Project
+[CONTENT]: It is early in the development process of the Loan Arranger system for FCO. You do not yet have a comprehensive set of requirements for the system. All you have is an overview of system functionality, and a sense of how the system will be used to support FCO's business. Many of the terms used in the overview are unfamiliar to you, so you have  asked  the  customer  representatives  to  prepare  a  glossary. They  give  you  the description in Table 2.3.
+This information clarifies some concepts for you, but you are still far from having a good set of requirements. Nevertheless, you can make some preliminary decisions about how the development should proceed. Review the processes presented in this chapter  and  determine  which  ones  might  be  appropriate  for  developing  the  Loan Arranger. For  each  process, make  a  list  of  its  advantages  and  disadvantages  with respect to the Loan Arranger.
+
+
+[5]
+[SECTION]: Designing the Modules > 6.14 Term Project
+[CONTENT]: Review your requirements for the Loan Arranger system. How would they change were they to be implemented as OO requirements? How would these changes make the  system  easier  to  fix  or  change?  Next, review  the  characteristics  of  OO  systems. Would  any  of  these  characteristics  be  beneficial  for  the  Loan  Arranger?  Finally, develop an OO design for the Loan Arranger.Will it be easy to test the resulting implementation? To change? Why?
+","[
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""Based on the high-level class diagram and the description of the Loan Arranger system, the class Loan is connected to multiple other classes including Bank, Borrower, Bundle, and Loan Arranger, indicating it has multiple responsibilities and interactions."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Image Description: A high-level class diagram of the Loan Arranger system containing four classes: Bank, Loan, Borrower, and Bundle, and another class Loan Arranger. Bank is connected to Loan. Loan is connected to Bank, Borrower, Bundle, and Loan Arranger. Borrower is connected to Loan. Bundle is connected to Loan and Loan Arranger. Loan Arranger is connected to Loan and Bundle."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""The class Borrower, on the other hand, is connected only to Loan, suggesting it has fewer responsibilities and less coupling compared to Loan."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Borrower is connected to Loan."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""Since higher coupling and lower cohesion generally make a class harder to modify, it is reasonable to assume that the class Loan will probably be harder to modify than class Borrower."",
+        ""citations"": []
+    },
+    {
+        ""role"": ""sentence"",
+        ""segment"": ""Therefore, the correct answer is b. It will probably be harder to modify than class Borrower."",
+        ""citations"": []
+    }
+]","Based on the high-level class diagram and the description of the Loan Arranger system, the class Loan is connected to multiple other classes including Bank, Borrower, Bundle, and Loan Arranger, indicating it has multiple responsibilities and interactions.
+
+The class Borrower, on the other hand, is connected only to Loan, suggesting it has fewer responsibilities and less coupling compared to Loan.
+
+Since higher coupling and lower cohesion generally make a class harder to modify, it is reasonable to assume that the class Loan will probably be harder to modify than class Borrower.
+
+Therefore, the correct answer is b. It will probably be harder to modify than class Borrower.",1.402,4.898
+"The following questions are in reference to a hypothetical “Loan Arranger” system. The Loan Arranger is meant to assist a “consolidating organization”, a specific type of business in the financial domain.
+Bank customers often borrow money from banks; they promise to repay the loan plus interest over a certain period of time. Each of these loans is an ultimately lucrative proposition for the bank, but usually a long period of time is required for the bank to collect its earnings. Also, there is always the chance that a borrower will be unable to repay the loan. Consolidating organizations make money by buying loans from banks and reselling them to investors. Loan analysts, employed by the consolidating organization, work with investors to select a set of loans that meet their requirements in terms of time, risk, and initial purchase price.
+The Loan Arranger application has two main types of functionality. First, it tracks all of the loans that are owned by the consolidating organization. (The entire set of loans owned by the organization is known as its “portfolio”.) In order to track loans correctly, the Loan Arranger must interface with the banks to find out about new loans that should be added to the portfolio, or updates to loans that are already in the portfolio. Secondly, the Loan Arranger allows a loan analyst to select a subset of loans from the portfolio that match an investor's desired investment characteristics (these subsets of loans are referred to as “bundles”). The loan analyst can either select the bundle manually, or ask the system to select an optimal bundle given the investor's constraints. The Loan Arranger then updates the portfolio when the bundle is purchased by the investor. There are numerous constraints on how this functionality is to be achieved; most mportantly, the Loan Arranger must be usable by more than one analyst at a time.
+As a first step in developing the Loan Arranger, the development team meets with a representative from the consolidating organization to formulate a set of requirements.
+
+Image Description: A state diagram for class 'Borrower' showing three states: Good Status, Late Status, and Default Status. There is a start state leading to Good Status. From Good Status, a transition labeled 'All loans are good' points back to Good Status. A transition labeled 'A loan is late' points from Good Status to Late Status. A transition labeled 'A loan is default' points from Good Status to Default Status. From Late Status, a transition labeled 'A loan is late' points back to Late Status. A transition labeled 'All loans are good' points from Late Status to Good Status. A transition labeled 'A loan is default' points from Late Status to Default Status. From Default Status, a transition labeled 'A loan is default' points back to Default Status. There is a final state leading from Default Status.
+43.  TRUE or FALSE: It cannot be determined what state an object of type Borrower will be in when it is created.","
+[0]
+[SECTION]: Capturing the Requirements > 4.17 Term Project > Preconditions and Assumptions
+[CONTENT]: 
+ - The Loan Arranger system assumes that there already exist lenders, borrowers, and loans from which to choose, and that investors exist who are interested in buying bundles of loans.
+ - The Loan Arranger system contains a repository of information about loans from a variety of lenders.This repository may be empty.
+ - At  regular  intervals, each  lender  provides  reports  listing  the  loans  that  it  has made.Loans that have already been purchased by FCO will be indicated on these reports.
+ - Each loan in the Loan Arranger repository represents an investment to then be bundled and sold with other loans.
+ - The Loan Arranger system may be used by up to four loan analysts simultaneously.
+
+
+[1]
+[SECTION]: Why Software Engineering? > 1.14 Term Project
+[CONTENT]: We can summarize this information by saying that the Loan Arranger system allows a loan analyst to access information about mortgages (home loans, described here simply as 'loans') purchased by FCO from multiple lending institutions with the intention of repackaging the loans to sell to other investors. The loans purchased by FCO for investment and resale are collectively known as the loan portfolio. The Loan Arranger system tracks these portfolio loans in its repository of loan information. The loan analyst may add, view, update, or delete loan information about lenders and the set of loans in the portfolio. Additionally, the system allows the loan analyst to create 'bundles' of loans for sale to investors. A user of Loan Arranger is a loan analyst who tracks the mortgages purchased by FCO.
+In later chapters, we will explore the system's requirements in more depth. For now, if you need to brush up on your understanding of principal and interest, you can review your old math books or look at http://www.interest.com/hugh/calc/formula.html.
+
+
+[2]
+[SECTION]: Modeling the Process and Life Cycle > 2.11 Key References > TABLE 2.3 ( continued )
+[CONTENT]: Lending institution: A synonym for lender. See lender .
+Loan: Aloan is a set of information that describes a home loan and the borrower-identifying information associated with the loan.The following information is associated with each loan: loan amount, interest rate, interest rate type (adjustable or f fixed), settlement date (the date the borrower originally borrowed the money from the lender), term (expressed as number of years), borrower, lender, loan type (jumbo or regular), and property (identif fied by the address of the property).A loan must have exactly one associated lender and exactly one associated borrower. In addition, each loan is identif fied with a loan risk and a loan status.
+Loan analyst: The loan analyst is a professional employee of FCO who is trained in using the Loan Arranger system to manage and bundle loans. Loan analysts are familiar with the terminology of loans and lending, but they may not have all the relevant information at hand with which to evaluate a single loan or collection of loans.
+Loan risk: Each loan is associated with a level of risk, indicated by an integer from 1 to 100. 1 represents the lowest-risk loan; that is, it is unlikely that the borrower will be late or default on this loan. 100 represents the highest risk; that is, it is almost certain that the borrower will default on this loan.
+Loan status: A loan can have one of three status designations: good, late, or default.A loan is in good status if the borrower has made all payments up to the current time.A loan is in late status if the borrower's last payment was made but not by the payment due date.A loan is in default status if the borrower's last payment was not received within 10 days of the due date.
+Loan type: A loan is either a jumbo mortgage, where the property is valued in excess of $275,000, or a regular mortgage, where the property value is $275,000 or less.
+Portfolio: The collection of loans purchased by FCO and available for inclusion in a bundle.The repository maintained by the Loan Arranger contains information about all of the loans in the portfolio.
+ - decision points
+
+
+[3]
+[SECTION]: Capturing the Requirements > 4.17 Term Project > High-Level Description of Functionality
+[CONTENT]: 
+ - The Loan Arranger system will receive monthly reports from each lender of new loans issued by that lender.The loans in the report recently purchased by FCO for its investment portfolio will be marked in the report. The Loan Arranger system will use the report information to update its repository of available loans.
+ - The Loan Arranger system will receive monthly reports from each lender providing updates about the status of loans issued by that lender.The updated information will include: the current interest rate for an adjustable rate mortgage, and the status of the borrower with respect to the loan (good, late, or default). For loans in the  FCO  portfolio, the  Loan Arranger  will  update  the  data  in  the  repository. Loans not in the FCO portfolio will also be examined in order to determine if a borrower's standing should be updated. FCO will provide each lender with the format for the reports, so that all reports will share a common format.
+ - The loan analyst can change individual data records as described in Data Operations.
+ - All new data must be validated before they are added to the repository (according to the rules described in Data Constraints).
+ - The loan analyst can use the Loan Arranger to identify bundles of loans to sell to particular investors.
+
+
+[4]
+[SECTION]: Modeling the Process and Life Cycle > 2.10 Term Project
+[CONTENT]: It is early in the development process of the Loan Arranger system for FCO. You do not yet have a comprehensive set of requirements for the system. All you have is an overview of system functionality, and a sense of how the system will be used to support FCO's business. Many of the terms used in the overview are unfamiliar to you, so you have  asked  the  customer  representatives  to  prepare  a  glossary. They  give  you  the description in Table 2.3.
+This information clarifies some concepts for you, but you are still far from having a good set of requirements. Nevertheless, you can make some preliminary decisions about how the development should proceed. Review the processes presented in this chapter  and  determine  which  ones  might  be  appropriate  for  developing  the  Loan Arranger. For  each  process, make  a  list  of  its  advantages  and  disadvantages  with respect to the Loan Arranger.
+
+
+[5]
+[SECTION]: Maintaining the System > 11.12 Term Project
+[CONTENT]: Examine all your artifacts (requirements, design, code, test plans, documentation) for the Loan Arranger. How maintainable are they? If you had to design and implement the Loan Arranger again, what would you have done differently to make the product easier to maintain?
+","[
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""It cannot be determined what state an object of type Borrower will be in when it is created."",
+        ""citations"": [
+            {
+                ""type"": ""img"",
+                ""content"": null,
+                ""img_id"": ""query_evidence""
+            }
+        ]
+    },
+    {
+        ""role"": ""sentence"",
+        ""segment"": ""The state diagram for class 'Borrower' shows a start state leading directly to the Good Status state, indicating that a Borrower object is initially in the Good Status state upon creation."",
+        ""citations"": [
+            {
+                ""type"": ""img"",
+                ""content"": null,
+                ""img_id"": ""query_evidence""
+            }
+        ]
+    }
+]","It cannot be determined what state an object of type Borrower will be in when it is created.
+
+The state diagram for class 'Borrower' shows a start state leading directly to the Good Status state, indicating that a Borrower object is initially in the Good Status state upon creation.",1.455,4.027

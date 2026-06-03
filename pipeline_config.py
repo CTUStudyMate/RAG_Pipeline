@@ -127,7 +127,7 @@ from pipeline_setting import Settings
 
 # LOG_FILE="./mylog8_hsf_normal_firstcite.txt"
 
-config_path="./EXPERIMENTS/chunk_versions/hsf_chunksize600_separate_img_storing/config.yaml"
+config_path="EXPERIMENTS/chunk_versions/fixed_chunksize600_separate_img_storing/config.yaml"
 settings = Settings.load(config_path=config_path)
 # print(settings.config["vectordb_connect_info"]["collection"])
 

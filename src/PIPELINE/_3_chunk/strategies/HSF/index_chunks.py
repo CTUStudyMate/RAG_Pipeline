@@ -129,6 +129,8 @@ def build_index_data(chunks):
         imgs = chunk["content"]["img"] # này là một mảng các base64
         if imgs:  # chỉ add khi có ảnh
             # metadata["image"] = imgs
+            figure_desc_anchor = "\n[FIGURE_DESCRIPTIONS]\n"
+            figure_desc_text = ""
             metadata["images"] = []
             current_chunk_imgs = []
             # tạo img_id, lưu từng ảnh vào db
@@ -144,14 +146,18 @@ def build_index_data(chunks):
             
             img_descriptions = get_img_descriptions(current_chunk_imgs) 
             desc_map = {d["img_id"]: d["description"] for d in img_descriptions} 
-            for img in current_chunk_imgs:
+            for j,img in enumerate(current_chunk_imgs):
                 img["description"] = desc_map.get(img["img_id"], "")
-            
+                if img["description"]:
+                    figure_desc_text += f"[{j}] {img['description']}\n"
+            if figure_desc_text.strip():
+                embeded_text += f"{figure_desc_anchor}{figure_desc_text}"
+                metadata["embeded_content"] = embeded_text
             db_images.extend(current_chunk_imgs)    
                 
         metadatas.append(metadata)
     
-        ids.append(f"{chunk['id']}_{i}") # in what case that this index is needed?
+        ids.append(f"{chunk['id']}_{i}") # in what cases that this index is needed?
         texts.append(embeded_text)
     
     embeddings = embed_content(texts, embedder)
@@ -183,7 +189,8 @@ def index_chunks(collection_name, chunks, pgdb_connect_info):
     port=pgdb_connect_info.port,
     dbname=pgdb_connect_info.db_name,
     user=pgdb_connect_info.user,
-    password=pgdb_connect_info.password
+    password=pgdb_connect_info.password,
+    options="-c client_encoding=UTF8" # chưa test lại code khi có dòng này
     )
     
     cur = conn.cursor()

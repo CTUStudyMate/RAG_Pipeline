@@ -768,17 +768,17 @@ def handle_batch_result(flat_list, my_built_dfs, batch_result, stream_elements, 
                 insert_atomic_batch(batch, doc_db_cursor)    
 
                 #======= TEST STREAM ELEMENT =========
-                # target_file = STREAM_ELEMENTS_FILEPATH
-                # with open(target_file, "a", encoding="utf-8") as f:
-                #     json.dump(element, f, default=str, ensure_ascii=False, indent=4)
-                #     f.write("\n")
+                target_file = STREAM_ELEMENTS_FILEPATH
+                with open(target_file, "a", encoding="utf-8") as f:
+                    json.dump(batch, f, default=str, ensure_ascii=False, indent=4)
+                    f.write("\n")
                 #=====================================    
                 conn2.commit()
            
     #======= TEST TREE  ==================
-    # tree_file = f"{docname}_test_tree.json"
-    # with open(tree_file, "w", encoding="utf-8") as f:
-    #     json.dump(my_built_dfs, f, ensure_ascii=False, indent=4)          
+    tree_file = f"{docname}_test_tree.json"
+    with open(tree_file, "w", encoding="utf-8") as f:
+        json.dump(my_built_dfs, f, ensure_ascii=False, indent=4)          
     #=====================================    
           
     return current_atomic_order, incomplete_atomic, cursor, open_node, node, current_open_level, current_level_path_description

@@ -10,11 +10,8 @@ def normalize_text(text):
     text = re.sub(r'[^\w\s]', '', text.lower())
     return ' '.join(text.split())  
 
-def filter_segments(segments, context_chunks):
-    """Drop out the segments that are servere grounding error (invalid citation, mismatch citation)
-        Mark segments which are inferred from llm
-    """
-    # [
+
+  # [
     #     {
     #         segment: claim,
     #         type: cited,
@@ -32,21 +29,29 @@ def filter_segments(segments, context_chunks):
     #         citation: [inferred thì không có citation]
     #     }
     # ]
-    # nếu như là hình ảnh, thì check xem id ảnh có tồn tại hay không, nếu không thì bỏ luôn claim có hình ảnh
-    # nếu text hoàn toàn không tồn tại trong source text (exact match và cả fuzzy) thì đây là invalid citation => drop
-    # else, check xem cite có support segment không
-    # nếu có
-        # lấy số chunk mà text đó thuộc về
-        # nếu chunk đã nằm trong dict rồi 
-            # thì lấy cite number của chunk đó
-            # gắn vào object cite hiện tại, mark cited
-        # else:
-            #  map số cite với số chunk
-    # return list segments đã xử lý           
-    # 
+    
+def filter_segments(segments, context_chunks):
+    """Drop out the segments that are servere grounding error (invalid citation, mismatch citation)
+        Mark segments which are inferred from llm
+    """
+    if len(segments) == 1 and segments[0].get("type") == "abstained":
+        return segments
+    valid_segments = []
     for segment in segments:
-        if validate_segment_citation(segment, context_chunks):
-            print("haha")
+        result = validate_segment_citation(segment, context_chunks)
+
+        if result:
+            valid_segments.append(result)
+
+    types = {segment.get("type") for segment in valid_segments}
+
+    if types == {"intro"}:
+        return []
+
+    return valid_segments       
+  
+
+
             
 # {
 #             "role": "paragraph" | "bullet_intro" | "bullet",
@@ -136,13 +141,15 @@ def validate_segment_citation(segment, docs):
             for chunk_id, text_part in processed_texts:
                 processed_cite_obj["texts"].setdefault(chunk_id, []).append(text_part)
         elif citation["type"] == "img":
-            img_id = citation["img_id"]   
-            processed_cite_obj["images"].setdefault(chunk_id, []).append(img_id)    
+            processed_infos = citation["processed_info"]
+            for chunk_id, img_id in processed_infos:
+                processed_cite_obj["images"].setdefault(chunk_id, []).append(img_id)    
     
     segment = {
         **segment,
         "processed_cite_obj": processed_cite_obj,
-        "citations": valid_citations
+        "citations": valid_citations,
+        "type": "cited"
     }  
     return segment      
 
@@ -151,6 +158,8 @@ def is_valid_img_citation(citation, docs):
     img_id = citation.get("img_id")
     # loop qua từng doc, nếu gặp id thì lưu vô obj
     # return None nếu id không tồn tại
+    if img_id == "query_evidence":
+        return (None, "query_evidence")
     for doc in docs:
         if "images" in doc["metadata"] and doc["metadata"]["images"]:
             images = doc["metadata"]["images"]
@@ -222,7 +231,7 @@ def is_cite_text_in_source(cite_text: str, docs: list[NormalizedChunk]):
             
 
         # If similarity is high enough, accept it
-        if best_score >= 0.8:             
+        if best_score > 80:             
             doc_id = best_doc
             parts_and_chunks.append((doc_id, best_match_text)) 
             invalid_text = False
@@ -233,42 +242,115 @@ def is_cite_text_in_source(cite_text: str, docs: list[NormalizedChunk]):
 
     return parts_and_chunks
  
-# # test function is_cite_text_in_source  
-# cite_text = "kt_is_so_cute"
-docs = [NormalizedChunk(doc_id="chunk_1", text="i have to say that kt is beautiful, and she is so kind either.", metadata={"images": ["img01"]}, score=2.2), 
-        NormalizedChunk(doc_id="chunk_2", text="i don't know but kt is too cute", metadata={}, score=2.3)]                       
-# r = is_cite_text_in_source(cite_text, docs)
-# print(r)
+ 
+ 
+ 
+# # # test function is_cite_text_in_source  
+# # cite_text = "kt_is_so_cute"
+# docs = [NormalizedChunk(doc_id="chunk_1", text="i have to say that kt is beautiful, and she is so kind either.", metadata={"images": ["img01"]}, score=2.2), 
+#         NormalizedChunk(doc_id="chunk_2", text="i don't know but kt is too cute", metadata={}, score=2.3)]                       
+# # r = is_cite_text_in_source(cite_text, docs)
+# # print(r)
 
-# # test img id citation
-# citation = {
-#     "type": "img",
-#     "content": None,
-#     "img_id": "valid_id"
-# }   
+# # # test img id citation
+# # citation = {
+# #     "type": "img",
+# #     "content": None,
+# #     "img_id": "valid_id"
+# # }   
 
 
-segment = {
-            "role": "paragraph",
-            "segment": "KT is good-looking.",
-            "citations": [
-                {
-                    "type": "source_text",
-                    "content": "kt is so kind ... i have to say that KT is beautiful",
-                    "img_id": None
-                },
-                {
-                    "type": "img",
-                    "content": None,
-                    "img_id": "img01"
-                },
-                {
-                    "type": "img",
-                    "content": None,
-                    "img_id": "img02"
-                }
-            ]
-        }
+# segment = {
+#             "role": "paragraph",
+#             "segment": "KT is good-looking.",
+#             "citations": [
+#                 {
+#                     "type": "source_text",
+#                     "content": "kt is so kind ... i have to say that KT is beautiful",
+#                     "img_id": None
+#                 },
+#                 {
+#                     "type": "img",
+#                     "content": None,
+#                     "img_id": "img01"
+#                 },
+#                 {
+#                     "type": "img",
+#                     "content": None,
+#                     "img_id": "img02"
+#                 }
+#             ]
+#         }
               
-aha = validate_segment_citation(segment=segment, docs=docs) 
-print(aha)           
+# aha = validate_segment_citation(segment=segment, docs=docs) 
+# print(aha)           
+
+def merge_segments_to_text(segments):
+    """
+    Merge structured segments into readable text for LLM evaluation.
+    Rules:
+    - sentence: inline
+    - bullet_intro: newline (like section header)
+    - paragraph: newline-separated blocks
+    - bullet: each bullet on new line with "- "
+    """
+
+    parts = []
+    current_line = ""
+
+    def flush_line():
+        nonlocal current_line
+        if current_line.strip():
+            parts.append(current_line.strip())
+        current_line = ""
+
+    for seg in segments:
+        role = seg.get("role")
+        text = seg.get("segment", "").strip()
+
+        if not text:
+            continue
+
+        # -------------------------
+        # paragraph → block
+        # -------------------------
+        if role == "paragraph":
+            flush_line()
+            parts.append(text)
+            parts.append("")
+
+        # -------------------------
+        # sentence → inline
+        # -------------------------
+        elif role == "sentence":
+            if current_line:
+                current_line += " " + text
+            else:
+                current_line = text
+
+        # -------------------------
+        # bullet_intro → NEW LINE (header style)
+        # -------------------------
+        elif role == "bullet_intro":
+            flush_line()
+            parts.append(text)
+
+        # -------------------------
+        # bullet → list item
+        # -------------------------
+        elif role == "bullet":
+            flush_line()
+            parts.append(f"- {text}")
+
+        # -------------------------
+        # fallback
+        # -------------------------
+        else:
+            if current_line:
+                current_line += " " + text
+            else:
+                current_line = text
+
+    flush_line()
+
+    return "\n".join(parts).strip()
