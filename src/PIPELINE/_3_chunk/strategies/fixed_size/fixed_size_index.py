@@ -37,6 +37,7 @@ def build_fixed_size_index_data(texts, filename):
             "document": filename,
             "token_count": token,
             "chunk_id": chunk_id,
+            "embeded_content": chunk_text #fixed size thì không có mô tả ảnh nên nội dung embed chính là phần source text luôn
         }
 
         documents.append(chunk_text)

@@ -1,0 +1,117 @@
+from semantic_router import Route
+from semantic_router.encoders import OpenAIEncoder
+from semantic_router.routers import SemanticRouter
+from pipeline_config import OPENAI_API_KEY
+import json
+from pipeline_setup import llm
+
+# Semantic router set up
+file_path = "src/app/chat_flow/routes_intent.json"
+with open(file_path, "r", encoding="utf-8") as f:
+    data = json.load(f)
+
+routes = [
+    Route(name=r["name"], utterances=r["utterances"])
+    for r in data["routes"]
+]
+
+encoder = OpenAIEncoder(openai_api_key=OPENAI_API_KEY)
+rl = SemanticRouter(encoder=encoder, routes=routes, auto_sync="local")
+
+# LLM router fall back set up
+def form_llm_prompt(user_message):
+    intent_list = [route.name for route in routes]
+    prompt = f"""
+You are an intent classification system.
+
+Your task is to classify the user's message into EXACTLY ONE of the predefined intents.
+
+Available intents:
+{intent_list}
+
+Classification rules:
+
+1. Return the matching intent name if the message clearly belongs to one of the predefined intents.
+
+2. Return "chaos" if the message is:
+   - random characters
+   - keyboard smashing
+   - meaningless text
+   - repeated symbols
+   - nonsensical singing/noises
+   Examples:
+   - "aaaaaa"
+   - "asdfasdf"
+   - "lalalalala"
+   - "hjgjhgjhgj"
+
+3. Return "None" if the message does NOT belong to any predefined intent.
+   This typically includes:
+   - academic questions
+   - homework problems
+   - requests for explanations of concepts
+   - document-related questions
+   - questions requiring retrieval from a knowledge base
+   - factual questions outside the predefined intent list
+
+Examples:
+User: "Hi there"
+Output: greeting_smalltalk
+
+User: "Who created you?"
+Output: chatbot_meta
+
+User: "I feel stressed about exams"
+Output: emotional_support
+
+User: "How much is the tuition fee this semester?"
+Output: student_life_and_administration
+
+User: "Explain transformer architecture"
+Output: None
+
+User: "What is software engineering?"
+Output: None
+
+User: "aaaaaaa"
+Output: chaos
+
+Important:
+- Return ONLY the intent name, "chaos", or "None".
+- Do NOT explain your decision.
+- Do NOT output any extra text.
+- Do NOT output JSON.
+- Output exactly one token/string.
+
+User message:
+{user_message}
+
+Output:
+"""
+    return prompt
+
+
+def determine_intent(user_query: str):
+    """Identify the user's intent from a predefined set of intents."""
+    # Using semantic router
+    intent = rl(user_query)
+    if not (intent.name) or (intent.similarity_score < 0.51):
+        # print("Fall back to llm classifier")
+        # llm_prompt = form_llm_prompt(user_message=user_query)
+        # response = llm.client.responses.create(
+        #     model=llm.model,
+        #     input=[
+        #         {"role": "system", "content":llm_prompt},
+        #     ],
+        #     temperature=0, #seed
+        # )
+        # print(response.output_text)
+        
+        intent = 'need_retrieve'
+    else:
+        intent = intent.name    
+    return intent    
+    
+# determine_intent("???")    
+it = determine_intent("Nhà tôi không đủ khả năng để trang trải cho việc học của tôi.")    
+print(it)

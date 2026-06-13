@@ -31,8 +31,9 @@ def normalize_text(text):
     # ]
     
 def filter_segments(segments, context_chunks):
-    """Drop out the segments that are servere grounding error (invalid citation, mismatch citation)
-        Mark segments which are inferred from llm
+    """
+    Drop out the segments that are servere grounding error (invalid citation, mismatch citation)
+    and return the processed segments for  UI rendering or final answer synthesizing
     """
     if len(segments) == 1 and segments[0].get("type") == "abstained":
         return segments
@@ -241,49 +242,7 @@ def is_cite_text_in_source(cite_text: str, docs: list[NormalizedChunk]):
             return None
 
     return parts_and_chunks
- 
- 
- 
- 
-# # # test function is_cite_text_in_source  
-# # cite_text = "kt_is_so_cute"
-# docs = [NormalizedChunk(doc_id="chunk_1", text="i have to say that kt is beautiful, and she is so kind either.", metadata={"images": ["img01"]}, score=2.2), 
-#         NormalizedChunk(doc_id="chunk_2", text="i don't know but kt is too cute", metadata={}, score=2.3)]                       
-# # r = is_cite_text_in_source(cite_text, docs)
-# # print(r)
-
-# # # test img id citation
-# # citation = {
-# #     "type": "img",
-# #     "content": None,
-# #     "img_id": "valid_id"
-# # }   
-
-
-# segment = {
-#             "role": "paragraph",
-#             "segment": "KT is good-looking.",
-#             "citations": [
-#                 {
-#                     "type": "source_text",
-#                     "content": "kt is so kind ... i have to say that KT is beautiful",
-#                     "img_id": None
-#                 },
-#                 {
-#                     "type": "img",
-#                     "content": None,
-#                     "img_id": "img01"
-#                 },
-#                 {
-#                     "type": "img",
-#                     "content": None,
-#                     "img_id": "img02"
-#                 }
-#             ]
-#         }
-              
-# aha = validate_segment_citation(segment=segment, docs=docs) 
-# print(aha)           
+        
 
 def merge_segments_to_text(segments):
     """

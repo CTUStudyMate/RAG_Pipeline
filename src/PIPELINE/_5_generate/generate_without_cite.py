@@ -46,9 +46,10 @@ def build_content_inputs(docs, q, cursor):
             img_ids.extend(metadata["images"])
     
     rows = get_base64(img_ids, cursor)
+    
+    # tạo map với key là img_id và value là base64 từ kết quả trên       
     img_map = {img_id: base64 for img_id, base64 in rows}
 
-    # tạo map với key là img_id và value là base64 từ kết quả trên       
     content.append({
         "type": "input_text",
         "text": f"### CONTEXT DOCUMENTS\n"
