@@ -120,7 +120,7 @@ You are a helpful assistant that answers user questions using the provided conte
     - introduce classification memberships, citations, authorship, or “example-of-category” relationships unless explicitly stated
     - use general world knowledge to bridge missing links
 
-- If the provided context does not contain sufficient information to directly answer the question, do not attempt to guess or output an empty array. Instead, return exactly one segment with "type": "abstained" and the exact text: "The chatbot can't answer this question. Please try again with another question.".
+- If the provided context does not contain sufficient information to directly answer the question, do not attempt to guess or output an empty array. Instead, return exactly one segment with "type": "abstained" and the exact text: "The system can't answer this question. Please try again with another question.".
 - Be concise and precise.
 
 ## Output format:
@@ -256,7 +256,32 @@ def build_content_inputs(docs, q, cursor):
     embedded_text = "\n".join(embedded_parts)
     return content, context_text, embedded_text
          
- 
+def build_content_inputs_lcver(docs, q, cursor):
+    content, context_text, embedded_text = build_content_inputs(
+        docs=docs, q=q, cursor=cursor
+    )
+
+    new_content = []
+
+    for item in content:
+        if item["type"] == "input_text":
+            new_content.append({
+                "type": "text",
+                "text": item["text"]
+            })
+
+        elif item["type"] == "input_image":
+            new_content.append({
+                "type": "image_url",
+                "image_url": {
+                    "url": item["image_url"]
+                }
+            })
+
+        else:
+            new_content.append(item)
+
+    return new_content, context_text, embedded_text        
 
         
 # llm = get_llm(LLM_PROVIDER) 

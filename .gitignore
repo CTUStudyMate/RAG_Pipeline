@@ -26,7 +26,9 @@ experiment_data/
 
 experiment_chunk_storage/
 
-__pycache__
+__pycache__/
 archie
 att
 build
+
+src/app/chat_flow/routes_intent.json

@@ -5,10 +5,8 @@ import time
 from pathlib import Path
 
 from PIPELINE._4_retrieve.multi_stages.multi_stages_retriever import multi_stages_retrieve
-from PIPELINE._4_retrieve.multi_stages.normal_retriever import normal_retrieve
 from PIPELINE._5_generate.generate import generate_answer
 from PIPELINE._6_citation_postprocessing.validate_citation import filter_segments, merge_segments_to_text
-from common_utils.debug import log_to_file
 import psycopg
 
 from pipeline_config import settings
@@ -48,19 +46,10 @@ def run_and_log(chunk_retrieve_strategy, inputfile="./experiment_data/ts.csv", o
         for q in questions:
             
             match chunk_retrieve_strategy:
-                # case "fixed_normal": # fixed size chunking, vector retrieve
-                #     retrieve_start = time.perf_counter()
-                #     docs = normal_retrieve(q, VECTORDB_FIXEDSIZE_CONNECT_INFO)
-                #     retrieve_end = time.perf_counter()
-                    
-                # case "hsf_normal": # hsf chunking, vector retrieve
-                #     retrieve_start = time.perf_counter()
-                #     docs = normal_retrieve(q)  
-                #     retrieve_end = time.perf_counter()
-                    
+
                 case "hsf_multi": # hsf chunking, multistage retrieve
                     retrieve_start = time.perf_counter()
-                    docs = multi_stages_retrieve(cursor=cursor, query=q, vector_weight=0.8, bm25_weight=0.2)   
+                    docs = multi_stages_retrieve(cursor=cursor, query=q, vector_weight=0.5, bm25_weight=0.5)   
                     retrieve_end = time.perf_counter()
                 # case "lc_recur_char_split": #langchain-based recursivecharactertextsplitter, vector retrieve
                 #     retrieve_start = time.perf_counter() 
@@ -95,8 +84,7 @@ def run_and_log(chunk_retrieve_strategy, inputfile="./experiment_data/ts.csv", o
 strategies = ["hsf_multi"]
 exp_dir = "./EXPERIMENTS/full_pipeline_strategies/hsf_multi_600_2000_cite/"
 input_questions= "./experiment_data/dataset_v2.json"
-
+print("run hsf with 50-50 weighted")
 for strategy in strategies:
-    run_and_log(inputfile=input_questions, output_file=f"{exp_dir}{strategy}_80_20_cite_with_dataset_v2.csv", chunk_retrieve_strategy=strategy)        
+    run_and_log(inputfile=input_questions, output_file=f"{exp_dir}{strategy}_50_50_cite_with_dataset_v2.csv", chunk_retrieve_strategy=strategy)        
 
-# sửa tên file thành 0.8-0.2

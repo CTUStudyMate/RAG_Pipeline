@@ -4,7 +4,8 @@ from src.models import VectorDBConnectIfo
 from src.models.PGDBConnectInfo import PGDBConnectInfo
 from pipeline_setting import Settings
 
-# load_dotenv()
+load_dotenv()
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 # ######### MODELS ##############
 # # EMBEDDING_PROVIDER="bge"
 # BGE_EMBEDDING_MODEL="bge-m3:latest"
@@ -127,7 +128,7 @@ from pipeline_setting import Settings
 
 # LOG_FILE="./mylog8_hsf_normal_firstcite.txt"
 
-config_path="EXPERIMENTS/chunk_versions/fixed_chunksize600_separate_img_storing/config.yaml"
+config_path="EXPERIMENTS/full_pipeline_strategies/hsf_multi_600_2000_nocite/config.yaml"
 settings = Settings.load(config_path=config_path)
 # print(settings.config["vectordb_connect_info"]["collection"])
 
