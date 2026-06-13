@@ -6585,3 +6585,157 @@ Answer TRUE or FALSE: a. A development project is just beginning. An initial pro
         ]
     }
 ]","a. TRUE, it would be appropriate to use the COCOMO II Stage 1 model when a development project is just beginning and an initial prototype of the user interface has been completed. b. FALSE, the COCOMO II Stage 2 model would not be appropriate once development has begun and detailed information about the design is known; instead, the Stage 3 model is appropriate at this point.",0.388,4.682
+"System A has 4 screens and 3 reports. Of the 4 screens, 3 are medium and 1 is difficult. Of the reports, 2 are medium and 1 is difficult. System B also has 4 screens and 3 reports. For system B, 2 screens are medium and 2 are difficult. The 3 reports for System B are medium difficulty. Which system has more new object points (COCOMO 2.0, stage 1 model)? a. System A b. System B c. System A and B have the same number of new object points. d. It is impossible to determine from the information given.","
+[0]
+
+
+
+[1]
+
+
+
+[2]
+
+","[
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""To determine which system has more new object points, we need to calculate the total weighted application points for each system using the complexity weights from Table 3.11."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""The number to be used for simple, medium, or difficult application points is a complexity weight found in Table 3.11. The weights reflect the relative effort required to implement a report or screen of that complexity level."",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""From Table 3.15, the weights for screens and reports are: simple screen = 1, medium screen = 2, medium report = 5."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Table 3.15 Ratings for Piccadilly Screens and Reports ... Booking, Weight = 1 ... Availability, Weight = 2 ... Sales, Weight = 5"",
+                ""img_id"": null
+            }
+        ]
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""Assuming the weights for difficult screens and reports are higher than medium, and based on the context that medium screen = 2 and medium report = 5, we can infer the weights for difficult screens and reports are greater but exact values are not provided in the context."",
+        ""citations"": []
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""Calculating System A's new object points: 3 medium screens (3 x 2) + 1 difficult screen (unknown weight) + 2 medium reports (2 x 5) + 1 difficult report (unknown weight)."",
+        ""citations"": []
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""Calculating System B's new object points: 2 medium screens (2 x 2) + 2 difficult screens (unknown weight) + 3 medium reports (3 x 5)."",
+        ""citations"": []
+    },
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""Since the exact weights for difficult screens and reports are not provided in the context, it is impossible to determine which system has more new object points."",
+        ""citations"": []
+    },
+    {
+        ""role"": ""sentence"",
+        ""segment"": ""Therefore, the correct answer is d. It is impossible to determine from the information given."",
+        ""citations"": []
+    }
+]","To determine which system has more new object points, we need to calculate the total weighted application points for each system using the complexity weights from Table 3.11.
+
+From Table 3.15, the weights for screens and reports are: simple screen = 1, medium screen = 2, medium report = 5.
+
+Assuming the weights for difficult screens and reports are higher than medium, and based on the context that medium screen = 2 and medium report = 5, we can infer the weights for difficult screens and reports are greater but exact values are not provided in the context.
+
+Calculating System A's new object points: 3 medium screens (3 x 2) + 1 difficult screen (unknown weight) + 2 medium reports (2 x 5) + 1 difficult report (unknown weight).
+
+Calculating System B's new object points: 2 medium screens (2 x 2) + 2 difficult screens (unknown weight) + 3 medium reports (3 x 5).
+
+Since the exact weights for difficult screens and reports are not provided in the context, it is impossible to determine which system has more new object points.
+
+Therefore, the correct answer is d. It is impossible to determine from the information given.",0.299,7.366
+"Consider the following descriptions of different employees' work styles. Kristie seeks out evidence to support her decisions. She is currently considering rearranging the office space to make the working environment more comfortable for the members of her team. While carefully considering the objective aspects of the change are important to her, she is also concerned about the opinions of the people who work for her. The members of Kristie's team consider her to be a good listener and often consult her when they have problems. Kristie's work style is: a. rational extrovert b. rational introvert c. intuitive extrovert d. intuitive introvert","
+[0]
+
+
+
+[1]
+
+
+
+[2]
+
+","[
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""Kristie's work style is an intuitive introvert."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""The intuitive introvert is creative, too, but applies creativity only after having gathered sufficient information on which to base a decision."",
+                ""img_id"": null
+            },
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Ying, an intuitive introvert, also thrives on her colleagues' attention. She is sensitive and aware of her emotional reactions to people and problems; it is very important that she be liked by her peers. Because she is a good listener, Ying is the project member to whom others turn to express their feelings. Ying takes a lot of time to make a decision, not only because she needs complete information, but also because she wants to make the right decision."",
+                ""img_id"": null
+            }
+        ]
+    }
+]",Kristie's work style is an intuitive introvert.,0.408,3.977
+Consider the following descriptions of different employees' work styles. Shane is an efficient leader. He knows what he wants and relies on his own experiences and logic to make decisions. He does not feel the need for extensive information before making a decision. He is capable of making fast decisions. Shane's work style would be described best as: a. rational extrovert b. rational introvert c. intuitive extrovert d. intuitive introvert,"
+[0]
+
+
+
+[1]
+
+
+
+[2]
+
+","[
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""Shane's work style would be described best as a rational extrovert."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""The rational extroverts tend to assert their ideas and not let 'gut feeling' affect their decision making. They tell their colleagues what they want them to know, but they rarely ask for more information before doing so. When reasoning, they rely on logic, not emotion. Kai, a rational extrovert, judges her colleagues by the results they produce. When making a decision, her top priority is efficiency. Thus, she wants to know only the bottom line. She examines her options and their probable effects, but she does not need to see documents or hear explanations supporting each option. If her time is wasted or her efficiency is hampered in some way, she asserts her authority to regain control of the situation. Thus, Kai is good at making sound decisions quickly.""
+            }
+        ],
+        ""type"": null
+    }
+]",The chatbot can't answer this question. Please try again with another question.,0.277,3.357
+"Consider the following descriptions of different employees' work styles. Jessica is a developer who enjoys trying new technology. She often finds inventive ways of incorporating new tools and techniques into the development process. After trying a new design tool, she immediately forms a positive opinion of the tool and attempts to get others to use the tool. Jessica's work style could best be described as: a. rational extrovert b. rational introvert c. intuitive extrovert d. intuitive introvert","
+[0]
+
+
+
+[1]
+
+
+
+[2]
+
+","[
+    {
+        ""role"": ""paragraph"",
+        ""segment"": ""Jessica's work style could best be described as an intuitive extrovert."",
+        ""citations"": [
+            {
+                ""type"": ""source_text"",
+                ""content"": ""The rational extroverts tend to assert their ideas and not let 'gut feeling' affect their decision making. They tell their colleagues what they want them to know, but they rarely ask for more information before doing so. When reasoning, they rely on logic, not emotion. ... In contrast, intuitive extroverts base many decisions on emotional reactions, tending to want to tell others about them rather than ask for input. They use their intuition to be creative, and they often suggest unusual approaches to solving a problem."",
+                ""img_id"": null
+            },
+            {
+                ""type"": ""source_text"",
+                ""content"": ""Jessica is a developer who enjoys trying new technology. She often finds inventive ways of incorporating new tools and techniques into the development process. After trying a new design tool, she immediately forms a positive opinion of the tool and attempts to get others to use the tool."",
+                ""img_id"": ""query_evidence""
+            }
+        ]
+    }
+]",Jessica's work style could best be described as an intuitive extrovert.,0.257,3.332
