@@ -700,18 +700,6 @@ Output chunks:
 └── (Repeat for sections 1.2, 1.3)
 ```
 
----
-
-## Future Enhancements
-
-1. **Semantic Similarity Merging**: Combine small chunks with similar content
-2. **Query-Adaptive Chunking**: Adjust token limits based on query complexity
-3. **Citation-Aware**: Keep citations together with cited content
-4. **Multi-Language**: Language-specific sentence splitting
-5. **Domain-Specific Parsing**: Medical/legal document templates
-
----
-
 ## References
 
 - Docling: Structured Document Parsing Library
