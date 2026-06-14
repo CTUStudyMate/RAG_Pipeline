@@ -32,3 +32,11 @@ att
 build
 
 src/app/chat_flow/routes_intent.json
+
+.env
+.data/
+.att/
+.archie/
+.exp/
+.__pycache__/
+draft/
