@@ -76,7 +76,8 @@ def run_and_log(chunk_retrieve_strategy, inputfile="./experiment_data/ts.csv", o
 
 strategies = ["fixed_normal"]
 exp_dir = "./EXPERIMENTS/full_pipeline_strategies/fixed_600_2000_cite/"
-input_questions= "./experiment_data/dataset_v2.json"
+# input_questions= "./experiment_data/dataset_v2.json"
+input_questions= "./abstain_set.json"
 
 for strategy in strategies:
-    run_and_log(inputfile=input_questions, output_file=f"{exp_dir}{strategy}_cite_with_dataset_v2.csv", chunk_retrieve_strategy=strategy)        
+    run_and_log(inputfile=input_questions, output_file=f"{exp_dir}{strategy}_cite_with_apbstain_set.csv", chunk_retrieve_strategy=strategy)        

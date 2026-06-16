@@ -1,0 +1,82 @@
+[
+    {
+        "question": "According to McCall's quality model, what are the specific internal product quality criteria (on the right-hand side) that map to the external quality factors (on the left-hand side)?",
+        "ground_truth": "The specific internal product quality criteria explicitly listed include: Completeness, Traceability, Consistency, Accuracy, Error tolerance, Execution efficiency, Storage efficiency, Access control, Access audit, Operability, Training, Communicativeness, Simplicity, Conciseness, Instrumentation, Self-descriptiveness, Expandability, Generality, Modularity, Software system independence, Machine independence, Communications commonality, and Data commonality.",
+        "source_text": "Figure 1.5 visually maps external quality factors on the left to internal product quality criteria on the right. The right-hand side criteria explicitly listed in the figure include: Completeness, Traceability, Consistency, Accuracy, Error tolerance, Execution efficiency, Storage efficiency, Access control, Access audit, Operability, Training, Communicativeness, Simplicity, Conciseness, Instrumentation, Self-descriptiveness, Expandability, Generality, Modularity, Software system independence, Machine independence, Communications commonality, and Data commonality."
+    },
+    {
+        "question": "Which specific personnel roles (e.g., analyst, designer, programmer, tester, trainer) are actively involved during the System Testing phase of the software development lifecycle?",
+        "ground_truth": "The tester role is actively involved, as a line explicitly connects the SYSTEM TESTING step to the TESTER role.",
+        "source_text": "Figure 1.11 maps software development steps on the left to developer roles on the right. The steps shown include Requirements Analysis and Definition, System Design, Program Design, Program Implementation, Unit Testing, Integration Testing, System Testing, System Delivery, and Maintenance. The roles on the right include Analyst, Designer, Programmer, Tester, and Trainer. A line explicitly connects the SYSTEM TESTING step to the TESTER role."
+    },
+    {
+        "question": "Based on the work styles framework charting communication against decision-making, what are the two primary defining traits of a Rational Introvert?",
+        "ground_truth": "The two primary defining traits of a Rational Introvert are \"Asks others\" and \"Decides logically\".",
+        "source_text": "Figure 3.10 is a quadrant chart mapping decision-making styles (Intuitive vs. Rational on the vertical axis) against communication styles (Introvert vs. Extrovert on the horizontal axis). The bottom-left quadrant represents the RATIONAL INTROVERT and specifically lists the defining traits Asks others and Decides logically."
+    },
+    {
+        "question": "In the decision tree calculating risk exposure for regression testing, what is the exact combined risk exposure value in dollars if the development team chooses not to perform regression testing?",
+        "ground_truth": "The exact combined risk exposure value is $16.625M.",
+        "source_text": "Figure 3.16 shows a decision tree to calculate risk exposure for the choice Do regression testing? with Yes and No branches. Following the No branch, the tree lists three outcomes with their probabilities and financial losses: Find critical fault (P=0.25, L=$.5M, exposure 30M, exposure 0M, exposure 16.625M)."
+    },
+    {
+        "question": "When visually mapping requirements versus specifications, what domain sits exactly at the intersection where the Environment domain overlaps with the System domain?",
+        "ground_truth": "The Shared Interface sits exactly at the intersection where the Environment domain overlaps with the System domain.",
+        "source_text": "Figure 4.3 illustrates a Venn diagram representing the relationship between Requirements and Specification. The diagram consists of two overlapping circles labeled Environment and System. The area exactly where the Environment circle overlaps with the System circle is explicitly labeled as the Shared Interface."
+    },
+    {
+        "question": "In the reference architecture model for a compiler, which specific component bridges the gap between the Semantic analyzer and the Code generator?",
+        "ground_truth": "The Optimizer block bridges the gap between the Semantic analyzer and the Code generator.",
+        "source_text": "Figure 5.3 is a block diagram illustrating the reference model for a compiler. It maps the data flow and control flow between different processing components, including a Lexical analyzer, Parser, Semantic analyzer, Optimizer, and Code generator. In this sequential diagram, the Optimizer block is positioned exactly between the Semantic analyzer block and the Code generator block."
+    },
+    {
+        "question": "In the messy UML statechart diagram for the Publication class, what specific input event triggers the transition directly from the onloan state to the recall state?",
+        "ground_truth": "The specific input event that triggers the transition directly from the onloan state to the recall state is the event \"reserve\".",
+        "source_text": "For example, in the messy Publication statechart (Figure 4.10), the transition to state recall is enabled if the publication is in state onloan when a request to put the item on reserve is received.\n\nFigure 4.10, titled Messy UML statechart diagram for Publication class, shows a complex web of states. An arrow points directly from the state labeled onloan to the state labeled recall, and this specific transition arrow is labeled with the event reserve."
+    },
+    {
+        "question": "In the Petri net model of the library problem, what specific variables or tuples are shown being passed as inputs into the Process Payment transition?",
+        "ground_truth": "The specific variables or tuples passed as inputs into the Process Payment transition are \"payment\" and \"(patron, fines)\".",
+        "source_text": "A few of the transition predicates and actions are shown in Figure 4.13, such as the action on Process Payment, where the inputs are a payment and the patron's current fines, and the output is a new Fines tuple.\n\nFigure 4.13, titled Petri net of the library problem, shows a transition bar labeled Process Payment. There are two arcs pointing into this transition: one comes from the Payment place with the label payment, and the other comes from the Fines place with the label (patron, fines)."
+    },
+    {
+        "question": "In the use-case diagram for the library system, which two specific use cases are connected to the reserve item use case via an <<extend>> relationship?",
+        "ground_truth": "The two specific use cases connected to the reserve item use case via an <<extend>> relationship are the \"find item\" and \"borrow item\" use cases.",
+        "source_text": "In the use-case diagram, we draw a dashed arrow from the extension subcase to the base use case and annotate the arrow with stereotype <<extend>>. Examples of stereotypes are included in Figure 4.15.\n\nFigure 4.15, titled Library use cases, shows several ovals representing use cases. Dashed arrows annotated with the stereotype <<extend>> point from the find item oval and the borrow item oval directly to the reserve item oval."
+    },
+    {
+        "question": "In the fault tree analyzing a security breach, what are the two specific basic events that must both occur (linked by an AND-gate) for an Illegal access granted condition to be met?",
+        "ground_truth": "The two specific basic events that must both occur are \"Password exposed\" and \"Password not changed\".",
+        "source_text": "For example, consider the fault tree presented in Figure 5.11. The tree shows that a security breach could occur either if a previous logout is not recognized (leaving the previous user logged in) or an unauthorized user gains access to the system. For the latter to happen, both of two basic events must happen: a valid user's password is exposed, and the password is not changed between the time of the exposure and the time an unauthorized user attempts to use it.\n\nFigure 5.11, titled Fault tree for a security breach, maps events leading to a top-level failure. Under the intermediate event Illegal access granted, there is an AND logic gate symbol that directly connects to two lower-level basic event boxes labeled Password exposed and Password not changed."
+    },
+    {
+        "question": "In the diagram illustrating the relationship between computer science and software engineering, what specific component directly connects SOFTWARE ENGINEERING to the Problem?",
+        "ground_truth": "The specific component that directly connects SOFTWARE ENGINEERING to the Problem is \"Tools and Techniques to Solve Problem\".",
+        "source_text": "Software engineering takes the latter view, as shown in Figure 1.3. Instead of investigating hardware design or proving theorems about how algorithms work, a software engineer focuses on the computer as a problem-solving tool.\n\nFigure 1.3, titled The relationship between computer science and software engineering, illustrates two parallel paths. Under SOFTWARE ENGINEERING, an arrow goes to Tools and Techniques to Solve Problem, which then points directly to Problem."
+    },
+    {
+        "question": "In the structure of software development model by Abdel-Hamid, what specific components fall under the HUMAN RESOURCE MANAGEMENT category?",
+        "ground_truth": "The specific components that fall under the HUMAN RESOURCE MANAGEMENT category are Hiring rate, Turnover rate, Workforce experience mix, and Workforce.",
+        "source_text": "Figure 2.14 shows an overview of the relationships he defined. He defined four major areas that affect productivity: software production, human resource management, planning, and control. Production includes issues of quality assurance, learning, and development rate. Human resources address hiring, turnover, and experience.\n\nFigure 2.14, titled Structure of software development, maps four major areas. Under the bold heading HUMAN RESOURCE MANAGEMENT, there are four specific interrelated elements shown: Hiring rate, Turnover rate, Workforce experience mix, and Workforce."
+    },
+    {
+        "question": "In the three-tiered client-server architecture diagram, what specific software components are contained within the Client Presentation tier?",
+        "ground_truth": "The specific software components contained within the Client Presentation tier are \"Web Browser\", \"Web Browser\", and \"Desktop Application\".",
+        "source_text": "In a multitier system, like the example shown in Figure 5.7, servers are structured hierarchically into application-specific servers (the middle tiers) that in turn use servers offering more generic services (the bottom tier) (Clements et al. 2003).\n\nFigure 5.7, titled Three-tiered client-server architecture, shows three vertical layers. The topmost layer is labeled Client Presentation and encloses three component boxes explicitly named: Web Browser, Web Browser, and Desktop Application."
+    },
+    {
+        "question": "In the Enrollment Management model used during Digital's Alpha AXP program, what are the four specific sub-elements or factors listed under the COMMITMENT DELEGATION quadrant?",
+        "ground_truth": "The four specific sub-elements or factors listed under the COMMITMENT DELEGATION quadrant are Business goals, Project objectives, Trust, and Accountability (task-owner-date).",
+        "source_text": "Figure 3.17 illustrates the model. Vision was used to enroll the related programs, so they all shared common goals. Each group or subgroup of the project defined its own objectives in terms of the global ones stated for the project, including the company's business goals. Next, as managers developed plans, they delegated tasks to groups, soliciting comments and commitments about the content of each task and the schedule constraints imposed.\n\nFigure 3.17, titled Enrollment Management model, is divided into four quadrants. The top right quadrant, labeled COMMITMENT DELEGATION, explicitly contains four text elements: Business goals, Project objectives, Trust, and Accountability (task-owner-date)."
+    },
+    {
+        "question": "According to the decision table for library functions, if the input conditions are that the event is reserve and the item is out on loan, what are the exact three actions that must be performed?",
+        "ground_truth": "The exact three actions that must be performed are \"Put item on reserve shelf\", \"Send recall notice\", and \"(Re-)Calculate due date\".",
+        "source_text": "Figure 4.16 shows a decision table for the library functions borrow, return, reserve, and unreserve. Similarly, column 7 illustrates the case where there is a request to put a book on reserve but the book is currently out on loan; in this case, the book is recalled and the due date is recalculated to reflect the recall.\n\nFigure 4.16, titled Decision table for library functions, is a matrix mapping conditions to actions. In the seventh column where (event) reserve is T and item out on loan is T, there are X marks corresponding to exactly three action rows: Put item on reserve shelf, Send recall notice, and (Re-)Calculate due date."
+    },
+    {
+        "question": "In the data-module solution architecture for KWIC, what are the four specific data access operations (represented as an annotated arrow) used by the Master control module to interact with the Index module?",
+        "ground_truth": "The four specific data access operations used by the Master control module to interact with the Index module are \"setup\", \"setchar\", \"char\", and \"word\".",
+        "source_text": "Figure 5.14 illustrates a second design that has a similar decomposition of functionality into sequentially called modules. Each module's data are accessible via access methods, rather than directly. Thus, the modules form data abstractions.\n\nFigure 5.14, titled Data-module solution for KWIC, illustrates the architecture using boxes and arrows. A Subprogram call arrow points from the Master control box to the Index box, and this specific arrow is explicitly labeled with four operation names: setup, setchar, char, and word."
+    }
+]

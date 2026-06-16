@@ -49,7 +49,7 @@ def run_and_log(chunk_retrieve_strategy, inputfile="./experiment_data/ts.csv", o
 
                 case "hsf_multi": # hsf chunking, multistage retrieve
                     retrieve_start = time.perf_counter()
-                    docs = multi_stages_retrieve(cursor=cursor, query=q, vector_weight=0.5, bm25_weight=0.5)   
+                    docs = multi_stages_retrieve(cursor=cursor, query=q, vector_weight=0.75, bm25_weight=0.25)   
                     retrieve_end = time.perf_counter()
                 # case "lc_recur_char_split": #langchain-based recursivecharactertextsplitter, vector retrieve
                 #     retrieve_start = time.perf_counter() 
@@ -83,8 +83,9 @@ def run_and_log(chunk_retrieve_strategy, inputfile="./experiment_data/ts.csv", o
 # strategies = ["fixed_normal", "hsf_normal", "hsf_multi"]
 strategies = ["hsf_multi"]
 exp_dir = "./EXPERIMENTS/full_pipeline_strategies/hsf_multi_600_2000_cite/"
-input_questions= "./experiment_data/dataset_v2.json"
-print("run hsf with 50-50 weighted")
+# input_questions= "./experiment_data/dataset_v2.json"
+input_questions= "./new_dataset_final.json"
+print("run hsf with 75-25 weighted")
 for strategy in strategies:
-    run_and_log(inputfile=input_questions, output_file=f"{exp_dir}{strategy}_50_50_cite_with_dataset_v2.csv", chunk_retrieve_strategy=strategy)        
+    run_and_log(inputfile=input_questions, output_file=f"{exp_dir}{strategy}_75_25_cite_with_new_dataset.csv", chunk_retrieve_strategy=strategy)        
 

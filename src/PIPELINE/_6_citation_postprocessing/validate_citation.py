@@ -176,7 +176,11 @@ def is_cite_text_in_source(cite_text: str, docs: list[NormalizedChunk]):
     # Split cite text by quoted parts ("...") to handle cases where
     # the LLM truncates or cuts citation text in the middle of quoted segments.
     # text_parts = [p.strip() for p in re.split(r'"(.*?)"', cite_text) if p.strip()]
-    text_parts = [p.strip() for p in cite_text.split("...") if p.strip()]
+    text_parts = [
+        p.strip()
+        for p in cite_text.split("...")
+        if len(p.strip()) >= 5
+    ]
     text_parts = [normalize_text(text_part) for text_part in text_parts]
     
     parts_and_chunks = [] # [(doc_id, the text part of the citation)]
