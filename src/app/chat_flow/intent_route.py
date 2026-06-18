@@ -20,6 +20,7 @@ rl = SemanticRouter(encoder=encoder, routes=routes, auto_sync="local")
 
 def determine_intent(user_query: str):
     """Identify the user's intent from a predefined set of intents."""
+    user_query = user_query.lower().strip()
     intent = rl(user_query)
     if not (intent.name) or (intent.similarity_score < 0.51):
         intent = 'need_retrieve'

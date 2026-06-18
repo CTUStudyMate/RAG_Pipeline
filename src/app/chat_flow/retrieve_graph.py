@@ -7,13 +7,13 @@ class RetrieveState(TypedDict):
     docs: list
     
     # external param
-    query: str
+    rewritten_query: str
     cursor: Any
 
 
 def retrieve(state: RetrieveState):
     docs = multi_stages_retrieve(
-        query=state["query"],
+        query=state["rewritten_query"],
         cursor=state["cursor"]
     )
 

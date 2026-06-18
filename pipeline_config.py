@@ -128,8 +128,8 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # LOG_FILE="./mylog8_hsf_normal_firstcite.txt"
 
-# config_path="./EXPERIMENTS/chunk_versions/hsf_chunksize600_separate_img_storing/config.yaml"
-config_path = "EXPERIMENTS/full_pipeline_strategies/fixed_600_2000_cite/config.yaml"
+config_path="./EXPERIMENTS/chunk_versions/hsf_chunksize600_separate_img_storing/config.yaml"
+# config_path = "EXPERIMENTS/full_pipeline_strategies/fixed_600_2000_cite/config.yaml"
 settings = Settings.load(config_path=config_path)
 # print(settings.config["vectordb_connect_info"]["collection"])
 
