@@ -10,20 +10,6 @@ from PIPELINE._5_generate.generate import generate_answer
 from PIPELINE._5_generate.generate_without_cite import generate_answer_without_citation
 from PIPELINE._6_citation_postprocessing.validate_citation import filter_segments, merge_segments_to_text
 from common_utils.debug import log_to_file
-import psycopg
-
-from pipeline_config import settings
-pgdb_connect_info = settings.pgdb_connect_info
-
-conn = psycopg.connect(
-host=pgdb_connect_info.host,
-port=pgdb_connect_info.port,
-dbname=pgdb_connect_info.db_name,
-user=pgdb_connect_info.user,
-password=pgdb_connect_info.password,
-options="-c client_encoding=UTF8"
-)
-cursor = conn.cursor()
 
 def load_questions(json_file):
     questions = []
@@ -51,14 +37,14 @@ def run_and_log(chunk_retrieve_strategy, inputfile="./experiment_data/ts.csv", o
             match chunk_retrieve_strategy:                    
                 case "hsf_multi": # hsf chunking, multistage retrieve
                     retrieve_start = time.perf_counter()
-                    docs = multi_stages_retrieve(cursor=cursor, query=q, vector_weight=0.8, bm25_weight=0.2)   
+                    docs = multi_stages_retrieve(query=q)   
                     retrieve_end = time.perf_counter()
                 
             
             retrieve_elapsed = retrieve_end - retrieve_start   
             
             generate_start = time.perf_counter()
-            answer, context, docs, embedded_text = generate_answer_without_citation(cursor=cursor, query=q, docs=docs)
+            answer, context, docs, embedded_text = generate_answer_without_citation(query=q, docs=docs)
             generate_end = time.perf_counter()
             generate_elapsed = generate_end - generate_start
             

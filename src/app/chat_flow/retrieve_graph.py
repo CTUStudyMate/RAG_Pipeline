@@ -8,13 +8,11 @@ class RetrieveState(TypedDict):
     
     # external param
     rewritten_query: str
-    cursor: Any
 
 
 def retrieve(state: RetrieveState):
     docs = multi_stages_retrieve(
         query=state["rewritten_query"],
-        cursor=state["cursor"]
     )
 
     return {

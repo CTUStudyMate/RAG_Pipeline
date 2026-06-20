@@ -1,49 +1,16 @@
 import re
-
-import chromadb
-from common_utils.debug import log_to_file
-from models.VectorDBConnectIfo import VectorDBConnectIfo
-from models.PGDBConnectInfo import PGDBConnectInfo
 from pipeline_config import settings
+from pipeline_setup import _default_collection, embedder, cursor
 
-import psycopg
-
-from used_models.embeddings.embed_factory import EmbeddingService 
-
-PGDB_HSF_MS_CONNECT_INFO = settings.pgdb_connect_info
 RRF_RANKING_CONSTANT = settings.config["rrf_ranking_constant"]
 RRF_TOP_K = settings.config["rrf_top_k"]
-VECTORDB_HSF_MS_CONNECT_INFO = settings.config["vectordb_connect_info"]
-
-EMBEDDING_PROVIDER = settings.config["embedding_provider"]
 VECTOR_RETRIEVE_CHUNKS_LIMIT = settings.config["vector_retrieve_chunks_limit"]
 TEXT_RETRIEVE_CHUNKS_LIMIT = settings.config["text_retrieve_chunks_limit"]
+bm25_weight = settings.config["bm25_weight"]
+vector_weight = settings.config["vector_weight"]
 
-embedder = EmbeddingService(provider=EMBEDDING_PROVIDER)
-
-_default_db_path = VECTORDB_HSF_MS_CONNECT_INFO["db_path"]
-_default_collection_name = VECTORDB_HSF_MS_CONNECT_INFO["collection"]
-
-_default_client = chromadb.PersistentClient(path=_default_db_path)
-_default_collection = _default_client.get_or_create_collection(
-    name=_default_collection_name
-)
-
-
-def vector_search(
-    query: str,
-    vectordb_connect_info: VectorDBConnectIfo | None = None # chỗ này có thể bug vì đáng ra nó truy cập kiểu [""] do config được nhét trong yaml chứ không phải dùng dấu . như trong class
-):
-    if vectordb_connect_info is None:
-        client = _default_client
-        collection = _default_collection
-    else:
-        client = chromadb.PersistentClient(
-            path=vectordb_connect_info["db_path"]
-        )
-        collection = client.get_or_create_collection(
-            name=vectordb_connect_info["collection"]
-        )
+def vector_search(query: str):
+    collection = _default_collection
     
     query_emb = embedder.embed(query)
     results = collection.query(
@@ -66,7 +33,7 @@ def vector_search(
     return results
 
 
-def text_search(query: str, cursor):
+def text_search(query: str):
     # Làm sạch query: Thay thế các ký tự không phải là chữ cái/số (\w) hoặc khoảng trắng (\s) bằng dấu cách.
     #  Việc này giúp ParadeDB không bị lỗi parse syntax mà vẫn giữ nguyên từ khóa để tìm kiếm BM25.
     safe_query = re.sub(r'[^\w\s]', ' ', query)
@@ -119,17 +86,17 @@ def normalize_text_results(rows):
     ]   
     
     
-def print_normalized_docs(docs):
-        # {
-        #     "doc_id": doc_id,
-        #     "text": text,
-        #     "metadata": meta,
-        #     "score": 1 - dist  # convert distance → similarity
-        # }    
-    for doc in docs:
-        log_to_file(f"**{doc["doc_id"][:300]}")
-        log_to_file(doc["text"])
-        log_to_file(doc["score"])
+# def print_normalized_docs(docs):
+#         # {
+#         #     "doc_id": doc_id,
+#         #     "text": text,
+#         #     "metadata": meta,
+#         #     "score": 1 - dist  # convert distance → similarity
+#         # }    
+#     for doc in docs:
+#         log_to_file(f"**{doc["doc_id"][:300]}")
+#         log_to_file(doc["text"])
+#         log_to_file(doc["score"])
 # RRF
 def rrf_merge(
     vector_docs,
@@ -180,15 +147,14 @@ def rrf_merge(
     return results  
 
         
-def hybrid_retrieve(query: str, cursor, vector_weight, bm25_weight,
-                    vectordb_connect_info: VectorDBConnectIfo | None = None):
-    vector_based_results = vector_search(query=query, vectordb_connect_info=vectordb_connect_info)
-    text_based_results = text_search(query=query, cursor=cursor)
+def hybrid_retrieve(query: str):
+    vector_based_results = vector_search(query=query)
+    text_based_results = text_search(query=query)
     
     vector_docs = normalize_vector_results(vector_based_results)
     bm25_docs = normalize_text_results(text_based_results)
     
-    hybrid_docs = rrf_merge(vector_docs, bm25_docs, vector_weight=vector_weight, bm25_weight=bm25_weight)
+    hybrid_docs = rrf_merge(vector_docs, bm25_docs)
     return hybrid_docs
 
         

@@ -4,25 +4,9 @@ import json
 import time
 from pathlib import Path
 
-from PIPELINE._4_retrieve.multi_stages.multi_stages_retriever import multi_stages_retrieve
 from PIPELINE._4_retrieve.multi_stages.normal_retriever import normal_retrieve
 from PIPELINE._5_generate.generate import generate_answer
 from PIPELINE._6_citation_postprocessing.validate_citation import filter_segments, merge_segments_to_text
-from common_utils.debug import log_to_file
-import psycopg
-
-from pipeline_config import settings
-pgdb_connect_info = settings.pgdb_connect_info
-
-conn = psycopg.connect(
-host=pgdb_connect_info.host,
-port=pgdb_connect_info.port,
-dbname=pgdb_connect_info.db_name,
-user=pgdb_connect_info.user,
-password=pgdb_connect_info.password,
-options="-c client_encoding=UTF8"
-)
-cursor = conn.cursor()
 
 def load_questions(json_file):
     questions = []
@@ -48,35 +32,17 @@ def run_and_log(chunk_retrieve_strategy, inputfile="./experiment_data/ts.csv", o
         for q in questions:
             
             match chunk_retrieve_strategy:
-                # case "fixed_normal": # fixed size chunking, vector retrieve
-                #     retrieve_start = time.perf_counter()
-                #     docs = normal_retrieve(q, VECTORDB_FIXEDSIZE_CONNECT_INFO)
-                #     retrieve_end = time.perf_counter()
-                    
+
                 case "hsf_normal": # hsf chunking, vector retrieve
                     retrieve_start = time.perf_counter()
                     docs = normal_retrieve(q)  
                     retrieve_end = time.perf_counter()
                     
-                # case "hsf_multi": # hsf chunking, multistage retrieve
-                #     retrieve_start = time.perf_counter()
-                #     docs = multi_stages_retrieve(cursor=cursor, query=q, vector_weight=0.8, bm25_weight=0.2)   
-                #     retrieve_end = time.perf_counter()
-                # case "lc_recur_char_split": #langchain-based recursivecharactertextsplitter, vector retrieve
-                #     retrieve_start = time.perf_counter() 
-                #     docs = normal_retrieve(q, VECTORDB_LC_RECUR_CONNECT_INFO) 
-                #     retrieve_end = time.perf_counter()
-              
-            # log_to_file("*************************")  
-            # log_to_file(chunk_retrieve_strategy)
-            # log_to_file(docs)
-            # log_to_file("*************************")  
-            # return      
-            
+           
             retrieve_elapsed = retrieve_end - retrieve_start   
             
             generate_start = time.perf_counter()
-            answer, context, docs, embedded_text = generate_answer(cursor=cursor, query=q, docs=docs)
+            answer, context, docs, embedded_text = generate_answer(query=q, docs=docs)
             generate_end = time.perf_counter()
             generate_elapsed = generate_end - generate_start
             answer_segments = json.loads(answer)
@@ -89,7 +55,6 @@ def run_and_log(chunk_retrieve_strategy, inputfile="./experiment_data/ts.csv", o
 
             print(f"Done: {q[:200]} ({retrieve_elapsed+generate_elapsed:.2f}s)")
         
-        conn.close()    
 
 # strategies = ["fixed_normal", "hsf_normal", "hsf_normal"]
 strategies = ["hsf_normal"]

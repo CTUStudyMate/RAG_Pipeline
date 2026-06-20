@@ -34,7 +34,6 @@ class ChatFlowState(TypedDict):
     last_ai_message_segments: SegmentState | None
     
     # external param
-    cursor: Any
 
 
 def identify_user_intent_node(state: ChatFlowState):
@@ -84,7 +83,6 @@ def rewrite_query_node(state: ChatFlowState):
 def retrieve_node(state: ChatFlowState):
     result = retrieve_graph.invoke({
         "rewritten_query": state["rewritten_query"],
-        "cursor": state["cursor"],
     })
     if debug: 
         print(f"3 - Retrieved {len(result["docs"]):}")
@@ -98,8 +96,7 @@ def retrieve_node(state: ChatFlowState):
 def generate_rag_node(state: ChatFlowState):
     result = generate_graph.invoke({
         "docs": state["docs"],
-        "query": state["query"],
-        "cursor": state["cursor"]
+        "query": state["query"]
     })
     if debug: print("4 - RAG generate: ", result["parsed"])
 
@@ -226,22 +223,9 @@ graph.add_edge(generate_vanilla, final)
 chatflow_graph = graph.compile()
     
 # TEST ********************************************
-# import psycopg
-# from pipeline_config import settings
-# pgdb_connect_info = settings.pgdb_connect_info
-
-# conn = psycopg.connect(
-# host=pgdb_connect_info.host,
-# port=pgdb_connect_info.port,
-# dbname=pgdb_connect_info.db_name,
-# user=pgdb_connect_info.user,
-# password=pgdb_connect_info.password
-# )
-# cursor = conn.cursor()
 
 # result = chatflow_graph.invoke({
 #     "query": "What is software engineering and how does it fit into computer science?",
-#     "cursor": cursor
 # })
 
       

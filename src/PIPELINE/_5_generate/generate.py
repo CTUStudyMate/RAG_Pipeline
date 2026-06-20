@@ -4,6 +4,7 @@ import json
 from pipeline_config import settings
 # from src.used_models.llm.LLM_Factory import get_llm
 from pipeline_setup import llm
+from pipeline_setup import cursor
 
 MAX_IMAGES_PER_LLMCALL = settings.config["max_images_per_llmcall"]
 
@@ -182,7 +183,7 @@ You are a helpful assistant that answers user questions using the provided conte
 
 pgdb_connect_info = settings.pgdb_connect_info
 
-def get_base64(img_ids, cursor):
+def get_base64(img_ids):
     if not img_ids:
         return []
     placeholders = ",".join(["%s"] * len(img_ids))
@@ -195,7 +196,7 @@ def get_base64(img_ids, cursor):
     return cursor.fetchall()
     
     
-def build_content_inputs(docs, q, cursor):
+def build_content_inputs(docs, q):
     content = []
     context_parts = [] # chỉ source text từ tài liệu 
     embedded_parts = [] # nội dung được dùng để embed và retrieve, bao gồm cả mô tả ảnh
@@ -208,7 +209,7 @@ def build_content_inputs(docs, q, cursor):
         if "images" in metadata and metadata["images"]:
             img_ids.extend(metadata["images"])
     
-    rows = get_base64(img_ids, cursor)
+    rows = get_base64(img_ids)
     img_map = {img_id: base64 for img_id, base64 in rows}
 
     # tạo map với key là img_id và value là base64 từ kết quả trên       
@@ -256,9 +257,9 @@ def build_content_inputs(docs, q, cursor):
     embedded_text = "\n".join(embedded_parts)
     return content, context_text, embedded_text
          
-def build_content_inputs_lcver(docs, q, cursor):
+def build_content_inputs_lcver(docs, q):
     content, context_text, embedded_text = build_content_inputs(
-        docs=docs, q=q, cursor=cursor
+        docs=docs, q=q
     )
 
     new_content = []
@@ -298,11 +299,10 @@ Your task:
 """
 
 
-def generate_answer(cursor, query, docs, max_retries=3):
+def generate_answer(query, docs, max_retries=3):
     content, source_context_text, embedded_text = build_content_inputs(
         docs=docs,
-        q=query,
-        cursor=cursor
+        q=query
     )
 
     # -----------------------

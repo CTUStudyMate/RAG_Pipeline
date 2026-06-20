@@ -2,7 +2,6 @@ import csv
 import time
 from pathlib import Path
 
-from PIPELINE._4_retrieve.multi_stages.multi_stages_retriever import multi_stages_retrieve
 from PIPELINE._4_retrieve.multi_stages.normal_retriever import normal_retrieve
 from PIPELINE._5_generate.generate import generate_answer
 from common_utils.debug import log_to_file

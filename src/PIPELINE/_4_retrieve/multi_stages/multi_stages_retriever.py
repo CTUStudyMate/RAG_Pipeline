@@ -7,9 +7,9 @@ from common_utils.debug import log_to_file
 
 reranker = CrossEncoderService()
 
-def multi_stages_retrieve(query: str, cursor, vector_weight=0.75, bm25_weight=0.75):
+def multi_stages_retrieve(query: str):
     #hybrid search - rrf - retrieve
-    hybrid_docs = hybrid_retrieve(query=query, cursor=cursor, vector_weight=vector_weight, bm25_weight=bm25_weight)
+    hybrid_docs = hybrid_retrieve(query=query)
     
     reranked_docs = reranker.rerank(query, hybrid_docs)
     final_docs = greedy_add_chunks(reranked_docs) # add tới khi đầy token budget

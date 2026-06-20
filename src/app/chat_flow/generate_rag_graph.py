@@ -24,7 +24,6 @@ class GenerateState(TypedDict):
     # external data
     docs: list
     query: str
-    cursor: Any
 
 
 # HELPERS
@@ -40,7 +39,6 @@ def build_context_node(state: GenerateState):
     content, source_context_text, embedded_text = build_content_inputs_lcver(
         docs=state["docs"],
         q=state["query"],
-        cursor=state["cursor"]
     )
     return {
         "messages": [HumanMessage(content=content)],
@@ -230,7 +228,7 @@ generate_graph = graph.compile()
 # cursor = conn.cursor()
 
 # query = "what is software engineering?"
-# docs = multi_stages_retrieve(cursor=cursor, query=query)
+# docs = multi_stages_retrieve(query=query)
 
 # result = app.invoke({
 #     "query": query,
