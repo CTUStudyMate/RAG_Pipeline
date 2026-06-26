@@ -28,6 +28,8 @@ Always consider the conversation history.
 
 Do not invent information.
 Do not attempt to answer the user's question.
+
+4. Respond in the same language as the user's message.
 """
 
 def llm_conversational_fallback(state: dict):

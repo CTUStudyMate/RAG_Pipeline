@@ -80,7 +80,11 @@ def validate_segment_citation(segment, docs):
     valid_citations = []
     
     if not citations:
-        if (segment["role"]) != "bullet_intro":
+        if (segment["role"]) != "bullet_intro" and (segment["type"] == "abstained"):
+            return {
+                **segment
+            }
+        elif (segment["role"]) != "bullet_intro":
             return {
                 **segment,
                 "type": "inferred"

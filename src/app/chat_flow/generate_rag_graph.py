@@ -166,14 +166,57 @@ parse2 = "parse2"
 repair2 = "repair2"
 
 end = "end"
+
+## ver 01 - include strict mode
+# # NODES
+# graph = StateGraph(GenerateState)
+
+# graph.add_node(entry_build_context, build_context_node)
+
+# graph.add_node(pass1, strict_llm_generate_node)
+# graph.add_node(parse1, parse_json_node)
+# graph.add_node(repair1, repair_pass1_node)
+
+# graph.add_node(pass2, evidence_synthesis_llm_generate_node)
+# graph.add_node(parse2, parse_json_node)
+# graph.add_node(repair2, repair_pass2_node)
+
+# graph.add_node(end, end_node)
+
+# # EDGES
+# # Entry
+# graph.set_entry_point(entry_build_context)
+# # Edges
+# graph.add_edge(entry_build_context, pass1)
+# graph.add_edge(pass1, parse1)
+# graph.add_conditional_edges(parse1, route_after_pass1, {
+#     "repair1": repair1,
+#     "pass2": pass2,
+#     "end": end
+# })
+# graph.add_conditional_edges(repair1, route_after_repair1, {
+#     "parse1": parse1,
+#     "pass2": pass2
+# })
+
+# graph.add_edge(pass2, parse2)
+# graph.add_conditional_edges(parse2, route_after_pass2, {
+#     "repair2": repair2,
+#     "end": end
+# })
+# graph.add_conditional_edges(repair2, route_after_repair2, {
+#     "parse2": parse2,
+#     "end": end
+# })
+
+# generate_graph = graph.compile()
+
+
+## ver 02 - only evidence synthesis
 # NODES
 graph = StateGraph(GenerateState)
 
 graph.add_node(entry_build_context, build_context_node)
-
-graph.add_node(pass1, strict_llm_generate_node)
-graph.add_node(parse1, parse_json_node)
-graph.add_node(repair1, repair_pass1_node)
 
 graph.add_node(pass2, evidence_synthesis_llm_generate_node)
 graph.add_node(parse2, parse_json_node)
@@ -185,18 +228,7 @@ graph.add_node(end, end_node)
 # Entry
 graph.set_entry_point(entry_build_context)
 # Edges
-graph.add_edge(entry_build_context, pass1)
-graph.add_edge(pass1, parse1)
-graph.add_conditional_edges(parse1, route_after_pass1, {
-    "repair1": repair1,
-    "pass2": pass2,
-    "end": end
-})
-graph.add_conditional_edges(repair1, route_after_repair1, {
-    "parse1": parse1,
-    "pass2": pass2
-})
-
+graph.add_edge(entry_build_context, pass2)
 graph.add_edge(pass2, parse2)
 graph.add_conditional_edges(parse2, route_after_pass2, {
     "repair2": repair2,
