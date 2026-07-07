@@ -246,26 +246,12 @@ generate_graph = graph.compile()
 
 
 # TEST ***************************************************
-# import psycopg
-# from pipeline_config import settings
-# pgdb_connect_info = settings.pgdb_connect_info
-
-# conn = psycopg.connect(
-# host=pgdb_connect_info.host,
-# port=pgdb_connect_info.port,
-# dbname=pgdb_connect_info.db_name,
-# user=pgdb_connect_info.user,
-# password=pgdb_connect_info.password
-# )
-# cursor = conn.cursor()
-
 # query = "what is software engineering?"
 # docs = multi_stages_retrieve(query=query)
 
-# result = app.invoke({
+# result = generate_graph.invoke({
 #     "query": query,
 #     "docs": docs,
-#     "cursor": cursor
 # })
 # print(result)
 

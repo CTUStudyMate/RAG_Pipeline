@@ -426,11 +426,12 @@ def create_chunk(node, cursor, file_path, prefix_path):
     return chunks    
     
     
-def build_chunks(node, file_path, cursor, prefix_path): #prefix path là logical nơi tổ chức lưu chunk, vd "built_in_corpus/se/Software Engineering Theory & Practice"
+def build_chunks(node, file_path, cursor, prefix_path): #prefix path là nơi document gốc được lưu, vd "built_in_corpus/se/Software Engineering Theory & Practice"
+
 # bắt đầu từ root node, chia dần xuống các level con cho tới khi thỏa max token
-    
     if (node["token_count"]<=CHUNK_MAX_TOKEN):
-        chunks = create_chunk(node=node, cursor=cursor, file_path=file_path, prefix_path=prefix_path) # tạo luôn chunk từ node
+        # tạo luôn chunk từ node
+        chunks = create_chunk(node=node, cursor=cursor, file_path=file_path, prefix_path=prefix_path) 
         return chunks
     else:            
         chunks = []

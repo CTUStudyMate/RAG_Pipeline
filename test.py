@@ -1,5 +1,5 @@
 import json
-with open("abstain_set.json", "r", encoding="utf-8") as f:
+with open("new_dataset_final.json", "r", encoding="utf-8") as f:
     result = json.load(f)
 
 print(len(result))    

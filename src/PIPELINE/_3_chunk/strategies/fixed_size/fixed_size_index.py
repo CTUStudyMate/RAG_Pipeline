@@ -10,6 +10,7 @@ import psycopg
 from pipeline_config import settings
 from used_models.embeddings.embed_factory import EmbeddingService
 from PIPELINE._3_chunk.common_utils import mannual_token_count
+from pipeline_setup import pool
 
 EMBEDDING_PROVIDER = settings.config["embedding_provider"]
 PGDB_FIXED_SIZE_CONNECT_INFO = settings.pgdb_connect_info
@@ -98,25 +99,24 @@ def fixed_size_index_chunks(file_path, chunks, pgdb_connect_info=None, vectordb_
     
     index_to_chroma(collection=collection, ids=ids, embeddings=embeddings, documents=documents, metadatas=metadatas, client=client)  
     
-    created_new_conn = False
-    if pgdb_connect_info is not None:
-        created_new_conn = True
-        conn = psycopg.connect(
-            host=pgdb_connect_info.host,
-            port=pgdb_connect_info.port,
-            dbname=pgdb_connect_info.db_name,
-            user=pgdb_connect_info.user,
-            password=pgdb_connect_info.password
-        )
-    else:
-        pgdb_connect_info = PGDB_FIXED_SIZE_CONNECT_INFO
-        conn = _default_pgdb_conn    
+    if pgdb_connect_info is None:
+        pgdb_connect_info = PGDB_FIXED_SIZE_CONNECT_INFO 
     
-    cur = conn.cursor()
     index_to_pgdb(pgdb_connect_info=pgdb_connect_info, chunk_ids=ids, chunk_text_contents=documents, chunk_metadatas=metadatas, chunk_text_search_contents=documents, cur=cur)
-    conn.commit()
-    if created_new_conn:
-        conn.close()
+    
+    with pool.connection() as conn:
+        with conn.cursor() as cur:
+            index_to_pgdb(
+                pgdb_connect_info=pgdb_connect_info,
+                chunk_ids=ids,
+                chunk_text_contents=documents,
+                chunk_text_search_contents=documents,
+                chunk_metadatas=metadatas,
+                cur=cur
+            )
+
+            conn.commit()
+
         
     data = []
 
@@ -127,5 +127,5 @@ def fixed_size_index_chunks(file_path, chunks, pgdb_connect_info=None, vectordb_
             "embeded_content": embed, # trong chroma db thì trường này nhét vào metadata luôn
             "metadata": meta
         })
-    with open(settings.config["final_chunks_test_filepath"], "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)    
+    # with open(settings.config["final_chunks_test_filepath"], "w", encoding="utf-8") as f:
+    #     json.dump(data, f, ensure_ascii=False, indent=2)    

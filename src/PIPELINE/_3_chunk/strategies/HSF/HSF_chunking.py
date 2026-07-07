@@ -1,10 +1,7 @@
 import copy
-import os
-import re
 import sqlite3
 import time
 
-from PIPELINE._3_chunk.strategies.HSF.atomic_db_helpers.db_helpers import connect_db
 from PIPELINE._3_chunk.strategies.HSF.hierarchy_helpers.DFSCursor import DFSCursor
 from PIPELINE._3_chunk.strategies.HSF.index_chunks import index_chunks
 from PIPELINE._3_chunk.strategies.HSF.process_chunks import build_chunks, create_chunk

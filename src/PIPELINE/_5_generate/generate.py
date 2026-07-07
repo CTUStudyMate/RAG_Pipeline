@@ -4,7 +4,7 @@ import json
 from pipeline_config import settings
 # from src.used_models.llm.LLM_Factory import get_llm
 from pipeline_setup import llm
-from pipeline_setup import cursor
+from pipeline_setup import pool
 
 MAX_IMAGES_PER_LLMCALL = settings.config["max_images_per_llmcall"]
 
@@ -195,14 +195,21 @@ pgdb_connect_info = settings.pgdb_connect_info
 def get_base64(img_ids):
     if not img_ids:
         return []
+
     placeholders = ",".join(["%s"] * len(img_ids))
+
     query = f"""
         SELECT img_id, base64
         FROM {pgdb_connect_info.images_table}
         WHERE img_id IN ({placeholders})
     """
-    cursor.execute(query, img_ids)
-    return cursor.fetchall()
+
+    with pool.connection() as conn:
+        with conn.cursor() as cur:
+            cur.execute(query, img_ids)
+            rows = cur.fetchall()
+
+    return rows
     
     
 def build_content_inputs(docs, q):

@@ -1,11 +1,9 @@
 
 import chromadb
-# from pipeline_config import EMBEDDING_PROVIDER, FINAL_CHUNKS_TEST_FILEPATH, VECTOR_DB_HSF_PATH
 from pipeline_config import settings
 from pipeline_setting import PGDBConnectInfo
 from src.used_models.embeddings.embed_factory import EmbeddingService 
-from pipeline_setup import llm
-import psycopg
+from pipeline_setup import llm, pool
 import json
 
 def embed_content(texts, embedder):
@@ -184,31 +182,21 @@ def index_chunks(collection_name, chunks, pgdb_connect_info):
     collection, client = get_chroma_collection(collection_name)
     index_to_chroma(collection=collection, ids=ids, embeddings=embeddings, documents=documents, metadatas=metadatas, client=client)   
     
-    conn = psycopg.connect(
-    host=pgdb_connect_info.host,
-    port=pgdb_connect_info.port,
-    dbname=pgdb_connect_info.db_name,
-    user=pgdb_connect_info.user,
-    password=pgdb_connect_info.password,
-    options="-c client_encoding=UTF8" # chưa test lại code khi có dòng này
-    )
-    
-    cur = conn.cursor()
-    index_to_pgdb(pgdb_connect_info=pgdb_connect_info, chunk_ids=ids, chunk_text_contents=documents, chunk_metadatas=metadatas, chunk_text_search_contents=embeded_texts, cur=cur)
-    store_imgs(db_images=db_images, pgdb_connect_info=pgdb_connect_info, cur=cur)
-    conn.commit()
-    cur.close()
-    conn.close()
+    with pool.connection() as conn:
+        with conn.cursor() as cur:
+            index_to_pgdb(pgdb_connect_info=pgdb_connect_info, chunk_ids=ids, chunk_text_contents=documents, chunk_metadatas=metadatas, chunk_text_search_contents=embeded_texts, cur=cur)
+            store_imgs(db_images=db_images, pgdb_connect_info=pgdb_connect_info, cur=cur)
+            conn.commit()
     
     # debug
-    data = []
+    # data = []
 
-    for _id, doc, embed, meta in zip(ids, documents, embeded_texts, metadatas):
-        data.append({
-            "id": _id,
-            "document": doc,
-            "embeded_content": embed, # trong chroma db thì trường này nhét vào metadata luôn
-            "metadata": meta
-        })
-    with open(settings.config["final_chunks_test_filepath"], "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+    # for _id, doc, embed, meta in zip(ids, documents, embeded_texts, metadatas):
+    #     data.append({
+    #         "id": _id,
+    #         "document": doc,
+    #         "embeded_content": embed, # trong chroma db thì trường này nhét vào metadata luôn
+    #         "metadata": meta
+    #     })
+    # with open(settings.config["final_chunks_test_filepath"], "w", encoding="utf-8") as f:
+    #     json.dump(data, f, ensure_ascii=False, indent=2)

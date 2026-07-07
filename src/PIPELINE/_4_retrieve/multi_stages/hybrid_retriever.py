@@ -1,6 +1,6 @@
 import re
 from pipeline_config import settings
-from pipeline_setup import _default_collection, embedder, cursor
+from pipeline_setup import _default_collection, embedder, pool
 
 RRF_RANKING_CONSTANT = settings.config["rrf_ranking_constant"]
 RRF_TOP_K = settings.config["rrf_top_k"]
@@ -38,20 +38,21 @@ def text_search(query: str):
     #  Việc này giúp ParadeDB không bị lỗi parse syntax mà vẫn giữ nguyên từ khóa để tìm kiếm BM25.
     safe_query = re.sub(r'[^\w\s]', ' ', query)
     safe_query = re.sub(r'\s+', ' ', safe_query).strip()
-
     
-    cur = cursor
     table_name = settings.pgdb_connect_info.chunks_table
     
-    cur.execute(f"""
-        SELECT id, document_id, text_content, metadata, paradedb.score(id) AS score
-        FROM {table_name}
-        WHERE search_content @@@ %s
-        ORDER BY score DESC
-        LIMIT {TEXT_RETRIEVE_CHUNKS_LIMIT};
-    """, (safe_query,))
+    with pool.connection() as conn:
+        with conn.cursor() as cur:
+            cur.execute(f"""
+                SELECT id, document_id, text_content, metadata, paradedb.score(id) AS score
+                FROM {table_name}
+                WHERE search_content @@@ %s
+                ORDER BY score DESC
+                LIMIT {TEXT_RETRIEVE_CHUNKS_LIMIT};
+            """, (safe_query,))
+            
+            rows = cur.fetchall()
     
-    rows = cur.fetchall()
     return rows
 
         

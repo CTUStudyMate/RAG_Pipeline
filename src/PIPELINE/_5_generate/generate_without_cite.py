@@ -3,7 +3,7 @@ import json
 # from common_utils.debug import log_to_file
 from pipeline_config import settings
 # from src.used_models.llm.LLM_Factory import get_llm
-from pipeline_setup import llm
+from pipeline_setup import llm, pool
 
 MAX_IMAGES_PER_LLMCALL = settings.config["max_images_per_llmcall"]
 

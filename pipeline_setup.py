@@ -4,17 +4,29 @@ import psycopg
 from pipeline_config import settings
 from used_models.embeddings.embed_factory import EmbeddingService 
 import chromadb
+from psycopg_pool import ConnectionPool
 
 pgdb_connect_info = settings.pgdb_connect_info
 
-conn = psycopg.connect(
-host=pgdb_connect_info.host,
-port=pgdb_connect_info.port,
-dbname=pgdb_connect_info.db_name,
-user=pgdb_connect_info.user,
-password=pgdb_connect_info.password
+# conn = psycopg.connect(
+# host=pgdb_connect_info.host,
+# port=pgdb_connect_info.port,
+# dbname=pgdb_connect_info.db_name,
+# user=pgdb_connect_info.user,
+# password=pgdb_connect_info.password
+# )
+# cursor = conn.cursor()
+
+pool = ConnectionPool(
+    conninfo=(
+        f"host={pgdb_connect_info.host} "
+        f"port={pgdb_connect_info.port} "
+        f"dbname={pgdb_connect_info.db_name} "
+        f"user={pgdb_connect_info.user} "
+        f"password={pgdb_connect_info.password} "
+        f"options='-c client_encoding=UTF8'"
+    )
 )
-cursor = conn.cursor()
 
 llm = get_llm(provider=settings.config["llm_provider"])
 model = llm.lcModel

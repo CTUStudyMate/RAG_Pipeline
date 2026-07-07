@@ -7,6 +7,10 @@ app = FastAPI()
 def root(): 
     return {"status": "ok"} 
 
+@app.get("/chunks/{chunk_id}/text")
+def get_chunk_text(chunk_id):
+    
+
 @app.post("/chat") 
 def chat(payload: dict): 
     payload_messages = payload.get("messages", [])
@@ -18,4 +22,10 @@ def chat(payload: dict):
     return {
         "content": result["messages"][-1].content,
         "segments": result["messages"][-1].additional_kwargs["segments"]
+    }
+    
+@app.post("/chat-title")    
+def get_chat_title(message: str):
+    return {
+        "title": "Temp title from RAG",
     }
