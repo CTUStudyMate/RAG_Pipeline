@@ -71,92 +71,234 @@ def filter_segments(segments, context_chunks):
 #             ]
 #         }
             
-def validate_segment_citation(segment, docs):
-    # Trả về segment với loại cite của nó (cited/inferred/intro (không cần cite))
-    # Các cite đã được lọc lại và kiểm tra độ support với segment
-        # nếu cite là img thì chỉ kiểm tra xem img_id có hợp lệ không
-        # nếu cite là text thì merge hết các text lại và xem merged text này có support segment hay không
-    citations = segment["citations"]
-    valid_citations = []
+# def validate_segment_citation(segment, docs):
+#     # Trả về segment với loại cite của nó (cited/inferred/intro (không cần cite))
+#     # Các cite đã được lọc lại và kiểm tra độ support với segment
+#         # nếu cite là img thì chỉ kiểm tra xem img_id có hợp lệ không
+#         # nếu cite là text thì merge hết các text lại và xem merged text này có support segment hay không
+#     citations = segment["citations"]
+#     valid_citations = []
     
+#     if not citations:
+#         if (segment["role"]) != "bullet_intro" and (segment["type"] == "abstained"):
+#             return {
+#                 **segment
+#             }
+#         elif (segment["role"]) != "bullet_intro":
+#             return {
+#                 **segment,
+#                 "type": "inferred"
+#             } 
+#         else:
+#             return {
+#                 **segment,
+#                 "type": "intro"
+#             }  
+    
+#     processed_cite_obj = {
+#         "texts": {},
+#         "images": {}
+#     }
+#     # filtered out the citations that are not in source
+#     for citation in citations:
+#         if citation["type"] == "img":
+#             img_cite_result = is_valid_img_citation(citation, docs)
+#             if img_cite_result:
+#                 valid_citations.append({
+#                     **citation,
+#                     "processed_info": [img_cite_result]  # array, just to be similar to text parts
+#                 })
+                
+#         elif citation["type"] == "source_text":
+#             cite_text = citation["content"]  
+#             cite_result = is_cite_text_in_source(cite_text, docs)
+#             if cite_result: # if None, simply it's just not be added to the cite obj
+#                 valid_citations.append({
+#                     **citation,
+#                     "processed_texts": cite_result #[(doc_id, cite_text_part)]
+#                 })
+    
+#     # if the segment has citations at first, but now the citations are empty, 
+#     # that segment is hallucinated and should be obmit
+#     if not valid_citations: # => cái này đổi thành check obj không có giá trị text hay img nào
+#         return None
+    
+#     # check citation support (only for text) bây giờ không hợp tại mấy con nli yếu quá
+    
+#     # for citation in valid_citations:
+#     #     if citation["type"] == "source_text":
+#     #         processed_texts = citation["processed_texts"]
+#     #         premise = " ... ".join(text for _, text in processed_texts)
+#     #         hypo = segment["segment"]
+            
+#     #         print(premise)
+#     #         print(hypo)
+#     #         result = nli({
+#     #             "text": hypo,
+#     #             "text_pair": premise
+#     #         })
+#     #         print(result)
+    
+#     # processed for UI rendering
+#     for citation in valid_citations:
+#         if citation["type"] == "source_text":
+#             processed_texts = citation["processed_texts"]
+#             for chunk_id, text_part in processed_texts:
+#                 processed_cite_obj["texts"].setdefault(chunk_id, []).append(text_part)
+#         elif citation["type"] == "img":
+#             processed_infos = citation["processed_info"]
+#             for chunk_id, img_id in processed_infos:
+#                 processed_cite_obj["images"].setdefault(chunk_id, []).append(img_id)    
+    
+#     segment = {
+#         **segment,
+#         "processed_cite_obj": processed_cite_obj,
+#         "citations": valid_citations,
+#         "type": "cited"
+#     }  
+#     return segment      
+
+def validate_segment_citation(segment, docs):
+    # Trả về segment với loại cite của nó (cited/inferred/intro)
+
+    if not isinstance(segment, dict):
+        return None
+
+    citations = segment.get("citations", [])
+
+    # tránh None
+    if not isinstance(citations, list):
+        citations = []
+
+    valid_citations = []
+
+    segment_role = segment.get("role")
+    segment_type = segment.get("type")
+
     if not citations:
-        if (segment["role"]) != "bullet_intro" and (segment["type"] == "abstained"):
+        if segment_role != "bullet_intro" and segment_type == "abstained":
             return {
                 **segment
             }
-        elif (segment["role"]) != "bullet_intro":
+        elif segment_role != "bullet_intro":
             return {
                 **segment,
                 "type": "inferred"
-            } 
+            }
         else:
             return {
                 **segment,
                 "type": "intro"
-            }  
-    
+            }
+
     processed_cite_obj = {
         "texts": {},
         "images": {}
     }
-    # filtered out the citations that are not in source
+
+    # filtered out invalid citations
     for citation in citations:
-        if citation["type"] == "img":
-            img_cite_result = is_valid_img_citation(citation, docs)
-            if img_cite_result:
-                valid_citations.append({
-                    **citation,
-                    "processed_info": [img_cite_result]  # array, just to be similar to text parts
-                })
-                
-        elif citation["type"] == "source_text":
-            cite_text = citation["content"]  
-            cite_result = is_cite_text_in_source(cite_text, docs)
-            if cite_result: # if None, simply it's just not be added to the cite obj
-                valid_citations.append({
-                    **citation,
-                    "processed_texts": cite_result #[(doc_id, cite_text_part)]
-                })
-    
-    # if the segment has citations at first, but now the citations are empty, 
-    # that segment is hallucinated and should be obmit
-    if not valid_citations: # => cái này đổi thành check obj không có giá trị text hay img nào
+
+        if not isinstance(citation, dict):
+            continue
+
+        cite_type = citation.get("type")
+
+        if cite_type == "img":
+            try:
+                img_cite_result = is_valid_img_citation(citation, docs)
+
+                if img_cite_result:
+                    valid_citations.append({
+                        **citation,
+                        "processed_info": [img_cite_result]
+                    })
+
+            except Exception:
+                continue
+
+
+        elif cite_type == "source_text":
+
+            cite_text = citation.get("content")
+
+            if not cite_text:
+                continue
+
+            try:
+                cite_result = is_cite_text_in_source(cite_text, docs)
+
+                if cite_result:
+                    valid_citations.append({
+                        **citation,
+                        "processed_texts": cite_result
+                    })
+
+            except Exception:
+                continue
+
+
+    if not valid_citations:
         return None
-    
-    # check citation support (only for text) bây giờ không hợp tại mấy con nli yếu quá
-    
-    # for citation in valid_citations:
-    #     if citation["type"] == "source_text":
-    #         processed_texts = citation["processed_texts"]
-    #         premise = " ... ".join(text for _, text in processed_texts)
-    #         hypo = segment["segment"]
-            
-    #         print(premise)
-    #         print(hypo)
-    #         result = nli({
-    #             "text": hypo,
-    #             "text_pair": premise
-    #         })
-    #         print(result)
-    
+
+
     # processed for UI rendering
     for citation in valid_citations:
-        if citation["type"] == "source_text":
-            processed_texts = citation["processed_texts"]
-            for chunk_id, text_part in processed_texts:
-                processed_cite_obj["texts"].setdefault(chunk_id, []).append(text_part)
-        elif citation["type"] == "img":
-            processed_infos = citation["processed_info"]
-            for chunk_id, img_id in processed_infos:
-                processed_cite_obj["images"].setdefault(chunk_id, []).append(img_id)    
-    
-    segment = {
+
+        if citation.get("type") == "source_text":
+
+            processed_texts = citation.get("processed_texts", [])
+
+            if not isinstance(processed_texts, list):
+                continue
+
+            for item in processed_texts:
+                if (
+                    isinstance(item, (list, tuple))
+                    and len(item) == 2
+                ):
+                    chunk_id, text_part = item
+
+                    if chunk_id and text_part:
+                        processed_cite_obj["texts"] \
+                            .setdefault(chunk_id, []) \
+                            .append(text_part)
+
+
+        elif citation.get("type") == "img":
+
+            processed_infos = citation.get("processed_info", [])
+
+            if not isinstance(processed_infos, list):
+                continue
+
+            for item in processed_infos:
+                if (
+                    isinstance(item, (list, tuple))
+                    and len(item) == 2
+                ):
+                    chunk_id, img_id = item
+
+                    if chunk_id and img_id:
+                        processed_cite_obj["images"] \
+                            .setdefault(chunk_id, []) \
+                            .append(img_id)
+
+
+    # citation tồn tại nhưng process ra rỗng
+    if (
+        not processed_cite_obj["texts"]
+        and not processed_cite_obj["images"]
+    ):
+        return None
+
+
+    return {
         **segment,
         "processed_cite_obj": processed_cite_obj,
         "citations": valid_citations,
         "type": "cited"
-    }  
-    return segment      
+    }
 
                 
 def is_valid_img_citation(citation, docs):
