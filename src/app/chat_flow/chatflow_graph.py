@@ -19,13 +19,31 @@ debug = True
 class SegmentState(TypedDict):
     raw: List[dict]
     validated: Optional[List[dict]]
+
+class RetrievedDocMetadataBase(TypedDict):
+    document: str
+    token_count: int
+    chunk_id: str
+    embeded_content: str
+
+class RetrievedDocMetadata(RetrievedDocMetadataBase, total=False):
+    section: str
+    images: list[str]
+
+class RetrievedDoc(TypedDict):
+    doc_id: str
+    text: str
+    metadata: RetrievedDocMetadata
+    score: float
+    rrf_score: float
+    rerank_score: float
     
 class ChatFlowState(TypedDict):
     """State for chatbot with message history."""
     intent: str
     messages: Annotated[Sequence[BaseMessage], add_messages] # ALL
     
-    docs: list
+    docs: list[RetrievedDoc]
     query: str 
     rewritten_query: str | None
     

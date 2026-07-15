@@ -9,7 +9,7 @@ def greedy_add_chunks (ranked_chunks, token_budget=TOKEN_BUDGET):
     selected_chunks = []
     for chunk in ranked_chunks:
         chunk_token = mannual_token_count(chunk["text"])
-        num_images = len(chunk["metadata"].get("image", []))
+        num_images = len(chunk["metadata"].get("images", []))
         chunk_token += num_images * IMAGE_TOKEN_ESTIMATE
         if total_tokens+chunk_token <= token_budget:
             selected_chunks.append(chunk)

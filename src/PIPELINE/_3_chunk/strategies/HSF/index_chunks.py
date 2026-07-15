@@ -117,7 +117,8 @@ def build_index_data(chunks):
         documents.append(store_text)
         
         metadata = {
-        "document": chunk["metadata"]["document"],
+        # "document": chunk["metadata"]["document"], hiện tại vào application thì sẽ thành lưu document id
+        "document": chunk["metadata"]["document"], 
         "section": chunk_section,
         "token_count": chunk["metadata"]["token_count"],
         "chunk_id": chunk["id"],

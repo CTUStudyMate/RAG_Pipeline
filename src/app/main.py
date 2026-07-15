@@ -94,12 +94,25 @@ def chat(payload: dict):
     )
 
     last_ai_message = result["messages"][-1]
+    
+    # get document ids
+    document_ids = []
+    for doc in result.get("docs", []):
+        metadata = doc.get("metadata")
+        if not metadata:
+            continue
+        document_id = metadata.get("document")
+        if not document_id:
+            continue
+        if document_id not in document_ids:
+            document_ids.append(document_id)
 
     return {
         "content": last_ai_message.content,
         "segments": last_ai_message.additional_kwargs.get("segments", []),
         "need_verify": result["intent"] == "need_retrieve",
         "rewritten_question": result.get("rewritten_query"),
+        "document_ids": document_ids
     }
     
     
