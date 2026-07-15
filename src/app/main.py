@@ -1,6 +1,6 @@
 from app.services.rag_data.chunks import ChunkNotFoundException, DatabaseConnectionException, DatabaseException, ImageNotFoundException, get_chunk_texts_from_db, get_image_from_db
 from fastapi import FastAPI, HTTPException 
-from src.app.chat_flow.chatflow_graph import chatflow_graph 
+from src.app.chat_flow.chatflow_graph import ChatFlowState, chatflow_graph 
 from langchain_core.messages import BaseMessage, HumanMessage, AIMessage
 from fastapi.responses import Response
 from typing import List
@@ -75,18 +75,33 @@ def get_image(image_id: str):
         )
             
 
-@app.post("/chat") 
-def chat(payload: dict): 
+@app.post("/chat")
+def chat(payload: dict):
     payload_messages = payload.get("messages", [])
-    messages = [HumanMessage(content=m.get("content", "")) if m.get("sender_type") == "user" else AIMessage(content=m.get("content", "")) for m in payload_messages]
-    result = chatflow_graph.invoke({ 
-        "messages": messages, 
-        "query": payload["query"]
-    }) 
+
+    messages = [
+        HumanMessage(content=m.get("content", ""))
+        if m.get("sender_type") == "user"
+        else AIMessage(content=m.get("content", ""))
+        for m in payload_messages
+    ]
+
+    result: ChatFlowState = chatflow_graph.invoke(
+        {
+            "messages": messages,
+            "query": payload["query"],
+        }
+    )
+
+    last_ai_message = result["messages"][-1]
+
     return {
-        "content": result["messages"][-1].content,
-        "segments": result["messages"][-1].additional_kwargs["segments"]
+        "content": last_ai_message.content,
+        "segments": last_ai_message.additional_kwargs.get("segments", []),
+        "need_verify": result["intent"] == "need_retrieve",
+        "rewritten_question": result.get("rewritten_query"),
     }
+    
     
 @app.post("/chat-title")    
 def get_chat_title(message: str):

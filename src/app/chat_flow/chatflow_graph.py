@@ -33,7 +33,6 @@ class ChatFlowState(TypedDict):
     user_message: HumanMessage
     last_ai_message_segments: SegmentState | None
     
-    # external param
 
 
 def identify_user_intent_node(state: ChatFlowState):

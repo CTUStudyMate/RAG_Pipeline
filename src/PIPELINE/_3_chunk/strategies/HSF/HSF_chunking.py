@@ -17,38 +17,40 @@ PGDB_HSF_CONNECT_INFO = settings.pgdb_connect_info
 VECTOR_DB_HSF_COLLECTION = settings.config["vectordb_connect_info"]["collection"]
 
 def HSF_chunk(file_path, prefix_path, pgdb_connect_info=PGDB_HSF_CONNECT_INFO):
+    print("run hsf")
+    # #1. Tạo cây hierarchy của document và xử lý các atomics parse được
+    # hierarchy_tree2, conn = process_atomics(file_path)
+    # #test-----------
+    # # with open("exp/se/tree.json", "r", encoding="utf-8") as f:
+    # #     hierarchy_tree2 = json.load(f)
+    #     # print(hierarchy_tree)
+    # # #---------------
     
-    #1. Tạo cây hierarchy của document và xử lý các atomics parse được
-    hierarchy_tree2, conn = process_atomics(file_path)
-    #test-----------
-    # with open("exp/se/tree.json", "r", encoding="utf-8") as f:
-    #     hierarchy_tree2 = json.load(f)
-        # print(hierarchy_tree)
-    # #---------------
+    # hierarchy_tree = copy.deepcopy(hierarchy_tree2)       
+    # conn.row_factory = sqlite3.Row
+    # cursor = conn.cursor()
+    # #2. tính token để thực hiện chia chunk thỏa ngưỡng
+    # compute_tree_token(hierarchy_tree, cursor)
     
-    hierarchy_tree = copy.deepcopy(hierarchy_tree2)       
-    conn.row_factory = sqlite3.Row
-    cursor = conn.cursor()
-    #2. tính token để thực hiện chia chunk thỏa ngưỡng
-    compute_tree_token(hierarchy_tree, cursor)
+    # cs = DFSCursor(hierarchy_tree)
+    # # for i in range (0,8):
+    # #     cs.next()
+    # cs = cs.next()    
     
-    cs = DFSCursor(hierarchy_tree)
-    # for i in range (0,8):
-    #     cs.next()
-    cs = cs.next()    
+    # chunks = build_chunks(node=cs, file_path=file_path, cursor=cursor, prefix_path=prefix_path)
     
-    chunks = build_chunks(node=cs, file_path=file_path, cursor=cursor, prefix_path=prefix_path)
-    
-    conn.close()
-    index_chunks(chunks=chunks, collection_name=VECTOR_DB_HSF_COLLECTION, pgdb_connect_info=pgdb_connect_info)
+    # conn.close()
+    # index_chunks(chunks=chunks, collection_name=VECTOR_DB_HSF_COLLECTION, pgdb_connect_info=pgdb_connect_info)
 
 
 
-start = time.perf_counter()
-HSF_chunk(file_path, prefix_path, pgdb_connect_info=PGDB_HSF_CONNECT_INFO)
-end = time.perf_counter()
-elapsed = end - start
+# start = time.perf_counter()
+# HSF_chunk(file_path, prefix_path, pgdb_connect_info=PGDB_HSF_CONNECT_INFO)
+# end = time.perf_counter()
+# elapsed = end - start
 
-with open(HSF_CHUNKING_TIME_LOG_FILE, "w", encoding="utf-8") as f:
-    f.write(f"{file_path} | {elapsed:.2f} seconds\n")
-# print("hahaha")
+# with open(HSF_CHUNKING_TIME_LOG_FILE, "w", encoding="utf-8") as f:
+#     f.write(f"{file_path} | {elapsed:.2f} seconds\n")
+# # print("hahaha")
+
+HSF_chunk()
