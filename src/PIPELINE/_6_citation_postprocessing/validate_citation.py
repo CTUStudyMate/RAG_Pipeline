@@ -319,6 +319,21 @@ def is_valid_img_citation(citation, docs):
 
 
 def is_cite_text_in_source(cite_text: str, docs: list[NormalizedChunk]):
+    def normalize_text_with_spans(text):
+        matches = list(re.finditer(r'\w+', text.lower()))
+        normalized_parts = []
+        spans = []
+
+        for idx, match in enumerate(matches):
+            if idx > 0:
+                normalized_parts.append(" ")
+                spans.append((matches[idx - 1].end(), match.start()))
+
+            normalized_parts.append(match.group())
+            spans.extend((match.start(), match.end()) for _ in match.group())
+
+        return "".join(normalized_parts), spans
+
     # Split cite text by quoted parts ("...") to handle cases where
     # the LLM truncates or cuts citation text in the middle of quoted segments.
     # text_parts = [p.strip() for p in re.split(r'"(.*?)"', cite_text) if p.strip()]
@@ -333,9 +348,12 @@ def is_cite_text_in_source(cite_text: str, docs: list[NormalizedChunk]):
     
     processed_docs = []
     for doc in docs:
+        normalized_doc_text, normalized_spans = normalize_text_with_spans(doc["text"])
         processed_docs.append({
             "doc_id": doc["doc_id"],
-            "text": normalize_text(doc["text"])
+            "text": normalized_doc_text,
+            "original_text": doc["text"],
+            "spans": normalized_spans
         })
 
     # Loop through each split text part.
@@ -351,7 +369,12 @@ def is_cite_text_in_source(cite_text: str, docs: list[NormalizedChunk]):
             # Exact full match is unlikely due to LLM truncation,
             # so we use substring match instead.
             if text_part in doc["text"]:
-                parts_and_chunks.append((doc["doc_id"], text_part))    
+                start = doc["text"].find(text_part)
+                end = start + len(text_part)
+                original_start = doc["spans"][start][0]
+                original_end = doc["spans"][end - 1][1]
+                original_text_part = doc["original_text"][original_start:original_end].strip()
+                parts_and_chunks.append((doc["doc_id"], original_text_part))    
                 invalid_text = False
                 break  # exit exact match loop
 
