@@ -5,7 +5,7 @@ from pipeline_config import settings
 VECTORDB_CONNECT_INFO = settings.config["vectordb_connect_info"]
 
 def normal_retrieve(query, dbinfo=VECTORDB_CONNECT_INFO):
-    docs = vector_search(query, dbinfo)
+    docs = vector_search(query)
     normalized_docs = normalize_vector_results(docs)
     final_docs = greedy_add_chunks(normalized_docs)
     return final_docs

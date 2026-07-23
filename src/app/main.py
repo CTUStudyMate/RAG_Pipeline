@@ -1,3 +1,4 @@
+from app.services.qa_and_excercises.curated_qa import CuratedQaBatch, VerifiableQaGenerateRequest, generate_curated_qas
 from app.services.rag_data.chunks import ChunkNotFoundException, DatabaseConnectionException, DatabaseException, ImageNotFoundException, get_chunk_texts_from_db, get_image_from_db
 from fastapi import FastAPI, HTTPException 
 from src.app.chat_flow.chatflow_graph import ChatFlowState, chatflow_graph 
@@ -121,3 +122,8 @@ def get_chat_title(message: str):
     return {
         "title": "Temp title from RAG",
     }
+    
+@app.post("/generate-curated-qas")
+async def get_generated_curated_qas(payload: VerifiableQaGenerateRequest):
+    curated_qas: CuratedQaBatch = await generate_curated_qas(payload)
+    return curated_qas
