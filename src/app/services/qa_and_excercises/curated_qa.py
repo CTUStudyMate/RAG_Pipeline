@@ -139,4 +139,4 @@ Answer: {cleaned_answer}
     if result is None:
         raise ValueError("The LLM returned no structured output.")
 
-    return result.curated_qas
+    return result

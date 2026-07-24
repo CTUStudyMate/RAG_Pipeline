@@ -39,14 +39,23 @@ def generate_smart_toc(doc):
     
     return toc if toc else generate_smart_toc(doc)
     
-def dfs (toc):
-    if not toc:
-        return
-    root = {
+def create_root_node():
+    """Create the hierarchy root used when a document has no usable TOC."""
+    return {
         "level": 0,
         "title": "ROOT",
         "children": []
     }
+
+
+def dfs(toc):
+    # Always return a valid tree.  The atomic parser appends document content to
+    # the currently open node, so a root-only tree lets documents without a TOC
+    # continue through the normal parsing/chunking flow.
+    root = create_root_node()
+    if not toc:
+        return root
+
     stack = [root]
     for level, title, page in toc:
         node = make_node(level, title, page)
@@ -58,7 +67,12 @@ def dfs (toc):
     return root
 
 def build_hierarchy(file_path: str):
-    doc = fitz.open(file_path)
-    toc = doc.get_toc()
-    built_dfs = dfs(toc)
-    return built_dfs
+    with fitz.open(file_path) as doc:
+        try:
+            toc = doc.get_toc()
+        except Exception:
+            # Some PDFs do not expose a readable outline/TOC.  In that case,
+            # return a root-only hierarchy instead of aborting document upload.
+            toc = []
+
+    return dfs(toc)

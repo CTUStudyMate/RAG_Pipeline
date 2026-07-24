@@ -1,14 +1,35 @@
 from app.services.qa_and_excercises.curated_qa import CuratedQaBatch, VerifiableQaGenerateRequest, generate_curated_qas
+from app.services.qa_and_excercises.excercise import CuratedQaToRagEngine, GenerateExercisesResponse, generate_exercises
+from app.services.chat_title import (
+    ChatTitleGenerationError,
+    ChatTitleServiceUnavailableError,
+    generate_chat_title,
+)
 from app.services.rag_data.chunks import ChunkNotFoundException, DatabaseConnectionException, DatabaseException, ImageNotFoundException, get_chunk_texts_from_db, get_image_from_db
-from fastapi import FastAPI, HTTPException 
+from fastapi import Body, FastAPI, HTTPException
+from pydantic import BaseModel, ValidationError, field_validator
 from src.app.chat_flow.chatflow_graph import ChatFlowState, chatflow_graph 
 from langchain_core.messages import BaseMessage, HumanMessage, AIMessage
 from fastapi.responses import Response
-from typing import List
+from typing import Any, List
 from fastapi import Query
 import base64
 
+
 app = FastAPI() 
+
+
+class GenerateChatTitleRequest(BaseModel):
+    content: str
+
+    @field_validator("content")
+    @classmethod
+    def content_must_not_be_empty(cls, value: str) -> str:
+        if not value.strip():
+            raise ValueError("content must be a non-empty user message")
+        return value
+
+
 @app.get("/") 
 def root(): 
     return {"status": "ok"} 
@@ -117,13 +138,44 @@ def chat(payload: dict):
     }
     
     
-@app.post("/chat-title")    
-def get_chat_title(message: str):
-    return {
-        "title": "Temp title from RAG",
-    }
+@app.post("/generate-chat-title", response_model=str)
+async def get_chat_title(payload: Any = Body(...)) -> str:
+    try:
+        request = GenerateChatTitleRequest.model_validate(payload)
+    except ValidationError as exc:
+        raise HTTPException(
+            status_code=400,
+            detail={
+                "code": "chat_title:invalid_content",
+                "cause": "content must be a non-empty user message.",
+            },
+        ) from exc
+
+    try:
+        return await generate_chat_title(request.content)
+    except ChatTitleServiceUnavailableError as exc:
+        raise HTTPException(
+            status_code=503,
+            detail={
+                "code": "chat_title:service_unavailable",
+                "cause": str(exc),
+            },
+        ) from exc
+    except ChatTitleGenerationError as exc:
+        raise HTTPException(
+            status_code=500,
+            detail={
+                "code": "chat_title:generation_failed",
+                "cause": str(exc),
+            },
+        ) from exc
     
 @app.post("/generate-curated-qas")
 async def get_generated_curated_qas(payload: VerifiableQaGenerateRequest):
     curated_qas: CuratedQaBatch = await generate_curated_qas(payload)
     return curated_qas
+
+@app.post("/generate-exercises")
+async def get_generated_excercises(payload:  CuratedQaToRagEngine):
+    exercises: GenerateExercisesResponse = await generate_exercises(payload)
+    return exercises
