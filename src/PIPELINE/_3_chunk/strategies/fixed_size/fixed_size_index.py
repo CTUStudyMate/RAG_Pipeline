@@ -35,7 +35,7 @@ def build_fixed_size_index_data(texts, filename):
         token = mannual_token_count(chunk_text)
 
         metadata = {
-            "document": filename,
+            "document": "1",
             "token_count": token,
             "chunk_id": chunk_id,
             "embeded_content": chunk_text #fixed size thì không có mô tả ảnh nên nội dung embed chính là phần source text luôn
@@ -57,9 +57,6 @@ def build_fixed_size_index_data(texts, filename):
 
     embeddings = embed_content(documents, embedder)
 
-    with open("fixed_size_chunks.json", "w", encoding="utf-8") as f:
-        json.dump(records, f, ensure_ascii=False, indent=2)
-
     return ids, embeddings, documents, metadatas
 
 
@@ -70,14 +67,6 @@ _default_collection = _default_client.get_or_create_collection(
     name=_default_collection_name,
     metadata={"hnsw:space": "cosine"}
 )
-
-_default_pgdb_conn = psycopg.connect(
-            host=PGDB_FIXED_SIZE_CONNECT_INFO.host,
-            port=PGDB_FIXED_SIZE_CONNECT_INFO.port,
-            dbname=PGDB_FIXED_SIZE_CONNECT_INFO.db_name,
-            user=PGDB_FIXED_SIZE_CONNECT_INFO.user,
-            password=PGDB_FIXED_SIZE_CONNECT_INFO.password
-        )
 
 def fixed_size_index_chunks(file_path, chunks, pgdb_connect_info=None, vectordb_connect_info=None):
     
@@ -102,8 +91,6 @@ def fixed_size_index_chunks(file_path, chunks, pgdb_connect_info=None, vectordb_
     if pgdb_connect_info is None:
         pgdb_connect_info = PGDB_FIXED_SIZE_CONNECT_INFO 
     
-    index_to_pgdb(pgdb_connect_info=pgdb_connect_info, chunk_ids=ids, chunk_text_contents=documents, chunk_metadatas=metadatas, chunk_text_search_contents=documents, cur=cur)
-    
     with pool.connection() as conn:
         with conn.cursor() as cur:
             index_to_pgdb(
@@ -127,5 +114,5 @@ def fixed_size_index_chunks(file_path, chunks, pgdb_connect_info=None, vectordb_
             "embeded_content": embed, # trong chroma db thì trường này nhét vào metadata luôn
             "metadata": meta
         })
-    # with open(settings.config["final_chunks_test_filepath"], "w", encoding="utf-8") as f:
-    #     json.dump(data, f, ensure_ascii=False, indent=2)    
+    with open(settings.config["final_chunks_test_filepath"], "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)    

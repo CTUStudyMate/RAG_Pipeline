@@ -1,11 +1,11 @@
-CREATE TABLE hsf_600_seperate_img_160526_imgs (
+CREATE TABLE hsf_3007_imgs_mini_effort (
   id BIGSERIAL PRIMARY KEY,
   img_id TEXT UNIQUE,
   base64 TEXT NOT NULL,
   description TEXT
 );
 
-CREATE TABLE hsf_600_seperate_img_160526_chunks(
+CREATE TABLE hsf_3007_chunks_mini_effort(
   id BIGSERIAL PRIMARY KEY,
   document_id TEXT UNIQUE,
   search_content TEXT,
@@ -13,4 +13,4 @@ CREATE TABLE hsf_600_seperate_img_160526_chunks(
   metadata JSONB
 );
 
-create index bm25_on_hsf_600_seperate_img_160526_chunks on hsf_600_seperate_img_160526_chunks using bm25(id, search_content) with (key_field='id');
+create index bm25_on_hsf_3007_chunks_mini_effort on hsf_3007_chunks_mini_effort using bm25(id, search_content) with (key_field='id');

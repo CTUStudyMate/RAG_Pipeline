@@ -9,7 +9,9 @@ import json
 def embed_content(texts, embedder):
     return embedder.embed(texts)
 
-def get_img_descriptions(current_chunk_imgs):
+def get_img_descriptions(current_chunk_imgs, max_retries=2):
+    # sinh mô tả ảnh dùng reasoning minimal, còn repair json thì dùng default set trong openai llm
+    print("getting img description for chunk...")
     system_prompt = """
 You are generating image descriptions for a retrieval system.
 
@@ -37,7 +39,15 @@ Avoid conversational language, speculation, or unnecessary details.
 
 Make descriptions dense with searchable information.
 """
+    expected_ids = [img["img_id"] for img in current_chunk_imgs]
 
+    # Fallback an toàn cho downstream processing
+    fallback = [
+        {"img_id": img_id, "description": ""}
+        for img_id in expected_ids
+    ]
+    
+    
     input_contents = []
     for img in current_chunk_imgs:
         input_contents.append({
@@ -49,11 +59,94 @@ Make descriptions dense with searchable information.
             "image_url": img["base64"]
         })
         
-    response = llm.generate(system_prompt=system_prompt, content=input_contents)
-    
-    response = json.loads(response) # khúc này có thể cần catch lỗi và retry trong trường hợp invalid json
-    
-    return response    
+    try:
+        response = llm.generate(
+            system_prompt=system_prompt,
+            content=input_contents,
+            reasoning_effort="minimal"
+        )
+    except Exception as exc:
+        print(f"Image-description API error; using empty descriptions: {exc}")
+        return fallback
+
+    json_repair_prompt = """
+You are a JSON repair tool.
+
+Return ONLY valid JSON. Do not add markdown fences or explanations.
+Preserve the original img_id and description values as much as possible.
+
+The required output is a JSON array of objects:
+[
+  {
+    "img_id": "an existing image id",
+    "description": "the existing image description"
+  }
+]
+"""
+
+    for repair_attempt in range(max_retries + 1):
+        try:
+            parsed = json.loads(response)
+
+            if not isinstance(parsed, list):
+                raise ValueError("Response is not a JSON array.")
+
+            descriptions = {}
+            for item in parsed:
+                if not isinstance(item, dict):
+                    continue
+
+                img_id = item.get("img_id")
+                description = item.get("description")
+
+                if img_id in expected_ids and isinstance(description, str):
+                    descriptions[img_id] = description
+
+            missing_ids = set(expected_ids) - set(descriptions)
+            if missing_ids:
+                raise ValueError(f"Missing descriptions for: {missing_ids}")
+
+            return [
+                {
+                    "img_id": img_id,
+                    "description": descriptions[img_id]
+                }
+                for img_id in expected_ids
+            ]
+
+        except (json.JSONDecodeError, ValueError, TypeError) as exc:
+            if repair_attempt == max_retries:
+                print(f"Could not repair image-description JSON: {exc}")
+                break
+
+            print(
+                f"Invalid image-description JSON; "
+                f"repairing ({repair_attempt + 1}/{max_retries})..."
+            )
+
+            try:
+                response = llm.generate(
+                    system_prompt=json_repair_prompt,
+                    content=[{
+                        "type": "input_text",
+                        "text": f"""
+Expected image IDs: {expected_ids}
+
+Invalid JSON to repair:
+{response}
+"""
+                    }],
+                    
+                )
+            except Exception as repair_exc:
+                print(
+                    "Image-description JSON repair API error; "
+                    f"using empty descriptions: {repair_exc}"
+                )
+                return fallback
+
+    print("Using empty image descriptions after JSON repair failed.")
+    return fallback
         
         
 
@@ -102,6 +195,7 @@ def build_index_data(chunks):
     db_images = []
     
     for i, chunk in enumerate(chunks):
+        print("Processing chunk ", chunk["id"])
         chunk_text = chunk["content"]["text"]
         chunk_section = chunk["metadata"]["section"]
             
@@ -118,7 +212,7 @@ def build_index_data(chunks):
         
         metadata = {
         # "document": chunk["metadata"]["document"], hiện tại vào application thì sẽ thành lưu document id
-        "document": chunk["metadata"]["document"], 
+        "document": chunk["metadata"]["document_path"],
         "section": chunk_section,
         "token_count": chunk["metadata"]["token_count"],
         "chunk_id": chunk["id"],
@@ -142,7 +236,7 @@ def build_index_data(chunks):
                     "img_id": img_id,
                     "base64": img
                 })
-            
+
             img_descriptions = get_img_descriptions(current_chunk_imgs) 
             desc_map = {d["img_id"]: d["description"] for d in img_descriptions} 
             for j,img in enumerate(current_chunk_imgs):
@@ -190,14 +284,14 @@ def index_chunks(collection_name, chunks, pgdb_connect_info):
             conn.commit()
     
     # debug
-    # data = []
+    data = []
 
-    # for _id, doc, embed, meta in zip(ids, documents, embeded_texts, metadatas):
-    #     data.append({
-    #         "id": _id,
-    #         "document": doc,
-    #         "embeded_content": embed, # trong chroma db thì trường này nhét vào metadata luôn
-    #         "metadata": meta
-    #     })
-    # with open(settings.config["final_chunks_test_filepath"], "w", encoding="utf-8") as f:
-    #     json.dump(data, f, ensure_ascii=False, indent=2)
+    for _id, doc, embed, meta in zip(ids, documents, embeded_texts, metadatas):
+        data.append({
+            "id": _id,
+            "document": doc,
+            "embeded_content": embed, # trong chroma db thì trường này nhét vào metadata luôn
+            "metadata": meta
+        })
+    with open(settings.config["final_chunks_test_filepath"], "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)

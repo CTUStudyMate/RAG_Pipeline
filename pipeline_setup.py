@@ -42,5 +42,6 @@ _default_collection_name = VECTORDB_CONNECT_INFO["collection"]
 
 _default_client = chromadb.PersistentClient(path=_default_db_path)
 _default_collection = _default_client.get_or_create_collection(
-    name=_default_collection_name
+    name=_default_collection_name,
+    metadata={"hnsw:space": "cosine"},
 )

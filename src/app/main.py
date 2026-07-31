@@ -6,6 +6,7 @@ from app.services.chat_title import (
     generate_chat_title,
 )
 from app.services.rag_data.chunks import ChunkNotFoundException, DatabaseConnectionException, DatabaseException, ImageNotFoundException, get_chunk_texts_from_db, get_image_from_db
+from app.routes.documents import router as document_router
 from fastapi import Body, FastAPI, HTTPException
 from pydantic import BaseModel, ValidationError, field_validator
 from src.app.chat_flow.chatflow_graph import ChatFlowState, chatflow_graph 
@@ -17,6 +18,7 @@ import base64
 
 
 app = FastAPI() 
+app.include_router(document_router)
 
 
 class GenerateChatTitleRequest(BaseModel):

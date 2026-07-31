@@ -241,8 +241,9 @@ chatflow_graph = graph.compile()
     
 # TEST ********************************************
 
-# result = chatflow_graph.invoke({
-#     "query": "What is software engineering and how does it fit into computer science?",
-# })
+result = chatflow_graph.invoke({
+    "query": "What is software engineering and how does it fit into computer science?",
+})
+print(result["docs"])
 
       

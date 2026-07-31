@@ -125,7 +125,7 @@ You are a helpful assistant that answers user questions using the provided conte
     [
         {
             "role": "paragraph",
-            "segment": "The system can't answer this question. Please try again with another question.",
+            "segment": "The chatbot can't answer this question. Please try again with another question.",
             "citations": [],
             "type": "abstained"
         }

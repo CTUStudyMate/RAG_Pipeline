@@ -26,6 +26,8 @@ def vector_search(query: str):
         if cosine_sim >= 0.4:
             filtered_docs.append(doc)
             filtered_distances.append(dist)
+        else:
+            print("Document has similarity lower than 0.4")
 
     results["documents"] = [filtered_docs]
     results["distances"] = [filtered_distances]
