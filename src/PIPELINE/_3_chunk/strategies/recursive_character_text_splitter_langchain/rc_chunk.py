@@ -85,10 +85,11 @@ def lc_recursive_charsplit_chunk(folder):
     index_lc_recur_chunks(all_chunks)
     end = time.perf_counter()
     elapsed = end - start 
-    with open(CHUNKING_TIME_LC_BASED_LOG_FILE, "w", encoding="utf-8") as f:
+    with open(CHUNKING_TIME_LC_BASED_LOG_FILE, "a", encoding="utf-8") as f:
         f.write(f"{file_path} | {elapsed:.2f} seconds\n") 
-    with open(settings.config["final_chunks_test_filepath"], "w", encoding="utf-8") as f:
+    with open(settings.config["final_chunks_test_filepath"], "a", encoding="utf-8") as f:
         json.dump(all_chunks, f, indent=2, default=str, ensure_ascii=False)
+        f.write("\n")
     return all_chunks   
     
 doc_name = normalize_filename(file_path)   

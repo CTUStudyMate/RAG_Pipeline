@@ -113,8 +113,9 @@ def process_atomics (file_path: str):
     
     hierarchy_tree = build_hierarchy(file_path)
     # print(hierarchy_tree)
-    # with open(TREE_FILEPATH, "w", encoding="utf-8") as f:
-    #     json.dump(hierarchy_tree, f, ensure_ascii=False, indent=4)
+    with open(TREE_FILEPATH, "a", encoding="utf-8") as f:
+        json.dump(hierarchy_tree, f, ensure_ascii=False, indent=4)
+        f.write("\n")
     
     passed_cursor = DFSCursor(hierarchy_tree)
     open_node = passed_cursor.next() # point to ROOT

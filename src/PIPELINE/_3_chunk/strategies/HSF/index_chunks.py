@@ -293,5 +293,6 @@ def index_chunks(collection_name, chunks, pgdb_connect_info):
             "embeded_content": embed, # trong chroma db thì trường này nhét vào metadata luôn
             "metadata": meta
         })
-    with open(settings.config["final_chunks_test_filepath"], "w", encoding="utf-8") as f:
+    with open(settings.config["final_chunks_test_filepath"], "a", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
+        f.write("\n")

@@ -149,7 +149,8 @@ def rrf_merge(
 
     return results  
 
-        
+
+  
 def hybrid_retrieve(query: str):
     vector_based_results = vector_search(query=query)
     text_based_results = text_search(query=query)
@@ -157,7 +158,7 @@ def hybrid_retrieve(query: str):
     vector_docs = normalize_vector_results(vector_based_results)
     bm25_docs = normalize_text_results(text_based_results)
     
-    hybrid_docs = rrf_merge(vector_docs, bm25_docs)
+    hybrid_docs = rrf_merge(vector_docs=vector_docs, bm25_docs=bm25_docs, bm25_weight=bm25_weight, vector_weight=vector_weight)
     return hybrid_docs
 
         

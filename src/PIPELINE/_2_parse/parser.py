@@ -1,7 +1,10 @@
 import os
 os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
 
-from docling.datamodel.base_models import InputFormat
+import logging
+import shutil
+from pipeline_config import settings
+from docling.datamodel.base_models import ConversionStatus, InputFormat
 from docling.datamodel.pipeline_options import PdfPipelineOptions
 from docling.document_converter import DocumentConverter, PdfFormatOption
 from typing import Optional, Tuple
@@ -12,6 +15,9 @@ import fitz
 from src.PIPELINE._2_parse.parse_utils import get_batches
 
 from src.common_utils.filename_handle import normalize_filename
+
+
+logger = logging.getLogger(__name__)
 
 def partition_document_with_docling(
     file_path: str,
@@ -47,6 +53,14 @@ def partition_document_with_docling(
     else:
         print("Using full document.")
         result = converter.convert(file_path)
+
+    if result.status is not ConversionStatus.SUCCESS:
+        errors = "; ".join(
+            error.error_message for error in result.errors
+        ) or "no error details returned"
+        raise RuntimeError(
+            f"Docling conversion returned {result.status.value}: {errors}"
+        )
     
     # with open("batch_debug.json", "w", encoding="utf-8") as f:
     #     json.dump(result.document.model_dump(), f, ensure_ascii=False, indent=4, default=str)
@@ -76,10 +90,42 @@ def parse_pdf_document(batches: List[List[int]], file_path, storage_dir: str):
 
         
 def run_parser(file_path):
-    doc = fitz.open(file_path)
-    total_page = doc.page_count
-    batches = get_batches(total_page)
-    parse_pdf_document(batches, file_path, "./data/parsed_cache")        
+    with fitz.open(file_path) as doc:
+        total_page = doc.page_count
+
+    if total_page <= 0:
+        raise ValueError("The PDF does not contain any pages.")
+
+    storage_dir = Path("./data/parsed_cache")
+    doc_cache_dir = storage_dir / normalize_filename(file_path)
+    initial_batch_size = min(
+        total_page,
+        settings.config["max_pages_per_batch"],
+    )
+
+    for batch_size in range(initial_batch_size, 0, -1):
+        batches = get_batches(total_page, batch_size)
+        shutil.rmtree(doc_cache_dir, ignore_errors=True)
+
+        try:
+            logger.info(
+                "Parsing %s with a maximum of %s page(s) per batch.",
+                file_path,
+                batch_size,
+            )
+            parse_pdf_document(batches, file_path, storage_dir)
+            return
+        except Exception:
+            shutil.rmtree(doc_cache_dir, ignore_errors=True)
+            if batch_size == 1:
+                raise
+
+            logger.exception(
+                "Parsing %s failed with %s page(s) per batch; retrying with %s.",
+                file_path,
+                batch_size,
+                batch_size - 1,
+            )
         
         
         

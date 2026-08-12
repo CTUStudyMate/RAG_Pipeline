@@ -1,0 +1,6 @@
+2026-08-06 21:11:37,567 | ERROR | filter_segments failed: 'str' object has no attribute 'get' | segments_type=list | segments_preview=[')']
+Traceback (most recent call last):
+  File "C:\Users\myngo\Downloads\_main\4\Thesis\Work\RAG_Pipeline\src\PIPELINE\_6_citation_postprocessing\validate_citation.py", line 56, in filter_segments
+    if len(segments) == 1 and segments[0].get("type") == "abstained":
+                              ^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'

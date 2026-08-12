@@ -12,7 +12,29 @@ class RewriteQueryState(TypedDict):
     query: str | None
 
 
-def sanitize_query(query: str) -> str:
+def _content_to_text(content: object) -> str:
+    """Extract text from either plain-string or structured LLM message content."""
+    if isinstance(content, str):
+        return content
+
+    if isinstance(content, list):
+        return " ".join(
+            text for item in content if (text := _content_to_text(item))
+        )
+
+    if isinstance(content, dict):
+        if "text" in content:
+            return _content_to_text(content["text"])
+        if "content" in content:
+            return _content_to_text(content["content"])
+        return ""
+
+    return "" if content is None else str(content)
+
+
+def sanitize_query(query: object) -> str:
+    query = _content_to_text(query)
+
     # remove quotes
     query = query.replace('"', ' ').replace("'", " ")
 

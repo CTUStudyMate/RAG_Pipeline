@@ -1,0 +1,3 @@
+chunk_config: "EXPERIMENTS/chunk_versions/hsf_chunksize400/config.yaml"
+vector_weight: 0.75
+bm25_weight: 0.25

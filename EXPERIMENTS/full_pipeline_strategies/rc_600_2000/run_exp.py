@@ -33,7 +33,7 @@ def run_and_log(chunk_retrieve_strategy, inputfile="./experiment_data/ts.csv", o
             
             match chunk_retrieve_strategy:
 
-                case "hsf_normal": # hsf chunking, vector retrieve
+                case "normal": # hsf chunking, vector retrieve
                     retrieve_start = time.perf_counter()
                     docs = normal_retrieve(q)  
                     retrieve_end = time.perf_counter()
@@ -56,9 +56,9 @@ def run_and_log(chunk_retrieve_strategy, inputfile="./experiment_data/ts.csv", o
             print(f"Done: {q[:200]} ({retrieve_elapsed+generate_elapsed:.2f}s)")
         
 
-strategies = ["hsf_normal"]
+strategies = ["normal"]
 exp_dir = "./EXPERIMENTS/full_pipeline_strategies/rc_600_2000/"
-input_questions= "./studyguide_based_dataset.json"
+input_questions= "./notebooklm_generated_dataset.json"
 
 for strategy in strategies:
-    run_and_log(inputfile=input_questions, output_file=f"{exp_dir}{strategy}_studyguide.csv", chunk_retrieve_strategy=strategy)        
+    run_and_log(inputfile=input_questions, output_file=f"{exp_dir}{strategy}_notebooklm.csv", chunk_retrieve_strategy=strategy)        

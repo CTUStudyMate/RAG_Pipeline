@@ -1,0 +1,4317 @@
+{
+    "level": 0,
+    "title": "ROOT",
+    "children": [
+        {
+            "level": 1,
+            "title": "cover",
+            "page": 1,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "contents",
+            "page": 8,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "preface",
+            "page": 14,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "abouttheauthors",
+            "page": 24,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "whysoftwareengineering?",
+            "page": 28,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "whatissoftwareengineering?",
+                    "page": 29,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "howsuccessfulhavewebeen?",
+                    "page": 32,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatisgoodsoftware?",
+                    "page": 36,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whodoessoftwareengineering?",
+                    "page": 41,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "asystemsapproach",
+                    "page": 43,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "anengineeringapproach",
+                    "page": 48,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "membersofthedevelopmentteam",
+                    "page": 52,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "howhassoftwareengineeringchanged?",
+                    "page": 54,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "informationsystemsexample",
+                    "page": 62,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "real-timeexample",
+                    "page": 64,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatthischaptermeansforyou",
+                    "page": 66,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatthischaptermeansforyourdevelopmentteam",
+                    "page": 67,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatthischaptermeansforresearchers",
+                    "page": 67,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "termproject",
+                    "page": 67,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "keyreferences",
+                    "page": 69,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "exercises",
+                    "page": 70,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "level": 1,
+            "title": "modelingtheprocessandlifecycle",
+            "page": 72,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "themeaningofprocess",
+                    "page": 72,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "softwareprocessmodels",
+                    "page": 75,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "toolsandtechniquesforprocessmodeling",
+                    "page": 90,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "practicalprocessmodeling",
+                    "page": 97,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "informationsystemsexample",
+                    "page": 100,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "real-timeexample",
+                    "page": 102,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatthischaptermeansforyou",
+                    "page": 103,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatthischaptermeansforyourdevelopmentteam",
+                    "page": 103,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatthischaptermeansforresearchers",
+                    "page": 104,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "termproject",
+                    "page": 104,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "keyreferences",
+                    "page": 104,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "exercises",
+                    "page": 108,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "level": 1,
+            "title": "planningandmanagingtheproject",
+            "page": 109,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "trackingprogress",
+                    "page": 109,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "projectpersonnel",
+                    "page": 122,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "effortestimation",
+                    "page": 131,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "riskmanagement",
+                    "page": 146,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "theprojectplan",
+                    "page": 150,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "processmodelsandprojectmanagement",
+                    "page": 152,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "informationsystemsexample",
+                    "page": 160,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "real-timeexample",
+                    "page": 162,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatthischaptermeansforyou",
+                    "page": 163,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatthischaptermeansforyourdevelopmentteam",
+                    "page": 163,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatthischaptermeansforresearchers",
+                    "page": 164,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "termproject",
+                    "page": 164,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "keyreferences",
+                    "page": 164,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "exercises",
+                    "page": 165,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "level": 1,
+            "title": "capturingtherequirements",
+            "page": 168,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "therequirementsprocess",
+                    "page": 169,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "requirementselicitation",
+                    "page": 171,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "typesofrequirements",
+                    "page": 175,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "characteristicsofrequirements",
+                    "page": 182,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "modelingnotations",
+                    "page": 183,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "requirementsandspecificationlanguages",
+                    "page": 214,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "prototypingrequirements",
+                    "page": 218,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "requirementsdocumentation",
+                    "page": 220,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "validationandverification",
+                    "page": 225,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "measuringrequirements",
+                    "page": 231,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "choosingaspecificationtechnique",
+                    "page": 233,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "informationsystemsexample",
+                    "page": 236,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "real-timeexample",
+                    "page": 238,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "termproject",
+                    "page": 242,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "keyreferences",
+                    "page": 245,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "exercises",
+                    "page": 246,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "level": 1,
+            "title": "designingthearchitecture",
+            "page": 250,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "thedesignprocess",
+                    "page": 250,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "modelingarchitectures",
+                    "page": 258,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "decompositionandviews",
+                    "page": 258,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "architecturalstylesandstrategies",
+                    "page": 262,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "achievingqualityattributes",
+                    "page": 272,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "collaborativedesign",
+                    "page": 283,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "architectureevaluationandrefinement",
+                    "page": 285,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "documentingsoftwarearchitectures",
+                    "page": 300,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "architecturedesignreview",
+                    "page": 303,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "softwareproductlines",
+                    "page": 306,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "informationsystemsexample",
+                    "page": 311,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "real-timeexample",
+                    "page": 313,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatthischaptermeansforyou",
+                    "page": 314,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatthischaptermeansforyourdevelopmentteam",
+                    "page": 315,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatthischaptermeansforresearchers",
+                    "page": 315,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "termproject",
+                    "page": 316,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "keyreferences",
+                    "page": 317,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "exercises",
+                    "page": 317,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "level": 1,
+            "title": "designingthemodules",
+            "page": 320,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "designmethodology",
+                    "page": 321,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "designprinciples",
+                    "page": 322,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "oodesign",
+                    "page": 337,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "representingoodesignsintheuml",
+                    "page": 348,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "oodesignpatterns",
+                    "page": 365,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "otherdesignconsiderations",
+                    "page": 375,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "oomeasurement",
+                    "page": 380,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "designdocumentation",
+                    "page": 390,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "informationsystemsexample",
+                    "page": 393,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "real-timeexample",
+                    "page": 394,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatthischaptermeansforyou",
+                    "page": 394,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatthischaptermeansforyourdevelopmentteam",
+                    "page": 396,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatthischaptermeansforresearchers",
+                    "page": 396,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "termproject",
+                    "page": 396,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "keyreferences",
+                    "page": 397,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "exercises",
+                    "page": 397,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "level": 1,
+            "title": "writingtheprograms",
+            "page": 400,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "programmingstandardsandprocedures",
+                    "page": 400,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "programmingguidelines",
+                    "page": 403,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "documentation",
+                    "page": 414,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "theprogrammingprocess",
+                    "page": 418,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "informationsystemsexample",
+                    "page": 422,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "real-timeexample",
+                    "page": 423,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatthischaptermeansforyou",
+                    "page": 424,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatthischaptermeansforyourdevelopmentteam",
+                    "page": 425,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatthischaptermeansforresearchers",
+                    "page": 425,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "termproject",
+                    "page": 425,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "keyreferences",
+                    "page": 426,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "exercises",
+                    "page": 426,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "level": 1,
+            "title": "testingtheprograms",
+            "page": 428,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "softwarefaultsandfailures",
+                    "page": 428,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "testingissues",
+                    "page": 434,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "unittesting",
+                    "page": 439,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "integrationtesting",
+                    "page": 453,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "testingobject-orientedsystems",
+                    "page": 460,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "testplanning",
+                    "page": 463,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "automatedtestingtools",
+                    "page": 465,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whentostoptesting",
+                    "page": 468,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "informationsystemsexample",
+                    "page": 473,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "real-timeexample",
+                    "page": 474,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatthischaptermeansforyou",
+                    "page": 475,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatthischaptermeansforyourdevelopmentteam",
+                    "page": 475,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatthischaptermeansforresearchers",
+                    "page": 476,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "termproject",
+                    "page": 476,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "keyreferences",
+                    "page": 476,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "exercises",
+                    "page": 477,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "level": 1,
+            "title": "testingthesystem",
+            "page": 480,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "principlesofsystemtesting",
+                    "page": 480,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "functiontesting",
+                    "page": 493,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "performancetesting",
+                    "page": 499,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "reliabilityavailabilityandmaintainability",
+                    "page": 501,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "acceptancetesting",
+                    "page": 510,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "installationtesting",
+                    "page": 513,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "automatedsystemtesting",
+                    "page": 513,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "testdocumentation",
+                    "page": 514,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "testingsafety-criticalsystems",
+                    "page": 525,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "informationsystemsexample",
+                    "page": 536,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "real-timeexample",
+                    "page": 538,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatthischaptermeansforyou",
+                    "page": 540,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatthischaptermeansforyourdevelopmentteam",
+                    "page": 540,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatthischaptermeansforresearchers",
+                    "page": 540,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "termproject",
+                    "page": 541,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "keyreferences",
+                    "page": 541,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "exercises",
+                    "page": 542,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "level": 1,
+            "title": "deliveringthesystem",
+            "page": 546,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "training",
+                    "page": 546,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "documentation",
+                    "page": 551,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "informationsystemsexample",
+                    "page": 558,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "real-timeexample",
+                    "page": 559,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatthischaptermeansforyou",
+                    "page": 559,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatthischaptermeansforyourdevelopmentteam",
+                    "page": 559,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatthischaptermeansforresearchers",
+                    "page": 560,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "termproject",
+                    "page": 560,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "keyreferences",
+                    "page": 560,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "exercises",
+                    "page": 560,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "level": 1,
+            "title": "maintainingthesystem",
+            "page": 562,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "thechangingsystem",
+                    "page": 562,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "thenatureofmaintenance",
+                    "page": 570,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "maintenanceproblems",
+                    "page": 573,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "measuringmaintenancecharacteristics",
+                    "page": 581,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "maintenancetechniquesandtools",
+                    "page": 587,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "softwarerejuvenation",
+                    "page": 595,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "informationsystemsexample",
+                    "page": 601,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "real-timeexample",
+                    "page": 602,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatthischaptermeansforyou",
+                    "page": 603,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatthischaptermeansforyourdevelopmentteam",
+                    "page": 603,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatthischaptermeansforresearchers",
+                    "page": 604,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "termproject",
+                    "page": 604,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "keyreferences",
+                    "page": 604,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "exercises",
+                    "page": 605,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "level": 1,
+            "title": "evaluatingproductsprocessesandresources",
+            "page": 607,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "approachestoevaluation",
+                    "page": 607,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "selectinganevaluationtechnique",
+                    "page": 612,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "assessmentvsprediction",
+                    "page": 616,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "evaluatingproducts",
+                    "page": 622,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "evaluatingprocesses",
+                    "page": 637,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "evaluatingresources",
+                    "page": 653,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "informationsystemsexample",
+                    "page": 658,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "real-timeexample",
+                    "page": 659,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatthischaptermeansforyou",
+                    "page": 659,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatthischaptermeansforyourdevelopmentteam",
+                    "page": 660,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatthischaptermeansforresearchers",
+                    "page": 660,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "termproject",
+                    "page": 660,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "keyreferences",
+                    "page": 661,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "exercises",
+                    "page": 661,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "level": 1,
+            "title": "improvingpredictionsproductsprocessesandresources",
+            "page": 663,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "improvingprediction",
+                    "page": 663,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "improvingproducts",
+                    "page": 672,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "improvingprocesses",
+                    "page": 676,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "improvingresources",
+                    "page": 684,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "generalimprovementguidelines",
+                    "page": 687,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "informationsystemsexample",
+                    "page": 688,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "real-timeexample",
+                    "page": 689,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatthischaptermeansforyou",
+                    "page": 689,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatthischaptermeansforyourdevelopmentteam",
+                    "page": 689,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatthischaptermeansforresearchers",
+                    "page": 690,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "termproject",
+                    "page": 690,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "keyreferences",
+                    "page": 690,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "exercises",
+                    "page": 691,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "level": 1,
+            "title": "thefutureofsoftwareengineering",
+            "page": 692,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "howhavewedone?",
+                    "page": 692,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "technologytransfer",
+                    "page": 695,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "decision-makinginsoftwareengineering",
+                    "page": 703,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "theprofessionalizationofsoftwareengineering:licensingcertificationandethics",
+                    "page": 716,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "termproject",
+                    "page": 733,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "keyreferences",
+                    "page": 733,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "exercises",
+                    "page": 735,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "level": 1,
+            "title": "annotatedbibliography",
+            "page": 736,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "index",
+            "page": 772,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "a",
+                    "page": 772,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "b",
+                    "page": 772,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "c",
+                    "page": 772,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "d",
+                    "page": 774,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "e",
+                    "page": 775,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "f",
+                    "page": 775,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "g",
+                    "page": 776,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "h",
+                    "page": 776,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "i",
+                    "page": 776,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "j",
+                    "page": 777,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "k",
+                    "page": 777,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "l",
+                    "page": 777,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "m",
+                    "page": 777,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "n",
+                    "page": 778,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "o",
+                    "page": 778,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "p",
+                    "page": 778,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "q",
+                    "page": 779,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "r",
+                    "page": 779,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "s",
+                    "page": 781,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "t",
+                    "page": 782,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "u",
+                    "page": 783,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "v",
+                    "page": 783,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "w",
+                    "page": 783,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "z",
+                    "page": 783,
+                    "children": []
+                }
+            ]
+        }
+    ]
+}
+
+================================================================================
+PROCESSING RUN START | document_id=2 | processing_run_id=8d437376-9e5a-4183-90f6-c4b4ebcf79eb | started_at=2026-08-11T08:00:11.993675+00:00
+================================================================================
+
+
+================================================================================
+PROCESSING RUN START | document_id=3 | processing_run_id=5c02115c-59f9-4f0b-8d4d-2733c4d43e6d | started_at=2026-08-11T09:53:04.579050+00:00
+================================================================================
+
+
+================================================================================
+PROCESSING RUN START | document_id=5 | processing_run_id=9b08de45-687a-4a50-9b49-5e79721c7857 | started_at=2026-08-11T09:53:05.302988+00:00
+================================================================================
+
+
+================================================================================
+PROCESSING RUN START | document_id=6 | processing_run_id=68f6d9b7-5995-4e5f-a730-283b40d5f187 | started_at=2026-08-11T10:13:46.445425+00:00
+================================================================================
+{
+    "level": 0,
+    "title": "ROOT",
+    "children": [
+        {
+            "level": 1,
+            "title": "preface",
+            "page": 7,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "computerprogramming",
+            "page": 15,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "whatisacomputer?",
+                    "page": 15,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatisprogramming?",
+                    "page": 16,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "thehelloworldprogram",
+                    "page": 17,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "compilingjavaprograms",
+                    "page": 19,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "displayingtwomessages",
+                    "page": 20,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "formattingsourcecode",
+                    "page": 21,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "usingescapesequences",
+                    "page": 23,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "whatiscomputerscience?",
+                    "page": 24,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "debuggingprograms",
+                    "page": 25,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "vocabulary",
+                    "page": 26,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "exercises",
+                    "page": 28,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "level": 1,
+            "title": "variablesandoperators",
+            "page": 31,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "declaringvariables",
+                    "page": 31,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "assigningvariables",
+                    "page": 32,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "memorydiagrams",
+                    "page": 33,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "printingvariables",
+                    "page": 35,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "arithmeticoperators",
+                    "page": 36,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "floating-pointnumbers",
+                    "page": 37,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "roundingerrors",
+                    "page": 38,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "operatorsforstrings",
+                    "page": 39,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "compilererrormessages",
+                    "page": 41,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "othertypesoferrors",
+                    "page": 42,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "vocabulary",
+                    "page": 43,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "exercises",
+                    "page": 45,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "level": 1,
+            "title": "inputandoutput",
+            "page": 47,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "thesystemclass",
+                    "page": 47,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "thescannerclass",
+                    "page": 48,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "languageelements",
+                    "page": 50,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "literalsandconstants",
+                    "page": 51,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "formattingoutput",
+                    "page": 53,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "readingerrormessages",
+                    "page": 54,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "typecastoperators",
+                    "page": 55,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "remainderoperator",
+                    "page": 56,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "puttingitalltogether",
+                    "page": 57,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "thescannerbug",
+                    "page": 59,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "vocabulary",
+                    "page": 60,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "exercises",
+                    "page": 61,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "level": 1,
+            "title": "methodsandtesting",
+            "page": 65,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "definingnewmethods",
+                    "page": 65,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "flowofexecution",
+                    "page": 67,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "parametersandarguments",
+                    "page": 68,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "multipleparameters",
+                    "page": 69,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "stackdiagrams",
+                    "page": 71,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "mathmethods",
+                    "page": 72,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "composition",
+                    "page": 73,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "returnvalues",
+                    "page": 74,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "incrementaldevelopment",
+                    "page": 76,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "vocabulary",
+                    "page": 78,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "exercises",
+                    "page": 80,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "level": 1,
+            "title": "conditionalsandlogic",
+            "page": 85,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "relationaloperators",
+                    "page": 85,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "theif-elsestatement",
+                    "page": 86,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "chainingandnesting",
+                    "page": 88,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "theswitchstatement",
+                    "page": 89,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "logicaloperators",
+                    "page": 91,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "demorgan'slaws",
+                    "page": 92,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "booleanvariables",
+                    "page": 93,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "booleanmethods",
+                    "page": 94,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "validatinginput",
+                    "page": 95,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "exampleprogram",
+                    "page": 97,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "vocabulary",
+                    "page": 98,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "exercises",
+                    "page": 99,
+                    "children": []
+                }
+            ]
+        }
+    ]
+}
+
+
+================================================================================
+PROCESSING RUN START | document_id=7 | processing_run_id=7fdd8a9d-01c8-4500-84bf-8c40e1d06f17 | started_at=2026-08-11T10:51:05.761530+00:00
+================================================================================
+{
+    "level": 0,
+    "title": "ROOT",
+    "children": [
+        {
+            "level": 1,
+            "title": "contentsataglance",
+            "page": 5,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "contents",
+            "page": 6,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "abouttheauthor",
+            "page": 15,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "aboutthetechnicalreviewer",
+            "page": 16,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "acknowledgements",
+            "page": 17,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "parti:nextgenerationdatabases",
+            "page": 18,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "chapter1:threedatabaserevolutions",
+                    "page": 19,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "earlydatabasesystems",
+                            "page": 20,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "thefirstdatabaserevolution",
+                            "page": 22,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "theseconddatabaserevolution",
+                            "page": 23,
+                            "children": [
+                                {
+                                    "level": 4,
+                                    "title": "relationaltheory",
+                                    "page": 24,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "transactionmodels",
+                                    "page": 25,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "thefirstrelationaldatabases",
+                                    "page": 26,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "databasewars!",
+                                    "page": 26,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "client-servercomputing",
+                                    "page": 27,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "object-orientedprogrammingandtheoodbms",
+                                    "page": 27,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "therelationalplateau",
+                                    "page": 29,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "title": "thethirddatabaserevolution",
+                            "page": 29,
+                            "children": [
+                                {
+                                    "level": 4,
+                                    "title": "googleandhadoop",
+                                    "page": 30,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "therestoftheweb",
+                                    "page": 30,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "cloudcomputing",
+                                    "page": 31,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "documentdatabases",
+                                    "page": 31,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "the“newsql”",
+                                    "page": 32,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "thenonrelationalexplosion",
+                                    "page": 32,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "title": "conclusion:onesizedoesn’tfitall",
+                            "page": 33,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "notes",
+                            "page": 34,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "chapter2:googlebigdataandhadoop",
+                    "page": 36,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "thebigdatarevolution",
+                            "page": 36,
+                            "children": [
+                                {
+                                    "level": 4,
+                                    "title": "cloudmobilesocialandbigdata",
+                                    "page": 37,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "title": "google:pioneerofbigdata",
+                            "page": 38,
+                            "children": [
+                                {
+                                    "level": 4,
+                                    "title": "googlehardware",
+                                    "page": 38,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "thegooglesoftwarestack",
+                                    "page": 40,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "moreaboutmapreduce",
+                                    "page": 41,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "title": "hadoop:open-sourcegooglestack",
+                            "page": 42,
+                            "children": [
+                                {
+                                    "level": 4,
+                                    "title": "hadoop’sorigins",
+                                    "page": 43,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "thepowerofhadoop",
+                                    "page": 43,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "hadoop’sarchitecture",
+                                    "page": 44,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "hbase",
+                                    "page": 47,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "hive",
+                                    "page": 49,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "pig",
+                                    "page": 51,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "thehadoopecosystem",
+                                    "page": 52,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "title": "conclusion",
+                            "page": 52,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "notes",
+                            "page": 52,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "chapter3:shardingamazonandthebirthofnosql",
+                    "page": 53,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "scalingweb20",
+                            "page": 53,
+                            "children": [
+                                {
+                                    "level": 4,
+                                    "title": "howweb20waswon",
+                                    "page": 54,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "theopen-sourcesolution",
+                                    "page": 54,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "sharding",
+                                    "page": 55,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "deathbyathousandshards",
+                                    "page": 57,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "captheorem",
+                                    "page": 57,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "eventualconsistency",
+                                    "page": 58,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "title": "amazon’sdynamo",
+                            "page": 59,
+                            "children": [
+                                {
+                                    "level": 4,
+                                    "title": "consistenthashing",
+                                    "page": 61,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "tunableconsistency",
+                                    "page": 63,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "dynamoandthekey-valuestorefamily",
+                                    "page": 65,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "title": "conclusion",
+                            "page": 65,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "note",
+                            "page": 65,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "chapter4:documentdatabases",
+                    "page": 66,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "xmlandxmldatabases",
+                            "page": 67,
+                            "children": [
+                                {
+                                    "level": 4,
+                                    "title": "xmltoolsandstandards",
+                                    "page": 67,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "xmldatabases",
+                                    "page": 68,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "xmlsupportinrelationalsystems",
+                                    "page": 70,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "title": "jsondocumentdatabases",
+                            "page": 70,
+                            "children": [
+                                {
+                                    "level": 4,
+                                    "title": "jsonandajax",
+                                    "page": 70,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "jsondatabases",
+                                    "page": 71,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "datamodelsindocumentdatabases",
+                                    "page": 73,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "earlyjsondatabases",
+                                    "page": 74,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "membaseandcouchbase",
+                                    "page": 74,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "mongodb",
+                                    "page": 74,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "jsonjsoneverywhere",
+                                    "page": 76,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "title": "conclusion",
+                            "page": 76,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "chapter5:tablesarenotyourfriends:graphdatabases",
+                    "page": 77,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "whatisagraph?",
+                            "page": 77,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "rdbmspatternsforgraphs",
+                            "page": 79,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "rdfandsparql",
+                            "page": 80,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "propertygraphsandneo4j",
+                            "page": 81,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "gremlin",
+                            "page": 83,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "graphdatabaseinternals",
+                            "page": 85,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "graphcomputeengines",
+                            "page": 85,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "conclusion",
+                            "page": 86,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "chapter6:columndatabases",
+                    "page": 87,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "datawarehousingschemas",
+                            "page": 87,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "thecolumnaralternative",
+                            "page": 89,
+                            "children": [
+                                {
+                                    "level": 4,
+                                    "title": "columnarcompression",
+                                    "page": 91,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "columnarwritepenalty",
+                                    "page": 91,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "title": "sybaseiqc-storeandvertica",
+                            "page": 93,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "columndatabasearchitectures",
+                            "page": 93,
+                            "children": [
+                                {
+                                    "level": 4,
+                                    "title": "projections",
+                                    "page": 94,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "columnartechnologyinotherdatabases",
+                                    "page": 96,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "title": "conclusion",
+                            "page": 97,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "note",
+                            "page": 97,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "chapter7:theendofdisk?ssdandin-memorydatabases",
+                    "page": 98,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "theendofdisk?",
+                            "page": 98,
+                            "children": [
+                                {
+                                    "level": 4,
+                                    "title": "solidstatedisk",
+                                    "page": 99,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "theeconomicsofdisk",
+                                    "page": 100,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "ssd-enableddatabases",
+                                    "page": 101,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "title": "in-memorydatabases",
+                            "page": 102,
+                            "children": [
+                                {
+                                    "level": 4,
+                                    "title": "timesten",
+                                    "page": 103,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "redis",
+                                    "page": 104,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "saphana",
+                                    "page": 106,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "voltdb",
+                                    "page": 108,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "oracle12c“in-memorydatabase”",
+                                    "page": 109,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "title": "berkeleyanalyticsdatastackandspark",
+                            "page": 110,
+                            "children": [
+                                {
+                                    "level": 4,
+                                    "title": "sparkarchitecture",
+                                    "page": 112,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "title": "conclusion",
+                            "page": 113,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "note",
+                            "page": 113,
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "level": 1,
+            "title": "partii:thegorydetails",
+            "page": 114,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "chapter8:distributeddatabasepatterns",
+                    "page": 115,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "distributedrelationaldatabases",
+                            "page": 115,
+                            "children": [
+                                {
+                                    "level": 4,
+                                    "title": "replication",
+                                    "page": 117,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "sharednothingandshareddisk",
+                                    "page": 117,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "title": "nonrelationaldistributeddatabases",
+                            "page": 120,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "mongodbshardingandreplication",
+                            "page": 120,
+                            "children": [
+                                {
+                                    "level": 4,
+                                    "title": "sharding",
+                                    "page": 120,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "shardingmechanisms",
+                                    "page": 121,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "clusterbalancing",
+                                    "page": 123,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "replication",
+                                    "page": 123,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "writeconcernandreadpreference",
+                                    "page": 125,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "title": "hbase",
+                            "page": 125,
+                            "children": [
+                                {
+                                    "level": 4,
+                                    "title": "tablesregionsandregionservers",
+                                    "page": 126,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "cachinganddatalocality",
+                                    "page": 127,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "rowkeyordering",
+                                    "page": 128,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "regionserversplitsbalancingandfailure",
+                                    "page": 129,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "regionreplicas",
+                                    "page": 129,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "title": "cassandra",
+                            "page": 129,
+                            "children": [
+                                {
+                                    "level": 4,
+                                    "title": "gossip",
+                                    "page": 129,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "consistenthashing",
+                                    "page": 130,
+                                    "children": [
+                                        {
+                                            "level": 5,
+                                            "title": "order-preservingpartitioning",
+                                            "page": 134,
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "replicas",
+                                    "page": 134,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "snitches",
+                                    "page": 136,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "title": "summary",
+                            "page": 136,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "chapter9:consistencymodels",
+                    "page": 137,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "typesofconsistency",
+                            "page": 137,
+                            "children": [
+                                {
+                                    "level": 4,
+                                    "title": "acidandmvcc",
+                                    "page": 138,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "globaltransactionsequencenumbers",
+                                    "page": 140,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "two-phasecommit",
+                                    "page": 140,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "otherlevelsofconsistency",
+                                    "page": 140,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "title": "consistencyinmongodb",
+                            "page": 141,
+                            "children": [
+                                {
+                                    "level": 4,
+                                    "title": "mongodblocking",
+                                    "page": 141,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "replicasetsandeventualconsistency",
+                                    "page": 142,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "title": "hbaseconsistency",
+                            "page": 142,
+                            "children": [
+                                {
+                                    "level": 4,
+                                    "title": "eventuallyconsistentregionreplicas",
+                                    "page": 142,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "title": "cassandraconsistency",
+                            "page": 144,
+                            "children": [
+                                {
+                                    "level": 4,
+                                    "title": "replicationfactor",
+                                    "page": 144,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "writeconsistency",
+                                    "page": 144,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "readconsistency",
+                                    "page": 145,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "interactionbetweenconsistencylevels",
+                                    "page": 145,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "hintedhandoffandreadrepair",
+                                    "page": 146,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "timestampsandgranularity",
+                                    "page": 147,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "vectorclocks",
+                                    "page": 148,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "lightweighttransactions",
+                                    "page": 150,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "title": "conclusion",
+                            "page": 153,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "chapter10:datamodelsandstorage",
+                    "page": 155,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "datamodels",
+                            "page": 155,
+                            "children": [
+                                {
+                                    "level": 4,
+                                    "title": "reviewoftherelationalmodelofdata",
+                                    "page": 156,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "key-valuestores",
+                                    "page": 158,
+                                    "children": [
+                                        {
+                                            "level": 5,
+                                            "title": "convergentreplicateddatatypes",
+                                            "page": 158,
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "datamodelsinbigtableandhbase",
+                                    "page": 161,
+                                    "children": [
+                                        {
+                                            "level": 5,
+                                            "title": "columnfamilystructure",
+                                            "page": 161,
+                                            "children": []
+                                        },
+                                        {
+                                            "level": 5,
+                                            "title": "versions",
+                                            "page": 162,
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "cassandra",
+                                    "page": 163,
+                                    "children": [
+                                        {
+                                            "level": 5,
+                                            "title": "cassandracollections",
+                                            "page": 165,
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "jsondatamodels",
+                                    "page": 166,
+                                    "children": [
+                                        {
+                                            "level": 5,
+                                            "title": "binaryjson(bson)",
+                                            "page": 167,
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "title": "storage",
+                            "page": 167,
+                            "children": [
+                                {
+                                    "level": 4,
+                                    "title": "typicalrelationalstoragemodel",
+                                    "page": 168,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "log-structuredmergetrees",
+                                    "page": 170,
+                                    "children": [
+                                        {
+                                            "level": 5,
+                                            "title": "sstablesandbloomfilters",
+                                            "page": 171,
+                                            "children": []
+                                        },
+                                        {
+                                            "level": 5,
+                                            "title": "updatesandtombstones",
+                                            "page": 172,
+                                            "children": []
+                                        },
+                                        {
+                                            "level": 5,
+                                            "title": "compaction",
+                                            "page": 172,
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "secondaryindexing",
+                                    "page": 173,
+                                    "children": [
+                                        {
+                                            "level": 5,
+                                            "title": "diysecondaryindexing",
+                                            "page": 173,
+                                            "children": []
+                                        },
+                                        {
+                                            "level": 5,
+                                            "title": "globalandlocalindexes",
+                                            "page": 175,
+                                            "children": []
+                                        },
+                                        {
+                                            "level": 5,
+                                            "title": "secondaryindexingimplementationsinnosqldatabases",
+                                            "page": 176,
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "title": "conclusion",
+                            "page": 176,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "chapter11:languagesandprogramminginterfaces",
+                    "page": 177,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "sql",
+                            "page": 177,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "nosqlapis",
+                            "page": 179,
+                            "children": [
+                                {
+                                    "level": 4,
+                                    "title": "riak",
+                                    "page": 179,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "hbase",
+                                    "page": 181,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "mongodb",
+                                    "page": 183,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "cassandraquerylanguage(cql)",
+                                    "page": 185,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "mapreduce",
+                                    "page": 187,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "pig",
+                                    "page": 189,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "directedacyclicgraphs",
+                                    "page": 191,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "cascading",
+                                    "page": 191,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "spark",
+                                    "page": 191,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "title": "thereturnofsql",
+                            "page": 192,
+                            "children": [
+                                {
+                                    "level": 4,
+                                    "title": "hive",
+                                    "page": 193,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "impala",
+                                    "page": 194,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "sparksql",
+                                    "page": 195,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "couchbasen1ql",
+                                    "page": 195,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "apachedrill",
+                                    "page": 198,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "othersqlonnosql",
+                                    "page": 200,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "title": "conclusion",
+                            "page": 200,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "note",
+                            "page": 200,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "chapter12:databasesofthefuture",
+                    "page": 201,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "therevolutionrevisited",
+                            "page": 201,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "counterrevolutionaries",
+                            "page": 202,
+                            "children": [
+                                {
+                                    "level": 4,
+                                    "title": "havewecomefullcircle?",
+                                    "page": 203,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "anembarrassmentofchoice",
+                                    "page": 204,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "title": "canwehaveitall?",
+                            "page": 205,
+                            "children": [
+                                {
+                                    "level": 4,
+                                    "title": "consistencymodels",
+                                    "page": 205,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "schema",
+                                    "page": 206,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "databaselanguages",
+                                    "page": 208,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "storage",
+                                    "page": 209,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "avisionforaconvergeddatabase",
+                                    "page": 210,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "title": "meanwhilebackatoraclehq",
+                            "page": 211,
+                            "children": [
+                                {
+                                    "level": 4,
+                                    "title": "oraclejsonsupport",
+                                    "page": 212,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "accessingjsonviaoraclerest",
+                                    "page": 214,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "restaccesstooracletables",
+                                    "page": 216,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "oraclegraph",
+                                    "page": 217,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "oraclesharding",
+                                    "page": 218,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "oracleasahybriddatabase",
+                                    "page": 220,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "title": "otherconvergentdatabases",
+                            "page": 220,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "disruptivedatabasetechnologies",
+                            "page": 221,
+                            "children": [
+                                {
+                                    "level": 4,
+                                    "title": "storagetechnologies",
+                                    "page": 221,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "blockchain",
+                                    "page": 222,
+                                    "children": []
+                                },
+                                {
+                                    "level": 4,
+                                    "title": "quantumcomputing",
+                                    "page": 223,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "title": "conclusion",
+                            "page": 224,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "notes",
+                            "page": 225,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "appendixa:databasesurvey",
+                    "page": 226,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "aerospike",
+                            "page": 226,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "cassandra",
+                            "page": 227,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "couchbase",
+                            "page": 228,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "dynamodb",
+                            "page": 228,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "hbase",
+                            "page": 229,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "marklogic",
+                            "page": 230,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "mongodb",
+                            "page": 230,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "neo4j",
+                            "page": 231,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "nuodb",
+                            "page": 232,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "oraclerdbms",
+                            "page": 232,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "redis",
+                            "page": 233,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "riak",
+                            "page": 234,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "saphana",
+                            "page": 234,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "timesten",
+                            "page": 235,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "vertica",
+                            "page": 236,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "voltdb",
+                            "page": 236,
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "level": 1,
+            "title": "index",
+            "page": 238,
+            "children": []
+        }
+    ]
+}
+
+
+================================================================================
+PROCESSING RUN START | document_id=9 | processing_run_id=7a334f0f-1bb8-4977-9456-01486576d8b5 | started_at=2026-08-12T09:13:34.376386+00:00
+================================================================================
+{
+    "level": 0,
+    "title": "ROOT",
+    "children": []
+}
+
+
+================================================================================
+PROCESSING RUN START | document_id=10 | processing_run_id=359b945a-1ad4-4974-a521-6b0c9f111bbf | started_at=2026-08-12T10:30:24.695051+00:00
+================================================================================
+{
+    "level": 0,
+    "title": "ROOT",
+    "children": [
+        {
+            "level": 1,
+            "title": "frontmatter",
+            "page": 1,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "contents",
+            "page": 5,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "acknowledgments",
+            "page": 11,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "whythisbook?",
+            "page": 13,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "introduction",
+            "page": 15,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "theneedforefficiency",
+                    "page": 16,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "interfaces",
+                    "page": 18,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "thequeuestackanddequeinterfaces",
+                            "page": 19,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "thelistinterface:linearsequences",
+                            "page": 20,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "theusetinterface:unorderedsets",
+                            "page": 22,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "thessetinterface:sortedsets",
+                            "page": 23,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "mathematicalbackground",
+                    "page": 23,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "exponentialsandlogarithms",
+                            "page": 24,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "factorials",
+                            "page": 25,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "asymptoticnotation",
+                            "page": 26,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "randomizationandprobability",
+                            "page": 29,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "themodelofcomputation",
+                    "page": 32,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "correctnesstimecomplexityandspacecomplexity",
+                    "page": 33,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "codesamples",
+                    "page": 36,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "listofdatastructures",
+                    "page": 36,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "discussionandexercises",
+                    "page": 40,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "level": 1,
+            "title": "array-basedlists",
+            "page": 43,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "arraystack:faststackoperationsusinganarray",
+                    "page": 44,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "thebasics",
+                            "page": 44,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "growingandshrinking",
+                            "page": 47,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "summary",
+                            "page": 49,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "fastarraystack:anoptimizedarraystack",
+                    "page": 49,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "arrayqueue:anarray-basedqueue",
+                    "page": 50,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "summary",
+                            "page": 54,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "arraydeque:fastdequeoperationsusinganarray",
+                    "page": 54,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "summary",
+                            "page": 57,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "dualarraydeque:buildingadequefromtwostacks",
+                    "page": 57,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "balancing",
+                            "page": 61,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "summary",
+                            "page": 63,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "rootisharraystack:aspace-efficientarraystack",
+                    "page": 63,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "analysisofgrowingandshrinking",
+                            "page": 68,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "spaceusage",
+                            "page": 68,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "summary",
+                            "page": 69,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "computingsquareroots",
+                            "page": 70,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "discussionandexercises",
+                    "page": 73,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "level": 1,
+            "title": "linkedlists",
+            "page": 77,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "sllist:asingly-linkedlist",
+                    "page": 77,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "queueoperations",
+                            "page": 79,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "summary",
+                            "page": 80,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "dllist:adoubly-linkedlist",
+                    "page": 81,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "addingandremoving",
+                            "page": 83,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "summary",
+                            "page": 84,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "selist:aspace-efficientlinkedlist",
+                    "page": 85,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "spacerequirements",
+                            "page": 86,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "findingelements",
+                            "page": 87,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "addinganelement",
+                            "page": 88,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "removinganelement",
+                            "page": 91,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "amortizedanalysisofspreadingandgathering",
+                            "page": 93,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "summary",
+                            "page": 95,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "discussionandexercises",
+                    "page": 96,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "level": 1,
+            "title": "skiplists",
+            "page": 101,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "thebasicstructure",
+                    "page": 101,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "skiplistsset:anefficientsset",
+                    "page": 104,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "summary",
+                            "page": 107,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "skiplistlist:anefficientrandom-accesslist",
+                    "page": 107,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "summary",
+                            "page": 112,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "analysisofskiplists",
+                    "page": 112,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "discussionandexercises",
+                    "page": 116,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "level": 1,
+            "title": "hashtables",
+            "page": 121,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "chainedhashtable:hashingwithchaining",
+                    "page": 121,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "multiplicativehashing",
+                            "page": 124,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "summary",
+                            "page": 128,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "linearhashtable:linearprobing",
+                    "page": 128,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "analysisoflinearprobing",
+                            "page": 132,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "summary",
+                            "page": 135,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "tabulationhashing",
+                            "page": 135,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "hashcodes",
+                    "page": 136,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "hashcodesforprimitivedatatypes",
+                            "page": 137,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "hashcodesforcompoundobjects",
+                            "page": 137,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "hashcodesforarraysandstrings",
+                            "page": 139,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "discussionandexercises",
+                    "page": 142,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "level": 1,
+            "title": "binarytrees",
+            "page": 147,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "binarytree:abasicbinarytree",
+                    "page": 149,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "recursivealgorithms",
+                            "page": 150,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "traversingbinarytrees",
+                            "page": 150,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "binarysearchtree:anunbalancedbinarysearchtree",
+                    "page": 154,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "searching",
+                            "page": 154,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "addition",
+                            "page": 156,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "removal",
+                            "page": 158,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "summary",
+                            "page": 160,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "discussionandexercises",
+                    "page": 161,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "level": 1,
+            "title": "randombinarysearchtrees",
+            "page": 167,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "randombinarysearchtrees",
+                    "page": 167,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "proofoflemma71",
+                            "page": 170,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "summary",
+                            "page": 172,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "treap:arandomizedbinarysearchtree",
+                    "page": 173,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "summary",
+                            "page": 180,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "discussionandexercises",
+                    "page": 182,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "level": 1,
+            "title": "scapegoattrees",
+            "page": 187,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "scapegoattree:abinarysearchtreewithpartialrebuilding",
+                    "page": 188,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "analysisofcorrectnessandrunning-time",
+                            "page": 192,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "summary",
+                            "page": 194,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "discussionandexercises",
+                    "page": 195,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "level": 1,
+            "title": "red-blacktrees",
+            "page": 199,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "2-4trees",
+                    "page": 200,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "addingaleaf",
+                            "page": 201,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "removingaleaf",
+                            "page": 201,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "redblacktree:asimulated2-4tree",
+                    "page": 204,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "red-blacktreesand2-4trees",
+                            "page": 204,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "left-leaningred-blacktrees",
+                            "page": 208,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "addition",
+                            "page": 210,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "removal",
+                            "page": 213,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "summary",
+                    "page": 219,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "discussionandexercises",
+                    "page": 220,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "level": 1,
+            "title": "heaps",
+            "page": 225,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "binaryheap:animplicitbinarytree",
+                    "page": 225,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "summary",
+                            "page": 231,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "meldableheap:arandomizedmeldableheap",
+                    "page": 231,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "analysisofmerge(varh1varh2)",
+                            "page": 234,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "summary",
+                            "page": 235,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "discussionandexercises",
+                    "page": 236,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "level": 1,
+            "title": "sortingalgorithms",
+            "page": 239,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "comparison-basedsorting",
+                    "page": 240,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "merge-sort",
+                            "page": 240,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "quicksort",
+                            "page": 244,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "heap-sort",
+                            "page": 247,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "alower-boundforcomparison-basedsorting",
+                            "page": 249,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "countingsortandradixsort",
+                    "page": 252,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "countingsort",
+                            "page": 253,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "radix-sort",
+                            "page": 255,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "discussionandexercises",
+                    "page": 257,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "level": 1,
+            "title": "graphs",
+            "page": 261,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "adjacencymatrix:representingagraphbyamatrix",
+                    "page": 263,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "adjacencylists:agraphasacollectionoflists",
+                    "page": 266,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "graphtraversal",
+                    "page": 270,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "breadth-firstsearch",
+                            "page": 270,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "depth-firstsearch",
+                            "page": 272,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "discussionandexercises",
+                    "page": 275,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "level": 1,
+            "title": "datastructuresforintegers",
+            "page": 279,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "binarytrie:adigitalsearchtree",
+                    "page": 280,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "xfasttrie:searchingindoubly-logarithmictime",
+                    "page": 286,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "yfasttrie:adoubly-logarithmictimesset",
+                    "page": 289,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "discussionandexercises",
+                    "page": 294,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "level": 1,
+            "title": "externalmemorysearching",
+            "page": 297,
+            "children": [
+                {
+                    "level": 2,
+                    "title": "theblockstore",
+                    "page": 299,
+                    "children": []
+                },
+                {
+                    "level": 2,
+                    "title": "b-trees",
+                    "page": 299,
+                    "children": [
+                        {
+                            "level": 3,
+                            "title": "searching",
+                            "page": 302,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "addition",
+                            "page": 304,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "removal",
+                            "page": 309,
+                            "children": []
+                        },
+                        {
+                            "level": 3,
+                            "title": "amortizedanalysisofb-trees",
+                            "page": 315,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "title": "discussionandexercises",
+                    "page": 318,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "level": 1,
+            "title": "bibliography",
+            "page": 323,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "index",
+            "page": 331,
+            "children": []
+        }
+    ]
+}

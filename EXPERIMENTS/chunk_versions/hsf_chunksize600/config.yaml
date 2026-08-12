@@ -34,13 +34,13 @@ pgdb:
 vector_db_path: "EXPERIMENTS/chunk_versions/hsf_chunksize600/vectorchunks_storage"
 vector_db_collection: "hsf_chunksize600"
 
-# nên sửa code thành dùng chung obj này, không dùng biến lẻ ở trên nữa
+
 vectordb_connect_info:
   db_path: "EXPERIMENTS/chunk_versions/hsf_chunksize600/vectorchunks_storage"
   collection: "hsf_chunksize600"
 
 ################################
-log_file: "hahaha.txt"
+log_file: "EXPERIMENTS/chunk_versions/hsf_chunksize600/error.txt"
 rrf_ranking_constant: 60
 rrf_top_k: 20
 vector_retrieve_chunks_limit: 30

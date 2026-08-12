@@ -178,6 +178,10 @@ def final_answer_and_messages_handle_node(state: ChatFlowState):
 
     formatted_answer = merge_segments_to_text(valid_segments)
 
+    if not isinstance(formatted_answer, str) or not formatted_answer.strip():
+        valid_segments = ABSTAIN
+        formatted_answer = ABSTAIN[0]["segment"]
+        
     ai_msg = AIMessage(
         content=formatted_answer,
         additional_kwargs={
@@ -241,9 +245,9 @@ chatflow_graph = graph.compile()
     
 # TEST ********************************************
 
-result = chatflow_graph.invoke({
-    "query": "What is software engineering and how does it fit into computer science?",
-})
-print(result["docs"])
+# result = chatflow_graph.invoke({
+#     "query": "What is software engineering and how does it fit into computer science?",
+# })
+# print(result["last_ai_message_segments"])
 
       

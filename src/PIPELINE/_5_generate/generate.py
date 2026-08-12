@@ -358,7 +358,7 @@ TEXT:
 
     # nếu vẫn fail sau retry
     if parsed is None:
-        return "", source_context_text, docs, embedded_text
+        return "[]", source_context_text, docs, embedded_text
 
     # -----------------------
     # PASS 1 SUCCESS CASE
@@ -403,4 +403,4 @@ TEXT:
                 }]
             )
 
-    return "", source_context_text, docs, embedded_text
+    return "[]", source_context_text, docs, embedded_text

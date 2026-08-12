@@ -32,6 +32,39 @@ class GenerateChatTitleRequest(BaseModel):
         return value
 
 
+def normalize_chat_segments(segments: object) -> list[dict[str, Any]]:
+    """Return segments that satisfy the response contract expected by MainBackend."""
+    normalized: list[dict[str, Any]] = []
+
+    if isinstance(segments, list):
+        for item in segments:
+            if not isinstance(item, dict):
+                continue
+
+            text = item.get("segment")
+            if not isinstance(text, str) or not text.strip():
+                continue
+
+            role = item.get("role")
+            segment_type = item.get("type")
+            citations = item.get("citations")
+
+            normalized.append({
+                **item,
+                "role": role if isinstance(role, str) and role else "paragraph",
+                "type": segment_type if isinstance(segment_type, str) and segment_type else "inferred",
+                "segment": text,
+                "citations": citations if isinstance(citations, list) else [],
+            })
+
+    return normalized or [{
+        "role": "paragraph",
+        "type": "abstained",
+        "segment": "The system can't answer this question. Please try again with another question.",
+        "citations": [],
+    }]
+
+
 @app.get("/") 
 def root(): 
     return {"status": "ok"} 
@@ -131,9 +164,13 @@ def chat(payload: dict):
         if document_id not in document_ids:
             document_ids.append(document_id)
 
+    segments = normalize_chat_segments(
+        last_ai_message.additional_kwargs.get("segments", [])
+    )
+
     return {
         "content": last_ai_message.content,
-        "segments": last_ai_message.additional_kwargs.get("segments", []),
+        "segments": segments,
         "need_verify": result["intent"] == "need_retrieve",
         "rewritten_question": result.get("rewritten_query"),
         "document_ids": document_ids

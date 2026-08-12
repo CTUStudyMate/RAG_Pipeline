@@ -3,7 +3,24 @@ from rapidfuzz import fuzz, process
 from difflib import SequenceMatcher
 from transformers import pipeline
 import re
+from pipeline_config import settings
+import logging
+from pathlib import Path
 
+log_file = settings.config["log_file"]
+LOG_PATH = Path(log_file)
+LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+logger = logging.getLogger("citation_validation")
+logger.setLevel(logging.ERROR)
+
+if not logger.handlers:
+    handler = logging.FileHandler(LOG_PATH, encoding="utf-8")
+    handler.setFormatter(
+        logging.Formatter(
+            "%(asctime)s | %(levelname)s | %(message)s"
+        )
+    )
+    logger.addHandler(handler)
 # nli = pipeline("text-classification", model="roberta-large-mnli")
 
 def normalize_text(text):
@@ -35,21 +52,33 @@ def filter_segments(segments, context_chunks):
     Drop out the segments that are servere grounding error (invalid citation, mismatch citation)
     and return the processed segments for  UI rendering or final answer synthesizing
     """
-    if len(segments) == 1 and segments[0].get("type") == "abstained":
-        return segments
-    valid_segments = []
-    for segment in segments:
-        result = validate_segment_citation(segment, context_chunks)
+    try:
+        if len(segments) == 1 and segments[0].get("type") == "abstained":
+            return segments
+        valid_segments = []
+        for segment in segments:
+            result = validate_segment_citation(segment, context_chunks)
 
-        if result:
-            valid_segments.append(result)
+            if result:
+                valid_segments.append(result)
 
-    types = {segment.get("type") for segment in valid_segments}
+        types = {segment.get("type") for segment in valid_segments}
 
-    if types == {"intro"}:
-        return []
+        if types == {"intro"}:
+            return []
 
-    return valid_segments       
+        return valid_segments   
+    except Exception as exc:
+        message = (
+            f"filter_segments failed: {exc} | "
+            f"segments_type={type(segments).__name__} | "
+            f"segments_preview={repr(segments)[:1000]}"
+        )
+
+        print(message)
+        logger.exception(message)
+
+        return [] 
   
 
 
@@ -426,63 +455,67 @@ def merge_segments_to_text(segments):
     - paragraph: newline-separated blocks
     - bullet: each bullet on new line with "- "
     """
-
-    parts = []
-    current_line = ""
-
-    def flush_line():
-        nonlocal current_line
-        if current_line.strip():
-            parts.append(current_line.strip())
+    try:
+        parts = []
         current_line = ""
 
-    for seg in segments:
-        role = seg.get("role")
-        text = seg.get("segment", "").strip()
+        def flush_line():
+            nonlocal current_line
+            if current_line.strip():
+                parts.append(current_line.strip())
+            current_line = ""
 
-        if not text:
-            continue
+        for seg in segments:
+            role = seg.get("role")
+            text = seg.get("segment", "").strip()
 
-        # -------------------------
-        # paragraph → block
-        # -------------------------
-        if role == "paragraph":
-            flush_line()
-            parts.append(text)
-            parts.append("")
+            if not text:
+                continue
 
-        # -------------------------
-        # sentence → inline
-        # -------------------------
-        elif role == "sentence":
-            if current_line:
-                current_line += " " + text
+            # -------------------------
+            # paragraph → block
+            # -------------------------
+            if role == "paragraph":
+                flush_line()
+                parts.append(text)
+                parts.append("")
+
+            # -------------------------
+            # sentence → inline
+            # -------------------------
+            elif role == "sentence":
+                if current_line:
+                    current_line += " " + text
+                else:
+                    current_line = text
+
+            # -------------------------
+            # bullet_intro → NEW LINE (header style)
+            # -------------------------
+            elif role == "bullet_intro":
+                flush_line()
+                parts.append(text)
+
+            # -------------------------
+            # bullet → list item
+            # -------------------------
+            elif role == "bullet":
+                flush_line()
+                parts.append(f"- {text}")
+
+            # -------------------------
+            # fallback
+            # -------------------------
             else:
-                current_line = text
+                if current_line:
+                    current_line += " " + text
+                else:
+                    current_line = text
 
-        # -------------------------
-        # bullet_intro → NEW LINE (header style)
-        # -------------------------
-        elif role == "bullet_intro":
-            flush_line()
-            parts.append(text)
+        flush_line()
 
-        # -------------------------
-        # bullet → list item
-        # -------------------------
-        elif role == "bullet":
-            flush_line()
-            parts.append(f"- {text}")
-
-        # -------------------------
-        # fallback
-        # -------------------------
-        else:
-            if current_line:
-                current_line += " " + text
-            else:
-                current_line = text
-
-    flush_line()
-
-    return "\n".join(parts).strip()
+        return "\n".join(parts).strip()
+    except Exception as e:
+        print(e)
+        print("*** original segments ********")
+        print(segments)
