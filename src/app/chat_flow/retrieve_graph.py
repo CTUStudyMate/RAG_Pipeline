@@ -8,11 +8,13 @@ class RetrieveState(TypedDict):
     
     # external param
     rewritten_query: str
+    document_sources: list[int] | None
 
 
 def retrieve(state: RetrieveState):
     docs = multi_stages_retrieve(
         query=state["rewritten_query"],
+        document_ids=state["document_sources"],
     )
 
     return {

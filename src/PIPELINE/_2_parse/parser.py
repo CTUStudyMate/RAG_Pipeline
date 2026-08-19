@@ -12,8 +12,6 @@ from typing import List
 from pathlib import Path    
 import json
 import fitz
-from src.PIPELINE._2_parse.parse_utils import get_batches
-
 from src.common_utils.filename_handle import normalize_filename
 
 
@@ -98,34 +96,55 @@ def run_parser(file_path):
 
     storage_dir = Path("./data/parsed_cache")
     doc_cache_dir = storage_dir / normalize_filename(file_path)
-    initial_batch_size = min(
+    max_pages_per_batch = min(
         total_page,
         settings.config["max_pages_per_batch"],
     )
+    # Start a new parse run with an empty cache, but retain every batch that
+    # succeeds during this run. A later failed batch must not discard earlier
+    # successful work.
+    shutil.rmtree(doc_cache_dir, ignore_errors=True)
 
-    for batch_size in range(initial_batch_size, 0, -1):
-        batches = get_batches(total_page, batch_size)
-        shutil.rmtree(doc_cache_dir, ignore_errors=True)
+    start_page = 0
+    while start_page < total_page:
+        end_page = min(
+            start_page + max_pages_per_batch - 1,
+            total_page - 1,
+        )
 
-        try:
-            logger.info(
-                "Parsing %s with a maximum of %s page(s) per batch.",
-                file_path,
-                batch_size,
-            )
-            parse_pdf_document(batches, file_path, storage_dir)
-            return
-        except Exception:
-            shutil.rmtree(doc_cache_dir, ignore_errors=True)
-            if batch_size == 1:
-                raise
+        while end_page >= start_page:
+            try:
+                logger.info(
+                    "Parsing %s pages %s-%s.",
+                    file_path,
+                    start_page + 1,
+                    end_page + 1,
+                )
+                parse_pdf_document(
+                    [[start_page, end_page]],
+                    file_path,
+                    storage_dir,
+                )
+                start_page = end_page + 1
+                break
+            except Exception:
+                if end_page == start_page:
+                    logger.exception(
+                        "Parsing %s failed for page %s; stopping.",
+                        file_path,
+                        start_page + 1,
+                    )
+                    raise
 
-            logger.exception(
-                "Parsing %s failed with %s page(s) per batch; retrying with %s.",
-                file_path,
-                batch_size,
-                batch_size - 1,
-            )
+                logger.exception(
+                    "Parsing %s failed for pages %s-%s; retrying pages %s-%s.",
+                    file_path,
+                    start_page + 1,
+                    end_page + 1,
+                    start_page + 1,
+                    end_page,
+                )
+                end_page -= 1
         
         
         

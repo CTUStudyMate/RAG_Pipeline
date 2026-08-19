@@ -1,0 +1,847 @@
+{
+    "level": 0,
+    "title": "ROOT",
+    "children": [
+        {
+            "level": 1,
+            "title": "conceptsofobject-orientedprogramming",
+            "page": 1,
+            "children": [],
+            "gold_unit": [
+                "document_13__heading.28141b9d071d66b134897842d85b663b",
+                "document_13__p.78865b16537949e83e60ed3980a40847.1"
+            ],
+            "metadata": {
+                "docling_data": {
+                    "text": "Concepts of Object-Oriented Programming"
+                },
+                "description": "Concepts of Object-Oriented Programming"
+            }
+        },
+        {
+            "level": 1,
+            "title": "whatthistalkisabout",
+            "page": 2,
+            "children": [],
+            "gold_unit": [
+                "document_13__heading.c7acfc716b5a9233f2b69616ff11b3bc",
+                "document_13__list_item.3",
+                "document_13__list_item.4",
+                "document_13__list_item.5",
+                "document_13__list_item.6",
+                "document_13__list_item.7",
+                "document_13__list_item.8",
+                "document_13__list_item.9",
+                "document_13__list_item.10",
+                "document_13__list_item.11",
+                "document_13__list_item.12",
+                "document_13__list_item.13"
+            ],
+            "metadata": {
+                "docling_data": {
+                    "text": "What this talk is about"
+                },
+                "description": "What this talk is about"
+            }
+        },
+        {
+            "level": 1,
+            "title": "whatisobject-orientedprogramming?",
+            "page": 3,
+            "children": [],
+            "gold_unit": [
+                "document_13__heading.5cc8fd1c3bae9fc53fa98ce7e8ae3ccc",
+                "document_13__list_item.15",
+                "document_13__list_item.16",
+                "document_13__list_item.17",
+                "document_13__list_item.18",
+                "document_13__list_item.19",
+                "document_13__list_item.20",
+                "document_13__list_item.21",
+                "document_13__fig.22",
+                "document_13__p.497031794414a552435f90151ac3b54b.23"
+            ],
+            "metadata": {
+                "docling_data": {
+                    "text": "What is Object-Oriented Programming?"
+                },
+                "description": "What is Object-Oriented Programming?"
+            }
+        },
+        {
+            "level": 1,
+            "title": "iobjects&classes",
+            "page": 4,
+            "children": [],
+            "gold_unit": [
+                "document_13__heading.80adc890b004c13e95ba0bda6d9fd679",
+                "document_13__p.b52193d03038653ff1021b336b3a27c8.25"
+            ],
+            "metadata": {
+                "docling_data": {
+                    "text": "I. Objects & Classes"
+                },
+                "description": "I. Objects & Classes"
+            }
+        },
+        {
+            "level": 1,
+            "title": "wherearethese“objects”?",
+            "page": 5,
+            "children": [],
+            "gold_unit": [
+                "document_13__heading.298dd966e954b363ce782843c5248d01",
+                "document_13__list_item.27",
+                "document_13__list_item.28",
+                "document_13__list_item.29",
+                "document_13__list_item.30",
+                "document_13__list_item.31",
+                "document_13__list_item.32"
+            ],
+            "metadata": {
+                "docling_data": {
+                    "text": "Where are these 'objects'?"
+                },
+                "description": "Where are these 'objects'?"
+            }
+        },
+        {
+            "level": 1,
+            "title": "object",
+            "page": 6,
+            "children": [],
+            "gold_unit": [
+                "document_13__heading.497031794414a552435f90151ac3b54b",
+                "document_13__list_item.34",
+                "document_13__list_item.35",
+                "document_13__list_item.36",
+                "document_13__list_item.37",
+                "document_13__list_item.38",
+                "document_13__nottoc_heading.1c377ad0ffb080e09c5175d9054050af.39",
+                "document_13__list_item.40",
+                "document_13__p.8a713381a72adc26c1e13409d0bb7eca.41"
+            ],
+            "metadata": {
+                "docling_data": {
+                    "text": "Object"
+                },
+                "description": "Object"
+            }
+        },
+        {
+            "level": 1,
+            "title": "classes",
+            "page": 7,
+            "children": [],
+            "gold_unit": [
+                "document_13__heading.e9878b4854d29907146149f695cb1cfb",
+                "document_13__unknown_type.43",
+                "document_13__unknown_type.44",
+                "document_13__unknown_type.45",
+                "document_13__unknown_type.46",
+                "document_13__nottoc_heading.9bd81329febf6efe22788e03ddeaf0af.47",
+                "document_13__list_item.48",
+                "document_13__list_item.49",
+                "document_13__list_item.50",
+                "document_13__nottoc_heading.ee379d23670adc85072adf0e8df118df.51",
+                "document_13__list_item.52",
+                "document_13__list_item.53",
+                "document_13__nottoc_heading.63e027aa9ebecb42bf4ab3398081089d.54",
+                "document_13__list_item.55",
+                "document_13__list_item.56",
+                "document_13__nottoc_heading.3c1aac82863ed9e5a9aca8ce687f711d.57",
+                "document_13__list_item.58"
+            ],
+            "metadata": {
+                "docling_data": {
+                    "text": "Classes"
+                },
+                "description": "Classes"
+            }
+        },
+        {
+            "level": 1,
+            "title": "lifetimeofanobject",
+            "page": 8,
+            "children": [],
+            "gold_unit": [
+                "document_13__heading.8241155f6d850343cd257fcce33416ff",
+                "document_13__nottoc_heading.88d0dc4903a950a200e21b083dee275a.60",
+                "document_13__list_item.61",
+                "document_13__list_item.62",
+                "document_13__list_item.63",
+                "document_13__list_item.64",
+                "document_13__list_item.65",
+                "document_13__list_item.66",
+                "document_13__list_item.67",
+                "document_13__list_item.68",
+                "document_13__list_item.69",
+                "document_13__list_item.70",
+                "document_13__fig.71",
+                "document_13__p.27c0ad7a8ff8f9df8e13bb2d974c95d0.72"
+            ],
+            "metadata": {
+                "docling_data": {
+                    "text": "Lifetime of an Object"
+                },
+                "description": "Lifetime of an Object"
+            }
+        },
+        {
+            "level": 1,
+            "title": "allocation",
+            "page": 9,
+            "children": [],
+            "gold_unit": [
+                "document_13__heading.27c0ad7a8ff8f9df8e13bb2d974c95d0",
+                "document_13__nottoc_heading.25b2041508068fdef4e4f2f75cb47cd2.74",
+                "document_13__fig.75",
+                "document_13__unknown_type.76",
+                "document_13__list_item.77",
+                "document_13__list_item.78",
+                "document_13__list_item.79",
+                "document_13__list_item.80",
+                "document_13__fig.81",
+                "document_13__p.27c0ad7a8ff8f9df8e13bb2d974c95d0.82"
+            ],
+            "metadata": {
+                "docling_data": {
+                    "text": "Allocation"
+                },
+                "description": "Allocation"
+            }
+        },
+        {
+            "level": 1,
+            "title": "allocation",
+            "page": 10,
+            "children": [],
+            "gold_unit": [
+                "document_13__heading.27c0ad7a8ff8f9df8e13bb2d974c95d0",
+                "document_13__nottoc_heading.e5c38a4cc2294934f3d452af42c45430.84",
+                "document_13__unknown_type.85",
+                "document_13__fig.86",
+                "document_13__p.2187e1021a911b3807cc1bea2eb1a9ca.87",
+                "document_13__list_item.88",
+                "document_13__list_item.89",
+                "document_13__list_item.90",
+                "document_13__list_item.91",
+                "document_13__fig.92"
+            ],
+            "metadata": {
+                "docling_data": {
+                    "text": "Allocation"
+                },
+                "description": "Allocation"
+            }
+        },
+        {
+            "level": 1,
+            "title": "initialization",
+            "page": 11,
+            "children": [],
+            "gold_unit": [
+                "document_13__heading.61bcd96a2c1f8026527cbf2019d6e9a4",
+                "document_13__unknown_type.94",
+                "document_13__unknown_type.95",
+                "document_13__unknown_type.96",
+                "document_13__unknown_type.97",
+                "document_13__nottoc_heading.559a25fdb98a7d1fd1c3771ac568d5e9.98",
+                "document_13__list_item.99",
+                "document_13__list_item.100",
+                "document_13__list_item.101",
+                "document_13__fig.102",
+                "document_13__p.27c0ad7a8ff8f9df8e13bb2d974c95d0.103",
+                "document_13__unknown_type.104",
+                "document_13__fig.105"
+            ],
+            "metadata": {
+                "docling_data": {
+                    "text": "Initialization"
+                },
+                "description": "Initialization"
+            }
+        },
+        {
+            "level": 1,
+            "title": "usage",
+            "page": 12,
+            "children": [],
+            "gold_unit": [
+                "document_13__heading.c64518704ce0c0d5501a45763f464276"
+            ],
+            "metadata": {
+                "docling_data": {
+                    "text": "Usage"
+                },
+                "description": "Usage"
+            }
+        },
+        {
+            "level": 1,
+            "title": "cleanup",
+            "page": 13,
+            "children": [],
+            "gold_unit": [
+                "document_13__heading.8c6384dda98d8864d00e29dc96179970",
+                "document_13__unknown_type.108",
+                "document_13__unknown_type.109",
+                "document_13__unknown_type.110",
+                "document_13__nottoc_heading.22a8ec108d963f279c6a6a95aa960a57.111",
+                "document_13__list_item.112",
+                "document_13__list_item.113",
+                "document_13__fig.114",
+                "document_13__p.27c0ad7a8ff8f9df8e13bb2d974c95d0.115"
+            ],
+            "metadata": {
+                "docling_data": {
+                    "text": "Cleanup"
+                },
+                "description": "Cleanup"
+            }
+        },
+        {
+            "level": 1,
+            "title": "deletion",
+            "page": 14,
+            "children": [],
+            "gold_unit": [
+                "document_13__heading.a1998652b01bdc9e7128734efb804780",
+                "document_13__nottoc_heading.16f58df4d80c4ca77b4e3c3646488d64.117",
+                "document_13__fig.118",
+                "document_13__unknown_type.119",
+                "document_13__p.71f3dc149f4d051206c7b6a0898c2215.120",
+                "document_13__fig.121"
+            ],
+            "metadata": {
+                "docling_data": {
+                    "text": "Deletion"
+                },
+                "description": "Deletion"
+            }
+        },
+        {
+            "level": 1,
+            "title": "deletion",
+            "page": 15,
+            "children": [],
+            "gold_unit": [
+                "document_13__heading.a1998652b01bdc9e7128734efb804780",
+                "document_13__nottoc_heading.395a9be33d9126b7eaf81130cfa58b11.123",
+                "document_13__unknown_type.124",
+                "document_13__p.2f8ed7fafd3c1784a3be4da8eb3d106a.125",
+                "document_13__unknown_type.126",
+                "document_13__fig.127",
+                "document_13__p.2187e1021a911b3807cc1bea2eb1a9ca.128"
+            ],
+            "metadata": {
+                "docling_data": {
+                    "text": "Deletion"
+                },
+                "description": "Deletion"
+            }
+        },
+        {
+            "level": 1,
+            "title": "staticclassmembers",
+            "page": 16,
+            "children": [],
+            "gold_unit": [
+                "document_13__heading.036f3b43cffca1b8b230102d8eaaba05",
+                "document_13__unknown_type.130",
+                "document_13__unknown_type.131",
+                "document_13__nottoc_heading.e9832a7a6ffdfee01e1f9472fb0e7c2b.132",
+                "document_13__list_item.133",
+                "document_13__list_item.134",
+                "document_13__list_item.135",
+                "document_13__list_item.136",
+                "document_13__unknown_type.137",
+                "document_13__nottoc_heading.5b6653e670697f4730d2654225cabf30.138",
+                "document_13__list_item.139",
+                "document_13__list_item.140",
+                "document_13__list_item.141",
+                "document_13__unknown_type.142"
+            ],
+            "metadata": {
+                "docling_data": {
+                    "text": "Static class members"
+                },
+                "description": "Static class members"
+            }
+        },
+        {
+            "level": 1,
+            "title": "iibuildingobjects",
+            "page": 17,
+            "children": [],
+            "gold_unit": [
+                "document_13__heading.e60767763cacb5e21f4020d1a9db3117",
+                "document_13__p.92323dae40badbbcc2f06a73f0e97f24.144"
+            ],
+            "metadata": {
+                "docling_data": {
+                    "text": "II. Building objects"
+                },
+                "description": "II. Building objects"
+            }
+        },
+        {
+            "level": 1,
+            "title": "abstractions",
+            "page": 18,
+            "children": [],
+            "gold_unit": [
+                "document_13__heading.d0eda14b715cec8e021b59dc6e6f197b",
+                "document_13__p.3e89aff46ae49b14d14ca4033fff1643.146",
+                "document_13__nottoc_heading.1ee3f6ee0cc070b45e0c399f9fa92690.147",
+                "document_13__fig.148",
+                "document_13__p.9b4dabc50f0b8ccba1c8981831abdad8.149",
+                "document_13__nottoc_heading.4eeb725908e1f0f4d64330c9b3ea1434.150",
+                "document_13__fig.151",
+                "document_13__p.f04a23723f30b64a9e0db83af010230e.152"
+            ],
+            "metadata": {
+                "docling_data": {
+                    "text": "Abstractions"
+                },
+                "description": "Abstractions"
+            }
+        },
+        {
+            "level": 1,
+            "title": "composition",
+            "page": 19,
+            "children": [],
+            "gold_unit": [
+                "document_13__heading.53eff24a355b7ae55f0aa2bef39bb24c",
+                "document_13__unknown_type.154",
+                "document_13__p.2f8ed7fafd3c1784a3be4da8eb3d106a.155",
+                "document_13__p.2145c1b6992c0d519ad223f91671329b.156",
+                "document_13__list_item.157",
+                "document_13__list_item.158",
+                "document_13__fig.159",
+                "document_13__p.7bfa30721c5e726ff17e3f972237a82c.160"
+            ],
+            "metadata": {
+                "docling_data": {
+                    "text": "Composition"
+                },
+                "description": "Composition"
+            }
+        },
+        {
+            "level": 1,
+            "title": "encapsulation",
+            "page": 20,
+            "children": [],
+            "gold_unit": [
+                "document_13__heading.43b1c2e11d5fac4356c9b5ba7ac1dc6b",
+                "document_13__unknown_type.162",
+                "document_13__fig.163",
+                "document_13__p.ca7ce2eb36496590cba96663a7a264ef.164",
+                "document_13__list_item.165",
+                "document_13__list_item.166",
+                "document_13__list_item.167",
+                "document_13__list_item.168",
+                "document_13__list_item.169",
+                "document_13__list_item.170"
+            ],
+            "metadata": {
+                "docling_data": {
+                    "text": "Encapsulation"
+                },
+                "description": "Encapsulation"
+            }
+        },
+        {
+            "level": 1,
+            "title": "problemswithoutencapsulation",
+            "page": 21,
+            "children": [],
+            "gold_unit": [
+                "document_13__heading.ce2de8a9b26b913af20f25924412565b",
+                "document_13__unknown_type.172",
+                "document_13__unknown_type.173",
+                "document_13__unknown_type.174",
+                "document_13__p.7979aa059bc1470c87dee56fdb5755ac.175",
+                "document_13__unknown_type.176"
+            ],
+            "metadata": {
+                "docling_data": {
+                    "text": "Problems without Encapsulation"
+                },
+                "description": "Problems without Encapsulation"
+            }
+        },
+        {
+            "level": 1,
+            "title": "typehierarchiesandinheritance",
+            "page": 22,
+            "children": [],
+            "gold_unit": [
+                "document_13__heading.ccbc5ad3cadaa831b9261430ec2f6736",
+                "document_13__list_item.178",
+                "document_13__list_item.179",
+                "document_13__list_item.180",
+                "document_13__list_item.181",
+                "document_13__list_item.182",
+                "document_13__list_item.183",
+                "document_13__fig.184",
+                "document_13__p.d8a685508fa149af8a627b6c33604e33.185"
+            ],
+            "metadata": {
+                "docling_data": {
+                    "text": "Type hierarchies and Inheritance"
+                },
+                "description": "Type hierarchies and Inheritance"
+            }
+        },
+        {
+            "level": 1,
+            "title": "typehierarchiesandinheritance",
+            "page": 23,
+            "children": [],
+            "gold_unit": [
+                "document_13__heading.ccbc5ad3cadaa831b9261430ec2f6736",
+                "document_13__fig.187",
+                "document_13__p.80d404bee7d7521bdbdfffd6922132dd.188"
+            ],
+            "metadata": {
+                "docling_data": {
+                    "text": "Type hierarchies and Inheritance"
+                },
+                "description": "Type hierarchies and Inheritance"
+            }
+        },
+        {
+            "level": 1,
+            "title": "typehierarchiesandinheritance",
+            "page": 24,
+            "children": [],
+            "gold_unit": [
+                "document_13__heading.ccbc5ad3cadaa831b9261430ec2f6736",
+                "document_13__unknown_type.190",
+                "document_13__unknown_type.191",
+                "document_13__unknown_type.192",
+                "document_13__unknown_type.193",
+                "document_13__unknown_type.194",
+                "document_13__unknown_type.195",
+                "document_13__p.df107f51fdc8ef7dada16b1e21dbdc6d.196",
+                "document_13__unknown_type.197",
+                "document_13__unknown_type.198",
+                "document_13__nottoc_heading.371fedf6ee6747b1de368aafb08094e8.199",
+                "document_13__unknown_type.200",
+                "document_13__list_item.201",
+                "document_13__list_item.202",
+                "document_13__list_item.203",
+                "document_13__nottoc_heading.371fedf6ee6747b1de368aafb08094e8.204",
+                "document_13__unknown_type.205",
+                "document_13__list_item.206",
+                "document_13__list_item.207",
+                "document_13__nottoc_heading.af4f6c1cebd1c8fea1706dfd9f4c008b.208",
+                "document_13__unknown_type.209",
+                "document_13__list_item.210",
+                "document_13__list_item.211",
+                "document_13__list_item.212",
+                "document_13__nottoc_heading.4c381190f908d9e97f76bf7d429147f6.213",
+                "document_13__list_item.214",
+                "document_13__list_item.215",
+                "document_13__list_item.216",
+                "document_13__list_item.217",
+                "document_13__list_item.218",
+                "document_13__nottoc_heading.e72b6c0c4d506e78733c6cd0e751ead0.219",
+                "document_13__p.6c56cf9b49f7c9a7940aff3595e62f76.220",
+                "document_13__nottoc_heading.868d1dfce39a2158606b8e4b4e8ba46e.221",
+                "document_13__list_item.222",
+                "document_13__list_item.223",
+                "document_13__list_item.224",
+                "document_13__list_item.225",
+                "document_13__list_item.226",
+                "document_13__list_item.227",
+                "document_13__list_item.228",
+                "document_13__list_item.229",
+                "document_13__list_item.230",
+                "document_13__list_item.231",
+                "document_13__list_item.232",
+                "document_13__nottoc_heading.d4992fc9ac55214dfed8e9b7f571282c.233",
+                "document_13__unknown_type.234",
+                "document_13__nottoc_heading.76a71600b31e421cf45d21e3ca4865aa.235",
+                "document_13__unknown_type.236",
+                "document_13__nottoc_heading.2b14dd62fcabd6683db6ad96b2ed99fb.237",
+                "document_13__list_item.238",
+                "document_13__unknown_type.239",
+                "document_13__unknown_type.240",
+                "document_13__nottoc_heading.2a5697fb99f7be23600bbe9c3282c100.241",
+                "document_13__list_item.242",
+                "document_13__unknown_type.243",
+                "document_13__unknown_type.244",
+                "document_13__p.d24e2a08dafb6804a46fd8421739b561.245",
+                "document_13__nottoc_heading.d3d84226727f89b017c4c08031743dcc.246",
+                "document_13__list_item.247",
+                "document_13__list_item.248",
+                "document_13__list_item.249",
+                "document_13__list_item.250",
+                "document_13__list_item.251",
+                "document_13__list_item.252",
+                "document_13__list_item.253",
+                "document_13__list_item.254",
+                "document_13__list_item.255",
+                "document_13__list_item.256",
+                "document_13__nottoc_heading.475ae918a90c6f9956005c270e70c41f.257",
+                "document_13__list_item.258",
+                "document_13__list_item.259",
+                "document_13__list_item.260",
+                "document_13__list_item.261",
+                "document_13__nottoc_heading.63b0fc205cafcb042217a5d4e43df8f1.262",
+                "document_13__nottoc_heading.539a58abdda249d31535f5ee85f39858.263",
+                "document_13__list_item.264",
+                "document_13__list_item.265",
+                "document_13__list_item.266",
+                "document_13__list_item.267",
+                "document_13__list_item.268",
+                "document_13__p.d2092be3d5588c4a59167b6ad18cd930.269",
+                "document_13__list_item.270",
+                "document_13__list_item.271",
+                "document_13__list_item.272",
+                "document_13__list_item.273",
+                "document_13__list_item.274",
+                "document_13__list_item.275",
+                "document_13__list_item.276",
+                "document_13__nottoc_heading.89dd1d4e4973dec15b1200c064b5de4a.277",
+                "document_13__list_item.278",
+                "document_13__list_item.279",
+                "document_13__list_item.280",
+                "document_13__list_item.281",
+                "document_13__list_item.282",
+                "document_13__list_item.283",
+                "document_13__list_item.284",
+                "document_13__list_item.285",
+                "document_13__list_item.286",
+                "document_13__list_item.287",
+                "document_13__list_item.288",
+                "document_13__nottoc_heading.efa747b2dee79984e49360b28c71f574.289",
+                "document_13__list_item.290",
+                "document_13__list_item.291",
+                "document_13__list_item.292",
+                "document_13__list_item.293",
+                "document_13__list_item.294",
+                "document_13__list_item.295",
+                "document_13__list_item.296",
+                "document_13__list_item.297",
+                "document_13__nottoc_heading.539a58abdda249d31535f5ee85f39858.298",
+                "document_13__nottoc_heading.0ab63a37c3bced3962ad708727c7be49.299",
+                "document_13__unknown_type.300",
+                "document_13__unknown_type.301",
+                "document_13__nottoc_heading.539a58abdda249d31535f5ee85f39858.302",
+                "document_13__nottoc_heading.8601c10b2797050a900697daac0c0001.303",
+                "document_13__list_item.304",
+                "document_13__list_item.305",
+                "document_13__list_item.306",
+                "document_13__list_item.307",
+                "document_13__list_item.308",
+                "document_13__list_item.309",
+                "document_13__nottoc_heading.257cdd9207450e9816606c5b2f289d17.310",
+                "document_13__unknown_type.311",
+                "document_13__nottoc_heading.d2092be3d5588c4a59167b6ad18cd930.312",
+                "document_13__unknown_type.313",
+                "document_13__nottoc_heading.83de191c12c3c109006c4593128d8bb6.314",
+                "document_13__list_item.315",
+                "document_13__list_item.316",
+                "document_13__list_item.317",
+                "document_13__list_item.318",
+                "document_13__list_item.319",
+                "document_13__list_item.320",
+                "document_13__list_item.321",
+                "document_13__nottoc_heading.d5b1065d3323258bdbeaf51873e2e0ac.322",
+                "document_13__unknown_type.323",
+                "document_13__nottoc_heading.89dd1d4e4973dec15b1200c064b5de4a.324",
+                "document_13__unknown_type.325",
+                "document_13__nottoc_heading.4595395cc32a0c92034183d9a38a7059.326",
+                "document_13__p.eb4a6e09ab1a90057cd3b2fb7129d328.327",
+                "document_13__nottoc_heading.db47c9e09b95d0ebcacf6aca15e3fc7f.328",
+                "document_13__list_item.329",
+                "document_13__list_item.330",
+                "document_13__list_item.331",
+                "document_13__list_item.332",
+                "document_13__list_item.333",
+                "document_13__list_item.334",
+                "document_13__list_item.335",
+                "document_13__nottoc_heading.0a39663464728c38a95a0aa954b399a1.336",
+                "document_13__list_item.337",
+                "document_13__list_item.338",
+                "document_13__list_item.339",
+                "document_13__list_item.340",
+                "document_13__list_item.341",
+                "document_13__list_item.342",
+                "document_13__list_item.343",
+                "document_13__list_item.344",
+                "document_13__nottoc_heading.49cb9ce7709ed32c375cc1b0209424ae.345",
+                "document_13__list_item.346",
+                "document_13__list_item.347",
+                "document_13__list_item.348",
+                "document_13__list_item.349",
+                "document_13__list_item.350",
+                "document_13__list_item.351"
+            ],
+            "metadata": {
+                "docling_data": {
+                    "text": "Type hierarchies and Inheritance"
+                },
+                "description": "Type hierarchies and Inheritance"
+            }
+        },
+        {
+            "level": 1,
+            "title": "inheritance",
+            "page": 25,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "inheritance",
+            "page": 26,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "polymorphism",
+            "page": 27,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "polymorphism",
+            "page": 28,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "abstractclasses",
+            "page": 29,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "is-avshas-arelationship",
+            "page": 30,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "iiibestpractices",
+            "page": 31,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "keepyourinterfacessimplecleanandconsistent",
+            "page": 32,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "getters&setters",
+            "page": 33,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "lazyinitialization",
+            "page": 34,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "baseclassdestructorsshouldbevirtual",
+            "page": 35,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "don’tusevirtualfunctionsduringconstructionanddestruction",
+            "page": 36,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "don’treinventthewheel",
+            "page": 37,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "designpatterns",
+            "page": 38,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "designpatterns:maincategories",
+            "page": 39,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "factorymethods",
+            "page": 40,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "factorymethods–simpleexample",
+            "page": 41,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "adapter",
+            "page": 42,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "adapter–example",
+            "page": 43,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "strategy",
+            "page": 44,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "strategy-example",
+            "page": 45,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "ivconclusion",
+            "page": 46,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "benefitsofoop",
+            "page": 47,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "problemsofoop",
+            "page": 48,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "finalrecommendations",
+            "page": 49,
+            "children": []
+        }
+    ],
+    "metadata": {
+        "description": ""
+    }
+}

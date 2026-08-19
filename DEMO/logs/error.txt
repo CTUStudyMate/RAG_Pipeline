@@ -65,3 +65,49 @@ PROCESSING RUN START | document_id=10 | processing_run_id=359b945a-1ad4-4974-a52
 2026-08-12T10:30:27.083401+00:00 | Parsing PDF content.
 2026-08-12T11:16:58.822962+00:00 | Creating document chunks.
 2026-08-12T11:17:09.972041+00:00 | Document processing completed. chunk_count=0
+
+
+================================================================================
+PROCESSING RUN START | document_id=11 | processing_run_id=b33ff32c-16ff-4c52-b162-11e66420b560 | started_at=2026-08-17T05:01:39.116395+00:00
+================================================================================
+2026-08-17T05:01:39.156557+00:00 | Starting document processing.
+2026-08-17T05:01:41.350646+00:00 | Downloading PDF.
+2026-08-17T05:03:50.208442+00:00 | Parsing PDF content.
+2026-08-17T05:13:06.365176+00:00 | Creating document chunks.
+2026-08-17T05:13:07.001806+00:00 | Indexing searchable chunks.
+2026-08-17T05:14:28.618516+00:00 | Document processing completed. chunk_count=59
+
+
+================================================================================
+PROCESSING RUN START | document_id=12 | processing_run_id=386c75e7-4b2e-4d88-8085-fad69109c59b | started_at=2026-08-19T18:28:27.938299+00:00
+================================================================================
+2026-08-19T18:28:27.953528+00:00 | Starting document processing.
+2026-08-19T18:28:28.890492+00:00 | Downloading PDF.
+2026-08-19T18:29:01.017693+00:00 | Parsing PDF content.
+
+
+================================================================================
+PROCESSING RUN START | document_id=13 | processing_run_id=29ae0db6-fa2b-4e18-8be4-77a8ffd2c627 | started_at=2026-08-19T18:52:23.390685+00:00
+================================================================================
+2026-08-19T18:52:23.405720+00:00 | Starting document processing.
+2026-08-19T18:52:24.331526+00:00 | Downloading PDF.
+2026-08-19T18:52:50.253655+00:00 | Parsing PDF content.
+2026-08-19T18:55:23.748527+00:00 | Creating document chunks.
+2026-08-19T18:55:24.465124+00:00 | Indexing searchable chunks.
+2026-08-19T18:56:42.351067+00:00 | Document processing completed. chunk_count=61
+
+
+================================================================================
+PROCESSING RUN START | document_id=14 | processing_run_id=2f70a011-84f1-4daf-a9e6-cfb34d402c04 | started_at=2026-08-19T18:56:42.373132+00:00
+================================================================================
+2026-08-19T18:56:42.382205+00:00 | Starting document processing.
+2026-08-19T18:56:42.996026+00:00 | Downloading PDF.
+2026-08-19T18:56:44.221478+00:00 | Parsing PDF content.
+
+
+================================================================================
+PROCESSING RUN START | document_id=15 | processing_run_id=80c314fd-a030-49e5-99cc-560c3d1911bb | started_at=2026-08-19T19:25:38.348000+00:00
+================================================================================
+2026-08-19T19:25:38.368484+00:00 | Starting document processing.
+2026-08-19T19:25:39.250127+00:00 | Downloading PDF.
+2026-08-19T19:25:51.502269+00:00 | Parsing PDF content.

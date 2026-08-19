@@ -21906,3 +21906,1228 @@ PROCESSING RUN START | document_id=10 | processing_run_id=359b945a-1ad4-4974-a52
   ],
   "token_count": 131988
 }
+
+
+================================================================================
+PROCESSING RUN START | document_id=11 | processing_run_id=b33ff32c-16ff-4c52-b162-11e66420b560 | started_at=2026-08-17T05:01:39.116395+00:00
+================================================================================
+{
+  "level": 0,
+  "title": "ROOT",
+  "children": [],
+  "metadata": {
+    "description": ""
+  },
+  "gold_unit": [
+    "document_11__nottoc_heading.2aedacf4e1d4512d532babb7e90ca729.0",
+    "document_11__p.626ff827ae3c64f6b00dab76231daf5a.1",
+    "document_11__p.c159593a0a350da6de5312f65041111c.2",
+    "document_11__nottoc_heading.57dfd4754dae1003af4d0da5c4da436b.3",
+    "document_11__p.488f35ecbb1e86e33117cfb5516ccca1.4",
+    "document_11__p.66dc096cfd82aaf529779e369c87dbf2.5",
+    "document_11__list_item.6",
+    "document_11__list_item.7",
+    "document_11__p.9d9fe7e29ec32b36043e5c95cc593d7b.8",
+    "document_11__p.ce118123f28505e52caed3317780bc0b.9",
+    "document_11__nottoc_heading.9b4843cfd84f698c4309de0590303526.10",
+    "document_11__p.0169ecb843108d950482ec782371e451.11",
+    "document_11__p.cc8e7e164df6c2244b5b418debef2bc9.12",
+    "document_11__p.5fadf530632b1bfd069d201d93baa077.13",
+    "document_11__p.b86e788223c922a17c247257ede15b8d.14",
+    "document_11__p.d7d8593de976908c5970bd2357cb3f40.15",
+    "document_11__p.1796dd42d57f8ce310da141603c27983.16",
+    "document_11__p.732c6bd880d8de3d4bcc5ccf1ec99b74.17",
+    "document_11__p.aac0cff922c48f1a9a93c038eced7cc5.18",
+    "document_11__p.7f55d653684daab5bf81d09c0743cecf.19",
+    "document_11__p.334dbf24f095dd39ca50c8acc5e179d1.20",
+    "document_11__p.114c6bd97b69ece77831b848904c1913.21",
+    "document_11__nottoc_heading.6b827d72cc7e04e8b8e140e5d92c73db.22",
+    "document_11__p.1d0f1c5c94302a4d5fd918e7284113ee.23",
+    "document_11__p.929d4d4b7370cad28fa8efd0bb003407.24",
+    "document_11__nottoc_heading.49b3d1919ad446e989fc49fb14366d9c.25",
+    "document_11__p.4138582cec265091049fd3509b14cf77.26",
+    "document_11__p.465cda39729e1802338d6c28867b4f46.27",
+    "document_11__p.9fe3c1708a01186174dc5df1241c0736.28",
+    "document_11__nottoc_heading.0b99de79de965dbb254fe5147d15d75d.29",
+    "document_11__nottoc_heading.4bc33adab1becd592dab0909d5f7e1d0.30",
+    "document_11__p.d4562382c45a1144859c6eb19bd633b7.31",
+    "document_11__p.d6fa1c9c49ece06b41088aea47ead58a.32",
+    "document_11__footnote.33",
+    "document_11__footnote.34",
+    "document_11__p.d77f988f77c311a1098e1346bfbf48aa.35",
+    "document_11__p.871ae9b7cf093214c7f470aed115f771.36",
+    "document_11__nottoc_heading.ce6ba145b7d7bd51a3436350281f5ae7.37",
+    "document_11__p.7d9a2f1b5ba5c7720e320ce601a7608c.38",
+    "document_11__unknown_type.39",
+    "document_11__p.300daa2764b9e747f06badd3da1d2ae8.40",
+    "document_11__p.8529a1afcaa8d0772de65b351e908691.41",
+    "document_11__unknown_type.42",
+    "document_11__p.0813e3aad403a7b741bccf2bf8ae530a.43",
+    "document_11__p.c4dd505ea55b75ed5ee54c57e926f411.44",
+    "document_11__fig.45",
+    "document_11__caption.46",
+    "document_11__nottoc_heading.9a39c833131eca83292e86e82ac343f2.47",
+    "document_11__unknown_type.48",
+    "document_11__unknown_type.49",
+    "document_11__nottoc_heading.9a39c833131eca83292e86e82ac343f2.50",
+    "document_11__nottoc_heading.bdff4b79bb7a4c5ef4b57a4be50760d2.51",
+    "document_11__unknown_type.52",
+    "document_11__p.a4410684c73fd0b7c9d5153a1b980119.53",
+    "document_11__nottoc_heading.27251ab375acf69da09adcc009501187.54",
+    "document_11__nottoc_heading.a87b0186c9c929b965881125f0112308.55",
+    "document_11__unknown_type.56",
+    "document_11__p.e17cfb2c6112e33bc02e31b1e7bc3e99.57",
+    "document_11__p.7cefa260d42261ee676949940022e7c3.58",
+    "document_11__nottoc_heading.613b21bdb588744a33672ed21fe6456f.59",
+    "document_11__p.0e980108cc6662a098fd6c6badac07e0.60",
+    "document_11__p.7805fd3950885b13519ba044b930f5b1.61",
+    "document_11__p.461c8ea43fb83df4f3339d5ef7b0cf44.62",
+    "document_11__fig.63",
+    "document_11__caption.64",
+    "document_11__p.1084a84c1aaeeeea6a8b7a951795c726.65",
+    "document_11__unknown_type.66",
+    "document_11__unknown_type.67",
+    "document_11__p.1427b04922c5ee7cdd62943ed4ee981a.68",
+    "document_11__list_item.69",
+    "document_11__list_item.70",
+    "document_11__p.25915d2ea4f399b3dcb515b31f89b02a.71",
+    "document_11__fig.72",
+    "document_11__caption.73",
+    "document_11__p.8635498ad3b65983de7e598914e9afe1.74",
+    "document_11__fig.75",
+    "document_11__caption.76",
+    "document_11__p.3e8f4c4a2d25d77e119faacad0fe5ab2.77",
+    "document_11__nottoc_heading.34dcc7964993f6c345185764acdd9b79.78",
+    "document_11__nottoc_heading.67e2d1a043e0503a891491dab741638e.79",
+    "document_11__unknown_type.80",
+    "document_11__p.cb0ffeea22a885c3c60be05e744424df.81",
+    "document_11__p.0ffa0dc1d21f80f562bc7c87fca32dc5.82",
+    "document_11__unknown_type.83",
+    "document_11__p.36d1faf7fcce65ade44189ed2787d4ac.84",
+    "document_11__p.564b626e8f975f3d4cb645fcbdd584a0.85",
+    "document_11__p.fb4a3bcc1dbe18c0150c162908be19a9.86",
+    "document_11__p.e1ed968f8b50c7234e966bc009944bd1.87",
+    "document_11__p.2c81eb66f5df746d05d27e2cd5fcf15d.88",
+    "document_11__p.1fe58975d6d4d2ad24c0e95c6aedf57b.89",
+    "document_11__list_item.90",
+    "document_11__list_item.91",
+    "document_11__p.70950c511bae6fb3d246509d7978e4f4.92",
+    "document_11__p.69178289cb6543d33b8288824cb99d5e.93",
+    "document_11__p.bfb25567f682e5e8d610621d14b7bc67.94",
+    "document_11__nottoc_heading.ecddc821e856cec99f8b9f50d8d71e9b.95",
+    "document_11__p.5ea9e13e79aa78a15e42c0f7f7caf36a.96",
+    "document_11__unknown_type.97",
+    "document_11__unknown_type.98",
+    "document_11__unknown_type.99",
+    "document_11__nottoc_heading.3e5abdda5d0c05cac002aa2143f438a9.100",
+    "document_11__p.9c7744209cc1020ba5db93e4a86ed4a5.101",
+    "document_11__p.d9b51814c6222b7f4ad2251609ef66d4.102",
+    "document_11__p.a508ab4ca578244d9e6fa521061c9d42.103",
+    "document_11__p.aa9251e08c4688a97f7cc94bca5a7ef7.104",
+    "document_11__p.1c842ef835d9157403dc507bb890cbee.105",
+    "document_11__p.edf902b88869b01713ad96641b149fa4.106",
+    "document_11__unknown_type.107",
+    "document_11__fig.108",
+    "document_11__caption.109",
+    "document_11__fig.110",
+    "document_11__caption.111",
+    "document_11__p.e2b76126b401c7faabed59a34dca176e.112",
+    "document_11__p.70088c2de40323980ee55d8743312646.113",
+    "document_11__p.20a33f60ac04e81e9f064ecb57fd11b8.114",
+    "document_11__p.d68b73caea74f5e76bbdd0c62b27f2f7.115",
+    "document_11__p.6cbff52fd178f17c66abc8f3b14ad23b.116",
+    "document_11__p.773be916fc41ac645f5705531ac71d87.117",
+    "document_11__nottoc_heading.c55d5a8f291ee5a408aaf5fbec418973.118",
+    "document_11__p.3819b948c3e1ee331be3e58f96f93608.119",
+    "document_11__p.b7b55fb6dc43f60c9ab7d7c633a6d9f7.120",
+    "document_11__footnote.121",
+    "document_11__footnote.122",
+    "document_11__caption.123",
+    "document_11__fig.124",
+    "document_11__caption.125",
+    "document_11__p.e0efae60992861b5588303ef7d065a94.126",
+    "document_11__p.2c112e6de6cd6b106b0c3fd26b9ec568.127",
+    "document_11__p.b4b36182593fc5c2f31450ef15a5be3a.128",
+    "document_11__p.ac56ef5e890c2bf055235b2170a18d89.129",
+    "document_11__p.fc0602fa2290882406a923b8b9377777.130",
+    "document_11__fig.131",
+    "document_11__caption.132",
+    "document_11__p.0a63dde21170fc9a68442a92943923d0.133",
+    "document_11__unknown_type.134",
+    "document_11__p.daba184b7cdc27fb44879167ea4f1323.135",
+    "document_11__nottoc_heading.e183abe31b77e4fc40e51c5608f7c61d.136",
+    "document_11__p.685215e0bbb21c0c0860780b6665ddab.137",
+    "document_11__p.c74d97b01eae257e44aa9d5bade97baf.138",
+    "document_11__nottoc_heading.5fb6091e4823d5bbe82710e23d0ab662.139",
+    "document_11__p.6657c26451ed11a906307152c048eefc.140",
+    "document_11__p.66226296f99b1986261c7940f56bdb3e.141",
+    "document_11__p.b3b5bcd54ca2407c7850094b233592ea.142",
+    "document_11__nottoc_heading.7cda423b59b2b5f364591cff8c3b84bb.143",
+    "document_11__p.3bc74a74da334f84620de54873fab826.144",
+    "document_11__p.80df1af90473587e0a6610408973d0e6.145",
+    "document_11__p.4a741b851728a4206e5fb51aa35cd863.146",
+    "document_11__nottoc_heading.c1fad8a8bb61027c1c7c3d40b937489d.147",
+    "document_11__p.b5c01497e728c2ed9f193e859dbfce7d.148",
+    "document_11__p.2f3d9ec708386b68476f036e91227abd.149",
+    "document_11__list_item.150",
+    "document_11__list_item.151",
+    "document_11__list_item.152",
+    "document_11__p.68720860b1dfeed85e5367cfadca7485.153",
+    "document_11__p.d02f08e6916d42c2e92b92a27ad3e265.154",
+    "document_11__p.16053b73ea54bc01202eda5ea0b712c3.155",
+    "document_11__nottoc_heading.1b480964e13559fc71255d10eace71a5.156",
+    "document_11__p.dd426dacb5057598739ed445d7c36ef4.157",
+    "document_11__p.60b837b0fbaf742c56b8662edac374cb.158",
+    "document_11__nottoc_heading.f6fd5080a774c3712064b35805ddc085.159",
+    "document_11__p.e0ad7868d18dae3a0dc38e6d09661ea1.160",
+    "document_11__nottoc_heading.da58940bd6eed41ea57912ce7fcf8d47.161",
+    "document_11__p.b7b8bd3ef6274bee8af4b25e153b97f7.162",
+    "document_11__p.4ac77b74d3c3273af26438b332ebcb66.163",
+    "document_11__list_item.164",
+    "document_11__p.082a0ef9f3647f066140c9179e31c390.165",
+    "document_11__p.a0832661b9b043cdf112e4030cddaa32.166",
+    "document_11__fig.167",
+    "document_11__caption.168",
+    "document_11__p.d38ee0c802daea5fbf9f8994b9bdb9e1.169",
+    "document_11__p.cbcda56c31c09da9985fd6f370b2908c.170",
+    "document_11__fig.171",
+    "document_11__caption.172",
+    "document_11__p.5f411f733fe5c4056cc1883a1577b5ae.173",
+    "document_11__p.9d777a23d3b741c5e9cd571227fd497d.174",
+    "document_11__p.7368cf8128829c17324a947bc5f22fc7.175",
+    "document_11__p.0f8683f8d9ac2cd9f4f1da90b62572d6.176",
+    "document_11__caption.177",
+    "document_11__fig.178",
+    "document_11__caption.179",
+    "document_11__p.cd90789e889ceee52299e30a0d30c857.180",
+    "document_11__p.ee1409d6251b743953f9e328d6fdd385.181",
+    "document_11__p.61a563ddd7bc7c9f75add9ebf54e534a.182",
+    "document_11__p.ee1d7e1ca73fa45130d3e8b760d02430.183",
+    "document_11__fig.184",
+    "document_11__caption.185",
+    "document_11__nottoc_heading.927a4a3dd2e299f978cd7378b6184507.186",
+    "document_11__p.ef5f894cdbd5d4735115ea388ef5a8e8.187",
+    "document_11__p.6e8ef129f3143bc0e25b0014a3c77eff.188",
+    "document_11__p.78b6bedb06f896a6bc7a897ed826dabc.189",
+    "document_11__footnote.190",
+    "document_11__p.b16ddb551f5061f2e02d9c02196ffa8a.191",
+    "document_11__p.43357c9f84a8ee655f48f4b08d89f9b8.192",
+    "document_11__p.560fbcb7d81edd42240b254fa47c6674.193",
+    "document_11__fig.194",
+    "document_11__caption.195",
+    "document_11__p.ed153e905f89d5d030e4c42e1750eccc.196",
+    "document_11__p.fb91dcbc869b9fb9c15f2af04f336de7.197",
+    "document_11__p.86fa65e7d89e87de7b229b687cac8a79.198",
+    "document_11__list_item.199",
+    "document_11__fig.200",
+    "document_11__p.57cec4137b614c87cb4e24a3d003a3e0.201",
+    "document_11__nottoc_heading.b27d92255ffefb62ab5c73aee6b94de3.202",
+    "document_11__p.c3c07c90a4304c8e7dea69ecfda117a3.203",
+    "document_11__list_item.204",
+    "document_11__list_item.205",
+    "document_11__p.1492e192310093e83de6edf16d9fa94d.206",
+    "document_11__p.b1d5cd5d16c5eb9f71b34aae0d1007ea.207",
+    "document_11__p.8acf39114001f94bec8fb1caff1ab7b1.208",
+    "document_11__p.141b4b95e7c60e9020689730a4839337.209",
+    "document_11__nottoc_heading.f4de020505ee18af8dc2a600bc0b9a06.210",
+    "document_11__p.be26062e58c44441e66d33d82fb6365d.211",
+    "document_11__fig.212",
+    "document_11__caption.213",
+    "document_11__p.3bf8b4ed8584fe791f64fd1c5e0c1034.214",
+    "document_11__p.da1b3fe446d8ac408bd9750632884b2e.215",
+    "document_11__p.ba2591a149fe9f8dc7439a95fc1c8652.216",
+    "document_11__p.9e97cf27dbaddd1348436eb5d186900d.217",
+    "document_11__p.107ca73c582e260ddbd8548bf5d9f5dc.218",
+    "document_11__p.4c6d557a2833823b69f79fe70905620a.219",
+    "document_11__list_item.220",
+    "document_11__list_item.221",
+    "document_11__list_item.222",
+    "document_11__list_item.223",
+    "document_11__p.4f1fe866b1ce1e08643ae41123d840e0.224",
+    "document_11__p.c55b5c7d5b32254ceb80ac47effde999.225",
+    "document_11__fig.226",
+    "document_11__caption.227",
+    "document_11__p.13a08f3e46bda1d3874706d5e543a5a8.228",
+    "document_11__fig.229",
+    "document_11__caption.230",
+    "document_11__p.9a64ddab8eb41e402bd6acef493b02a2.231",
+    "document_11__p.af8909348d8b72bf3381b1a42025a2ad.232",
+    "document_11__p.c4a2b7f877d1b8c87c50ac2ddc54e5e1.233",
+    "document_11__formula.234",
+    "document_11__list_item.235",
+    "document_11__p.5426c4906093dd1e85b11f2e839bfda3.236",
+    "document_11__nottoc_heading.a526e9f4ae97a3739236f7b1a691f762.237",
+    "document_11__p.08b415bc2ac05d7ee5e8ce8062003dcc.238",
+    "document_11__p.2f3b970b785d8386dcd995e33bb32777.239",
+    "document_11__p.32f3b1378ce3c197516a62501c3a66f5.240",
+    "document_11__p.c19ac12234429a4900f3e0b502e05150.241",
+    "document_11__nottoc_heading.d3a4eebba9e580f40a91fba343585c8e.242",
+    "document_11__p.0e4981e207b0c4ef3fab74c63aca2ef4.243",
+    "document_11__fig.244",
+    "document_11__caption.245",
+    "document_11__p.702686d7930c67f45aad284ca0fd78bb.246",
+    "document_11__footnote.247",
+    "document_11__nottoc_heading.8601c10b2797050a900697daac0c0001.248",
+    "document_11__p.877033d6e8d4020b1fe465ab7a547ad1.249",
+    "document_11__fig.250",
+    "document_11__caption.251",
+    "document_11__p.176fe122fd261e705d638f88400c16e2.252",
+    "document_11__nottoc_heading.83d694b8b98b155b8817ac412c4d3e9c.253",
+    "document_11__p.a3e4a78e40e2a4b2c4699cb50a49fcb1.254",
+    "document_11__p.b33ae3a3a4f2e2a87c3c98d72b0b583d.255",
+    "document_11__p.f8dbc7e3de63137129f4e2f9794959ae.256",
+    "document_11__p.9434194124debc7654c94225f00cb00e.257",
+    "document_11__fig.258",
+    "document_11__caption.259",
+    "document_11__fig.260",
+    "document_11__caption.261",
+    "document_11__nottoc_heading.de8504b73ea228d0ea9bbce69752092e.262",
+    "document_11__p.e21f30f1398573f9864f737ff5c2296f.263",
+    "document_11__p.750e3de6283d7bc3380a0491d1b03d9c.264",
+    "document_11__fig.265",
+    "document_11__caption.266",
+    "document_11__p.3380723aec3f55ca2b5bcca825bfea62.267",
+    "document_11__p.c475fc48d21eeadb037566f6b9c0b28b.268",
+    "document_11__fig.269",
+    "document_11__caption.270",
+    "document_11__nottoc_heading.3266b075d74acc656ed95e166300fd26.271",
+    "document_11__p.c726145180e7db536183c0b63cc1f85f.272",
+    "document_11__p.dcd924d7d559a468590fb4146e25a59d.273",
+    "document_11__p.c59d9f653d7b7ec0d3c0234ea159f0af.274",
+    "document_11__nottoc_heading.6f8b794f3246b0c1e1780bb4d4d5dc53.275",
+    "document_11__p.5b3004a2afbf0d6e2e5bc4bfb1361907.276",
+    "document_11__fig.277",
+    "document_11__caption.278",
+    "document_11__p.d57e87924599c2c190edb2b8b2226df8.279",
+    "document_11__nottoc_heading.a7cc81119daa478a68f07f26836adbbf.280",
+    "document_11__unknown_type.281",
+    "document_11__p.e99596aa5f2b39406b61926b820b6b39.282",
+    "document_11__p.7efd731fcfe6e41a7f7c0c6772c469e8.283",
+    "document_11__p.253da05cda5cb6aabcce3110675b2005.284",
+    "document_11__p.90c73ae3f61b42597564c0684f940766.285",
+    "document_11__p.12f5ae40a6490ff64e470cc3292eb40b.286",
+    "document_11__p.ce6561ba851e4fb010c7f2d3b384fc1e.287",
+    "document_11__p.652a9e1505b364c855ad3897ae0065e3.288",
+    "document_11__p.4ec3308a150d667cbf6a385adc2514d9.289",
+    "document_11__p.8b208e44da5e9a9fc459dbab4ad5c11f.290",
+    "document_11__p.1528f6f023376c6e87c584d46b41f814.291"
+  ],
+  "token_count": 19614
+}
+
+
+================================================================================
+PROCESSING RUN START | document_id=12 | processing_run_id=386c75e7-4b2e-4d88-8085-fad69109c59b | started_at=2026-08-19T18:28:27.938299+00:00
+================================================================================
+
+
+================================================================================
+PROCESSING RUN START | document_id=13 | processing_run_id=29ae0db6-fa2b-4e18-8be4-77a8ffd2c627 | started_at=2026-08-19T18:52:23.390685+00:00
+================================================================================
+{
+  "level": 0,
+  "title": "ROOT",
+  "children": [
+    {
+      "level": 1,
+      "title": "conceptsofobject-orientedprogramming",
+      "page": 1,
+      "children": [],
+      "gold_unit": [
+        "document_13__heading.28141b9d071d66b134897842d85b663b",
+        "document_13__p.78865b16537949e83e60ed3980a40847.1"
+      ],
+      "metadata": {
+        "docling_data": {
+          "text": "Concepts of Object-Oriented Programming"
+        },
+        "description": "Concepts of Object-Oriented Programming"
+      },
+      "token_count": 20
+    },
+    {
+      "level": 1,
+      "title": "whatthistalkisabout",
+      "page": 2,
+      "children": [],
+      "gold_unit": [
+        "document_13__heading.c7acfc716b5a9233f2b69616ff11b3bc",
+        "document_13__list_item.3",
+        "document_13__list_item.4",
+        "document_13__list_item.5",
+        "document_13__list_item.6",
+        "document_13__list_item.7",
+        "document_13__list_item.8",
+        "document_13__list_item.9",
+        "document_13__list_item.10",
+        "document_13__list_item.11",
+        "document_13__list_item.12",
+        "document_13__list_item.13"
+      ],
+      "metadata": {
+        "docling_data": {
+          "text": "What this talk is about"
+        },
+        "description": "What this talk is about"
+      },
+      "token_count": 57
+    },
+    {
+      "level": 1,
+      "title": "whatisobject-orientedprogramming?",
+      "page": 3,
+      "children": [],
+      "gold_unit": [
+        "document_13__heading.5cc8fd1c3bae9fc53fa98ce7e8ae3ccc",
+        "document_13__list_item.15",
+        "document_13__list_item.16",
+        "document_13__list_item.17",
+        "document_13__list_item.18",
+        "document_13__list_item.19",
+        "document_13__list_item.20",
+        "document_13__list_item.21",
+        "document_13__fig.22",
+        "document_13__p.497031794414a552435f90151ac3b54b.23"
+      ],
+      "metadata": {
+        "docling_data": {
+          "text": "What is Object-Oriented Programming?"
+        },
+        "description": "What is Object-Oriented Programming?"
+      },
+      "token_count": 404
+    },
+    {
+      "level": 1,
+      "title": "iobjects&classes",
+      "page": 4,
+      "children": [],
+      "gold_unit": [
+        "document_13__heading.80adc890b004c13e95ba0bda6d9fd679",
+        "document_13__p.b52193d03038653ff1021b336b3a27c8.25"
+      ],
+      "metadata": {
+        "docling_data": {
+          "text": "I. Objects & Classes"
+        },
+        "description": "I. Objects & Classes"
+      },
+      "token_count": 15
+    },
+    {
+      "level": 1,
+      "title": "wherearethese“objects”?",
+      "page": 5,
+      "children": [],
+      "gold_unit": [
+        "document_13__heading.298dd966e954b363ce782843c5248d01",
+        "document_13__list_item.27",
+        "document_13__list_item.28",
+        "document_13__list_item.29",
+        "document_13__list_item.30",
+        "document_13__list_item.31",
+        "document_13__list_item.32"
+      ],
+      "metadata": {
+        "docling_data": {
+          "text": "Where are these 'objects'?"
+        },
+        "description": "Where are these 'objects'?"
+      },
+      "token_count": 132
+    },
+    {
+      "level": 1,
+      "title": "object",
+      "page": 6,
+      "children": [],
+      "gold_unit": [
+        "document_13__heading.497031794414a552435f90151ac3b54b",
+        "document_13__list_item.34",
+        "document_13__list_item.35",
+        "document_13__list_item.36",
+        "document_13__list_item.37",
+        "document_13__list_item.38",
+        "document_13__nottoc_heading.1c377ad0ffb080e09c5175d9054050af.39",
+        "document_13__list_item.40",
+        "document_13__p.8a713381a72adc26c1e13409d0bb7eca.41"
+      ],
+      "metadata": {
+        "docling_data": {
+          "text": "Object"
+        },
+        "description": "Object"
+      },
+      "token_count": 112
+    },
+    {
+      "level": 1,
+      "title": "classes",
+      "page": 7,
+      "children": [],
+      "gold_unit": [
+        "document_13__heading.e9878b4854d29907146149f695cb1cfb",
+        "document_13__unknown_type.43",
+        "document_13__unknown_type.44",
+        "document_13__unknown_type.45",
+        "document_13__unknown_type.46",
+        "document_13__nottoc_heading.9bd81329febf6efe22788e03ddeaf0af.47",
+        "document_13__list_item.48",
+        "document_13__list_item.49",
+        "document_13__list_item.50",
+        "document_13__nottoc_heading.ee379d23670adc85072adf0e8df118df.51",
+        "document_13__list_item.52",
+        "document_13__list_item.53",
+        "document_13__nottoc_heading.63e027aa9ebecb42bf4ab3398081089d.54",
+        "document_13__list_item.55",
+        "document_13__list_item.56",
+        "document_13__nottoc_heading.3c1aac82863ed9e5a9aca8ce687f711d.57",
+        "document_13__list_item.58"
+      ],
+      "metadata": {
+        "docling_data": {
+          "text": "Classes"
+        },
+        "description": "Classes"
+      },
+      "token_count": 124
+    },
+    {
+      "level": 1,
+      "title": "lifetimeofanobject",
+      "page": 8,
+      "children": [],
+      "gold_unit": [
+        "document_13__heading.8241155f6d850343cd257fcce33416ff",
+        "document_13__nottoc_heading.88d0dc4903a950a200e21b083dee275a.60",
+        "document_13__list_item.61",
+        "document_13__list_item.62",
+        "document_13__list_item.63",
+        "document_13__list_item.64",
+        "document_13__list_item.65",
+        "document_13__list_item.66",
+        "document_13__list_item.67",
+        "document_13__list_item.68",
+        "document_13__list_item.69",
+        "document_13__list_item.70",
+        "document_13__fig.71",
+        "document_13__p.27c0ad7a8ff8f9df8e13bb2d974c95d0.72"
+      ],
+      "metadata": {
+        "docling_data": {
+          "text": "Lifetime of an Object"
+        },
+        "description": "Lifetime of an Object"
+      },
+      "token_count": 389
+    },
+    {
+      "level": 1,
+      "title": "allocation",
+      "page": 9,
+      "children": [],
+      "gold_unit": [
+        "document_13__heading.27c0ad7a8ff8f9df8e13bb2d974c95d0",
+        "document_13__nottoc_heading.25b2041508068fdef4e4f2f75cb47cd2.74",
+        "document_13__fig.75",
+        "document_13__unknown_type.76",
+        "document_13__list_item.77",
+        "document_13__list_item.78",
+        "document_13__list_item.79",
+        "document_13__list_item.80",
+        "document_13__fig.81",
+        "document_13__p.27c0ad7a8ff8f9df8e13bb2d974c95d0.82"
+      ],
+      "metadata": {
+        "docling_data": {
+          "text": "Allocation"
+        },
+        "description": "Allocation"
+      },
+      "token_count": 629
+    },
+    {
+      "level": 1,
+      "title": "allocation",
+      "page": 10,
+      "children": [],
+      "gold_unit": [
+        "document_13__heading.27c0ad7a8ff8f9df8e13bb2d974c95d0",
+        "document_13__nottoc_heading.e5c38a4cc2294934f3d452af42c45430.84",
+        "document_13__unknown_type.85",
+        "document_13__fig.86",
+        "document_13__p.2187e1021a911b3807cc1bea2eb1a9ca.87",
+        "document_13__list_item.88",
+        "document_13__list_item.89",
+        "document_13__list_item.90",
+        "document_13__list_item.91",
+        "document_13__fig.92"
+      ],
+      "metadata": {
+        "docling_data": {
+          "text": "Allocation"
+        },
+        "description": "Allocation"
+      },
+      "token_count": 627
+    },
+    {
+      "level": 1,
+      "title": "initialization",
+      "page": 11,
+      "children": [],
+      "gold_unit": [
+        "document_13__heading.61bcd96a2c1f8026527cbf2019d6e9a4",
+        "document_13__unknown_type.94",
+        "document_13__unknown_type.95",
+        "document_13__unknown_type.96",
+        "document_13__unknown_type.97",
+        "document_13__nottoc_heading.559a25fdb98a7d1fd1c3771ac568d5e9.98",
+        "document_13__list_item.99",
+        "document_13__list_item.100",
+        "document_13__list_item.101",
+        "document_13__fig.102",
+        "document_13__p.27c0ad7a8ff8f9df8e13bb2d974c95d0.103",
+        "document_13__unknown_type.104",
+        "document_13__fig.105"
+      ],
+      "metadata": {
+        "docling_data": {
+          "text": "Initialization"
+        },
+        "description": "Initialization"
+      },
+      "token_count": 653
+    },
+    {
+      "level": 1,
+      "title": "usage",
+      "page": 12,
+      "children": [],
+      "gold_unit": [
+        "document_13__heading.c64518704ce0c0d5501a45763f464276"
+      ],
+      "metadata": {
+        "docling_data": {
+          "text": "Usage"
+        },
+        "description": "Usage"
+      },
+      "token_count": 1
+    },
+    {
+      "level": 1,
+      "title": "cleanup",
+      "page": 13,
+      "children": [],
+      "gold_unit": [
+        "document_13__heading.8c6384dda98d8864d00e29dc96179970",
+        "document_13__unknown_type.108",
+        "document_13__unknown_type.109",
+        "document_13__unknown_type.110",
+        "document_13__nottoc_heading.22a8ec108d963f279c6a6a95aa960a57.111",
+        "document_13__list_item.112",
+        "document_13__list_item.113",
+        "document_13__fig.114",
+        "document_13__p.27c0ad7a8ff8f9df8e13bb2d974c95d0.115"
+      ],
+      "metadata": {
+        "docling_data": {
+          "text": "Cleanup"
+        },
+        "description": "Cleanup"
+      },
+      "token_count": 333
+    },
+    {
+      "level": 1,
+      "title": "deletion",
+      "page": 14,
+      "children": [],
+      "gold_unit": [
+        "document_13__heading.a1998652b01bdc9e7128734efb804780",
+        "document_13__nottoc_heading.16f58df4d80c4ca77b4e3c3646488d64.117",
+        "document_13__fig.118",
+        "document_13__unknown_type.119",
+        "document_13__p.71f3dc149f4d051206c7b6a0898c2215.120",
+        "document_13__fig.121"
+      ],
+      "metadata": {
+        "docling_data": {
+          "text": "Deletion"
+        },
+        "description": "Deletion"
+      },
+      "token_count": 626
+    },
+    {
+      "level": 1,
+      "title": "deletion",
+      "page": 15,
+      "children": [],
+      "gold_unit": [
+        "document_13__heading.a1998652b01bdc9e7128734efb804780",
+        "document_13__nottoc_heading.395a9be33d9126b7eaf81130cfa58b11.123",
+        "document_13__unknown_type.124",
+        "document_13__p.2f8ed7fafd3c1784a3be4da8eb3d106a.125",
+        "document_13__unknown_type.126",
+        "document_13__fig.127",
+        "document_13__p.2187e1021a911b3807cc1bea2eb1a9ca.128"
+      ],
+      "metadata": {
+        "docling_data": {
+          "text": "Deletion"
+        },
+        "description": "Deletion"
+      },
+      "token_count": 313
+    },
+    {
+      "level": 1,
+      "title": "staticclassmembers",
+      "page": 16,
+      "children": [],
+      "gold_unit": [
+        "document_13__heading.036f3b43cffca1b8b230102d8eaaba05",
+        "document_13__unknown_type.130",
+        "document_13__unknown_type.131",
+        "document_13__nottoc_heading.e9832a7a6ffdfee01e1f9472fb0e7c2b.132",
+        "document_13__list_item.133",
+        "document_13__list_item.134",
+        "document_13__list_item.135",
+        "document_13__list_item.136",
+        "document_13__unknown_type.137",
+        "document_13__nottoc_heading.5b6653e670697f4730d2654225cabf30.138",
+        "document_13__list_item.139",
+        "document_13__list_item.140",
+        "document_13__list_item.141",
+        "document_13__unknown_type.142"
+      ],
+      "metadata": {
+        "docling_data": {
+          "text": "Static class members"
+        },
+        "description": "Static class members"
+      },
+      "token_count": 106
+    },
+    {
+      "level": 1,
+      "title": "iibuildingobjects",
+      "page": 17,
+      "children": [],
+      "gold_unit": [
+        "document_13__heading.e60767763cacb5e21f4020d1a9db3117",
+        "document_13__p.92323dae40badbbcc2f06a73f0e97f24.144"
+      ],
+      "metadata": {
+        "docling_data": {
+          "text": "II. Building objects"
+        },
+        "description": "II. Building objects"
+      },
+      "token_count": 19
+    },
+    {
+      "level": 1,
+      "title": "abstractions",
+      "page": 18,
+      "children": [],
+      "gold_unit": [
+        "document_13__heading.d0eda14b715cec8e021b59dc6e6f197b",
+        "document_13__p.3e89aff46ae49b14d14ca4033fff1643.146",
+        "document_13__nottoc_heading.1ee3f6ee0cc070b45e0c399f9fa92690.147",
+        "document_13__fig.148",
+        "document_13__p.9b4dabc50f0b8ccba1c8981831abdad8.149",
+        "document_13__nottoc_heading.4eeb725908e1f0f4d64330c9b3ea1434.150",
+        "document_13__fig.151",
+        "document_13__p.f04a23723f30b64a9e0db83af010230e.152"
+      ],
+      "metadata": {
+        "docling_data": {
+          "text": "Abstractions"
+        },
+        "description": "Abstractions"
+      },
+      "token_count": 633
+    },
+    {
+      "level": 1,
+      "title": "composition",
+      "page": 19,
+      "children": [],
+      "gold_unit": [
+        "document_13__heading.53eff24a355b7ae55f0aa2bef39bb24c",
+        "document_13__unknown_type.154",
+        "document_13__p.2f8ed7fafd3c1784a3be4da8eb3d106a.155",
+        "document_13__p.2145c1b6992c0d519ad223f91671329b.156",
+        "document_13__list_item.157",
+        "document_13__list_item.158",
+        "document_13__fig.159",
+        "document_13__p.7bfa30721c5e726ff17e3f972237a82c.160"
+      ],
+      "metadata": {
+        "docling_data": {
+          "text": "Composition"
+        },
+        "description": "Composition"
+      },
+      "token_count": 346
+    },
+    {
+      "level": 1,
+      "title": "encapsulation",
+      "page": 20,
+      "children": [],
+      "gold_unit": [
+        "document_13__heading.43b1c2e11d5fac4356c9b5ba7ac1dc6b",
+        "document_13__unknown_type.162",
+        "document_13__fig.163",
+        "document_13__p.ca7ce2eb36496590cba96663a7a264ef.164",
+        "document_13__list_item.165",
+        "document_13__list_item.166",
+        "document_13__list_item.167",
+        "document_13__list_item.168",
+        "document_13__list_item.169",
+        "document_13__list_item.170"
+      ],
+      "metadata": {
+        "docling_data": {
+          "text": "Encapsulation"
+        },
+        "description": "Encapsulation"
+      },
+      "token_count": 394
+    },
+    {
+      "level": 1,
+      "title": "problemswithoutencapsulation",
+      "page": 21,
+      "children": [],
+      "gold_unit": [
+        "document_13__heading.ce2de8a9b26b913af20f25924412565b",
+        "document_13__unknown_type.172",
+        "document_13__unknown_type.173",
+        "document_13__unknown_type.174",
+        "document_13__p.7979aa059bc1470c87dee56fdb5755ac.175",
+        "document_13__unknown_type.176"
+      ],
+      "metadata": {
+        "docling_data": {
+          "text": "Problems without Encapsulation"
+        },
+        "description": "Problems without Encapsulation"
+      },
+      "token_count": 44
+    },
+    {
+      "level": 1,
+      "title": "typehierarchiesandinheritance",
+      "page": 22,
+      "children": [],
+      "gold_unit": [
+        "document_13__heading.ccbc5ad3cadaa831b9261430ec2f6736",
+        "document_13__list_item.178",
+        "document_13__list_item.179",
+        "document_13__list_item.180",
+        "document_13__list_item.181",
+        "document_13__list_item.182",
+        "document_13__list_item.183",
+        "document_13__fig.184",
+        "document_13__p.d8a685508fa149af8a627b6c33604e33.185"
+      ],
+      "metadata": {
+        "docling_data": {
+          "text": "Type hierarchies and Inheritance"
+        },
+        "description": "Type hierarchies and Inheritance"
+      },
+      "token_count": 377
+    },
+    {
+      "level": 1,
+      "title": "typehierarchiesandinheritance",
+      "page": 23,
+      "children": [],
+      "gold_unit": [
+        "document_13__heading.ccbc5ad3cadaa831b9261430ec2f6736",
+        "document_13__fig.187",
+        "document_13__p.80d404bee7d7521bdbdfffd6922132dd.188"
+      ],
+      "metadata": {
+        "docling_data": {
+          "text": "Type hierarchies and Inheritance"
+        },
+        "description": "Type hierarchies and Inheritance"
+      },
+      "token_count": 310
+    },
+    {
+      "level": 1,
+      "title": "typehierarchiesandinheritance",
+      "page": 24,
+      "children": [],
+      "gold_unit": [
+        "document_13__heading.ccbc5ad3cadaa831b9261430ec2f6736",
+        "document_13__unknown_type.190",
+        "document_13__unknown_type.191",
+        "document_13__unknown_type.192",
+        "document_13__unknown_type.193",
+        "document_13__unknown_type.194",
+        "document_13__unknown_type.195",
+        "document_13__p.df107f51fdc8ef7dada16b1e21dbdc6d.196",
+        "document_13__unknown_type.197",
+        "document_13__unknown_type.198",
+        "document_13__nottoc_heading.371fedf6ee6747b1de368aafb08094e8.199",
+        "document_13__unknown_type.200",
+        "document_13__list_item.201",
+        "document_13__list_item.202",
+        "document_13__list_item.203",
+        "document_13__nottoc_heading.371fedf6ee6747b1de368aafb08094e8.204",
+        "document_13__unknown_type.205",
+        "document_13__list_item.206",
+        "document_13__list_item.207",
+        "document_13__nottoc_heading.af4f6c1cebd1c8fea1706dfd9f4c008b.208",
+        "document_13__unknown_type.209",
+        "document_13__list_item.210",
+        "document_13__list_item.211",
+        "document_13__list_item.212",
+        "document_13__nottoc_heading.4c381190f908d9e97f76bf7d429147f6.213",
+        "document_13__list_item.214",
+        "document_13__list_item.215",
+        "document_13__list_item.216",
+        "document_13__list_item.217",
+        "document_13__list_item.218",
+        "document_13__nottoc_heading.e72b6c0c4d506e78733c6cd0e751ead0.219",
+        "document_13__p.6c56cf9b49f7c9a7940aff3595e62f76.220",
+        "document_13__nottoc_heading.868d1dfce39a2158606b8e4b4e8ba46e.221",
+        "document_13__list_item.222",
+        "document_13__list_item.223",
+        "document_13__list_item.224",
+        "document_13__list_item.225",
+        "document_13__list_item.226",
+        "document_13__list_item.227",
+        "document_13__list_item.228",
+        "document_13__list_item.229",
+        "document_13__list_item.230",
+        "document_13__list_item.231",
+        "document_13__list_item.232",
+        "document_13__nottoc_heading.d4992fc9ac55214dfed8e9b7f571282c.233",
+        "document_13__unknown_type.234",
+        "document_13__nottoc_heading.76a71600b31e421cf45d21e3ca4865aa.235",
+        "document_13__unknown_type.236",
+        "document_13__nottoc_heading.2b14dd62fcabd6683db6ad96b2ed99fb.237",
+        "document_13__list_item.238",
+        "document_13__unknown_type.239",
+        "document_13__unknown_type.240",
+        "document_13__nottoc_heading.2a5697fb99f7be23600bbe9c3282c100.241",
+        "document_13__list_item.242",
+        "document_13__unknown_type.243",
+        "document_13__unknown_type.244",
+        "document_13__p.d24e2a08dafb6804a46fd8421739b561.245",
+        "document_13__nottoc_heading.d3d84226727f89b017c4c08031743dcc.246",
+        "document_13__list_item.247",
+        "document_13__list_item.248",
+        "document_13__list_item.249",
+        "document_13__list_item.250",
+        "document_13__list_item.251",
+        "document_13__list_item.252",
+        "document_13__list_item.253",
+        "document_13__list_item.254",
+        "document_13__list_item.255",
+        "document_13__list_item.256",
+        "document_13__nottoc_heading.475ae918a90c6f9956005c270e70c41f.257",
+        "document_13__list_item.258",
+        "document_13__list_item.259",
+        "document_13__list_item.260",
+        "document_13__list_item.261",
+        "document_13__nottoc_heading.63b0fc205cafcb042217a5d4e43df8f1.262",
+        "document_13__nottoc_heading.539a58abdda249d31535f5ee85f39858.263",
+        "document_13__list_item.264",
+        "document_13__list_item.265",
+        "document_13__list_item.266",
+        "document_13__list_item.267",
+        "document_13__list_item.268",
+        "document_13__p.d2092be3d5588c4a59167b6ad18cd930.269",
+        "document_13__list_item.270",
+        "document_13__list_item.271",
+        "document_13__list_item.272",
+        "document_13__list_item.273",
+        "document_13__list_item.274",
+        "document_13__list_item.275",
+        "document_13__list_item.276",
+        "document_13__nottoc_heading.89dd1d4e4973dec15b1200c064b5de4a.277",
+        "document_13__list_item.278",
+        "document_13__list_item.279",
+        "document_13__list_item.280",
+        "document_13__list_item.281",
+        "document_13__list_item.282",
+        "document_13__list_item.283",
+        "document_13__list_item.284",
+        "document_13__list_item.285",
+        "document_13__list_item.286",
+        "document_13__list_item.287",
+        "document_13__list_item.288",
+        "document_13__nottoc_heading.efa747b2dee79984e49360b28c71f574.289",
+        "document_13__list_item.290",
+        "document_13__list_item.291",
+        "document_13__list_item.292",
+        "document_13__list_item.293",
+        "document_13__list_item.294",
+        "document_13__list_item.295",
+        "document_13__list_item.296",
+        "document_13__list_item.297",
+        "document_13__nottoc_heading.539a58abdda249d31535f5ee85f39858.298",
+        "document_13__nottoc_heading.0ab63a37c3bced3962ad708727c7be49.299",
+        "document_13__unknown_type.300",
+        "document_13__unknown_type.301",
+        "document_13__nottoc_heading.539a58abdda249d31535f5ee85f39858.302",
+        "document_13__nottoc_heading.8601c10b2797050a900697daac0c0001.303",
+        "document_13__list_item.304",
+        "document_13__list_item.305",
+        "document_13__list_item.306",
+        "document_13__list_item.307",
+        "document_13__list_item.308",
+        "document_13__list_item.309",
+        "document_13__nottoc_heading.257cdd9207450e9816606c5b2f289d17.310",
+        "document_13__unknown_type.311",
+        "document_13__nottoc_heading.d2092be3d5588c4a59167b6ad18cd930.312",
+        "document_13__unknown_type.313",
+        "document_13__nottoc_heading.83de191c12c3c109006c4593128d8bb6.314",
+        "document_13__list_item.315",
+        "document_13__list_item.316",
+        "document_13__list_item.317",
+        "document_13__list_item.318",
+        "document_13__list_item.319",
+        "document_13__list_item.320",
+        "document_13__list_item.321",
+        "document_13__nottoc_heading.d5b1065d3323258bdbeaf51873e2e0ac.322",
+        "document_13__unknown_type.323",
+        "document_13__nottoc_heading.89dd1d4e4973dec15b1200c064b5de4a.324",
+        "document_13__unknown_type.325",
+        "document_13__nottoc_heading.4595395cc32a0c92034183d9a38a7059.326",
+        "document_13__p.eb4a6e09ab1a90057cd3b2fb7129d328.327",
+        "document_13__nottoc_heading.db47c9e09b95d0ebcacf6aca15e3fc7f.328",
+        "document_13__list_item.329",
+        "document_13__list_item.330",
+        "document_13__list_item.331",
+        "document_13__list_item.332",
+        "document_13__list_item.333",
+        "document_13__list_item.334",
+        "document_13__list_item.335",
+        "document_13__nottoc_heading.0a39663464728c38a95a0aa954b399a1.336",
+        "document_13__list_item.337",
+        "document_13__list_item.338",
+        "document_13__list_item.339",
+        "document_13__list_item.340",
+        "document_13__list_item.341",
+        "document_13__list_item.342",
+        "document_13__list_item.343",
+        "document_13__list_item.344",
+        "document_13__nottoc_heading.49cb9ce7709ed32c375cc1b0209424ae.345",
+        "document_13__list_item.346",
+        "document_13__list_item.347",
+        "document_13__list_item.348",
+        "document_13__list_item.349",
+        "document_13__list_item.350",
+        "document_13__list_item.351"
+      ],
+      "metadata": {
+        "docling_data": {
+          "text": "Type hierarchies and Inheritance"
+        },
+        "description": "Type hierarchies and Inheritance"
+      },
+      "token_count": 1669
+    },
+    {
+      "level": 1,
+      "title": "inheritance",
+      "page": 25,
+      "children": [],
+      "token_count": 0
+    },
+    {
+      "level": 1,
+      "title": "inheritance",
+      "page": 26,
+      "children": [],
+      "token_count": 0
+    },
+    {
+      "level": 1,
+      "title": "polymorphism",
+      "page": 27,
+      "children": [],
+      "token_count": 0
+    },
+    {
+      "level": 1,
+      "title": "polymorphism",
+      "page": 28,
+      "children": [],
+      "token_count": 0
+    },
+    {
+      "level": 1,
+      "title": "abstractclasses",
+      "page": 29,
+      "children": [],
+      "token_count": 0
+    },
+    {
+      "level": 1,
+      "title": "is-avshas-arelationship",
+      "page": 30,
+      "children": [],
+      "token_count": 0
+    },
+    {
+      "level": 1,
+      "title": "iiibestpractices",
+      "page": 31,
+      "children": [],
+      "token_count": 0
+    },
+    {
+      "level": 1,
+      "title": "keepyourinterfacessimplecleanandconsistent",
+      "page": 32,
+      "children": [],
+      "token_count": 0
+    },
+    {
+      "level": 1,
+      "title": "getters&setters",
+      "page": 33,
+      "children": [],
+      "token_count": 0
+    },
+    {
+      "level": 1,
+      "title": "lazyinitialization",
+      "page": 34,
+      "children": [],
+      "token_count": 0
+    },
+    {
+      "level": 1,
+      "title": "baseclassdestructorsshouldbevirtual",
+      "page": 35,
+      "children": [],
+      "token_count": 0
+    },
+    {
+      "level": 1,
+      "title": "don’tusevirtualfunctionsduringconstructionanddestruction",
+      "page": 36,
+      "children": [],
+      "token_count": 0
+    },
+    {
+      "level": 1,
+      "title": "don’treinventthewheel",
+      "page": 37,
+      "children": [],
+      "token_count": 0
+    },
+    {
+      "level": 1,
+      "title": "designpatterns",
+      "page": 38,
+      "children": [],
+      "token_count": 0
+    },
+    {
+      "level": 1,
+      "title": "designpatterns:maincategories",
+      "page": 39,
+      "children": [],
+      "token_count": 0
+    },
+    {
+      "level": 1,
+      "title": "factorymethods",
+      "page": 40,
+      "children": [],
+      "token_count": 0
+    },
+    {
+      "level": 1,
+      "title": "factorymethods–simpleexample",
+      "page": 41,
+      "children": [],
+      "token_count": 0
+    },
+    {
+      "level": 1,
+      "title": "adapter",
+      "page": 42,
+      "children": [],
+      "token_count": 0
+    },
+    {
+      "level": 1,
+      "title": "adapter–example",
+      "page": 43,
+      "children": [],
+      "token_count": 0
+    },
+    {
+      "level": 1,
+      "title": "strategy",
+      "page": 44,
+      "children": [],
+      "token_count": 0
+    },
+    {
+      "level": 1,
+      "title": "strategy-example",
+      "page": 45,
+      "children": [],
+      "token_count": 0
+    },
+    {
+      "level": 1,
+      "title": "ivconclusion",
+      "page": 46,
+      "children": [],
+      "token_count": 0
+    },
+    {
+      "level": 1,
+      "title": "benefitsofoop",
+      "page": 47,
+      "children": [],
+      "token_count": 0
+    },
+    {
+      "level": 1,
+      "title": "problemsofoop",
+      "page": 48,
+      "children": [],
+      "token_count": 0
+    },
+    {
+      "level": 1,
+      "title": "finalrecommendations",
+      "page": 49,
+      "children": [],
+      "token_count": 0
+    }
+  ],
+  "metadata": {
+    "description": ""
+  },
+  "token_count": 8333
+}
+
+
+================================================================================
+PROCESSING RUN START | document_id=14 | processing_run_id=2f70a011-84f1-4daf-a9e6-cfb34d402c04 | started_at=2026-08-19T18:56:42.373132+00:00
+================================================================================
+
+
+================================================================================
+PROCESSING RUN START | document_id=15 | processing_run_id=80c314fd-a030-49e5-99cc-560c3d1911bb | started_at=2026-08-19T19:25:38.348000+00:00
+================================================================================

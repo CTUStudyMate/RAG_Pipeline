@@ -46,6 +46,7 @@ class ChatFlowState(TypedDict):
     docs: list[RetrievedDoc]
     query: str 
     rewritten_query: str | None
+    document_sources: list[int] | None
     
     # for ui
     user_message: HumanMessage
@@ -100,6 +101,7 @@ def rewrite_query_node(state: ChatFlowState):
 def retrieve_node(state: ChatFlowState):
     result = retrieve_graph.invoke({
         "rewritten_query": state["rewritten_query"],
+        "document_sources": state["document_sources"],
     })
     if debug: 
         print(f"3 - Retrieved {len(result["docs"]):}")

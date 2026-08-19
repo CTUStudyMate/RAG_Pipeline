@@ -4315,3 +4315,333 @@ PROCESSING RUN START | document_id=10 | processing_run_id=359b945a-1ad4-4974-a52
         }
     ]
 }
+
+
+================================================================================
+PROCESSING RUN START | document_id=11 | processing_run_id=b33ff32c-16ff-4c52-b162-11e66420b560 | started_at=2026-08-17T05:01:39.116395+00:00
+================================================================================
+{
+    "level": 0,
+    "title": "ROOT",
+    "children": []
+}
+
+
+================================================================================
+PROCESSING RUN START | document_id=12 | processing_run_id=386c75e7-4b2e-4d88-8085-fad69109c59b | started_at=2026-08-19T18:28:27.938299+00:00
+================================================================================
+
+
+================================================================================
+PROCESSING RUN START | document_id=13 | processing_run_id=29ae0db6-fa2b-4e18-8be4-77a8ffd2c627 | started_at=2026-08-19T18:52:23.390685+00:00
+================================================================================
+{
+    "level": 0,
+    "title": "ROOT",
+    "children": [
+        {
+            "level": 1,
+            "title": "conceptsofobject-orientedprogramming",
+            "page": 1,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "whatthistalkisabout",
+            "page": 2,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "whatisobject-orientedprogramming?",
+            "page": 3,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "iobjects&classes",
+            "page": 4,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "wherearethese“objects”?",
+            "page": 5,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "object",
+            "page": 6,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "classes",
+            "page": 7,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "lifetimeofanobject",
+            "page": 8,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "allocation",
+            "page": 9,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "allocation",
+            "page": 10,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "initialization",
+            "page": 11,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "usage",
+            "page": 12,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "cleanup",
+            "page": 13,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "deletion",
+            "page": 14,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "deletion",
+            "page": 15,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "staticclassmembers",
+            "page": 16,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "iibuildingobjects",
+            "page": 17,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "abstractions",
+            "page": 18,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "composition",
+            "page": 19,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "encapsulation",
+            "page": 20,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "problemswithoutencapsulation",
+            "page": 21,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "typehierarchiesandinheritance",
+            "page": 22,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "typehierarchiesandinheritance",
+            "page": 23,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "typehierarchiesandinheritance",
+            "page": 24,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "inheritance",
+            "page": 25,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "inheritance",
+            "page": 26,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "polymorphism",
+            "page": 27,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "polymorphism",
+            "page": 28,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "abstractclasses",
+            "page": 29,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "is-avshas-arelationship",
+            "page": 30,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "iiibestpractices",
+            "page": 31,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "keepyourinterfacessimplecleanandconsistent",
+            "page": 32,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "getters&setters",
+            "page": 33,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "lazyinitialization",
+            "page": 34,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "baseclassdestructorsshouldbevirtual",
+            "page": 35,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "don’tusevirtualfunctionsduringconstructionanddestruction",
+            "page": 36,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "don’treinventthewheel",
+            "page": 37,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "designpatterns",
+            "page": 38,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "designpatterns:maincategories",
+            "page": 39,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "factorymethods",
+            "page": 40,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "factorymethods–simpleexample",
+            "page": 41,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "adapter",
+            "page": 42,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "adapter–example",
+            "page": 43,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "strategy",
+            "page": 44,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "strategy-example",
+            "page": 45,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "ivconclusion",
+            "page": 46,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "benefitsofoop",
+            "page": 47,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "problemsofoop",
+            "page": 48,
+            "children": []
+        },
+        {
+            "level": 1,
+            "title": "finalrecommendations",
+            "page": 49,
+            "children": []
+        }
+    ]
+}
+
+
+================================================================================
+PROCESSING RUN START | document_id=14 | processing_run_id=2f70a011-84f1-4daf-a9e6-cfb34d402c04 | started_at=2026-08-19T18:56:42.373132+00:00
+================================================================================
+
+
+================================================================================
+PROCESSING RUN START | document_id=15 | processing_run_id=80c314fd-a030-49e5-99cc-560c3d1911bb | started_at=2026-08-19T19:25:38.348000+00:00
+================================================================================

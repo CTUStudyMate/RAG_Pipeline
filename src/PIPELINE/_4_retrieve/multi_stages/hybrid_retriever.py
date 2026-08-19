@@ -1,4 +1,10 @@
+import logging
 import re
+import time
+
+import chromadb
+from chromadb.errors import InternalError
+
 from pipeline_config import settings
 from pipeline_setup import _default_collection, embedder, pool
 
@@ -8,15 +14,64 @@ VECTOR_RETRIEVE_CHUNKS_LIMIT = settings.config["vector_retrieve_chunks_limit"]
 TEXT_RETRIEVE_CHUNKS_LIMIT = settings.config["text_retrieve_chunks_limit"]
 bm25_weight = settings.config["bm25_weight"]
 vector_weight = settings.config["vector_weight"]
+VECTOR_QUERY_MAX_ATTEMPTS = 3
 
-def vector_search(query: str):
+logger = logging.getLogger(__name__)
+
+
+def _empty_vector_results():
+    """Return the Chroma result shape when vector retrieval is unavailable."""
+    return {
+        "ids": [[]],
+        "documents": [[]],
+        "metadatas": [[]],
+        "distances": [[]],
+    }
+
+
+def _open_vector_collection():
+    """Open a fresh client after Chroma reports a transient index lookup error."""
+    vector_db = settings.config["vectordb_connect_info"]
+    client = chromadb.PersistentClient(path=vector_db["db_path"])
+    return client.get_collection(vector_db["collection"])
+
+def vector_search(query: str, document_ids: list[int] | None = None):
     collection = _default_collection
     
     query_emb = embedder.embed(query)
-    results = collection.query(
-        query_embeddings=query_emb,
-        n_results=VECTOR_RETRIEVE_CHUNKS_LIMIT
-    )
+    query_options = {
+        "query_embeddings": query_emb,
+        "n_results": VECTOR_RETRIEVE_CHUNKS_LIMIT,
+    }
+
+    if document_ids is not None:
+        query_options["where"] = {
+            "document": {
+                "$in": [str(document_id) for document_id in document_ids],
+            }
+        }
+
+    for attempt in range(VECTOR_QUERY_MAX_ATTEMPTS):
+        try:
+            results = collection.query(**query_options)
+            break
+        except InternalError as error:
+            if attempt == VECTOR_QUERY_MAX_ATTEMPTS - 1:
+                logger.exception(
+                    "Chroma vector retrieval failed after %s attempts; falling back to BM25.",
+                    VECTOR_QUERY_MAX_ATTEMPTS,
+                )
+                return _empty_vector_results()
+
+            logger.warning(
+                "Chroma returned an internal index error (attempt %s/%s): %s. Retrying.",
+                attempt + 1,
+                VECTOR_QUERY_MAX_ATTEMPTS,
+                error,
+            )
+            time.sleep(0.1 * (attempt + 1))
+            collection = _open_vector_collection()
+
     filtered_docs = []
     filtered_distances = []
 
@@ -35,7 +90,7 @@ def vector_search(query: str):
     return results
 
 
-def text_search(query: str):
+def text_search(query: str, document_ids: list[int] | None = None):
     # Làm sạch query: Thay thế các ký tự không phải là chữ cái/số (\w) hoặc khoảng trắng (\s) bằng dấu cách.
     #  Việc này giúp ParadeDB không bị lỗi parse syntax mà vẫn giữ nguyên từ khóa để tìm kiếm BM25.
     safe_query = re.sub(r'[^\w\s]', ' ', query)
@@ -45,13 +100,26 @@ def text_search(query: str):
     
     with pool.connection() as conn:
         with conn.cursor() as cur:
-            cur.execute(f"""
-                SELECT id, document_id, text_content, metadata, paradedb.score(id) AS score
-                FROM {table_name}
-                WHERE search_content @@@ %s
-                ORDER BY score DESC
-                LIMIT {TEXT_RETRIEVE_CHUNKS_LIMIT};
-            """, (safe_query,))
+            if document_ids is None:
+                cur.execute(f"""
+                    SELECT id, document_id, text_content, metadata, paradedb.score(id) AS score
+                    FROM {table_name}
+                    WHERE search_content @@@ %s
+                    ORDER BY score DESC
+                    LIMIT {TEXT_RETRIEVE_CHUNKS_LIMIT};
+                """, (safe_query,))
+            else:
+                cur.execute(f"""
+                    SELECT id, document_id, text_content, metadata, paradedb.score(id) AS score
+                    FROM {table_name}
+                    WHERE search_content @@@ %s
+                      AND metadata ->> 'document' = ANY(%s)
+                    ORDER BY score DESC
+                    LIMIT {TEXT_RETRIEVE_CHUNKS_LIMIT};
+                """, (
+                    safe_query,
+                    [str(document_id) for document_id in document_ids],
+                ))
             
             rows = cur.fetchall()
     
@@ -151,9 +219,15 @@ def rrf_merge(
 
 
   
-def hybrid_retrieve(query: str):
-    vector_based_results = vector_search(query=query)
-    text_based_results = text_search(query=query)
+def hybrid_retrieve(query: str, document_ids: list[int] | None = None):
+    vector_based_results = vector_search(
+        query=query,
+        document_ids=document_ids,
+    )
+    text_based_results = text_search(
+        query=query,
+        document_ids=document_ids,
+    )
     
     vector_docs = normalize_vector_results(vector_based_results)
     bm25_docs = normalize_text_results(text_based_results)

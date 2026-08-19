@@ -32,6 +32,12 @@ class GenerateChatTitleRequest(BaseModel):
         return value
 
 
+class ChatRequest(BaseModel):
+    messages: list[dict[str, Any]] = []
+    query: str
+    document_ids: list[int] | None = None
+
+
 def normalize_chat_segments(segments: object) -> list[dict[str, Any]]:
     """Return segments that satisfy the response contract expected by MainBackend."""
     normalized: list[dict[str, Any]] = []
@@ -133,8 +139,8 @@ def get_image(image_id: str):
             
 
 @app.post("/chat")
-def chat(payload: dict):
-    payload_messages = payload.get("messages", [])
+def chat(payload: ChatRequest):
+    payload_messages = payload.messages
 
     messages = [
         HumanMessage(content=m.get("content", ""))
@@ -146,7 +152,8 @@ def chat(payload: dict):
     result: ChatFlowState = chatflow_graph.invoke(
         {
             "messages": messages,
-            "query": payload["query"],
+            "query": payload.query,
+            "document_sources": payload.document_ids,
         }
     )
 

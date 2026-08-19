@@ -245,7 +245,7 @@
     "source_text": "We use the term **software unit** when we want to talk about a system’s composite parts without being precise about what type of part."
   },
   {
-    "question": "According to McCall's quality model, what are the specific internal product quality criteria (on the right-hand side) that map to the external quality factors (on the left-hand side)?",
+    "question": "According to   , what are the specific internal product quality criteria (on the right-hand side) that map to the external quality factors (on the left-hand side)?",
     "ground_truth": "The specific internal product quality criteria explicitly listed include: Completeness, Traceability, Consistency, Accuracy, Error tolerance, Execution efficiency, Storage efficiency, Access control, Access audit, Operability, Training, Communicativeness, Simplicity, Conciseness, Instrumentation, Self-descriptiveness, Expandability, Generality, Modularity, Software system independence, Machine independence, Communications commonality, and Data commonality.",
     "source_text": "Figure 1.5 visually maps external quality factors on the left to internal product quality criteria on the right. The right-hand side criteria explicitly listed in the figure include: Completeness, Traceability, Consistency, Accuracy, Error tolerance, Execution efficiency, Storage efficiency, Access control, Access audit, Operability, Training, Communicativeness, Simplicity, Conciseness, Instrumentation, Self-descriptiveness, Expandability, Generality, Modularity, Software system independence, Machine independence, Communications commonality, and Data commonality."
   },
