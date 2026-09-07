@@ -20,6 +20,9 @@ def multi_stages_retrieve(
         document_ids=document_ids,
     )
     
-    reranked_docs = reranker.rerank(query, hybrid_docs)
-    final_docs = greedy_add_chunks(reranked_docs) # add tới khi đầy token budget
+    # reranked_docs = reranker.rerank(query, hybrid_docs)
+    final_docs = greedy_add_chunks(hybrid_docs) # add tới khi đầy token budget
+    print("final docs:")
+    for doc in final_docs:
+        print(doc.get("doc_id"))
     return final_docs
