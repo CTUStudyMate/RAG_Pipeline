@@ -1,7 +1,12 @@
 from langchain_openai import ChatOpenAI
 from openai import OpenAI
 from used_models.llm.BaseLLM import BaseLLM
+from typing import TypeVar
+from pydantic import BaseModel
+
+T = TypeVar("T", bound=BaseModel)
 from pipeline_config import settings, OPENAI_API_KEY
+
 LLM_MODEL = settings.config["llm_model"]
 default_reasoning_effort = "minimal"
 
@@ -63,7 +68,33 @@ class OpenAIWrapper(BaseLLM):
         return response.output_text
   
 
-    
-    
-    
-    
+    def generate_structured(
+        self,
+        system_prompt: str,
+        content: str,
+        response_model: type[T],
+        reasoning_effort: str = default_reasoning_effort,
+    ) -> T:
+        kwargs = {
+            "model": self.model,
+            "input": [
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": content},
+            ],
+            "text_format": response_model,
+        }
+
+        if self.model.startswith("gpt-5"):
+            kwargs["reasoning"] = {"effort": reasoning_effort}
+        else:
+            kwargs["temperature"] = 0
+
+        response = self.client.responses.parse(**kwargs)
+
+        if response.output_parsed is None:
+            raise ValueError(
+                f"Model did not return a valid {response_model.__name__}"
+            )
+
+        return response.output_parsed
+
