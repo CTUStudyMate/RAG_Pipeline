@@ -1,0 +1,141 @@
+[
+    {
+        "id": 5849,
+        "metadata": {
+            "images": [
+                "img0_se_theory_practice.pdf__chunk_0_0_0"
+            ],
+            "section": "General",
+            "chunk_id": "se_theory_practice.pdf__chunk_0_0",
+            "document": "1",
+            "token_count": 300,
+            "embeded_content": "[SECTION]: General\n[CONTENT]: \n[FIGURE_DESCRIPTIONS]\n[0] A photographic depiction of a large suspension bridge spanning a body of water, with towering stone piers and steel cables forming a triangular rigging pattern. The foreground features the bridge deck supported by vertical columns and horizontal suspender cables, while the background shows an urban shoreline with low-rise buildings. The image emphasizes structural engineering elements: towers, anchorages, main cables, suspenders, and the deck. Visible text is minimal or not legible, but the scene suggests a case study of suspension bridge design, load paths, and aerodynamics. Lighting is bright with a clear blue sky, creating high contrast between the stone masonry of towers and the dark metal framework. The overall composition highlights architectural scale, cable-stayed aesthetics, and the interaction between structural components and harbor infrastructure.\n"
+        }
+    },
+    {
+        "id": 5850,
+        "metadata": {
+            "section": "Why Software Engineering? > 1.1 What Is Software Engineering?",
+            "chunk_id": "se_theory_practice.pdf__chunk_1_2",
+            "document": "1",
+            "token_count": 15,
+            "embeded_content": "[SECTION]: Why Software Engineering? > 1.1 What Is Software Engineering?\n[CONTENT]: As software engineers, we use our knowledge of computers and computing to help solve problems. Often the problem with which we are dealing is related to a computer or an existing computer system, but sometimes the difficulties underlying the problem have nothing to do with computers.Therefore, it is essential that we first understand the nature of the problem. In particular, we must be very careful not to impose computing machinery or techniques on every problem that comes our way. We must solve the problem first. Then, if need be, we can use technology as a tool to implement our solution. For the remainder of this book, we assume that our analysis has shown that some kind of computer system is necessary or desirable to solve a particular problem at hand."
+        }
+    },
+    {
+        "id": 5851,
+        "metadata": {
+            "section": "SOFTWARE ENGINEERING",
+            "chunk_id": "se_theory_practice.pdf__chunk_3_4",
+            "document": "1",
+            "token_count": 15,
+            "embeded_content": "[SECTION]: SOFTWARE ENGINEERING\n[CONTENT]: This page intentionally left blank"
+        }
+    },
+    {
+        "id": 5852,
+        "metadata": {
+            "section": "SOFTWARE ENGINEERING THEORY AND PRACTICE",
+            "chunk_id": "se_theory_practice.pdf__chunk_5_5",
+            "document": "1",
+            "token_count": 12,
+            "embeded_content": "[SECTION]: SOFTWARE ENGINEERING THEORY AND PRACTICE\n[CONTENT]: "
+        }
+    },
+    {
+        "id": 5853,
+        "metadata": {
+            "section": "Why Software Engineering? > 1.1 What Is Software Engineering? > Solving Problems",
+            "chunk_id": "se_theory_practice.pdf__chunk_6_6",
+            "document": "1",
+            "token_count": 5,
+            "embeded_content": "[SECTION]: Why Software Engineering? > 1.1 What Is Software Engineering? > Solving Problems\n[CONTENT]: [FIGURE 1.2 The process of synthesis.] \nTo help us solve a problem, we employ a variety of methods, tools, procedures, and  paradigms. A method or technique is  a  formal  procedure  for  producing  some result. For example, a chef may prepare a sauce using a sequence of ingredients combined in a carefully timed and ordered way so that the sauce thickens but does not curdle or separate. The procedure for preparing the sauce involves timing and ingredients but may not depend on the type of cooking equipment used.\n[FIGURE_DESCRIPTIONS]\n[0] A flowchart diagram illustrating the process of analysis from problem to solution. At the top, a large gray box labeled 'PROBLEM' points downward with an arrow to a set of four smaller boxes arranged horizontally. The boxes are labeled 'Subproblem 1', 'Subproblem 2', 'Subproblem 3', and 'Subproblem 4'. Below these, another arrow points downward to four horizontally aligned boxes labeled 'Solution 1', 'Solution 2', 'Solution 3', and 'Solution 4'. These solution boxes lead downward via an arrow to a final large gray box labeled 'SOLUTION'. The figure is captioned 'FIGURE 1.1 The process of analysis.' The diagram visually represents breaking down a problem into subproblems, solving each, and integrating solutions into a final solution.\n"
+        }
+    },
+    {
+        "id": 5854,
+        "metadata": {
+            "section": "Shari Lawrence Pfleeger",
+            "chunk_id": "se_theory_practice.pdf__chunk_7_8",
+            "document": "1",
+            "token_count": 11,
+            "embeded_content": "[SECTION]: Shari Lawrence Pfleeger\n[CONTENT]: RAND Corporation"
+        }
+    },
+    {
+        "id": 5855,
+        "metadata": {
+            "section": "Joanne M. Atlee",
+            "chunk_id": "se_theory_practice.pdf__chunk_9_12",
+            "document": "1",
+            "token_count": 343,
+            "embeded_content": "[SECTION]: Joanne M. Atlee\n[CONTENT]: University of Waterloo Upper Saddle River Boston Columbus San Francisco New York Indianapolis London Toronto Sydney Singapore Tokyo Montreal Dubai Madrid Hong Kong Mexico City Munich Paris Amsterdam Cape Town Vice President and Editorial Director, ECS: Marcia J. Horton Executive Editor:Tracy Dunkelberger Assistant Editor: Melinda Haggerty Director of Team-Based Project Management:Vince O'Brien Senior Managing Editor: Scott Disanno Production Liaison: Jane Bonnell Production Editor: Pavithra Jayapaul,TexTech Senior Operations Specialist:Alan Fischer Operations Specialist: Lisa McDowell Marketing Manager: Erin Davis Marketing Assistant: Mack Patterson Art Director: Kenny Beck Cover Designer: Kristine Carney Cover Image: [credit to come] Art Editor: Greg Dulles Media Editor: Daniel Sandin Media Project Manager: John M. Cassar Composition/Full-Service Project Management:TexTech International Pvt. Ltd.\nCopyright © 2010, 2006, 2001, 1998 by Pearson Higher Education. Upper Saddle River, New Jersey 07458. All rights reserved. Manufactured in the United States of America. This publication is protected by Copyright and permission should be obtained from the publisher prior to any prohibited reproduction, storage in a retrieval system, or transmission in any form or by any means, electronic, mechanical, photocopying, recording, or likewise. To obtain permission(s) to use materials from this work, please submit a written request to Pearson Higher Education, Permissions Department, 1 Lake Street, Upper Saddle River, NJ 07458.\nThe author and publisher of this book have used their best efforts in preparing this book. These efforts include the development, research, and testing of the theories and programs to determine their effectiveness. The author and publisher make no warranty of any kind, expressed or implied, with regard to these programs or the documentation contained in this book. The author and publisher shall not be liable in any event for incidental or consequential damages in connection with, or arising out of, the furnishing, performance, or use of these programs."
+        }
+    },
+    {
+        "id": 5856,
+        "metadata": {
+            "images": [
+                "img0_se_theory_practice.pdf__chunk_13_25_7"
+            ],
+            "section": "Library of Congress Cataloging-in-Publication Data",
+            "chunk_id": "se_theory_practice.pdf__chunk_13_25",
+            "document": "1",
+            "token_count": 453,
+            "embeded_content": "[SECTION]: Library of Congress Cataloging-in-Publication Data\n[CONTENT]: Pfleeger, Shari Lawrence.\nSoftware engineering : theory and practice / Shari Lawrence Pfleeger, Joanne M.Atlee. - 4th ed. p. cm.\nIncludes bibliographical references and index.\nISBN-13: 978-0-13-606169-4 (alk. paper)\nISBN-10: 0-13-606169-9 (alk. paper)\n - Software engineering. I. Atlee, Joanne M. II. Title.\nQA76.758.P49 2010 005.1-dc22 2008051400 10 9 8 7 6 5 4 3 2 1 'From so much loving and journeying, books emerge.' Pablo Neruda To Florence Rogart for providing the spark; to Norma Mertz for helping to keep the flame burning.\nS.L.P.\nTo John Gannon, posthumously, for his integrity, inspiration, encouragement, friendship, and the legacy he has left to all of us in software engineering.\nJ.M.A.\nThis page intentionally left blank\n[FIGURE_DESCRIPTIONS]\n[0] PDF cover page excerpt from Pearson. The visible branding shows the Pearson logo with a curved white underline motif on a black rounded rectangular banner. The word PEARSON is centered in uppercase white letters. The header area has a dark background and a light curved arc beneath the text, suggesting a stylized company emblem. This image appears to be the title slide or cover for a theory-practice document, indicating publisher provenance. No other textual content or page numbers are legible except the distinct Pearson branding mark. The aspect ratio is wide, indicating a cropped portion of a PDF page header.\n"
+        }
+    },
+    {
+        "id": 5857,
+        "metadata": {
+            "section": "Contents",
+            "chunk_id": "se_theory_practice.pdf__chunk_26_34",
+            "document": "1",
+            "token_count": 15,
+            "embeded_content": "[SECTION]: Contents\n[CONTENT]: "
+        }
+    },
+    {
+        "id": 5858,
+        "metadata": {
+            "section": "Preface",
+            "chunk_id": "se_theory_practice.pdf__chunk_35_35",
+            "document": "1",
+            "token_count": 1,
+            "embeded_content": "[SECTION]: Preface\n[CONTENT]: "
+        }
+    },
+    {
+        "id": 5859,
+        "metadata": {
+            "document": "1",
+            "section": "Why Software Engineering? > 1.1 What Is Software Engineering? > Solving Problems",
+            "token_count": 544,
+            "chunk_id": "se_theory_practice.pdf__chunk_137_139",
+            "embeded_content": "[SECTION]: Why Software Engineering? > 1.1 What Is Software Engineering? > Solving Problems\n[CONTENT]: A tool is an instrument or automated system for accomplishing something in a better way.This 'better way' can mean that the tool makes us more accurate, more efficient, or more productive or that it enhances the quality of the resulting product. For example, we use a typewriter or a keyboard and printer to write letters because the resulting documents are easier to read than our handwriting. Or we use a pair of scissors as a tool because we can cut faster and straighter than if we were tearing a page. However, a tool is not always necessary for making something well. For example, a cooking technique can make a sauce better, not the pot or spoon used by the chef.\nA procedure is like a recipe: a combination of tools and techniques that, in concert, produce a particular product. For instance, as we will see in later chapters, our test plans describe our test procedures; they tell us which tools will be used on which data sets under which circumstances so we can determine whether our software meets its requirements.\nFinally, a paradigm is like a cooking style; it represents a particular approach or philosophy for building software. Just as we can distinguish French cooking from Chinese cooking, so too do we distinguish paradigms like object-oriented development from procedural ones. One is not better than another; each has its advantages and disadvantages, and there may be situations when one is more appropriate than another.\nSoftware engineers use tools, techniques, procedures, and paradigms to enhance the  quality  of  their  software  products. Their  aim  is  to  use  efficient  and  productive approaches to generate effective solutions to problems. In the chapters that follow, we will  highlight particular approaches that support the development and maintenance activities we describe. An up-to-date set of pointers to tools and techniques is listed in this book's associated home page on the World Wide Web."
+        }
+    },
+    {
+        "id": 5860,
+        "metadata": {
+            "document": "1",
+            "section": "Why Software Engineering? > 1.1 What Is Software Engineering? > Where Does the Software Engineer Fit In?",
+            "token_count": 322,
+            "chunk_id": "se_theory_practice.pdf__chunk_144_144",
+            "embeded_content": "[SECTION]: Why Software Engineering? > 1.1 What Is Software Engineering? > Where Does the Software Engineer Fit In?\n[CONTENT]: [FIGURE 1.3 The relationship between computer science and software engineering.] \n[FIGURE_DESCRIPTIONS]\n[0] A flowchart illustrating the relationship between computer science, customer, and software engineering. The chart starts with three hexagons labeled 'Theories' under 'COMPUTER SCIENCE', 'Computer Functions' under 'COMPUTER SCIENCE', and 'Problem' under 'CUSTOMER'. Arrows from these hexagons point downward to a rectangular box labeled 'SOFTWARE ENGINEERING'. Below this box, an arrow points to a hexagon labeled 'Tools and Techniques to Solve Problem'. The diagram shows how theories and computer functions from computer science, combined with customer problems, feed into software engineering, which then applies tools and techniques to solve the problem.\n"
+        }
+    },
+    {
+        "id": 5861,
+        "metadata": {
+            "document": "1",
+            "section": "Why Software Engineering? > 1.4 Who Does Software Engineering?",
+            "token_count": 322,
+            "chunk_id": "se_theory_practice.pdf__chunk_144_150",
+            "embeded_content": "[SECTION]: Why Software Engineering? > 1.4 Who Does Software Engineering?\n[CONTENT]: [FIGURE 1.7 Participants in software development.] \nThe customer, being in control of the funds, usually negotiates the contract and signs  the  acceptance  papers. However, sometimes  the  customer  is  not  a  user. For example, suppose Wittenberg Water Works signs a contract with Gentle Systems, Inc., to build a computerized accounting system for the company. The president of Wittenberg may describe to the representatives of Gentle Systems exactly what is needed, and she will sign the contract. However, the president will not use the accounting system directly; the users will be the bookkeepers and accounting clerks.Thus,it is important that the developers understand exactly what both the customer and users want and need.\nOn the other hand, suppose Wittenberg Water Works is so large that it has its own computer systems development division.The division may decide that it needs an automated tool to keep track of its own project costs and schedules. By building the tool itself, the division is at the same time the user, customer, and developer.\n[FIGURE_DESCRIPTIONS]\n[0] Diagram illustrating relationships among Customer, User, and Developer in system development. The Customer sponsors system development and has a contractual obligation with the Developer, who builds the system. The Developer receives money and needs from the Customer. The User uses the system and communicates needs to the Developer. Arrows indicate flow: Customer to Developer with $$$ and needs, Developer to Customer with contractual obligation, User to Developer with needs, and Developer to User with software system.\n",
+            "images": [
+                "img0_se_theory_practice.pdf__chunk_144_144_44"
+            ]
+        }
+    }
+]

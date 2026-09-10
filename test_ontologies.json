@@ -1,0 +1,854 @@
+[
+  {
+    "database_id": 5849,
+    "chunk_id": "se_theory_practice.pdf__chunk_0_0",
+    "document_id": "1",
+    "ontology": {
+      "should_extract": false,
+      "skip_reason": "The figure depicts suspension bridge infrastructure and structural engineering, which is unrelated to the document's software engineering subject; its academic interpretation is also partly speculative.",
+      "entities": [],
+      "relationships": []
+    }
+  },
+  {
+    "database_id": 5850,
+    "chunk_id": "se_theory_practice.pdf__chunk_1_2",
+    "document_id": "1",
+    "ontology": {
+      "should_extract": true,
+      "skip_reason": "",
+      "entities": [
+        {
+          "canonical_name": "Software Engineer",
+          "aliases": [
+            "Software engineers"
+          ],
+          "type": "PERSON",
+          "description": "A practitioner who uses knowledge of computers and computing to help solve problems."
+        },
+        {
+          "canonical_name": "Knowledge of Computers and Computing",
+          "aliases": [],
+          "type": "CONCEPT",
+          "description": "Knowledge used by software engineers to help address problems."
+        },
+        {
+          "canonical_name": "Problem",
+          "aliases": [
+            "Problems"
+          ],
+          "type": "CONCEPT",
+          "description": "The difficulty or issue that must first be understood and solved before selecting a technological implementation."
+        },
+        {
+          "canonical_name": "Computer",
+          "aliases": [
+            "Computers"
+          ],
+          "type": "OBJECT",
+          "description": "A computing device that may be related to the problem being addressed."
+        },
+        {
+          "canonical_name": "Computer System",
+          "aliases": [
+            "Computer systems"
+          ],
+          "type": "SYSTEM",
+          "description": "A computer-based system that may be related to a problem and may be necessary or desirable for solving it."
+        },
+        {
+          "canonical_name": "Technology",
+          "aliases": [],
+          "type": "CONCEPT",
+          "description": "A tool that can be used to implement a solution after the problem has been understood and solved conceptually."
+        },
+        {
+          "canonical_name": "Solution",
+          "aliases": [
+            "Solutions"
+          ],
+          "type": "CONCEPT",
+          "description": "The response developed to address a particular problem and potentially implemented using technology."
+        },
+        {
+          "canonical_name": "Analysis",
+          "aliases": [],
+          "type": "PROCESS",
+          "description": "The examination used to determine whether a computer system is necessary or desirable for solving a particular problem."
+        }
+      ],
+      "relationships": [
+        {
+          "source": "Software Engineer",
+          "target": "Knowledge of Computers and Computing",
+          "relation_type": "USES",
+          "description": "Software engineers use knowledge of computers and computing to help solve problems."
+        },
+        {
+          "source": "Knowledge of Computers and Computing",
+          "target": "Problem",
+          "relation_type": "USED_FOR",
+          "description": "Knowledge of computers and computing is used to help address problems."
+        },
+        {
+          "source": "Problem",
+          "target": "Computer",
+          "relation_type": "RELATED_TO",
+          "description": "A problem may be related to a computer."
+        },
+        {
+          "source": "Problem",
+          "target": "Computer System",
+          "relation_type": "RELATED_TO",
+          "description": "A problem may be related to an existing computer system."
+        },
+        {
+          "source": "Technology",
+          "target": "Solution",
+          "relation_type": "IMPLEMENTS",
+          "description": "Technology can be used as a tool to implement a solution."
+        },
+        {
+          "source": "Analysis",
+          "target": "Computer System",
+          "relation_type": "ASSESSES_NEED_FOR",
+          "description": "Analysis determines whether some kind of computer system is necessary or desirable for solving a particular problem."
+        },
+        {
+          "source": "Computer System",
+          "target": "Problem",
+          "relation_type": "USED_FOR",
+          "description": "A computer system may be used to solve a particular problem."
+        }
+      ]
+    }
+  },
+  {
+    "database_id": 5851,
+    "chunk_id": "se_theory_practice.pdf__chunk_3_4",
+    "document_id": "1",
+    "ontology": {
+      "should_extract": false,
+      "skip_reason": "The page is intentionally blank and contains no substantive academic content.",
+      "entities": [],
+      "relationships": []
+    }
+  },
+  {
+    "database_id": 5852,
+    "chunk_id": "se_theory_practice.pdf__chunk_5_5",
+    "document_id": "1",
+    "ontology": {
+      "should_extract": false,
+      "skip_reason": "The source content is empty.",
+      "entities": [],
+      "relationships": []
+    }
+  },
+  {
+    "database_id": 5853,
+    "chunk_id": "se_theory_practice.pdf__chunk_6_6",
+    "document_id": "1",
+    "ontology": {
+      "should_extract": true,
+      "skip_reason": "",
+      "entities": [
+        {
+          "canonical_name": "Method",
+          "aliases": [
+            "Technique",
+            "methods"
+          ],
+          "type": "METHOD",
+          "description": "A formal procedure used to produce a result."
+        },
+        {
+          "canonical_name": "Formal Procedure",
+          "aliases": [
+            "formal procedures"
+          ],
+          "type": "PROCESS",
+          "description": "An explicitly structured procedure for producing some result."
+        },
+        {
+          "canonical_name": "Result",
+          "aliases": [
+            "results"
+          ],
+          "type": "OTHER",
+          "description": "The outcome produced by applying a method or procedure."
+        },
+        {
+          "canonical_name": "Sauce-Preparation Procedure",
+          "aliases": [],
+          "type": "PROCESS",
+          "description": "A procedure in which ingredients are combined in a carefully timed and ordered sequence to prepare a sauce that thickens without curdling or separating."
+        },
+        {
+          "canonical_name": "Sequence of Ingredients",
+          "aliases": [
+            "sequences of ingredients"
+          ],
+          "type": "OBJECT",
+          "description": "The ordered set of ingredients combined during the sauce-preparation procedure."
+        },
+        {
+          "canonical_name": "Timing",
+          "aliases": [],
+          "type": "PROPERTY",
+          "description": "The carefully controlled temporal ordering used in the sauce-preparation procedure."
+        },
+        {
+          "canonical_name": "Cooking Equipment",
+          "aliases": [],
+          "type": "OBJECT",
+          "description": "The type of equipment used for cooking; the sauce-preparation procedure may not depend on which equipment type is used."
+        },
+        {
+          "canonical_name": "Analysis Process",
+          "aliases": [
+            "process of analysis"
+          ],
+          "type": "PROCESS",
+          "description": "The diagrammed process of breaking a problem into subproblems, solving them, and integrating the resulting solutions into a final solution."
+        },
+        {
+          "canonical_name": "Problem",
+          "aliases": [
+            "problems"
+          ],
+          "type": "CONCEPT",
+          "description": "The problem addressed by the analysis process."
+        },
+        {
+          "canonical_name": "Subproblem",
+          "aliases": [
+            "subproblems"
+          ],
+          "type": "CONCEPT",
+          "description": "A smaller problem obtained by breaking down a larger problem during analysis."
+        },
+        {
+          "canonical_name": "Solution",
+          "aliases": [
+            "solutions"
+          ],
+          "type": "CONCEPT",
+          "description": "An answer produced for a subproblem and represented by the intermediate solution boxes in the diagram."
+        },
+        {
+          "canonical_name": "Final Solution",
+          "aliases": [],
+          "type": "CONCEPT",
+          "description": "The integrated solution produced after the individual subproblem solutions are combined."
+        },
+        {
+          "canonical_name": "Synthesis Process",
+          "aliases": [
+            "process of synthesis"
+          ],
+          "type": "PROCESS",
+          "description": "The process named in the textual figure caption as the subject of Figure 1.2."
+        }
+      ],
+      "relationships": [
+        {
+          "source": "Method",
+          "target": "Formal Procedure",
+          "relation_type": "IS_A",
+          "description": "The source defines a method as a formal procedure."
+        },
+        {
+          "source": "Method",
+          "target": "Result",
+          "relation_type": "USED_FOR",
+          "description": "A method is used for producing some result."
+        },
+        {
+          "source": "Sauce-Preparation Procedure",
+          "target": "Method",
+          "relation_type": "EXEMPLIFIES",
+          "description": "The sauce-preparation procedure is given as an example of a method or technique."
+        },
+        {
+          "source": "Sauce-Preparation Procedure",
+          "target": "Sequence of Ingredients",
+          "relation_type": "USES",
+          "description": "The sauce-preparation procedure uses a carefully ordered sequence of ingredients."
+        },
+        {
+          "source": "Sauce-Preparation Procedure",
+          "target": "Timing",
+          "relation_type": "USES",
+          "description": "The sauce-preparation procedure uses carefully controlled timing."
+        },
+        {
+          "source": "Problem",
+          "target": "Subproblem",
+          "relation_type": "HAS_PART",
+          "description": "The analysis process breaks the problem into multiple subproblems."
+        },
+        {
+          "source": "Subproblem",
+          "target": "Solution",
+          "relation_type": "PRODUCES",
+          "description": "Each subproblem is solved to produce a corresponding solution."
+        },
+        {
+          "source": "Solution",
+          "target": "Final Solution",
+          "relation_type": "PRODUCES",
+          "description": "The intermediate solutions are integrated to produce the final solution."
+        },
+        {
+          "source": "Analysis Process",
+          "target": "Problem",
+          "relation_type": "USED_FOR",
+          "description": "The analysis process is used to move from a problem through subproblems and their solutions to a final solution."
+        }
+      ]
+    }
+  },
+  {
+    "database_id": 5854,
+    "chunk_id": "se_theory_practice.pdf__chunk_7_8",
+    "document_id": "1",
+    "ontology": {
+      "should_extract": false,
+      "skip_reason": "The source contains only an organization name and no substantive academic content.",
+      "entities": [],
+      "relationships": []
+    }
+  },
+  {
+    "database_id": 5855,
+    "chunk_id": "se_theory_practice.pdf__chunk_9_12",
+    "document_id": "1",
+    "ontology": {
+      "should_extract": false,
+      "skip_reason": "The source contains publishing, copyright, production, and legal disclaimer information rather than substantive academic content relevant to software engineering.",
+      "entities": [],
+      "relationships": []
+    }
+  },
+  {
+    "database_id": 5856,
+    "chunk_id": "se_theory_practice.pdf__chunk_13_25",
+    "document_id": "1",
+    "ontology": {
+      "should_extract": false,
+      "skip_reason": "The source consists of cataloging, publication, dedication, blank-page, and publisher-branding information rather than substantive academic content.",
+      "entities": [],
+      "relationships": []
+    }
+  },
+  {
+    "database_id": 5857,
+    "chunk_id": "se_theory_practice.pdf__chunk_26_34",
+    "document_id": "1",
+    "ontology": {
+      "should_extract": false,
+      "skip_reason": "The source content is empty and contains no substantive academic information.",
+      "entities": [],
+      "relationships": []
+    }
+  },
+  {
+    "database_id": 5858,
+    "chunk_id": "se_theory_practice.pdf__chunk_35_35",
+    "document_id": "1",
+    "ontology": {
+      "should_extract": false,
+      "skip_reason": "The source is empty and contains no substantive academic content.",
+      "entities": [],
+      "relationships": []
+    }
+  },
+  {
+    "database_id": 5859,
+    "chunk_id": "se_theory_practice.pdf__chunk_137_139",
+    "document_id": "1",
+    "ontology": {
+      "should_extract": true,
+      "skip_reason": "",
+      "entities": [
+        {
+          "canonical_name": "Tool",
+          "aliases": [
+            "tools"
+          ],
+          "type": "OBJECT",
+          "description": "An instrument or automated system used to accomplish something more accurately, efficiently, productively, or with improved resulting-product quality."
+        },
+        {
+          "canonical_name": "Instrument",
+          "aliases": [
+            "instruments"
+          ],
+          "type": "OBJECT",
+          "description": "A type of tool used as a means for accomplishing something."
+        },
+        {
+          "canonical_name": "Automated System",
+          "aliases": [
+            "automated systems"
+          ],
+          "type": "SYSTEM",
+          "description": "A type of tool that automates activities to help accomplish something."
+        },
+        {
+          "canonical_name": "Technique",
+          "aliases": [
+            "techniques"
+          ],
+          "type": "METHOD",
+          "description": "A way of performing an activity that can improve the resulting product or outcome."
+        },
+        {
+          "canonical_name": "Procedure",
+          "aliases": [
+            "procedures"
+          ],
+          "type": "PROCESS",
+          "description": "A combination of tools and techniques used together to produce a particular product."
+        },
+        {
+          "canonical_name": "Product",
+          "aliases": [
+            "products"
+          ],
+          "type": "ARTIFACT",
+          "description": "The particular result produced by a procedure."
+        },
+        {
+          "canonical_name": "Test Plan",
+          "aliases": [
+            "test plans"
+          ],
+          "type": "ARTIFACT",
+          "description": "An artifact that describes a test procedure, including the tools, data sets, and circumstances involved."
+        },
+        {
+          "canonical_name": "Test Procedure",
+          "aliases": [
+            "test procedures"
+          ],
+          "type": "PROCESS",
+          "description": "A procedure for determining whether software meets its requirements."
+        },
+        {
+          "canonical_name": "Data Set",
+          "aliases": [
+            "data sets"
+          ],
+          "type": "OBJECT",
+          "description": "A set of data on which a test procedure operates."
+        },
+        {
+          "canonical_name": "Software Requirement",
+          "aliases": [
+            "software requirements"
+          ],
+          "type": "PROPERTY",
+          "description": "A condition or capability that software is evaluated against by a test procedure."
+        },
+        {
+          "canonical_name": "Paradigm",
+          "aliases": [
+            "paradigms"
+          ],
+          "type": "CONCEPT",
+          "description": "A particular approach or philosophy for building software."
+        },
+        {
+          "canonical_name": "Object-Oriented Development",
+          "aliases": [],
+          "type": "METHOD",
+          "description": "A software development paradigm identified in the source as one possible approach to building software."
+        },
+        {
+          "canonical_name": "Procedural Development",
+          "aliases": [
+            "procedural development"
+          ],
+          "type": "METHOD",
+          "description": "A software development paradigm identified in the source as distinct from object-oriented development."
+        },
+        {
+          "canonical_name": "Software Engineer",
+          "aliases": [
+            "software engineers"
+          ],
+          "type": "PERSON",
+          "description": "A practitioner who uses tools, techniques, procedures, and paradigms to improve software products and generate solutions to problems."
+        },
+        {
+          "canonical_name": "Software Product",
+          "aliases": [
+            "software products"
+          ],
+          "type": "ARTIFACT",
+          "description": "A software artifact whose quality software engineers seek to enhance."
+        },
+        {
+          "canonical_name": "Software Product Quality",
+          "aliases": [],
+          "type": "PROPERTY",
+          "description": "The quality of a resulting software product that can be enhanced through the use of tools, techniques, procedures, and paradigms."
+        }
+      ],
+      "relationships": [
+        {
+          "source": "Tool",
+          "target": "Instrument",
+          "relation_type": "IS_A",
+          "description": "The source defines a tool as an instrument or an automated system."
+        },
+        {
+          "source": "Tool",
+          "target": "Automated System",
+          "relation_type": "IS_A",
+          "description": "The source defines a tool as an instrument or an automated system."
+        },
+        {
+          "source": "Procedure",
+          "target": "Tool",
+          "relation_type": "HAS_PART",
+          "description": "A procedure combines tools with techniques."
+        },
+        {
+          "source": "Procedure",
+          "target": "Technique",
+          "relation_type": "HAS_PART",
+          "description": "A procedure combines techniques with tools."
+        },
+        {
+          "source": "Procedure",
+          "target": "Product",
+          "relation_type": "PRODUCES",
+          "description": "Tools and techniques combined in a procedure produce a particular product."
+        },
+        {
+          "source": "Test Plan",
+          "target": "Test Procedure",
+          "relation_type": "REPRESENTS",
+          "description": "The source states that test plans describe test procedures."
+        },
+        {
+          "source": "Test Procedure",
+          "target": "Tool",
+          "relation_type": "USES",
+          "description": "A test procedure specifies which tools are used."
+        },
+        {
+          "source": "Test Procedure",
+          "target": "Data Set",
+          "relation_type": "USES",
+          "description": "A test procedure specifies the data sets on which the tools are used."
+        },
+        {
+          "source": "Object-Oriented Development",
+          "target": "Paradigm",
+          "relation_type": "IS_A",
+          "description": "Object-oriented development is given as an example of a software development paradigm."
+        },
+        {
+          "source": "Procedural Development",
+          "target": "Paradigm",
+          "relation_type": "IS_A",
+          "description": "Procedural development is given as an example of a software development paradigm."
+        },
+        {
+          "source": "Object-Oriented Development",
+          "target": "Procedural Development",
+          "relation_type": "DISTINCT_FROM",
+          "description": "The source distinguishes object-oriented development from procedural development."
+        },
+        {
+          "source": "Paradigm",
+          "target": "Software Product",
+          "relation_type": "USED_FOR",
+          "description": "A paradigm provides an approach or philosophy for building software products."
+        },
+        {
+          "source": "Software Engineer",
+          "target": "Tool",
+          "relation_type": "USES",
+          "description": "Software engineers use tools to improve their software products."
+        },
+        {
+          "source": "Software Engineer",
+          "target": "Technique",
+          "relation_type": "USES",
+          "description": "Software engineers use techniques to improve their software products."
+        },
+        {
+          "source": "Software Engineer",
+          "target": "Procedure",
+          "relation_type": "USES",
+          "description": "Software engineers use procedures to improve their software products."
+        },
+        {
+          "source": "Software Engineer",
+          "target": "Paradigm",
+          "relation_type": "USES",
+          "description": "Software engineers use paradigms as approaches for developing software."
+        },
+        {
+          "source": "Tool",
+          "target": "Software Product Quality",
+          "relation_type": "AFFECTS",
+          "description": "Tools can enhance the quality of the resulting software product."
+        },
+        {
+          "source": "Technique",
+          "target": "Software Product Quality",
+          "relation_type": "AFFECTS",
+          "description": "Techniques can enhance the quality of software products."
+        },
+        {
+          "source": "Procedure",
+          "target": "Software Product Quality",
+          "relation_type": "AFFECTS",
+          "description": "Procedures are used as part of approaches intended to enhance software-product quality."
+        },
+        {
+          "source": "Paradigm",
+          "target": "Software Product Quality",
+          "relation_type": "AFFECTS",
+          "description": "Paradigms are used as part of approaches intended to enhance software-product quality."
+        }
+      ]
+    }
+  },
+  {
+    "database_id": 5860,
+    "chunk_id": "se_theory_practice.pdf__chunk_144_144",
+    "document_id": "1",
+    "ontology": {
+      "should_extract": true,
+      "skip_reason": "",
+      "entities": [
+        {
+          "canonical_name": "Computer Science",
+          "aliases": [],
+          "type": "CONCEPT",
+          "description": "The field providing theories and computer functions that feed into software engineering."
+        },
+        {
+          "canonical_name": "Theories",
+          "aliases": [
+            "Theory"
+          ],
+          "type": "CONCEPT",
+          "description": "Theoretical knowledge from computer science shown as an input to software engineering."
+        },
+        {
+          "canonical_name": "Computer Functions",
+          "aliases": [
+            "Computer Function"
+          ],
+          "type": "CONCEPT",
+          "description": "Computer-related functions from computer science shown as an input to software engineering."
+        },
+        {
+          "canonical_name": "Customer",
+          "aliases": [
+            "Customers"
+          ],
+          "type": "PERSON",
+          "description": "The source associated with the problem that software engineering addresses."
+        },
+        {
+          "canonical_name": "Problem",
+          "aliases": [
+            "Problems"
+          ],
+          "type": "CONCEPT",
+          "description": "A customer problem that feeds into software engineering and is addressed using tools and techniques."
+        },
+        {
+          "canonical_name": "Software Engineering",
+          "aliases": [],
+          "type": "CONCEPT",
+          "description": "The discipline that combines computer science inputs with customer problems and applies tools and techniques to solve those problems."
+        },
+        {
+          "canonical_name": "Tools and Techniques to Solve Problem",
+          "aliases": [
+            "Tool and Technique to Solve Problem"
+          ],
+          "type": "METHOD",
+          "description": "Tools and techniques applied by software engineering to solve a problem."
+        }
+      ],
+      "relationships": [
+        {
+          "source": "Theories",
+          "target": "Software Engineering",
+          "relation_type": "SUPPORTS",
+          "description": "Theories from computer science feed into and support software engineering."
+        },
+        {
+          "source": "Computer Functions",
+          "target": "Software Engineering",
+          "relation_type": "SUPPORTS",
+          "description": "Computer functions from computer science feed into and support software engineering."
+        },
+        {
+          "source": "Problem",
+          "target": "Software Engineering",
+          "relation_type": "SUPPORTS",
+          "description": "The customer problem feeds into software engineering as the problem to be solved."
+        },
+        {
+          "source": "Computer Science",
+          "target": "Theories",
+          "relation_type": "HAS_PART",
+          "description": "Theories are shown under computer science in the diagram."
+        },
+        {
+          "source": "Computer Science",
+          "target": "Computer Functions",
+          "relation_type": "HAS_PART",
+          "description": "Computer functions are shown under computer science in the diagram."
+        },
+        {
+          "source": "Software Engineering",
+          "target": "Tools and Techniques to Solve Problem",
+          "relation_type": "USES",
+          "description": "Software engineering applies tools and techniques to solve the problem."
+        },
+        {
+          "source": "Tools and Techniques to Solve Problem",
+          "target": "Problem",
+          "relation_type": "USED_FOR",
+          "description": "The tools and techniques are used to solve the problem."
+        }
+      ]
+    }
+  },
+  {
+    "database_id": 5861,
+    "chunk_id": "se_theory_practice.pdf__chunk_144_144",
+    "document_id": "1",
+    "ontology": {
+      "should_extract": true,
+      "skip_reason": "",
+      "entities": [
+        {
+          "canonical_name": "Customer",
+          "aliases": [
+            "Customers"
+          ],
+          "type": "OTHER",
+          "description": "A participant in software development who typically controls funds, negotiates the contract, and signs acceptance papers; the customer may or may not be a system user."
+        },
+        {
+          "canonical_name": "User",
+          "aliases": [
+            "Users"
+          ],
+          "type": "OTHER",
+          "description": "A participant who uses the developed system and communicates needs to the developer."
+        },
+        {
+          "canonical_name": "Developer",
+          "aliases": [
+            "Developers"
+          ],
+          "type": "OTHER",
+          "description": "A participant responsible for understanding stakeholder needs and building the software system."
+        },
+        {
+          "canonical_name": "System development",
+          "aliases": [],
+          "type": "PROCESS",
+          "description": "The process of building a software system involving customers, users, and developers."
+        },
+        {
+          "canonical_name": "Software system",
+          "aliases": [
+            "Software systems"
+          ],
+          "type": "SYSTEM",
+          "description": "The system produced by the developer and used by system users."
+        },
+        {
+          "canonical_name": "Computer systems development division",
+          "aliases": [],
+          "type": "ORGANIZATION",
+          "description": "A development division that may build an automated tool for its own project-cost and schedule tracking and simultaneously act as customer, user, and developer."
+        }
+      ],
+      "relationships": [
+        {
+          "source": "Customer",
+          "target": "System development",
+          "relation_type": "PART_OF",
+          "description": "The customer is a participant in system development."
+        },
+        {
+          "source": "User",
+          "target": "System development",
+          "relation_type": "PART_OF",
+          "description": "The user is a participant in system development."
+        },
+        {
+          "source": "Developer",
+          "target": "System development",
+          "relation_type": "PART_OF",
+          "description": "The developer is a participant in system development."
+        },
+        {
+          "source": "Customer",
+          "target": "System development",
+          "relation_type": "ENABLES",
+          "description": "The customer sponsors and funds system development."
+        },
+        {
+          "source": "Customer",
+          "target": "Developer",
+          "relation_type": "RELATED_TO",
+          "description": "The customer negotiates a contract with the developer and has a contractual relationship with that developer."
+        },
+        {
+          "source": "User",
+          "target": "Developer",
+          "relation_type": "RELATED_TO",
+          "description": "The user communicates needs to the developer."
+        },
+        {
+          "source": "Developer",
+          "target": "Software system",
+          "relation_type": "PRODUCES",
+          "description": "The developer builds and produces the software system."
+        },
+        {
+          "source": "User",
+          "target": "Software system",
+          "relation_type": "USES",
+          "description": "The user uses the software system."
+        },
+        {
+          "source": "Computer systems development division",
+          "target": "Customer",
+          "relation_type": "INSTANCE_OF",
+          "description": "In the described case, the computer systems development division acts as the customer."
+        },
+        {
+          "source": "Computer systems development division",
+          "target": "User",
+          "relation_type": "INSTANCE_OF",
+          "description": "In the described case, the computer systems development division acts as the user of the tool it builds."
+        },
+        {
+          "source": "Computer systems development division",
+          "target": "Developer",
+          "relation_type": "INSTANCE_OF",
+          "description": "In the described case, the computer systems development division acts as the developer that builds the tool."
+        }
+      ]
+    }
+  }
+]

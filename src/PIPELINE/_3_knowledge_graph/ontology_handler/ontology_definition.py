@@ -62,6 +62,8 @@ RELATION_TYPES =Literal[
     "DEPENDS_ON",
     "ENABLES",
     "IMPLEMENTS",
+    "ASSESSES_NEED_FOR",
+    "APPLICABLE_TO"
 
     # Causality and results
     "CAUSES",

@@ -132,7 +132,7 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 #     "./EXPERIMENTS/full_pipeline_strategies/"
 #     "stage4_hsf_600_multistage_v075_b025_2400/config.yaml"
 # )
-config_path = "DEMO/config.yaml"
+config_path = "EXPERIMENTS/graph/v1/config.yaml"
 settings = Settings.load(config_path=config_path)
 # print(settings.config["vectordb_connect_info"]["collection"])
 

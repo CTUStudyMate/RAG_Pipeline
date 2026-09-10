@@ -1,123 +1,238 @@
 # python -m src.PIPELINE._3_knowledge_graph.ontology_handler.ontology_extractor
 
 from PIPELINE._3_knowledge_graph.ontology_handler.ontology_definition import ENTITY_TYPES, RELATION_TYPES
+from PIPELINE._3_knowledge_graph.ontology_handler.ontology_extraction_prompt import system_prompt_for_ontology_extraction, build_extraction_input
 from pydantic import BaseModel, Field
-from typing import get_args
+from typing import Any
 
-from pipeline_setup import llm
+from pipeline_setup import llm, pool
+from pipeline_config import settings
 
-# max_knowledge_triplets = 3
-entity_types_text = ", ".join(get_args(ENTITY_TYPES))
-relation_types_text = ", ".join(get_args(RELATION_TYPES))
-
-prompt_template = f"""
--Goal-
-Given the source text below, extract the entities and relationships explicitly supported by the text.
-
-Do not use external knowledge or infer unsupported information.
-
--Allowed Entity Types-
-{entity_types_text}
-
--Allowed Relationship Types-
-{relation_types_text}
-
--Steps-
-1. Identify the entities that are important for understanding the source text.
-
-For each entity, extract:
-
-- canonical_name:
-  The clearest and most standard name of the entity, using normal capitalization.
-  Use the same canonical name consistently throughout the output.
-
-- aliases:
-  Alternative names, abbreviations, acronyms, or spelling variants that explicitly refer to the same entity in the source text.
-  Do not include the canonical name itself.
-  Return an empty list if no aliases are present.
-
-- type:
-  Exactly one value from the allowed entity types.
-  Use OTHER only when none of the more specific types apply.
-
-- description:
-  A concise, self-contained description of the entity, its relevant attributes, and its role in the source text.
-  Include only information supported by the source text.
-
-2. Identify relationships between the extracted entities.
-
-Only extract a relationship when the source text clearly supports a meaningful
-connection between the two entities.
-
-For each relationship, extract:
-
-- source:
-  The exact canonical_name of the source entity identified in Step 1.
-
-- target:
-  The exact canonical_name of the target entity identified in Step 1.
-
-- relation_type:
-  Exactly one value from the allowed relationship types.
-  Select the most specific applicable type.
-  Use RELATED_TO only when the relationship is meaningful but no more specific
-  allowed type applies.
-  
-- description:
-  A concise sentence explaining how the source entity relates to the target entity
-  according to the source text.
-
-3. Apply the following consistency rules:
-
-- Every relationship endpoint must correspond to an entity returned in Step 1.
-- Use canonical_name, not an alias, in source and target.
-- Do not create duplicate entities or duplicate relationships.
-- Do not treat two aliases of the same entity as separate entities.
-- Preserve relationship direction.
-- Extract a relationship only when the source text explicitly states or clearly entails a specific connection between the two entities. Do not create a relationship merely because both entities appear in the same text.
-- If no entities or relationships can be reliably extracted, return empty lists.
-- Return all output fields in English.
-
--Source Text-
-{{text}}
-"""
-
+chunks_table = settings.pgdb_connect_info.chunks_table
 
 class ExtractedEntity(BaseModel):
-    canonical_name: str = Field(description="Name of the entity, capitalized")
-    aliases: list[str] = Field(
-        default_factory=list,
-        description=(
-            "Alternative names, abbreviations, acronyms, or spelling variants "
-            "that refer to the same entity. Exclude the canonical name."
-        ),)
-    type: ENTITY_TYPES = Field(description="One of the allowed entity types")
-    description: str = Field(description="Brief description of the entity and its role")
+	canonical_name: str = Field(description="Name of the entity, capitalized")
+	aliases: list[str] = Field(
+		default_factory=list,
+		description=(
+			"Alternative names, abbreviations, acronyms, or spelling variants "
+			"that refer to the same entity. Exclude the canonical name."
+		),)
+	type: ENTITY_TYPES = Field(description="One of the allowed entity types")
+	description: str = Field(description="Brief description of the entity and its role")
 
 class ExtractedRelationship(BaseModel):
-    source: str = Field(description="Name of the source entity")
-    target: str = Field(description="Name of the target entity")
-    relation_type: RELATION_TYPES = Field(description="Relationship type from source to target.")
-    description: str = Field(description="Sentence explaining the relationship")
-    # evidence_chunk_ids: list[str] = Field(description="IDs of the chunks that provide evidence for this relationship.")
+	source: str = Field(description="Name of the source entity")
+	target: str = Field(description="Name of the target entity")
+	relation_type: RELATION_TYPES = Field(description="Relationship type from source to target.")
+	description: str = Field(description="Sentence explaining the relationship")
+	# evidence_chunk_ids: list[str] = Field(description="IDs of the chunks that provide evidence for this relationship.")
 
-class ExtractionResult(BaseModel):
+class LLMExtractionResult(BaseModel):
+    should_extract: bool = Field(
+        description=(
+            "Whether the source contains substantive academic knowledge "
+            "relevant to the document and suitable for extraction."
+        )
+    )
+
+    skip_reason: str = Field(
+        description=(
+            "Brief reason for skipping the source. "
+            "Return an empty string when should_extract is true."
+        )
+    )
     entities: list[ExtractedEntity] = Field(default_factory=list)
     relationships: list[ExtractedRelationship] = Field(default_factory=list)
+
+class ChunkExtractionResult(BaseModel):
+	database_id: Any
+	chunk_id: str
+	document_id: str
+	ontology: LLMExtractionResult
+	
+
+def fetch_document_chunks(document_id, chunks_limit, max_attempt):
+	with pool.connection() as conn:
+		with conn.cursor() as cur:
+			cur.execute(
+				f"""
+				SELECT id, metadata
+				FROM {chunks_table}
+				WHERE metadata ->> 'document' = %s
+				AND (
+					metadata -> 'graph_processed' IS NULL
+					OR (metadata ->> 'graph_processed')::boolean = false
+				)
+				AND (
+					metadata -> 'graph_attempt_count' IS NULL
+					OR (metadata ->> 'graph_attempt_count')::int < %s
+				)
+				ORDER BY id
+				LIMIT {chunks_limit}
+				""",
+				(str(document_id), max_attempt)
+			)
+
+			rows = cur.fetchall()
+	return rows
+
+def extract_ontology(text: str) -> LLMExtractionResult:
+    if not text or not text.strip():
+        return LLMExtractionResult(
+            should_extract=False,
+            skip_reason="Empty source content.",
+            entities=[],
+            relationships=[],
+        )
+
+    return llm.generate_structured(
+        system_prompt=system_prompt_for_ontology_extraction,
+        content=text,
+        response_model=LLMExtractionResult,
+        reasoning_effort="medium",
+    )  
     
-def extract_ontology(text: str) -> ExtractionResult:
-    if not text.strip():
-        return ExtractionResult()
-    return llm.generate_structured(system_prompt=prompt_template, content=text, response_model=ExtractionResult, reasoning_effort="medium")
+def extract_and_merge_ontologies(rows, document_name)->  tuple[list[str], list[str]]:
+    extracted_list = []
+    for row in rows:
+        metadata = row[1]
+        input_for_extraction = build_extraction_input(metadata, document_name)
+        print(f"Running extraction for {input_for_extraction[:200]} ... ")
+        llm_extract_result = extract_ontology(input_for_extraction)
+        extracted_result = ChunkExtractionResult(database_id=row[0], chunk_id=metadata["chunk_id"], document_id=metadata["document"], ontology=llm_extract_result)
+        extracted_list.append(extracted_result)
+    with open("test_ontologies.json", "w", encoding="utf-8") as f:
+        json.dump([item.model_dump() for item in extracted_list], f, ensure_ascii=False, indent=2)
+    return extracted_list
 
-sample_text = """
-Object-oriented programming supports abstraction, inheritance, and polymorphism.
-A subclass inherits attributes and methods from its superclass.
-An object is an instance of a class.
-Inheritance can enable polymorphic behavior through method overriding.
-"""
+        
+#     Lấy 20 chunks
+# → extract từng chunk
+# → tạo list[ChunkExtractionResult]
+# → resolve toàn bộ batch
+# → đối chiếu với graph hiện có
+# → ghi Neo4j
+# → đánh dấu processed
+# → lấy 20 chunks tiếp theo
+	 
 
-result = extract_ontology(sample_text)
+def proccess_fetched_chunks(rows, document_name):
+	processed_list, failed_list = extract_and_merge_ontologies(rows, document_name)
+	with pool.connection() as conn:
+		with conn.cursor() as cur:
+			if processed_list:
+				cur.execute(
+				f"""
+				UPDATE {chunks_table}
+				SET metadata = jsonb_set(
+					metadata,
+					'{{graph_processed}}',
+					'true'::jsonb,
+					true
+				)
+				WHERE id = ANY(%s)
+				""",
+				(processed_list,)
+			)
+				
+				if failed_list:
+					cur.execute(
+					f"""
+					UPDATE {chunks_table}
+					SET metadata = jsonb_set(
+						metadata,
+						'{{graph_attempt_count}}',
+						to_jsonb(
+							CASE
+								WHEN metadata -> 'graph_attempt_count' IS NULL
+								THEN 1
+								ELSE (metadata ->> 'graph_attempt_count')::int + 1
+							END
+						),
+						true
+					)
+					WHERE id = ANY(%s)
+					""",
+					(failed_list,)
+				)
+				
+		conn.commit()
 
-print(result.model_dump_json(indent=2))
-    
+def ingest_document_into_graph(document_id, document_name, chunks_limit=20, max_attempt = 3):
+	while True:
+		rows = fetch_document_chunks(document_id=document_id, max_attempt=max_attempt, chunks_limit=chunks_limit)
+		if len(rows) == 0:
+			break
+		proccess_fetched_chunks(rows, document_name)
+
+
+chunks_limit = 10
+document_id = "1"
+max_attempt = 3
+
+# import json
+# with pool.connection() as conn:
+#     with conn.cursor() as cur:
+#         cur.execute(
+#             f"""
+#             SELECT id, metadata
+#             FROM {chunks_table}
+#             WHERE metadata ->> 'document' = %s
+#               AND (
+#                   metadata -> 'graph_processed' IS NULL
+#                   OR (metadata ->> 'graph_processed')::boolean = false
+#               )
+#               AND (
+#                   metadata -> 'graph_attempt_count' IS NULL
+#                   OR (metadata ->> 'graph_attempt_count')::int < %s
+#               )
+#             ORDER BY id
+#             LIMIT {chunks_limit}
+#             """,
+#             (str(document_id), max_attempt)
+#         )
+
+#         rows = cur.fetchall()
+
+# data = [
+#     {
+#         "id": row_id,
+#         "metadata": metadata
+#     }
+#     for row_id, metadata in rows
+# ]
+
+# with open(
+#     "EXPERIMENTS/graph/v1/test_chunks.json",
+#     "w",
+#     encoding="utf-8"
+# ) as f:
+#     json.dump(
+#         data,
+#         f,
+#         ensure_ascii=False,
+#         indent=2
+#     )
+
+# ####################
+import json
+
+with open(
+	"EXPERIMENTS/graph/v1/test_chunks.json",
+	"r",
+	encoding="utf-8"
+) as f:
+	data = json.load(f)
+
+rows = [
+	(item["id"], item["metadata"])
+	for item in data
+]
+rows = rows
+extract_and_merge_ontologies(rows=rows, document_name="Software Engineering - Theory and Practice")
+# answer = llm.generate(system_prompt="Be a nice boyfriend", content="Hello.")
+# print(answer)
+# print("haha hehe")
+
+pool.close() # không để dòng này chạy khi chạy rag server
