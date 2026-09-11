@@ -24,11 +24,12 @@ The provided source may contain TEXTUAL CONTENT, FIGURE DESCRIPTIONS, or both.
 	
 	- Every relationship endpoint must correspond to an entity returned in Step 1.
 	- Use canonical_name, not an alias, in source and target.
+    - Preserve the semantic head of a noun phrase. Preserve meaningful multi-word noun phrases as complete entities when the complete phrase plays a semantic role in a statement. Do not additionally extract a nested component of a compound entity merely because that component appears inside the phrase.
 	- Do not create duplicate entities or duplicate relationships.
 	- Do not treat two aliases of the same entity as separate entities.
 	- Preserve relationship direction.
 	- Extract a relationship only when the source text explicitly states or clearly entails a specific connection between the two entities. Do not create a relationship merely because both entities appear in the same text.
-    - Preserve the semantic head of a noun phrase. Preserve meaningful multi-word noun phrases as complete entities when the complete phrase plays a semantic role in a statement. Do not additionally extract a nested component of a compound entity merely because that component appears inside the phrase.
+    - Do not extract both directions of the same semantic relationship. If one relationship already expresses the fact, do not add an inverse or reverse-direction version of that fact.
     - Do not replace a relationship target with a noun that appears only inside an "of", "about", or similar modifying phrase.
 	- If no entities or relationships can be reliably extracted, return empty lists.
 	- Return all output fields in English.
@@ -69,7 +70,7 @@ Do not treat statements containing words such as "appears", "suggests",
 	
 	- aliases:
         Alternative names, abbreviations, acronyms, or spelling variants that explicitly refer to the same entity in the source text.
-        For a countable common noun: If canonical_name is singular, include its plural form as an alias when a valid and distinct plural form exists. If canonical_name is plural, include its singular form as an alias when a valid and distinct singular form exists.
+        For a countable common noun: The canonical_name must be singular. Include its plural form as an alias when a valid and distinct plural form exists.
         Do not include the extracted canonical name.
         Do not include the canonical_name itself or variants that differ only in capitalization or surrounding whitespace.
         Do not generate singular or plural variants for proper names, acronyms, uncountable nouns, or expressions whose number form is uncertain.

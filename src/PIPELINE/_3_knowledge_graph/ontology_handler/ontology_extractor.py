@@ -7,6 +7,7 @@ from typing import Any
 
 from pipeline_setup import llm, pool
 from pipeline_config import settings
+import re
 
 chunks_table = settings.pgdb_connect_info.chunks_table
 
@@ -93,7 +94,7 @@ def extract_ontology(text: str) -> LLMExtractionResult:
         reasoning_effort="medium",
     )  
     
-def extract_and_merge_ontologies(rows, document_name)->  tuple[list[str], list[str]]:
+def doucment_chunksbatch_to_ontologies(rows, document_name)->  tuple[list[str], list[str]]:
     extracted_list = []
     for row in rows:
         metadata = row[1]
@@ -102,8 +103,8 @@ def extract_and_merge_ontologies(rows, document_name)->  tuple[list[str], list[s
         llm_extract_result = extract_ontology(input_for_extraction)
         extracted_result = ChunkExtractionResult(database_id=row[0], chunk_id=metadata["chunk_id"], document_id=metadata["document"], ontology=llm_extract_result)
         extracted_list.append(extracted_result)
-    with open("test_ontologies.json", "w", encoding="utf-8") as f:
-        json.dump([item.model_dump() for item in extracted_list], f, ensure_ascii=False, indent=2)
+    # with open("test_ontologies.json", "w", encoding="utf-8") as f:
+    #     json.dump([item.model_dump() for item in extracted_list], f, ensure_ascii=False, indent=2)
     return extracted_list
 
         
@@ -117,59 +118,12 @@ def extract_and_merge_ontologies(rows, document_name)->  tuple[list[str], list[s
 # → lấy 20 chunks tiếp theo
 	 
 
-def proccess_fetched_chunks(rows, document_name):
-	processed_list, failed_list = extract_and_merge_ontologies(rows, document_name)
-	with pool.connection() as conn:
-		with conn.cursor() as cur:
-			if processed_list:
-				cur.execute(
-				f"""
-				UPDATE {chunks_table}
-				SET metadata = jsonb_set(
-					metadata,
-					'{{graph_processed}}',
-					'true'::jsonb,
-					true
-				)
-				WHERE id = ANY(%s)
-				""",
-				(processed_list,)
-			)
-				
-				if failed_list:
-					cur.execute(
-					f"""
-					UPDATE {chunks_table}
-					SET metadata = jsonb_set(
-						metadata,
-						'{{graph_attempt_count}}',
-						to_jsonb(
-							CASE
-								WHEN metadata -> 'graph_attempt_count' IS NULL
-								THEN 1
-								ELSE (metadata ->> 'graph_attempt_count')::int + 1
-							END
-						),
-						true
-					)
-					WHERE id = ANY(%s)
-					""",
-					(failed_list,)
-				)
-				
-		conn.commit()
-
-def ingest_document_into_graph(document_id, document_name, chunks_limit=20, max_attempt = 3):
-	while True:
-		rows = fetch_document_chunks(document_id=document_id, max_attempt=max_attempt, chunks_limit=chunks_limit)
-		if len(rows) == 0:
-			break
-		proccess_fetched_chunks(rows, document_name)
 
 
-chunks_limit = 10
-document_id = "1"
-max_attempt = 3
+
+# chunks_limit = 10
+# document_id = "1"
+# max_attempt = 3
 
 # import json
 # with pool.connection() as conn:
@@ -215,7 +169,7 @@ max_attempt = 3
 #         indent=2
 #     )
 
-# ####################
+# #################### TEST
 import json
 
 with open(
@@ -230,9 +184,6 @@ rows = [
 	for item in data
 ]
 rows = rows
-extract_and_merge_ontologies(rows=rows, document_name="Software Engineering - Theory and Practice")
-# answer = llm.generate(system_prompt="Be a nice boyfriend", content="Hello.")
-# print(answer)
-# print("haha hehe")
+doucment_chunksbatch_to_ontologies(rows=rows, document_name="Software Engineering - Theory and Practice")
 
 pool.close() # không để dòng này chạy khi chạy rag server

@@ -99,3 +99,36 @@ RELATION_TYPES =Literal[
 #   "description": "Achieving horizontal scalability across distributed nodes can require trade-offs in consistency.",
 #   "evidence_chunk_ids": ["chunk_171", "chunk_203"]
 # }
+
+RELATION_TYPE_CONSTRAINTS = {
+    "PRECEDES": {
+        "source_types": {"PROCESS", "EVENT"},
+        "target_types": {"PROCESS", "EVENT"},
+    },
+    "HAS_SUBPROCESS": {
+        "source_types": {"PROCESS"},
+        "target_types": {"PROCESS"},
+    },
+    "PRODUCES": {
+        "source_types": {
+            "PERSON",
+            "ORGANIZATION",
+            "SYSTEM",
+            "METHOD",
+            "PROCESS",
+        },
+        "target_types": {
+            "ARTIFACT",
+            "SYSTEM",
+            "CONCEPT",
+            "OTHER",
+        },
+    },
+    "ASSESSES_NEED_FOR": {
+        "source_types": {"METHOD", "PROCESS"},
+        "target_types": {"SYSTEM", "ARTIFACT", "METHOD", "PROCESS"},
+    },
+    "INSTANCE_OF": {
+        "target_types": {"CONCEPT"},
+    },
+}

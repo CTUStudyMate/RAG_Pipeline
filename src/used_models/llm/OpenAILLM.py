@@ -12,9 +12,11 @@ default_reasoning_effort = "minimal"
 
 class OpenAIWrapper(BaseLLM):
     def __init__(self, model=LLM_MODEL):
+        # self.client = OpenAI(api_key=OPENAI_API_KEY, base_url="https://llm.wokushop.com/v1")
         self.client = OpenAI(api_key=OPENAI_API_KEY)
         self.model = model
         
+        # kwargs = {"model": model, "api_key": OPENAI_API_KEY, "base_url":"https://llm.wokushop.com/v1"}
         kwargs = {"model": model, "api_key": OPENAI_API_KEY}
         if model.startswith("gpt-5"):
             kwargs["reasoning"] = {"effort": default_reasoning_effort}
