@@ -1,5 +1,5 @@
 from PIPELINE._3_knowledge_graph.ontology_handler.ontology_extractor import doucment_chunksbatch_to_ontologies, fetch_document_chunks
-from PIPELINE._3_knowledge_graph.ontology_handler.ontology_validation import validate_ontologies
+from PIPELINE._3_knowledge_graph.ontology_handler.ontology_validator_resolver import validate_ontologies
 from pipeline_setup import pool
 from pipeline_config import settings
 chunks_table = settings.pgdb_connect_info.chunks_table

@@ -15,16 +15,32 @@ The provided source may contain TEXTUAL CONTENT, FIGURE DESCRIPTIONS, or both.
 	- Do not convert speculative visual statements expressed with words such as "appears", "suggests", or "may represent" into definite facts.
 
 # Allowed entity types
-	{entity_types_text}
+    - CONCEPT: an abstract idea, category, theory, role, discipline, or principle.
+    - OBJECT: an identifiable physical or digital thing that is not better modelled as an artifact or system.
+    - METHOD: a repeatable technique, approach, algorithm, or prescribed way of doing something.
+    - PROCESS: an activity or sequence of activities that unfolds over time.
+    - SYSTEM: interacting components organized to achieve a function.
+    - PROPERTY: a quality, attribute, condition, or measurable characteristic.
+    - ARTIFACT: a human-created product, document, model, plan, or deliverable.
+    - PERSON: a specific individual or a human actor explicitly treated as a person.
+    - ORGANIZATION: a company, institution, team, department, or formal group.
+    - LOCATION: a place or geographical area.
+    - EVENT: a bounded occurrence in time.
+    - OTHER: use only when none of the above is appropriate.
 	
 # Allowed relationship types
 	{relation_types_text}
 
 # Rules:
 	
-	- Every relationship endpoint must correspond to an entity returned in Step 1.
-	- Use canonical_name, not an alias, in source and target.
+    - When the source explicitly states, defines, or clearly supports the full form of an abbreviation or acronym, use the full form as the canonical name and include the abbreviation or acronym as an alias.
+        Example:
+        Source: "Object-Oriented Programming (OOP) ..."
+        canonical_name: "Object-Oriented Programming"
+        aliases: ["OOP"]
+    - Do not use external knowledge to expand an abbreviation or acronym. If the source does not provide or clearly support its full form, preserve the abbreviation or acronym as the canonical name rather than guessing an expansion.
     - Preserve the semantic head of a noun phrase. Preserve meaningful multi-word noun phrases as complete entities when the complete phrase plays a semantic role in a statement. Do not additionally extract a nested component of a compound entity merely because that component appears inside the phrase.
+	- Every relationship endpoint must correspond to an entity returned in Step 1. Use local_id of the entity in source and target.
 	- Do not create duplicate entities or duplicate relationships.
 	- Do not treat two aliases of the same entity as separate entities.
 	- Preserve relationship direction.
@@ -62,6 +78,10 @@ Do not treat statements containing words such as "appears", "suggests",
 	1. Identify the entities that are important for understanding the source text.
 	
 	For each entity, extract:
+    - local_id:
+        A unique identifier for the entity within the current extraction result.
+        Use sequential identifiers such as E1, E2, E3, and so on.
+        Do not reuse the same local_id for different entities within one extraction result.
 	
 	- canonical_name:
         The clearest and most standard name of the entity. 
@@ -86,14 +106,13 @@ Do not treat statements containing words such as "appears", "suggests",
 	
 	2. Identify relationships between the extracted entities.
 	
-	Only extract a relationship when the source text clearly supports a meaningful
-	connection between the two entities.
+	Only extract a relationship when the source text clearly supports a meaningful connection between the two entities identified in Step 1.
 	
 	For each relationship, extract:
 	
-	- source: The exact canonical_name of the source entity identified in Step 1.
+	- source_entity_id: The exact local_id of the source entity identified in Step 1.
 	
-	- target: The exact canonical_name of the target entity identified in Step 1.
+	- target_entity_id: The exact local_id of the target entity identified in Step 1.
 	
 	- relation_type:
         Exactly one value from the allowed relationship types.

@@ -1,4 +1,5 @@
 import re
+from rapidfuzz import fuzz
 
 def _normalize_text(value: str) -> str:
     """Normalize surrounding/repeated whitespace without changing display casing."""
@@ -37,3 +38,17 @@ def _singularize_last_word(name: str) -> str:
         return name
 
     return name[:match.start(1)] + singular
+
+def normalize_text(text: str) -> str:
+    return _normalize_text(text).casefold()
+
+def is_fuzzy_match(
+    text1: str,
+    text2: str,
+    threshold: float = 90,
+) -> bool:
+    score = fuzz.ratio(
+        normalize_text(text1),
+        normalize_text(text2),
+    )
+    return score >= threshold

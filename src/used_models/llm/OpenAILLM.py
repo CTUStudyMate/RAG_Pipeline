@@ -13,6 +13,7 @@ default_reasoning_effort = "minimal"
 class OpenAIWrapper(BaseLLM):
     def __init__(self, model=LLM_MODEL):
         # self.client = OpenAI(api_key=OPENAI_API_KEY, base_url="https://llm.wokushop.com/v1")
+        # self.client = OpenAI(api_key=OPENAI_API_KEY, base_url="https://platform.beeknoee.com/v1")
         self.client = OpenAI(api_key=OPENAI_API_KEY)
         self.model = model
         
@@ -67,7 +68,8 @@ class OpenAIWrapper(BaseLLM):
 
         response = self.client.responses.create(**kwargs)
 
-        return response.output_text
+        return response.output_text # old version
+        # return response.ou
   
 
     def generate_structured(

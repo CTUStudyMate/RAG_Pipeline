@@ -7,28 +7,57 @@ from typing import Any
 
 from pipeline_setup import llm, pool
 from pipeline_config import settings
-import re
 
 chunks_table = settings.pgdb_connect_info.chunks_table
 
 class ExtractedEntity(BaseModel):
-	canonical_name: str = Field(description="Name of the entity, capitalized")
-	aliases: list[str] = Field(
-		default_factory=list,
-		description=(
-			"Alternative names, abbreviations, acronyms, or spelling variants "
-			"that refer to the same entity. Exclude the canonical name."
-		),)
-	type: ENTITY_TYPES = Field(description="One of the allowed entity types")
-	description: str = Field(description="Brief description of the entity and its role")
+    local_id: str = Field(
+        description=(
+            "Unique identifier for this entity within the current extraction "
+            "result, such as E1, E2, or E3."
+        )
+    )
+
+    canonical_name: str = Field(
+        description="Name of the entity, capitalized"
+    )
+
+    aliases: list[str] = Field(
+        default_factory=list,
+        description=(
+            "Alternative names, abbreviations, acronyms, or spelling variants "
+            "that refer to the same entity. Exclude the canonical name."
+        ),
+    )
+
+    type: ENTITY_TYPES = Field(
+        description="One of the allowed entity types"
+    )
+
+    description: str = Field(
+        description="Brief description of the entity and its role"
+    )
 
 class ExtractedRelationship(BaseModel):
-	source: str = Field(description="Name of the source entity")
-	target: str = Field(description="Name of the target entity")
-	relation_type: RELATION_TYPES = Field(description="Relationship type from source to target.")
-	description: str = Field(description="Sentence explaining the relationship")
-	# evidence_chunk_ids: list[str] = Field(description="IDs of the chunks that provide evidence for this relationship.")
+    source_entity_id: str = Field(
+        description=(
+            "The local_id of the source entity returned in the entities list."
+        )
+    )
 
+    target_entity_id: str = Field(
+        description=(
+            "The local_id of the target entity returned in the entities list."
+        )
+    )
+
+    relation_type: RELATION_TYPES = Field(
+        description="Relationship type from source entity to target entity."
+    )
+
+    description: str = Field(
+        description="Sentence explaining the relationship."
+    )	
 class LLMExtractionResult(BaseModel):
     should_extract: bool = Field(
         description=(
@@ -107,20 +136,7 @@ def doucment_chunksbatch_to_ontologies(rows, document_name)->  tuple[list[str], 
     #     json.dump([item.model_dump() for item in extracted_list], f, ensure_ascii=False, indent=2)
     return extracted_list
 
-        
-#     Lấy 20 chunks
-# → extract từng chunk
-# → tạo list[ChunkExtractionResult]
-# → resolve toàn bộ batch
-# → đối chiếu với graph hiện có
-# → ghi Neo4j
-# → đánh dấu processed
-# → lấy 20 chunks tiếp theo
-	 
-
-
-
-
+ 
 # chunks_limit = 10
 # document_id = "1"
 # max_attempt = 3
@@ -170,20 +186,20 @@ def doucment_chunksbatch_to_ontologies(rows, document_name)->  tuple[list[str], 
 #     )
 
 # #################### TEST
-import json
+# import json
 
-with open(
-	"EXPERIMENTS/graph/v1/test_chunks.json",
-	"r",
-	encoding="utf-8"
-) as f:
-	data = json.load(f)
+# with open(
+# 	"EXPERIMENTS/graph/v1/test_chunks.json",
+# 	"r",
+# 	encoding="utf-8"
+# ) as f:
+# 	data = json.load(f)
 
-rows = [
-	(item["id"], item["metadata"])
-	for item in data
-]
-rows = rows
-doucment_chunksbatch_to_ontologies(rows=rows, document_name="Software Engineering - Theory and Practice")
+# rows = [
+# 	(item["id"], item["metadata"])
+# 	for item in data
+# ]
+# rows = rows
+# doucment_chunksbatch_to_ontologies(rows=rows, document_name="Software Engineering - Theory and Practice")
 
-pool.close() # không để dòng này chạy khi chạy rag server
+# pool.close() # không để dòng này chạy khi chạy rag server

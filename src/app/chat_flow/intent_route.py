@@ -69,7 +69,7 @@ def determine_intent(user_query: str):
     """Identify the user's intent from a predefined set of intents."""
     user_query = user_query.lower().strip()
     intent = rl(user_query)
-    if not (intent.name) or (intent.similarity_score < 0.45):
+    if not (intent.name) or (intent.similarity_score < 0.51):
         print("Intent can't be defined by semantic router. Use LLM.")
         intent = determine_intent_with_llm(user_query)
     else:

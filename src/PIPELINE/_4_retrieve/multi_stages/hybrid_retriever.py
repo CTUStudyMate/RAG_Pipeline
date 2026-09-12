@@ -232,16 +232,16 @@ def hybrid_retrieve(query: str, document_ids: list[int] | None = None):
     vector_docs = normalize_vector_results(vector_based_results)
     bm25_docs = normalize_text_results(text_based_results)
     
-    print("Retrieved vector docs:")
+    # print("Retrieved vector docs:")
     for doc in vector_docs:
         print(doc.get("doc_id"))
         
-    print("Retrieved bm25 docs:")
+    # print("Retrieved bm25 docs:")
     for doc in vector_docs:
         print(doc.get("doc_id"))
     
     hybrid_docs = rrf_merge(vector_docs=vector_docs, bm25_docs=bm25_docs, bm25_weight=bm25_weight, vector_weight=vector_weight)
-    print("Filtered hybrid docs after rrf merge: ")
+    # print("Filtered hybrid docs after rrf merge: ")
     for doc in hybrid_docs:
         print(doc.get("doc_id"))
     return hybrid_docs

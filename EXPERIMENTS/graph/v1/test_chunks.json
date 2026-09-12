@@ -137,5 +137,117 @@
                 "img0_se_theory_practice.pdf__chunk_144_144_44"
             ]
         }
+    },
+    {
+        "id": 5891,
+        "metadata": {
+            "section": "Designing the Modules > 6.3 Oo Design > Inheritance vs. Object Composition",
+            "chunk_id": "se_theory_practice.pdf__chunk_2621_2620",
+            "document": "1",
+            "token_count": 227,
+            "embeded_content": "[SECTION]: Designing the Modules > 6.3 Oo Design > Inheritance vs. Object Composition\n[CONTENT]: By  contrast, using  the  inheritance  approach, the  subclass's  implementation  is determined  at  design  time  and  is  static. The  resulting  objects  are  less  flexible  than objects instantiated from composite classes because the methods they inherit from their parent class cannot be changed at runtime. Moreover, because the inherited properties of the parent class are usually visible to the subclass, if not directly accessible, it can be easier to understand and predict the behavior of classes constructed using inheritance. Of course, the greatest advantage of inheritance is the ability to change and specialize the behaviors of inherited methods, by selectively overriding inherited definitions. This characteristic helps us to quickly create new types of objects that exhibit new behaviors."
+        }
+    },
+    {
+        "id": 5892,
+        "metadata": {
+            "section": "Designing the Modules > 6.3 Oo Design > Inheritance vs. Object Composition",
+            "chunk_id": "se_theory_practice.pdf__chunk_None_2621",
+            "document": "1",
+            "token_count": 473,
+            "embeded_content": "[SECTION]: Designing the Modules > 6.3 Oo Design > Inheritance vs. Object Composition\n[CONTENT]: In  general, experienced  designers  prefer  object  composition  over  inheritance because of its ability to substitute component objects at runtime. When instance variables are defined in terms of interfaces rather than concrete classes, the variables can refer to objects of any type that implement the interface.As a result, the client code can be written without knowledge of the specific types of objects it uses or even the classes that  implement those objects; the client code depends only on the definition of the interface. Such flexibility makes it easier to change or enhance capabilities in the future. For example, in the Software Engineer constructed by composition, we can satisfy the Engineer interface with any object that complies with the interface.We can define a new Senior Engineer class or subclass that has more capabilities and responsibility than a Junior Engineer has, and we can promote a Software Engineer to have senior engineering capabilities using a simple attribute assignment. This preference of composition over inheritance is not a definitive design rule, because sometimes it is easier to consider objects as specialized instances of one another. For example, a Sedan is probably better modeled as a subclass of Car than as a composite object that has  car-like  properties. Moreover, because  object  composition  introduces  a  level  of indirection, it may be overly inefficient for the degree of flexibility it offers. Thus, the choice between class inheritance and object composition involves trade-offs among design coherence, predictability of behavior, encapsulation of design decisions, runtime performance, and runtime configurability."
+        }
+    },
+    {
+        "id": 5893,
+        "metadata": {
+            "section": "Designing the Modules > 6.3 Oo Design > Substitutability",
+            "chunk_id": "se_theory_practice.pdf__chunk_2622_2627",
+            "document": "1",
+            "token_count": 598,
+            "embeded_content": "[SECTION]: Designing the Modules > 6.3 Oo Design > Substitutability\n[CONTENT]: The use of inheritance does not necessarily result in subclasses that can be used in place of their parent class. Most OO programming languages allow subclasses to override the behaviors of their inherited methods, without regard to whether the result complies with the parent class's interface. As a result, client code that relies on the parent class might not work correctly when passed an instance of a subclass.\nConsider a BoundedStack that is a specialized type of Stack that can store only a limited number of elements. The BoundedStack subclass not only introduces an attribute  to  record  the  bound  on  its  size, but  also  overrides  the  behavior  of  the push() method to handle the case where an element is pushed onto a full stack (e.g., the BoundedStack might ignore the request, or it might push the bottom element off the stack to make room for the new element). A BoundedStack object is not substitutable for a normal Stack object, because the two objects behave differently when their respective stacks are full.\nIdeally, a subclass must preserve the behavior of its parent class, so that client code  can  treat  instances  of  it  as  instances  of  the  parent  class. This  notion  is  best described by the Liskov Substitutability Principle , named after its inventor, Barbara Liskov, a pioneer in OO programming and data abstraction.According to the principle, a subclass is substitutable for its parent class if all of the following properties are satisfied (Liskov and Guttag 2001):\n - The subclass supports all of the methods of the parent class, and their signatures are compatible . That is, the parameters and return types of the subclass's methods must be substitutable for the corresponding parameters and return types of the parent class's methods, so that any call to a method of the parent class would be accepted by the subclass.\n - The  subclass's  methods  must  satisfy  the  specifications  of  the  parent  class's methods. The behaviors of the two classes' methods do not have to be the same, but the subclass must not violate the pre- and postconditions of the parent class's methods:"
+        }
+    },
+    {
+        "id": 5894,
+        "metadata": {
+            "images": [
+                "img0_se_theory_practice.pdf__chunk_2629_2633_655"
+            ],
+            "section": "Designing the Modules > 6.3 Oo Design > Substitutability",
+            "chunk_id": "se_theory_practice.pdf__chunk_2629_2633",
+            "document": "1",
+            "token_count": 543,
+            "embeded_content": "[SECTION]: Designing the Modules > 6.3 Oo Design > Substitutability\n[CONTENT]:  - Precondition rule: The precondition of a subclass method must be the same as or weaker than the precondition of the parent class's method, so that the subclass method succeeds in all cases that the parent class method succeeds. We can represent this relationship as:\n[FORMULA]\npre_parent Q pre_sub\n - Postcondition rule: In those cases where the precondition of the parent class method holds, the subclass method does everything that the parent method does, and  may  do  more  (i.e., the  postcondition  of  the  subclass  method subsumes the postcondition of the parent class's method).\n[FORMULA]\npre_parent Q (post_ sub Q post_ parent)\n - The  subclass  must  preserve  all  declared  properties  of  the  parent  class. For example, in UML, a subclass inherits all of the constraints on its parent class and all of its parent's associations with other classes.\n[FIGURE_DESCRIPTIONS]\n[0] Mathematical expression showing a relationship between pre_parent and pre_sub. The equation is pre_parent implies pre_sub, represented as 'pre_parent ⇒ pre_sub'. The symbols used include 'pre_parent', '⇒' (implies), and 'pre_sub'. The expression is centered on a white background with a simple, clear font, indicating a logical or theoretical concept likely related to software engineering or formal methods.\n"
+        }
+    },
+    {
+        "id": 5895,
+        "metadata": {
+            "section": "Designing the Modules > 6.3 Oo Design > Substitutability",
+            "chunk_id": "se_theory_practice.pdf__chunk_2635_2636",
+            "document": "1",
+            "token_count": 505,
+            "embeded_content": "[SECTION]: Designing the Modules > 6.3 Oo Design > Substitutability\n[CONTENT]: If any of the above rules does not hold, then sending a message to an instance of the subclass might not give the same result as sending the message to an instance of the parent  class. In  the  case  of BoundedStack , the push() method  does  not  simply extend the postcondition of its parent class's push() method; it has a different postcondition.Thus, the definition of BoundedStack violates the postcondition rule, and a BoundedStack object is not substitutable for a normal Stack object.\nIn contrast, consider PeekStack , another specialized type of Stack that allows users to peek at the contents of the stack rather than being able to view only the top element. A PeekStack subclass introduces a single new method, peek(pos) , that returns the value of the element at depth pos in the stack. Because PeekStack overrides  none  of  the  methods  it  inherits  from Stack , and  because  the  new  method peek() never changes the object's attributes, it satisfies all of the substitutability rules.\nThe primary use of the Liskov Substitutability Principle is in determining when one object can safely be substituted for another object. If we conform to the principle when extending our designs and programs with new subclasses, we can be confident that the existing code will work with the new subclasses without modification.Despite this obvious advantage, in our study of design patterns we will encounter a number of useful patterns that violate the Liskov Substitutability Principle.As with most other design principles,substitutability is not a rigid design rule. Rather, the principle serves as a guideline for determining when it is safe not to reexamine the client modules of an extended class.Whenever we conform to the principle, we simplify the overall task of extending our design."
+        }
+    },
+    {
+        "id": 5896,
+        "metadata": {
+            "section": "Designing the Modules > 6.3 Oo Design > Law of Demeter",
+            "chunk_id": "se_theory_practice.pdf__chunk_2637_2644",
+            "document": "1",
+            "token_count": 412,
+            "embeded_content": "[SECTION]: Designing the Modules > 6.3 Oo Design > Law of Demeter\n[CONTENT]: Although the design advice suggests that we prefer composition over inheritance, the resulting design may have multiple dependencies among classes. This problem occurs whenever a class that depends on a composite class also depends on all of the class's component classes. In our sales transaction example, consider a new class Bill that generates an invoice each month, listing all of the items sold that month to a particular customer. Suppose that each class in our design offers only services that manipulate that class's local attributes. Then to print the list of items sold, our generateBill() method must track down all of the appropriate Item objects:\nIn such a design, our Bill class accesses and thus depends directly on CustomerAccount , Sale , and Item classes. We must know the interfaces of all of them  to  invoke  the  appropriate  methods  correctly. Worse, we  have  to  recheck  our implementation of generateBill() whenever any of these classes is changed.\nWe can reduce these dependencies by including in each composite class methods for operating on the class's components.For example,we can add a printItemList() method  to  our Sale class, and add a printSaleItems() method  to  our CustomerAccount class. In this new design,\n - our generateBill() method calls printSaleItems() in CustomerAccount\n - printSaleItems() calls printItemList() in the appropriate Sale object\n - printItemList() calls the print methods in the appropriate Item objects"
+        }
+    },
+    {
+        "id": 5897,
+        "metadata": {
+            "images": [
+                "img0_se_theory_practice.pdf__chunk_2646_2648_658"
+            ],
+            "section": "Designing the Modules > 6.3 Oo Design > Law of Demeter",
+            "chunk_id": "se_theory_practice.pdf__chunk_2646_2648",
+            "document": "1",
+            "token_count": 526,
+            "embeded_content": "[SECTION]: Designing the Modules > 6.3 Oo Design > Law of Demeter\n[CONTENT]: This design convention is called the Law of Demeter (Lieberherr and Holland 1989), named after a research project called Demeter. It is also known more informally as the 'Don't talk to strangers' design principle. The benefit of this convention is that client code that uses a composite class needs to know only about the composite itself and not about the composites' components. The difference between these two design alternatives and their resulting class dependencies can be visualized by the designs' induced dependency graphs, shown in Figure 6.14. In general, designs that obey the Law of Demeter have fewer class dependencies, and classes with fewer dependencies tend to have fewer software faults (Basili, Briand, and Melo 1995) and are easier to change (Li and Henry 1993).\n[Design 1] \n[Design 2] \n[FIGURE_DESCRIPTIONS]\n[0] UML class diagram showing relationships between classes: Accounting, Customer Account, Sale, Date, and Item. Accounting class has methods generateBill(Account No.) and Account No. Customer Account class contains attributes name, address, balance: Money, and method newSale(). Sale class includes attributes subtotal: Money, tax: Money, total: Money, and methods addItem(), removeItem(product No.), computeSubtotal(), computeTax(), computeTotal(), and voidSale(). Date class has attributes day: 1..31, month: 1..12, year: integer. Item class includes product No., description, price: Money, and methods printName() and printPrice(). The diagram shows associations between Accounting and Customer Account, Customer Account and Sale, Sale and Date, and Sale and Item.\n"
+        }
+    },
+    {
+        "id": 5899,
+        "metadata": {
+            "images": [
+                "img0_se_theory_practice.pdf__chunk_2650_2651_659"
+            ],
+            "section": "Designing the Modules > 6.3 Oo Design > Law of Demeter",
+            "chunk_id": "se_theory_practice.pdf__chunk_2650_2651",
+            "document": "1",
+            "token_count": 476,
+            "embeded_content": "[SECTION]: Designing the Modules > 6.3 Oo Design > Law of Demeter\n[CONTENT]: [FIGURE 6.14 Contrasting designs and dependencies.] \nOn the  downside, such  designs  often  use  a wrapper  class to  add  functionality without changing the implementations of existing classes. For example, we could have added printItemList() via a wrapper class associated with class Sale . Although wrapper classes ease the task of adding operations to composite classes,they can complicate the design and degrade runtime performance.Thus, deciding whether to adhere to the Law of Demeter involves evaluating trade-offs among design complexity, development time, runtime performance, fault avoidance, and ease of maintenance.\n[FIGURE_DESCRIPTIONS]\n[0] UML class diagram showing four classes: Accounting, Customer Account, Sale, and Date. Accounting class has a method generateBill(Account No.) and an attribute Account No. Customer Account class includes attributes name, address, balance: Money, and methods newSale(), printSalesItem(). Sale class contains attributes subtotal: Money, tax: Money, total: Money, and methods addItem(), removeItem(product No.), computeSubtotal(), computeTax(), computeTotal(), voidSale(), printItemList(). Date class has attributes day: 1..31, month: 1..12, year: integer. Item class includes attributes product No., name, description, price: Money, and methods printName(), printPrice(). The diagram shows relationships between these classes with lines connecting them.\n"
+        }
+    },
+    {
+        "id": 5900,
+        "metadata": {
+            "section": "Designing the Modules > 6.3 Oo Design > Dependency Inversion",
+            "chunk_id": "se_theory_practice.pdf__chunk_2652_2654",
+            "document": "1",
+            "token_count": 441,
+            "embeded_content": "[SECTION]: Designing the Modules > 6.3 Oo Design > Dependency Inversion\n[CONTENT]: Dependency inversion is our final OO design heuristic. It can be used to reverse the direction  of  a  dependency  link  between  two  classes. For  example, if  a  client  class depends on some server class, we can use dependency inversion to revise the dependency, so  that  the  server  class  depends  on  the  client  class  instead. We  might  invert dependency to break a dependency cycle among classes, as we saw earlier in this chapter. Or we might rearrange our design so that each class depends only on classes that are more stable and less likely to change than it is.\nDependency inversion works by introducing interfaces. Suppose we have a design in which a client class uses the methods of some server class, as shown in Figure 6.15(a). The client depends on the server. The first step of dependency inversion is to create an interface on which the client can depend instead.This interface should include specifications of all the methods that the client expects from the server class.We modify the client class to use this new interface rather than using the server class, and we package together the original client class and the new interface into a new client module. The result is shown in Figure 6.15(b).The second step is to create a wrapper class for the server class (or to modify the server class), so that the wrapper class implements the interface created in step 1.This second step should be easy because the interface matches the specifications of the server class's methods. The resulting design, shown in Figure 6.15(c), induces a Client (a)"
+        }
+    },
+    {
+        "id": 5901,
+        "metadata": {
+            "images": [
+                "img0_se_theory_practice.pdf__chunk_2656_2658_661"
+            ],
+            "section": "Designing the Modules > 6.3 Oo Design > Dependency Inversion",
+            "chunk_id": "se_theory_practice.pdf__chunk_2656_2658",
+            "document": "1",
+            "token_count": 458,
+            "embeded_content": "[SECTION]: Designing the Modules > 6.3 Oo Design > Dependency Inversion\n[CONTENT]: (b)\n(c)\ndependency graph in which the newly wrapped server class depends on the new client package. In the original design, any change to the server code would cause us to reexamine and recompile the client code. In the new design, both the client code and the server code depend only on the new ClientServerInterface . A change to either class's implementation does not cause us to revisit or recompile the other class, so the new design is easier to maintain.As we will see, the dependency inversion principle is used in the definitions of several design patterns.\n[FIGURE_DESCRIPTIONS]\n[0] Diagram with three sections illustrating client-server interaction and interface abstraction. Left section shows a Client connected to a Server with a bidirectional arrow labeled <uses>. Middle section shows a NewClient containing a Client and a ClientServer interface, with the Client connected to the ClientServer interface by a <uses> arrow, and the Server shown separately. Right section shows a NewClient containing a Client and a ClientServer interface, with the Client connected to the ClientServer interface by a <uses> arrow. Below the ClientServer interface is a ServerWrapper containing a Server. An arrow points from ServerWrapper to ClientServer interface, indicating inheritance or implementation.\n"
+        }
     }
 ]

@@ -175,7 +175,7 @@ def chat(payload: ChatRequest):
         last_ai_message.additional_kwargs.get("segments", [])
     )
 
-    print(result["docs"])
+    # print(result["docs"])
     return {
         "content": last_ai_message.content,
         "segments": segments,
