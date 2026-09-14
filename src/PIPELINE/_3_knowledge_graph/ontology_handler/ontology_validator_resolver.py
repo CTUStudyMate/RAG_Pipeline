@@ -34,7 +34,7 @@ The main processing steps are:
 from typing import Literal
 from uuid import uuid4
 
-from PIPELINE._3_knowledge_graph.ontology_handler.helpers import _normalize_text, _singularize_last_word, is_fuzzy_match, normalize_text
+from PIPELINE._3_knowledge_graph.ontology_handler.helpers import _normalize_text, _singularize_last_word, is_fuzzy_match, normalize_name, normalize_text
 from PIPELINE._3_knowledge_graph.ontology_handler.ontology_definition import ENTITY_TYPES, RELATION_TYPE_CONSTRAINTS, RELATION_TYPES
 from PIPELINE._3_knowledge_graph.ontology_handler.ontology_extractor import ChunkExtractionResult, ExtractedEntity, ExtractedRelationship
 from pydantic import BaseModel, Field
@@ -325,25 +325,6 @@ def validate_ontologies(
 # Handling semantically equivalent relationships expressed in the reverse direction will be deferred 
 # until the graph data has been observed and evaluated. 
 
-# todo
-# → tách skipped results và non-skipped results
-
-# non-skipped results
-# → gom valid_entities của toàn batch
-# → deduplicate entities trong batch
-# → tạo mapping entity name cũ → entity canonical trong batch
-
-# → gom valid_relationships của toàn batch
-# → remap source/target theo entity mapping
-# → deduplicate relationships bằng
-#    (normalized_source, relation_type, normalized_target)
-# → gộp evidence theo database_id + description
-
-# → resolve entities với Neo4j graph hiện có
-# → Neo4j MERGE nodes, edges, provenance/evidence
-
-# → Neo4j write thành công
-# → update PostgreSQL graph_processed=true
 class ChunkEvidence(BaseModel):
     database_id: int
     chunk_id: str
@@ -503,7 +484,30 @@ def create_entity_candidate(
         observed_types=[entity.type],
         chunk_evidences=[occurrence.evidence],
     )
- 
+
+def check_one_way_names(
+    current_entity: EntityOccurrence,
+    source_entity: EntityCandidate,
+) -> bool:
+    current = current_entity.entity
+
+    current_canonical = normalize_name(current.canonical_name)
+    current_aliases = {
+        normalize_name(alias)
+        for alias in current.aliases
+    }
+
+    source_canonical = normalize_name(source_entity.canonical_name)
+    source_aliases = {
+        normalize_name(alias)
+        for alias in source_entity.aliases
+    }
+
+    return (
+        current_canonical in source_aliases
+        or source_canonical in current_aliases
+    )
+    
 def dedup_entities(
     entity_occurrences: list[EntityOccurrence],
 ) -> tuple[
@@ -516,6 +520,11 @@ def dedup_entities(
     Returns:
         - deduplicated entity candidates;
         - mapping from (chunk_id, local_id) to candidate entity_id.
+    
+    Merge cases:
+        - same type and canonical name match
+        - same type and one way name-alias match
+        - reciprocal name-alias match
     """
 
     candidates: list[EntityCandidate] = []
@@ -542,6 +551,11 @@ def dedup_entities(
                 entity.canonical_name,
                 candidate.canonical_name,
             )
+            
+            one_way_names_match = check_one_way_names(
+                current_entity=occurrence,
+                source_entity=candidate,
+            )
 
             reciprocal_names_match = check_reciprocal_names(
                 current_entity=occurrence,
@@ -556,6 +570,20 @@ def dedup_entities(
 
                 candidates[index] = merged_candidate
 
+                entity_id_by_local_reference[local_reference] = (
+                    merged_candidate.entity_id
+                )
+
+                was_merged = True
+                break
+            
+            if same_type and one_way_names_match:
+                merged_candidate = merge_entity_candidate(
+                    candidate=candidate,
+                    occurrence=occurrence,
+                )
+
+                candidates[index] = merged_candidate
                 entity_id_by_local_reference[local_reference] = (
                     merged_candidate.entity_id
                 )

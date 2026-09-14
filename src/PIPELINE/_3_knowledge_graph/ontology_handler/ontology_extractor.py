@@ -1,5 +1,7 @@
 # python -m src.PIPELINE._3_knowledge_graph.ontology_handler.ontology_extractor
 
+import json
+
 from PIPELINE._3_knowledge_graph.ontology_handler.ontology_definition import ENTITY_TYPES, RELATION_TYPES
 from PIPELINE._3_knowledge_graph.ontology_handler.ontology_extraction_prompt import system_prompt_for_ontology_extraction, build_extraction_input
 from pydantic import BaseModel, Field

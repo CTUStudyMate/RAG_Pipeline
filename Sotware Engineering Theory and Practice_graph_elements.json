@@ -1,0 +1,4739 @@
+{
+  "entities": [
+    {
+      "entity_id": "32b8ec4d-ec2c-4758-8b8d-19a841484eae",
+      "canonical_name": "Software Engineer",
+      "aliases": [
+        "software engineers"
+      ],
+      "observed_types": [
+        "PERSON"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5850,
+          "chunk_id": "se_theory_practice.pdf__chunk_1_2",
+          "document_id": "1",
+          "description": "A human actor who uses knowledge of computers and computing to help solve problems."
+        }
+      ]
+    },
+    {
+      "entity_id": "a3c7ec2e-2494-476c-9596-a68d801c2b6f",
+      "canonical_name": "Knowledge of Computers and Computing",
+      "aliases": [],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5850,
+          "chunk_id": "se_theory_practice.pdf__chunk_1_2",
+          "document_id": "1",
+          "description": "Knowledge used by software engineers when addressing problems."
+        }
+      ]
+    },
+    {
+      "entity_id": "43e908f9-9945-4647-8528-38d0908383d8",
+      "canonical_name": "Problem",
+      "aliases": [
+        "problems"
+      ],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5850,
+          "chunk_id": "se_theory_practice.pdf__chunk_1_2",
+          "document_id": "1",
+          "description": "A difficulty or issue that must first be understood and solved."
+        },
+        {
+          "database_id": 5853,
+          "chunk_id": "se_theory_practice.pdf__chunk_6_6",
+          "document_id": "1",
+          "description": "A problem is the starting challenge that methods and the analysis process help address."
+        },
+        {
+          "database_id": 5860,
+          "chunk_id": "se_theory_practice.pdf__chunk_144_144",
+          "document_id": "1",
+          "description": "A customer problem that feeds into software engineering and is addressed using tools and techniques."
+        }
+      ]
+    },
+    {
+      "entity_id": "a3093aa1-a79c-40e3-868b-fde6af4713e0",
+      "canonical_name": "Computer System",
+      "aliases": [
+        "computer systems"
+      ],
+      "observed_types": [
+        "SYSTEM"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5850,
+          "chunk_id": "se_theory_practice.pdf__chunk_1_2",
+          "document_id": "1",
+          "description": "A computer-based system that may be related to a problem or used to solve one when necessary or desirable."
+        }
+      ]
+    },
+    {
+      "entity_id": "f9477fb3-4be4-45dc-a775-165ecd34b4db",
+      "canonical_name": "Problem Nature",
+      "aliases": [],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5850,
+          "chunk_id": "se_theory_practice.pdf__chunk_1_2",
+          "document_id": "1",
+          "description": "The underlying character or nature of a problem that must be understood before selecting a solution."
+        }
+      ]
+    },
+    {
+      "entity_id": "e4d3523a-16d9-49f6-ab3e-30de87a1905c",
+      "canonical_name": "Problem Solving",
+      "aliases": [],
+      "observed_types": [
+        "PROCESS"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5850,
+          "chunk_id": "se_theory_practice.pdf__chunk_1_2",
+          "document_id": "1",
+          "description": "The process of solving a problem before deciding whether and how to use technology."
+        }
+      ]
+    },
+    {
+      "entity_id": "abae5300-192e-41a7-b786-dcb47d417727",
+      "canonical_name": "Technology",
+      "aliases": [],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5850,
+          "chunk_id": "se_theory_practice.pdf__chunk_1_2",
+          "document_id": "1",
+          "description": "A tool that may be used to implement a solution after the problem has been solved conceptually."
+        }
+      ]
+    },
+    {
+      "entity_id": "22dc805b-306a-4540-8a1d-870cd8e37a24",
+      "canonical_name": "Solution",
+      "aliases": [
+        "solutions"
+      ],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5850,
+          "chunk_id": "se_theory_practice.pdf__chunk_1_2",
+          "document_id": "1",
+          "description": "The result or proposed answer to a particular problem."
+        },
+        {
+          "database_id": 5853,
+          "chunk_id": "se_theory_practice.pdf__chunk_6_6",
+          "document_id": "1",
+          "description": "A solution is the result obtained for a subproblem or the overall problem."
+        }
+      ]
+    },
+    {
+      "entity_id": "616640be-1e84-45cd-a27e-6cab1172a119",
+      "canonical_name": "Solution Implementation",
+      "aliases": [],
+      "observed_types": [
+        "PROCESS"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5850,
+          "chunk_id": "se_theory_practice.pdf__chunk_1_2",
+          "document_id": "1",
+          "description": "The process of implementing a solution using technology when appropriate."
+        }
+      ]
+    },
+    {
+      "entity_id": "6cfac004-419d-4500-8215-0bf12feeed4e",
+      "canonical_name": "Method",
+      "aliases": [
+        "Technique",
+        "methods",
+        "techniques"
+      ],
+      "observed_types": [
+        "METHOD"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5853,
+          "chunk_id": "se_theory_practice.pdf__chunk_6_6",
+          "document_id": "1",
+          "description": "A method or technique is a formal procedure for producing a result and is used to help solve a problem."
+        },
+        {
+          "database_id": 5859,
+          "chunk_id": "se_theory_practice.pdf__chunk_137_139",
+          "document_id": "1",
+          "description": "A way of performing an activity that can improve the resulting product or outcome."
+        }
+      ]
+    },
+    {
+      "entity_id": "31fafff6-b5f6-4c2f-8cac-062b600248a6",
+      "canonical_name": "Tool",
+      "aliases": [
+        "tools"
+      ],
+      "observed_types": [
+        "OBJECT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5853,
+          "chunk_id": "se_theory_practice.pdf__chunk_6_6",
+          "document_id": "1",
+          "description": "A tool is one of the resources employed to help solve a problem."
+        }
+      ]
+    },
+    {
+      "entity_id": "3ccc899b-caa2-4400-9c1f-e8731e718e34",
+      "canonical_name": "Procedure",
+      "aliases": [
+        "procedures"
+      ],
+      "observed_types": [
+        "METHOD"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5853,
+          "chunk_id": "se_theory_practice.pdf__chunk_6_6",
+          "document_id": "1",
+          "description": "A procedure is a formal, ordered way of carrying out activities to produce a result."
+        },
+        {
+          "database_id": 5859,
+          "chunk_id": "se_theory_practice.pdf__chunk_137_139",
+          "document_id": "1",
+          "description": "A combination of tools and techniques used together to produce a particular product."
+        }
+      ]
+    },
+    {
+      "entity_id": "9712868b-a709-4301-b824-b7adef0dcec1",
+      "canonical_name": "Paradigm",
+      "aliases": [
+        "paradigms"
+      ],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5853,
+          "chunk_id": "se_theory_practice.pdf__chunk_6_6",
+          "document_id": "1",
+          "description": "A paradigm is one of the approaches employed to help solve a problem."
+        },
+        {
+          "database_id": 5859,
+          "chunk_id": "se_theory_practice.pdf__chunk_137_139",
+          "document_id": "1",
+          "description": "A particular approach or philosophy for building software."
+        }
+      ]
+    },
+    {
+      "entity_id": "9bbcd948-d34f-4c5d-970c-715c99148028",
+      "canonical_name": "Result",
+      "aliases": [
+        "results"
+      ],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5853,
+          "chunk_id": "se_theory_practice.pdf__chunk_6_6",
+          "document_id": "1",
+          "description": "A result is the outcome produced by applying a method or procedure."
+        }
+      ]
+    },
+    {
+      "entity_id": "52da174c-bece-44a9-b9ea-7d903ae0273d",
+      "canonical_name": "Analysis",
+      "aliases": [],
+      "observed_types": [
+        "PROCESS"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5853,
+          "chunk_id": "se_theory_practice.pdf__chunk_6_6",
+          "document_id": "1",
+          "description": "The analysis process breaks a problem into subproblems, solves the subproblems, and leads toward a final solution."
+        }
+      ]
+    },
+    {
+      "entity_id": "99a68c7c-f73b-4262-8a8d-c537140daa84",
+      "canonical_name": "Subproblem",
+      "aliases": [
+        "subproblems"
+      ],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5853,
+          "chunk_id": "se_theory_practice.pdf__chunk_6_6",
+          "document_id": "1",
+          "description": "A subproblem is a component into which a larger problem is divided during analysis."
+        }
+      ]
+    },
+    {
+      "entity_id": "8fe691d8-2efc-4caf-a644-5412ffe94ba2",
+      "canonical_name": "Final Solution",
+      "aliases": [],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5853,
+          "chunk_id": "se_theory_practice.pdf__chunk_6_6",
+          "document_id": "1",
+          "description": "The final solution is the overall solution produced by integrating the individual solutions."
+        }
+      ]
+    },
+    {
+      "entity_id": "a1ad7dd9-d447-4a3a-a045-8f72fdff54e5",
+      "canonical_name": "Tool",
+      "aliases": [
+        "tools"
+      ],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5859,
+          "chunk_id": "se_theory_practice.pdf__chunk_137_139",
+          "document_id": "1",
+          "description": "An instrument or automated system used to accomplish something in a more accurate, efficient, productive, or higher-quality way."
+        }
+      ]
+    },
+    {
+      "entity_id": "ab21d917-7666-4ce4-8622-915d46875342",
+      "canonical_name": "Test plan",
+      "aliases": [
+        "test plans"
+      ],
+      "observed_types": [
+        "ARTIFACT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5859,
+          "chunk_id": "se_theory_practice.pdf__chunk_137_139",
+          "document_id": "1",
+          "description": "A plan that describes the test procedures to be used for evaluating software."
+        }
+      ]
+    },
+    {
+      "entity_id": "d8307f51-2894-46bf-b2e0-8bd5d8b6f455",
+      "canonical_name": "Test procedure",
+      "aliases": [
+        "test procedures"
+      ],
+      "observed_types": [
+        "PROCESS"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5859,
+          "chunk_id": "se_theory_practice.pdf__chunk_137_139",
+          "document_id": "1",
+          "description": "A prescribed testing process specifying tools, data sets, and circumstances for determining whether software meets its requirements."
+        }
+      ]
+    },
+    {
+      "entity_id": "afea7fea-0af2-4ba1-836d-20a010d2aa4a",
+      "canonical_name": "Data set",
+      "aliases": [
+        "data sets"
+      ],
+      "observed_types": [
+        "OBJECT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5859,
+          "chunk_id": "se_theory_practice.pdf__chunk_137_139",
+          "document_id": "1",
+          "description": "A collection of data used by a test procedure."
+        }
+      ]
+    },
+    {
+      "entity_id": "da7df2ca-15bf-4c6b-a92b-37572bbd8c7a",
+      "canonical_name": "Software requirement",
+      "aliases": [
+        "software requirements"
+      ],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5859,
+          "chunk_id": "se_theory_practice.pdf__chunk_137_139",
+          "document_id": "1",
+          "description": "A condition or criterion that software is evaluated against during testing."
+        }
+      ]
+    },
+    {
+      "entity_id": "f323dd8b-c08f-4b59-a140-46e24136d129",
+      "canonical_name": "Object-oriented development",
+      "aliases": [],
+      "observed_types": [
+        "METHOD"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5859,
+          "chunk_id": "se_theory_practice.pdf__chunk_137_139",
+          "document_id": "1",
+          "description": "A software development paradigm identified in the source as distinct from procedural development."
+        }
+      ]
+    },
+    {
+      "entity_id": "fbc822d9-c800-4e4b-8595-e260dea3e6b5",
+      "canonical_name": "Procedural development",
+      "aliases": [],
+      "observed_types": [
+        "METHOD"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5859,
+          "chunk_id": "se_theory_practice.pdf__chunk_137_139",
+          "document_id": "1",
+          "description": "A software development paradigm identified in the source as distinct from object-oriented development."
+        }
+      ]
+    },
+    {
+      "entity_id": "206500b7-7cc0-40a9-8d48-b3ab36e3cc4b",
+      "canonical_name": "Software engineer",
+      "aliases": [
+        "software engineers"
+      ],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5859,
+          "chunk_id": "se_theory_practice.pdf__chunk_137_139",
+          "document_id": "1",
+          "description": "A software professional who uses tools, techniques, procedures, and paradigms to improve software products."
+        }
+      ]
+    },
+    {
+      "entity_id": "af531c5e-79d2-481e-94f3-2b4332682a01",
+      "canonical_name": "Software product",
+      "aliases": [
+        "software products"
+      ],
+      "observed_types": [
+        "ARTIFACT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5859,
+          "chunk_id": "se_theory_practice.pdf__chunk_137_139",
+          "document_id": "1",
+          "description": "The software result whose quality software engineers seek to enhance."
+        }
+      ]
+    },
+    {
+      "entity_id": "ecd6af31-1bb1-4cb6-8d44-ce435266334d",
+      "canonical_name": "Software development and maintenance activity",
+      "aliases": [],
+      "observed_types": [
+        "PROCESS"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5859,
+          "chunk_id": "se_theory_practice.pdf__chunk_137_139",
+          "document_id": "1",
+          "description": "The development and maintenance activities supported by approaches discussed in the source."
+        }
+      ]
+    },
+    {
+      "entity_id": "1db1899b-55d4-4e9b-9d7a-358abc43ad73",
+      "canonical_name": "Computer Science",
+      "aliases": [],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5860,
+          "chunk_id": "se_theory_practice.pdf__chunk_144_144",
+          "document_id": "1",
+          "description": "The academic field providing theories and computer functions that feed into software engineering."
+        }
+      ]
+    },
+    {
+      "entity_id": "b0646993-f14e-4612-8983-d0deddb40c36",
+      "canonical_name": "Theory",
+      "aliases": [
+        "Theories"
+      ],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5860,
+          "chunk_id": "se_theory_practice.pdf__chunk_144_144",
+          "document_id": "1",
+          "description": "A body of theoretical knowledge identified as an input from computer science to software engineering."
+        }
+      ]
+    },
+    {
+      "entity_id": "a4beb2be-2d47-4b34-b8a6-9ff8657c850b",
+      "canonical_name": "Computer Function",
+      "aliases": [
+        "Computer Functions"
+      ],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5860,
+          "chunk_id": "se_theory_practice.pdf__chunk_144_144",
+          "document_id": "1",
+          "description": "A computer-related function identified as an input from computer science to software engineering."
+        }
+      ]
+    },
+    {
+      "entity_id": "67a2c550-73d9-40af-be40-6180f74dc200",
+      "canonical_name": "Customer",
+      "aliases": [],
+      "observed_types": [
+        "PERSON"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5860,
+          "chunk_id": "se_theory_practice.pdf__chunk_144_144",
+          "document_id": "1",
+          "description": "The source associated with the problem that software engineering addresses."
+        }
+      ]
+    },
+    {
+      "entity_id": "b9fd684a-c718-4ef1-99b9-a033a9497b75",
+      "canonical_name": "Software Engineering",
+      "aliases": [],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5860,
+          "chunk_id": "se_theory_practice.pdf__chunk_144_144",
+          "document_id": "1",
+          "description": "The discipline that combines inputs from computer science and customer problems and applies tools and techniques to solve the problem."
+        }
+      ]
+    },
+    {
+      "entity_id": "603e67af-da34-47c9-b539-2b1ef74f66a4",
+      "canonical_name": "Tool and Technique to Solve Problem",
+      "aliases": [
+        "Tools and Techniques to Solve Problem"
+      ],
+      "observed_types": [
+        "METHOD"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5860,
+          "chunk_id": "se_theory_practice.pdf__chunk_144_144",
+          "document_id": "1",
+          "description": "Tools and techniques applied by software engineering to solve a customer problem."
+        }
+      ]
+    },
+    {
+      "entity_id": "1a64de25-9bce-4cb2-98ec-f5f1ed546990",
+      "canonical_name": "Customer",
+      "aliases": [
+        "customers"
+      ],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5861,
+          "chunk_id": "se_theory_practice.pdf__chunk_144_150",
+          "document_id": "1",
+          "description": "The party that sponsors system development, usually controls the funds, negotiates the contract, and signs the acceptance papers."
+        }
+      ]
+    },
+    {
+      "entity_id": "3b3c8853-2ca9-435c-bc8b-8afd332411cc",
+      "canonical_name": "User",
+      "aliases": [
+        "users"
+      ],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5861,
+          "chunk_id": "se_theory_practice.pdf__chunk_144_150",
+          "document_id": "1",
+          "description": "The person or group that uses the developed system and communicates needs to the developer."
+        }
+      ]
+    },
+    {
+      "entity_id": "bfd15744-8d2e-44c9-a13d-72d78b716d8b",
+      "canonical_name": "Developer",
+      "aliases": [
+        "developers"
+      ],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5861,
+          "chunk_id": "se_theory_practice.pdf__chunk_144_150",
+          "document_id": "1",
+          "description": "The party that builds the system for the customer and responds to needs communicated by the customer and users."
+        }
+      ]
+    },
+    {
+      "entity_id": "c4d5f0e9-76b3-487d-abc2-bf63d6dbaf82",
+      "canonical_name": "System development",
+      "aliases": [],
+      "observed_types": [
+        "PROCESS"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5861,
+          "chunk_id": "se_theory_practice.pdf__chunk_144_150",
+          "document_id": "1",
+          "description": "The process of building a computerized or automated system."
+        }
+      ]
+    },
+    {
+      "entity_id": "8865d21e-b6e6-40c4-a291-426083dc1534",
+      "canonical_name": "Software system",
+      "aliases": [
+        "software systems"
+      ],
+      "observed_types": [
+        "SYSTEM"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5861,
+          "chunk_id": "se_theory_practice.pdf__chunk_144_150",
+          "document_id": "1",
+          "description": "The computerized system produced by the developer and used by users."
+        }
+      ]
+    },
+    {
+      "entity_id": "ee064a2b-3760-406e-8b25-8a1ed77fe347",
+      "canonical_name": "Computer systems development division",
+      "aliases": [],
+      "observed_types": [
+        "ORGANIZATION"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5861,
+          "chunk_id": "se_theory_practice.pdf__chunk_144_150",
+          "document_id": "1",
+          "description": "An organizational division that may develop an automated tool for its own project-cost and schedule tracking and thereby act as customer, user, and developer."
+        }
+      ]
+    },
+    {
+      "entity_id": "a15083a3-5970-43c1-a690-89a6243f09dd",
+      "canonical_name": "Inheritance",
+      "aliases": [
+        "Class Inheritance"
+      ],
+      "observed_types": [
+        "METHOD"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5891,
+          "chunk_id": "se_theory_practice.pdf__chunk_2621_2620",
+          "document_id": "1",
+          "description": "An object-oriented design approach in which a subclass derives implementation and behavior from a parent class."
+        },
+        {
+          "database_id": 5892,
+          "chunk_id": "se_theory_practice.pdf__chunk_None_2621",
+          "document_id": "1",
+          "description": "A design approach in which objects are modeled as specialized instances of classes."
+        }
+      ]
+    },
+    {
+      "entity_id": "8fb9bddf-d6f8-4437-b866-ef748b546e4f",
+      "canonical_name": "Subclass",
+      "aliases": [
+        "subclasses"
+      ],
+      "observed_types": [
+        "ARTIFACT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5891,
+          "chunk_id": "se_theory_practice.pdf__chunk_2621_2620",
+          "document_id": "1",
+          "description": "A class constructed using inheritance whose implementation is determined at design time."
+        }
+      ]
+    },
+    {
+      "entity_id": "d2397f1d-0118-4192-b00a-67ddb506961c",
+      "canonical_name": "Parent Class",
+      "aliases": [
+        "parent classes"
+      ],
+      "observed_types": [
+        "ARTIFACT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5891,
+          "chunk_id": "se_theory_practice.pdf__chunk_2621_2620",
+          "document_id": "1",
+          "description": "A class whose methods and properties are inherited by a subclass."
+        }
+      ]
+    },
+    {
+      "entity_id": "441bdc21-ae91-4d1d-aa8b-1833f1cfa267",
+      "canonical_name": "Static Implementation",
+      "aliases": [],
+      "observed_types": [
+        "PROPERTY"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5891,
+          "chunk_id": "se_theory_practice.pdf__chunk_2621_2620",
+          "document_id": "1",
+          "description": "An implementation characteristic in which the subclass implementation is fixed at design time and cannot be changed at runtime."
+        }
+      ]
+    },
+    {
+      "entity_id": "0c822902-c0d4-4594-8318-2ae3cf459347",
+      "canonical_name": "Composite Class",
+      "aliases": [
+        "composite classes"
+      ],
+      "observed_types": [
+        "ARTIFACT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5891,
+          "chunk_id": "se_theory_practice.pdf__chunk_2621_2620",
+          "document_id": "1",
+          "description": "A class from which objects are instantiated through object composition; such objects are described as more flexible than inheritance-based objects."
+        }
+      ]
+    },
+    {
+      "entity_id": "87e10548-9c5e-48d0-a3c0-44d2ddcf4ed1",
+      "canonical_name": "Inherited Method",
+      "aliases": [
+        "inherited methods"
+      ],
+      "observed_types": [
+        "ARTIFACT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5891,
+          "chunk_id": "se_theory_practice.pdf__chunk_2621_2620",
+          "document_id": "1",
+          "description": "A method obtained by a subclass from its parent class."
+        }
+      ]
+    },
+    {
+      "entity_id": "a8624aae-4166-4044-8f9e-95134dd3ecf2",
+      "canonical_name": "Inherited Property",
+      "aliases": [
+        "inherited properties"
+      ],
+      "observed_types": [
+        "PROPERTY"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5891,
+          "chunk_id": "se_theory_practice.pdf__chunk_2621_2620",
+          "document_id": "1",
+          "description": "A property of a parent class that is available to its subclass, usually visibly if not directly accessible."
+        }
+      ]
+    },
+    {
+      "entity_id": "00794b36-80d7-4ebd-ab17-db59c34ac068",
+      "canonical_name": "Method Overriding",
+      "aliases": [],
+      "observed_types": [
+        "METHOD"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5891,
+          "chunk_id": "se_theory_practice.pdf__chunk_2621_2620",
+          "document_id": "1",
+          "description": "The selective replacement or specialization of inherited method definitions."
+        }
+      ]
+    },
+    {
+      "entity_id": "dbdaf873-cdad-4d74-b483-94950127b788",
+      "canonical_name": "New Object Type",
+      "aliases": [
+        "new object types"
+      ],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5891,
+          "chunk_id": "se_theory_practice.pdf__chunk_2621_2620",
+          "document_id": "1",
+          "description": "A newly created type of object that can exhibit new behavior through inheritance and selective method overriding."
+        }
+      ]
+    },
+    {
+      "entity_id": "e0b91ba2-08fb-4de6-a51d-a1baff57e42d",
+      "canonical_name": "New Behavior",
+      "aliases": [
+        "new behaviors"
+      ],
+      "observed_types": [
+        "PROPERTY"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5891,
+          "chunk_id": "se_theory_practice.pdf__chunk_2621_2620",
+          "document_id": "1",
+          "description": "Behavior exhibited by newly created object types after inherited methods are changed or specialized."
+        }
+      ]
+    },
+    {
+      "entity_id": "4669906d-1719-4c0c-9a2f-277bcca06ea1",
+      "canonical_name": "Behavior Predictability",
+      "aliases": [],
+      "observed_types": [
+        "PROPERTY"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5891,
+          "chunk_id": "se_theory_practice.pdf__chunk_2621_2620",
+          "document_id": "1",
+          "description": "The relative ease of understanding and predicting class behavior when inherited parent properties are visible to the subclass."
+        }
+      ]
+    },
+    {
+      "entity_id": "10044894-e14f-4627-8361-72cf3f593e0b",
+      "canonical_name": "Object Composition",
+      "aliases": [],
+      "observed_types": [
+        "METHOD"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5892,
+          "chunk_id": "se_theory_practice.pdf__chunk_None_2621",
+          "document_id": "1",
+          "description": "A design approach that builds an object from component objects and allows component substitution at runtime."
+        }
+      ]
+    },
+    {
+      "entity_id": "952fed21-a97d-404a-9ff9-71356c656fd8",
+      "canonical_name": "Runtime Object Substitution",
+      "aliases": [],
+      "observed_types": [
+        "PROCESS"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5892,
+          "chunk_id": "se_theory_practice.pdf__chunk_None_2621",
+          "document_id": "1",
+          "description": "The replacement of component objects while a program is running."
+        }
+      ]
+    },
+    {
+      "entity_id": "ca374b7a-80a2-4b71-b078-84ff2d790b59",
+      "canonical_name": "Interface",
+      "aliases": [
+        "interfaces"
+      ],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5892,
+          "chunk_id": "se_theory_practice.pdf__chunk_None_2621",
+          "document_id": "1",
+          "description": "A definition used to specify the behavior that objects can implement, allowing client code to avoid dependence on specific concrete classes."
+        }
+      ]
+    },
+    {
+      "entity_id": "3d0fa8d1-fa79-4038-a52f-a4d813cb72cf",
+      "canonical_name": "Concrete Class",
+      "aliases": [
+        "concrete classes"
+      ],
+      "observed_types": [
+        "ARTIFACT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5892,
+          "chunk_id": "se_theory_practice.pdf__chunk_None_2621",
+          "document_id": "1",
+          "description": "A specific class whose identity and implementation can otherwise be directly known by client code."
+        }
+      ]
+    },
+    {
+      "entity_id": "b2e21e0d-4f6a-4a85-838d-dfead526641a",
+      "canonical_name": "Client Code",
+      "aliases": [],
+      "observed_types": [
+        "ARTIFACT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5892,
+          "chunk_id": "se_theory_practice.pdf__chunk_None_2621",
+          "document_id": "1",
+          "description": "Code that uses objects and, under interface-based design, can depend only on an interface definition."
+        },
+        {
+          "database_id": 5893,
+          "chunk_id": "se_theory_practice.pdf__chunk_2622_2627",
+          "document_id": "1",
+          "description": "Code that relies on a parent class and may fail when given an instance of a behaviorally incompatible subclass."
+        },
+        {
+          "database_id": 5897,
+          "chunk_id": "se_theory_practice.pdf__chunk_2646_2648",
+          "document_id": "1",
+          "description": "Software code that uses a composite class."
+        }
+      ]
+    },
+    {
+      "entity_id": "5575781f-ef08-4ab7-9431-977900f05ca7",
+      "canonical_name": "Software Engineer",
+      "aliases": [],
+      "observed_types": [
+        "OBJECT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5892,
+          "chunk_id": "se_theory_practice.pdf__chunk_None_2621",
+          "document_id": "1",
+          "description": "An example object constructed using composition and capable of being given different engineering capabilities."
+        }
+      ]
+    },
+    {
+      "entity_id": "6f0aa943-6755-43a6-af91-b7caf2aba0c4",
+      "canonical_name": "Engineer Interface",
+      "aliases": [],
+      "observed_types": [
+        "ARTIFACT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5892,
+          "chunk_id": "se_theory_practice.pdf__chunk_None_2621",
+          "document_id": "1",
+          "description": "The interface that can be satisfied by any object complying with its definition in the composition-based Software Engineer example."
+        }
+      ]
+    },
+    {
+      "entity_id": "63b8de58-8fcd-43a9-83c3-f449ba8d84bd",
+      "canonical_name": "Senior Engineer",
+      "aliases": [],
+      "observed_types": [
+        "ARTIFACT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5892,
+          "chunk_id": "se_theory_practice.pdf__chunk_None_2621",
+          "document_id": "1",
+          "description": "A class or subclass described as having more capabilities and responsibility than a Junior Engineer."
+        }
+      ]
+    },
+    {
+      "entity_id": "fc1ebd7a-1e6c-4532-9633-0038be6dda96",
+      "canonical_name": "Junior Engineer",
+      "aliases": [],
+      "observed_types": [
+        "ARTIFACT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5892,
+          "chunk_id": "se_theory_practice.pdf__chunk_None_2621",
+          "document_id": "1",
+          "description": "An engineer class used as the comparison point for the greater capabilities and responsibility of a Senior Engineer."
+        }
+      ]
+    },
+    {
+      "entity_id": "5ffb27f5-51c3-4a20-b5b6-59ea780bdf48",
+      "canonical_name": "Sedan",
+      "aliases": [],
+      "observed_types": [
+        "ARTIFACT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5892,
+          "chunk_id": "se_theory_practice.pdf__chunk_None_2621",
+          "document_id": "1",
+          "description": "An example vehicle type that is better modeled in the source as a subclass of Car."
+        }
+      ]
+    },
+    {
+      "entity_id": "e7281906-6af1-4fa1-8f95-99950106db29",
+      "canonical_name": "Car",
+      "aliases": [],
+      "observed_types": [
+        "ARTIFACT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5892,
+          "chunk_id": "se_theory_practice.pdf__chunk_None_2621",
+          "document_id": "1",
+          "description": "The class from which Sedan is described as inheriting."
+        }
+      ]
+    },
+    {
+      "entity_id": "eb10cc86-8199-4035-9f5b-e96741a7848e",
+      "canonical_name": "Indirection",
+      "aliases": [],
+      "observed_types": [
+        "PROPERTY"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5892,
+          "chunk_id": "se_theory_practice.pdf__chunk_None_2621",
+          "document_id": "1",
+          "description": "An additional level of reference introduced by object composition."
+        }
+      ]
+    },
+    {
+      "entity_id": "54cf8110-892e-450a-98ea-27f651790d9b",
+      "canonical_name": "Runtime Performance",
+      "aliases": [],
+      "observed_types": [
+        "PROPERTY"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5892,
+          "chunk_id": "se_theory_practice.pdf__chunk_None_2621",
+          "document_id": "1",
+          "description": "The execution-efficiency consideration involved in choosing between inheritance and object composition."
+        },
+        {
+          "database_id": 5899,
+          "chunk_id": "se_theory_practice.pdf__chunk_2650_2651",
+          "document_id": "1",
+          "description": "A performance characteristic that wrapper classes may degrade."
+        }
+      ]
+    },
+    {
+      "entity_id": "3f3edf8d-a1e5-4017-b3ba-b34c9ec7f5c3",
+      "canonical_name": "Runtime Configurability",
+      "aliases": [],
+      "observed_types": [
+        "PROPERTY"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5892,
+          "chunk_id": "se_theory_practice.pdf__chunk_None_2621",
+          "document_id": "1",
+          "description": "The ability to configure or change object behavior at runtime, identified as a design trade-off."
+        }
+      ]
+    },
+    {
+      "entity_id": "fa2c03c0-769f-4cf7-8d24-7529c04717f3",
+      "canonical_name": "Design Coherence",
+      "aliases": [],
+      "observed_types": [
+        "PROPERTY"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5892,
+          "chunk_id": "se_theory_practice.pdf__chunk_None_2621",
+          "document_id": "1",
+          "description": "The coherence of a design, identified as one consideration in choosing between inheritance and object composition."
+        }
+      ]
+    },
+    {
+      "entity_id": "6175db9f-ee52-4575-bd07-ed5f7416ba5d",
+      "canonical_name": "Predictability of Behavior",
+      "aliases": [],
+      "observed_types": [
+        "PROPERTY"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5892,
+          "chunk_id": "se_theory_practice.pdf__chunk_None_2621",
+          "document_id": "1",
+          "description": "The predictability of system behavior, identified as one consideration in the design choice."
+        }
+      ]
+    },
+    {
+      "entity_id": "c3a7ebcd-06c6-4c5d-9ea8-ceed4e203b8f",
+      "canonical_name": "Encapsulation of Design Decision",
+      "aliases": [],
+      "observed_types": [
+        "PROPERTY"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5892,
+          "chunk_id": "se_theory_practice.pdf__chunk_None_2621",
+          "document_id": "1",
+          "description": "The degree to which design decisions are encapsulated, identified as one consideration in the design choice."
+        }
+      ]
+    },
+    {
+      "entity_id": "51a82199-debb-4e0a-aa88-731bcb733e4c",
+      "canonical_name": "Inheritance",
+      "aliases": [],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5893,
+          "chunk_id": "se_theory_practice.pdf__chunk_2622_2627",
+          "document_id": "1",
+          "description": "An object-oriented programming mechanism in which subclasses receive methods from parent classes."
+        },
+        {
+          "database_id": 5896,
+          "chunk_id": "se_theory_practice.pdf__chunk_2637_2644",
+          "document_id": "1",
+          "description": "An alternative object-oriented design approach contrasted with composition."
+        }
+      ]
+    },
+    {
+      "entity_id": "376a2b3d-1e89-4125-99f6-1c6115e160e5",
+      "canonical_name": "Subclass",
+      "aliases": [
+        "subclasses"
+      ],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5893,
+          "chunk_id": "se_theory_practice.pdf__chunk_2622_2627",
+          "document_id": "1",
+          "description": "A class derived from a parent class that may introduce attributes and override inherited method behavior."
+        },
+        {
+          "database_id": 5894,
+          "chunk_id": "se_theory_practice.pdf__chunk_2629_2633",
+          "document_id": "1",
+          "description": "A class whose method behavior must satisfy substitutability rules and whose declared properties must be preserved."
+        }
+      ]
+    },
+    {
+      "entity_id": "203a16b1-e789-4ec5-ba52-64219b8ac911",
+      "canonical_name": "Parent class",
+      "aliases": [
+        "parent classes"
+      ],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5893,
+          "chunk_id": "se_theory_practice.pdf__chunk_2622_2627",
+          "document_id": "1",
+          "description": "A class whose methods and interface are inherited by a subclass."
+        },
+        {
+          "database_id": 5894,
+          "chunk_id": "se_theory_practice.pdf__chunk_2629_2633",
+          "document_id": "1",
+          "description": "The class whose methods, declared properties, constraints, and associations provide requirements for its subclass."
+        }
+      ]
+    },
+    {
+      "entity_id": "b3d8886a-048a-493a-be5f-97ad59d96189",
+      "canonical_name": "BoundedStack",
+      "aliases": [],
+      "observed_types": [
+        "ARTIFACT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5893,
+          "chunk_id": "se_theory_practice.pdf__chunk_2622_2627",
+          "document_id": "1",
+          "description": "A specialized Stack class that stores only a limited number of elements and records a bound on its size."
+        }
+      ]
+    },
+    {
+      "entity_id": "33b5307b-d341-4559-843e-8907c47db848",
+      "canonical_name": "Stack",
+      "aliases": [
+        "stacks"
+      ],
+      "observed_types": [
+        "ARTIFACT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5893,
+          "chunk_id": "se_theory_practice.pdf__chunk_2622_2627",
+          "document_id": "1",
+          "description": "A class representing a stack that serves as the parent type of BoundedStack in the example."
+        }
+      ]
+    },
+    {
+      "entity_id": "3b3fe959-e69e-416e-9e35-c75d8f71b9c9",
+      "canonical_name": "push() method",
+      "aliases": [],
+      "observed_types": [
+        "METHOD"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5893,
+          "chunk_id": "se_theory_practice.pdf__chunk_2622_2627",
+          "document_id": "1",
+          "description": "A stack operation whose behavior is overridden by BoundedStack to handle insertion when the stack is full."
+        },
+        {
+          "database_id": 5895,
+          "chunk_id": "se_theory_practice.pdf__chunk_2635_2636",
+          "document_id": "1",
+          "description": "A Stack operation whose postcondition is changed in BoundedStack."
+        }
+      ]
+    },
+    {
+      "entity_id": "163ed4e4-5b1a-429d-aeb2-caf2e6d345ad",
+      "canonical_name": "Liskov Substitutability Principle",
+      "aliases": [
+        "substitutability principle"
+      ],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5893,
+          "chunk_id": "se_theory_practice.pdf__chunk_2622_2627",
+          "document_id": "1",
+          "description": "The principle that a subclass is substitutable for its parent class when it preserves the parent's usable interface and behavioral specifications."
+        },
+        {
+          "database_id": 5895,
+          "chunk_id": "se_theory_practice.pdf__chunk_2635_2636",
+          "document_id": "1",
+          "description": "A design principle used to determine when one object can safely be substituted for another and when existing client code can continue to work with new subclasses without modification."
+        }
+      ]
+    },
+    {
+      "entity_id": "9e1d2f67-9a10-4eec-a595-0417f67cb42c",
+      "canonical_name": "Barbara Liskov",
+      "aliases": [],
+      "observed_types": [
+        "PERSON"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5893,
+          "chunk_id": "se_theory_practice.pdf__chunk_2622_2627",
+          "document_id": "1",
+          "description": "The person after whom the Liskov Substitutability Principle is named."
+        }
+      ]
+    },
+    {
+      "entity_id": "43f26f5e-8afb-43bf-8422-a4347e893724",
+      "canonical_name": "Method signature compatibility",
+      "aliases": [],
+      "observed_types": [
+        "PROPERTY"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5893,
+          "chunk_id": "se_theory_practice.pdf__chunk_2622_2627",
+          "document_id": "1",
+          "description": "Compatibility in parameters and return types that allows calls accepted by a parent class to be accepted by its subclass."
+        }
+      ]
+    },
+    {
+      "entity_id": "ec815a90-56d0-4c00-b4e6-1cadf7d5523c",
+      "canonical_name": "Method specification preservation",
+      "aliases": [],
+      "observed_types": [
+        "PROPERTY"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5893,
+          "chunk_id": "se_theory_practice.pdf__chunk_2622_2627",
+          "document_id": "1",
+          "description": "The requirement that subclass methods satisfy the specifications, including preconditions and postconditions, of parent-class methods."
+        }
+      ]
+    },
+    {
+      "entity_id": "de7005b5-1bdd-4195-82b0-bb15fa50aec3",
+      "canonical_name": "Subclass method",
+      "aliases": [],
+      "observed_types": [
+        "METHOD"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5894,
+          "chunk_id": "se_theory_practice.pdf__chunk_2629_2633",
+          "document_id": "1",
+          "description": "A method defined in a subclass whose precondition and postcondition are compared with those of the corresponding parent class method."
+        }
+      ]
+    },
+    {
+      "entity_id": "314154bf-06f8-46f8-af26-9cb2c7c865c5",
+      "canonical_name": "Parent class method",
+      "aliases": [],
+      "observed_types": [
+        "METHOD"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5894,
+          "chunk_id": "se_theory_practice.pdf__chunk_2629_2633",
+          "document_id": "1",
+          "description": "A method of the parent class that provides the reference precondition and postcondition for substitutability rules."
+        }
+      ]
+    },
+    {
+      "entity_id": "76b47ccb-704e-407c-a74f-3c3ed50414ec",
+      "canonical_name": "Precondition",
+      "aliases": [
+        "Preconditions"
+      ],
+      "observed_types": [
+        "PROPERTY"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5894,
+          "chunk_id": "se_theory_practice.pdf__chunk_2629_2633",
+          "document_id": "1",
+          "description": "A condition that must hold before a method executes; the subclass method's precondition must be the same as or weaker than the parent class method's precondition."
+        }
+      ]
+    },
+    {
+      "entity_id": "8097a477-1f87-4eb1-a757-24f78b59344b",
+      "canonical_name": "Postcondition",
+      "aliases": [
+        "Postconditions"
+      ],
+      "observed_types": [
+        "PROPERTY"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5894,
+          "chunk_id": "se_theory_practice.pdf__chunk_2629_2633",
+          "document_id": "1",
+          "description": "A condition established by a method after execution; the subclass method's postcondition must subsume the parent class method's postcondition when the parent's precondition holds."
+        }
+      ]
+    },
+    {
+      "entity_id": "1b2ad80a-f2bc-44e7-a684-a3af58021d42",
+      "canonical_name": "Declared property",
+      "aliases": [
+        "Declared properties"
+      ],
+      "observed_types": [
+        "PROPERTY"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5894,
+          "chunk_id": "se_theory_practice.pdf__chunk_2629_2633",
+          "document_id": "1",
+          "description": "A property declared by the parent class that must be preserved by the subclass."
+        }
+      ]
+    },
+    {
+      "entity_id": "135b4349-bd90-4fe1-aac0-5028b9917378",
+      "canonical_name": "Unified Modeling Language",
+      "aliases": [
+        "UML"
+      ],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5894,
+          "chunk_id": "se_theory_practice.pdf__chunk_2629_2633",
+          "document_id": "1",
+          "description": "A modeling language referenced as an example in which a subclass inherits constraints and associations from its parent class."
+        }
+      ]
+    },
+    {
+      "entity_id": "545860ed-be35-4132-8ff2-d72f33b525f1",
+      "canonical_name": "Constraint",
+      "aliases": [
+        "Constraints"
+      ],
+      "observed_types": [
+        "PROPERTY"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5894,
+          "chunk_id": "se_theory_practice.pdf__chunk_2629_2633",
+          "document_id": "1",
+          "description": "A constraint associated with a parent class that is inherited by its subclass in UML."
+        }
+      ]
+    },
+    {
+      "entity_id": "547cda61-a8fc-4c51-9f61-e5e4ab7d72f4",
+      "canonical_name": "Association",
+      "aliases": [
+        "Associations"
+      ],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5894,
+          "chunk_id": "se_theory_practice.pdf__chunk_2629_2633",
+          "document_id": "1",
+          "description": "An association between the parent class and other classes that is inherited by the subclass in UML."
+        }
+      ]
+    },
+    {
+      "entity_id": "5dca5dc3-1114-4b73-bbf7-4b177ef26ce8",
+      "canonical_name": "Stack",
+      "aliases": [],
+      "observed_types": [
+        "SYSTEM"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5895,
+          "chunk_id": "se_theory_practice.pdf__chunk_2635_2636",
+          "document_id": "1",
+          "description": "A parent class representing a stack object against which specialized stack types are compared for substitutability."
+        }
+      ]
+    },
+    {
+      "entity_id": "191c34c5-0e29-471c-8f81-db7beeff9f7d",
+      "canonical_name": "BoundedStack",
+      "aliases": [],
+      "observed_types": [
+        "SYSTEM"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5895,
+          "chunk_id": "se_theory_practice.pdf__chunk_2635_2636",
+          "document_id": "1",
+          "description": "A specialized Stack type whose push() method has a different postcondition from the parent Stack method, making its objects non-substitutable for normal Stack objects."
+        }
+      ]
+    },
+    {
+      "entity_id": "0b484eb6-feab-4dbc-b0ae-87b2dcc0b2c4",
+      "canonical_name": "PeekStack",
+      "aliases": [],
+      "observed_types": [
+        "SYSTEM"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5895,
+          "chunk_id": "se_theory_practice.pdf__chunk_2635_2636",
+          "document_id": "1",
+          "description": "A specialized Stack type that adds a peek(pos) method for returning the value of an element at a specified depth without overriding inherited Stack methods."
+        }
+      ]
+    },
+    {
+      "entity_id": "681fa083-0fcc-423c-a18d-721cda6ab4ae",
+      "canonical_name": "Postcondition rule",
+      "aliases": [],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5895,
+          "chunk_id": "se_theory_practice.pdf__chunk_2635_2636",
+          "document_id": "1",
+          "description": "A substitutability rule concerning the postcondition of an overriding method; BoundedStack violates this rule because its push() method has a different postcondition from the parent method."
+        }
+      ]
+    },
+    {
+      "entity_id": "270e9418-26ad-4740-8107-644c9b6fb8d9",
+      "canonical_name": "Object substitution",
+      "aliases": [],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5895,
+          "chunk_id": "se_theory_practice.pdf__chunk_2635_2636",
+          "document_id": "1",
+          "description": "The safe replacement of one object with another object in a program."
+        }
+      ]
+    },
+    {
+      "entity_id": "bd22e87a-0eb1-45c3-b65b-59d22abb6c43",
+      "canonical_name": "peek(pos) method",
+      "aliases": [
+        "peek()"
+      ],
+      "observed_types": [
+        "METHOD"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5895,
+          "chunk_id": "se_theory_practice.pdf__chunk_2635_2636",
+          "document_id": "1",
+          "description": "A method introduced by PeekStack that returns the value of the stack element at depth pos and does not change the object's attributes."
+        }
+      ]
+    },
+    {
+      "entity_id": "9ebfde2d-bf26-49e0-8dd2-a4339b541b94",
+      "canonical_name": "Existing client code",
+      "aliases": [],
+      "observed_types": [
+        "ARTIFACT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5895,
+          "chunk_id": "se_theory_practice.pdf__chunk_2635_2636",
+          "document_id": "1",
+          "description": "Existing program code that should continue to work with newly introduced subclasses when substitutability is preserved."
+        }
+      ]
+    },
+    {
+      "entity_id": "5966ccbf-cb19-4224-898c-4ae46e2c7aa1",
+      "canonical_name": "Composition",
+      "aliases": [],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5896,
+          "chunk_id": "se_theory_practice.pdf__chunk_2637_2644",
+          "document_id": "1",
+          "description": "A design approach involving composite classes and their component classes, which the source presents as preferable to inheritance."
+        }
+      ]
+    },
+    {
+      "entity_id": "38fc1aab-a29c-4d90-9efd-e3b95be78b82",
+      "canonical_name": "Bill",
+      "aliases": [],
+      "observed_types": [
+        "ARTIFACT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5896,
+          "chunk_id": "se_theory_practice.pdf__chunk_2637_2644",
+          "document_id": "1",
+          "description": "A class that generates a monthly invoice listing items sold to a particular customer."
+        }
+      ]
+    },
+    {
+      "entity_id": "3dbe6c4d-6b3b-4693-8b5c-6cc261eea4dd",
+      "canonical_name": "generateBill",
+      "aliases": [],
+      "observed_types": [
+        "METHOD"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5896,
+          "chunk_id": "se_theory_practice.pdf__chunk_2637_2644",
+          "document_id": "1",
+          "description": "A method of Bill that generates the invoice and, in the revised design, calls printSaleItems on CustomerAccount."
+        }
+      ]
+    },
+    {
+      "entity_id": "1cd00b71-7495-4958-a898-d99249d48689",
+      "canonical_name": "CustomerAccount",
+      "aliases": [],
+      "observed_types": [
+        "ARTIFACT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5896,
+          "chunk_id": "se_theory_practice.pdf__chunk_2637_2644",
+          "document_id": "1",
+          "description": "A class that provides account-related services and, in the revised design, contains a method for printing sale items."
+        }
+      ]
+    },
+    {
+      "entity_id": "61e2767c-2c51-41bb-aa83-2adc01db66dd",
+      "canonical_name": "Sale",
+      "aliases": [],
+      "observed_types": [
+        "ARTIFACT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5896,
+          "chunk_id": "se_theory_practice.pdf__chunk_2637_2644",
+          "document_id": "1",
+          "description": "A class representing a sale and providing a method for printing the items associated with that sale."
+        }
+      ]
+    },
+    {
+      "entity_id": "6f08d31e-4a87-49a3-8860-c8490a469af7",
+      "canonical_name": "Item",
+      "aliases": [],
+      "observed_types": [
+        "ARTIFACT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5896,
+          "chunk_id": "se_theory_practice.pdf__chunk_2637_2644",
+          "document_id": "1",
+          "description": "A class representing an item sold in a transaction and providing methods used to print item information."
+        }
+      ]
+    },
+    {
+      "entity_id": "1e9dc1ae-3b74-4ab3-ae49-36ed0c59887c",
+      "canonical_name": "Invoice",
+      "aliases": [],
+      "observed_types": [
+        "ARTIFACT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5896,
+          "chunk_id": "se_theory_practice.pdf__chunk_2637_2644",
+          "document_id": "1",
+          "description": "The monthly billing document generated by Bill."
+        }
+      ]
+    },
+    {
+      "entity_id": "dcaad223-969e-47ec-b203-3a195b8935c1",
+      "canonical_name": "printSaleItem",
+      "aliases": [],
+      "observed_types": [
+        "METHOD"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5896,
+          "chunk_id": "se_theory_practice.pdf__chunk_2637_2644",
+          "document_id": "1",
+          "description": "A method of CustomerAccount that calls printItemList on the appropriate Sale object."
+        }
+      ]
+    },
+    {
+      "entity_id": "eb8816af-1a2d-4104-a6e7-b43a8dc34616",
+      "canonical_name": "printItemList",
+      "aliases": [],
+      "observed_types": [
+        "METHOD"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5896,
+          "chunk_id": "se_theory_practice.pdf__chunk_2637_2644",
+          "document_id": "1",
+          "description": "A method of Sale that calls printing methods on the appropriate Item objects."
+        }
+      ]
+    },
+    {
+      "entity_id": "de43d965-041d-4eef-81c5-2a567053fd6b",
+      "canonical_name": "Item print method",
+      "aliases": [],
+      "observed_types": [
+        "METHOD"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5896,
+          "chunk_id": "se_theory_practice.pdf__chunk_2637_2644",
+          "document_id": "1",
+          "description": "Methods on Item objects used to print item information."
+        }
+      ]
+    },
+    {
+      "entity_id": "8d1c3d75-b638-44b0-9a90-bd80c97b586f",
+      "canonical_name": "Law of Demeter",
+      "aliases": [
+        "Don't talk to strangers design principle"
+      ],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5897,
+          "chunk_id": "se_theory_practice.pdf__chunk_2646_2648",
+          "document_id": "1",
+          "description": "A design convention stating that client code using a composite class should know only about the composite itself rather than its components."
+        },
+        {
+          "database_id": 5899,
+          "chunk_id": "se_theory_practice.pdf__chunk_2650_2651",
+          "document_id": "1",
+          "description": "A design principle whose adherence is presented as a decision involving trade-offs among several design and implementation factors."
+        }
+      ]
+    },
+    {
+      "entity_id": "4e9a1ae3-2895-450a-b4c6-e1238f657c06",
+      "canonical_name": "Demeter",
+      "aliases": [],
+      "observed_types": [
+        "EVENT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5897,
+          "chunk_id": "se_theory_practice.pdf__chunk_2646_2648",
+          "document_id": "1",
+          "description": "A research project after which the Law of Demeter was named."
+        }
+      ]
+    },
+    {
+      "entity_id": "e4129e34-23fe-49b7-8f19-a977e030bb0f",
+      "canonical_name": "Composite class",
+      "aliases": [
+        "Composite classes"
+      ],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5897,
+          "chunk_id": "se_theory_practice.pdf__chunk_2646_2648",
+          "document_id": "1",
+          "description": "A class whose components are hidden from client code under the Law of Demeter."
+        }
+      ]
+    },
+    {
+      "entity_id": "ef173b58-0295-42bf-a957-84e905cbb71c",
+      "canonical_name": "Class dependency",
+      "aliases": [
+        "Class dependencies"
+      ],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5897,
+          "chunk_id": "se_theory_practice.pdf__chunk_2646_2648",
+          "document_id": "1",
+          "description": "A dependency relationship between software classes, represented in the induced dependency graphs."
+        }
+      ]
+    },
+    {
+      "entity_id": "989c0b3d-4377-4558-a4e4-50656dd60630",
+      "canonical_name": "Induced dependency graph",
+      "aliases": [
+        "Induced dependency graphs"
+      ],
+      "observed_types": [
+        "ARTIFACT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5897,
+          "chunk_id": "se_theory_practice.pdf__chunk_2646_2648",
+          "document_id": "1",
+          "description": "A graph used to visualize the class dependencies resulting from alternative designs."
+        }
+      ]
+    },
+    {
+      "entity_id": "c1b0e54d-500a-4759-a205-f9335de8ee69",
+      "canonical_name": "Software fault",
+      "aliases": [
+        "Software faults"
+      ],
+      "observed_types": [
+        "EVENT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5897,
+          "chunk_id": "se_theory_practice.pdf__chunk_2646_2648",
+          "document_id": "1",
+          "description": "A fault in software; classes with fewer dependencies tend to have fewer such faults according to the cited studies."
+        }
+      ]
+    },
+    {
+      "entity_id": "babc00fa-26a6-4144-9fa0-b884d302ede2",
+      "canonical_name": "Changeability",
+      "aliases": [],
+      "observed_types": [
+        "PROPERTY"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5897,
+          "chunk_id": "se_theory_practice.pdf__chunk_2646_2648",
+          "document_id": "1",
+          "description": "The ease with which software can be changed; classes with fewer dependencies tend to be easier to change."
+        }
+      ]
+    },
+    {
+      "entity_id": "5035dd03-9e1f-443b-93a3-654d6e68ddba",
+      "canonical_name": "Accounting class",
+      "aliases": [
+        "Accounting"
+      ],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5897,
+          "chunk_id": "se_theory_practice.pdf__chunk_2646_2648",
+          "document_id": "1",
+          "description": "A class shown in the UML diagram with operations for generating a bill and handling an account number."
+        }
+      ]
+    },
+    {
+      "entity_id": "5f8e7184-b3f2-4b65-9574-cbc30c4345f0",
+      "canonical_name": "Customer Account class",
+      "aliases": [
+        "Customer Account"
+      ],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5897,
+          "chunk_id": "se_theory_practice.pdf__chunk_2646_2648",
+          "document_id": "1",
+          "description": "A class shown in the UML diagram with customer account data and a new-sale operation."
+        }
+      ]
+    },
+    {
+      "entity_id": "7c6f1048-7917-4dde-92bb-05e259739627",
+      "canonical_name": "Sale class",
+      "aliases": [
+        "Sale"
+      ],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5897,
+          "chunk_id": "se_theory_practice.pdf__chunk_2646_2648",
+          "document_id": "1",
+          "description": "A class shown in the UML diagram with sale totals, tax, item operations, and sale-computation operations."
+        }
+      ]
+    },
+    {
+      "entity_id": "cb2dcdc1-44e2-49ba-8186-7e6597f0bb6a",
+      "canonical_name": "Date class",
+      "aliases": [
+        "Date"
+      ],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5897,
+          "chunk_id": "se_theory_practice.pdf__chunk_2646_2648",
+          "document_id": "1",
+          "description": "A class shown in the UML diagram with day, month, and year attributes."
+        }
+      ]
+    },
+    {
+      "entity_id": "8da23d31-5f62-4b24-9008-82d52df9d675",
+      "canonical_name": "Item class",
+      "aliases": [
+        "Item"
+      ],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5897,
+          "chunk_id": "se_theory_practice.pdf__chunk_2646_2648",
+          "document_id": "1",
+          "description": "A class shown in the UML diagram with product information, price, and operations for printing product details."
+        }
+      ]
+    },
+    {
+      "entity_id": "b4de2b76-6c7c-44b0-8cec-d476a56062a2",
+      "canonical_name": "Wrapper class",
+      "aliases": [
+        "wrapper classes"
+      ],
+      "observed_types": [
+        "OBJECT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5899,
+          "chunk_id": "se_theory_practice.pdf__chunk_2650_2651",
+          "document_id": "1",
+          "description": "A class used to add functionality without changing the implementations of existing classes."
+        }
+      ]
+    },
+    {
+      "entity_id": "c6835fdf-2fd7-4ec3-8656-fbd105041e54",
+      "canonical_name": "Sale class",
+      "aliases": [
+        "Sale"
+      ],
+      "observed_types": [
+        "SYSTEM"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5899,
+          "chunk_id": "se_theory_practice.pdf__chunk_2650_2651",
+          "document_id": "1",
+          "description": "A class in the UML design that provides sales-related operations, including printItemList()."
+        }
+      ]
+    },
+    {
+      "entity_id": "960a0fe9-e482-43a8-8fa6-3883219df357",
+      "canonical_name": "Print item list operation",
+      "aliases": [
+        "printItemList()"
+      ],
+      "observed_types": [
+        "METHOD"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5899,
+          "chunk_id": "se_theory_practice.pdf__chunk_2650_2651",
+          "document_id": "1",
+          "description": "An operation that can be added to the Sale class through a wrapper class."
+        }
+      ]
+    },
+    {
+      "entity_id": "e33c7a42-526d-4efc-bf9b-b3adc173bd48",
+      "canonical_name": "Composite class",
+      "aliases": [
+        "composite classes"
+      ],
+      "observed_types": [
+        "SYSTEM"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5899,
+          "chunk_id": "se_theory_practice.pdf__chunk_2650_2651",
+          "document_id": "1",
+          "description": "A class composed of or aggregating other elements; wrapper classes can ease adding operations to such classes."
+        }
+      ]
+    },
+    {
+      "entity_id": "fb124fd1-6c47-4900-84f9-e247ba441bfa",
+      "canonical_name": "Design complexity",
+      "aliases": [],
+      "observed_types": [
+        "PROPERTY"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5899,
+          "chunk_id": "se_theory_practice.pdf__chunk_2650_2651",
+          "document_id": "1",
+          "description": "A design characteristic that wrapper classes may increase or complicate."
+        }
+      ]
+    },
+    {
+      "entity_id": "695bd5bb-94e2-4bc0-a0d8-f92a395396fe",
+      "canonical_name": "Development time",
+      "aliases": [],
+      "observed_types": [
+        "PROPERTY"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5899,
+          "chunk_id": "se_theory_practice.pdf__chunk_2650_2651",
+          "document_id": "1",
+          "description": "A factor considered when evaluating whether to adhere to the Law of Demeter."
+        }
+      ]
+    },
+    {
+      "entity_id": "189d1bb7-d431-4914-9d51-34fb10b92ecd",
+      "canonical_name": "Fault avoidance",
+      "aliases": [],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5899,
+          "chunk_id": "se_theory_practice.pdf__chunk_2650_2651",
+          "document_id": "1",
+          "description": "A factor considered in the trade-offs surrounding adherence to the Law of Demeter."
+        }
+      ]
+    },
+    {
+      "entity_id": "6b4970b7-50fc-4de0-b714-bc63e8195550",
+      "canonical_name": "Ease of maintenance",
+      "aliases": [],
+      "observed_types": [
+        "PROPERTY"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5899,
+          "chunk_id": "se_theory_practice.pdf__chunk_2650_2651",
+          "document_id": "1",
+          "description": "A factor considered when evaluating adherence to the Law of Demeter."
+        }
+      ]
+    },
+    {
+      "entity_id": "4905d4ad-e92d-4df8-b133-098323f0bcb8",
+      "canonical_name": "Accounting class",
+      "aliases": [
+        "Accounting"
+      ],
+      "observed_types": [
+        "SYSTEM"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5899,
+          "chunk_id": "se_theory_practice.pdf__chunk_2650_2651",
+          "document_id": "1",
+          "description": "A UML class with the generateBill(Account No.) operation and an Account No. attribute."
+        }
+      ]
+    },
+    {
+      "entity_id": "c1fd3713-4af7-4110-9366-28433b519e43",
+      "canonical_name": "Customer Account class",
+      "aliases": [],
+      "observed_types": [
+        "SYSTEM"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5899,
+          "chunk_id": "se_theory_practice.pdf__chunk_2650_2651",
+          "document_id": "1",
+          "description": "A UML class with customer account data and operations including newSale() and printSalesItem()."
+        }
+      ]
+    },
+    {
+      "entity_id": "47c47541-506d-4744-87e5-2b118bc6f9df",
+      "canonical_name": "Date class",
+      "aliases": [
+        "Date"
+      ],
+      "observed_types": [
+        "SYSTEM"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5899,
+          "chunk_id": "se_theory_practice.pdf__chunk_2650_2651",
+          "document_id": "1",
+          "description": "A UML class representing day, month, and year attributes."
+        }
+      ]
+    },
+    {
+      "entity_id": "c180f1c1-5c2a-41ce-9516-abd966254a18",
+      "canonical_name": "Item class",
+      "aliases": [
+        "Item"
+      ],
+      "observed_types": [
+        "SYSTEM"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5899,
+          "chunk_id": "se_theory_practice.pdf__chunk_2650_2651",
+          "document_id": "1",
+          "description": "A UML class with product information attributes and printName() and printPrice() operations."
+        }
+      ]
+    },
+    {
+      "entity_id": "c62bb9a8-9075-45bb-a430-615178b72e3e",
+      "canonical_name": "Dependency Inversion",
+      "aliases": [],
+      "observed_types": [
+        "METHOD"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5900,
+          "chunk_id": "se_theory_practice.pdf__chunk_2652_2654",
+          "document_id": "1",
+          "description": "An object-oriented design heuristic that reverses the direction of a dependency link between classes by introducing interfaces."
+        }
+      ]
+    },
+    {
+      "entity_id": "e3ee054e-903f-4979-8f4b-7d071d091343",
+      "canonical_name": "Object-Oriented Design Heuristic",
+      "aliases": [
+        "Object-Oriented Design Heuristics"
+      ],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5900,
+          "chunk_id": "se_theory_practice.pdf__chunk_2652_2654",
+          "document_id": "1",
+          "description": "A design principle or heuristic in object-oriented design; dependency inversion is identified as one such heuristic."
+        }
+      ]
+    },
+    {
+      "entity_id": "759596b5-439c-44d5-a237-424cc74a8107",
+      "canonical_name": "Dependency Link",
+      "aliases": [
+        "Dependency Links"
+      ],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5900,
+          "chunk_id": "se_theory_practice.pdf__chunk_2652_2654",
+          "document_id": "1",
+          "description": "A directed dependency relationship between two classes whose direction can be reversed through dependency inversion."
+        }
+      ]
+    },
+    {
+      "entity_id": "e27ea531-6790-431e-9816-c22b1406362a",
+      "canonical_name": "Client Class",
+      "aliases": [
+        "Client Classes"
+      ],
+      "observed_types": [
+        "ARTIFACT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5900,
+          "chunk_id": "se_theory_practice.pdf__chunk_2652_2654",
+          "document_id": "1",
+          "description": "A class that initially uses and depends on a server class, and can be modified to depend on an interface instead."
+        }
+      ]
+    },
+    {
+      "entity_id": "949e8f08-26fe-4c96-9748-1fb978143971",
+      "canonical_name": "Server Class",
+      "aliases": [
+        "Server Classes"
+      ],
+      "observed_types": [
+        "ARTIFACT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5900,
+          "chunk_id": "se_theory_practice.pdf__chunk_2652_2654",
+          "document_id": "1",
+          "description": "A class whose methods are used by a client class and whose behavior can be exposed through an interface."
+        }
+      ]
+    },
+    {
+      "entity_id": "ca3ea82e-883c-48f7-8752-9f115e9c1580",
+      "canonical_name": "Dependency Cycle",
+      "aliases": [
+        "Dependency Cycles"
+      ],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5900,
+          "chunk_id": "se_theory_practice.pdf__chunk_2652_2654",
+          "document_id": "1",
+          "description": "A cycle among class dependencies that dependency inversion may help break."
+        }
+      ]
+    },
+    {
+      "entity_id": "175b106e-3c18-4f2f-956c-386a9b435a36",
+      "canonical_name": "Interface",
+      "aliases": [
+        "Interfaces"
+      ],
+      "observed_types": [
+        "ARTIFACT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5900,
+          "chunk_id": "se_theory_practice.pdf__chunk_2652_2654",
+          "document_id": "1",
+          "description": "A software construct containing specifications of the methods expected by a client from a server class."
+        }
+      ]
+    },
+    {
+      "entity_id": "4a7aef66-9307-4f5c-9a39-6112081bea2d",
+      "canonical_name": "Client Module",
+      "aliases": [
+        "Client Modules"
+      ],
+      "observed_types": [
+        "ARTIFACT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5900,
+          "chunk_id": "se_theory_practice.pdf__chunk_2652_2654",
+          "document_id": "1",
+          "description": "A new module that packages the original client class together with the newly created interface."
+        }
+      ]
+    },
+    {
+      "entity_id": "bdcb30f3-3de2-40ac-b95e-7a8d52f37547",
+      "canonical_name": "Wrapper Class",
+      "aliases": [
+        "Wrapper Classes"
+      ],
+      "observed_types": [
+        "ARTIFACT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5900,
+          "chunk_id": "se_theory_practice.pdf__chunk_2652_2654",
+          "document_id": "1",
+          "description": "A class created for or modifying a server class so that it implements the interface introduced during dependency inversion."
+        }
+      ]
+    },
+    {
+      "entity_id": "c9febee5-050b-4ebe-8934-bbfcd71d7158",
+      "canonical_name": "Method Specification",
+      "aliases": [
+        "Method Specifications"
+      ],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5900,
+          "chunk_id": "se_theory_practice.pdf__chunk_2652_2654",
+          "document_id": "1",
+          "description": "A specification of a method that a client expects from a server class; the interface includes all such specifications."
+        }
+      ]
+    },
+    {
+      "entity_id": "b6671314-c746-4bc8-b4b3-5d3dd7008320",
+      "canonical_name": "Client",
+      "aliases": [],
+      "observed_types": [
+        "SYSTEM"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5901,
+          "chunk_id": "se_theory_practice.pdf__chunk_2656_2658",
+          "document_id": "1",
+          "description": "A software component that uses server functionality in the client-server design."
+        }
+      ]
+    },
+    {
+      "entity_id": "97b4f6fc-1b60-4772-ae0a-47d652aede69",
+      "canonical_name": "Server",
+      "aliases": [],
+      "observed_types": [
+        "SYSTEM"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5901,
+          "chunk_id": "se_theory_practice.pdf__chunk_2656_2658",
+          "document_id": "1",
+          "description": "A software component that provides server functionality and is wrapped in the new design."
+        }
+      ]
+    },
+    {
+      "entity_id": "037ab88e-2001-40c0-933d-091d5a71c08a",
+      "canonical_name": "ClientServerInterface",
+      "aliases": [],
+      "observed_types": [
+        "ARTIFACT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5901,
+          "chunk_id": "se_theory_practice.pdf__chunk_2656_2658",
+          "document_id": "1",
+          "description": "The interface on which both client code and server code depend in the new design."
+        }
+      ]
+    },
+    {
+      "entity_id": "f494f1a7-6a27-472d-a016-589992de8317",
+      "canonical_name": "ServerWrapper",
+      "aliases": [],
+      "observed_types": [
+        "SYSTEM"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5901,
+          "chunk_id": "se_theory_practice.pdf__chunk_2656_2658",
+          "document_id": "1",
+          "description": "A wrapper containing the Server and implementing or inheriting from the ClientServerInterface."
+        }
+      ]
+    },
+    {
+      "entity_id": "6edf34d7-7694-4f1b-901e-36c94ccfc9d2",
+      "canonical_name": "New client package",
+      "aliases": [],
+      "observed_types": [
+        "ARTIFACT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5901,
+          "chunk_id": "se_theory_practice.pdf__chunk_2656_2658",
+          "document_id": "1",
+          "description": "The new client-side package associated with the wrapped server class and the ClientServerInterface."
+        }
+      ]
+    },
+    {
+      "entity_id": "608884f2-206e-427c-926a-9a238c701fdc",
+      "canonical_name": "Dependency Inversion Principle",
+      "aliases": [],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5901,
+          "chunk_id": "se_theory_practice.pdf__chunk_2656_2658",
+          "document_id": "1",
+          "description": "A design principle used in the dependency-inverted design and in the definitions of several design patterns."
+        }
+      ]
+    },
+    {
+      "entity_id": "ec516561-b8eb-45b1-b262-70097e46048f",
+      "canonical_name": "Design pattern",
+      "aliases": [
+        "Design patterns"
+      ],
+      "observed_types": [
+        "CONCEPT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5901,
+          "chunk_id": "se_theory_practice.pdf__chunk_2656_2658",
+          "document_id": "1",
+          "description": "A category of software design solutions whose definitions use the Dependency Inversion Principle."
+        }
+      ]
+    },
+    {
+      "entity_id": "4cb39b66-7682-47a2-a41b-6d392bdc3afb",
+      "canonical_name": "Dependency graph",
+      "aliases": [
+        "Dependency graphs"
+      ],
+      "observed_types": [
+        "ARTIFACT"
+      ],
+      "chunk_evidences": [
+        {
+          "database_id": 5901,
+          "chunk_id": "se_theory_practice.pdf__chunk_2656_2658",
+          "document_id": "1",
+          "description": "A representation of dependencies in which the newly wrapped server class depends on the new client package."
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "source_entity_id": "32b8ec4d-ec2c-4758-8b8d-19a841484eae",
+      "target_entity_id": "a3c7ec2e-2494-476c-9596-a68d801c2b6f",
+      "relation_type": "USES",
+      "chunk_evidences": [
+        {
+          "database_id": 5850,
+          "chunk_id": "se_theory_practice.pdf__chunk_1_2",
+          "document_id": "1",
+          "description": "Software engineers use their knowledge of computers and computing to help solve problems."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "a3c7ec2e-2494-476c-9596-a68d801c2b6f",
+      "target_entity_id": "e4d3523a-16d9-49f6-ab3e-30de87a1905c",
+      "relation_type": "USED_FOR",
+      "chunk_evidences": [
+        {
+          "database_id": 5850,
+          "chunk_id": "se_theory_practice.pdf__chunk_1_2",
+          "document_id": "1",
+          "description": "Knowledge of computers and computing is used for problem solving."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "43e908f9-9945-4647-8528-38d0908383d8",
+      "target_entity_id": "a3093aa1-a79c-40e3-868b-fde6af4713e0",
+      "relation_type": "RELATED_TO",
+      "chunk_evidences": [
+        {
+          "database_id": 5850,
+          "chunk_id": "se_theory_practice.pdf__chunk_1_2",
+          "document_id": "1",
+          "description": "Problems are often related to a computer or an existing computer system, although some underlying difficulties are not computer-related."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "f9477fb3-4be4-45dc-a775-165ecd34b4db",
+      "target_entity_id": "43e908f9-9945-4647-8528-38d0908383d8",
+      "relation_type": "REPRESENTS",
+      "chunk_evidences": [
+        {
+          "database_id": 5850,
+          "chunk_id": "se_theory_practice.pdf__chunk_1_2",
+          "document_id": "1",
+          "description": "The nature of a problem represents its underlying character, which must be understood before addressing the problem."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "a3093aa1-a79c-40e3-868b-fde6af4713e0",
+      "target_entity_id": "e4d3523a-16d9-49f6-ab3e-30de87a1905c",
+      "relation_type": "USED_FOR",
+      "chunk_evidences": [
+        {
+          "database_id": 5850,
+          "chunk_id": "se_theory_practice.pdf__chunk_1_2",
+          "document_id": "1",
+          "description": "A computer system may be used to solve a particular problem when it is necessary or desirable."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "e4d3523a-16d9-49f6-ab3e-30de87a1905c",
+      "target_entity_id": "616640be-1e84-45cd-a27e-6cab1172a119",
+      "relation_type": "PRECEDES",
+      "chunk_evidences": [
+        {
+          "database_id": 5850,
+          "chunk_id": "se_theory_practice.pdf__chunk_1_2",
+          "document_id": "1",
+          "description": "The problem must be solved before technology is used to implement the solution."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "abae5300-192e-41a7-b786-dcb47d417727",
+      "target_entity_id": "616640be-1e84-45cd-a27e-6cab1172a119",
+      "relation_type": "USED_FOR",
+      "chunk_evidences": [
+        {
+          "database_id": 5850,
+          "chunk_id": "se_theory_practice.pdf__chunk_1_2",
+          "document_id": "1",
+          "description": "Technology can be used as a tool for implementing a solution."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "616640be-1e84-45cd-a27e-6cab1172a119",
+      "target_entity_id": "22dc805b-306a-4540-8a1d-870cd8e37a24",
+      "relation_type": "IMPLEMENTS",
+      "chunk_evidences": [
+        {
+          "database_id": 5850,
+          "chunk_id": "se_theory_practice.pdf__chunk_1_2",
+          "document_id": "1",
+          "description": "Solution implementation implements the solution selected for the problem."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "6cfac004-419d-4500-8215-0bf12feeed4e",
+      "target_entity_id": "3ccc899b-caa2-4400-9c1f-e8731e718e34",
+      "relation_type": "DEFINED_AS",
+      "chunk_evidences": [
+        {
+          "database_id": 5853,
+          "chunk_id": "se_theory_practice.pdf__chunk_6_6",
+          "document_id": "1",
+          "description": "The source defines a method or technique as a formal procedure."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "6cfac004-419d-4500-8215-0bf12feeed4e",
+      "target_entity_id": "9bbcd948-d34f-4c5d-970c-715c99148028",
+      "relation_type": "PRODUCES",
+      "chunk_evidences": [
+        {
+          "database_id": 5853,
+          "chunk_id": "se_theory_practice.pdf__chunk_6_6",
+          "document_id": "1",
+          "description": "A method is a formal procedure for producing a result."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "6cfac004-419d-4500-8215-0bf12feeed4e",
+      "target_entity_id": "43e908f9-9945-4647-8528-38d0908383d8",
+      "relation_type": "USED_FOR",
+      "chunk_evidences": [
+        {
+          "database_id": 5853,
+          "chunk_id": "se_theory_practice.pdf__chunk_6_6",
+          "document_id": "1",
+          "description": "Methods are employed to help solve problems."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "31fafff6-b5f6-4c2f-8cac-062b600248a6",
+      "target_entity_id": "43e908f9-9945-4647-8528-38d0908383d8",
+      "relation_type": "USED_FOR",
+      "chunk_evidences": [
+        {
+          "database_id": 5853,
+          "chunk_id": "se_theory_practice.pdf__chunk_6_6",
+          "document_id": "1",
+          "description": "Tools are employed to help solve problems."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "3ccc899b-caa2-4400-9c1f-e8731e718e34",
+      "target_entity_id": "43e908f9-9945-4647-8528-38d0908383d8",
+      "relation_type": "USED_FOR",
+      "chunk_evidences": [
+        {
+          "database_id": 5853,
+          "chunk_id": "se_theory_practice.pdf__chunk_6_6",
+          "document_id": "1",
+          "description": "Procedures are employed to help solve problems."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "9712868b-a709-4301-b824-b7adef0dcec1",
+      "target_entity_id": "43e908f9-9945-4647-8528-38d0908383d8",
+      "relation_type": "USED_FOR",
+      "chunk_evidences": [
+        {
+          "database_id": 5853,
+          "chunk_id": "se_theory_practice.pdf__chunk_6_6",
+          "document_id": "1",
+          "description": "Paradigms are employed to help solve problems."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "43e908f9-9945-4647-8528-38d0908383d8",
+      "target_entity_id": "99a68c7c-f73b-4262-8a8d-c537140daa84",
+      "relation_type": "HAS_PART",
+      "chunk_evidences": [
+        {
+          "database_id": 5853,
+          "chunk_id": "se_theory_practice.pdf__chunk_6_6",
+          "document_id": "1",
+          "description": "In the analysis process, a problem is broken down into subproblems."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "22dc805b-306a-4540-8a1d-870cd8e37a24",
+      "target_entity_id": "8fe691d8-2efc-4caf-a644-5412ffe94ba2",
+      "relation_type": "PART_OF",
+      "chunk_evidences": [
+        {
+          "database_id": 5853,
+          "chunk_id": "se_theory_practice.pdf__chunk_6_6",
+          "document_id": "1",
+          "description": "The individual solutions are integrated into the final solution."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "52da174c-bece-44a9-b9ea-7d903ae0273d",
+      "target_entity_id": "8fe691d8-2efc-4caf-a644-5412ffe94ba2",
+      "relation_type": "ENABLES",
+      "chunk_evidences": [
+        {
+          "database_id": 5853,
+          "chunk_id": "se_theory_practice.pdf__chunk_6_6",
+          "document_id": "1",
+          "description": "The analysis process leads from a problem through subproblems and their solutions to a final solution."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "a1ad7dd9-d447-4a3a-a045-8f72fdff54e5",
+      "target_entity_id": "6cfac004-419d-4500-8215-0bf12feeed4e",
+      "relation_type": "RELATED_TO",
+      "chunk_evidences": [
+        {
+          "database_id": 5859,
+          "chunk_id": "se_theory_practice.pdf__chunk_137_139",
+          "document_id": "1",
+          "description": "Tools and techniques are both approaches used to improve the way work is accomplished."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "3ccc899b-caa2-4400-9c1f-e8731e718e34",
+      "target_entity_id": "a1ad7dd9-d447-4a3a-a045-8f72fdff54e5",
+      "relation_type": "HAS_PART",
+      "chunk_evidences": [
+        {
+          "database_id": 5859,
+          "chunk_id": "se_theory_practice.pdf__chunk_137_139",
+          "document_id": "1",
+          "description": "A procedure combines tools with techniques."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "3ccc899b-caa2-4400-9c1f-e8731e718e34",
+      "target_entity_id": "6cfac004-419d-4500-8215-0bf12feeed4e",
+      "relation_type": "HAS_PART",
+      "chunk_evidences": [
+        {
+          "database_id": 5859,
+          "chunk_id": "se_theory_practice.pdf__chunk_137_139",
+          "document_id": "1",
+          "description": "A procedure combines techniques with tools."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "3ccc899b-caa2-4400-9c1f-e8731e718e34",
+      "target_entity_id": "af531c5e-79d2-481e-94f3-2b4332682a01",
+      "relation_type": "PRODUCES",
+      "chunk_evidences": [
+        {
+          "database_id": 5859,
+          "chunk_id": "se_theory_practice.pdf__chunk_137_139",
+          "document_id": "1",
+          "description": "A procedure is described as producing a particular product."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "ab21d917-7666-4ce4-8622-915d46875342",
+      "target_entity_id": "d8307f51-2894-46bf-b2e0-8bd5d8b6f455",
+      "relation_type": "REPRESENTS",
+      "chunk_evidences": [
+        {
+          "database_id": 5859,
+          "chunk_id": "se_theory_practice.pdf__chunk_137_139",
+          "document_id": "1",
+          "description": "A test plan describes the test procedures to be performed."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "d8307f51-2894-46bf-b2e0-8bd5d8b6f455",
+      "target_entity_id": "a1ad7dd9-d447-4a3a-a045-8f72fdff54e5",
+      "relation_type": "USES",
+      "chunk_evidences": [
+        {
+          "database_id": 5859,
+          "chunk_id": "se_theory_practice.pdf__chunk_137_139",
+          "document_id": "1",
+          "description": "A test procedure specifies which tools are used during testing."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "d8307f51-2894-46bf-b2e0-8bd5d8b6f455",
+      "target_entity_id": "afea7fea-0af2-4ba1-836d-20a010d2aa4a",
+      "relation_type": "USES",
+      "chunk_evidences": [
+        {
+          "database_id": 5859,
+          "chunk_id": "se_theory_practice.pdf__chunk_137_139",
+          "document_id": "1",
+          "description": "A test procedure specifies the data sets used during testing."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "d8307f51-2894-46bf-b2e0-8bd5d8b6f455",
+      "target_entity_id": "da7df2ca-15bf-4c6b-a92b-37572bbd8c7a",
+      "relation_type": "MEASURES",
+      "chunk_evidences": [
+        {
+          "database_id": 5859,
+          "chunk_id": "se_theory_practice.pdf__chunk_137_139",
+          "document_id": "1",
+          "description": "A test procedure determines whether software meets its requirements."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "f323dd8b-c08f-4b59-a140-46e24136d129",
+      "target_entity_id": "9712868b-a709-4301-b824-b7adef0dcec1",
+      "relation_type": "IS_A",
+      "chunk_evidences": [
+        {
+          "database_id": 5859,
+          "chunk_id": "se_theory_practice.pdf__chunk_137_139",
+          "document_id": "1",
+          "description": "Object-oriented development is identified as a software development paradigm."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "fbc822d9-c800-4e4b-8595-e260dea3e6b5",
+      "target_entity_id": "9712868b-a709-4301-b824-b7adef0dcec1",
+      "relation_type": "IS_A",
+      "chunk_evidences": [
+        {
+          "database_id": 5859,
+          "chunk_id": "se_theory_practice.pdf__chunk_137_139",
+          "document_id": "1",
+          "description": "Procedural development is identified as a software development paradigm."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "206500b7-7cc0-40a9-8d48-b3ab36e3cc4b",
+      "target_entity_id": "a1ad7dd9-d447-4a3a-a045-8f72fdff54e5",
+      "relation_type": "USES",
+      "chunk_evidences": [
+        {
+          "database_id": 5859,
+          "chunk_id": "se_theory_practice.pdf__chunk_137_139",
+          "document_id": "1",
+          "description": "Software engineers use tools to enhance their software products."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "206500b7-7cc0-40a9-8d48-b3ab36e3cc4b",
+      "target_entity_id": "6cfac004-419d-4500-8215-0bf12feeed4e",
+      "relation_type": "USES",
+      "chunk_evidences": [
+        {
+          "database_id": 5859,
+          "chunk_id": "se_theory_practice.pdf__chunk_137_139",
+          "document_id": "1",
+          "description": "Software engineers use techniques to enhance their software products."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "206500b7-7cc0-40a9-8d48-b3ab36e3cc4b",
+      "target_entity_id": "3ccc899b-caa2-4400-9c1f-e8731e718e34",
+      "relation_type": "USES",
+      "chunk_evidences": [
+        {
+          "database_id": 5859,
+          "chunk_id": "se_theory_practice.pdf__chunk_137_139",
+          "document_id": "1",
+          "description": "Software engineers use procedures to enhance their software products."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "206500b7-7cc0-40a9-8d48-b3ab36e3cc4b",
+      "target_entity_id": "9712868b-a709-4301-b824-b7adef0dcec1",
+      "relation_type": "USES",
+      "chunk_evidences": [
+        {
+          "database_id": 5859,
+          "chunk_id": "se_theory_practice.pdf__chunk_137_139",
+          "document_id": "1",
+          "description": "Software engineers use paradigms to enhance their software products."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "a1ad7dd9-d447-4a3a-a045-8f72fdff54e5",
+      "target_entity_id": "af531c5e-79d2-481e-94f3-2b4332682a01",
+      "relation_type": "AFFECTS",
+      "chunk_evidences": [
+        {
+          "database_id": 5859,
+          "chunk_id": "se_theory_practice.pdf__chunk_137_139",
+          "document_id": "1",
+          "description": "Tools are used to enhance the quality of software products."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "6cfac004-419d-4500-8215-0bf12feeed4e",
+      "target_entity_id": "af531c5e-79d2-481e-94f3-2b4332682a01",
+      "relation_type": "AFFECTS",
+      "chunk_evidences": [
+        {
+          "database_id": 5859,
+          "chunk_id": "se_theory_practice.pdf__chunk_137_139",
+          "document_id": "1",
+          "description": "Techniques are used to enhance the quality of software products."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "3ccc899b-caa2-4400-9c1f-e8731e718e34",
+      "target_entity_id": "af531c5e-79d2-481e-94f3-2b4332682a01",
+      "relation_type": "AFFECTS",
+      "chunk_evidences": [
+        {
+          "database_id": 5859,
+          "chunk_id": "se_theory_practice.pdf__chunk_137_139",
+          "document_id": "1",
+          "description": "Procedures are used to enhance the quality of software products."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "9712868b-a709-4301-b824-b7adef0dcec1",
+      "target_entity_id": "af531c5e-79d2-481e-94f3-2b4332682a01",
+      "relation_type": "AFFECTS",
+      "chunk_evidences": [
+        {
+          "database_id": 5859,
+          "chunk_id": "se_theory_practice.pdf__chunk_137_139",
+          "document_id": "1",
+          "description": "Paradigms are used as approaches for building software products."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "a1ad7dd9-d447-4a3a-a045-8f72fdff54e5",
+      "target_entity_id": "ecd6af31-1bb1-4cb6-8d44-ce435266334d",
+      "relation_type": "SUPPORTS",
+      "chunk_evidences": [
+        {
+          "database_id": 5859,
+          "chunk_id": "se_theory_practice.pdf__chunk_137_139",
+          "document_id": "1",
+          "description": "Tools are among the approaches that support software development and maintenance activities."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "6cfac004-419d-4500-8215-0bf12feeed4e",
+      "target_entity_id": "ecd6af31-1bb1-4cb6-8d44-ce435266334d",
+      "relation_type": "SUPPORTS",
+      "chunk_evidences": [
+        {
+          "database_id": 5859,
+          "chunk_id": "se_theory_practice.pdf__chunk_137_139",
+          "document_id": "1",
+          "description": "Techniques are among the approaches that support software development and maintenance activities."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "3ccc899b-caa2-4400-9c1f-e8731e718e34",
+      "target_entity_id": "ecd6af31-1bb1-4cb6-8d44-ce435266334d",
+      "relation_type": "SUPPORTS",
+      "chunk_evidences": [
+        {
+          "database_id": 5859,
+          "chunk_id": "se_theory_practice.pdf__chunk_137_139",
+          "document_id": "1",
+          "description": "Procedures are among the approaches that support software development and maintenance activities."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "9712868b-a709-4301-b824-b7adef0dcec1",
+      "target_entity_id": "ecd6af31-1bb1-4cb6-8d44-ce435266334d",
+      "relation_type": "SUPPORTS",
+      "chunk_evidences": [
+        {
+          "database_id": 5859,
+          "chunk_id": "se_theory_practice.pdf__chunk_137_139",
+          "document_id": "1",
+          "description": "Paradigms are among the approaches that support software development and maintenance activities."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "b0646993-f14e-4612-8983-d0deddb40c36",
+      "target_entity_id": "1db1899b-55d4-4e9b-9d7a-358abc43ad73",
+      "relation_type": "PART_OF",
+      "chunk_evidences": [
+        {
+          "database_id": 5860,
+          "chunk_id": "se_theory_practice.pdf__chunk_144_144",
+          "document_id": "1",
+          "description": "Theories are shown as an input originating from computer science."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "a4beb2be-2d47-4b34-b8a6-9ff8657c850b",
+      "target_entity_id": "1db1899b-55d4-4e9b-9d7a-358abc43ad73",
+      "relation_type": "PART_OF",
+      "chunk_evidences": [
+        {
+          "database_id": 5860,
+          "chunk_id": "se_theory_practice.pdf__chunk_144_144",
+          "document_id": "1",
+          "description": "Computer functions are shown as an input originating from computer science."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "43e908f9-9945-4647-8528-38d0908383d8",
+      "target_entity_id": "67a2c550-73d9-40af-be40-6180f74dc200",
+      "relation_type": "RELATED_TO",
+      "chunk_evidences": [
+        {
+          "database_id": 5860,
+          "chunk_id": "se_theory_practice.pdf__chunk_144_144",
+          "document_id": "1",
+          "description": "The problem is presented as associated with the customer."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "b9fd684a-c718-4ef1-99b9-a033a9497b75",
+      "target_entity_id": "b0646993-f14e-4612-8983-d0deddb40c36",
+      "relation_type": "USES",
+      "chunk_evidences": [
+        {
+          "database_id": 5860,
+          "chunk_id": "se_theory_practice.pdf__chunk_144_144",
+          "document_id": "1",
+          "description": "Software engineering uses theories from computer science."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "b9fd684a-c718-4ef1-99b9-a033a9497b75",
+      "target_entity_id": "a4beb2be-2d47-4b34-b8a6-9ff8657c850b",
+      "relation_type": "USES",
+      "chunk_evidences": [
+        {
+          "database_id": 5860,
+          "chunk_id": "se_theory_practice.pdf__chunk_144_144",
+          "document_id": "1",
+          "description": "Software engineering uses computer functions from computer science."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "b9fd684a-c718-4ef1-99b9-a033a9497b75",
+      "target_entity_id": "43e908f9-9945-4647-8528-38d0908383d8",
+      "relation_type": "USES",
+      "chunk_evidences": [
+        {
+          "database_id": 5860,
+          "chunk_id": "se_theory_practice.pdf__chunk_144_144",
+          "document_id": "1",
+          "description": "Software engineering takes the customer problem as an input to be solved."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "b9fd684a-c718-4ef1-99b9-a033a9497b75",
+      "target_entity_id": "603e67af-da34-47c9-b539-2b1ef74f66a4",
+      "relation_type": "USES",
+      "chunk_evidences": [
+        {
+          "database_id": 5860,
+          "chunk_id": "se_theory_practice.pdf__chunk_144_144",
+          "document_id": "1",
+          "description": "Software engineering applies tools and techniques to solve the problem."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "603e67af-da34-47c9-b539-2b1ef74f66a4",
+      "target_entity_id": "43e908f9-9945-4647-8528-38d0908383d8",
+      "relation_type": "USED_FOR",
+      "chunk_evidences": [
+        {
+          "database_id": 5860,
+          "chunk_id": "se_theory_practice.pdf__chunk_144_144",
+          "document_id": "1",
+          "description": "The tools and techniques are used to solve the customer problem."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "1a64de25-9bce-4cb2-98ec-f5f1ed546990",
+      "target_entity_id": "c4d5f0e9-76b3-487d-abc2-bf63d6dbaf82",
+      "relation_type": "SUPPORTS",
+      "chunk_evidences": [
+        {
+          "database_id": 5861,
+          "chunk_id": "se_theory_practice.pdf__chunk_144_150",
+          "document_id": "1",
+          "description": "The customer sponsors and financially supports system development."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "1a64de25-9bce-4cb2-98ec-f5f1ed546990",
+      "target_entity_id": "bfd15744-8d2e-44c9-a13d-72d78b716d8b",
+      "relation_type": "SUPPORTS",
+      "chunk_evidences": [
+        {
+          "database_id": 5861,
+          "chunk_id": "se_theory_practice.pdf__chunk_144_150",
+          "document_id": "1",
+          "description": "The customer provides the developer with funding and requirements or needs."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "1a64de25-9bce-4cb2-98ec-f5f1ed546990",
+      "target_entity_id": "bfd15744-8d2e-44c9-a13d-72d78b716d8b",
+      "relation_type": "RELATED_TO",
+      "chunk_evidences": [
+        {
+          "database_id": 5861,
+          "chunk_id": "se_theory_practice.pdf__chunk_144_150",
+          "document_id": "1",
+          "description": "The customer has a contractual relationship with the developer."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "3b3c8853-2ca9-435c-bc8b-8afd332411cc",
+      "target_entity_id": "bfd15744-8d2e-44c9-a13d-72d78b716d8b",
+      "relation_type": "RELATED_TO",
+      "chunk_evidences": [
+        {
+          "database_id": 5861,
+          "chunk_id": "se_theory_practice.pdf__chunk_144_150",
+          "document_id": "1",
+          "description": "The user communicates system needs to the developer."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "3b3c8853-2ca9-435c-bc8b-8afd332411cc",
+      "target_entity_id": "8865d21e-b6e6-40c4-a291-426083dc1534",
+      "relation_type": "USES",
+      "chunk_evidences": [
+        {
+          "database_id": 5861,
+          "chunk_id": "se_theory_practice.pdf__chunk_144_150",
+          "document_id": "1",
+          "description": "The user uses the software system."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "ee064a2b-3760-406e-8b25-8a1ed77fe347",
+      "target_entity_id": "1a64de25-9bce-4cb2-98ec-f5f1ed546990",
+      "relation_type": "INSTANCE_OF",
+      "chunk_evidences": [
+        {
+          "database_id": 5861,
+          "chunk_id": "se_theory_practice.pdf__chunk_144_150",
+          "document_id": "1",
+          "description": "When developing a tool for its own needs, the computer systems development division acts as the customer."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "ee064a2b-3760-406e-8b25-8a1ed77fe347",
+      "target_entity_id": "3b3c8853-2ca9-435c-bc8b-8afd332411cc",
+      "relation_type": "INSTANCE_OF",
+      "chunk_evidences": [
+        {
+          "database_id": 5861,
+          "chunk_id": "se_theory_practice.pdf__chunk_144_150",
+          "document_id": "1",
+          "description": "When developing a tool for its own needs, the computer systems development division acts as the user."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "ee064a2b-3760-406e-8b25-8a1ed77fe347",
+      "target_entity_id": "bfd15744-8d2e-44c9-a13d-72d78b716d8b",
+      "relation_type": "INSTANCE_OF",
+      "chunk_evidences": [
+        {
+          "database_id": 5861,
+          "chunk_id": "se_theory_practice.pdf__chunk_144_150",
+          "document_id": "1",
+          "description": "When developing a tool itself, the computer systems development division acts as the developer."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "a15083a3-5970-43c1-a690-89a6243f09dd",
+      "target_entity_id": "8fb9bddf-d6f8-4437-b866-ef748b546e4f",
+      "relation_type": "USED_FOR",
+      "chunk_evidences": [
+        {
+          "database_id": 5891,
+          "chunk_id": "se_theory_practice.pdf__chunk_2621_2620",
+          "document_id": "1",
+          "description": "Inheritance is used to construct subclasses."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "8fb9bddf-d6f8-4437-b866-ef748b546e4f",
+      "target_entity_id": "d2397f1d-0118-4192-b00a-67ddb506961c",
+      "relation_type": "DERIVED_FROM",
+      "chunk_evidences": [
+        {
+          "database_id": 5891,
+          "chunk_id": "se_theory_practice.pdf__chunk_2621_2620",
+          "document_id": "1",
+          "description": "A subclass is derived from a parent class."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "8fb9bddf-d6f8-4437-b866-ef748b546e4f",
+      "target_entity_id": "441bdc21-ae91-4d1d-aa8b-1833f1cfa267",
+      "relation_type": "HAS_PROPERTY",
+      "chunk_evidences": [
+        {
+          "database_id": 5891,
+          "chunk_id": "se_theory_practice.pdf__chunk_2621_2620",
+          "document_id": "1",
+          "description": "A subclass constructed through inheritance has an implementation that is static and determined at design time."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "0c822902-c0d4-4594-8318-2ae3cf459347",
+      "target_entity_id": "a15083a3-5970-43c1-a690-89a6243f09dd",
+      "relation_type": "CONTRASTS_WITH",
+      "chunk_evidences": [
+        {
+          "database_id": 5891,
+          "chunk_id": "se_theory_practice.pdf__chunk_2621_2620",
+          "document_id": "1",
+          "description": "Composite classes are contrasted with inheritance because objects instantiated from composite classes are described as more flexible."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "8fb9bddf-d6f8-4437-b866-ef748b546e4f",
+      "target_entity_id": "87e10548-9c5e-48d0-a3c0-44d2ddcf4ed1",
+      "relation_type": "USES",
+      "chunk_evidences": [
+        {
+          "database_id": 5891,
+          "chunk_id": "se_theory_practice.pdf__chunk_2621_2620",
+          "document_id": "1",
+          "description": "A subclass uses methods inherited from its parent class."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "87e10548-9c5e-48d0-a3c0-44d2ddcf4ed1",
+      "target_entity_id": "d2397f1d-0118-4192-b00a-67ddb506961c",
+      "relation_type": "DERIVED_FROM",
+      "chunk_evidences": [
+        {
+          "database_id": 5891,
+          "chunk_id": "se_theory_practice.pdf__chunk_2621_2620",
+          "document_id": "1",
+          "description": "Inherited methods originate from the parent class."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "a8624aae-4166-4044-8f9e-95134dd3ecf2",
+      "target_entity_id": "d2397f1d-0118-4192-b00a-67ddb506961c",
+      "relation_type": "DERIVED_FROM",
+      "chunk_evidences": [
+        {
+          "database_id": 5891,
+          "chunk_id": "se_theory_practice.pdf__chunk_2621_2620",
+          "document_id": "1",
+          "description": "Inherited properties originate from the parent class."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "8fb9bddf-d6f8-4437-b866-ef748b546e4f",
+      "target_entity_id": "a8624aae-4166-4044-8f9e-95134dd3ecf2",
+      "relation_type": "USES",
+      "chunk_evidences": [
+        {
+          "database_id": 5891,
+          "chunk_id": "se_theory_practice.pdf__chunk_2621_2620",
+          "document_id": "1",
+          "description": "A subclass uses inherited properties of its parent class, which are usually visible to it even when not directly accessible."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "8fb9bddf-d6f8-4437-b866-ef748b546e4f",
+      "target_entity_id": "4669906d-1719-4c0c-9a2f-277bcca06ea1",
+      "relation_type": "HAS_PROPERTY",
+      "chunk_evidences": [
+        {
+          "database_id": 5891,
+          "chunk_id": "se_theory_practice.pdf__chunk_2621_2620",
+          "document_id": "1",
+          "description": "Visibility of inherited parent properties makes the behavior of the subclass easier to understand and predict."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "00794b36-80d7-4ebd-ab17-db59c34ac068",
+      "target_entity_id": "87e10548-9c5e-48d0-a3c0-44d2ddcf4ed1",
+      "relation_type": "USED_FOR",
+      "chunk_evidences": [
+        {
+          "database_id": 5891,
+          "chunk_id": "se_theory_practice.pdf__chunk_2621_2620",
+          "document_id": "1",
+          "description": "Method overriding is used to change or specialize inherited method definitions."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "00794b36-80d7-4ebd-ab17-db59c34ac068",
+      "target_entity_id": "dbdaf873-cdad-4d74-b483-94950127b788",
+      "relation_type": "ENABLES",
+      "chunk_evidences": [
+        {
+          "database_id": 5891,
+          "chunk_id": "se_theory_practice.pdf__chunk_2621_2620",
+          "document_id": "1",
+          "description": "Selective overriding of inherited methods enables the rapid creation of new object types."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "dbdaf873-cdad-4d74-b483-94950127b788",
+      "target_entity_id": "e0b91ba2-08fb-4de6-a51d-a1baff57e42d",
+      "relation_type": "HAS_PROPERTY",
+      "chunk_evidences": [
+        {
+          "database_id": 5891,
+          "chunk_id": "se_theory_practice.pdf__chunk_2621_2620",
+          "document_id": "1",
+          "description": "New object types exhibit new behaviors."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "10044894-e14f-4627-8361-72cf3f593e0b",
+      "target_entity_id": "a15083a3-5970-43c1-a690-89a6243f09dd",
+      "relation_type": "CONTRASTS_WITH",
+      "chunk_evidences": [
+        {
+          "database_id": 5892,
+          "chunk_id": "se_theory_practice.pdf__chunk_None_2621",
+          "document_id": "1",
+          "description": "Object composition is generally preferred over, but contrasted with, class inheritance as an approach to module design."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "10044894-e14f-4627-8361-72cf3f593e0b",
+      "target_entity_id": "952fed21-a97d-404a-9ff9-71356c656fd8",
+      "relation_type": "ENABLES",
+      "chunk_evidences": [
+        {
+          "database_id": 5892,
+          "chunk_id": "se_theory_practice.pdf__chunk_None_2621",
+          "document_id": "1",
+          "description": "Object composition enables component objects to be substituted at runtime."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "ca374b7a-80a2-4b71-b078-84ff2d790b59",
+      "target_entity_id": "3d0fa8d1-fa79-4038-a52f-a4d813cb72cf",
+      "relation_type": "CONTRASTS_WITH",
+      "chunk_evidences": [
+        {
+          "database_id": 5892,
+          "chunk_id": "se_theory_practice.pdf__chunk_None_2621",
+          "document_id": "1",
+          "description": "Instance variables may be defined in terms of interfaces rather than concrete classes."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "b2e21e0d-4f6a-4a85-838d-dfead526641a",
+      "target_entity_id": "ca374b7a-80a2-4b71-b078-84ff2d790b59",
+      "relation_type": "DEPENDS_ON",
+      "chunk_evidences": [
+        {
+          "database_id": 5892,
+          "chunk_id": "se_theory_practice.pdf__chunk_None_2621",
+          "document_id": "1",
+          "description": "Client code can depend only on the definition of an interface rather than on specific object types or implementing classes."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "10044894-e14f-4627-8361-72cf3f593e0b",
+      "target_entity_id": "5575781f-ef08-4ab7-9431-977900f05ca7",
+      "relation_type": "USED_FOR",
+      "chunk_evidences": [
+        {
+          "database_id": 5892,
+          "chunk_id": "se_theory_practice.pdf__chunk_None_2621",
+          "document_id": "1",
+          "description": "The example Software Engineer is constructed using object composition."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "5575781f-ef08-4ab7-9431-977900f05ca7",
+      "target_entity_id": "6f0aa943-6755-43a6-af91-b7caf2aba0c4",
+      "relation_type": "USES",
+      "chunk_evidences": [
+        {
+          "database_id": 5892,
+          "chunk_id": "se_theory_practice.pdf__chunk_None_2621",
+          "document_id": "1",
+          "description": "The composition-based Software Engineer uses the Engineer interface as the interface that its component can satisfy."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "63b8de58-8fcd-43a9-83c3-f449ba8d84bd",
+      "target_entity_id": "fc1ebd7a-1e6c-4532-9633-0038be6dda96",
+      "relation_type": "CONTRASTS_WITH",
+      "chunk_evidences": [
+        {
+          "database_id": 5892,
+          "chunk_id": "se_theory_practice.pdf__chunk_None_2621",
+          "document_id": "1",
+          "description": "A Senior Engineer is described as having more capabilities and responsibility than a Junior Engineer."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "5ffb27f5-51c3-4a20-b5b6-59ea780bdf48",
+      "target_entity_id": "e7281906-6af1-4fa1-8f95-99950106db29",
+      "relation_type": "IS_A",
+      "chunk_evidences": [
+        {
+          "database_id": 5892,
+          "chunk_id": "se_theory_practice.pdf__chunk_None_2621",
+          "document_id": "1",
+          "description": "Sedan is described as a subclass of Car."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "eb10cc86-8199-4035-9f5b-e96741a7848e",
+      "target_entity_id": "54cf8110-892e-450a-98ea-27f651790d9b",
+      "relation_type": "AFFECTS",
+      "chunk_evidences": [
+        {
+          "database_id": 5892,
+          "chunk_id": "se_theory_practice.pdf__chunk_None_2621",
+          "document_id": "1",
+          "description": "The indirection introduced by composition may reduce efficiency and therefore affect runtime performance."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "10044894-e14f-4627-8361-72cf3f593e0b",
+      "target_entity_id": "3f3edf8d-a1e5-4017-b3ba-b34c9ec7f5c3",
+      "relation_type": "SUPPORTS",
+      "chunk_evidences": [
+        {
+          "database_id": 5892,
+          "chunk_id": "se_theory_practice.pdf__chunk_None_2621",
+          "document_id": "1",
+          "description": "Object composition provides runtime flexibility and configurability through component substitution."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "10044894-e14f-4627-8361-72cf3f593e0b",
+      "target_entity_id": "fa2c03c0-769f-4cf7-8d24-7529c04717f3",
+      "relation_type": "RELATED_TO",
+      "chunk_evidences": [
+        {
+          "database_id": 5892,
+          "chunk_id": "se_theory_practice.pdf__chunk_None_2621",
+          "document_id": "1",
+          "description": "The choice to use object composition involves design coherence as a trade-off consideration."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "10044894-e14f-4627-8361-72cf3f593e0b",
+      "target_entity_id": "6175db9f-ee52-4575-bd07-ed5f7416ba5d",
+      "relation_type": "RELATED_TO",
+      "chunk_evidences": [
+        {
+          "database_id": 5892,
+          "chunk_id": "se_theory_practice.pdf__chunk_None_2621",
+          "document_id": "1",
+          "description": "The choice to use object composition involves predictability of behavior as a trade-off consideration."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "10044894-e14f-4627-8361-72cf3f593e0b",
+      "target_entity_id": "c3a7ebcd-06c6-4c5d-9ea8-ceed4e203b8f",
+      "relation_type": "RELATED_TO",
+      "chunk_evidences": [
+        {
+          "database_id": 5892,
+          "chunk_id": "se_theory_practice.pdf__chunk_None_2621",
+          "document_id": "1",
+          "description": "The choice to use object composition involves encapsulation of design decisions as a trade-off consideration."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "a15083a3-5970-43c1-a690-89a6243f09dd",
+      "target_entity_id": "54cf8110-892e-450a-98ea-27f651790d9b",
+      "relation_type": "RELATED_TO",
+      "chunk_evidences": [
+        {
+          "database_id": 5892,
+          "chunk_id": "se_theory_practice.pdf__chunk_None_2621",
+          "document_id": "1",
+          "description": "The choice between class inheritance and object composition includes runtime performance as a trade-off consideration."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "a15083a3-5970-43c1-a690-89a6243f09dd",
+      "target_entity_id": "3f3edf8d-a1e5-4017-b3ba-b34c9ec7f5c3",
+      "relation_type": "RELATED_TO",
+      "chunk_evidences": [
+        {
+          "database_id": 5892,
+          "chunk_id": "se_theory_practice.pdf__chunk_None_2621",
+          "document_id": "1",
+          "description": "The choice between class inheritance and object composition includes runtime configurability as a trade-off consideration."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "376a2b3d-1e89-4125-99f6-1c6115e160e5",
+      "target_entity_id": "203a16b1-e789-4ec5-ba52-64219b8ac911",
+      "relation_type": "PART_OF",
+      "chunk_evidences": [
+        {
+          "database_id": 5893,
+          "chunk_id": "se_theory_practice.pdf__chunk_2622_2627",
+          "document_id": "1",
+          "description": "A subclass is derived within the type relationship established by a parent class."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "b3d8886a-048a-493a-be5f-97ad59d96189",
+      "target_entity_id": "33b5307b-d341-4559-843e-8907c47db848",
+      "relation_type": "IS_A",
+      "chunk_evidences": [
+        {
+          "database_id": 5893,
+          "chunk_id": "se_theory_practice.pdf__chunk_2622_2627",
+          "document_id": "1",
+          "description": "BoundedStack is explicitly described as a specialized type of Stack."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "b3d8886a-048a-493a-be5f-97ad59d96189",
+      "target_entity_id": "3b3fe959-e69e-416e-9e35-c75d8f71b9c9",
+      "relation_type": "IMPLEMENTS",
+      "chunk_evidences": [
+        {
+          "database_id": 5893,
+          "chunk_id": "se_theory_practice.pdf__chunk_2622_2627",
+          "document_id": "1",
+          "description": "BoundedStack implements an overridden push() method that handles insertion into a full stack."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "b3d8886a-048a-493a-be5f-97ad59d96189",
+      "target_entity_id": "b2e21e0d-4f6a-4a85-838d-dfead526641a",
+      "relation_type": "AFFECTS",
+      "chunk_evidences": [
+        {
+          "database_id": 5893,
+          "chunk_id": "se_theory_practice.pdf__chunk_2622_2627",
+          "document_id": "1",
+          "description": "Using a BoundedStack where client code expects a normal Stack can cause different behavior when the stack is full."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "376a2b3d-1e89-4125-99f6-1c6115e160e5",
+      "target_entity_id": "3b3fe959-e69e-416e-9e35-c75d8f71b9c9",
+      "relation_type": "USES",
+      "chunk_evidences": [
+        {
+          "database_id": 5893,
+          "chunk_id": "se_theory_practice.pdf__chunk_2622_2627",
+          "document_id": "1",
+          "description": "A subclass may override the inherited behavior of methods such as push()."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "163ed4e4-5b1a-429d-aeb2-caf2e6d345ad",
+      "target_entity_id": "9e1d2f67-9a10-4eec-a595-0417f67cb42c",
+      "relation_type": "CREATED_BY",
+      "chunk_evidences": [
+        {
+          "database_id": 5893,
+          "chunk_id": "se_theory_practice.pdf__chunk_2622_2627",
+          "document_id": "1",
+          "description": "The Liskov Substitutability Principle is named after Barbara Liskov."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "163ed4e4-5b1a-429d-aeb2-caf2e6d345ad",
+      "target_entity_id": "376a2b3d-1e89-4125-99f6-1c6115e160e5",
+      "relation_type": "APPLICABLE_TOCAUSES",
+      "chunk_evidences": [
+        {
+          "database_id": 5893,
+          "chunk_id": "se_theory_practice.pdf__chunk_2622_2627",
+          "document_id": "1",
+          "description": "The principle determines when a subclass is substitutable for its parent class."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "163ed4e4-5b1a-429d-aeb2-caf2e6d345ad",
+      "target_entity_id": "43f26f5e-8afb-43bf-8422-a4347e893724",
+      "relation_type": "REQUIRES",
+      "chunk_evidences": [
+        {
+          "database_id": 5893,
+          "chunk_id": "se_theory_practice.pdf__chunk_2622_2627",
+          "document_id": "1",
+          "description": "The principle requires subclass methods to have signatures compatible with the corresponding parent-class methods."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "163ed4e4-5b1a-429d-aeb2-caf2e6d345ad",
+      "target_entity_id": "ec815a90-56d0-4c00-b4e6-1cadf7d5523c",
+      "relation_type": "REQUIRES",
+      "chunk_evidences": [
+        {
+          "database_id": 5893,
+          "chunk_id": "se_theory_practice.pdf__chunk_2622_2627",
+          "document_id": "1",
+          "description": "The principle requires subclass methods to preserve the specifications, preconditions, and postconditions of parent-class methods."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "43f26f5e-8afb-43bf-8422-a4347e893724",
+      "target_entity_id": "b2e21e0d-4f6a-4a85-838d-dfead526641a",
+      "relation_type": "ENABLES",
+      "chunk_evidences": [
+        {
+          "database_id": 5893,
+          "chunk_id": "se_theory_practice.pdf__chunk_2622_2627",
+          "document_id": "1",
+          "description": "Compatible method parameters and return types allow client code to make parent-class calls against a subclass."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "ec815a90-56d0-4c00-b4e6-1cadf7d5523c",
+      "target_entity_id": "b2e21e0d-4f6a-4a85-838d-dfead526641a",
+      "relation_type": "ENABLES",
+      "chunk_evidences": [
+        {
+          "database_id": 5893,
+          "chunk_id": "se_theory_practice.pdf__chunk_2622_2627",
+          "document_id": "1",
+          "description": "Preserving parent-method specifications allows client code to treat subclass instances as parent-class instances."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "de7005b5-1bdd-4195-82b0-bb15fa50aec3",
+      "target_entity_id": "76b47ccb-704e-407c-a74f-3c3ed50414ec",
+      "relation_type": "HAS_PROPERTY",
+      "chunk_evidences": [
+        {
+          "database_id": 5894,
+          "chunk_id": "se_theory_practice.pdf__chunk_2629_2633",
+          "document_id": "1",
+          "description": "The subclass method has a precondition that must be the same as or weaker than the parent class method's precondition."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "314154bf-06f8-46f8-af26-9cb2c7c865c5",
+      "target_entity_id": "76b47ccb-704e-407c-a74f-3c3ed50414ec",
+      "relation_type": "HAS_PROPERTY",
+      "chunk_evidences": [
+        {
+          "database_id": 5894,
+          "chunk_id": "se_theory_practice.pdf__chunk_2629_2633",
+          "document_id": "1",
+          "description": "The parent class method has the reference precondition for the precondition substitutability rule."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "de7005b5-1bdd-4195-82b0-bb15fa50aec3",
+      "target_entity_id": "8097a477-1f87-4eb1-a757-24f78b59344b",
+      "relation_type": "HAS_PROPERTY",
+      "chunk_evidences": [
+        {
+          "database_id": 5894,
+          "chunk_id": "se_theory_practice.pdf__chunk_2629_2633",
+          "document_id": "1",
+          "description": "The subclass method has a postcondition that, when the parent precondition holds, subsumes the parent class method's postcondition."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "314154bf-06f8-46f8-af26-9cb2c7c865c5",
+      "target_entity_id": "8097a477-1f87-4eb1-a757-24f78b59344b",
+      "relation_type": "HAS_PROPERTY",
+      "chunk_evidences": [
+        {
+          "database_id": 5894,
+          "chunk_id": "se_theory_practice.pdf__chunk_2629_2633",
+          "document_id": "1",
+          "description": "The parent class method has the postcondition that is subsumed by the subclass method's postcondition."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "376a2b3d-1e89-4125-99f6-1c6115e160e5",
+      "target_entity_id": "203a16b1-e789-4ec5-ba52-64219b8ac911",
+      "relation_type": "IS_A",
+      "chunk_evidences": [
+        {
+          "database_id": 5894,
+          "chunk_id": "se_theory_practice.pdf__chunk_2629_2633",
+          "document_id": "1",
+          "description": "The subclass is defined in relation to its parent class and must preserve the parent's declared properties."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "376a2b3d-1e89-4125-99f6-1c6115e160e5",
+      "target_entity_id": "1b2ad80a-f2bc-44e7-a684-a3af58021d42",
+      "relation_type": "HAS_PROPERTY",
+      "chunk_evidences": [
+        {
+          "database_id": 5894,
+          "chunk_id": "se_theory_practice.pdf__chunk_2629_2633",
+          "document_id": "1",
+          "description": "The subclass must preserve all declared properties of the parent class."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "376a2b3d-1e89-4125-99f6-1c6115e160e5",
+      "target_entity_id": "545860ed-be35-4132-8ff2-d72f33b525f1",
+      "relation_type": "USES",
+      "chunk_evidences": [
+        {
+          "database_id": 5894,
+          "chunk_id": "se_theory_practice.pdf__chunk_2629_2633",
+          "document_id": "1",
+          "description": "In UML, the subclass inherits the constraints imposed on its parent class."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "376a2b3d-1e89-4125-99f6-1c6115e160e5",
+      "target_entity_id": "547cda61-a8fc-4c51-9f61-e5e4ab7d72f4",
+      "relation_type": "USES",
+      "chunk_evidences": [
+        {
+          "database_id": 5894,
+          "chunk_id": "se_theory_practice.pdf__chunk_2629_2633",
+          "document_id": "1",
+          "description": "In UML, the subclass inherits the parent's associations with other classes."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "135b4349-bd90-4fe1-aac0-5028b9917378",
+      "target_entity_id": "545860ed-be35-4132-8ff2-d72f33b525f1",
+      "relation_type": "RELATED_TO",
+      "chunk_evidences": [
+        {
+          "database_id": 5894,
+          "chunk_id": "se_theory_practice.pdf__chunk_2629_2633",
+          "document_id": "1",
+          "description": "UML is cited as the context in which parent-class constraints are inherited by a subclass."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "135b4349-bd90-4fe1-aac0-5028b9917378",
+      "target_entity_id": "547cda61-a8fc-4c51-9f61-e5e4ab7d72f4",
+      "relation_type": "RELATED_TO",
+      "chunk_evidences": [
+        {
+          "database_id": 5894,
+          "chunk_id": "se_theory_practice.pdf__chunk_2629_2633",
+          "document_id": "1",
+          "description": "UML is cited as the context in which parent-class associations are inherited by a subclass."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "191c34c5-0e29-471c-8f81-db7beeff9f7d",
+      "target_entity_id": "5dca5dc3-1114-4b73-bbf7-4b177ef26ce8",
+      "relation_type": "IS_A",
+      "chunk_evidences": [
+        {
+          "database_id": 5895,
+          "chunk_id": "se_theory_practice.pdf__chunk_2635_2636",
+          "document_id": "1",
+          "description": "BoundedStack is a specialized type and subclass of Stack."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "0b484eb6-feab-4dbc-b0ae-87b2dcc0b2c4",
+      "target_entity_id": "5dca5dc3-1114-4b73-bbf7-4b177ef26ce8",
+      "relation_type": "IS_A",
+      "chunk_evidences": [
+        {
+          "database_id": 5895,
+          "chunk_id": "se_theory_practice.pdf__chunk_2635_2636",
+          "document_id": "1",
+          "description": "PeekStack is a subclass of Stack."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "191c34c5-0e29-471c-8f81-db7beeff9f7d",
+      "target_entity_id": "681fa083-0fcc-423c-a18d-721cda6ab4ae",
+      "relation_type": "CONTRADICTS",
+      "chunk_evidences": [
+        {
+          "database_id": 5895,
+          "chunk_id": "se_theory_practice.pdf__chunk_2635_2636",
+          "document_id": "1",
+          "description": "BoundedStack violates the postcondition rule because its push() method has a different postcondition from the parent Stack method."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "191c34c5-0e29-471c-8f81-db7beeff9f7d",
+      "target_entity_id": "163ed4e4-5b1a-429d-aeb2-caf2e6d345ad",
+      "relation_type": "CONTRADICTS",
+      "chunk_evidences": [
+        {
+          "database_id": 5895,
+          "chunk_id": "se_theory_practice.pdf__chunk_2635_2636",
+          "document_id": "1",
+          "description": "A BoundedStack object is not substitutable for a normal Stack object, so the BoundedStack definition violates the Liskov Substitutability Principle."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "191c34c5-0e29-471c-8f81-db7beeff9f7d",
+      "target_entity_id": "3b3fe959-e69e-416e-9e35-c75d8f71b9c9",
+      "relation_type": "HAS_PART",
+      "chunk_evidences": [
+        {
+          "database_id": 5895,
+          "chunk_id": "se_theory_practice.pdf__chunk_2635_2636",
+          "document_id": "1",
+          "description": "BoundedStack defines a push() method whose postcondition differs from that of the parent Stack method."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "0b484eb6-feab-4dbc-b0ae-87b2dcc0b2c4",
+      "target_entity_id": "bd22e87a-0eb1-45c3-b65b-59d22abb6c43",
+      "relation_type": "HAS_PART",
+      "chunk_evidences": [
+        {
+          "database_id": 5895,
+          "chunk_id": "se_theory_practice.pdf__chunk_2635_2636",
+          "document_id": "1",
+          "description": "PeekStack introduces the peek(pos) method."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "0b484eb6-feab-4dbc-b0ae-87b2dcc0b2c4",
+      "target_entity_id": "163ed4e4-5b1a-429d-aeb2-caf2e6d345ad",
+      "relation_type": "EXEMPLIFIES",
+      "chunk_evidences": [
+        {
+          "database_id": 5895,
+          "chunk_id": "se_theory_practice.pdf__chunk_2635_2636",
+          "document_id": "1",
+          "description": "PeekStack satisfies the substitutability rules and therefore exemplifies the Liskov Substitutability Principle."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "163ed4e4-5b1a-429d-aeb2-caf2e6d345ad",
+      "target_entity_id": "270e9418-26ad-4740-8107-644c9b6fb8d9",
+      "relation_type": "USED_FOR",
+      "chunk_evidences": [
+        {
+          "database_id": 5895,
+          "chunk_id": "se_theory_practice.pdf__chunk_2635_2636",
+          "document_id": "1",
+          "description": "The Liskov Substitutability Principle is primarily used to determine when one object can safely be substituted for another."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "163ed4e4-5b1a-429d-aeb2-caf2e6d345ad",
+      "target_entity_id": "9ebfde2d-bf26-49e0-8dd2-a4339b541b94",
+      "relation_type": "ENABLES",
+      "chunk_evidences": [
+        {
+          "database_id": 5895,
+          "chunk_id": "se_theory_practice.pdf__chunk_2635_2636",
+          "document_id": "1",
+          "description": "Conforming to the principle supports existing client code working with new subclasses without modification."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "5966ccbf-cb19-4224-898c-4ae46e2c7aa1",
+      "target_entity_id": "51a82199-debb-4e0a-aa88-731bcb733e4c",
+      "relation_type": "CONTRASTS_WITH",
+      "chunk_evidences": [
+        {
+          "database_id": 5896,
+          "chunk_id": "se_theory_practice.pdf__chunk_2637_2644",
+          "document_id": "1",
+          "description": "The source states that design advice prefers composition over inheritance."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "38fc1aab-a29c-4d90-9efd-e3b95be78b82",
+      "target_entity_id": "3dbe6c4d-6b3b-4693-8b5c-6cc261eea4dd",
+      "relation_type": "HAS_PART",
+      "chunk_evidences": [
+        {
+          "database_id": 5896,
+          "chunk_id": "se_theory_practice.pdf__chunk_2637_2644",
+          "document_id": "1",
+          "description": "Bill contains the generateBill method."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "38fc1aab-a29c-4d90-9efd-e3b95be78b82",
+      "target_entity_id": "1cd00b71-7495-4958-a898-d99249d48689",
+      "relation_type": "DEPENDS_ON",
+      "chunk_evidences": [
+        {
+          "database_id": 5896,
+          "chunk_id": "se_theory_practice.pdf__chunk_2637_2644",
+          "document_id": "1",
+          "description": "In the initial design, Bill accesses and directly depends on CustomerAccount."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "38fc1aab-a29c-4d90-9efd-e3b95be78b82",
+      "target_entity_id": "61e2767c-2c51-41bb-aa83-2adc01db66dd",
+      "relation_type": "DEPENDS_ON",
+      "chunk_evidences": [
+        {
+          "database_id": 5896,
+          "chunk_id": "se_theory_practice.pdf__chunk_2637_2644",
+          "document_id": "1",
+          "description": "In the initial design, Bill accesses and directly depends on Sale."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "38fc1aab-a29c-4d90-9efd-e3b95be78b82",
+      "target_entity_id": "6f08d31e-4a87-49a3-8860-c8490a469af7",
+      "relation_type": "DEPENDS_ON",
+      "chunk_evidences": [
+        {
+          "database_id": 5896,
+          "chunk_id": "se_theory_practice.pdf__chunk_2637_2644",
+          "document_id": "1",
+          "description": "In the initial design, Bill accesses and directly depends on Item."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "1cd00b71-7495-4958-a898-d99249d48689",
+      "target_entity_id": "dcaad223-969e-47ec-b203-3a195b8935c1",
+      "relation_type": "HAS_PART",
+      "chunk_evidences": [
+        {
+          "database_id": 5896,
+          "chunk_id": "se_theory_practice.pdf__chunk_2637_2644",
+          "document_id": "1",
+          "description": "CustomerAccount contains the printSaleItems method in the revised design."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "61e2767c-2c51-41bb-aa83-2adc01db66dd",
+      "target_entity_id": "eb8816af-1a2d-4104-a6e7-b43a8dc34616",
+      "relation_type": "HAS_PART",
+      "chunk_evidences": [
+        {
+          "database_id": 5896,
+          "chunk_id": "se_theory_practice.pdf__chunk_2637_2644",
+          "document_id": "1",
+          "description": "Sale contains the printItemList method in the revised design."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "6f08d31e-4a87-49a3-8860-c8490a469af7",
+      "target_entity_id": "de43d965-041d-4eef-81c5-2a567053fd6b",
+      "relation_type": "HAS_PART",
+      "chunk_evidences": [
+        {
+          "database_id": 5896,
+          "chunk_id": "se_theory_practice.pdf__chunk_2637_2644",
+          "document_id": "1",
+          "description": "Item objects provide the printing methods called by printItemList."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "3dbe6c4d-6b3b-4693-8b5c-6cc261eea4dd",
+      "target_entity_id": "dcaad223-969e-47ec-b203-3a195b8935c1",
+      "relation_type": "USES",
+      "chunk_evidences": [
+        {
+          "database_id": 5896,
+          "chunk_id": "se_theory_practice.pdf__chunk_2637_2644",
+          "document_id": "1",
+          "description": "generateBill calls printSaleItems in CustomerAccount."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "dcaad223-969e-47ec-b203-3a195b8935c1",
+      "target_entity_id": "eb8816af-1a2d-4104-a6e7-b43a8dc34616",
+      "relation_type": "USES",
+      "chunk_evidences": [
+        {
+          "database_id": 5896,
+          "chunk_id": "se_theory_practice.pdf__chunk_2637_2644",
+          "document_id": "1",
+          "description": "printSaleItems calls printItemList in the appropriate Sale object."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "eb8816af-1a2d-4104-a6e7-b43a8dc34616",
+      "target_entity_id": "de43d965-041d-4eef-81c5-2a567053fd6b",
+      "relation_type": "USES",
+      "chunk_evidences": [
+        {
+          "database_id": 5896,
+          "chunk_id": "se_theory_practice.pdf__chunk_2637_2644",
+          "document_id": "1",
+          "description": "printItemList calls the printing methods in the appropriate Item objects."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "8d1c3d75-b638-44b0-9a90-bd80c97b586f",
+      "target_entity_id": "4e9a1ae3-2895-450a-b4c6-e1238f657c06",
+      "relation_type": "RELATED_TO",
+      "chunk_evidences": [
+        {
+          "database_id": 5897,
+          "chunk_id": "se_theory_practice.pdf__chunk_2646_2648",
+          "document_id": "1",
+          "description": "The Law of Demeter is named after the Demeter research project."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "8d1c3d75-b638-44b0-9a90-bd80c97b586f",
+      "target_entity_id": "e4129e34-23fe-49b7-8f19-a977e030bb0f",
+      "relation_type": "APPLICABLE_TOCAUSES",
+      "chunk_evidences": [
+        {
+          "database_id": 5897,
+          "chunk_id": "se_theory_practice.pdf__chunk_2646_2648",
+          "document_id": "1",
+          "description": "The Law of Demeter applies to the design of client interactions with composite classes."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "b2e21e0d-4f6a-4a85-838d-dfead526641a",
+      "target_entity_id": "e4129e34-23fe-49b7-8f19-a977e030bb0f",
+      "relation_type": "USES",
+      "chunk_evidences": [
+        {
+          "database_id": 5897,
+          "chunk_id": "se_theory_practice.pdf__chunk_2646_2648",
+          "document_id": "1",
+          "description": "Client code uses a composite class."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "b2e21e0d-4f6a-4a85-838d-dfead526641a",
+      "target_entity_id": "ef173b58-0295-42bf-a957-84e905cbb71c",
+      "relation_type": "DEPENDS_ON",
+      "chunk_evidences": [
+        {
+          "database_id": 5897,
+          "chunk_id": "se_theory_practice.pdf__chunk_2646_2648",
+          "document_id": "1",
+          "description": "The discussion concerns the class dependencies induced by client code and alternative designs."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "989c0b3d-4377-4558-a4e4-50656dd60630",
+      "target_entity_id": "ef173b58-0295-42bf-a957-84e905cbb71c",
+      "relation_type": "REPRESENTS",
+      "chunk_evidences": [
+        {
+          "database_id": 5897,
+          "chunk_id": "se_theory_practice.pdf__chunk_2646_2648",
+          "document_id": "1",
+          "description": "Induced dependency graphs represent the class dependencies resulting from the designs."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "8d1c3d75-b638-44b0-9a90-bd80c97b586f",
+      "target_entity_id": "ef173b58-0295-42bf-a957-84e905cbb71c",
+      "relation_type": "AFFECTS",
+      "chunk_evidences": [
+        {
+          "database_id": 5897,
+          "chunk_id": "se_theory_practice.pdf__chunk_2646_2648",
+          "document_id": "1",
+          "description": "Designs that obey the Law of Demeter generally have fewer class dependencies."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "ef173b58-0295-42bf-a957-84e905cbb71c",
+      "target_entity_id": "c1b0e54d-500a-4759-a205-f9335de8ee69",
+      "relation_type": "AFFECTS",
+      "chunk_evidences": [
+        {
+          "database_id": 5897,
+          "chunk_id": "se_theory_practice.pdf__chunk_2646_2648",
+          "document_id": "1",
+          "description": "Classes with fewer dependencies tend to have fewer software faults."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "ef173b58-0295-42bf-a957-84e905cbb71c",
+      "target_entity_id": "babc00fa-26a6-4144-9fa0-b884d302ede2",
+      "relation_type": "AFFECTS",
+      "chunk_evidences": [
+        {
+          "database_id": 5897,
+          "chunk_id": "se_theory_practice.pdf__chunk_2646_2648",
+          "document_id": "1",
+          "description": "Classes with fewer dependencies tend to be easier to change."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "5035dd03-9e1f-443b-93a3-654d6e68ddba",
+      "target_entity_id": "5f8e7184-b3f2-4b65-9574-cbc30c4345f0",
+      "relation_type": "RELATED_TO",
+      "chunk_evidences": [
+        {
+          "database_id": 5897,
+          "chunk_id": "se_theory_practice.pdf__chunk_2646_2648",
+          "document_id": "1",
+          "description": "The UML diagram shows an association between Accounting and Customer Account."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "5f8e7184-b3f2-4b65-9574-cbc30c4345f0",
+      "target_entity_id": "7c6f1048-7917-4dde-92bb-05e259739627",
+      "relation_type": "RELATED_TO",
+      "chunk_evidences": [
+        {
+          "database_id": 5897,
+          "chunk_id": "se_theory_practice.pdf__chunk_2646_2648",
+          "document_id": "1",
+          "description": "The UML diagram shows an association between Customer Account and Sale."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "7c6f1048-7917-4dde-92bb-05e259739627",
+      "target_entity_id": "cb2dcdc1-44e2-49ba-8186-7e6597f0bb6a",
+      "relation_type": "RELATED_TO",
+      "chunk_evidences": [
+        {
+          "database_id": 5897,
+          "chunk_id": "se_theory_practice.pdf__chunk_2646_2648",
+          "document_id": "1",
+          "description": "The UML diagram shows an association between Sale and Date."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "7c6f1048-7917-4dde-92bb-05e259739627",
+      "target_entity_id": "8da23d31-5f62-4b24-9008-82d52df9d675",
+      "relation_type": "RELATED_TO",
+      "chunk_evidences": [
+        {
+          "database_id": 5897,
+          "chunk_id": "se_theory_practice.pdf__chunk_2646_2648",
+          "document_id": "1",
+          "description": "The UML diagram shows an association between Sale and Item."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "b4de2b76-6c7c-44b0-8cec-d476a56062a2",
+      "target_entity_id": "c6835fdf-2fd7-4ec3-8656-fbd105041e54",
+      "relation_type": "RELATED_TO",
+      "chunk_evidences": [
+        {
+          "database_id": 5899,
+          "chunk_id": "se_theory_practice.pdf__chunk_2650_2651",
+          "document_id": "1",
+          "description": "The source states that a wrapper class can be associated with the Sale class."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "b4de2b76-6c7c-44b0-8cec-d476a56062a2",
+      "target_entity_id": "960a0fe9-e482-43a8-8fa6-3883219df357",
+      "relation_type": "ENABLES",
+      "chunk_evidences": [
+        {
+          "database_id": 5899,
+          "chunk_id": "se_theory_practice.pdf__chunk_2650_2651",
+          "document_id": "1",
+          "description": "A wrapper class can be used to add the printItemList() operation."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "b4de2b76-6c7c-44b0-8cec-d476a56062a2",
+      "target_entity_id": "e33c7a42-526d-4efc-bf9b-b3adc173bd48",
+      "relation_type": "ENABLES",
+      "chunk_evidences": [
+        {
+          "database_id": 5899,
+          "chunk_id": "se_theory_practice.pdf__chunk_2650_2651",
+          "document_id": "1",
+          "description": "Wrapper classes ease the task of adding operations to composite classes."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "b4de2b76-6c7c-44b0-8cec-d476a56062a2",
+      "target_entity_id": "fb124fd1-6c47-4900-84f9-e247ba441bfa",
+      "relation_type": "AFFECTS",
+      "chunk_evidences": [
+        {
+          "database_id": 5899,
+          "chunk_id": "se_theory_practice.pdf__chunk_2650_2651",
+          "document_id": "1",
+          "description": "Wrapper classes can complicate the design, thereby affecting design complexity."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "b4de2b76-6c7c-44b0-8cec-d476a56062a2",
+      "target_entity_id": "54cf8110-892e-450a-98ea-27f651790d9b",
+      "relation_type": "AFFECTS",
+      "chunk_evidences": [
+        {
+          "database_id": 5899,
+          "chunk_id": "se_theory_practice.pdf__chunk_2650_2651",
+          "document_id": "1",
+          "description": "Wrapper classes can degrade runtime performance."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "c6835fdf-2fd7-4ec3-8656-fbd105041e54",
+      "target_entity_id": "960a0fe9-e482-43a8-8fa6-3883219df357",
+      "relation_type": "HAS_PART",
+      "chunk_evidences": [
+        {
+          "database_id": 5899,
+          "chunk_id": "se_theory_practice.pdf__chunk_2650_2651",
+          "document_id": "1",
+          "description": "The Sale class includes the printItemList() operation in the UML diagram."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "8d1c3d75-b638-44b0-9a90-bd80c97b586f",
+      "target_entity_id": "fb124fd1-6c47-4900-84f9-e247ba441bfa",
+      "relation_type": "RELATED_TO",
+      "chunk_evidences": [
+        {
+          "database_id": 5899,
+          "chunk_id": "se_theory_practice.pdf__chunk_2650_2651",
+          "document_id": "1",
+          "description": "Design complexity is one of the trade-off factors considered when deciding whether to adhere to the Law of Demeter."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "8d1c3d75-b638-44b0-9a90-bd80c97b586f",
+      "target_entity_id": "695bd5bb-94e2-4bc0-a0d8-f92a395396fe",
+      "relation_type": "RELATED_TO",
+      "chunk_evidences": [
+        {
+          "database_id": 5899,
+          "chunk_id": "se_theory_practice.pdf__chunk_2650_2651",
+          "document_id": "1",
+          "description": "Development time is one of the trade-off factors considered when deciding whether to adhere to the Law of Demeter."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "8d1c3d75-b638-44b0-9a90-bd80c97b586f",
+      "target_entity_id": "54cf8110-892e-450a-98ea-27f651790d9b",
+      "relation_type": "RELATED_TO",
+      "chunk_evidences": [
+        {
+          "database_id": 5899,
+          "chunk_id": "se_theory_practice.pdf__chunk_2650_2651",
+          "document_id": "1",
+          "description": "Runtime performance is one of the trade-off factors considered when deciding whether to adhere to the Law of Demeter."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "8d1c3d75-b638-44b0-9a90-bd80c97b586f",
+      "target_entity_id": "189d1bb7-d431-4914-9d51-34fb10b92ecd",
+      "relation_type": "RELATED_TO",
+      "chunk_evidences": [
+        {
+          "database_id": 5899,
+          "chunk_id": "se_theory_practice.pdf__chunk_2650_2651",
+          "document_id": "1",
+          "description": "Fault avoidance is one of the trade-off factors considered when deciding whether to adhere to the Law of Demeter."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "8d1c3d75-b638-44b0-9a90-bd80c97b586f",
+      "target_entity_id": "6b4970b7-50fc-4de0-b714-bc63e8195550",
+      "relation_type": "RELATED_TO",
+      "chunk_evidences": [
+        {
+          "database_id": 5899,
+          "chunk_id": "se_theory_practice.pdf__chunk_2650_2651",
+          "document_id": "1",
+          "description": "Ease of maintenance is one of the trade-off factors considered when deciding whether to adhere to the Law of Demeter."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "c62bb9a8-9075-45bb-a430-615178b72e3e",
+      "target_entity_id": "e3ee054e-903f-4979-8f4b-7d071d091343",
+      "relation_type": "IS_A",
+      "chunk_evidences": [
+        {
+          "database_id": 5900,
+          "chunk_id": "se_theory_practice.pdf__chunk_2652_2654",
+          "document_id": "1",
+          "description": "Dependency inversion is identified as an object-oriented design heuristic."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "c62bb9a8-9075-45bb-a430-615178b72e3e",
+      "target_entity_id": "759596b5-439c-44d5-a237-424cc74a8107",
+      "relation_type": "AFFECTS",
+      "chunk_evidences": [
+        {
+          "database_id": 5900,
+          "chunk_id": "se_theory_practice.pdf__chunk_2652_2654",
+          "document_id": "1",
+          "description": "Dependency inversion can reverse the direction of a dependency link between two classes."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "c62bb9a8-9075-45bb-a430-615178b72e3e",
+      "target_entity_id": "ca3ea82e-883c-48f7-8752-9f115e9c1580",
+      "relation_type": "USED_FOR",
+      "chunk_evidences": [
+        {
+          "database_id": 5900,
+          "chunk_id": "se_theory_practice.pdf__chunk_2652_2654",
+          "document_id": "1",
+          "description": "Dependency inversion may be used to break a dependency cycle among classes."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "e27ea531-6790-431e-9816-c22b1406362a",
+      "target_entity_id": "949e8f08-26fe-4c96-9748-1fb978143971",
+      "relation_type": "DEPENDS_ON",
+      "chunk_evidences": [
+        {
+          "database_id": 5900,
+          "chunk_id": "se_theory_practice.pdf__chunk_2652_2654",
+          "document_id": "1",
+          "description": "In the initial design, the client class depends on the server class."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "e27ea531-6790-431e-9816-c22b1406362a",
+      "target_entity_id": "949e8f08-26fe-4c96-9748-1fb978143971",
+      "relation_type": "USES",
+      "chunk_evidences": [
+        {
+          "database_id": 5900,
+          "chunk_id": "se_theory_practice.pdf__chunk_2652_2654",
+          "document_id": "1",
+          "description": "The client class uses the methods of the server class in the initial design."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "c62bb9a8-9075-45bb-a430-615178b72e3e",
+      "target_entity_id": "175b106e-3c18-4f2f-956c-386a9b435a36",
+      "relation_type": "USES",
+      "chunk_evidences": [
+        {
+          "database_id": 5900,
+          "chunk_id": "se_theory_practice.pdf__chunk_2652_2654",
+          "document_id": "1",
+          "description": "Dependency inversion works by introducing an interface on which the client can depend."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "175b106e-3c18-4f2f-956c-386a9b435a36",
+      "target_entity_id": "c9febee5-050b-4ebe-8934-bbfcd71d7158",
+      "relation_type": "HAS_PART",
+      "chunk_evidences": [
+        {
+          "database_id": 5900,
+          "chunk_id": "se_theory_practice.pdf__chunk_2652_2654",
+          "document_id": "1",
+          "description": "The interface includes specifications of all methods that the client expects from the server class."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "e27ea531-6790-431e-9816-c22b1406362a",
+      "target_entity_id": "175b106e-3c18-4f2f-956c-386a9b435a36",
+      "relation_type": "DEPENDS_ON",
+      "chunk_evidences": [
+        {
+          "database_id": 5900,
+          "chunk_id": "se_theory_practice.pdf__chunk_2652_2654",
+          "document_id": "1",
+          "description": "After modification, the client class depends on the new interface rather than directly on the server class."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "4a7aef66-9307-4f5c-9a39-6112081bea2d",
+      "target_entity_id": "e27ea531-6790-431e-9816-c22b1406362a",
+      "relation_type": "HAS_PART",
+      "chunk_evidences": [
+        {
+          "database_id": 5900,
+          "chunk_id": "se_theory_practice.pdf__chunk_2652_2654",
+          "document_id": "1",
+          "description": "The new client module packages the original client class."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "4a7aef66-9307-4f5c-9a39-6112081bea2d",
+      "target_entity_id": "175b106e-3c18-4f2f-956c-386a9b435a36",
+      "relation_type": "HAS_PART",
+      "chunk_evidences": [
+        {
+          "database_id": 5900,
+          "chunk_id": "se_theory_practice.pdf__chunk_2652_2654",
+          "document_id": "1",
+          "description": "The new client module packages the new interface together with the client class."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "bdcb30f3-3de2-40ac-b95e-7a8d52f37547",
+      "target_entity_id": "949e8f08-26fe-4c96-9748-1fb978143971",
+      "relation_type": "DERIVED_FROM",
+      "chunk_evidences": [
+        {
+          "database_id": 5900,
+          "chunk_id": "se_theory_practice.pdf__chunk_2652_2654",
+          "document_id": "1",
+          "description": "The wrapper class is created for the server class or formed by modifying the server class."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "bdcb30f3-3de2-40ac-b95e-7a8d52f37547",
+      "target_entity_id": "175b106e-3c18-4f2f-956c-386a9b435a36",
+      "relation_type": "IMPLEMENTS",
+      "chunk_evidences": [
+        {
+          "database_id": 5900,
+          "chunk_id": "se_theory_practice.pdf__chunk_2652_2654",
+          "document_id": "1",
+          "description": "The wrapper class implements the interface created in the first step."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "b6671314-c746-4bc8-b4b3-5d3dd7008320",
+      "target_entity_id": "97b4f6fc-1b60-4772-ae0a-47d652aede69",
+      "relation_type": "USES",
+      "chunk_evidences": [
+        {
+          "database_id": 5901,
+          "chunk_id": "se_theory_practice.pdf__chunk_2656_2658",
+          "document_id": "1",
+          "description": "In the original design, the Client uses the Server."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "b6671314-c746-4bc8-b4b3-5d3dd7008320",
+      "target_entity_id": "037ab88e-2001-40c0-933d-091d5a71c08a",
+      "relation_type": "USES",
+      "chunk_evidences": [
+        {
+          "database_id": 5901,
+          "chunk_id": "se_theory_practice.pdf__chunk_2656_2658",
+          "document_id": "1",
+          "description": "In the new design, the Client uses the ClientServerInterface."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "97b4f6fc-1b60-4772-ae0a-47d652aede69",
+      "target_entity_id": "037ab88e-2001-40c0-933d-091d5a71c08a",
+      "relation_type": "DEPENDS_ON",
+      "chunk_evidences": [
+        {
+          "database_id": 5901,
+          "chunk_id": "se_theory_practice.pdf__chunk_2656_2658",
+          "document_id": "1",
+          "description": "In the new design, server code depends on the ClientServerInterface."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "b6671314-c746-4bc8-b4b3-5d3dd7008320",
+      "target_entity_id": "037ab88e-2001-40c0-933d-091d5a71c08a",
+      "relation_type": "DEPENDS_ON",
+      "chunk_evidences": [
+        {
+          "database_id": 5901,
+          "chunk_id": "se_theory_practice.pdf__chunk_2656_2658",
+          "document_id": "1",
+          "description": "In the new design, client code depends on the ClientServerInterface."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "f494f1a7-6a27-472d-a016-589992de8317",
+      "target_entity_id": "037ab88e-2001-40c0-933d-091d5a71c08a",
+      "relation_type": "IMPLEMENTS",
+      "chunk_evidences": [
+        {
+          "database_id": 5901,
+          "chunk_id": "se_theory_practice.pdf__chunk_2656_2658",
+          "document_id": "1",
+          "description": "The ServerWrapper implements or inherits from the ClientServerInterface."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "f494f1a7-6a27-472d-a016-589992de8317",
+      "target_entity_id": "97b4f6fc-1b60-4772-ae0a-47d652aede69",
+      "relation_type": "HAS_PART",
+      "chunk_evidences": [
+        {
+          "database_id": 5901,
+          "chunk_id": "se_theory_practice.pdf__chunk_2656_2658",
+          "document_id": "1",
+          "description": "The ServerWrapper contains the Server."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "f494f1a7-6a27-472d-a016-589992de8317",
+      "target_entity_id": "6edf34d7-7694-4f1b-901e-36c94ccfc9d2",
+      "relation_type": "DEPENDS_ON",
+      "chunk_evidences": [
+        {
+          "database_id": 5901,
+          "chunk_id": "se_theory_practice.pdf__chunk_2656_2658",
+          "document_id": "1",
+          "description": "The newly wrapped server class depends on the new client package."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "037ab88e-2001-40c0-933d-091d5a71c08a",
+      "target_entity_id": "6edf34d7-7694-4f1b-901e-36c94ccfc9d2",
+      "relation_type": "PART_OF",
+      "chunk_evidences": [
+        {
+          "database_id": 5901,
+          "chunk_id": "se_theory_practice.pdf__chunk_2656_2658",
+          "document_id": "1",
+          "description": "The ClientServerInterface is shown as part of the new client package."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "608884f2-206e-427c-926a-9a238c701fdc",
+      "target_entity_id": "ec516561-b8eb-45b1-b262-70097e46048f",
+      "relation_type": "USED_FOR",
+      "chunk_evidences": [
+        {
+          "database_id": 5901,
+          "chunk_id": "se_theory_practice.pdf__chunk_2656_2658",
+          "document_id": "1",
+          "description": "The Dependency Inversion Principle is used in the definitions of several design patterns."
+        }
+      ]
+    },
+    {
+      "source_entity_id": "4cb39b66-7682-47a2-a41b-6d392bdc3afb",
+      "target_entity_id": "f494f1a7-6a27-472d-a016-589992de8317",
+      "relation_type": "REPRESENTS",
+      "chunk_evidences": [
+        {
+          "database_id": 5901,
+          "chunk_id": "se_theory_practice.pdf__chunk_2656_2658",
+          "document_id": "1",
+          "description": "The dependency graph represents the dependency of the newly wrapped server class on the new client package."
+        }
+      ]
+    }
+  ],
+  "validation_failures": []
+}

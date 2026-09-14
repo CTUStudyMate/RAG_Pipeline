@@ -45,10 +45,23 @@ def normalize_text(text: str) -> str:
 def is_fuzzy_match(
     text1: str,
     text2: str,
-    threshold: float = 90,
+    threshold: float = 95,
 ) -> bool:
     score = fuzz.ratio(
         normalize_text(text1),
         normalize_text(text2),
     )
     return score >= threshold
+
+import re
+import unicodedata
+
+
+def normalize_name(name: str) -> str:
+    name = unicodedata.normalize("NFKC", name)
+    name = name.strip().lower()
+
+    # collapse multiple spaces
+    name = re.sub(r"\s+", " ", name)
+
+    return name
