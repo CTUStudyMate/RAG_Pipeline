@@ -49,3 +49,9 @@ text_retrieve_chunks_limit: 30
 max_images_per_llmcall: 3
 bm25_weight: 0.25
 vector_weight: 0.75
+
+
+###################### GRAPH
+llm_generated_ontologies: "EXPERIMENTS/graph/v1/logs/llm_generated_ontologies.json"
+inner_batches_result: "EXPERIMENTS/graph/v1/logs/inner_batch.json"
+validated_ontologies: "EXPERIMENTS/graph/v1/logs/validated_ontologies.json"

@@ -10,4 +10,4 @@ def is_fuzzy_match(text1: str, text2: str, threshold: float = 90) -> bool:
     score = fuzz.ratio(text1, text2)
     return score
 
-print(is_fuzzy_match(normalize_text("Software Engineer"), normalize_text("Software Engineering")))
+# print(is_fuzzy_match(normalize_text("Software Engineer"), normalize_text("Software Engineering")))

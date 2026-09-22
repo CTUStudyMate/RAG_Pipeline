@@ -1,0 +1,2112 @@
+
+
+====================================================================================================
+BATCH 1 | DOCUMENT: se_theory_practice.pdf
+====================================================================================================
+
+[
+  {
+    "database_id": 5849,
+    "chunk_id": "se_theory_practice.pdf__chunk_0_0",
+    "document_id": "1",
+    "ontology": {
+      "should_extract": true,
+      "skip_reason": "",
+      "entities": [
+        {
+          "local_id": "E1",
+          "canonical_name": "Suspension Bridge",
+          "aliases": [
+            "Suspension Bridges"
+          ],
+          "type": "OBJECT",
+          "description": "A large bridge spanning a body of water, depicted with towers, cables, anchorages, and a deck."
+        },
+        {
+          "local_id": "E2",
+          "canonical_name": "Tower",
+          "aliases": [
+            "Towers"
+          ],
+          "type": "OBJECT",
+          "description": "A vertical supporting structure of the suspension bridge, depicted as a large stone pier or tower."
+        },
+        {
+          "local_id": "E3",
+          "canonical_name": "Anchorage",
+          "aliases": [
+            "Anchorages"
+          ],
+          "type": "OBJECT",
+          "description": "A structural element identified as part of the suspension bridge."
+        },
+        {
+          "local_id": "E4",
+          "canonical_name": "Main Cable",
+          "aliases": [
+            "Main Cables"
+          ],
+          "type": "OBJECT",
+          "description": "A primary steel cable forming part of the suspension bridge's cable system."
+        },
+        {
+          "local_id": "E5",
+          "canonical_name": "Suspender Cable",
+          "aliases": [
+            "Suspender Cables"
+          ],
+          "type": "OBJECT",
+          "description": "A vertical or horizontal cable identified as supporting the bridge deck."
+        },
+        {
+          "local_id": "E6",
+          "canonical_name": "Bridge Deck",
+          "aliases": [
+            "Bridge Decks"
+          ],
+          "type": "OBJECT",
+          "description": "The roadway or platform spanning between the bridge's supporting structures."
+        },
+        {
+          "local_id": "E7",
+          "canonical_name": "Vertical Column",
+          "aliases": [
+            "Vertical Columns"
+          ],
+          "type": "OBJECT",
+          "description": "A vertical structural support depicted beneath or alongside the bridge deck."
+        }
+      ],
+      "relationships": [
+        {
+          "source_entity_id": "E1",
+          "target_entity_id": "E2",
+          "relation_type": "HAS_PART",
+          "description": "The suspension bridge includes towers or large stone piers as structural components."
+        },
+        {
+          "source_entity_id": "E1",
+          "target_entity_id": "E3",
+          "relation_type": "HAS_PART",
+          "description": "Anchorages are identified as components of the suspension bridge."
+        },
+        {
+          "source_entity_id": "E1",
+          "target_entity_id": "E4",
+          "relation_type": "HAS_PART",
+          "description": "Main cables form part of the suspension bridge's cable system."
+        },
+        {
+          "source_entity_id": "E1",
+          "target_entity_id": "E5",
+          "relation_type": "HAS_PART",
+          "description": "Suspender cables form part of the suspension bridge's structural framework."
+        },
+        {
+          "source_entity_id": "E1",
+          "target_entity_id": "E6",
+          "relation_type": "HAS_PART",
+          "description": "The bridge deck is a principal component of the suspension bridge."
+        },
+        {
+          "source_entity_id": "E1",
+          "target_entity_id": "E7",
+          "relation_type": "HAS_PART",
+          "description": "Vertical columns are depicted as supporting components of the bridge."
+        },
+        {
+          "source_entity_id": "E7",
+          "target_entity_id": "E6",
+          "relation_type": "SUPPORTS",
+          "description": "The depicted vertical columns support the bridge deck."
+        },
+        {
+          "source_entity_id": "E5",
+          "target_entity_id": "E6",
+          "relation_type": "SUPPORTS",
+          "description": "The figure description states that suspender cables support the bridge deck."
+        }
+      ]
+    }
+  },
+  {
+    "database_id": 5850,
+    "chunk_id": "se_theory_practice.pdf__chunk_1_2",
+    "document_id": "1",
+    "ontology": {
+      "should_extract": false,
+      "skip_reason": "The source contains only a book title, edition information, and author names, with no substantive academic content.",
+      "entities": [],
+      "relationships": []
+    }
+  },
+  {
+    "database_id": 5851,
+    "chunk_id": "se_theory_practice.pdf__chunk_3_4",
+    "document_id": "1",
+    "ontology": {
+      "should_extract": false,
+      "skip_reason": "The page is intentionally blank and contains no substantive academic content.",
+      "entities": [],
+      "relationships": []
+    }
+  },
+  {
+    "database_id": 5852,
+    "chunk_id": "se_theory_practice.pdf__chunk_5_5",
+    "document_id": "1",
+    "ontology": {
+      "should_extract": false,
+      "skip_reason": "The source content is empty.",
+      "entities": [],
+      "relationships": []
+    }
+  },
+  {
+    "database_id": 5853,
+    "chunk_id": "se_theory_practice.pdf__chunk_6_6",
+    "document_id": "1",
+    "ontology": {
+      "should_extract": false,
+      "skip_reason": "The source is empty and contains no substantive academic content.",
+      "entities": [],
+      "relationships": []
+    }
+  },
+  {
+    "database_id": 5854,
+    "chunk_id": "se_theory_practice.pdf__chunk_7_8",
+    "document_id": "1",
+    "ontology": {
+      "should_extract": false,
+      "skip_reason": "The source contains only the name of an organization and provides no substantive academic content.",
+      "entities": [],
+      "relationships": []
+    }
+  },
+  {
+    "database_id": 5855,
+    "chunk_id": "se_theory_practice.pdf__chunk_9_12",
+    "document_id": "1",
+    "ontology": {
+      "should_extract": false,
+      "skip_reason": "The source contains publishing, copyright, production, and warranty information rather than substantive academic content relevant to the section.",
+      "entities": [],
+      "relationships": []
+    }
+  },
+  {
+    "database_id": 5856,
+    "chunk_id": "se_theory_practice.pdf__chunk_13_25",
+    "document_id": "1",
+    "ontology": {
+      "should_extract": false,
+      "skip_reason": "This section contains cataloging, publication, dedication, and publisher-branding information rather than substantive academic content.",
+      "entities": [],
+      "relationships": []
+    }
+  },
+  {
+    "database_id": 5857,
+    "chunk_id": "se_theory_practice.pdf__chunk_26_34",
+    "document_id": "1",
+    "ontology": {
+      "should_extract": false,
+      "skip_reason": "The source content is empty and contains no substantive academic information.",
+      "entities": [],
+      "relationships": []
+    }
+  },
+  {
+    "database_id": 5858,
+    "chunk_id": "se_theory_practice.pdf__chunk_35_35",
+    "document_id": "1",
+    "ontology": {
+      "should_extract": false,
+      "skip_reason": "The source is empty and contains no substantive academic content.",
+      "entities": [],
+      "relationships": []
+    }
+  },
+  {
+    "database_id": 5859,
+    "chunk_id": "se_theory_practice.pdf__chunk_36_38",
+    "document_id": "1",
+    "ontology": {
+      "should_extract": true,
+      "skip_reason": "",
+      "entities": [
+        {
+          "local_id": "E1",
+          "canonical_name": "Software engineering",
+          "aliases": [],
+          "type": "CONCEPT",
+          "description": "A discipline concerned with building, understanding, evaluating, and improving software and the processes used to create it."
+        },
+        {
+          "local_id": "E2",
+          "canonical_name": "Software product",
+          "aliases": [
+            "software products"
+          ],
+          "type": "ARTIFACT",
+          "description": "A software artifact intended to perform useful functions and meet quality requirements."
+        },
+        {
+          "local_id": "E3",
+          "canonical_name": "Practitioner",
+          "aliases": [
+            "practitioners"
+          ],
+          "type": "PERSON",
+          "description": "A software engineering practitioner whose main focus is building high-quality products that perform useful functions."
+        },
+        {
+          "local_id": "E4",
+          "canonical_name": "Researcher",
+          "aliases": [
+            "researchers"
+          ],
+          "type": "PERSON",
+          "description": "A researcher who seeks ways to improve product quality and the productivity of those who build software."
+        },
+        {
+          "local_id": "E5",
+          "canonical_name": "Rigor",
+          "aliases": [],
+          "type": "PROPERTY",
+          "description": "A quality of research and practice that tests understanding and supports improvement in software engineering."
+        },
+        {
+          "local_id": "E6",
+          "canonical_name": "Abstraction",
+          "aliases": [],
+          "type": "METHOD",
+          "description": "A method of identifying and representing the essential elements of a problem."
+        },
+        {
+          "local_id": "E7",
+          "canonical_name": "Modeling",
+          "aliases": [],
+          "type": "METHOD",
+          "description": "A method for representing a problem in a form that can support the design of a solution."
+        },
+        {
+          "local_id": "E8",
+          "canonical_name": "Model",
+          "aliases": [
+            "models"
+          ],
+          "type": "ARTIFACT",
+          "description": "A representation of a problem used to help create an appropriate software solution."
+        },
+        {
+          "local_id": "E9",
+          "canonical_name": "Design principle",
+          "aliases": [
+            "design principles"
+          ],
+          "type": "CONCEPT",
+          "description": "A principle used to guide the creation of appropriate software solutions."
+        },
+        {
+          "local_id": "E10",
+          "canonical_name": "Design pattern",
+          "aliases": [
+            "design patterns"
+          ],
+          "type": "METHOD",
+          "description": "A repeatable design approach used to create appropriate software solutions."
+        },
+        {
+          "local_id": "E11",
+          "canonical_name": "Design strategy",
+          "aliases": [
+            "design strategies"
+          ],
+          "type": "METHOD",
+          "description": "A strategy used to guide the design of an appropriate software solution."
+        },
+        {
+          "local_id": "E12",
+          "canonical_name": "Software solution",
+          "aliases": [
+            "software solutions"
+          ],
+          "type": "ARTIFACT",
+          "description": "A software-based response to a problem, designed to address the essential aspects of that problem."
+        },
+        {
+          "local_id": "E13",
+          "canonical_name": "Software engineer",
+          "aliases": [
+            "software engineers"
+          ],
+          "type": "PERSON",
+          "description": "A person who uses abstraction, modeling, and design approaches to build software rather than merely following programming instructions."
+        },
+        {
+          "local_id": "E14",
+          "canonical_name": "Programmer",
+          "aliases": [
+            "programmers"
+          ],
+          "type": "PERSON",
+          "description": "A person characterized in the source as following programming instructions, in contrast with the broader role of a software engineer."
+        },
+        {
+          "local_id": "E15",
+          "canonical_name": "Problem",
+          "aliases": [
+            "problems"
+          ],
+          "type": "CONCEPT",
+          "description": "The issue or situation whose essential elements are abstracted and modeled in order to design a software solution."
+        },
+        {
+          "local_id": "E16",
+          "canonical_name": "Product quality",
+          "aliases": [],
+          "type": "PROPERTY",
+          "description": "The quality of software products that researchers seek to improve."
+        },
+        {
+          "local_id": "E17",
+          "canonical_name": "Builder productivity",
+          "aliases": [],
+          "type": "PROPERTY",
+          "description": "The productivity of people who build software, which researchers seek to improve."
+        },
+        {
+          "local_id": "E18",
+          "canonical_name": "Adaptability",
+          "aliases": [],
+          "type": "PROPERTY",
+          "description": "The ability of a software solution to be modified as the underlying problem evolves over time."
+        }
+      ],
+      "relationships": [
+        {
+          "source_entity_id": "E1",
+          "target_entity_id": "E2",
+          "relation_type": "USED_FOR",
+          "description": "Software engineering provides the grounding needed to understand how to build good software products."
+        },
+        {
+          "source_entity_id": "E3",
+          "target_entity_id": "E2",
+          "relation_type": "CAPABLE_OF",
+          "description": "Practitioners focus on building high-quality software products that perform useful functions."
+        },
+        {
+          "source_entity_id": "E4",
+          "target_entity_id": "E16",
+          "relation_type": "AFFECTS",
+          "description": "Researchers seek ways to improve the quality of software products."
+        },
+        {
+          "source_entity_id": "E4",
+          "target_entity_id": "E17",
+          "relation_type": "AFFECTS",
+          "description": "Researchers seek ways to improve the productivity of people who build software."
+        },
+        {
+          "source_entity_id": "E5",
+          "target_entity_id": "E1",
+          "relation_type": "SUPPORTS",
+          "description": "Rigor in research and practice tests understanding of software engineering and helps improve it."
+        },
+        {
+          "source_entity_id": "E6",
+          "target_entity_id": "E15",
+          "relation_type": "USED_FOR",
+          "description": "Abstraction is used to identify and represent the essential elements of a problem."
+        },
+        {
+          "source_entity_id": "E7",
+          "target_entity_id": "E15",
+          "relation_type": "USED_FOR",
+          "description": "Modeling is used to represent and understand a problem."
+        },
+        {
+          "source_entity_id": "E6",
+          "target_entity_id": "E12",
+          "relation_type": "USED_FOR",
+          "description": "Abstraction is used to create an appropriate software solution."
+        },
+        {
+          "source_entity_id": "E7",
+          "target_entity_id": "E12",
+          "relation_type": "USED_FOR",
+          "description": "Modeling is used to create an appropriate software solution."
+        },
+        {
+          "source_entity_id": "E8",
+          "target_entity_id": "E12",
+          "relation_type": "USED_FOR",
+          "description": "Models are used in creating appropriate software solutions."
+        },
+        {
+          "source_entity_id": "E9",
+          "target_entity_id": "E12",
+          "relation_type": "USED_FOR",
+          "description": "Design principles are used to create appropriate software solutions."
+        },
+        {
+          "source_entity_id": "E10",
+          "target_entity_id": "E12",
+          "relation_type": "USED_FOR",
+          "description": "Design patterns are used to create appropriate software solutions."
+        },
+        {
+          "source_entity_id": "E11",
+          "target_entity_id": "E12",
+          "relation_type": "USED_FOR",
+          "description": "Design strategies are used to create appropriate software solutions."
+        },
+        {
+          "source_entity_id": "E13",
+          "target_entity_id": "E14",
+          "relation_type": "CONTRASTS_WITH",
+          "description": "The source distinguishes software engineers from programmers who merely follow instructions."
+        },
+        {
+          "source_entity_id": "E12",
+          "target_entity_id": "E18",
+          "relation_type": "HAS_PROPERTY",
+          "description": "A good solution can be modified as the problem evolves over time, giving it adaptability."
+        },
+        {
+          "source_entity_id": "E13",
+          "target_entity_id": "E12",
+          "relation_type": "CAPABLE_OF",
+          "description": "Software engineers build software solutions by combining abstraction, modeling, and design approaches."
+        }
+      ]
+    }
+  },
+  {
+    "database_id": 5860,
+    "chunk_id": "se_theory_practice.pdf__chunk_40_40",
+    "document_id": "1",
+    "ontology": {
+      "should_extract": true,
+      "skip_reason": "",
+      "entities": [
+        {
+          "local_id": "E1",
+          "canonical_name": "Software Engineering",
+          "aliases": [],
+          "type": "CONCEPT",
+          "description": "The academic and practical discipline addressed by the book, including its research and practices."
+        },
+        {
+          "local_id": "E2",
+          "canonical_name": "Software Engineering Book",
+          "aliases": [],
+          "type": "ARTIFACT",
+          "description": "The book described in the source, designed to present software engineering research and practices pragmatically."
+        },
+        {
+          "local_id": "E3",
+          "canonical_name": "Undergraduate Software Engineering Curriculum",
+          "aliases": [],
+          "type": "CONCEPT",
+          "description": "The undergraduate educational curriculum for which the book is designed."
+        },
+        {
+          "local_id": "E4",
+          "canonical_name": "Software Engineering Research",
+          "aliases": [],
+          "type": "CONCEPT",
+          "description": "Research in the field of software engineering presented as part of the book's subject matter."
+        },
+        {
+          "local_id": "E5",
+          "canonical_name": "Software Engineering Practice",
+          "aliases": [],
+          "type": "CONCEPT",
+          "description": "Practical software engineering methods and activities addressed by the book."
+        },
+        {
+          "local_id": "E6",
+          "canonical_name": "Real-World Software Problem",
+          "aliases": [
+            "Real-World Software Problems"
+          ],
+          "type": "CONCEPT",
+          "description": "A practical software-related problem that students may try to solve using what they learn."
+        },
+        {
+          "local_id": "E7",
+          "canonical_name": "Software Development Project",
+          "aliases": [
+            "Software Development Projects"
+          ],
+          "type": "PROCESS",
+          "description": "A software project whose progression from need through idea to reality is illustrated by the book's examples."
+        },
+        {
+          "local_id": "E8",
+          "canonical_name": "Software Engineering Example",
+          "aliases": [
+            "Software Engineering Examples"
+          ],
+          "type": "ARTIFACT",
+          "description": "An example in the book that illustrates situations and the progression of software development projects."
+        },
+        {
+          "local_id": "E9",
+          "canonical_name": "Agile Method",
+          "aliases": [
+            "Agile Methods"
+          ],
+          "type": "METHOD",
+          "description": "An agile approach to software development included among the methods represented in the examples."
+        },
+        {
+          "local_id": "E10",
+          "canonical_name": "Highly Structured Method",
+          "aliases": [
+            "Highly Structured Methods"
+          ],
+          "type": "METHOD",
+          "description": "A highly structured approach to software development included among the methods represented in the examples."
+        },
+        {
+          "local_id": "E11",
+          "canonical_name": "Object-Oriented Approach",
+          "aliases": [
+            "Object-Oriented Approaches"
+          ],
+          "type": "METHOD",
+          "description": "An object-oriented software development approach represented in the examples."
+        },
+        {
+          "local_id": "E12",
+          "canonical_name": "Procedural Approach",
+          "aliases": [
+            "Procedural Approaches"
+          ],
+          "type": "METHOD",
+          "description": "A procedural software development approach represented in the examples."
+        },
+        {
+          "local_id": "E13",
+          "canonical_name": "Real-Time Processing",
+          "aliases": [],
+          "type": "PROCESS",
+          "description": "A type of processing situation represented in the book's examples."
+        },
+        {
+          "local_id": "E14",
+          "canonical_name": "Transaction Processing",
+          "aliases": [],
+          "type": "PROCESS",
+          "description": "A type of processing situation represented in the book's examples."
+        },
+        {
+          "local_id": "E15",
+          "canonical_name": "Software Development Situation",
+          "aliases": [
+            "Software Development Situations"
+          ],
+          "type": "CONCEPT",
+          "description": "A software engineering situation involving development, including the large and small projects represented in the examples."
+        },
+        {
+          "local_id": "E16",
+          "canonical_name": "Software Maintenance Situation",
+          "aliases": [
+            "Software Maintenance Situations"
+          ],
+          "type": "CONCEPT",
+          "description": "A software engineering situation involving maintenance represented in the examples."
+        },
+        {
+          "local_id": "E17",
+          "canonical_name": "Graduate Course",
+          "aliases": [
+            "Graduate Courses"
+          ],
+          "type": "CONCEPT",
+          "description": "A graduate-level course introducing software engineering concepts and practices for which the book is also suitable."
+        },
+        {
+          "local_id": "E18",
+          "canonical_name": "Practitioner",
+          "aliases": [
+            "Practitioners"
+          ],
+          "type": "CONCEPT",
+          "description": "A software engineering professional who may use the book to expand their knowledge."
+        },
+        {
+          "local_id": "E19",
+          "canonical_name": "Current Software Engineering Research Topic",
+          "aliases": [
+            "Current Software Engineering Research Topics"
+          ],
+          "type": "CONCEPT",
+          "description": "A current research topic addressed by material in Chapters 12, 13, and 14."
+        },
+        {
+          "local_id": "E20",
+          "canonical_name": "Chapters 12, 13, and 14",
+          "aliases": [],
+          "type": "ARTIFACT",
+          "description": "Three chapters containing material intended to interest graduate students in current research topics."
+        }
+      ],
+      "relationships": [
+        {
+          "source_entity_id": "E2",
+          "target_entity_id": "E1",
+          "relation_type": "IS_A",
+          "description": "The book is a software engineering book."
+        },
+        {
+          "source_entity_id": "E2",
+          "target_entity_id": "E3",
+          "relation_type": "USED_FOR",
+          "description": "The book is designed for an undergraduate software engineering curriculum."
+        },
+        {
+          "source_entity_id": "E2",
+          "target_entity_id": "E4",
+          "relation_type": "REPRESENTS",
+          "description": "The book presents a pragmatic picture of software engineering research."
+        },
+        {
+          "source_entity_id": "E2",
+          "target_entity_id": "E5",
+          "relation_type": "REPRESENTS",
+          "description": "The book presents a pragmatic picture of software engineering practices."
+        },
+        {
+          "source_entity_id": "E2",
+          "target_entity_id": "E6",
+          "relation_type": "SUPPORTS",
+          "description": "The book is intended to help students apply what they learn to real-world software problems."
+        },
+        {
+          "source_entity_id": "E2",
+          "target_entity_id": "E8",
+          "relation_type": "HAS_PART",
+          "description": "The book includes examples illustrating software engineering situations and project progression."
+        },
+        {
+          "source_entity_id": "E8",
+          "target_entity_id": "E7",
+          "relation_type": "REPRESENTS",
+          "description": "The examples illustrate how software development projects progress from need to idea to reality."
+        },
+        {
+          "source_entity_id": "E8",
+          "target_entity_id": "E9",
+          "relation_type": "REPRESENTS",
+          "description": "The examples represent agile methods."
+        },
+        {
+          "source_entity_id": "E8",
+          "target_entity_id": "E10",
+          "relation_type": "REPRESENTS",
+          "description": "The examples represent highly structured methods."
+        },
+        {
+          "source_entity_id": "E8",
+          "target_entity_id": "E11",
+          "relation_type": "REPRESENTS",
+          "description": "The examples represent object-oriented approaches."
+        },
+        {
+          "source_entity_id": "E8",
+          "target_entity_id": "E12",
+          "relation_type": "REPRESENTS",
+          "description": "The examples represent procedural approaches."
+        },
+        {
+          "source_entity_id": "E8",
+          "target_entity_id": "E13",
+          "relation_type": "REPRESENTS",
+          "description": "The examples represent real-time processing situations."
+        },
+        {
+          "source_entity_id": "E8",
+          "target_entity_id": "E14",
+          "relation_type": "REPRESENTS",
+          "description": "The examples represent transaction processing situations."
+        },
+        {
+          "source_entity_id": "E8",
+          "target_entity_id": "E15",
+          "relation_type": "REPRESENTS",
+          "description": "The examples represent software development situations."
+        },
+        {
+          "source_entity_id": "E8",
+          "target_entity_id": "E16",
+          "relation_type": "REPRESENTS",
+          "description": "The examples represent software maintenance situations."
+        },
+        {
+          "source_entity_id": "E2",
+          "target_entity_id": "E17",
+          "relation_type": "USED_FOR",
+          "description": "The book is suitable for a graduate course introducing software engineering concepts and practices."
+        },
+        {
+          "source_entity_id": "E2",
+          "target_entity_id": "E18",
+          "relation_type": "SUPPORTS",
+          "description": "The book can help practitioners expand their knowledge of software engineering."
+        },
+        {
+          "source_entity_id": "E20",
+          "target_entity_id": "E19",
+          "relation_type": "RELATED_TO",
+          "description": "Chapters 12, 13, and 14 present material designed to interest graduate students in current research topics."
+        },
+        {
+          "source_entity_id": "E20",
+          "target_entity_id": "E2",
+          "relation_type": "PART_OF",
+          "description": "Chapters 12, 13, and 14 are chapters of the book."
+        }
+      ]
+    }
+  },
+  {
+    "database_id": 5861,
+    "chunk_id": "se_theory_practice.pdf__chunk_41_46",
+    "document_id": "1",
+    "ontology": {
+      "should_extract": true,
+      "skip_reason": "",
+      "entities": [
+        {
+          "local_id": "E1",
+          "canonical_name": "Software Engineering",
+          "aliases": [],
+          "type": "CONCEPT",
+          "description": "The discipline within which measurement, modeling, reuse, risk management, quality engineering, and other practices are integrated."
+        },
+        {
+          "local_id": "E2",
+          "canonical_name": "Measurement",
+          "aliases": [],
+          "type": "METHOD",
+          "description": "The quantitative practice integrated into software engineering and used to evaluate individual, team, and project progress."
+        },
+        {
+          "local_id": "E3",
+          "canonical_name": "Modeling",
+          "aliases": [],
+          "type": "METHOD",
+          "description": "The practice of abstracting and modeling problems and solution alternatives within software engineering."
+        },
+        {
+          "local_id": "E4",
+          "canonical_name": "Software Engineering Activity",
+          "aliases": [
+            "Software Engineering Activities"
+          ],
+          "type": "PROCESS",
+          "description": "Activities involved in software engineering that incorporate practices such as reuse, risk management, and quality engineering."
+        },
+        {
+          "local_id": "E5",
+          "canonical_name": "Reuse",
+          "aliases": [],
+          "type": "METHOD",
+          "description": "A software engineering practice embedded in the activities affected by it."
+        },
+        {
+          "local_id": "E6",
+          "canonical_name": "Risk Management",
+          "aliases": [],
+          "type": "METHOD",
+          "description": "A software engineering practice embedded in the activities affected by it."
+        },
+        {
+          "local_id": "E7",
+          "canonical_name": "Quality Engineering",
+          "aliases": [],
+          "type": "METHOD",
+          "description": "A software engineering practice embedded in the activities affected by it."
+        },
+        {
+          "local_id": "E8",
+          "canonical_name": "Agile Method",
+          "aliases": [
+            "Agile Methods"
+          ],
+          "type": "METHOD",
+          "description": "An approach to software development addressed in the current edition, including its benefits and risks when developers are given more autonomy."
+        },
+        {
+          "local_id": "E9",
+          "canonical_name": "Extreme Programming",
+          "aliases": [],
+          "type": "METHOD",
+          "description": "An agile method explicitly included among the approaches addressed."
+        },
+        {
+          "local_id": "E10",
+          "canonical_name": "Traditional Software Development Approach",
+          "aliases": [
+            "Traditional Approaches to Software Development"
+          ],
+          "type": "METHOD",
+          "description": "A more traditional approach to software development contrasted with agile methods."
+        },
+        {
+          "local_id": "E11",
+          "canonical_name": "Information System",
+          "aliases": [
+            "Information Systems"
+          ],
+          "type": "SYSTEM",
+          "description": "A typical system example used in each chapter, involving software for determining advertising-time prices for a large British television company."
+        },
+        {
+          "local_id": "E12",
+          "canonical_name": "Advertising-Time Pricing Software",
+          "aliases": [],
+          "type": "ARTIFACT",
+          "description": "Software needed to determine the price of advertising time for a large British television company."
+        },
+        {
+          "local_id": "E13",
+          "canonical_name": "Real-Time System",
+          "aliases": [
+            "Real-Time Systems"
+          ],
+          "type": "SYSTEM",
+          "description": "A common system example used in each chapter, represented by control software for the Ariane-5 rocket."
+        },
+        {
+          "local_id": "E14",
+          "canonical_name": "Ariane-5 Rocket",
+          "aliases": [
+            "Ariane 5 Rocket"
+          ],
+          "type": "OBJECT",
+          "description": "The rocket whose control software is examined as the real-time system example."
+        },
+        {
+          "local_id": "E15",
+          "canonical_name": "Ariane-5 Rocket Control Software",
+          "aliases": [
+            "Ariane 5 Rocket Control Software"
+          ],
+          "type": "ARTIFACT",
+          "description": "The control software for the Ariane-5 rocket whose reported problems are examined."
+        },
+        {
+          "local_id": "E16",
+          "canonical_name": "Software Development",
+          "aliases": [],
+          "type": "PROCESS",
+          "description": "The development process to which agile methods and traditional approaches are applied."
+        }
+      ],
+      "relationships": [
+        {
+          "source_entity_id": "E2",
+          "target_entity_id": "E1",
+          "relation_type": "PART_OF",
+          "description": "Measurement is treated as an integral part of software engineering rather than as a separate discipline."
+        },
+        {
+          "source_entity_id": "E3",
+          "target_entity_id": "E1",
+          "relation_type": "PART_OF",
+          "description": "Modeling is treated as an integral part of software engineering rather than as a separate discipline."
+        },
+        {
+          "source_entity_id": "E2",
+          "target_entity_id": "E16",
+          "relation_type": "USED_FOR",
+          "description": "Measurement is used to evaluate progress on an individual, team, and project basis during software development."
+        },
+        {
+          "source_entity_id": "E3",
+          "target_entity_id": "E1",
+          "relation_type": "USED_FOR",
+          "description": "Modeling is used to understand important elements of problems and solution alternatives in software engineering."
+        },
+        {
+          "source_entity_id": "E5",
+          "target_entity_id": "E4",
+          "relation_type": "PART_OF",
+          "description": "Reuse is embedded in software engineering activities rather than treated as a separate issue."
+        },
+        {
+          "source_entity_id": "E6",
+          "target_entity_id": "E4",
+          "relation_type": "PART_OF",
+          "description": "Risk management is embedded in software engineering activities rather than treated as a separate issue."
+        },
+        {
+          "source_entity_id": "E7",
+          "target_entity_id": "E4",
+          "relation_type": "PART_OF",
+          "description": "Quality engineering is embedded in software engineering activities rather than treated as a separate issue."
+        },
+        {
+          "source_entity_id": "E8",
+          "target_entity_id": "E16",
+          "relation_type": "USED_FOR",
+          "description": "Agile methods are used in software development."
+        },
+        {
+          "source_entity_id": "E9",
+          "target_entity_id": "E8",
+          "relation_type": "IS_A",
+          "description": "Extreme programming is identified as an agile method."
+        },
+        {
+          "source_entity_id": "E8",
+          "target_entity_id": "E10",
+          "relation_type": "CONTRASTS_WITH",
+          "description": "Agile methods are contrasted with more traditional approaches to software development."
+        },
+        {
+          "source_entity_id": "E11",
+          "target_entity_id": "E12",
+          "relation_type": "HAS_PART",
+          "description": "The information system example includes software needed to determine advertising-time prices."
+        },
+        {
+          "source_entity_id": "E12",
+          "target_entity_id": "E11",
+          "relation_type": "USED_FOR",
+          "description": "The advertising-time pricing software is used to determine the price of advertising time for a large British television company."
+        },
+        {
+          "source_entity_id": "E13",
+          "target_entity_id": "E15",
+          "relation_type": "DEFINED_AS",
+          "description": "The real-time system example is the control software for the Ariane-5 rocket."
+        },
+        {
+          "source_entity_id": "E15",
+          "target_entity_id": "E14",
+          "relation_type": "USED_FOR",
+          "description": "The Ariane-5 rocket control software controls the Ariane-5 rocket."
+        }
+      ]
+    }
+  },
+  {
+    "database_id": 5862,
+    "chunk_id": "se_theory_practice.pdf__chunk_48_53",
+    "document_id": "1",
+    "ontology": {
+      "should_extract": true,
+      "skip_reason": "",
+      "entities": [
+        {
+          "local_id": "E1",
+          "canonical_name": "Book Chapter",
+          "aliases": [
+            "Book Chapters"
+          ],
+          "type": "ARTIFACT",
+          "description": "A chapter of the book whose content, implications, questions, and development approaches are presented to students."
+        },
+        {
+          "local_id": "E2",
+          "canonical_name": "Development Team",
+          "aliases": [
+            "Development Teams"
+          ],
+          "type": "ORGANIZATION",
+          "description": "A software development group for which the implications of each chapter's content are presented."
+        },
+        {
+          "local_id": "E3",
+          "canonical_name": "Individual Developer",
+          "aliases": [
+            "Individual Developers"
+          ],
+          "type": "PERSON",
+          "description": "An individual software developer for whom the implications of each chapter's content are presented."
+        },
+        {
+          "local_id": "E4",
+          "canonical_name": "Researcher",
+          "aliases": [
+            "Researchers"
+          ],
+          "type": "PERSON",
+          "description": "A person engaged in research who is identified as an audience for the chapter results."
+        },
+        {
+          "local_id": "E5",
+          "canonical_name": "Companion Website",
+          "aliases": [],
+          "type": "ARTIFACT",
+          "description": "An accompanying website containing current literature examples, real project artifacts, vendor links, publications, and additional learning resources."
+        },
+        {
+          "local_id": "E6",
+          "canonical_name": "Software Engineering Artifact",
+          "aliases": [
+            "Software Engineering Artifacts"
+          ],
+          "type": "ARTIFACT",
+          "description": "A real project product presented through the companion website, including requirements documents, designs, code, and test plans."
+        },
+        {
+          "local_id": "E7",
+          "canonical_name": "Case Study",
+          "aliases": [
+            "Case Studies"
+          ],
+          "type": "ARTIFACT",
+          "description": "A case-based example from the literature used to show how theoretical concepts apply to real-life situations."
+        },
+        {
+          "local_id": "E8",
+          "canonical_name": "Software Engineering",
+          "aliases": [],
+          "type": "CONCEPT",
+          "description": "The discipline addressed by the book, including its development approaches, design principles, and social, political, legal, and ethical contexts."
+        },
+        {
+          "local_id": "E9",
+          "canonical_name": "Policy, Legal, and Ethical Issue",
+          "aliases": [
+            "Policy, Legal, and Ethical Issues"
+          ],
+          "type": "CONCEPT",
+          "description": "An issue category considered in end-of-chapter questions about software engineering."
+        },
+        {
+          "local_id": "E10",
+          "canonical_name": "Procedural Development",
+          "aliases": [],
+          "type": "METHOD",
+          "description": "A software development approach addressed by every chapter."
+        },
+        {
+          "local_id": "E11",
+          "canonical_name": "Object-Oriented Development",
+          "aliases": [],
+          "type": "METHOD",
+          "description": "A software development approach addressed throughout the book and illustrated with object-oriented examples."
+        },
+        {
+          "local_id": "E12",
+          "canonical_name": "Object-Oriented Development Process",
+          "aliases": [],
+          "type": "PROCESS",
+          "description": "The sequence of steps in object-oriented development discussed in Chapter 6 on design."
+        },
+        {
+          "local_id": "E13",
+          "canonical_name": "Design Principle",
+          "aliases": [
+            "Design Principles"
+          ],
+          "type": "CONCEPT",
+          "description": "A principle used to guide and improve software designs."
+        },
+        {
+          "local_id": "E14",
+          "canonical_name": "Software Engineering Decision",
+          "aliases": [
+            "Software Engineering Decisions"
+          ],
+          "type": "CONCEPT",
+          "description": "A decision in software engineering that is considered in relation to the people affected by its consequences."
+        },
+        {
+          "local_id": "E15",
+          "canonical_name": "Social and Political Context",
+          "aliases": [
+            "Social and Political Contexts"
+          ],
+          "type": "CONCEPT",
+          "description": "The social and political setting in which software engineering is considered."
+        }
+      ],
+      "relationships": [
+        {
+          "source_entity_id": "E1",
+          "target_entity_id": "E2",
+          "relation_type": "APPLICABLE_TOCAUSES",
+          "description": "The results of each chapter explain what its content means for development teams."
+        },
+        {
+          "source_entity_id": "E1",
+          "target_entity_id": "E3",
+          "relation_type": "APPLICABLE_TOCAUSES",
+          "description": "The results of each chapter explain what its content means for individual developers."
+        },
+        {
+          "source_entity_id": "E1",
+          "target_entity_id": "E4",
+          "relation_type": "APPLICABLE_TOCAUSES",
+          "description": "The results of each chapter explain what its content means for researchers."
+        },
+        {
+          "source_entity_id": "E5",
+          "target_entity_id": "E6",
+          "relation_type": "CONTRASTS_WITH",
+          "description": "The companion website contains real artifacts from real projects, including requirements documents, designs, code, and test plans."
+        },
+        {
+          "source_entity_id": "E5",
+          "target_entity_id": "E7",
+          "relation_type": "HAS_PART",
+          "description": "The companion website expands on many of the book's one-page case studies."
+        },
+        {
+          "source_entity_id": "E7",
+          "target_entity_id": "E8",
+          "relation_type": "SUPPORTS",
+          "description": "The case studies show how software engineering's theoretical concepts are applied to real-life situations."
+        },
+        {
+          "source_entity_id": "E1",
+          "target_entity_id": "E9",
+          "relation_type": "RELATED_TO",
+          "description": "Each chapter ends with questions about policy, legal, and ethical issues in software engineering."
+        },
+        {
+          "source_entity_id": "E8",
+          "target_entity_id": "E15",
+          "relation_type": "RELATED_TO",
+          "description": "The source states that software engineering should be viewed in its social and political contexts."
+        },
+        {
+          "source_entity_id": "E14",
+          "target_entity_id": "E15",
+          "relation_type": "RELATED_TO",
+          "description": "Software engineering decisions are considered within social and political contexts."
+        },
+        {
+          "source_entity_id": "E14",
+          "target_entity_id": "E3",
+          "relation_type": "AFFECTS",
+          "description": "Software engineering decisions are evaluated in terms of the people their consequences will affect, including individual developers."
+        },
+        {
+          "source_entity_id": "E1",
+          "target_entity_id": "E10",
+          "relation_type": "RELATED_TO",
+          "description": "Every chapter addresses procedural development."
+        },
+        {
+          "source_entity_id": "E1",
+          "target_entity_id": "E11",
+          "relation_type": "RELATED_TO",
+          "description": "Every chapter addresses object-oriented development."
+        },
+        {
+          "source_entity_id": "E12",
+          "target_entity_id": "E11",
+          "relation_type": "IS_A",
+          "description": "The object-oriented development process is the process form of object-oriented development."
+        },
+        {
+          "source_entity_id": "E1",
+          "target_entity_id": "E12",
+          "relation_type": "RELATED_TO",
+          "description": "Chapter 6 on design explains the steps of an object-oriented development process."
+        },
+        {
+          "source_entity_id": "E11",
+          "target_entity_id": "E13",
+          "relation_type": "USES",
+          "description": "The object-oriented development discussion uses design principles and examples to show how designs can be improved."
+        }
+      ]
+    }
+  },
+  {
+    "database_id": 5863,
+    "chunk_id": "se_theory_practice.pdf__chunk_55_57",
+    "document_id": "1",
+    "ontology": {
+      "should_extract": true,
+      "skip_reason": "",
+      "entities": [
+        {
+          "local_id": "E1",
+          "canonical_name": "Annotated Bibliography",
+          "aliases": [
+            "annotated bibliographies"
+          ],
+          "type": "ARTIFACT",
+          "description": "A bibliography with annotations that points readers to seminal papers and specialized resources."
+        },
+        {
+          "local_id": "E2",
+          "canonical_name": "Seminal Paper",
+          "aliases": [
+            "seminal papers"
+          ],
+          "type": "ARTIFACT",
+          "description": "A foundational software engineering paper identified by the annotated bibliography."
+        },
+        {
+          "local_id": "E3",
+          "canonical_name": "Software Engineering",
+          "aliases": [],
+          "type": "CONCEPT",
+          "description": "The academic and professional field to which the cited seminal papers belong."
+        },
+        {
+          "local_id": "E4",
+          "canonical_name": "Web Page",
+          "aliases": [
+            "Web pages"
+          ],
+          "type": "ARTIFACT",
+          "description": "An online resource that points to annotated bibliographies and discussion groups for specialized areas."
+        },
+        {
+          "local_id": "E5",
+          "canonical_name": "Discussion Group",
+          "aliases": [
+            "discussion groups"
+          ],
+          "type": "ORGANIZATION",
+          "description": "An online group associated with discussion of specialized software-related areas."
+        },
+        {
+          "local_id": "E6",
+          "canonical_name": "Software Reliability",
+          "aliases": [],
+          "type": "CONCEPT",
+          "description": "A specialized area identified in the online resources."
+        },
+        {
+          "local_id": "E7",
+          "canonical_name": "Fault Tolerance",
+          "aliases": [],
+          "type": "CONCEPT",
+          "description": "A specialized area identified in the online resources."
+        },
+        {
+          "local_id": "E8",
+          "canonical_name": "Computer Security",
+          "aliases": [],
+          "type": "CONCEPT",
+          "description": "A subject emphasized through examples in the edition, particularly in relation to incorporating security during design."
+        },
+        {
+          "local_id": "E9",
+          "canonical_name": "Term Project",
+          "aliases": [
+            "term projects"
+          ],
+          "type": "ARTIFACT",
+          "description": "A chapter-associated project involving development of software for a mortgage processing system and usable in class assignments."
+        },
+        {
+          "local_id": "E10",
+          "canonical_name": "Software Development",
+          "aliases": [],
+          "type": "PROCESS",
+          "description": "The development activity involved in the term project."
+        },
+        {
+          "local_id": "E11",
+          "canonical_name": "Mortgage Processing System",
+          "aliases": [],
+          "type": "SYSTEM",
+          "description": "The system for which software is developed in the chapter term project."
+        },
+        {
+          "local_id": "E12",
+          "canonical_name": "Key Reference",
+          "aliases": [
+            "key references"
+          ],
+          "type": "ARTIFACT",
+          "description": "A reference listed at the end of each chapter to help students locate in-depth information about chapter topics."
+        },
+        {
+          "local_id": "E13",
+          "canonical_name": "Tool",
+          "aliases": [
+            "tools"
+          ],
+          "type": "OBJECT",
+          "description": "A software engineering tool discussed in the chapters and associated with the chapter references."
+        },
+        {
+          "local_id": "E14",
+          "canonical_name": "Method",
+          "aliases": [
+            "methods"
+          ],
+          "type": "METHOD",
+          "description": "A software engineering method discussed in the chapters and associated with the chapter references."
+        },
+        {
+          "local_id": "E15",
+          "canonical_name": "Designing Security In",
+          "aliases": [],
+          "type": "METHOD",
+          "description": "The approach of incorporating computer security during design rather than adding it later."
+        },
+        {
+          "local_id": "E16",
+          "canonical_name": "Adding Security During Coding or Testing",
+          "aliases": [],
+          "type": "METHOD",
+          "description": "The alternative approach of adding security during coding or testing, which the source contrasts with designing security in."
+        }
+      ],
+      "relationships": [
+        {
+          "source_entity_id": "E1",
+          "target_entity_id": "E2",
+          "relation_type": "RELATED_TO",
+          "description": "The annotated bibliography points readers to many seminal papers."
+        },
+        {
+          "source_entity_id": "E2",
+          "target_entity_id": "E3",
+          "relation_type": "RELATED_TO",
+          "description": "The cited seminal papers concern software engineering."
+        },
+        {
+          "source_entity_id": "E4",
+          "target_entity_id": "E1",
+          "relation_type": "RELATED_TO",
+          "description": "The Web page points to annotated bibliographies."
+        },
+        {
+          "source_entity_id": "E4",
+          "target_entity_id": "E5",
+          "relation_type": "RELATED_TO",
+          "description": "The Web page points to discussion groups."
+        },
+        {
+          "source_entity_id": "E5",
+          "target_entity_id": "E6",
+          "relation_type": "RELATED_TO",
+          "description": "Discussion groups are provided for specialized areas such as software reliability."
+        },
+        {
+          "source_entity_id": "E5",
+          "target_entity_id": "E7",
+          "relation_type": "RELATED_TO",
+          "description": "Discussion groups are provided for specialized areas such as fault tolerance."
+        },
+        {
+          "source_entity_id": "E5",
+          "target_entity_id": "E8",
+          "relation_type": "RELATED_TO",
+          "description": "Discussion groups are provided for specialized areas such as computer security."
+        },
+        {
+          "source_entity_id": "E9",
+          "target_entity_id": "E10",
+          "relation_type": "HAS_SUBPROCESS",
+          "description": "The term project involves software development."
+        },
+        {
+          "source_entity_id": "E10",
+          "target_entity_id": "E11",
+          "relation_type": "USED_FOR",
+          "description": "The software development is for a mortgage processing system."
+        },
+        {
+          "source_entity_id": "E9",
+          "target_entity_id": "E11",
+          "relation_type": "RELATED_TO",
+          "description": "The term project concerns development of software for the mortgage processing system."
+        },
+        {
+          "source_entity_id": "E12",
+          "target_entity_id": "E13",
+          "relation_type": "RELATED_TO",
+          "description": "The chapter references provide access to in-depth information about particular tools."
+        },
+        {
+          "source_entity_id": "E12",
+          "target_entity_id": "E14",
+          "relation_type": "RELATED_TO",
+          "description": "The chapter references provide access to in-depth information about particular methods."
+        },
+        {
+          "source_entity_id": "E15",
+          "target_entity_id": "E8",
+          "relation_type": "USED_FOR",
+          "description": "Designing security in is used as the emphasized approach to computer security."
+        },
+        {
+          "source_entity_id": "E15",
+          "target_entity_id": "E16",
+          "relation_type": "CONTRASTS_WITH",
+          "description": "Designing security in is contrasted with adding security during coding or testing."
+        }
+      ]
+    }
+  },
+  {
+    "database_id": 5864,
+    "chunk_id": "se_theory_practice.pdf__chunk_58_59",
+    "document_id": "1",
+    "ontology": {
+      "should_extract": true,
+      "skip_reason": "",
+      "entities": [
+        {
+          "local_id": "E1",
+          "canonical_name": "Software engineering",
+          "aliases": [],
+          "type": "CONCEPT",
+          "description": "The field whose knowledge is presented as important to both practitioners and researchers."
+        },
+        {
+          "local_id": "E2",
+          "canonical_name": "Practitioner",
+          "aliases": [
+            "Practitioners"
+          ],
+          "type": "PERSON",
+          "description": "A software engineering professional for whom knowledge of software engineering is important."
+        },
+        {
+          "local_id": "E3",
+          "canonical_name": "Researcher",
+          "aliases": [
+            "Researchers"
+          ],
+          "type": "PERSON",
+          "description": "A person conducting research for whom knowledge of software engineering is important."
+        },
+        {
+          "local_id": "E4",
+          "canonical_name": "Process issue",
+          "aliases": [
+            "Process issues"
+          ],
+          "type": "CONCEPT",
+          "description": "An issue concerning software development processes, discussed as a topic requiring understanding."
+        },
+        {
+          "local_id": "E5",
+          "canonical_name": "Agility",
+          "aliases": [],
+          "type": "PROPERTY",
+          "description": "The degree of agility that developers may have to decide in a software development context."
+        },
+        {
+          "local_id": "E6",
+          "canonical_name": "Project planning",
+          "aliases": [],
+          "type": "PROCESS",
+          "description": "The planning of a software project, identified as requiring careful attention."
+        },
+        {
+          "local_id": "E7",
+          "canonical_name": "Software development and maintenance",
+          "aliases": [],
+          "type": "PROCESS",
+          "description": "The overall set of development and maintenance activities covered in Part II."
+        },
+        {
+          "local_id": "E8",
+          "canonical_name": "Process model",
+          "aliases": [
+            "Process models"
+          ],
+          "type": "METHOD",
+          "description": "A model used to build software; the development and maintenance steps are presented as applicable regardless of which process model is used."
+        },
+        {
+          "local_id": "E9",
+          "canonical_name": "Software requirements",
+          "aliases": [
+            "Software requirement"
+          ],
+          "type": "OBJECT",
+          "description": "The requirements that are elicited, modeled, and checked during software development."
+        },
+        {
+          "local_id": "E10",
+          "canonical_name": "Requirements engineering",
+          "aliases": [],
+          "type": "PROCESS",
+          "description": "The activities of eliciting, modeling, and checking software requirements."
+        },
+        {
+          "local_id": "E11",
+          "canonical_name": "Software design",
+          "aliases": [],
+          "type": "PROCESS",
+          "description": "The activity of designing a solution to a software problem."
+        },
+        {
+          "local_id": "E12",
+          "canonical_name": "Software coding and testing",
+          "aliases": [],
+          "type": "PROCESS",
+          "description": "The activities of writing and testing software code."
+        },
+        {
+          "local_id": "E13",
+          "canonical_name": "Software delivery",
+          "aliases": [],
+          "type": "PROCESS",
+          "description": "The activity of turning completed software over to the customer."
+        },
+        {
+          "local_id": "E14",
+          "canonical_name": "Software process and product evaluation",
+          "aliases": [],
+          "type": "PROCESS",
+          "description": "The assessment of the quality of software processes and products."
+        },
+        {
+          "local_id": "E15",
+          "canonical_name": "Software process and product improvement",
+          "aliases": [],
+          "type": "PROCESS",
+          "description": "The taking of steps to improve software processes and products."
+        },
+        {
+          "local_id": "E16",
+          "canonical_name": "Software process quality",
+          "aliases": [],
+          "type": "PROPERTY",
+          "description": "The quality of software processes, which can be assessed in Part III."
+        },
+        {
+          "local_id": "E17",
+          "canonical_name": "Software product quality",
+          "aliases": [],
+          "type": "PROPERTY",
+          "description": "The quality of software products, which can be assessed in Part III."
+        }
+      ],
+      "relationships": [
+        {
+          "source_entity_id": "E1",
+          "target_entity_id": "E2",
+          "relation_type": "RELATED_TO",
+          "description": "The source states that knowledge of software engineering is important to practitioners."
+        },
+        {
+          "source_entity_id": "E1",
+          "target_entity_id": "E3",
+          "relation_type": "RELATED_TO",
+          "description": "The source states that knowledge of software engineering is important to researchers."
+        },
+        {
+          "source_entity_id": "E7",
+          "target_entity_id": "E8",
+          "relation_type": "DEPENDS_ON",
+          "description": "The development and maintenance steps are discussed regardless of the process model used to build the software."
+        },
+        {
+          "source_entity_id": "E7",
+          "target_entity_id": "E10",
+          "relation_type": "HAS_SUBPROCESS",
+          "description": "Requirements engineering is one of the major steps in software development and maintenance."
+        },
+        {
+          "source_entity_id": "E7",
+          "target_entity_id": "E11",
+          "relation_type": "HAS_SUBPROCESS",
+          "description": "Software design is one of the major steps in software development and maintenance."
+        },
+        {
+          "source_entity_id": "E7",
+          "target_entity_id": "E12",
+          "relation_type": "HAS_SUBPROCESS",
+          "description": "Writing and testing code are major steps in software development and maintenance."
+        },
+        {
+          "source_entity_id": "E7",
+          "target_entity_id": "E13",
+          "relation_type": "HAS_SUBPROCESS",
+          "description": "Turning software over to the customer is a major step in software development and maintenance."
+        },
+        {
+          "source_entity_id": "E10",
+          "target_entity_id": "E9",
+          "relation_type": "USES",
+          "description": "Requirements engineering consists of eliciting, modeling, and checking software requirements."
+        },
+        {
+          "source_entity_id": "E14",
+          "target_entity_id": "E16",
+          "relation_type": "ASSESSES_NEED_FOR",
+          "description": "Software process and product evaluation assesses the quality of software processes."
+        },
+        {
+          "source_entity_id": "E14",
+          "target_entity_id": "E17",
+          "relation_type": "ASSESSES_NEED_FOR",
+          "description": "Software process and product evaluation assesses the quality of software products."
+        },
+        {
+          "source_entity_id": "E15",
+          "target_entity_id": "E16",
+          "relation_type": "AFFECTS",
+          "description": "Software process and product improvement includes steps to improve software process quality."
+        },
+        {
+          "source_entity_id": "E15",
+          "target_entity_id": "E17",
+          "relation_type": "AFFECTS",
+          "description": "Software process and product improvement includes steps to improve software product quality."
+        }
+      ]
+    }
+  },
+  {
+    "database_id": 5865,
+    "chunk_id": "se_theory_practice.pdf__chunk_60_61",
+    "document_id": "1",
+    "ontology": {
+      "should_extract": false,
+      "skip_reason": "The source is an incomplete introductory fragment that provides no substantive academic content or specific entities and relationships.",
+      "entities": [],
+      "relationships": []
+    }
+  },
+  {
+    "database_id": 5866,
+    "chunk_id": "se_theory_practice.pdf__chunk_62_63",
+    "document_id": "1",
+    "ontology": {
+      "should_extract": true,
+      "skip_reason": "",
+      "entities": [
+        {
+          "local_id": "E1",
+          "canonical_name": "Software Engineering",
+          "aliases": [],
+          "type": "CONCEPT",
+          "description": "The discipline whose defining factors are discussed, including abstraction, design methods, modularity, life-cycle processes, reuse, measurement, tools, and user interface concerns."
+        },
+        {
+          "local_id": "E2",
+          "canonical_name": "Abstraction",
+          "aliases": [],
+          "type": "CONCEPT",
+          "description": "A key factor identified as helping define software engineering."
+        },
+        {
+          "local_id": "E3",
+          "canonical_name": "Analysis and Design Methods and Notations",
+          "aliases": [],
+          "type": "METHOD",
+          "description": "Methods and notations for software analysis and design identified as a key factor in software engineering."
+        },
+        {
+          "local_id": "E4",
+          "canonical_name": "Modularity and Architecture",
+          "aliases": [],
+          "type": "CONCEPT",
+          "description": "The organization of software into modules and architectural structures, identified as a key factor in software engineering."
+        },
+        {
+          "local_id": "E5",
+          "canonical_name": "Software Life Cycle and Process",
+          "aliases": [],
+          "type": "PROCESS",
+          "description": "The software life cycle and associated processes identified as a key factor in software engineering."
+        },
+        {
+          "local_id": "E6",
+          "canonical_name": "Reuse",
+          "aliases": [],
+          "type": "CONCEPT",
+          "description": "The practice or principle of reusing software-related elements, identified as a key factor in software engineering."
+        },
+        {
+          "local_id": "E7",
+          "canonical_name": "Measurement",
+          "aliases": [],
+          "type": "METHOD",
+          "description": "Measurement identified as a key factor in software engineering."
+        },
+        {
+          "local_id": "E8",
+          "canonical_name": "Tools and Integrated Environments",
+          "aliases": [],
+          "type": "SYSTEM",
+          "description": "Tools and integrated environments identified as a key factor in software engineering."
+        },
+        {
+          "local_id": "E9",
+          "canonical_name": "User Interface and Prototyping",
+          "aliases": [],
+          "type": "CONCEPT",
+          "description": "User interface concerns and prototyping identified as a key factor in software engineering."
+        },
+        {
+          "local_id": "E10",
+          "canonical_name": "Computer Science",
+          "aliases": [],
+          "type": "CONCEPT",
+          "description": "A field distinguished from software engineering in the discussion of their differences."
+        },
+        {
+          "local_id": "E11",
+          "canonical_name": "Systems Approach",
+          "aliases": [],
+          "type": "METHOD",
+          "description": "An approach to building software that the text introduces as necessary for software development."
+        },
+        {
+          "local_id": "E12",
+          "canonical_name": "Building Software",
+          "aliases": [],
+          "type": "PROCESS",
+          "description": "The activity of constructing software to which the systems approach is applied."
+        }
+      ],
+      "relationships": [
+        {
+          "source_entity_id": "E2",
+          "target_entity_id": "E1",
+          "relation_type": "SUPPORTS",
+          "description": "Abstraction is identified as a factor that helps define software engineering."
+        },
+        {
+          "source_entity_id": "E3",
+          "target_entity_id": "E1",
+          "relation_type": "SUPPORTS",
+          "description": "Analysis and design methods and notations are identified as factors that help define software engineering."
+        },
+        {
+          "source_entity_id": "E4",
+          "target_entity_id": "E1",
+          "relation_type": "SUPPORTS",
+          "description": "Modularity and architecture are identified as factors that help define software engineering."
+        },
+        {
+          "source_entity_id": "E5",
+          "target_entity_id": "E1",
+          "relation_type": "SUPPORTS",
+          "description": "The software life cycle and process are identified as factors that help define software engineering."
+        },
+        {
+          "source_entity_id": "E6",
+          "target_entity_id": "E1",
+          "relation_type": "SUPPORTS",
+          "description": "Reuse is identified as a factor that helps define software engineering."
+        },
+        {
+          "source_entity_id": "E7",
+          "target_entity_id": "E1",
+          "relation_type": "SUPPORTS",
+          "description": "Measurement is identified as a factor that helps define software engineering."
+        },
+        {
+          "source_entity_id": "E8",
+          "target_entity_id": "E1",
+          "relation_type": "SUPPORTS",
+          "description": "Tools and integrated environments are identified as factors that help define software engineering."
+        },
+        {
+          "source_entity_id": "E9",
+          "target_entity_id": "E1",
+          "relation_type": "SUPPORTS",
+          "description": "User interface and prototyping are identified as factors that help define software engineering."
+        },
+        {
+          "source_entity_id": "E1",
+          "target_entity_id": "E10",
+          "relation_type": "DISTINCT_FROM",
+          "description": "The text discusses the difference between software engineering and computer science."
+        },
+        {
+          "source_entity_id": "E11",
+          "target_entity_id": "E12",
+          "relation_type": "USED_FOR",
+          "description": "The systems approach is presented as an approach for building software."
+        }
+      ]
+    }
+  },
+  {
+    "database_id": 5867,
+    "chunk_id": "se_theory_practice.pdf__chunk_64_65",
+    "document_id": "1",
+    "ontology": {
+      "should_extract": true,
+      "skip_reason": "",
+      "entities": [
+        {
+          "local_id": "E1",
+          "canonical_name": "Process and life-cycle model",
+          "aliases": [
+            "Process and life-cycle models"
+          ],
+          "type": "CONCEPT",
+          "description": "A model describing a software development process and its life cycle; the chapter surveys multiple types."
+        },
+        {
+          "local_id": "E2",
+          "canonical_name": "Waterfall model",
+          "aliases": [],
+          "type": "METHOD",
+          "description": "A type of process and life-cycle model presented in the chapter."
+        },
+        {
+          "local_id": "E3",
+          "canonical_name": "V-model",
+          "aliases": [],
+          "type": "METHOD",
+          "description": "A type of process and life-cycle model presented in the chapter."
+        },
+        {
+          "local_id": "E4",
+          "canonical_name": "Spiral model",
+          "aliases": [],
+          "type": "METHOD",
+          "description": "A type of process and life-cycle model presented in the chapter."
+        },
+        {
+          "local_id": "E5",
+          "canonical_name": "Prototyping model",
+          "aliases": [
+            "Prototyping models"
+          ],
+          "type": "METHOD",
+          "description": "A type of process and life-cycle model presented among various prototyping approaches."
+        },
+        {
+          "local_id": "E6",
+          "canonical_name": "Agile method",
+          "aliases": [
+            "Agile methods"
+          ],
+          "type": "METHOD",
+          "description": "A software development approach discussed as needed when developers are given substantial autonomy."
+        },
+        {
+          "local_id": "E7",
+          "canonical_name": "Traditional software development process",
+          "aliases": [
+            "Traditional software development processes"
+          ],
+          "type": "PROCESS",
+          "description": "A conventional software development process contrasted with agile methods."
+        },
+        {
+          "local_id": "E8",
+          "canonical_name": "Modeling technique and tool",
+          "aliases": [
+            "Modeling techniques and tools"
+          ],
+          "type": "METHOD",
+          "description": "A technique or tool used to model software development processes or life cycles."
+        },
+        {
+          "local_id": "E9",
+          "canonical_name": "Systems dynamics",
+          "aliases": [],
+          "type": "METHOD",
+          "description": "A modeling approach included among the techniques and tools described in the chapter."
+        }
+      ],
+      "relationships": [
+        {
+          "source_entity_id": "E2",
+          "target_entity_id": "E1",
+          "relation_type": "IS_A",
+          "description": "The waterfall model is presented as a type of process and life-cycle model."
+        },
+        {
+          "source_entity_id": "E3",
+          "target_entity_id": "E1",
+          "relation_type": "IS_A",
+          "description": "The V-model is presented as a type of process and life-cycle model."
+        },
+        {
+          "source_entity_id": "E4",
+          "target_entity_id": "E1",
+          "relation_type": "IS_A",
+          "description": "The spiral model is presented as a type of process and life-cycle model."
+        },
+        {
+          "source_entity_id": "E5",
+          "target_entity_id": "E1",
+          "relation_type": "IS_A",
+          "description": "Prototyping models are presented as types of process and life-cycle models."
+        },
+        {
+          "source_entity_id": "E6",
+          "target_entity_id": "E7",
+          "relation_type": "CONTRASTS_WITH",
+          "description": "Agile methods are contrasted with more traditional software development processes."
+        },
+        {
+          "source_entity_id": "E9",
+          "target_entity_id": "E8",
+          "relation_type": "IS_A",
+          "description": "Systems dynamics is included among the modeling techniques and tools described in the chapter."
+        }
+      ]
+    }
+  },
+  {
+    "database_id": 5868,
+    "chunk_id": "se_theory_practice.pdf__chunk_66_67",
+    "document_id": "1",
+    "ontology": {
+      "should_extract": true,
+      "skip_reason": "",
+      "entities": [
+        {
+          "local_id": "E1",
+          "canonical_name": "Project planning",
+          "aliases": [],
+          "type": "CONCEPT",
+          "description": "Planning activities for a project, introduced as a central topic of the chapter."
+        },
+        {
+          "local_id": "E2",
+          "canonical_name": "Project scheduling",
+          "aliases": [],
+          "type": "CONCEPT",
+          "description": "Scheduling activities and timelines for a project, discussed alongside project planning."
+        },
+        {
+          "local_id": "E3",
+          "canonical_name": "Activity",
+          "aliases": [
+            "Activities"
+          ],
+          "type": "PROCESS",
+          "description": "A project activity introduced as a basic element of project planning and scheduling."
+        },
+        {
+          "local_id": "E4",
+          "canonical_name": "Milestone",
+          "aliases": [
+            "Milestones"
+          ],
+          "type": "EVENT",
+          "description": "A project milestone introduced as a planning and scheduling notion."
+        },
+        {
+          "local_id": "E5",
+          "canonical_name": "Work breakdown structure",
+          "aliases": [],
+          "type": "ARTIFACT",
+          "description": "A structured representation of project work introduced as a project-planning notion."
+        },
+        {
+          "local_id": "E6",
+          "canonical_name": "Activity graph",
+          "aliases": [
+            "Activity graphs"
+          ],
+          "type": "ARTIFACT",
+          "description": "A graph-based representation of project activities introduced in the discussion of planning and scheduling."
+        },
+        {
+          "local_id": "E7",
+          "canonical_name": "Risk management",
+          "aliases": [],
+          "type": "PROCESS",
+          "description": "The management of project risks, introduced as a project-planning topic."
+        },
+        {
+          "local_id": "E8",
+          "canonical_name": "Cost",
+          "aliases": [
+            "Costs"
+          ],
+          "type": "PROPERTY",
+          "description": "Project cost, considered in relation to estimation and project management."
+        },
+        {
+          "local_id": "E9",
+          "canonical_name": "Cost estimation",
+          "aliases": [],
+          "type": "METHOD",
+          "description": "The estimation of project costs, discussed as part of planning and management."
+        },
+        {
+          "local_id": "E10",
+          "canonical_name": "Estimation model",
+          "aliases": [
+            "Estimation models"
+          ],
+          "type": "METHOD",
+          "description": "A model used to estimate project cost and schedule."
+        },
+        {
+          "local_id": "E11",
+          "canonical_name": "Software development management",
+          "aliases": [],
+          "type": "PROCESS",
+          "description": "Management of software development, examined through actual case studies."
+        },
+        {
+          "local_id": "E12",
+          "canonical_name": "F-16 airplane",
+          "aliases": [],
+          "type": "OBJECT",
+          "description": "An airplane used as the context for one software-development management case study."
+        },
+        {
+          "local_id": "E13",
+          "canonical_name": "Digital",
+          "aliases": [],
+          "type": "ORGANIZATION",
+          "description": "The organization associated with the Alpha AXP programs discussed in a software-development management case study."
+        },
+        {
+          "local_id": "E14",
+          "canonical_name": "Alpha AXP program",
+          "aliases": [
+            "Alpha AXP programs"
+          ],
+          "type": "ARTIFACT",
+          "description": "A Digital program used as the context for a software-development management case study."
+        }
+      ],
+      "relationships": [
+        {
+          "source_entity_id": "E10",
+          "target_entity_id": "E8",
+          "relation_type": "USED_FOR",
+          "description": "Estimation models are used to estimate project cost."
+        },
+        {
+          "source_entity_id": "E10",
+          "target_entity_id": "E2",
+          "relation_type": "USED_FOR",
+          "description": "Estimation models are used to estimate project schedule."
+        },
+        {
+          "source_entity_id": "E11",
+          "target_entity_id": "E12",
+          "relation_type": "RELATED_TO",
+          "description": "Software development management is examined in a case study concerning the F-16 airplane."
+        },
+        {
+          "source_entity_id": "E11",
+          "target_entity_id": "E14",
+          "relation_type": "RELATED_TO",
+          "description": "Software development management is examined in a case study concerning the Alpha AXP programs."
+        },
+        {
+          "source_entity_id": "E14",
+          "target_entity_id": "E13",
+          "relation_type": "CREATED_BY",
+          "description": "The Alpha AXP programs are identified as Digital's programs."
+        }
+      ]
+    }
+  }
+]

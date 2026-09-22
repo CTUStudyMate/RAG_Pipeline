@@ -65,3 +65,51 @@ def normalize_name(name: str) -> str:
     name = re.sub(r"\s+", " ", name)
 
     return name
+
+def check_reciprocal_name_values(
+    canonical_a: str,
+    aliases_a: list[str],
+    canonical_b: str,
+    aliases_b: list[str],
+) -> bool:
+    canonical_a = normalize_name(canonical_a)
+    canonical_b = normalize_name(canonical_b)
+
+    aliases_a = {
+        normalize_name(alias)
+        for alias in aliases_a
+    }
+
+    aliases_b = {
+        normalize_name(alias)
+        for alias in aliases_b
+    }
+
+    return (
+        canonical_a in aliases_b
+        and canonical_b in aliases_a
+    )
+    
+def check_one_way_name_values(
+    canonical_a: str,
+    aliases_a: list[str],
+    canonical_b: str,
+    aliases_b: list[str],
+) -> bool:
+    canonical_a = normalize_name(canonical_a)
+    canonical_b = normalize_name(canonical_b)
+
+    aliases_a = {
+        normalize_name(alias)
+        for alias in aliases_a
+    }
+
+    aliases_b = {
+        normalize_name(alias)
+        for alias in aliases_b
+    }
+
+    return (
+        canonical_a in aliases_b
+        or canonical_b in aliases_a
+    )

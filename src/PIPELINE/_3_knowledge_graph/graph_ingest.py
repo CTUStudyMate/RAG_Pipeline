@@ -1,84 +1,62 @@
-from PIPELINE._3_knowledge_graph.ontology_handler.ontology_extractor import ChunkExtractionResult, doucment_chunksbatch_to_ontologies, fetch_document_chunks
-from PIPELINE._3_knowledge_graph.ontology_handler.ontology_validator_resolver import dedup_entities_and_relationships, validate_ontologies
+import atexit
+import json
+import os
+
+from PIPELINE._3_knowledge_graph.logger.GraphLogger import GraphPipelineLogger
+from neo4j import Driver, GraphDatabase
+
+from PIPELINE._3_knowledge_graph.element_handler.entity_resolver import (
+    resolve_and_upsert_entites,
+)
+from PIPELINE._3_knowledge_graph.element_handler.relationship_resolver import (
+    resolve_and_upsert_relationships,
+)
+from PIPELINE._3_knowledge_graph.ontology_handler.ontology_extractor import (
+    ChunkExtractionResult,
+    doucment_chunksbatch_to_ontologies,
+    fetch_document_chunks,
+)
+from PIPELINE._3_knowledge_graph.ontology_handler.ontology_validator_resolver import (
+    dedup_entities_and_relationships,
+    validate_ontologies,
+)
+
 from pipeline_setup import pool
 from pipeline_config import settings
+
+
+# =========================================================
+# PostgreSQL config
+# =========================================================
+
 chunks_table = settings.pgdb_connect_info.chunks_table
 
-def resolve_and_merge_to_graph():
-    # 1. Resolve EntityCandidate với entities đã có trong Neo4j.
-# 2. Tạo mapping candidate entity_id → persistent Neo4j entity ID.
-# 3. Remap source/target của RelationshipCandidate.
-# 4. MERGE entity nodes.
-# 5. MERGE relationship edges.
-# 6. Merge chunk evidence.
-# 7. Commit transaction.
 
-# Neo4j transaction thành công
-# → toàn bộ valid_ontologies được processed
-#    kể cả skipped hoặc không có graph element
+# =========================================================
+# Neo4j config
+# =========================================================
 
-# Neo4j transaction thất bại
-# → các non-skipped chunks cần graph write được failed
+NEO4J_URI = os.environ["NEO4J_URI"]
+NEO4J_USERNAME = os.environ["NEO4J_USERNAME"]
+NEO4J_PASSWORD = os.environ["NEO4J_PASSWORD"]
+NEO4J_DATABASE = os.getenv("NEO4J_DATABASE", "neo4j")
 
-# validation_failures
-# → tăng graph_attempt_count, không mark processed
-	print("haha")
 
-# def proccess_fetched_chunks(rows, document_name):
-# 	chunk_results = doucment_chunksbatch_to_ontologies(rows, document_name) # extract
-# 	valid_ontologies, validation_failures = validate_ontologies(chunk_results) # clean data in chunks
-# 	entities, relationships = dedup_entities_and_relationships(valid_ontologies) 	
-# 	graph_result = resolve_and_merge_to_graph(
-# 		entities,
-# 		relationships,
-# 	)
- 
-# 	with pool.connection() as conn: # update psql state
-# 		with conn.cursor() as cur:
-# 			if processed_list:
-# 				cur.execute(
-# 				f"""
-# 				UPDATE {chunks_table}
-# 				SET metadata = jsonb_set(
-# 					metadata,
-# 					'{{graph_processed}}',
-# 					'true'::jsonb,
-# 					true
-# 				)
-# 				WHERE id = ANY(%s)
-# 				""",
-# 				(processed_list,)
-# 			)
-				
-# 				if failed_list:
-# 					cur.execute(
-# 					f"""
-# 					UPDATE {chunks_table}
-# 					SET metadata = jsonb_set(
-# 						metadata,
-# 						'{{graph_attempt_count}}',
-# 						to_jsonb(
-# 							CASE
-# 								WHEN metadata -> 'graph_attempt_count' IS NULL
-# 								THEN 1
-# 								ELSE (metadata ->> 'graph_attempt_count')::int + 1
-# 							END
-# 						),
-# 						true
-# 					)
-# 					WHERE id = ANY(%s)
-# 					""",
-# 					(failed_list,)
-# 				)
-				
-# 		conn.commit()
+driver: Driver = GraphDatabase.driver(
+    NEO4J_URI,
+    auth=(
+        NEO4J_USERNAME,
+        NEO4J_PASSWORD,
+    ),
+)
 
-import json
-from pathlib import Path
+# Không close driver sau mỗi query/batch.
+# Chỉ close khi process/app kết thúc.
+atexit.register(driver.close)
 
 
 def load_ontologies_from_file(
-    file_path: str = "test_ontologies.json"
+    file_path: str = "test_ontologies.json",
 ) -> list[ChunkExtractionResult]:
 
     with open(file_path, "r", encoding="utf-8") as f:
@@ -92,79 +70,210 @@ def load_ontologies_from_file(
     return extracted_list
 
 
-def proccess_fetched_chunks(rows, document_name):
-    # chunk_results = doucment_chunksbatch_to_ontologies(
-    #     rows,
-    #     document_name,
-    # )  # extract
-    
-    chunk_results = chunk_results = load_ontologies_from_file("test_ontologies.json")
+def process_fetched_chunks(
+    rows,
+    document_name,
+    batch_id: int,
+    logger: GraphPipelineLogger,
+    driver: Driver,
+    database: str = NEO4J_DATABASE,
+):
+    # =====================================================
+    # 1. Extract ontology
+    # =====================================================
+
+    chunk_results = doucment_chunksbatch_to_ontologies(
+        rows=rows,
+        document_name=document_name,
+        batch_id=batch_id,
+        logger=logger,
+    )
+
+    # TEST ONLY:
+    # chunk_results = load_ontologies_from_file(
+    #     "test_ontologies.json"
+    # )
+
+
+    # =====================================================
+    # 2. Validate ontology results
+    # =====================================================
 
     valid_ontologies, validation_failures = validate_ontologies(
-        chunk_results
-    )  # clean data in chunks
-
-    entities, relationships = dedup_entities_and_relationships(
-        valid_ontologies
-    ) # get final element list in the current batch
-
-    output_data = {
-        "entities": [
-            entity.model_dump(mode="json")
-            for entity in entities
-        ],
-        "relationships": [
-            relationship.model_dump(mode="json")
-            for relationship in relationships
-        ],
-        "validation_failures": [
-            failure.model_dump(mode="json")
-            if hasattr(failure, "model_dump")
-            else failure
-            for failure in validation_failures
-        ],
-    }
-
-    output_path = Path(
-        f"{document_name}_graph_elements.json"
-    )
-    output_path.parent.mkdir(
-        parents=True,
-        exist_ok=True,
+        chunk_results=chunk_results,
+        batch_id=batch_id,
+        document_name=document_name,
+        logger=logger,
     )
 
-    with output_path.open(
-        "w",
-        encoding="utf-8",
-    ) as f:
-        json.dump(
-            output_data,
-            f,
-            ensure_ascii=False,
-            indent=2,
+    failed_list = [
+        failure.database_id
+        for failure in validation_failures
+    ]
+
+    valid_database_ids = [
+        result.database_id
+        for result in valid_ontologies
+    ]
+
+
+    # =====================================================
+    # 3. Dedup + upsert graph
+    # =====================================================
+
+    try:
+        entities, relationships = dedup_entities_and_relationships(
+            validated_ontologies=valid_ontologies,
+            batch_id=batch_id,
+            document_name=document_name,
+            logger=logger,
         )
 
-    return entities, relationships
+        entity_map = resolve_and_upsert_entites(
+            entity_candidates=entities,
+            driver=driver,
+            database=database,
+        )
 
-def ingest_document_into_graph(document_id, document_name, chunks_limit=20, max_attempt = 3):
-	while True:
-		rows = fetch_document_chunks(document_id=document_id, max_attempt=max_attempt, chunks_limit=chunks_limit)
-		if len(rows) == 0:
-			break
-		proccess_fetched_chunks(rows, document_name)
+        resolve_and_upsert_relationships(
+            entity_map=entity_map,
+            relationship_candidates=relationships,
+            driver=driver,
+            database=database,
+        )
 
-# TEST
-import json
+        processed_list = valid_database_ids
 
-with open(
-	"EXPERIMENTS/graph/v1/test_chunks.json",
-	"r",
-	encoding="utf-8"
-) as f:
-	data = json.load(f)
+    except Exception as error:
+        print(f"Graph processing failed: {error}")
 
-rows = [
-	(item["id"], item["metadata"])
-	for item in data
-]
-proccess_fetched_chunks(rows=rows, document_name="Sotware Engineering Theory and Practice")
+        failed_list.extend(valid_database_ids)
+        processed_list = []
+
+
+    processed_list = list(
+        dict.fromkeys(processed_list)
+    )
+
+    failed_list = list(
+        dict.fromkeys(failed_list)
+    )
+
+
+    # =====================================================
+    # 4. Update PostgreSQL processing state
+    # =====================================================
+
+    with pool.connection() as conn:
+        with conn.cursor() as cur:
+
+            if processed_list:
+                cur.execute(
+                    f"""
+                    UPDATE {chunks_table}
+                    SET metadata = jsonb_set(
+                        metadata,
+                        '{{graph_processed}}',
+                        'true'::jsonb,
+                        true
+                    )
+                    WHERE id = ANY(%s)
+                    """,
+                    (processed_list,),
+                )
+
+            if failed_list:
+                cur.execute(
+                    f"""
+                    UPDATE {chunks_table}
+                    SET metadata = jsonb_set(
+                        metadata,
+                        '{{graph_attempt_count}}',
+                        to_jsonb(
+                            CASE
+                                WHEN metadata -> 'graph_attempt_count'
+                                     IS NULL
+                                THEN 1
+                                ELSE
+                                    (
+                                        metadata
+                                        ->> 'graph_attempt_count'
+                                    )::int + 1
+                            END
+                        ),
+                        true
+                    )
+                    WHERE id = ANY(%s)
+                    """,
+                    (failed_list,),
+                )
+
+        conn.commit()
+
+    return processed_list, failed_list
+
+
+
+# =========================================================
+# Ingest whole document
+# =========================================================
+def ingest_document_into_graph(
+    document_id,
+    document_name,
+    chunks_limit=20,
+    max_attempt=3,
+    driver: Driver = driver,
+    database: str = NEO4J_DATABASE,
+):
+    batch_id = 1
+
+    logger = GraphPipelineLogger(
+        enabled=True
+    )
+
+    while True:
+        rows = fetch_document_chunks(
+            document_id=document_id,
+            max_attempt=max_attempt,
+            chunks_limit=chunks_limit,
+        )
+
+        if len(rows) == 0:
+            break
+
+        processed_list, failed_list = process_fetched_chunks(
+            rows=rows,
+            document_name=document_name,
+            batch_id=batch_id,
+            logger=logger,
+            driver=driver,
+            database=database,
+        )
+
+        print(
+            f"Graph batch {batch_id} finished: "
+            f"{len(processed_list)} processed, "
+            f"{len(failed_list)} failed."
+        )
+
+        batch_id += 1
+        
+def main():
+    driver.verify_connectivity()
+    print("Connected to Neo4j.")
+
+    document_id = "1"
+    document_name = "se_theory_practice.pdf"
+
+    ingest_document_into_graph(
+        document_id=document_id,
+        document_name=document_name,
+        chunks_limit=20,
+        max_attempt=3,
+        driver=driver,
+        database=NEO4J_DATABASE,
+    )
+
+
+if __name__ == "__main__":
+    main()

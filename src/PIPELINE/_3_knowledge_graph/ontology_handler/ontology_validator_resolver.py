@@ -34,7 +34,8 @@ The main processing steps are:
 from typing import Literal
 from uuid import uuid4
 
-from PIPELINE._3_knowledge_graph.ontology_handler.helpers import _normalize_text, _singularize_last_word, is_fuzzy_match, normalize_name, normalize_text
+from PIPELINE._3_knowledge_graph.logger.GraphLogger import GraphPipelineLogger
+from PIPELINE._3_knowledge_graph.ontology_handler.helpers import _normalize_text, _singularize_last_word, check_one_way_name_values, check_reciprocal_name_values, is_fuzzy_match, normalize_name, normalize_text
 from PIPELINE._3_knowledge_graph.ontology_handler.ontology_definition import ENTITY_TYPES, RELATION_TYPE_CONSTRAINTS, RELATION_TYPES
 from PIPELINE._3_knowledge_graph.ontology_handler.ontology_extractor import ChunkExtractionResult, ExtractedEntity, ExtractedRelationship
 from pydantic import BaseModel, Field
@@ -283,6 +284,9 @@ class ChunkValidationFailure(BaseModel):
       
 def validate_ontologies(
     chunk_results: list[ChunkExtractionResult],
+    batch_id: int,
+    document_name: str,
+    logger: GraphPipelineLogger,
 ) -> tuple[
     list[ValidatedChunkResult],
     list[ChunkValidationFailure],
@@ -295,7 +299,10 @@ def validate_ontologies(
             validated_chunk_result = validate_chunk_result(
                 chunk_result
             )
-            validated.append(validated_chunk_result)
+
+            validated.append(
+                validated_chunk_result
+            )
 
         except Exception as error:
             failures.append(
@@ -306,6 +313,13 @@ def validate_ontologies(
                     error=str(error),
                 )
             )
+
+    logger.log_validation_batch(
+        batch_id=batch_id,
+        document_name=document_name,
+        validated=validated,
+        failures=failures,
+    )
 
     return validated, failures
             
@@ -368,30 +382,17 @@ def check_reciprocal_names(
     source_entity: EntityCandidate,
 ) -> bool:
     """
-    Check whether:
-    - current entity's canonical name is an alias of the existing candidate;
-    - existing candidate's canonical name is an alias of the current entity.
+        Check whether:
+        - current entity's canonical name is an alias of the existing candidate;
+        - existing candidate's canonical name is an alias of the current entity.
     """
-    current_canonical = normalize_text(
-        current_entity.entity.canonical_name
+    return check_reciprocal_name_values(
+        canonical_a=current_entity.entity.canonical_name,
+        aliases_a=current_entity.entity.aliases,
+        canonical_b=source_entity.canonical_name,
+        aliases_b=source_entity.aliases,
     )
-    candidate_canonical = normalize_text(
-        source_entity.canonical_name
-    )
-
-    current_aliases = {
-        normalize_text(alias)
-        for alias in current_entity.entity.aliases
-    }
-    candidate_aliases = {
-        normalize_text(alias)
-        for alias in source_entity.aliases
-    }
-
-    return (
-        current_canonical in candidate_aliases
-        and candidate_canonical in current_aliases
-    )
+    
 
 def _dedupe_aliases(
     aliases: list[str],
@@ -489,23 +490,11 @@ def check_one_way_names(
     current_entity: EntityOccurrence,
     source_entity: EntityCandidate,
 ) -> bool:
-    current = current_entity.entity
-
-    current_canonical = normalize_name(current.canonical_name)
-    current_aliases = {
-        normalize_name(alias)
-        for alias in current.aliases
-    }
-
-    source_canonical = normalize_name(source_entity.canonical_name)
-    source_aliases = {
-        normalize_name(alias)
-        for alias in source_entity.aliases
-    }
-
-    return (
-        current_canonical in source_aliases
-        or source_canonical in current_aliases
+    return check_one_way_name_values(
+        canonical_a=current_entity.entity.canonical_name,
+        aliases_a=current_entity.entity.aliases,
+        canonical_b=source_entity.canonical_name,
+        aliases_b=source_entity.aliases,
     )
     
 def dedup_entities(

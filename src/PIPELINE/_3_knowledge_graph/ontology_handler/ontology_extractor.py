@@ -2,6 +2,7 @@
 
 import json
 
+from PIPELINE._3_knowledge_graph.logger.GraphLogger import GraphPipelineLogger
 from PIPELINE._3_knowledge_graph.ontology_handler.ontology_definition import ENTITY_TYPES, RELATION_TYPES
 from PIPELINE._3_knowledge_graph.ontology_handler.ontology_extraction_prompt import system_prompt_for_ontology_extraction, build_extraction_input
 from pydantic import BaseModel, Field
@@ -125,17 +126,48 @@ def extract_ontology(text: str) -> LLMExtractionResult:
         reasoning_effort="medium",
     )  
     
-def doucment_chunksbatch_to_ontologies(rows, document_name)->  tuple[list[str], list[str]]:
-    extracted_list = []
+def doucment_chunksbatch_to_ontologies(
+    rows,
+    document_name,
+    batch_id: int,
+    logger: GraphPipelineLogger,
+) -> list[ChunkExtractionResult]:
+
+    extracted_list: list[ChunkExtractionResult] = []
+
     for row in rows:
         metadata = row[1]
-        input_for_extraction = build_extraction_input(metadata, document_name)
-        print(f"Running extraction for {input_for_extraction[:200]} ... ")
-        llm_extract_result = extract_ontology(input_for_extraction)
-        extracted_result = ChunkExtractionResult(database_id=row[0], chunk_id=metadata["chunk_id"], document_id=metadata["document"], ontology=llm_extract_result)
+
+        input_for_extraction = build_extraction_input(
+            metadata,
+            document_name,
+        )
+
+        print(
+            f"Running extraction for "
+            f"{input_for_extraction[:200]} ..."
+        )
+
+        llm_extract_result = extract_ontology(
+            input_for_extraction
+        )
+
+        extracted_result = ChunkExtractionResult(
+            database_id=row[0],
+            chunk_id=metadata["chunk_id"],
+            document_id=metadata["document"],
+            ontology=llm_extract_result,
+        )
+
         extracted_list.append(extracted_result)
-    # with open("test_ontologies.json", "w", encoding="utf-8") as f:
-    #     json.dump([item.model_dump() for item in extracted_list], f, ensure_ascii=False, indent=2)
+
+    # LOG
+    logger.log_llm_batch(
+        batch_id=batch_id,
+        document_name=document_name,
+        extracted_list=extracted_list,
+    )
+
     return extracted_list
 
  
